@@ -481,6 +481,12 @@ they're never animated; `VISION_AUDIT_MODEL`=Haiku for the coarse assembly verif
   absolute length) — so a pre-existing ~1s narration/video gap from the BUILD
   stage survived the score stage uncorrected. Both are fixed; re-check any
   piece with `check_landing_hold.py` before calling a rebuild done.
+- **Score end = slow ~2.5 s fade to the last frame** (owner rule, 2026-11-16, Nazareth:
+  a 0.4 s end fade "felt like an abrupt drop"; 2.6 s was "much much better ... use this as a
+  template"). The score lifts (~+6 dB) through the landing hold, then fades out over the last
+  ~2.5 s, silent exactly on the final frame. Template: `prophecy/02_nazareth/score/generate_score.py`
+  (join fade + parts generated ≥7 s longer than used) and `.../score/mix_score.py`. Check the
+  per-0.25 s RMS of the last 5 s falls smoothly, no step.
 - **Reuse downstream pipelines, do not duplicate** — `narration_pipeline.py`,
   `per_turn_synth.py`, `image_to_kling.py` are subprocess'd, not re-implemented.
 - **Panel-variety gate for comic grids** (locked 2026-07-17): a full-film eye

@@ -1,0 +1,18 @@
+{
+ "piece": "nazareth_short",
+ "locked": "2026-11-16",
+ "locked_by": "owner ('lock it', 2026-11-16) on film FINAL v2 (words v7); title + poster are the owner picks of 2026-11-16",
+ "final_video": "visual/nazareth_final.mp4",
+ "final_sha256": "410a5b6822d17d9eb96941925ec067471ac514b73aa2546bf326a2abcd4dffe8",
+ "source": "prophecy/02_nazareth/film/NAZARETH_FINAL_v2.mp4 (same bytes); pin prophecy/02_nazareth/film/FINAL_VIDEO.txt; resume prophecy/02_nazareth/HANDOVER_RESUME.md",
+ "words": "prophecy/02_nazareth/words/FINAL_WORDS_v7.md",
+ "audio": "audio/narration.mp3 = prophecy/02_nazareth/audio/narration_v7.mp3; word times visual/nazareth_final.words.json = audio/narration_v7.words.json with 'hometown' split into 'home' + 'town,' to match the script",
+ "visual": "prophecy/02_nazareth (Isaiah 61 -> Luke 4:16-30 -> Luke 23:35)",
+ "packaging": "packaging/PACKAGING_LOCK.md (title_r1 + poster_r1 blind rounds; owner poster pick A The Unlit Line); card prophecy/02_nazareth/_packaging/21_nazareth/packaging.json",
+ "not_done": [
+  "upload (30-episode hold)",
+  "external publish-copy panel red team (owner decides)",
+  "seed viewers",
+  "commit (text only, NO media)"
+ ]
+}

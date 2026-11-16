@@ -1,0 +1,302 @@
+[
+ {
+  "png": "pills_v6/p00.png",
+  "f0": 3,
+  "f1": 72,
+  "box": [
+   70,
+   1000,
+   940,
+   184
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "Jesus stopped reading in the middle of a sentence.",
+  "lines": 2
+ },
+ {
+  "png": "pills_v6/p01.png",
+  "f0": 87,
+  "f1": 134,
+  "box": [
+   70,
+   1000,
+   940,
+   122
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "In Nazareth, His home town,",
+  "lines": 1
+ },
+ {
+  "png": "pills_v6/p02.png",
+  "f0": 139,
+  "f1": 234,
+  "box": [
+   70,
+   1000,
+   940,
+   246
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "He read God's promise of someone sent with good news for the poor,",
+  "lines": 3
+ },
+ {
+  "png": "pills_v6/p03.png",
+  "f0": 237,
+  "f1": 294,
+  "box": [
+   70,
+   1000,
+   940,
+   122
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "and a time of God's welcome.",
+  "lines": 1
+ },
+ {
+  "png": "pills_v6/p04.png",
+  "f0": 305,
+  "f1": 364,
+  "box": [
+   70,
+   1000,
+   940,
+   184
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "The prophet Isaiah's sentence goes on:",
+  "lines": 2
+ },
+ {
+  "png": "pills_v6/p05.png",
+  "f0": 375,
+  "f1": 453,
+  "box": [
+   70,
+   1000,
+   940,
+   184
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "and the day of vengeance of our God.",
+  "lines": 2
+ },
+ {
+  "png": "pills_v6/p06.png",
+  "f0": 464,
+  "f1": 555,
+  "box": [
+   70,
+   1000,
+   940,
+   184
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "He left the day of vengeance unread, and sat down.",
+  "lines": 2
+ },
+ {
+  "png": "pills_v6/p07.png",
+  "f0": 577,
+  "f1": 666,
+  "box": [
+   70,
+   1000,
+   940,
+   184
+  ],
+  "radius": 46,
+  "jesus": true,
+  "text": "This day is this scripture fulfilled.",
+  "lines": 2
+ },
+ {
+  "png": "pills_v6/p08.png",
+  "f0": 679,
+  "f1": 712,
+  "box": [
+   70,
+   1000,
+   940,
+   122
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "It was about Him.",
+  "lines": 1
+ },
+ {
+  "png": "pills_v6/p09.png",
+  "f0": 740,
+  "f1": 800,
+  "box": [
+   70,
+   1000,
+   940,
+   184
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "They would want miracles, and say:",
+  "lines": 2
+ },
+ {
+  "png": "pills_v6/p10.png",
+  "f0": 810,
+  "f1": 876,
+  "box": [
+   70,
+   1000,
+   940,
+   122
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "Physician, heal thyself.",
+  "lines": 1
+ },
+ {
+  "png": "pills_v6/p11.png",
+  "f0": 887,
+  "f1": 1023,
+  "box": [
+   70,
+   1000,
+   940,
+   246
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "He reminded them God once sent help to foreigners, not to their own.",
+  "lines": 3
+ },
+ {
+  "png": "pills_v6/p12.png",
+  "f0": 1059,
+  "f1": 1138,
+  "box": [
+   70,
+   1000,
+   940,
+   184
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "Furious, they took Him to a cliff to throw Him down.",
+  "lines": 2
+ },
+ {
+  "png": "pills_v6/p13.png",
+  "f0": 1154,
+  "f1": 1198,
+  "box": [
+   70,
+   1000,
+   940,
+   122
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "He walked right through them.",
+  "lines": 1
+ },
+ {
+  "png": "pills_v6/p14.png",
+  "f0": 1211,
+  "f1": 1288,
+  "box": [
+   70,
+   1000,
+   940,
+   184
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "Later, at the cross, the same dare:",
+  "lines": 2
+ },
+ {
+  "png": "pills_v6/p15.png",
+  "f0": 1299,
+  "f1": 1371,
+  "box": [
+   70,
+   1000,
+   940,
+   184
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "He saved others; let him save himself.",
+  "lines": 2
+ },
+ {
+  "png": "pills_v6/p16.png",
+  "f0": 1382,
+  "f1": 1470,
+  "box": [
+   70,
+   1000,
+   940,
+   122
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "This time, He stayed. He died,",
+  "lines": 1
+ },
+ {
+  "png": "pills_v6/p17.png",
+  "f0": 1497,
+  "f1": 1516,
+  "box": [
+   70,
+   1000,
+   940,
+   122
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "and rose again.",
+  "lines": 1
+ },
+ {
+  "png": "pills_v6/p18.png",
+  "f0": 1532,
+  "f1": 1590,
+  "box": [
+   70,
+   1000,
+   940,
+   184
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "He stopped reading at the welcome.",
+  "lines": 2
+ },
+ {
+  "png": "pills_v6/p19.png",
+  "f0": 1609,
+  "f1": 1701,
+  "box": [
+   70,
+   1000,
+   940,
+   122
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "It is still open, for you, today.",
+  "lines": 1
+ }
+]

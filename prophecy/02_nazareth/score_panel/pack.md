@@ -1,0 +1,28 @@
+# FILM: "He stopped mid-sentence" (Isaiah 61:1-2 -> Luke 4:16-22) - 59.2 s vertical gospel short, worldwide audience
+Second film in a series: Old Testament prophecies fulfilled in Jesus. Many viewers know nothing about the Bible; many have English as a second language. The film will later be DUBBED into other languages (the music bed must work under any voice).
+STORY: In His home town Nazareth, Jesus reads Isaiah's promise aloud in the synagogue, then STOPS in the middle of Isaiah's sentence - before "and the day of vengeance of our God" - rolls up the scroll, sits down, and says "This day is this scripture fulfilled in your ears." The town is amazed, then doubts ("Is not this Joseph's son?"). He stopped at God's welcome. His welcome is still open.
+LOOK: bold inked graphic-comic pages (clean black ink, warm golden colour), 2- and 3-panel pages, panel SLAMS, page flips, iris and ink-bleed transitions.
+KEY PICTURES (film seconds): 0-3 Jesus + the old prophet writing; 3-8 Nazareth village, hands passing the scroll, Jesus stands to read; 8-17 a poor widow, men listening, Jesus reading, a broken shackle on the floor, soft light rays on "welcome"; 17-21 Jesus rolls up the scroll; 21-27 the old prophet Isaiah under a dark stormy sky (the unread words, a hushed halftone page), then Jesus seated; 26-30 every eye: stern men staring; 29.6-34.8 Jesus seated, ONE still full-screen picture, NOTHING moves (sacred stillness); 34.4-40 men whispering, amazed; the boy Jesus with Joseph in the workshop; 39.6-42.6 the doubting townsman; 42.4-50 the boy Jesus and the grown Jesus; 49.9-59.2 HERO: Jesus at golden sunset above Nazareth, reaching His open hand toward the viewer (held to the end).
+Voices: a warm narrator; Isaiah (an old prophet voice, 1 KJV line); Jesus (1 KJV line); a townsman (1 KJV line). Voice is final; music sits UNDER it.
+OWNER'S NOTE: the series' first film used a CINEMATIC orchestral score (full strings, French horns, sparing timpani, one reverent swell, a simple unfinished 'promise tune' completed only in the final hold) and the owner liked it. This film should also be cinematic, but must be its OWN piece. Grace, not fear. No choir with words, no trailer 'braaam', no cheesy Middle-East scales, no rock drums.
+Comic SLAMS and page turns get their own sound effects later (sound design, not the music).
+Score tool: ElevenLabs Music free-text prompt (music_v1). Long single generations can render dead air, so the score is made in TWO parts joined at a split second, ideally inside a natural pause; each prompt can use "around N seconds in" cues. Never use composition_plan. Silences and dips are done in the MIX, so prompts must ask for continuous sound with no gaps. Budget ~2 generations.
+
+TIMED NARRATION (film seconds; spoken words end at 56.06 s, film ends 59.2 s = 3.1 s held ending):
+  0.00-  2.16 [narrator] Jesus stopped reading in the middle of a sentence.
+  2.96-  8.30 [narrator] In Nazareth, His home town, He stood to read from the prophet Isaiah, written long before.
+  9.44- 15.80 [narrator] He read God's promise of someone sent with good news for the poor, freedom for prisoners, and a time of God's welcome.
+ 16.82- 17.96 [narrator] Then He rolled up the scroll.
+ 18.96- 20.42 [narrator] Isaiah's sentence goes on:
+ 20.90- 23.26 [isaiah]   and the day of vengeance of our God.
+ 23.50- 26.38 [narrator] He left the day of vengeance unread, and sat down.
+ 27.28- 28.84 [narrator] Every eye was on Him.
+   (pause ~1 s)
+ 29.80- 34.20 [jesus]    This day is this scripture fulfilled in your ears.
+ 34.44- 36.58 [narrator] The people were amazed at His kind words.
+ 37.06- 38.52 [narrator] They knew Him as a local boy.
+ 39.54- 42.18 [townsman] Is not this Joseph's son?
+ 42.34- 45.58 [narrator] That local boy was saying Isaiah's promise was about Him.
+ 46.76- 51.54 [narrator] He stopped reading at God's welcome, and said: "This day."
+ 52.34- 56.06 [narrator] His welcome is still open, for you, today.
+ 56.06- 59.20 (held ending, no voice, hero picture)

@@ -1,0 +1,18 @@
+SKIP G1/G2 (film not rendered yet)
+PASS G15 landing S14 starts on 'rose again' (>= 49.81 s) and fits its clip - S14 starts f1496 = 49.867 s (rose at 49.86 s); runs 10.00 s of 10.04 s
+PASS G3a stillness (Jesus line + hold): locked camera, no moves, no doodles - bad scenes none; doodles in window none
+PASS G3a2 cross reverent: locked camera, no moves in the cross line, no doodle at all on the cross page - camera locked True; moves in window none; doodles none
+PASS G5 variety - sequence: panel_slam > panel_slam > panel_dive > panel_slam > panel_slam > slam_cut > panel_slam > page_flip_up > panel_slam > panel_slam > panel_slam > halftone_dissolve > panel_slam > panel_slam > panel_slam > iris > panel_slam > panel_slam > panel_slam > border_fall > panel_slam > panel_slam > punch_cut > panel_slam > panel_slam > panel_slam > panel_slam > punch_cut > panel_slam > panel_slam > page_flip_up > panel_slam > panel_slam > iris > panel_slam > panel_slam > halftone_dissolve > panel_slam > panel_slam > border_fall | repeats-in-a-row [] | >2 uses {}
+PASS G8 word sync (never early) - 26 word-tied frames checked; early: none
+PASS G10 page coverage - 1125 of 1796 frames (63%) on pages with 2+ panels; limit 60%
+PASS G11 panel variety (no duplicate clip on screen at once; only exception: S17 cross + its brief-allowed leaders crop, cy differs >= .4) - 10 multi-panel pages (pgA,pgB,pgC,pgD,pgF,pgG,pgH,pgI,pgJ,pgK); simultaneous duplicates: none
+PASS G12 clip life <= clip length (no freeze/loop) - violations: none
+PASS G13 repeats (Jesus S01/S03/S09 <=3 pages, others <=2; S05 =1 page) - pages per clip: {'S01': 2, 'S02': 2, 'S03': 3, 'S04': 2, 'S05': 1, 'S07': 2, 'S08': 2, 'S09': 3, 'S10': 2, 'S11': 2, 'S12': 2, 'S14': 1, 'S15': 2, 'S16': 1, 'S17': 1, 'S18': 1} | over: none | S05 not 1 page: none
+PASS G14 S04 crop on hands (cy>=.55) - S04 crops [('pgB', 'H', 0.68), ('pgD', 'M', 0.68)]
+PASS G3b stillness: no overlay on Jesus line (f572-666) - max mark pixels 0
+PASS G3b2 reverence: no overlay on the cross line (f1380-1496) - max mark pixels 0
+PASS G3c stillness: no overlay on the 3 s hold (f1706-1796) - max mark pixels 0
+PASS G6 pill zone free (pill_edge excluded) - max mark pixels in x70-1010,y974-1250 while a pill shows: 0 (frame 1700)
+PASS G6b top 200 px clear of marks - max mark pixels y<200: 0
+PASS G7 no-draw masks (Jesus faces + the cross) - masks 16, violations none
+ALL PASS

@@ -1,0 +1,93 @@
+[
+ {
+  "i": 0,
+  "who": "narrator",
+  "file": "_trim/00_narrator_a.mp3",
+  "start": 0.0,
+  "end": 2.4
+ },
+ {
+  "i": 1,
+  "who": "narrator",
+  "file": "_trim/v6_01_narrator_a.mp3",
+  "start": 2.8,
+  "end": 11.341
+ },
+ {
+  "i": 2,
+  "who": "narrator",
+  "file": "_trim/v6_02_narrator_a.mp3",
+  "start": 11.591,
+  "end": 13.68
+ },
+ {
+  "i": 3,
+  "who": "isaiah",
+  "file": "_trim/02_isaiah_b.mp3",
+  "start": 13.98,
+  "end": 16.62
+ },
+ {
+  "i": 4,
+  "who": "narrator",
+  "file": "_trim/v6_03t_narrator_a.mp3",
+  "start": 16.92,
+  "end": 20.012
+ },
+ {
+  "i": 5,
+  "who": "jesus",
+  "file": "_trim/04_jesus_b.mp3",
+  "start": 20.812,
+  "end": 25.14
+ },
+ {
+  "i": 6,
+  "who": "narrator",
+  "file": "_trim/v6_06_narrator_a.mp3",
+  "start": 25.54,
+  "end": 27.207
+ },
+ {
+  "i": 7,
+  "who": "jesus",
+  "file": "_trim/v6_07_jesus_b.mp3",
+  "start": 27.507,
+  "end": 29.877
+ },
+ {
+  "i": 8,
+  "who": "narrator",
+  "file": "_trim/v6_08_narrator_a.mp3",
+  "start": 30.177,
+  "end": 39.867
+ },
+ {
+  "i": 9,
+  "who": "narrator",
+  "file": "_trim/v6_09_narrator_a.mp3",
+  "start": 40.467,
+  "end": 43.057
+ },
+ {
+  "i": 10,
+  "who": "leader",
+  "file": "_trim/v6_10_leader_b.mp3",
+  "start": 43.357,
+  "end": 45.817
+ },
+ {
+  "i": 11,
+  "who": "narrator",
+  "file": "_trim/v6_11_narrator_a.mp3",
+  "start": 46.117,
+  "end": 49.637
+ },
+ {
+  "i": 12,
+  "who": "narrator",
+  "file": "_trim/v6_12_narrator_a.mp3",
+  "start": 50.237,
+  "end": 56.077
+ }
+]

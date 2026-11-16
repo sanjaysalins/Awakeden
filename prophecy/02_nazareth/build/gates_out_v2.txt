@@ -1,0 +1,16 @@
+PASS G1 duration - video 59.200 s (1776 frames) audio 59.194 s (source 59.180 s) 1080,1920,30/1
+PASS G2 audio identical - narration.mp3 MD5=e2ed5612ed6f99e098b19e04272654f1 | film MD5=e2ed5612ed6f99e098b19e04272654f1
+PASS G3a stillness (Jesus line + hold): locked camera, no moves, no doodles - bad scenes none; doodles in window none
+PASS G5 variety - sequence: panel_slam > panel_slam > panel_dive > panel_slam > slam_cut > panel_slam > panel_slam > page_flip_up > panel_slam > panel_slam > panel_slam > panel_slam > halftone_dissolve > panel_slam > panel_slam > iris > panel_slam > panel_slam > panel_slam > panel_slam > ink_bleed > panel_slam > panel_slam > panel_dive > border_fall > iris > panel_slam > panel_slam > panel_slam > panel_slam > punch_cut > page_flip_up > panel_slam > panel_slam > halftone_dissolve > panel_slam > panel_slam > panel_slam > border_fall | repeats-in-a-row [] | >2 uses {}
+PASS G8 word sync (never early) - 28 word-tied frames checked; early: none
+PASS G10 page coverage - 1071 of 1776 frames (60%) on pages with 2+ panels; limit 60%
+PASS G11 panel variety (no duplicate clip on screen at once on a page) - 10 multi-panel pages (pgA,pgB,pgC,pgD,pgE,pgF,pgG,pgH,pgI,pgJ); simultaneous duplicates: none
+PASS G12 clip life <= clip length (no freeze/loop) - violations: none
+PASS G13 repeats (<=2 pages per clip) - pages per clip: {'S01': 2, 'S02': 2, 'S03': 2, 'S04': 2, 'S05': 2, 'S06': 2, 'S07': 2, 'S08': 2, 'S09': 2, 'S10': 2, 'S11': 2, 'S12': 2, 'S13': 2, 'S14': 1} | over: none
+PASS G14 S04 crop on hands (cy>=.55) and S13 warm clip - S04 crops [('pgB', 'H', 0.68), ('pgD', 'A', 0.68)]; S13 uses warm S13w only
+PASS G3b stillness: no overlay on Jesus line (f888-1043) - max mark pixels 0
+PASS G3c stillness: no overlay on the 3 s hold (f1683-1776) - max mark pixels 0
+PASS G6 pill zone free (pill_edge excluded) - max mark pixels in x70-1010,y974-1250 while a pill shows: 0 (frame 1682)
+PASS G6b top 200 px clear of marks - max mark pixels y<200: 0
+PASS G7 no-draw masks (Jesus faces) - masks 10, violations none
+ALL PASS

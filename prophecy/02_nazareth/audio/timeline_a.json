@@ -1,0 +1,58 @@
+[
+ {
+  "i": 0,
+  "who": "narrator",
+  "file": "_takes/00_narrator_a.mp3",
+  "start": 0.0,
+  "end": 2.4
+ },
+ {
+  "i": 1,
+  "who": "narrator",
+  "file": "_takes/01_narrator_a.mp3",
+  "start": 2.9,
+  "end": 20.42
+ },
+ {
+  "i": 2,
+  "who": "isaiah",
+  "file": "_takes/02_isaiah_a.mp3",
+  "start": 20.82,
+  "end": 23.54
+ },
+ {
+  "i": 3,
+  "who": "narrator",
+  "file": "_takes/03_narrator_a.mp3",
+  "start": 23.54,
+  "end": 28.98
+ },
+ {
+  "i": 4,
+  "who": "jesus",
+  "file": "_takes/04_jesus_a.mp3",
+  "start": 29.88,
+  "end": 35.24
+ },
+ {
+  "i": 5,
+  "who": "narrator",
+  "file": "_takes/05_narrator_a.mp3",
+  "start": 35.24,
+  "end": 39.96
+ },
+ {
+  "i": 6,
+  "who": "townsman",
+  "file": "_takes/06_townsman_a.mp3",
+  "start": 40.36,
+  "end": 43.16
+ },
+ {
+  "i": 7,
+  "who": "narrator",
+  "file": "_takes/07_narrator_a.mp3",
+  "start": 43.16,
+  "end": 52.12
+ }
+]

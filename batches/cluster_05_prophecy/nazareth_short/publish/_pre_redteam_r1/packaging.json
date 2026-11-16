@@ -1,0 +1,126 @@
+{
+  "schema": "packaging/1",
+  "_status": "2026-11-16 card for the LOCKED film FINAL v2 (words v7, owner 'lock it'). Title locked by the owner after a blind title round (packaging/title_r1: Fable + claude/codex/gemini/grok writers, 5 blind judges, won 5 of 5). Poster = owner pick 'A. The Unlit Line' (packaging/poster_r1). Honest line: Luke 4:19 ends at 'the acceptable year of the Lord' and Isaiah 61:2 goes on; the Bible does not say why Jesus stopped there, so no copy says deleted, denied, cancelled, or why. The copy says 'left unread' and asks a neutral question. Lessons from Bethlehem red team r1-r4 applied up front: hook-first line 1, no landing spoiler on TikTok/Instagram, captions >= 1 s kept in captions_locked.srt, thumbs 16x9/1x1 not for upload, visibility private/held, pinned comment neutral. No external publish panel has run on this copy yet.",
+  "episode": "21_nazareth",
+  "person": "Nazareth",
+  "person_tag": "#Nazareth",
+  "name_match": "Jesus|Nazareth|Isaiah",
+  "women": false,
+  "search_class": "strong: 'jesus in nazareth' (+ bible story, + rejected in nazareth), 'jesus reads isaiah' (+ in the synagogue, + isaiah 61), 'luke 4' (+ 16-30, + 18, + explained), 'isaiah 61' (+ explained, + kjv), 'prophecies fulfilled by jesus'; 'day of vengeance of our god' has no suggestions and 'jesus rejected in his hometown' only itself; 'physician heal thyself' returns pop-culture results, not the Bible.",
+  "search_phrases": [
+    "jesus in nazareth bible story",
+    "jesus reads isaiah in the synagogue",
+    "jesus rejected at nazareth",
+    "luke 4 16-30",
+    "isaiah 61 explained",
+    "luke 4 18-19 explained",
+    "prophecies fulfilled by jesus"
+  ],
+  "search_evidence": {
+    "source": "YouTube search suggestions (suggestqueries.google.com, client=firefox, ds=yt), fetched 2026-11-16, 10 queries; file _packaging/21_nazareth/autocomplete_2026-11-16.txt (copy of prophecy/02_nazareth/packaging/autocomplete_2026-11-16.txt)",
+    "grade": "B (one dated snapshot of autocomplete, not search volume)"
+  },
+  "famous_neighbours": [
+    "Isaiah",
+    "Nazareth",
+    "Elijah",
+    "synagogue",
+    "Luke 4"
+  ],
+  "curiosity_gap": "Jesus read from Isaiah in His hometown and stopped in the middle of a sentence. What was the line He left unread, and what happened next in Nazareth?",
+  "curiosity_question": "What was the line Jesus left unread?",
+  "scripture": {
+    "primary": "Isaiah 61:1-2",
+    "read_it": "Isaiah 61:1-2; Luke 4:16-30; Luke 23:35; 1 Corinthians 15:3-4",
+    "narration_covers": [
+      "Isaiah 61:1-2",
+      "Luke 4:16-30",
+      "Luke 23:35",
+      "1 Corinthians 15:3-4"
+    ]
+  },
+  "name_reveal": {
+    "decision": "early_spoken",
+    "note": "'Jesus' is the first spoken word (0.0 s) and is in the title; 'Nazareth' is spoken at 2.98 s (5% of runtime) and in description line 1; 'Isaiah' at 10.5 s.",
+    "compensation": [
+      "title",
+      "description_line_1",
+      "pinned_comment"
+    ]
+  },
+  "first_seconds": {
+    "stake_in_3s": true,
+    "first_spoken_line": "Jesus stopped reading in the middle of a sentence.",
+    "stake_source": "spoken line 0.0-2.0 s (the odd act of stopping mid-sentence) with the thumbnail's THE LINE / HE LEFT UNREAD",
+    "waiver": ""
+  },
+  "youtube": {
+    "title": "Jesus Stopped Reading Mid-Sentence",
+    "line1": "He left one line of Isaiah unread. In the Bible, Jesus reads Isaiah 61 in Nazareth (Luke 4:16-30).",
+    "line2": "\"To proclaim the acceptable year of the LORD, and the day of vengeance of our God;\" (Isaiah 61:2, KJV)",
+    "read_it": "Read it yourself: Isaiah 61:1-2; Luke 4:16-30; Luke 23:35; 1 Corinthians 15:3-4.",
+    "hashtags": [
+      "#Nazareth",
+      "#Jesus",
+      "#Bible",
+      "#BibleProphecy",
+      "#Isaiah61"
+    ],
+    "tags": [
+      "jesus in nazareth bible story",
+      "jesus reads isaiah in the synagogue",
+      "jesus reads isaiah 61",
+      "jesus rejected at nazareth",
+      "luke 4 16-30",
+      "luke 4 18-19 explained",
+      "isaiah 61 explained",
+      "isaiah 61 2",
+      "prophecies fulfilled by jesus",
+      "physician heal thyself bible",
+      "jesus in the synagogue"
+    ],
+    "insight_line": "Luke 4:19 ends at \"the acceptable year of the Lord.\" The sentence in Isaiah 61:2 goes on: \"and the day of vengeance of our God.\" The Bible does not say why Jesus stopped there."
+  },
+  "title_class": "A",
+  "send_to": "someone who has read Luke 4 and never noticed where Jesus stopped",
+  "next_teaser": "Next: another Old Testament promise, and what Jesus did with it.",
+  "shareable_fact": "Luke 4:19 stops at \"the acceptable year of the Lord.\" The same sentence in Isaiah 61:2 goes on with \"and the day of vengeance of our God.\"",
+  "ask_line": "Follow for more places where the Old Testament and Jesus meet.",
+  "pinned_comment": "Luke 4:19 stops at \"the acceptable year of the Lord.\" The sentence in Isaiah 61:2 goes on: \"and the day of vengeance of our God.\" The Bible does not say why Jesus stopped there. He told the room, \"This day is this scripture fulfilled in your ears\" (Luke 4:21). Later, at the cross, the rulers dared Him: \"He saved others; let him save himself\" (Luke 23:35). Which part of this story stands out to you most? Read it: Isaiah 61:1-2; Luke 4:16-30; Luke 23:35; 1 Corinthians 15:3-4.",
+  "spoiler_patterns": [
+    "walked right through",
+    "passed through",
+    "this time, he stayed",
+    "rose again",
+    "rose from the dead",
+    "still open"
+  ],
+  "release": {
+    "stage": 1,
+    "order": 8,
+    "note": "Publish pack built 2026-11-16 (prophecy episode 03 in release order; folder name 02_nazareth kept). Owner decides when to post (30-episode posting hold applies)."
+  },
+  "content_note": "Mentions an angry crowd taking Jesus to a cliff to throw Him down. Shows Jesus on the cross in a wide shot (no blood, no wounds shown). Says Jesus died for our sins and rose on the third day.",
+  "measured": {
+    "violence_words_in_narration": 2,
+    "duration_s": 59.87,
+    "name_first_spoken_pct": 0,
+    "ending_pct": 6,
+    "source": "measured on batches/cluster_05_prophecy/nazareth_short/visual/nazareth_final.mp4 (film FINAL v2, sha 410a5b68...) and its words.json: 'Jesus' first at 0.0 s, 'Nazareth' first at 2.98 s, voice ends about 56.4 s, 59.87 s film; 'throw him down' once, 'died' once (cliff scene and 1 Corinthians 15:3)"
+  },
+  "panels": {
+    "discoverability": {
+      "run": true,
+      "record": "prophecy/02_nazareth/packaging/title_r1 + poster_r1",
+      "note": "2026-11-16. Blind title round (5 writers + 5 blind judges incl. Fable, title won 5 of 5), blind key-art round (3 ideas x 2 models, gpt-image-2 won all 3). The publish copy itself has NOT yet had an external panel red team (owner decides)."
+    },
+    "guardrails": {
+      "run": true,
+      "record": "prophecy/02_nazareth/guardrail_film",
+      "note": "2026-11-16. Blind finished-film panel (Fable judge, Sonnet newcomer, Claude Bible, Codex hook, Gemini + Grok global); 5/5 flagged 'heal thyself' and 'in your ears' as not understood, fixed in words v7 (re-test avg 7.4). Grok seat file was still unread when the film locked."
+    }
+  },
+  "overrides": {
+    "R03": "Title locked by the owner after a blind title round (won 5 of 5 judges): 'Jesus Stopped Reading Mid-Sentence' carries the film's hook. 'Bible' is carried by description line 1, #Bible, #BibleProphecy and the tags."
+  }
+}

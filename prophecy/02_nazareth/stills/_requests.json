@@ -1,0 +1,272 @@
+{
+ "keys": [
+  "S01",
+  "S02",
+  "S03",
+  "S04",
+  "S05",
+  "S06",
+  "S07",
+  "S08",
+  "S09",
+  "S10",
+  "S11",
+  "S12",
+  "S13",
+  "S14"
+ ],
+ "requests": [
+  {
+   "model": "gpt-image-2",
+   "mode": "image2image",
+   "params": {
+    "prompt": "Bold-ink graphic comic book art in EXACTLY the style of the attached image: thick black ink outlines, cel-shaded warm colours, crisp ink hatching, cinematic rim light. Setting: Nazareth in Galilee, first century AD, historically plausible: plain limestone, mud plaster and wood, simple wool and linen tunics and mantles, men in plain head cloths; no modern objects, no stars of David, no halos. Jesus must look identical to the man in the attached image: long dark-brown hair parted in the middle, full dark beard, brown eyes, cream tunic and olive-green mantle. His hands are unwounded, NO scars or marks on his hands. Medium shot inside a small stone synagogue: Jesus standing, holding an open scroll on two wooden rollers with both hands, he has just stopped reading mid-line and is lifting his eyes from the scroll, calm and still. Warm light from a high window, dim stone wall behind. ABSOLUTELY NO TEXT anywhere: no letters, no readable writing, no speech bubbles, no captions. Any scroll shows only faint rows of tiny illegible ink marks. Single full-frame image, no panels, no borders.",
+    "aspectRatio": "9:16",
+    "resolutionTier": "2k",
+    "quality": "medium",
+    "visualReferences": [
+     {
+      "type": "image",
+      "id": "lrmghcNlouJfqotrYI2F",
+      "url": "https://cdn.openart.ai/openart-uploads/production/2026-11/create-image/EsbOTmkjtrfHKP88sIj3/ref_jesus_1794779842591_e6f92aa1.jpg",
+      "label": "nazareth_ref_jesus"
+     }
+    ]
+   }
+  },
+  {
+   "model": "gpt-image-2",
+   "mode": "image2image",
+   "params": {
+    "prompt": "Bold-ink graphic comic book art in EXACTLY the style of the attached image: thick black ink outlines, cel-shaded warm colours, crisp ink hatching, cinematic rim light. Setting: Nazareth in Galilee, first century AD, historically plausible: plain limestone, mud plaster and wood, simple wool and linen tunics and mantles, men in plain head cloths; no modern objects, no stars of David, no halos. Use the attached image for the art STYLE only; Jesus does not appear in this picture. Wide establishing view of the small village of Nazareth on a green Galilean hillside in the morning: a cluster of simple flat-roofed limestone houses, stone terraces, olive trees, a dirt path where a few villagers walk toward a modest stone building. Soft golden morning light. ABSOLUTELY NO TEXT anywhere: no letters, no readable writing, no speech bubbles, no captions. Any scroll shows only faint rows of tiny illegible ink marks. Single full-frame image, no panels, no borders.",
+    "aspectRatio": "9:16",
+    "resolutionTier": "2k",
+    "quality": "medium",
+    "visualReferences": [
+     {
+      "type": "image",
+      "id": "lrmghcNlouJfqotrYI2F",
+      "url": "https://cdn.openart.ai/openart-uploads/production/2026-11/create-image/EsbOTmkjtrfHKP88sIj3/ref_jesus_1794779842591_e6f92aa1.jpg",
+      "label": "nazareth_ref_jesus"
+     }
+    ]
+   }
+  },
+  {
+   "model": "gpt-image-2",
+   "mode": "image2image",
+   "params": {
+    "prompt": "Bold-ink graphic comic book art in EXACTLY the style of the attached image: thick black ink outlines, cel-shaded warm colours, crisp ink hatching, cinematic rim light. Setting: Nazareth in Galilee, first century AD, historically plausible: plain limestone, mud plaster and wood, simple wool and linen tunics and mantles, men in plain head cloths; no modern objects, no stars of David, no halos. Jesus must look identical to the man in the attached image: long dark-brown hair parted in the middle, full dark beard, brown eyes, cream tunic and olive-green mantle. His hands are unwounded, NO scars or marks on his hands. Wide interior of a modest first-century stone synagogue: plain stone benches along the walls with about fifteen seated men in tunics and head cloths, oil lamps in wall niches, light beams from a high window. At the front Jesus stands holding an open scroll, reading aloud. Seen from the back of the room. ABSOLUTELY NO TEXT anywhere: no letters, no readable writing, no speech bubbles, no captions. Any scroll shows only faint rows of tiny illegible ink marks. Single full-frame image, no panels, no borders.",
+    "aspectRatio": "9:16",
+    "resolutionTier": "2k",
+    "quality": "medium",
+    "visualReferences": [
+     {
+      "type": "image",
+      "id": "lrmghcNlouJfqotrYI2F",
+      "url": "https://cdn.openart.ai/openart-uploads/production/2026-11/create-image/EsbOTmkjtrfHKP88sIj3/ref_jesus_1794779842591_e6f92aa1.jpg",
+      "label": "nazareth_ref_jesus"
+     }
+    ]
+   }
+  },
+  {
+   "model": "gpt-image-2",
+   "mode": "image2image",
+   "params": {
+    "prompt": "Bold-ink graphic comic book art in EXACTLY the style of the attached image: thick black ink outlines, cel-shaded warm colours, crisp ink hatching, cinematic rim light. Setting: Nazareth in Galilee, first century AD, historically plausible: plain limestone, mud plaster and wood, simple wool and linen tunics and mantles, men in plain head cloths; no modern objects, no stars of David, no halos. Use the attached image for the art STYLE only; Jesus does not appear in this picture. Close-up of hands: an elderly synagogue attendant with a grey beard and plain robe hands a rolled scroll on two wooden rollers to a younger man's open hands (only the younger man's hands and sleeve are visible, his face is not shown). Warm lamp light, stone background. ABSOLUTELY NO TEXT anywhere: no letters, no readable writing, no speech bubbles, no captions. Any scroll shows only faint rows of tiny illegible ink marks. Single full-frame image, no panels, no borders.",
+    "aspectRatio": "9:16",
+    "resolutionTier": "2k",
+    "quality": "medium",
+    "visualReferences": [
+     {
+      "type": "image",
+      "id": "lrmghcNlouJfqotrYI2F",
+      "url": "https://cdn.openart.ai/openart-uploads/production/2026-11/create-image/EsbOTmkjtrfHKP88sIj3/ref_jesus_1794779842591_e6f92aa1.jpg",
+      "label": "nazareth_ref_jesus"
+     }
+    ]
+   }
+  },
+  {
+   "model": "gpt-image-2",
+   "mode": "image2image",
+   "params": {
+    "prompt": "Bold-ink graphic comic book art in EXACTLY the style of the attached image: thick black ink outlines, cel-shaded warm colours, crisp ink hatching, cinematic rim light. Setting: Nazareth in Galilee, first century AD, historically plausible: plain limestone, mud plaster and wood, simple wool and linen tunics and mantles, men in plain head cloths; no modern objects, no stars of David, no halos. Use the attached image for the art STYLE only; Jesus does not appear in this picture. A poor widow in patched, faded clothes sits by a stone wall holding an empty clay bowl, looking up with sudden hope, a beam of warm light falling on her face. Dignified, not miserable. ABSOLUTELY NO TEXT anywhere: no letters, no readable writing, no speech bubbles, no captions. Any scroll shows only faint rows of tiny illegible ink marks. Single full-frame image, no panels, no borders.",
+    "aspectRatio": "9:16",
+    "resolutionTier": "2k",
+    "quality": "medium",
+    "visualReferences": [
+     {
+      "type": "image",
+      "id": "lrmghcNlouJfqotrYI2F",
+      "url": "https://cdn.openart.ai/openart-uploads/production/2026-11/create-image/EsbOTmkjtrfHKP88sIj3/ref_jesus_1794779842591_e6f92aa1.jpg",
+      "label": "nazareth_ref_jesus"
+     }
+    ]
+   }
+  },
+  {
+   "model": "gpt-image-2",
+   "mode": "image2image",
+   "params": {
+    "prompt": "Bold-ink graphic comic book art in EXACTLY the style of the attached image: thick black ink outlines, cel-shaded warm colours, crisp ink hatching, cinematic rim light. Setting: Nazareth in Galilee, first century AD, historically plausible: plain limestone, mud plaster and wood, simple wool and linen tunics and mantles, men in plain head cloths; no modern objects, no stars of David, no halos. Use the attached image for the art STYLE only; Jesus does not appear in this picture. An iron shackle lying open on a stone prison floor, its chain broken apart, a shaft of warm daylight falling across it from an open door. Object close-up, no people. ABSOLUTELY NO TEXT anywhere: no letters, no readable writing, no speech bubbles, no captions. Any scroll shows only faint rows of tiny illegible ink marks. Single full-frame image, no panels, no borders.",
+    "aspectRatio": "9:16",
+    "resolutionTier": "2k",
+    "quality": "medium",
+    "visualReferences": [
+     {
+      "type": "image",
+      "id": "lrmghcNlouJfqotrYI2F",
+      "url": "https://cdn.openart.ai/openart-uploads/production/2026-11/create-image/EsbOTmkjtrfHKP88sIj3/ref_jesus_1794779842591_e6f92aa1.jpg",
+      "label": "nazareth_ref_jesus"
+     }
+    ]
+   }
+  },
+  {
+   "model": "gpt-image-2",
+   "mode": "image2image",
+   "params": {
+    "prompt": "Bold-ink graphic comic book art in EXACTLY the style of the attached image: thick black ink outlines, cel-shaded warm colours, crisp ink hatching, cinematic rim light. Setting: Nazareth in Galilee, first century AD, historically plausible: plain limestone, mud plaster and wood, simple wool and linen tunics and mantles, men in plain head cloths; no modern objects, no stars of David, no halos. Jesus must look identical to the man in the attached image: long dark-brown hair parted in the middle, full dark beard, brown eyes, cream tunic and olive-green mantle. His hands are unwounded, NO scars or marks on his hands. Close-up of Jesus' hands rolling a scroll closed on its two wooden rollers, the moment of closing, his face just visible above in soft focus, looking down. Warm window light, stone wall. ABSOLUTELY NO TEXT anywhere: no letters, no readable writing, no speech bubbles, no captions. Any scroll shows only faint rows of tiny illegible ink marks. Single full-frame image, no panels, no borders.",
+    "aspectRatio": "9:16",
+    "resolutionTier": "2k",
+    "quality": "medium",
+    "visualReferences": [
+     {
+      "type": "image",
+      "id": "lrmghcNlouJfqotrYI2F",
+      "url": "https://cdn.openart.ai/openart-uploads/production/2026-11/create-image/EsbOTmkjtrfHKP88sIj3/ref_jesus_1794779842591_e6f92aa1.jpg",
+      "label": "nazareth_ref_jesus"
+     }
+    ]
+   }
+  },
+  {
+   "model": "gpt-image-2",
+   "mode": "image2image",
+   "params": {
+    "prompt": "Bold-ink graphic comic book art in EXACTLY the style of the attached image: thick black ink outlines, cel-shaded warm colours, crisp ink hatching, cinematic rim light. Setting: Nazareth in Galilee, first century AD, historically plausible: plain limestone, mud plaster and wood, simple wool and linen tunics and mantles, men in plain head cloths; no modern objects, no stars of David, no halos. Use the attached image for the art STYLE only; Jesus does not appear in this picture. An old Hebrew prophet, Isaiah, with a long white beard and rough brown mantle, in a dark stone room at night, writing on a scroll with a reed pen by the light of a single clay oil lamp, solemn and grave, a stormy night sky through a small window behind him. ABSOLUTELY NO TEXT anywhere: no letters, no readable writing, no speech bubbles, no captions. Any scroll shows only faint rows of tiny illegible ink marks. Single full-frame image, no panels, no borders.",
+    "aspectRatio": "9:16",
+    "resolutionTier": "2k",
+    "quality": "medium",
+    "visualReferences": [
+     {
+      "type": "image",
+      "id": "lrmghcNlouJfqotrYI2F",
+      "url": "https://cdn.openart.ai/openart-uploads/production/2026-11/create-image/EsbOTmkjtrfHKP88sIj3/ref_jesus_1794779842591_e6f92aa1.jpg",
+      "label": "nazareth_ref_jesus"
+     }
+    ]
+   }
+  },
+  {
+   "model": "gpt-image-2",
+   "mode": "image2image",
+   "params": {
+    "prompt": "Bold-ink graphic comic book art in EXACTLY the style of the attached image: thick black ink outlines, cel-shaded warm colours, crisp ink hatching, cinematic rim light. Setting: Nazareth in Galilee, first century AD, historically plausible: plain limestone, mud plaster and wood, simple wool and linen tunics and mantles, men in plain head cloths; no modern objects, no stars of David, no halos. Jesus must look identical to the man in the attached image: long dark-brown hair parted in the middle, full dark beard, brown eyes, cream tunic and olive-green mantle. His hands are unwounded, NO scars or marks on his hands. Jesus seated on a plain stone seat at the front of the small stone synagogue, calm and composed, about to speak, one hand resting open, looking out at the room, the rolled-up scroll handed back. Warm window light falls on him, the room dim around. Reverent, still, portrait framing. ABSOLUTELY NO TEXT anywhere: no letters, no readable writing, no speech bubbles, no captions. Any scroll shows only faint rows of tiny illegible ink marks. Single full-frame image, no panels, no borders.",
+    "aspectRatio": "9:16",
+    "resolutionTier": "2k",
+    "quality": "medium",
+    "visualReferences": [
+     {
+      "type": "image",
+      "id": "lrmghcNlouJfqotrYI2F",
+      "url": "https://cdn.openart.ai/openart-uploads/production/2026-11/create-image/EsbOTmkjtrfHKP88sIj3/ref_jesus_1794779842591_e6f92aa1.jpg",
+      "label": "nazareth_ref_jesus"
+     }
+    ]
+   }
+  },
+  {
+   "model": "gpt-image-2",
+   "mode": "image2image",
+   "params": {
+    "prompt": "Bold-ink graphic comic book art in EXACTLY the style of the attached image: thick black ink outlines, cel-shaded warm colours, crisp ink hatching, cinematic rim light. Setting: Nazareth in Galilee, first century AD, historically plausible: plain limestone, mud plaster and wood, simple wool and linen tunics and mantles, men in plain head cloths; no modern objects, no stars of David, no halos. Use the attached image for the art STYLE only; Jesus does not appear in this picture. Close-up row of men's faces on a stone bench in a dim synagogue, every one of them staring intensely forward at the same point, tense, silent, dramatic side light. Bearded Galilean villagers of different ages. ABSOLUTELY NO TEXT anywhere: no letters, no readable writing, no speech bubbles, no captions. Any scroll shows only faint rows of tiny illegible ink marks. Single full-frame image, no panels, no borders.",
+    "aspectRatio": "9:16",
+    "resolutionTier": "2k",
+    "quality": "medium",
+    "visualReferences": [
+     {
+      "type": "image",
+      "id": "lrmghcNlouJfqotrYI2F",
+      "url": "https://cdn.openart.ai/openart-uploads/production/2026-11/create-image/EsbOTmkjtrfHKP88sIj3/ref_jesus_1794779842591_e6f92aa1.jpg",
+      "label": "nazareth_ref_jesus"
+     }
+    ]
+   }
+  },
+  {
+   "model": "gpt-image-2",
+   "mode": "image2image",
+   "params": {
+    "prompt": "Bold-ink graphic comic book art in EXACTLY the style of the attached image: thick black ink outlines, cel-shaded warm colours, crisp ink hatching, cinematic rim light. Setting: Nazareth in Galilee, first century AD, historically plausible: plain limestone, mud plaster and wood, simple wool and linen tunics and mantles, men in plain head cloths; no modern objects, no stars of David, no halos. Use the attached image for the art STYLE only; Jesus does not appear in this picture. Two Galilean villagers in head cloths leaning toward each other on a stone bench, wide-eyed and amazed, one with a hand half raised in wonder, whispering. Warm lamp light. ABSOLUTELY NO TEXT anywhere: no letters, no readable writing, no speech bubbles, no captions. Any scroll shows only faint rows of tiny illegible ink marks. Single full-frame image, no panels, no borders.",
+    "aspectRatio": "9:16",
+    "resolutionTier": "2k",
+    "quality": "medium",
+    "visualReferences": [
+     {
+      "type": "image",
+      "id": "lrmghcNlouJfqotrYI2F",
+      "url": "https://cdn.openart.ai/openart-uploads/production/2026-11/create-image/EsbOTmkjtrfHKP88sIj3/ref_jesus_1794779842591_e6f92aa1.jpg",
+      "label": "nazareth_ref_jesus"
+     }
+    ]
+   }
+  },
+  {
+   "model": "gpt-image-2",
+   "mode": "image2image",
+   "params": {
+    "prompt": "Bold-ink graphic comic book art in EXACTLY the style of the attached image: thick black ink outlines, cel-shaded warm colours, crisp ink hatching, cinematic rim light. Setting: Nazareth in Galilee, first century AD, historically plausible: plain limestone, mud plaster and wood, simple wool and linen tunics and mantles, men in plain head cloths; no modern objects, no stars of David, no halos. Use the attached image for the art STYLE only; Jesus does not appear in this picture. An older Nazareth villager with a grey beard and plain head cloth, frowning and squinting, head tilted, arms crossed, doubtful and puzzled, in a dim stone synagogue. Close-up portrait. ABSOLUTELY NO TEXT anywhere: no letters, no readable writing, no speech bubbles, no captions. Any scroll shows only faint rows of tiny illegible ink marks. Single full-frame image, no panels, no borders.",
+    "aspectRatio": "9:16",
+    "resolutionTier": "2k",
+    "quality": "medium",
+    "visualReferences": [
+     {
+      "type": "image",
+      "id": "lrmghcNlouJfqotrYI2F",
+      "url": "https://cdn.openart.ai/openart-uploads/production/2026-11/create-image/EsbOTmkjtrfHKP88sIj3/ref_jesus_1794779842591_e6f92aa1.jpg",
+      "label": "nazareth_ref_jesus"
+     }
+    ]
+   }
+  },
+  {
+   "model": "gpt-image-2",
+   "mode": "image2image",
+   "params": {
+    "prompt": "Bold-ink graphic comic book art in EXACTLY the style of the attached image: thick black ink outlines, cel-shaded warm colours, crisp ink hatching, cinematic rim light. Setting: Nazareth in Galilee, first century AD, historically plausible: plain limestone, mud plaster and wood, simple wool and linen tunics and mantles, men in plain head cloths; no modern objects, no stars of David, no halos. Use the attached image for the art STYLE only; Jesus does not appear in this picture. Memory scene in warm sepia tones: a boy about twelve years old with dark hair, in a simple tunic, helping a bearded carpenter (Joseph) plane a wooden beam in a humble Nazareth workshop, wood shavings on the floor, tools on the wall, soft dusty light. The boy is seen mostly from the side. ABSOLUTELY NO TEXT anywhere: no letters, no readable writing, no speech bubbles, no captions. Any scroll shows only faint rows of tiny illegible ink marks. Single full-frame image, no panels, no borders.",
+    "aspectRatio": "9:16",
+    "resolutionTier": "2k",
+    "quality": "medium",
+    "visualReferences": [
+     {
+      "type": "image",
+      "id": "lrmghcNlouJfqotrYI2F",
+      "url": "https://cdn.openart.ai/openart-uploads/production/2026-11/create-image/EsbOTmkjtrfHKP88sIj3/ref_jesus_1794779842591_e6f92aa1.jpg",
+      "label": "nazareth_ref_jesus"
+     }
+    ]
+   }
+  },
+  {
+   "model": "gpt-image-2",
+   "mode": "image2image",
+   "params": {
+    "prompt": "Bold-ink graphic comic book art in EXACTLY the style of the attached image: thick black ink outlines, cel-shaded warm colours, crisp ink hatching, cinematic rim light. Setting: Nazareth in Galilee, first century AD, historically plausible: plain limestone, mud plaster and wood, simple wool and linen tunics and mantles, men in plain head cloths; no modern objects, no stars of David, no halos. Jesus must look identical to the man in the attached image: long dark-brown hair parted in the middle, full dark beard, brown eyes, cream tunic and olive-green mantle. His hands are unwounded, NO scars or marks on his hands. Jesus standing outdoors on the hill above Nazareth at sunrise, the small village below him, looking gently toward the viewer with quiet warmth, golden morning light behind him, wind lifting his mantle slightly. Full figure to the knees, calm and welcoming. ABSOLUTELY NO TEXT anywhere: no letters, no readable writing, no speech bubbles, no captions. Any scroll shows only faint rows of tiny illegible ink marks. Single full-frame image, no panels, no borders.",
+    "aspectRatio": "9:16",
+    "resolutionTier": "2k",
+    "quality": "medium",
+    "visualReferences": [
+     {
+      "type": "image",
+      "id": "lrmghcNlouJfqotrYI2F",
+      "url": "https://cdn.openart.ai/openart-uploads/production/2026-11/create-image/EsbOTmkjtrfHKP88sIj3/ref_jesus_1794779842591_e6f92aa1.jpg",
+      "label": "nazareth_ref_jesus"
+     }
+    ]
+   }
+  }
+ ]
+}

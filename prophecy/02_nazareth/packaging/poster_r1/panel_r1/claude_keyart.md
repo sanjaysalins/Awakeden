@@ -1,0 +1,27 @@
+### THE UNLIT LINE
+- **THE IDEA:** An open scroll fills the frame. Warm lamplight covers it, then stops dead in a hard edge. Jesus's hand has just lifted off the page, right at that edge.
+- **WHAT YOU SEE:**
+  - **Top third:** Jesus's face, mid-close. Eyes lowered, kind and steady, looking at the page. Long dark-brown hair, beard, cream robe with an olive-green mantle. Behind him is honey-gold stone. Light comes from the side, from a clay oil lamp.
+  - **Middle:** the scroll runs down toward us, tilted slightly, with wooden rollers at each side. Its surface shows faint ink-stroke texture only, no letter shapes.
+  - **Lower middle:** the gold light ends in a sharp diagonal line. Below it the same parchment drops into cool deep-brown shadow. His right hand hovers a finger's width above that line, palm down, just lifted. That hand is the subject.
+  - **Look:** thick black ink outlines, painted comic colour, slight halftone in the shadows. Gold, cream, olive and brown only.
+- **LETTERING SPACE:** the bottom 25% of the frame. This is the shadowed part of the scroll, near-black brown. Words go there in big cream or yellow comic type, one or two lines across the full width.
+- **THE CURIOSITY GAP:** "Why did He stop there? What's in the dark part?" The film answers in the first 15 seconds (the sentence went on to "vengeance", and He sat down). It pays off at the end: "He stopped at the welcome. It is still open."
+- **PHONE TEST:** at 2 cm you still see a gold top, a dark bottom, a hard edge between them, and a hand at the edge. The face reads as a warm shape. It is one clear contrast, the way a film poster should be.
+- **IMAGE PROMPT:** Vertical 9:16 bold painted comic-book key art, thick black ink outlines, painted colour, light halftone shading. Top third: close-up of Jesus, long dark-brown hair, full beard, cream linen robe with an olive-green wool mantle, eyes lowered and calm, reading. Behind him is a warm honey-gold stone wall lit from the side by a clay oil lamp. Middle and lower frame: an open parchment scroll with wooden rollers, tilted toward the viewer, its surface showing only faint abstract ink texture, no letters. Warm gold lamplight lights the upper scroll and ends in a sharp diagonal edge across it. Below the edge the parchment falls into cool deep-brown shadow. Jesus's right hand hovers just above that light edge, fingers relaxed, as if he has just lifted it from the page. The bottom quarter is a clean, quiet, near-black shadow area. First-century Galilee, linen and wool, no buttons, no halo, no rays behind his head. Palette: gold, honey stone, cream, olive, deep brown. References: film pictures 1, 3, 5. No lettering, no text.
+
+### THROUGH THE MIDDLE
+- **THE IDEA:** A wall of reaching hands opens into a narrow gold path, and Jesus walks down it toward us. Behind him the ground ends at a cliff edge.
+- **WHAT YOU SEE:**
+  - **Top 20%:** dusk sky over a stone hill town. The rocky cliff edge is clearly visible behind Jesus, and the drop falls away into haze.
+  - **Middle:** Jesus, full figure but fairly small (about a third of the frame height), walking calmly toward us. Olive mantle over a cream robe, hair moving, eyes steady on the viewer, both hands at rest.
+  - **Left and right edges:** a crowd, close and cut off by the frame. We see mostly gripping hands, wool sleeves and shoulders. Faces are half in shadow and look intense and stirred up, not sneering. They are ordinary villagers with headscarves and plain linen.
+  - **Path:** the gap they leave narrows toward us like a corridor. Late sun from behind Jesus lights it in gold. No hand is touching him.
+  - **Bottom:** rocky ground in deep shadow.
+- **LETTERING SPACE:** the bottom 22%, a dark ground band with clean space for two lines of big type. A short word or two could also sit in the sky band at the top if needed.
+- **THE CURIOSITY GAP:** "They were going to throw Him off. How is He walking out?" The film answers at the cliff beat. It then turns the gap deeper: later, at the cross, He does not walk away, and the film says why.
+- **PHONE TEST:** at 2 cm you see a dark V of crowd, a gold line down the middle, and one small upright figure in it. It reads as "one calm person through a mob".
+- **IMAGE PROMPT:** Vertical 9:16 bold painted comic-book key art, thick black ink outlines, painted colour, dramatic perspective. A rocky hilltop above a first-century Galilean stone village at sunset. Behind Jesus, a visible cliff edge drops away into warm haze. Jesus walks calmly straight toward the viewer down a narrow open path, about a third of frame height. Long dark-brown hair, full beard, cream linen robe and olive-green wool mantle, kind steady eyes, hands relaxed at his sides. The left and right frame edges are packed with a close, cropped crowd of ordinary villagers in wool and linen and headscarves. Their hands reach and grip toward the path but touch no one. Faces are half-shadowed, intense and agitated, not cartoonish, no sneers. The crowd forms a dark V framing a golden path lit by the low sun behind Jesus. Sun is behind his shoulders, no halo, no rays around his head. Bottom quarter is quiet dark rocky ground left clear. No buttons, no European clothing, no weapons, no gore. Palette: warm gold, honey stone, olive, cream, deep brown. References: film pictures 9, 8, 6. No lettering, no text.
+
+### MY #1
+**The Unlit Line.** It is the film's own hook in one picture: a sentence that stops. It is honest (no unread words shown), calm, and nothing like a normal Bible thumbnail.

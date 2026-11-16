@@ -1,0 +1,287 @@
+[
+ {
+  "png": "pills_v2/p00.png",
+  "f0": 3,
+  "f1": 78,
+  "box": [
+   70,
+   1000,
+   940,
+   184
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "Jesus stopped reading in the middle of a sentence.",
+  "lines": 2
+ },
+ {
+  "png": "pills_v2/p01.png",
+  "f0": 89,
+  "f1": 135,
+  "box": [
+   70,
+   1000,
+   940,
+   122
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "In Nazareth, His home town,",
+  "lines": 1
+ },
+ {
+  "png": "pills_v2/p02.png",
+  "f0": 147,
+  "f1": 249,
+  "box": [
+   70,
+   1000,
+   940,
+   246
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "He stood to read from the prophet Isaiah, written long before.",
+  "lines": 3
+ },
+ {
+  "png": "pills_v2/p03.png",
+  "f0": 284,
+  "f1": 387,
+  "box": [
+   70,
+   1000,
+   940,
+   246
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "He read God's promise of someone sent with good news for the poor,",
+  "lines": 3
+ },
+ {
+  "png": "pills_v2/p04.png",
+  "f0": 396,
+  "f1": 429,
+  "box": [
+   70,
+   1000,
+   940,
+   122
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "freedom for prisoners,",
+  "lines": 1
+ },
+ {
+  "png": "pills_v2/p05.png",
+  "f0": 435,
+  "f1": 483,
+  "box": [
+   70,
+   1000,
+   940,
+   122
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "and a time of God's welcome.",
+  "lines": 1
+ },
+ {
+  "png": "pills_v2/p06.png",
+  "f0": 505,
+  "f1": 546,
+  "box": [
+   70,
+   1000,
+   940,
+   122
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "Then He rolled up the scroll.",
+  "lines": 1
+ },
+ {
+  "png": "pills_v2/p07.png",
+  "f0": 569,
+  "f1": 612,
+  "box": [
+   70,
+   1000,
+   940,
+   122
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "Isaiah's sentence goes on:",
+  "lines": 1
+ },
+ {
+  "png": "pills_v2/p08.png",
+  "f0": 627,
+  "f1": 699,
+  "box": [
+   70,
+   1000,
+   940,
+   184
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "and the day of vengeance of our God.",
+  "lines": 2
+ },
+ {
+  "png": "pills_v2/p09.png",
+  "f0": 705,
+  "f1": 792,
+  "box": [
+   70,
+   1000,
+   940,
+   184
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "He left the day of vengeance unread, and sat down.",
+  "lines": 2
+ },
+ {
+  "png": "pills_v2/p10.png",
+  "f0": 819,
+  "f1": 870,
+  "box": [
+   70,
+   1000,
+   940,
+   122
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "Every eye was on Him.",
+  "lines": 1
+ },
+ {
+  "png": "pills_v2/p11.png",
+  "f0": 888,
+  "f1": 1026,
+  "box": [
+   70,
+   1000,
+   940,
+   184
+  ],
+  "radius": 46,
+  "jesus": true,
+  "text": "This day is this scripture fulfilled in your ears.",
+  "lines": 2
+ },
+ {
+  "png": "pills_v2/p12.png",
+  "f0": 1034,
+  "f1": 1098,
+  "box": [
+   70,
+   1000,
+   940,
+   184
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "The people were amazed at His kind words.",
+  "lines": 2
+ },
+ {
+  "png": "pills_v2/p13.png",
+  "f0": 1112,
+  "f1": 1158,
+  "box": [
+   70,
+   1000,
+   940,
+   122
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "They knew Him as a local boy.",
+  "lines": 1
+ },
+ {
+  "png": "pills_v2/p14.png",
+  "f0": 1187,
+  "f1": 1269,
+  "box": [
+   70,
+   1000,
+   940,
+   122
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "Is not this Joseph's son?",
+  "lines": 1
+ },
+ {
+  "png": "pills_v2/p15.png",
+  "f0": 1271,
+  "f1": 1371,
+  "box": [
+   70,
+   1000,
+   940,
+   184
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "That local boy was saying Isaiah's promise was about Him.",
+  "lines": 2
+ },
+ {
+  "png": "pills_v2/p16.png",
+  "f0": 1403,
+  "f1": 1494,
+  "box": [
+   70,
+   1000,
+   940,
+   184
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "He stopped reading at God's welcome, and said:",
+  "lines": 2
+ },
+ {
+  "png": "pills_v2/p17.png",
+  "f0": 1498,
+  "f1": 1549,
+  "box": [
+   70,
+   1000,
+   940,
+   122
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "This day.",
+  "lines": 1
+ },
+ {
+  "png": "pills_v2/p18.png",
+  "f0": 1571,
+  "f1": 1683,
+  "box": [
+   70,
+   1000,
+   940,
+   184
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "His welcome is still open, for you, today.",
+  "lines": 2
+ }
+]

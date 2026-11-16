@@ -1,0 +1,8 @@
+{
+ "locked": "2026-11-15",
+ "by": "owner (lock v3; 'ok change' -> v4 stopped-reading echo; 'ok go' -> v5 closing line)",
+ "file": "prophecy/02_nazareth/words/FINAL_WORDS_v5.md",
+ "sha256": "b4002bbe8117408d78c35f46a180ee663107c49ddff020219f435de742b31f6c",
+ "words": 138,
+ "note": "Words only. A lock never authorizes spending. v5 closing line chosen after 2 blind checks (words/test3: Paul line cut, avg 4.2; words/test4: 'still open' 7.2 -> synthesis)."
+}

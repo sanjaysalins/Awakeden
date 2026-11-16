@@ -1,0 +1,26 @@
+"""build_nazareth_v2.py - writes nazareth_episode_v2.json for NazarethComicV2 (same kit + look as the Thief film). $0.
+  .venv\\Scripts\\python.exe prophecy/02_nazareth/build/build_nazareth.py
+Page plan (54.64 s, 1639 frames @30): A hook > B village+scroll > C poor/freedom > D roll-up > E Isaiah unread words (hush) > F every eye >
+[Jesus line, S09 still] > G amazed > H townsman > I local boy / promise > J scroll shut > [S14 landing + 3 s hold]."""
+import json, sys
+from pathlib import Path
+HERE = Path(__file__).parent
+TB = Path(r"F:\slk\PycharmProjects\JesusInTheBible\poc_comic_page\_ELEVATE\formula\build"); sys.path.insert(0, str(TB))
+from geo import FW, FH
+from pages import page_layout
+FULL = [0, 0, FW, FH]; FRAMES = 1776
+pills = json.load(open(HERE / "pills_v2.json"))
+S2 = page_layout("stack2"); BG = [40, 40, 1000, 1060]; SMW = [40, 1128, 1000, 752]; SM1 = [40, 1128, 486, 752]; SM2 = [554, 1128, 486, 752]
+
+
+def P(id, c, box, mount, t_in, cx, cy, z0=1.0, z1=1.1, end=None, tilt=0, border=9, show=None, **kw):
+    end = end or mount + 120
+    sh = dict(clip=c, t_in=t_in, f_start=mount, cx=cx, cy=cy, z0=z0, z1=z1, f_z0=mount, f_z1=end, freeze_f=None)
+    d = dict(id=id, shot=sh, box=box, tilt=tilt, border=border, mount=mount)
+    if show: d["show"] = list(show)
+    d.update(kw); return d
+
+
+def slam(p, at, shake=0): return dict(kind="panel_slam", panel=p, at=at, shake=shake)
+
+
