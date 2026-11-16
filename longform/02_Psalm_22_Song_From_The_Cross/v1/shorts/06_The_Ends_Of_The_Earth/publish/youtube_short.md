@@ -14,12 +14,10 @@ It sounded impossible. But from that cross and the empty tomb, the gospel went o
 
 The cross was never a local tragedy. It was for the nations. And the ends of the world includes wherever you are. The Lord the song promised still has room for you.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 

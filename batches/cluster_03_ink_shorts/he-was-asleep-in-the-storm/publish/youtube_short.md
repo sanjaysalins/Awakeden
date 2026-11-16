@@ -10,12 +10,10 @@ His disciples woke Him: "Lord, save us: we perish." He asked them one question: 
 
 The One who could sleep through the storm is the One who silenced it with a word. When the water reaches you, come to Him.
 
-Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 

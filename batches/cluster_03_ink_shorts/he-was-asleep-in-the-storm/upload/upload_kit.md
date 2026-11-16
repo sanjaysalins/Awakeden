@@ -55,12 +55,10 @@ It is easy to say, easy for Him, He is God. Exactly. The One who could sleep thr
 
 When the water reaches your knees, come to the Christ who slept unafraid.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -95,12 +93,10 @@ It is easy to say, easy for Him, He is God. Exactly. The One who could sleep thr
 
 When the water reaches your knees, come to the Christ who slept unafraid.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -123,7 +119,7 @@ matthew 8, jesus calms the storm, jesus asleep in the boat, why are ye fearful, 
 ```
 Matthew 8. The storm was killing them, and Jesus was asleep. They woke Him, sure He did not care. He rose and there was a great calm. The One who slept through it is the One who silenced it. Come to Him.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _275 characters_
 
@@ -145,12 +141,10 @@ _34 characters_
 ```
 Matthew 8:23-27. They woke Him, saying, Lord, save us: we perish. He said, "Why are ye fearful, O ye of little faith?" (Matthew 8:26, KJV) Then there was a great calm. The One who could sleep through the storm is the One who silenced it. Come to the Christ who slept unafraid.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -168,7 +162,7 @@ _498 characters_
 ```
 Matthew 8. The storm was killing them, and Jesus was asleep. They woke Him, sure He did not care. He rose and there was a great calm. Come to the Christ who slept unafraid.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _244 characters_
 

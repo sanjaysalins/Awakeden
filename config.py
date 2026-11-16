@@ -407,7 +407,7 @@ VISUAL_STYLE_TAIL = (
 # Baroque stays selectable only for one-off reference/back-compat renders via
 # an explicit VISUAL_STYLE=baroque override.
 # Style versions: "baroque" (LEGACY oil-painting, never ships) | "graphic_novel" (standard) |
-# "retro" (PARKED — Awakeden Comic DNA, v2/AWAKEDEN_COMIC_DNA.md; rejected by the user 2026-07-24) |
+# "retro" (PARKED — Salt and Light Kingdom Comic DNA, v2/AWAKEDEN_COMIC_DNA.md; rejected by the user 2026-07-24) |
 # "painted_comic" (PROVISIONAL 2026-07-24 — .claude/skills/painted-comic/PAINTED_COMIC_SPEC.md §10;
 # an ad-hoc bake-off preference for EW01, not yet run through this registry path or given the
 # user's final sign-off — see the 2026-07-24 independent review before treating as settled).
@@ -659,7 +659,7 @@ STYLE_REGISTRY = {
         "audit_rubric": STYLE_AUDIT_RUBRIC["graphic_novel"],
         "audit_medium": STYLE_MEDIUM_PHRASE["graphic_novel"],
     },
-    "retro": {                                    # PARKED 2026-07-24: Awakeden Comic DNA v0.3 (v2/AWAKEDEN_COMIC_DNA.md)
+    "retro": {                                    # PARKED 2026-07-24: Salt and Light Kingdom Comic DNA v0.3 (v2/AWAKEDEN_COMIC_DNA.md)
         "style_base": VISUAL_STYLE_BASE_RETRO,    # -- rejected by the user in favour of "painted_comic" below (read
         "style_tail": VISUAL_STYLE_TAIL_RETRO,    #    too much like a printed comic page); left wired, not deleted.
         "still_model": ("hf", "seedream_v4_5"),   # neutral plates; character scenes override to nano_banana_pro + ref
@@ -731,7 +731,7 @@ VISUAL_BANNED_TOKENS = (
     # negation-prone words like 'lettering'/'flag'/'panel' stay out of this substring check
     # and are covered by the constitution rules + the vision gate F1-F5 instead).
     "diptych", "triptych", "gem", "jewel", "faceted", "glossy bead",
-    # AWAKEDEN COMIC DNA §5a passion-Christ body gate (2026-07-23) — "servant register only,
+    # SALT AND LIGHT KINGDOM COMIC DNA §5a passion-Christ body gate (2026-07-23) — "servant register only,
     # NO heroic/athletic musculature" was Vision-only prose with no deterministic teeth; the
     # 2026-07-23 external panel caught these tokens missing from this list. Safe to add here
     # (SP-G5 lints the SCENE-PLAN TEXT pre-render + the Vision audit checks the RENDERED image

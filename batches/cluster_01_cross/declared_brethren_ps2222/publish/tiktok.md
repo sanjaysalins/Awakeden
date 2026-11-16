@@ -3,7 +3,7 @@
 ## CAPTION
 Most people stop reading Psalm 22 at the cross. Keep going. The forsaken cry turns into praise in the congregation, and Hebrews puts that praise in the mouth of Jesus, risen, and not ashamed to call his own brethren. Family.
 
-Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 #Bible #Jesus #Psalm22 #Risen #KJV
 

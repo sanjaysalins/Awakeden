@@ -7,11 +7,9 @@ Thirty years later, at the cross, the sword landed. And the dying Son saw her wo
 
 Your wound is not invisible to him. Stand where Mary stood.
 
-Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
-Follow @awakeden
-
-#Bible #Jesus #Mary #Cross #WordsFromTheCross #KJV #Simeon #BibleShorts #Awakeden
+#Bible #Jesus #Mary #Cross #WordsFromTheCross #KJV #Simeon #BibleShorts #SaltAndLightKingdom
 
 ## HASHTAGS
-#Bible #Jesus #Mary #Cross #WordsFromTheCross #KJV #Simeon #BibleShorts #Awakeden
+#Bible #Jesus #Mary #Cross #WordsFromTheCross #KJV #Simeon #BibleShorts #SaltAndLightKingdom

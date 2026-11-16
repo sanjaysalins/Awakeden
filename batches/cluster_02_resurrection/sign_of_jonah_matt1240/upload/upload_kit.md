@@ -74,9 +74,7 @@ I went down guilty; the storm was mine. He went down innocent, bearing what was 
 
 You who are sure you have fallen too far: that is how far his mercy reaches. It cost him the grave. Stop running, and turn. Come up out of the deep, and live.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -115,9 +113,7 @@ In this piece: Jonah's flight and confession in his own words, why Jesus chose t
 
 It cost him the grave. Stop running, and turn. Come up out of the deep, and live.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -140,7 +136,7 @@ sign of jonah explained, matthew 12 40, jonah and the whale true meaning, jonah 
 ```
 They asked Jesus for a miracle. He gave them a drowned prophet. I went down guilty - he went down innocent, bearing what was ours. The grave no more held him than the deep held me. HE ROSE. Come up out of the deep, and live.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _303 characters_
 
@@ -168,9 +164,7 @@ Jonah went down guilty. Christ went down innocent, bearing what was ours. And he
 
 However far you think you have fallen, that is how far his mercy reaches. Come up out of the deep, and live.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -192,13 +186,13 @@ Jonah went down guilty; the storm was his. Christ went down innocent, bearing ou
 
 However far you have fallen, his mercy reaches further. It cost him the grave. Come up out of the deep, and live.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _408 characters_
 
 **HASHTAGS** (copy):
 ```
-#Bible #Jesus #Jonah #SignOfJonah #Resurrection #KJV #EmptyTomb #BibleShorts #Awakeden
+#Bible #Jesus #Jonah #SignOfJonah #Resurrection #KJV #EmptyTomb #BibleShorts #SaltAndLightKingdom
 ```
 
 ---

@@ -1,4 +1,4 @@
-# The Man Born Blind — Awakeden eyewitness (short)
+# The Man Born Blind — Salt and Light Kingdom eyewitness (short)
 **Witness:** the man born blind  ·  **Core text:** John 9  ·  **Type→fulfillment:** Christ the Light of the world
 **Status:** fixture — BAD, trips ONLY EW-G11 (a [the LORD] line is INVENTED prose, no verbatim KJV quote)
 ---

@@ -1,4 +1,4 @@
-"""cli_witness_lock.py — the fail-closed LOCK chokepoint for the Awakeden eyewitness format.
+"""cli_witness_lock.py — the fail-closed LOCK chokepoint for the Salt and Light Kingdom eyewitness format.
 
 Every eyewitness narration folder must pass this before it is locked or its audio rendered.
 Runs the deterministic EW-G1..EW-G6 gates (v2/EYEWITNESS_SPEC.md §4, §9) over the folder's

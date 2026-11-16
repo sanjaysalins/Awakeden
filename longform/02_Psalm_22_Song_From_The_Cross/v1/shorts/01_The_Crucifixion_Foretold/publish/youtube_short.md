@@ -14,12 +14,10 @@ David was never executed. He died an old man. He was describing someone else.
 
 That someone was Jesus. The soldiers rolled dice for the clothes off his back, never seeing what they were doing. God had it written down a thousand years early so when it happened, you would know the cross was no accident. It was the plan.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 

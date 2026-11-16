@@ -10,12 +10,10 @@ Numbers 21:8-9: snakes were killing Israel, and God did not take the snakes away
 
 The bitten looked at a snake, and lived. Believe in Jesus, lifted up on the cross, and live.
 
-Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 

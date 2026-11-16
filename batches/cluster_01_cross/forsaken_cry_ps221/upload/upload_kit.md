@@ -66,9 +66,7 @@ And listen closely: this was no cry of lost faith. Even forsaken, he still calls
 
 He was forsaken so that you never will be. However far you have run, the way home is open, and he opened it from the dark.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -107,9 +105,7 @@ In this piece: the ninth-hour darkness, David's opening line and why Jesus reach
 
 However far you have run, the way home is open. He opened it from the dark.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -132,7 +128,7 @@ psalm 22 explained, my god my god why hast thou forsaken me meaning, matthew 27 
 ```
 Jesus' darkest cry was a quote, written 1,000 years before the cross. "My God, my God, why hast thou forsaken me?" Not lost faith: even forsaken, he says MY God. Forsaken, so that you never will be. The way home is open.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _299 characters_
 
@@ -158,9 +154,7 @@ It was no cry of lost faith. Even forsaken, he still calls God MY God. The sinle
 
 He was forsaken so that you never will be. However far you have run, the way home is open, and he opened it from the dark.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -182,13 +176,13 @@ His darkest cry was already written, a thousand years early.
 
 Even forsaken, he says MY God. He bore the forsaking our sin deserved, so that you never will be. The way home is open.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _319 characters_
 
 **HASHTAGS** (copy):
 ```
-#Bible #Jesus #Psalm22 #Forsaken #Cross #KJV #WordsFromTheCross #BibleShorts #Awakeden
+#Bible #Jesus #Psalm22 #Forsaken #Cross #KJV #WordsFromTheCross #BibleShorts #SaltAndLightKingdom
 ```
 
 ---

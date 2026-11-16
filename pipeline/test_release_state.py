@@ -93,24 +93,13 @@ def test_g4_thumbs_warn_when_studio_fail_when_live():
 
 
 # ---- SYNC-G5 website ---------------------------------------------------------
-def test_g5_read_url_mismatch_fails():
-    s = _shipped(read_page=True, has_read_source=True,
-                 read_url_meta="https://awakeden.com/read/WRONG.html")
-    assert hits(run_gates([s], []), "SYNC-G5", "p", "FAIL")
-
-
-def test_g5_stale_read_frames_warn():
-    s = _shipped(read_page=True, has_read_source=True,
-                 read_url_meta="https://awakeden.com/read/p.html",
-                 read_video=Path("x/v_scored.mp4"), read_video_sha="NEW", read_meta_sha="OLD")
-    assert hits(run_gates([s], []), "SYNC-G5", "p", "WARN")
-
-
-def test_g5_read_page_without_read_source_warns():
-    # red-team M5: deleting read_source silently disarmed frame freshness
+def test_g5_read_url_checks_retired():
+    # 2026-11-16: the old website is retired, so read_url / read-page frames are not gated
     s = _shipped(read_page=True, has_read_source=False,
-                 read_url_meta="https://awakeden.com/read/p.html")
-    assert hits(run_gates([s], []), "SYNC-G5", "p", "WARN")
+                 read_url_meta="https://example.invalid/read/WRONG.html",
+                 read_video=Path("x/v_scored.mp4"), read_video_sha="NEW", read_meta_sha="OLD")
+    assert not hits(run_gates([s], []), "SYNC-G5", "p", "FAIL")
+    assert not hits(run_gates([s], []), "SYNC-G5", "p", "WARN")
 
 
 def test_g5_orphan_read_page_warns():
@@ -235,7 +224,7 @@ def test_to_post_long_first_then_cluster_order():
     q = release_state.to_post([s2, long, s1])
     assert [s.slug for s, _ in q] == ["L", "s1", "s2"]
     assert q[0][1] == ["youtube"]                      # long posts YouTube only
-    assert q[1][1] == release_state.PLATFORMS          # shorts post all four
+    assert q[1][1] == ["youtube"]                      # shorts too: only YouTube is tracked (2026-11-16)
 
 
 def test_to_post_skips_unshipped_and_posted():

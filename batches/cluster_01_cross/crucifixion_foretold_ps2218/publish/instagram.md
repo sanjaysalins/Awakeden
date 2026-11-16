@@ -7,11 +7,9 @@ Psalm 22:18. The soldiers at the cross rolled dice for the clothes off his back,
 
 No accident. The plan.
 
-Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
-Follow @awakeden
-
-#Bible #Jesus #Psalm22 #Prophecy #Cross #KJV #OldTestament #BibleShorts #Awakeden
+#Bible #Jesus #Psalm22 #Prophecy #Cross #KJV #OldTestament #BibleShorts #SaltAndLightKingdom
 
 ## HASHTAGS
-#Bible #Jesus #Psalm22 #Prophecy #Cross #KJV #OldTestament #BibleShorts #Awakeden
+#Bible #Jesus #Psalm22 #Prophecy #Cross #KJV #OldTestament #BibleShorts #SaltAndLightKingdom

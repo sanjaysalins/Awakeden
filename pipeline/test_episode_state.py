@@ -147,7 +147,7 @@ def test_status_live_long_with_regressed_final_never_hides_as_in_production():
 
 def test_shorts_posted_any_vs_fully_posted():
     partial_ledger = _short("a", built=True)
-    partial_ledger.ledger = {"youtube": {"url": "u"}}  # only 1 of 4 platforms
+    partial_ledger.ledger = {"tiktok": {"url": "u"}}  # an untracked platform only (YouTube is the one tracked)
     ep = EpisodeState(slug="x", long=_long(built=True, posted=True),
                       shorts=[partial_ledger, _short("b", built=True)])
     assert ep.shorts_posted == 0          # not fully posted anywhere

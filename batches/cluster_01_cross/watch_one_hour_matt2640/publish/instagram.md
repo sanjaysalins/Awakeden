@@ -3,9 +3,7 @@
 ## CAPTION
 Jesus asked three fishermen for ONE thing. They failed inside an hour. Matthew 26:40, Gethsemane, the night before the cross. Not a curse. A diagnosis full of mercy. He watched that hour alone, so no hour of yours is watched alone.
 
-Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
-
-Follow @awakeden
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 #Bible #Jesus #Gethsemane #KJV #BibleComic
 

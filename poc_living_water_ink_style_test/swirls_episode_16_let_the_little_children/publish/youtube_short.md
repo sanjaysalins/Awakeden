@@ -20,14 +20,12 @@ Has someone told you 'not now'? Jesus did not send those children away. You can 
 
 Read it: Mark 10:13-16 (also Matthew 19:13-15, Luke 18:15-17).
 
-Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
-https://awakeden.com
-
-Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
+Scripture quoted from the King James Version (KJV), public domain.
 
 #LetTheChildrenCome #Mark10 #Jesus #Bible #BibleStory
 

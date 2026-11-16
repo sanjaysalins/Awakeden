@@ -55,12 +55,10 @@ Not medicine. Not an antidote for the wound. Just a look at the very thing that 
 
 Look at what was lifted up for you, and live.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -95,12 +93,10 @@ Not medicine. Not an antidote for the wound. Just a look at the very thing that 
 
 Look at what was lifted up for you, and live.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -123,7 +119,7 @@ numbers 21, bronze serpent, serpent on a pole, look and live, moses, john 3 14, 
 ```
 Numbers 21:8-9. The cure for snakebite was a look at a snake on a pole. Not medicine, just a look. Jesus pointed back to it as a picture of Himself in John 3:14. Look at what was lifted up for you, and live.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _279 characters_
 
@@ -147,12 +143,10 @@ Numbers 21:8. "Make thee a fiery serpent, and set it upon a pole: and it shall c
 
 The cure was shaped like the curse, lifted up where everyone could see it. Jesus pointed back to it in John 3:14. Look at what was lifted up for you, and live.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -170,7 +164,7 @@ _564 characters_
 ```
 Numbers 21:8-9. The cure for snakebite was a look at a snake on a pole. Jesus pointed back to it in John 3:14. Look at what was lifted up for you, and live.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _228 characters_
 

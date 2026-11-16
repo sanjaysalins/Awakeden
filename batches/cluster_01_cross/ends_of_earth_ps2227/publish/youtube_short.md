@@ -12,13 +12,10 @@ A man dying in one corner of the Roman Empire, and his song says the ends of the
 
 And the ends of the world includes wherever you are, right now. The Lord this song promised still has room for you to turn to him.
 
-Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
-Read it panel by panel: https://awakeden.com/read/ps22-06-ends-of-the-earth.html
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 

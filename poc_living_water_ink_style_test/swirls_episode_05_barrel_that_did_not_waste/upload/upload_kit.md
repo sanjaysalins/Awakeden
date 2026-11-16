@@ -60,12 +60,10 @@ She fed the stranger first. "The barrel of meal shall not waste, neither shall t
 
 God did not need her barrel full. He needed it open.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -104,12 +102,10 @@ Centuries later, in his own hometown synagogue, Jesus named her by her city, the
 
 She did not have enough. She gave first anyway. God did not need her barrel full. He needed it open.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -132,7 +128,7 @@ _1460 characters_
 ```
 A starving widow had one handful of meal left. A stranger asked her to feed him first. She did. The meal never ran out for the rest of the famine. Jesus later said she was the only widow in Israel God sent help to.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _286 characters_
 
@@ -162,12 +158,10 @@ She fed the stranger first. "The barrel of meal shall not waste, neither shall t
 
 God did not need her barrel full. He needed it open.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -185,7 +179,7 @@ _886 characters_
 ```
 A starving widow had one handful of meal left. A stranger asked her to feed him first, before her own son. She did. The barrel never ran dry for the rest of the famine. God did not need her barrel full. He needed it open.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _293 characters_
 

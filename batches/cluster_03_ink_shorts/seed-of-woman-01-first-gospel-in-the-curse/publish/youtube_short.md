@@ -10,12 +10,10 @@ Genesis 3:15. In the garden, God speaks a promise to the serpent before He speak
 
 Christians have long read this as the first promise of Jesus, the Seed who would defeat the serpent. Grace was spoken before the sentence. That promise has a name: Jesus. Come and meet Him.
 
-Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 

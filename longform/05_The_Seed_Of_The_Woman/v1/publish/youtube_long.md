@@ -16,13 +16,10 @@ The whole Bible is one story. It starts here, in a garden, with a promise spoken
 
 Core text: Genesis 3:8-19
 
-Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
-Read it panel by panel: https://awakeden.com
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 

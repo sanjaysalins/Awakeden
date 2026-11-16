@@ -10,12 +10,10 @@ Psalm 22:27 (KJV): "All the ends of the world shall remember and turn unto the L
 
 A dying man in one corner of the Roman Empire, and the gospel has swept the whole earth since. The cross was never a local tragedy. It was for the nations. And the ends of the world includes wherever you are.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 

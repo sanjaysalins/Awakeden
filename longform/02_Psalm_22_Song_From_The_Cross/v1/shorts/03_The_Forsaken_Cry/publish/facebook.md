@@ -10,12 +10,10 @@ Psalm 22:1 (KJV): "My God, my God, why hast thou forsaken me?"
 
 David wrote it a thousand years before. Jesus quoted it verbatim. Even forsaken, he still called God his God, not a cry of lost faith, but the sinless Son bearing the forsaking our sin deserved. He was forsaken so that you never will be.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 

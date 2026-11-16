@@ -27,6 +27,9 @@ LEDGER = ROOT / "data" / "release_ledger.json"
 
 PLATFORMS = ["youtube", "tiktok", "facebook", "instagram"]
 LONG_POST_PLATFORMS = ["youtube"]  # matches LONG_PLATFORMS in publish_pack
+# Owner rule 2026-11-16: only YouTube links are tracked (shorts and longs alike).
+# PLATFORMS stays the list --set accepts; TRACKED_PLATFORMS drives the queue.
+TRACKED_PLATFORMS = ["youtube"]
 
 # public_status tiers that MUST be fully wired (fail-closed)
 _SHIPPED = {"studio_complete", "live"}
@@ -66,7 +69,7 @@ class PieceState:
 
     @property
     def post_platforms(self) -> list[str]:
-        return LONG_POST_PLATFORMS if self.kind == "long" else PLATFORMS
+        return TRACKED_PLATFORMS
 
     @property
     def pack_fresh(self) -> bool:
@@ -299,24 +302,8 @@ def run_gates(states: list[PieceState], orphans: list[str],
                         "rendered in LEGACY Baroque oil-painting style - never ships; "
                         "rebuild stills+animation in the graphic-novel standard before "
                         "this can be studio_complete/live"))
-        # G5 website (read_page + read-frame anchor don't need the final video)
-        if s.read_page and not s.has_read_source:
-            out.append(("SYNC-G5", "WARN", s.slug,
-                        "read page exists but manifest has no read_source: - frame "
-                        "freshness is UNGATED (restore the field)"))
-        if s.read_page:
-            if s.read_video and not s.read_fresh:
-                out.append(("SYNC-G5", "WARN", s.slug,
-                            "read-page frames not provably from the current scored video "
-                            "(re-run _website/build_readpage.py --force)"))
-            want = f"https://awakeden.com/read/{s.slug}.html"
-            if s.read_url_meta and s.read_url_meta != want:
-                out.append(("SYNC-G5", "FAIL", s.slug,
-                            f"publish_meta.json read_url = {s.read_url_meta} but the page is {want}"))
-            if not s.read_url_meta and shipped:
-                out.append(("SYNC-G5", "WARN", s.slug, "publish_meta.json has no read_url (footer loses the site link)"))
-        elif live:
-            out.append(("SYNC-G5", "WARN", s.slug, "live but no read page (set read_source: + build_readpage.py)"))
+        # G5 website checks RETIRED 2026-11-16: the old read-page website is no
+        # longer supported (owner), so read pages / read_url are not gated.
         if not s.video:
             continue
         # G3 pack freshness

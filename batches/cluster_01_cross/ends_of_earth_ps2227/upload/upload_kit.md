@@ -59,12 +59,10 @@ A man dying in one corner of the Roman Empire, and his song says the ends of the
 
 And the ends of the world includes wherever you are, right now. The Lord this song promised still has room for you to turn to him.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -99,12 +97,10 @@ A man dying in one corner of the Roman Empire, and his song says the ends of the
 
 And the ends of the world includes wherever you are, right now. The Lord this song promised still has room for you to turn to him.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -127,7 +123,7 @@ psalm 22, psalm 22 27, ends of the earth, all the kindreds of the nations, reach
 ```
 Psalm 22 opens with one forsaken man dying alone and ends with every nation on earth. From that cross the gospel went out, and nation after nation has turned to the LORD. The ends of the world includes wherever you are right now.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _307 characters_
 
@@ -153,12 +149,10 @@ Psalm 22 opens with one forsaken man dying alone, and ends with every nation on 
 
 From the cross and the empty tomb the gospel went out, and people in nation after nation have turned to the LORD, worshipping the One who died and rose. And the ends of the world includes wherever you are, right now. The Lord this song promised still has room for you to turn to him.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -176,13 +170,13 @@ _763 characters_
 ```
 One forsaken man dying alone. Then: all the ends of the world shall remember and turn unto the LORD. Psalm 22 saw the reach of the cross in advance, and the gospel has been crossing nations ever since. Wherever you are is inside the ends of the world. There is still room to turn.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _358 characters_
 
 **HASHTAGS** (copy):
 ```
-#Bible #Jesus #Psalm22 #Gospel #KJV #BibleShorts #Cross #Christian #Nations #Awakeden
+#Bible #Jesus #Psalm22 #Gospel #KJV #BibleShorts #Cross #Christian #Nations #SaltAndLightKingdom
 ```
 
 ---

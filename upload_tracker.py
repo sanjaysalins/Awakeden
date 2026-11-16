@@ -4,10 +4,10 @@
 You paste the URL after each upload; this records a DATED entry per platform in
 `data/release_ledger.json` (url + posted date + the sha of the final that went
 up), and for YouTube also writes `youtube_id` + `public_status: live` into
-`_website/manifest.yaml` and rebuilds the read pages (the piece's page gains the
-red "Watch the film" button). It NEVER uploads or deploys — after a batch of
---set calls, publish the _website folder the usual way, then run
-release_check.py (the SYNC gate reads this ledger).
+`_website/manifest.yaml` (the catalogue record the SYNC-G6 gate reads). It NEVER
+uploads or deploys. The old read-page website is retired (2026-11-16), so nothing
+is rebuilt or deployed. Only YouTube links are tracked (owner rule 2026-11-16).
+After a batch of --set calls, run release_check.py.
 
   .venv\\Scripts\\python.exe upload_tracker.py --list
   .venv\\Scripts\\python.exe upload_tracker.py --set sign-of-jonah youtube https://youtube.com/shorts/AbCdEf12345
@@ -18,7 +18,6 @@ from __future__ import annotations
 
 import datetime as _dt
 import re
-import subprocess
 import sys
 from pathlib import Path
 
@@ -58,8 +57,8 @@ def _set(slug: str, platform: str, url: str, *, repost: bool) -> None:
     if not hits:
         near = [it["slug"] for it in items if slug.split("-")[0] in it["slug"]]
         raise SystemExit(f"unknown slug '{slug}'. Close matches: {near}")
-    if platform not in PLATFORMS:
-        raise SystemExit(f"unknown platform '{platform}'. One of: {PLATFORMS}")
+    if platform not in release_state.TRACKED_PLATFORMS:
+        raise SystemExit(f"'{platform}' is not tracked - only YouTube links are tracked (owner rule 2026-11-16).")
     if not url.strip().lower().startswith("http") and not (
             platform == "youtube" and re.fullmatch(r"[A-Za-z0-9_-]{11}", url.strip())):
         raise SystemExit(f"'{url}' does not look like a URL - paste the full link")
@@ -106,16 +105,7 @@ def _set(slug: str, platform: str, url: str, *, repost: bool) -> None:
             MANIFEST, yaml.safe_dump(m, sort_keys=False, allow_unicode=True))
         print(f"  manifest: youtube_id = {entry['video_id']}"
               + (f" (was {was})" if was else "") + " · status -> live")
-        print("  rebuilding read pages ...")
-        try:
-            subprocess.run([sys.executable, str(ROOT / "_website" / "build_readpage.py"),
-                            "--html-only"], check=True)
-        except subprocess.CalledProcessError as e:
-            raise SystemExit(
-                "  ledger + manifest are SAVED, but the read-page rebuild FAILED "
-                f"(exit {e.returncode}).\n  Re-run: .venv\\Scripts\\python.exe "
-                "_website\\build_readpage.py --html-only BEFORE deploying _website.")
-        print("  done - deploy _website when the batch is finished, then run release_check.py")
+        print("  done - run release_check.py")
 
 
 def main() -> int:
@@ -132,7 +122,7 @@ def main() -> int:
         elif len(rest) == 3:
             slug, platform, url = rest[0], rest[1].lower(), rest[2]
         else:
-            raise SystemExit("usage: --set <slug> [youtube|tiktok|facebook|instagram] <url> [--repost]")
+            raise SystemExit("usage: --set <slug> [youtube] <url> [--repost]")
         _set(slug, platform, url, repost=repost)
 
     m = yaml.safe_load(MANIFEST.read_text(encoding="utf-8"))
@@ -145,7 +135,7 @@ def main() -> int:
 
     def row(it: dict) -> str:
         cells = []
-        for p in PLATFORMS:
+        for p in release_state.TRACKED_PLATFORMS:
             e = ledger.get(it["slug"], {}).get(p)
             cells.append(f"{p[:2].upper()} {e['posted']}" if e else f"{p[:2].lower()} -")
         return "  ".join(cells)

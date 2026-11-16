@@ -1,4 +1,4 @@
-"""Regression tests for the Awakeden eyewitness deterministic gates (EW-G1..EW-G6).
+"""Regression tests for the Salt and Light Kingdom eyewitness deterministic gates (EW-G1..EW-G6).
 
 Proves each gate FAILS-CLOSED on a fixture that trips exactly it, and that a clean
 eyewitness narration passes all six. Mirrors pipeline/test_validation.py style.
@@ -142,7 +142,7 @@ def test_g1_passes_when_no_quotes():
 
 # ---- EW-G4 catches the banned bare-CTA template ------------------------------
 
-_BANNED_CTA_MD = """# X — Awakeden eyewitness (short)
+_BANNED_CTA_MD = """# X — Salt and Light Kingdom eyewitness (short)
 **Witness:** y
 ---
 ## Beat 1 — I was there
@@ -166,7 +166,7 @@ def test_g4_blocks_banned_cta_template():
 # ---- LONG form: spine (7 beats) + word budget --------------------------------
 
 def _long_md(beats: list[tuple[int, str]], words_per_beat: int) -> str:
-    head = ("# Long Witness — Awakeden eyewitness (long)\n"
+    head = ("# Long Witness — Salt and Light Kingdom eyewitness (long)\n"
             "**Witness:** a long witness\n---\n")
     filler = "I carried the bowl to the altar and my hands did not tremble that day. "
     reps = max(1, words_per_beat // len(filler.split()))

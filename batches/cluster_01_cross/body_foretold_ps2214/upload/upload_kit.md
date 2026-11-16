@@ -61,12 +61,10 @@ David wrote it in the first person, but he was describing someone else's death. 
 
 This is what Jesus bore to bring you home: every wrenched joint, every cold stare, recorded centuries early so you would know none of it was chance. He was crushed in your place. Come home to him.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -103,12 +101,10 @@ David wrote in the first person, but he was describing someone else's death, not
 
 This is what Jesus bore to bring you home: every wrenched joint, every cold stare, recorded centuries in advance so you would know none of it was chance. He was crushed in your place. Come home to him.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -131,7 +127,7 @@ psalm 22, psalm 22 14, psalm 22 17, david, messianic psalm, old testament prophe
 ```
 A king described a dying body so exactly it reads like an eyewitness account of a crucifixion he never saw. Poured out like water, bones out of joint, counted and stared at. David wrote it centuries before Rome made crucifixion its instrument. Jesus bore it to bring you home.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _354 characters_
 
@@ -157,12 +153,10 @@ David described a dying body so exactly it reads like an eyewitness account of a
 
 He wrote in the first person, but he was describing someone else's death. Rome would not make crucifixion its instrument for centuries. This is what Jesus bore to bring you home, recorded early so you would know none of it was chance. He was crushed in your place. Come home to him.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -180,13 +174,13 @@ _795 characters_
 ```
 A king described a dying body he never saw: "I am poured out like water, and all my bones are out of joint" (Psalm 22:14). Written centuries before Rome made crucifixion its instrument, yet it reads like an eyewitness account. Jesus bore every wrenched joint and every cold stare to bring you home. He was crushed in your place.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _406 characters_
 
 **HASHTAGS** (copy):
 ```
-#Bible #Jesus #Psalm22 #Cross #KJV #BibleShorts #David #Gospel #Christian #Awakeden
+#Bible #Jesus #Psalm22 #Cross #KJV #BibleShorts #David #Gospel #Christian #SaltAndLightKingdom
 ```
 
 ---

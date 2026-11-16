@@ -55,12 +55,10 @@ Joshua 2:18: when Jericho's wall fell, one family walked out alive. A red cord i
 
 Rahab could not stop a wall. She tied one cord to a promise. Tie your trust to Jesus, and bring everyone you love inside.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -93,12 +91,10 @@ Joshua 2:18: when Jericho's wall fell, one family walked out alive. A red cord i
 
 Rahab could not stop a wall. She tied one cord to a promise. Tie your trust to Jesus, and bring everyone you love inside.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -121,7 +117,7 @@ Rahab, Jericho, scarlet cord, red cord, Joshua 2, Bible story, Old Testament, Je
 ```
 When Jericho fell, one family walked out alive. A red cord marked Rahab's house, and faith saved her (Joshua 2:18). Tie your trust to Jesus, and bring everyone you love inside.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _248 characters_
 
@@ -143,12 +139,10 @@ _45 characters_
 ```
 When Jericho fell, one family walked out alive. In Joshua 2:18, a red cord in a window marked Rahab's house. The cord was the sign, and Hebrews says what saved her was faith. Rahab could not stop a wall. She tied one cord to a promise. Tie your trust to Jesus, and bring everyone you love inside.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -166,7 +160,7 @@ _518 characters_
 ```
 When Jericho fell, one family walked out alive. A red cord marked Rahab's house (Joshua 2:18), and faith saved her. Tie your trust to Jesus, and bring everyone you love inside.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _248 characters_
 

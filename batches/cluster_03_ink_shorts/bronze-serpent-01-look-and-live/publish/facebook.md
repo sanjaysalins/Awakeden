@@ -8,12 +8,10 @@ Numbers 21:8. "Make thee a fiery serpent, and set it upon a pole: and it shall c
 
 Jesus said the Son of man must be lifted up the same way, so that whoever believes in Him should not perish but have eternal life (John 3:14-15). Look at what was lifted up for you, and live.
 
-Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 

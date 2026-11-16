@@ -1,21 +1,19 @@
 # youtube_short — YouTube (Short)
 
 ## TITLE
-Zacchaeus Climbed a Tree to See Jesus. Jesus Called Him by Name
+Why Did Jesus Pick Him?
 
 ## DESCRIPTION
 Who was Zacchaeus? In Luke 19, a rich, short tax collector climbed a tree just to see Jesus. Jesus came by, looked up, and called him by name: "Zacchaeus, make haste, and come down; for to day I must abide at thy house." Jesus came to him first. The change came after. "For the Son of man is come to seek and to save that which was lost." (Luke 19:10)
 
 In the film, quoted word for word from the KJV: Luke 19:5, 19:8 (first half), 19:9 (first half), 19:10. Told in plain words: Luke 19:1-4, 19:6-8; tax collectors told not to take extra: Luke 3:12-13; the cross and rising: 1 Corinthians 15:3-4.
 
-Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
-https://awakeden.com
-
-Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
+Scripture quoted from the King James Version (KJV), public domain.
 
 #Zacchaeus #Jesus #Luke19 #BibleStory #Shorts
 

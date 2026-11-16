@@ -10,12 +10,10 @@ Psalm 22:18 named two exact acts a dying man's executioners would do with his cl
 
 David was never executed. He was describing someone else. John 19 records both acts at Calvary and cites this verse directly. God had it written down so when it happened, you would know: the cross was not an accident. It was the plan.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 

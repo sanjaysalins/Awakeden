@@ -73,9 +73,7 @@ The Psalm he prayed says thou hast redeemed me. On that cross, he was buying tha
 
 You can close your eyes in those same hands. Not because death is small. Because the hands are strong. He keeps the morning.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -116,9 +114,7 @@ In this piece: the evening-prayer tradition behind Psalm 31:5, the one added wor
 
 You can close your eyes in those same hands. Not because death is small. Because the hands are strong. Commend your spirit to the Father, tonight and every night. He keeps the morning.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -141,7 +137,7 @@ luke 23 46 explained, into thy hands i commend my spirit meaning, psalm 31 5, wo
 ```
 His last words were a child's bedtime prayer, with one word added: FATHER. He died like a child falling asleep in his father's arms. Third day: morning. You can close your eyes in those same hands. He keeps the morning.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _298 characters_
 
@@ -167,9 +163,7 @@ He died like a child falling asleep in his father's arms, and on the third day, 
 
 You can close your eyes in those same hands. Not because death is small. Because the hands are strong. He keeps the morning.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -191,13 +185,13 @@ With one word added: Father.
 
 He died like a child falling asleep in his father's arms. On the third day, morning came. You can close your eyes in those same hands. He keeps the morning.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _345 characters_
 
 **HASHTAGS** (copy):
 ```
-#Bible #Jesus #Cross #WordsFromTheCross #Psalm31 #KJV #Gospel #BibleShorts #Awakeden
+#Bible #Jesus #Cross #WordsFromTheCross #Psalm31 #KJV #Gospel #BibleShorts #SaltAndLightKingdom
 ```
 
 ---

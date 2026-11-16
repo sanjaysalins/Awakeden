@@ -20,7 +20,7 @@ Keep this current; it complements `STATE.md` (status) and `RESUME.md` (what to d
 - [ ] **Finish Psalm 22 long** end-to-end: author `scene_plan.json` → red-team → panel → stills → clips → assemble → caption → publish (the 2nd template; validates the episode-generic drivers).
 - [ ] **Audit the 9 existing cut POCs** (keep / re-cut / retire) → publish the keepers with kits.
 - [ ] **Passion BATCH** (words-from-cross + types-shadows flagships + shorts) — only after the loop + reuse-audit tool exist.
-- [ ] Roll out remaining series by brand (SLK → Awakeden → Either), measured against analytics.
+- [ ] Roll out remaining series by brand (SLK → Salt and Light Kingdom → Either), measured against analytics.
 
 ## 💰 Spend tracking + cost control — BUILD FIRST (ASSET_LIBRARY_PLAN.md Loop 2, red-team-approved)
 - [x] **`pipeline/cost.py` + `data/spend_ledger.jsonl`** — BUILT + tested. `hf generate cost` (exact pre-flight) + `hf account transactions` (reconcile, spend/refund) + ElevenLabs char-est + NBP/Kling est + the LLM `mode` chokepoint (api token cost vs `$0 agent`). Logs credits + USD-estimate. CLI: balance/estimate/summary/reconcile. Per-episode ceilings ($25/short, $40/long) + `check_budget` override.

@@ -1,7 +1,7 @@
 {
   "name": "jitb-remotion",
   "version": "1.0.0",
-  "description": "Motion-graphics trailers for the JesusInTheBible / Awakeden engine (Remotion).",
+  "description": "Motion-graphics trailers for the JesusInTheBible / Salt and Light Kingdom engine (Remotion).",
   "scripts": {
     "studio": "remotion studio",
     "render": "remotion render"

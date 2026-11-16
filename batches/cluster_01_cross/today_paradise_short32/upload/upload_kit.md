@@ -2,7 +2,7 @@
 
 **Status:** RED-TEAMED  ·  **Gates:** FAILURES ❌
 **Video:** `F:\slk\PycharmProjects\JesusInTheBible\batches\cluster_01_cross\today_paradise_short32\visual\today_paradise_short32_final.mp4`
-**Format:** short  ·  **Series:** Awakeden  ·  **Anchor:** 
+**Format:** short  ·  **Series:** Salt and Light Kingdom  ·  **Anchor:** 
 
 > Copy each block straight into the platform's upload form. Title, description,
 > tags and hashtags are pre-checked, red-teamed and panel-reviewed.
@@ -63,12 +63,10 @@ Read it yourself: Luke 23:39-43. Jesus said to him, "To day shalt thou be with m
 
 You can ask Him to remember you too.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -103,12 +101,10 @@ He asked to be remembered someday. Jesus said, "To day shalt thou be with me in 
 
 You can ask Him to remember you too.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -131,7 +127,7 @@ thief on the cross, thief on the cross Bible story, Luke 23:39-43, Luke 23:43, p
 ```
 Jesus promised paradise to a criminal. Why? Two men died beside Him. One asked to be remembered. Luke 23:39-43. Send this to someone who thinks it is too late for them.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _240 characters_
 
@@ -157,12 +153,10 @@ He asked for very little. Listen to what Jesus said back: "To day shalt thou be 
 
 Send this to someone who thinks it is too late for them.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -180,7 +174,7 @@ _527 characters_
 ```
 Jesus promised paradise to a criminal. Why? Two men died beside Him. One mocked. One asked to be remembered. Luke 23:39-43. Send this to someone who thinks it is too late for them.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _252 characters_
 

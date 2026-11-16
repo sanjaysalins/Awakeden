@@ -9,7 +9,7 @@ SPECS = load_specs()
 
 def _kit(title, desc, ref="Psalm 22:7", platform="youtube_short"):
     src = SourceFacts(media_dir="x", video_path="x.mp4", format="short", series_name="s",
-                      brand="Awakeden", episode_title="e", anchor_ref=ref, anchor_kjv="",
+                      brand="Salt and Light Kingdom", episode_title="e", anchor_ref=ref, anchor_kjv="",
                       kjv_verified=True, thread="t", thread_lever="l", hook_line="h", spoken_script="")
     return UploadKit(source=src, platforms=[PlatformMeta(platform=platform, label="YT",
                                                          title=title, description=desc)])

@@ -10,12 +10,10 @@ On the night Jesus was arrested, Peter stood by a fire. When people asked if he 
 
 In the film, quoted word for word from the KJV: John 18:17, 18:25, 21:7, 21:9, 21:12, 21:15-17. Told in plain words: John 18:15-27 (in part) and John 21:1-17. In the King James Bible, the words "a fire of coals" appear only twice: John 18:18 and John 21:9.
 
-Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 

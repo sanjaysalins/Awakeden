@@ -8,12 +8,10 @@ Have you ever said to God, "If You had been here"? In John 11, two sisters said 
 
 Quoted word for word from the KJV: John 11:21, 28, 32, 34, 35, 36. Told in plain words: John 11:11, 11:17, 11:20, 11:43-44, 11:53; the cross, grave and rising: 1 Corinthians 15:3-4. "Jesus wept" is the shortest verse in the King James Bible.
 
-Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 

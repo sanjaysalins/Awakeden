@@ -16,14 +16,12 @@ He went down. He washed, seven times. New skin, like a child's.
 
 The best thing Naaman ever did was lose that argument.
 
-Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
-https://awakeden.com
-
-Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
+Scripture quoted from the King James Version (KJV), public domain.
 
 #Bible #Jesus #Naaman #Elisha
 

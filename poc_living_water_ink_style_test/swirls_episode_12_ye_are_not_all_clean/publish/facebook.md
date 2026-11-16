@@ -14,14 +14,12 @@ Judas went out: "and it was night." The one who knew the worst about them was no
 
 Read it: John 13:1-30, John 13:38.
 
-Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
-https://awakeden.com
-
-Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
+Scripture quoted from the King James Version (KJV), public domain.
 
 #JesusWashingFeet #John13 #Jesus #Bible
 

@@ -462,7 +462,7 @@ def main() -> int:
     flt = sys.argv[1] if len(sys.argv) > 1 else ""
     if flt == "--swirls" or (flt and (Path(flt) / "episode.py").is_file()):
         return _main_swirls(flt)
-    brand_assets(ROOT / "_brand")
+    # brand_assets() no longer runs: the old wordmark brand is retired (2026-11-16)
     states, _orphans, _orphan_pages = release_state.gather()
     made, skipped = [], []
     for s in states:

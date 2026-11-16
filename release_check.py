@@ -69,7 +69,7 @@ def main() -> int:
     if fails:
         print("RED — the release desk is out of sync; fix the FAIL lines above.")
         return 1
-    print("GREEN — website, packs, thumbs and ledger agree.")
+    print("GREEN — packs, thumbs and ledger agree.")
     return 0
 
 

@@ -2,7 +2,7 @@
 
 **Status:** RED-TEAMED  ·  **Gates:** FAILURES ❌
 **Video:** `C:\Users\sanjay\PycharmProjects\JesusInTheBible\batches\cluster_01_cross\mockers_words_ps227\visual\mockers_words_ps227_sfx.mp4`
-**Format:** short  ·  **Series:** Awakeden  ·  **Anchor:** 
+**Format:** short  ·  **Series:** Salt and Light Kingdom  ·  **Anchor:** 
 
 > Copy each block straight into the platform's upload form. Title, description,
 > tags and hashtags are pre-checked, red-teamed and panel-reviewed.
@@ -59,12 +59,10 @@ Psalm 22 recorded the mockery in advance: the wagging heads, the sneer, the very
 
 And the psalm they never finished ends with all the ends of the world turning to him. Turn, and come to the One who would not come down.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -99,12 +97,10 @@ The mockers thought they were inventing the cruelty. They were reciting prophecy
 
 And the psalm has an ending the mockers never read out: all the ends of the world shall remember and turn unto the LORD. The song that begins in mockery ends in worship. Turn, and come to the One who would not come down.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -127,7 +123,7 @@ psalm 22, psalm 22 8, matthew 27 43, mockery of jesus, messianic prophecy, proph
 ```
 The mob at the cross was reading from a script written a thousand years earlier. Psalm 22 recorded the taunts in advance, and Matthew heard them repeated word for word. They told the King to come down. He stayed, to win the scorners.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _311 characters_
 
@@ -153,12 +149,10 @@ A thousand years before the cross, Psalm 22 wrote down the mockery: the wagging 
 
 They told the King to come down. He stayed, for the very people throwing the scorn. And the psalm they never finished ends with all the ends of the world turning to him. Turn, and come to the One who would not come down.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -176,13 +170,13 @@ _757 characters_
 ```
 The taunts at the cross were written down a thousand years before they were shouted. Psalm 22 recorded the mockery in advance; the crowd recited it without knowing. They told the King to come down. He stayed, to win the scorners. The song they never finished ends with the whole world turning to him.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _378 characters_
 
 **HASHTAGS** (copy):
 ```
-#Bible #Jesus #Psalm22 #Cross #KJV #BibleShorts #Prophecy #Gospel #Christian #Awakeden
+#Bible #Jesus #Psalm22 #Cross #KJV #BibleShorts #Prophecy #Gospel #Christian #SaltAndLightKingdom
 ```
 
 ---

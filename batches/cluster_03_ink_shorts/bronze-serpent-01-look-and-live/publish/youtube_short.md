@@ -12,12 +12,10 @@ Not medicine. Not an antidote for the wound. Just a look at a brass serpent shap
 
 Jesus said the Son of man must be lifted up the same way, so that whoever believes in Him should not perish but have eternal life (John 3:14-15). Look at what was lifted up for you, and live.
 
-Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 

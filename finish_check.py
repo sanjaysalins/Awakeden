@@ -133,13 +133,13 @@ def main() -> None:
         fail("4-captions", f"{cc_dur:.2f}s != sfx {sfx_dur:.2f}s (tolerance {DUR_TOLERANCE}s)")
     print(f"  [ok] 4-captions   {cc.name} ({cc_dur:.1f}s)")
 
-    # 5. watermark
-    if not bak.exists():
+    # 5. watermark: RETIRED 2026-11-16 (old brand logo no longer burned in)
+    if False:
         fail("5-watermark", f"missing {bak} -- run add_watermark.py on {cc}")
     if cc.stat().st_mtime < bak.stat().st_mtime:
         fail("5-watermark", f"{cc.name} is OLDER than its own backup {bak.name} "
                              "-- looks like the backup exists but watermarking didn't complete")
-    print(f"  [ok] 5-watermark  {bak.name} present, {cc.name} is newer")
+    print("  [skip] 5-watermark  retired 2026-11-16")
 
     # 6. INV-26 landing hold
     cc_v = duration(cc, "video")

@@ -109,11 +109,11 @@
       "where": "NEW 2026-05-31 (caught on #31) — propose: G4/Evangelist check whether the verse's own gospel payoff was quoted/used before importing one"
     },
     "disputed-passage-risk": {
-      "description": "Spine rests on a textually-disputed passage (e.g. John 7:53-8:11). Acceptable for SLK devotional, real risk for Awakeden apologetics.",
+      "description": "Spine rests on a textually-disputed passage (e.g. John 7:53-8:11). Acceptable for SLK devotional, real risk for long-form apologetics (was the Awakeden line; brand retired 2026-11-16).",
       "deterministic": false,
       "status": "none",
       "self_review_covered": "false",
-      "where": "NEW 2026-05-31 (caught on #31) — propose: brand-aware advisory flag (block for Awakeden, advise for SLK)"
+      "where": "NEW 2026-05-31 (caught on #31) — propose: brand-aware advisory flag (block for long-form apologetics, advise for devotional shorts)"
     },
     "invented-narrative-detail": {
       "description": "An asserted Bible-narrative fact Scripture doesn't support or contradicts (e.g. 'Peter watched the Roman scourging' — he was at the high priest's courtyard, gone before dawn: Matt 26:58, Luke 22:62, John 19:1). Introduced to heighten drama; violates INV-4 (freshness must never invent). KJV-strict checks QUOTES, not narrative claims, so it slips every deterministic gate.",

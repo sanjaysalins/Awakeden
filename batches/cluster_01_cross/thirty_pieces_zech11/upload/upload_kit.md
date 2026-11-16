@@ -66,9 +66,7 @@ Five centuries later Judas sold Jesus for the same sum, threw it down in the tem
 
 The cross was no accident. Jesus let himself be weighed like a slave, and his blood bought you back. Stop weighing out your own price. Receive his, and go free.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -107,9 +105,7 @@ In this piece: the shepherd's wages in Zechariah's own story, why thirty shekels
 
 Stop weighing out your own price. Receive his, and go free.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -132,7 +128,7 @@ zechariah 11 13, thirty pieces of silver, judas iscariot betrayal, messianic pro
 ```
 Thirty coins hit the temple floor. Each lands on a mark written 500 years early. Judas was not trying to fulfil prophecy. The priests were not trying. Every coin found its mark. His blood bought you back. Receive his price, and go free.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _315 characters_
 
@@ -158,9 +154,7 @@ Nobody was trying to fulfil prophecy. Every coin found its mark. The cross was n
 
 Stop weighing out your own price. Receive his, and go free.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -182,13 +176,13 @@ Zechariah: weighed, thrown down, to the potter, in the house of the LORD. Judas:
 
 Nobody was steering. Every coin found its mark. His blood bought you back. Receive his price, and go free.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _415 characters_
 
 **HASHTAGS** (copy):
 ```
-#Bible #Jesus #Zechariah #Prophecy #ThirtyPiecesOfSilver #KJV #OldTestament #BibleShorts #Awakeden
+#Bible #Jesus #Zechariah #Prophecy #ThirtyPiecesOfSilver #KJV #OldTestament #BibleShorts #SaltAndLightKingdom
 ```
 
 ---

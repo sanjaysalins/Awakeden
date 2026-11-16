@@ -54,12 +54,10 @@ Paul could have written son of David or son of Abraham. He wrote made of a woman
 
 The plan was never yours to write, and He has already arrived for you.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -94,12 +92,10 @@ Paul could have written son of David or son of Abraham. He wrote made of a woman
 
 The plan was never yours to write, and He has already arrived for you.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -122,7 +118,7 @@ galatians 4 4, made of a woman, seed of the woman, genesis 3 15, plan b, fulness
 ```
 Plan B? Genesis already named this seed. Paul writes made of a woman, the woman promised in the garden. Galatians 4:4. This was never Plan B. He has already arrived for you.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _245 characters_
 
@@ -146,12 +142,10 @@ Galatians 4:4. "But when the fulness of the time was come, God sent forth his So
 
 Jesus was not a rescue invented later. He was the plan, named first, kept word for word. He has already arrived for you.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -169,7 +163,7 @@ _470 characters_
 ```
 Plan B? Genesis already named this seed. Galatians 4:4, made of a woman. This was never Plan B. He has already arrived for you.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _199 characters_
 

@@ -2,7 +2,7 @@
 
 **Status:** RED-TEAMED  ·  **Gates:** FAILURES ❌
 **Video:** `C:\Users\sanjay\PycharmProjects\JesusInTheBible\batches\cluster_02_resurrection\women_first_witnesses_luke245\visual\women_first_witnesses_luke245_sfx.mp4`
-**Format:** short  ·  **Series:** Awakeden  ·  **Anchor:** 
+**Format:** short  ·  **Series:** Salt and Light Kingdom  ·  **Anchor:** 
 
 > Copy each block straight into the platform's upload form. Title, description,
 > tags and hashtags are pre-checked, red-teamed and panel-reviewed.
@@ -58,12 +58,10 @@ The very first report that Jesus had risen was dismissed as nonsense - by His ow
 
 The idle tale was true, and it went first to the witnesses the world would not hear. He still sends His word to the overlooked. Stop seeking the living among the dead - the risen Christ is seeking you.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -71,7 +69,7 @@ _832 characters_
 
 **TAGS** (copy — paste into the keyword/tags field):
 ```
-women at the tomb, resurrection, Luke 24, empty tomb, first witnesses, Mary Magdalene, Joanna, He is risen, why seek the living among the dead, Easter, Bible, Jesus, gospel, Christian shorts, Awakeden
+women at the tomb, resurrection, Luke 24, empty tomb, first witnesses, Mary Magdalene, Joanna, He is risen, why seek the living among the dead, Easter, Bible, Jesus, gospel, Christian shorts, Salt and Light Kingdom
 ```
 
 **HASHTAGS** (copy):
@@ -98,12 +96,10 @@ Luke had named these women long before - Mary Magdalene, and Joanna - who follow
 
 The promise had been kept - and the overlooked were the first to know. He still sends His word to those the world will not hear. You need no standing in any court to receive it. Stop seeking the living among the dead; the risen Christ is seeking you.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -111,7 +107,7 @@ _1490 characters_
 
 **TAGS** (copy — paste into the keyword/tags field):
 ```
-women first witnesses, resurrection, Luke 24, empty tomb, Mary Magdalene, Joanna, He is risen, why seek the living among the dead, third day rise again, Galilee, Easter, Bible study, Jesus, gospel, apologetics, Christian, Awakeden
+women first witnesses, resurrection, Luke 24, empty tomb, Mary Magdalene, Joanna, He is risen, why seek the living among the dead, third day rise again, Galilee, Easter, Bible study, Jesus, gospel, apologetics, Christian, Salt and Light Kingdom
 ```
 
 **HASHTAGS** (copy):
@@ -126,7 +122,7 @@ women first witnesses, resurrection, Luke 24, empty tomb, Mary Magdalene, Joanna
 ```
 They called the first Easter report an "idle tale" - and it came from women no court would believe. But it was true. "He is not here, but is risen." (Luke 24:6) The risen Christ is seeking you.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _271 characters_
 
@@ -152,12 +148,10 @@ The first report that Jesus had risen was dismissed as nonsense - by His own apo
 
 The idle tale was true, and it went first to the witnesses the world would not hear. Stop seeking the living among the dead - the risen Christ is seeking you.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -175,13 +169,13 @@ _784 characters_
 ```
 The first news that Jesus was alive was dismissed as nonsense - by His own apostles. It came from women the world would not hear. But it was true. "Why seek ye the living among the dead? He is not here, but is risen." (Luke 24:5-6) He still sends His word to the overlooked - the risen Christ is seeking you.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _386 characters_
 
 **HASHTAGS** (copy):
 ```
-#Bible #Jesus #HeIsRisen #Resurrection #EmptyTomb #Faith #Gospel #Scripture #Christian #Easter #Awakeden
+#Bible #Jesus #HeIsRisen #Resurrection #EmptyTomb #Faith #Gospel #Scripture #Christian #Easter #SaltAndLightKingdom
 ```
 
 ---

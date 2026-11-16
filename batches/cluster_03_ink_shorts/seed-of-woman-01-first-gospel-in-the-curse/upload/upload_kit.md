@@ -55,12 +55,10 @@ Only then does He speak their own sentence. Rescue was spoken before ruin. That 
 
 Grace was spoken before your sentence. Come meet the Voice that spoke first.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -95,12 +93,10 @@ Only then does He speak their own sentence. Rescue was spoken before ruin. That 
 
 Grace was spoken before your sentence. Come meet the Voice that spoke first.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -123,7 +119,7 @@ genesis 3 15, protoevangelium, first gospel, seed of the woman, adam and eve, cu
 ```
 Before God told Adam and Eve their sentence, He spoke to the snake first and hid a promise inside the curse. Genesis 3:15. Grace was spoken first. Come meet the Voice that spoke first.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _256 characters_
 
@@ -147,12 +143,10 @@ Genesis 3:15. "And I will put enmity between thee and the woman, and between thy
 
 Before God spoke their sentence, He spoke a promise. Grace was spoken first. Come meet the Voice that spoke first.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -170,7 +164,7 @@ _502 characters_
 ```
 Before God told Adam and Eve their sentence, He hid a promise inside the curse. Genesis 3:15. Grace was spoken first. Come meet the Voice that spoke first.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _227 characters_
 

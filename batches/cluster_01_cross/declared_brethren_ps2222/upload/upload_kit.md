@@ -59,12 +59,10 @@ Who is that praising voice? Hebrews puts this verse in the mouth of the risen Ch
 
 The same Jesus who cried out forsaken now lives, and he is calling you into that family.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -99,12 +97,10 @@ Who is the praising voice? The book of Hebrews answers: it places this verse in 
 
 The One who cried forsaken now lives, and he is not ashamed to call his own family. He is calling you into that family.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -127,7 +123,7 @@ psalm 22, psalm 22 22, hebrews 2 12, hebrews 2 11, risen christ, resurrection of
 ```
 Most people stop reading Psalm 22 at the cross. Keep going. The forsaken cry turns into praise in the congregation, and Hebrews says the praising voice is the risen Jesus, not ashamed to call us brethren. Family.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _290 characters_
 
@@ -153,12 +149,10 @@ Psalm 22 opens with the forsaken cry Jesus prayed from the cross. But keep readi
 
 Hebrews puts that verse in the mouth of the risen Christ, and adds that he is not ashamed to call them brethren. The One who cried forsaken now lives, and he is calling you into that family.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -176,13 +170,13 @@ _683 characters_
 ```
 Everyone stops reading Psalm 22 at the forsaken cry. The psalm keeps going: the same voice turns to praise in the congregation. Hebrews names the singer: the risen Jesus, not ashamed to call us brethren. The One who cried forsaken now calls you family.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _330 characters_
 
 **HASHTAGS** (copy):
 ```
-#Bible #Jesus #Psalm22 #Risen #KJV #BibleShorts #Gospel #Christian #Hebrews #Awakeden
+#Bible #Jesus #Psalm22 #Risen #KJV #BibleShorts #Gospel #Christian #Hebrews #SaltAndLightKingdom
 ```
 
 ---

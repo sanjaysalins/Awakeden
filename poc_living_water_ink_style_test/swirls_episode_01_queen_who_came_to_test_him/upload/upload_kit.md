@@ -55,12 +55,10 @@ Centuries later, Jesus pointed back to her to say something about Himself: "beho
 
 She crossed a continent to check a king's wisdom. You do not have to travel anywhere to find out if Jesus is real. Bring Him your hardest question.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -95,12 +93,10 @@ Centuries later, Jesus pointed back to her to say something about Himself: "beho
 
 She crossed a continent to check a king's wisdom. You do not have to travel anywhere to find out if Jesus is real. Bring Him your hardest question.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -123,7 +119,7 @@ _925 characters_
 ```
 1 Kings 10. A queen crossed a desert to test a rumor about Solomon, then said the half was not told her. Jesus pointed back to her: a greater than Solomon is here (Matthew 12:42). Bring Him your hardest question.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _284 characters_
 
@@ -147,12 +143,10 @@ _56 characters_
 
 You do not have to travel anywhere to find out. Bring Him your hardest question.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -170,7 +164,7 @@ _480 characters_
 ```
 1 Kings 10. A queen crossed a desert to test a rumor about Solomon. Jesus pointed back to her: a greater than Solomon is here (Matthew 12:42). Bring Him your hardest question.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _247 characters_
 

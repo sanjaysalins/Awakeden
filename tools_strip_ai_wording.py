@@ -8,8 +8,10 @@ PAT = re.compile(r"[ \t]*(Art(?:, music)? and voices made with AI(?: tools)?\.|A
 SKIP = ("_independent_review", "red_team", "_redteam", "panel", "prompt", "_pre_")
 apply = "--apply" in sys.argv
 n_files = n_hits = 0
-for base in ("batches", "longform", "poc_desert_storybook_heroes", "poc_pop_halftone", "poc_folk_print_style"):
-    for p in (ROOT / base).rglob("*"):
+# Whole repo (2026-11-16: the old 5-folder list missed every Swirls pack).
+for base in ("",):
+    for p in ROOT.rglob("*"):
+        if any(x in p.parts for x in (".venv", "node_modules", ".git")): continue
         if p.suffix not in (".md", ".html", ".json", ".txt") or not p.is_file(): continue
         rel = str(p.relative_to(ROOT)).replace("\\", "/")
         if any(s in rel for s in SKIP): continue

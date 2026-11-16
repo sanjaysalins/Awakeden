@@ -59,12 +59,10 @@ The wounds, the silence, the grave, the rich man in his death, and what the woun
 
 The report is true. Come to the One it names.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -101,12 +99,10 @@ The arm of the LORD is not a thing. It is a person, and he has your name in vers
 
 The report is true. The arm of the LORD has a name. Have you believed the report?
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -129,7 +125,7 @@ isaiah 53, suffering servant, isaiah 53 5, isaiah 53 explained, wounded for our 
 ```
 A prophet in Jerusalem wrote down the death of a man he never met, 700 years before it happened (Isaiah 53). The wounds, the silence, the grave, and what the wounds were for. A traveller asked who it was about. The New Testament answers by name.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _323 characters_
 
@@ -155,12 +151,10 @@ Seven hundred years before a Roman nail was ever driven, Isaiah wrote down the w
 
 This deep-dive walks the whole chapter, takes the Israel question seriously, and follows the desert road where a traveller reading this very scripture asked who it meant, and was answered by name. The report is true. Come to the One it names.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -178,13 +172,13 @@ _804 characters_
 ```
 700 years early, Isaiah wrote a death he never saw: "he was wounded for our transgressions" (Isaiah 53:5, KJV). The wounds, the silence, the grave, the rich man's tomb. When a traveller asked who it was about, the New Testament answered by name. The report is true. Come to the One it names.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _369 characters_
 
 **HASHTAGS** (copy):
 ```
-#Bible #Jesus #Isaiah53 #Prophecy #KJV #SufferingServant #Gospel #Christian #BibleStudy #Awakeden
+#Bible #Jesus #Isaiah53 #Prophecy #KJV #SufferingServant #Gospel #Christian #BibleStudy #SaltAndLightKingdom
 ```
 
 ---

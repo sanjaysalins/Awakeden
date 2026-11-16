@@ -102,7 +102,7 @@ order-of-magnitude, dates vary mid-2025 to mid-2026.
 **Tier 4 — kids animation (adjacent, not competing for persona A)**
 
 - **The Holy Tales: Bible** — 326K subs; **Saddleback Kids** — 88 animated shorts free.
-  Crowded, safe, aimed at persona C (families/kids) — not Awakeden's audience.
+  Crowded, safe, aimed at persona C (families/kids) — not Salt and Light Kingdom's audience.
 
 ---
 
@@ -137,7 +137,7 @@ order-of-magnitude, dates vary mid-2025 to mid-2026.
    good-enough comic look now, not perfecting one forever. The user's "consistency
    from launch" pushback is right — and it is an argument for deciding, not delaying.
 3. **Unchanged:** the words are the moat. Every durable winner has a premise, a person,
-   or a felt need. Awakeden's second-person narration ("the quiet fear that if you
+   or a felt need. Salt and Light Kingdom's second-person narration ("the quiet fear that if you
    actually came to God..." → "so come") IS its premise engine — and it is closer in
    spirit to what makes POV vlogs win (direct address) than anything in the visual DNA.
    Protect it; surface it in the first 2 seconds of text on screen.

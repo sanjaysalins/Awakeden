@@ -51,7 +51,7 @@ premise beats picture · consistency compounds · comic lane is open but imitabl
 - **$0 stages after clips (all existing tooling):** page composition (`_compose_pages_v2.py`) →
   text layer (parchment bands, red letters, gold splash border) → page turns + print grade →
   score (library) + One True Sound + SFX bed → assembly (INV-26 ≥3.0s hold) →
-  offline captions → AWAKEDEN watermark (delete stale `.prewm.bak` first — known trap).
+  offline captions → SALT AND LIGHT KINGDOM watermark (delete stale `.prewm.bak` first — known trap).
 - **New char sheets first (4cr):** the old inked sheets will drag the style backward
   (proven ref-pull risk) — render Jesus + Seeker sheets IN Action Painterly, then chain those.
 

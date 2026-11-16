@@ -12,13 +12,10 @@ No merit. No time left to earn anything. Just repentance and trust, answered the
 
 We are all one of those two men. Ask what the thief asked, and hear his answer.
 
-Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
-Read it panel by panel: https://awakeden.com/read/today-in-paradise.html
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 

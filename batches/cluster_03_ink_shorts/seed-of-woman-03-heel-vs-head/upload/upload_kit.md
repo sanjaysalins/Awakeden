@@ -54,12 +54,10 @@ This is not a tie. A bruised heel is survivable. A crushed head is not. The outc
 
 You keep hoping for a tie you can live with. Christ already delivered the blow that ends it: a bruised heel that carried a cross, and a crushed head that stays crushed.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -94,12 +92,10 @@ This is not a tie. A bruised heel is survivable. A crushed head is not. The outc
 
 You keep hoping for a tie you can live with. Christ already delivered the blow that ends it: a bruised heel that carried a cross, and a crushed head that stays crushed.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -122,7 +118,7 @@ genesis 3 15, heel and head, seed of the woman, bruise his heel, crush the serpe
 ```
 Genesis 3:15 is not a tie. One gets a bruised heel. The other gets a crushed head. The outcome was fixed before the fight began. Christ already delivered the blow that ends it.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _248 characters_
 
@@ -146,12 +142,10 @@ Genesis 3:15. "And I will put enmity between thee and the woman, and between thy
 
 A bruised heel is survivable. A crushed head is not. Christ already delivered the blow that ends it.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -169,7 +163,7 @@ _488 characters_
 ```
 Genesis 3:15 is not a tie. A bruised heel, a crushed head. The outcome was fixed before the fight began. Christ already delivered the blow that ends it.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _224 characters_
 

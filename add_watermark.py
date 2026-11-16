@@ -1,4 +1,7 @@
-"""add_watermark.py — burn the AWAKEDEN wordmark into finished videos ($0 ffmpeg).
+"""add_watermark.py — RETIRED 2026-11-16: the old AWAKEDEN wordmark is no longer burned into videos (owner retired that brand).
+Running it does nothing. Kept only as a record of how the old mark was placed.
+
+Was: burn the old wordmark into finished videos ($0 ffmpeg).
 
 Positions (user-locked 2026-07-21, from the father_forgive_them samples):
   9:16 (shorts)     top-LEFT   — the one top spot clear of TikTok/Shorts UI icons
@@ -80,6 +83,8 @@ def watermark(video: Path) -> str:
 
 
 def main() -> int:
+    print("add_watermark.py is RETIRED (2026-11-16): no logo is burned into videos any more.")
+    return 0
     targets = [Path(a).resolve() for a in sys.argv[1:]] or shipped_finals()
     if not WM.is_file():
         sys.exit(f"missing overlay asset: {WM} (run pipeline/thumbnails.py)")

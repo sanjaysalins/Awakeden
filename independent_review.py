@@ -122,7 +122,7 @@ platform + phrase:
 - Forgettable / templated titles that won't earn the click honestly.
 - Brand: CTA-to-Jesus present; footer/links not mangled."""
 
-LENS_EYEWITNESS = """LENS — judge this AWAKEDEN EYEWITNESS NARRATION (a named biblical
+LENS_EYEWITNESS = """LENS — judge this SALT AND LIGHT KINGDOM EYEWITNESS NARRATION (a named biblical
 witness recounts a moment they lived, then it turns to reveal Christ). Be specific,
 cite the exact line/phrase:
 - KJV verbatim + attribution (EW-INV-4): every word inside `**"..."**` quotes must be

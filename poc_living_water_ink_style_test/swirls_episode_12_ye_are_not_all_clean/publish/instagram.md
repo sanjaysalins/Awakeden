@@ -5,8 +5,7 @@ If people really knew you, would they leave? Jesus knew His friends. Judas would
 
 Send this to someone who needs to hear it.
 
-Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
-Art and voices made with AI tools.
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 #JesusWashingFeet #John13 #Jesus #Bible #Faith
 

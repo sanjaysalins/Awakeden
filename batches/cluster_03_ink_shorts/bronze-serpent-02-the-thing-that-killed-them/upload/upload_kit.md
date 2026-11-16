@@ -54,12 +54,10 @@ It was not a comforting symbol. It was the exact shape of what was killing them,
 
 That is the picture of what Christ did. He did not become a general sacrifice. He took the curse itself. Look at what was lifted up for you, and live.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -94,12 +92,10 @@ It was not a comforting symbol. It was the exact shape of what was killing them,
 
 That is the picture of what Christ did. He did not become a general sacrifice. He took the curse itself. Look at what was lifted up for you, and live.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -122,7 +118,7 @@ numbers 21, bronze serpent, brass serpent, serpent on a pole, moses, types and s
 ```
 God hung up a snake. Not a comforting symbol. The exact shape of their death, lifted up so the whole camp could see it. Numbers 21:9. Christ took your curse. Look and live.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _244 characters_
 
@@ -146,12 +142,10 @@ Numbers 21:9. "And Moses made a serpent of brass, and put it upon a pole, and it
 
 The cure was the exact shape of what was killing them, lifted up where everyone could see it. Christ took your curse. Look at what was lifted up for you, and live.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -169,7 +163,7 @@ _573 characters_
 ```
 God hung up a snake. It was the cure. Numbers 21:9. The exact shape of their death, lifted up for all to see. Christ took your curse. Look and live.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _220 characters_
 

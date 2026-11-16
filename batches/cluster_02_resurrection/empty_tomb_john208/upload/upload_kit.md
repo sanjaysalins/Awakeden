@@ -2,7 +2,7 @@
 
 **Status:** RED-TEAMED  ·  **Gates:** FAILURES ❌
 **Video:** `C:\Users\sanjay\PycharmProjects\JesusInTheBible\batches\cluster_02_resurrection\empty_tomb_john208\visual\empty_tomb_john208_sfx.mp4`
-**Format:** short  ·  **Series:** Awakeden  ·  **Anchor:** 
+**Format:** short  ·  **Series:** Salt and Light Kingdom  ·  **Anchor:** 
 
 > Copy each block straight into the platform's upload form. Title, description,
 > tags and hashtags are pre-checked, red-teamed and panel-reviewed.
@@ -58,12 +58,10 @@ Someone took the body. That was Mary's first thought at the empty tomb. But when
 
 You were not at the tomb. You never saw the linen. Jesus was speaking about you. Believe what John believed - the Lord is risen.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden - https://youtube.com/@awakeden
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg - https://www.youtube.com/@saltandlightkingdomorg
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -102,12 +100,10 @@ Eight days later, Thomas refused to believe until he saw. The risen Jesus showed
 
 You were not at the tomb. You never saw the linen. Jesus was speaking about you. Believe what John believed at the linen - the Lord is risen. Already, he calls that faith blessed.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden - https://youtube.com/@awakeden
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg - https://www.youtube.com/@saltandlightkingdomorg
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -130,7 +126,7 @@ empty tomb, john 20, john 20 8, resurrection of jesus, mary magdalene, peter and
 ```
 Someone took the body - that was Mary's first thought at the empty tomb. Then John saw the grave clothes lying and the face-cloth wrapped apart, and believed his Lord was risen - before he ever saw Jesus alive. What thief folds the face-cloth? (John 20)
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _332 characters_
 
@@ -156,12 +152,10 @@ When Peter and John ran to the empty tomb, no angel spoke and no risen Lord stoo
 
 You were not at the tomb. Jesus was speaking about you. Believe what John believed - the Lord is risen.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden - https://youtube.com/@awakeden
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg - https://www.youtube.com/@saltandlightkingdomorg
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -179,7 +173,7 @@ _740 characters_
 ```
 Someone took the body - that was Mary's first thought at the empty tomb. Then John saw the linen lying and the face-cloth wrapped apart, and believed his Lord was risen - before he ever saw Jesus alive. You were not at the tomb. Jesus called your faith blessed (John 20:29).
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _353 characters_
 

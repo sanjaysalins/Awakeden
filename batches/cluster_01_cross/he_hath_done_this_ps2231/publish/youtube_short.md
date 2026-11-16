@@ -12,13 +12,10 @@ The psalm ends looking ahead to God's saving work, accomplished, and told to a p
 
 So what is left for you to finish? Nothing. Only Someone to come home to: the One who said it is done.
 
-Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
-Read it panel by panel: https://awakeden.com/read/ps22-05-he-hath-done-this.html
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 

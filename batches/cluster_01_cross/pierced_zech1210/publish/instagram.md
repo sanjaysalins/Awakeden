@@ -7,11 +7,9 @@ Zechariah 12:10: the LORD claims the wound as his own. "They shall look upon me 
 
 The promise starts with grace poured out, not wrath. Look at him, and live.
 
-Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
-Follow @awakeden
-
-#Bible #Jesus #Zechariah #MessianicProphecy #KJV #Cross #OldTestament #BibleShorts #Awakeden
+#Bible #Jesus #Zechariah #MessianicProphecy #KJV #Cross #OldTestament #BibleShorts #SaltAndLightKingdom
 
 ## HASHTAGS
-#Bible #Jesus #Zechariah #MessianicProphecy #KJV #Cross #OldTestament #BibleShorts #Awakeden
+#Bible #Jesus #Zechariah #MessianicProphecy #KJV #Cross #OldTestament #BibleShorts #SaltAndLightKingdom

@@ -1,6 +1,6 @@
 # HANDOFF — pipeline quality work (read me first)
 
-Self-contained resume for a fresh Claude session continuing in this repo (JesusInTheBible / Awakeden).
+Self-contained resume for a fresh Claude session continuing in this repo (JesusInTheBible / Salt and Light Kingdom).
 Written 2026-06-20. The previous session built a hook/quality gate + an upload lint and applied the
 scroll-test fixes to the Psalm 22 shorts. **One thing is left: RE-RENDER the 6 fixed shorts.**
 

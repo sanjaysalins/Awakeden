@@ -407,7 +407,7 @@ real, blocking errors, not just gaps. Corrected here:**
    version of this section asked of it without an unbuilt panel-crop step
    first.
 3. **The AWAKEDEN/living-page engine-choice question this section used to
-   flag is now moot** — the AWAKEDEN retro-comic/Remotion track is
+   flag is now moot** — the SALT AND LIGHT KINGDOM retro-comic/Remotion track is
    deprecated (user decision, 2026-07-25; memory
    `visual-style-deprecation-2026-07-25`). Living-page itself
    (`v2/LIVINGPAGE_STANDARD.md`, `build_livingpage_16x9.py`) is a **separate,
@@ -572,7 +572,7 @@ it, not assumed. It:
   specifically.
 - Composes `thumb_16x9.jpg` / `thumb_9x16.jpg` / `thumb_1x1.jpg` +
   `thumb_tiktok.jpg` (centre-safe cover variant) with cover-crop, a bottom
-  ink gradient, fitted title text, the verse ref, and the AWAKEDEN wordmark
+  ink gradient, fitted title text, the verse ref, and the SALT AND LIGHT KINGDOM wordmark
   (`brand_assets()`, `compose()`, `compose_tiktok()`).
 - Writes a hash-stamped `_meta.json` (`final_sha`) so `release_check.py`
   SYNC-G4 can detect staleness.
@@ -979,7 +979,7 @@ several are now fixed rather than merely tracked — noted below):**
 21. **RESOLVED, not open:** `v2/AWAKEDEN_COMIC_DNA.md`'s retro-comic/Remotion
     track is deprecated (user decision, 2026-07-25, same as item 7) — there
     is no longer a parallel effort to reconcile with. One thing survives the
-    deprecation and is NOT moot: AWAKEDEN §5a's Christ body-gate DOCTRINE
+    deprecation and is NOT moot: SALT AND LIGHT KINGDOM §5a's Christ body-gate DOCTRINE
     rule (not its engine/architecture choices) is the correct reference for
     comic-strip-native's own body gate, and was the basis for the §2a/§6b/§6d
     fixes in this review pass. A locked reference image proven under the

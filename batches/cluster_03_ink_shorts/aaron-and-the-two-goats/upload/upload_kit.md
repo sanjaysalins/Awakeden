@@ -55,12 +55,10 @@ Leviticus 16:21-22: on the Day of Atonement, Aaron the high priest handled two g
 
 When Jesus died, the temple curtain tore from the top to the bottom. Through Jesus, the curtain is open. Walk through, to God.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -93,12 +91,10 @@ Leviticus 16:21-22: on the Day of Atonement, Aaron the high priest handled two g
 
 When Jesus died, the temple curtain tore from the top to the bottom. Through Jesus, the curtain is open. Walk through, to God.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -121,7 +117,7 @@ Day of Atonement, two goats, scapegoat, Leviticus 16, Aaron, Yom Kippur, Bible s
 ```
 One goat died. One goat lived. Why two? Leviticus 16: Christians see one rescue in two halves, and Jesus did both. Through Jesus, the curtain is open. Walk through, to God.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _244 characters_
 
@@ -143,12 +139,10 @@ _42 characters_
 ```
 One goat died. One goat lived. Why two? In Leviticus 16, Aaron handled both on the Day of Atonement, and together they made one sin offering. Christians see one rescue in two halves, and Jesus did both. When He died, the temple curtain tore from the top to the bottom. Through Jesus, the curtain is open. Walk through, to God.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -166,7 +160,7 @@ _548 characters_
 ```
 One goat died. One goat lived. Why two? Leviticus 16: Christians see one rescue in two halves, and Jesus did both. Through Jesus, the curtain is open. Walk through, to God.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _244 characters_
 

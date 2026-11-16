@@ -228,6 +228,8 @@ def build() -> None:
 
 
 def set_posted(slug: str, platform: str, url: str) -> None:
+    if platform != "youtube":  # owner rule 2026-11-16: only YouTube links are tracked
+        raise SystemExit(f"'{platform}' is not tracked - only YouTube links are tracked.")
     ledger = load_ledger()
     ledger.setdefault(slug, {})[platform] = [url, date.today().isoformat()]
     save_ledger(ledger)

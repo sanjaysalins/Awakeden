@@ -59,12 +59,10 @@ The psalm ends looking ahead to God's saving work, accomplished, and told to a p
 
 So what is left for you to finish? Nothing. Only Someone to come home to: the One who said it is done.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -99,12 +97,10 @@ And as Jesus hung dying, John records his final word: "It is finished" (John 19:
 
 So what is left for you to finish? Nothing. Only Someone to come home to: the One who said it is done.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -127,7 +123,7 @@ psalm 22, psalm 22 31, john 19 30, it is finished, he hath done this, finished w
 ```
 A psalm's last line and Jesus' last breath close on the same note. Psalm 22 ends with he hath done this; John records It is finished. A thousand years apart, the same finished work. Nothing left for you to finish, only Someone to come home to.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _321 characters_
 
@@ -153,12 +149,10 @@ Psalm 22's final line looks ahead to God's saving work, accomplished and declare
 
 As Jesus hung dying, John records his final word: "It is finished" (John 19:30). Different words, in different tongues, but the same note: a finished work. Nothing is left for you to finish. Only Someone to come home to: the One who said it is done.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -176,13 +170,13 @@ _745 characters_
 ```
 Psalm 22's last line: he hath done this. Jesus' last breath: It is finished. Different tongues, a thousand years apart, the same note of a finished work. Nothing left for you to finish, only Someone to come home to.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _293 characters_
 
 **HASHTAGS** (copy):
 ```
-#Bible #Jesus #Psalm22 #ItIsFinished #KJV #BibleShorts #Gospel #Christian #FinishedWork #Awakeden
+#Bible #Jesus #Psalm22 #ItIsFinished #KJV #BibleShorts #Gospel #Christian #FinishedWork #SaltAndLightKingdom
 ```
 
 ---

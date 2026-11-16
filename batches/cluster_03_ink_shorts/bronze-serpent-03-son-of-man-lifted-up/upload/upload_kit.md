@@ -55,12 +55,10 @@ Centuries earlier a bronze serpent healed dying Israel with a look. John uses th
 
 Believe on Christ, lifted up for you, and live.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -95,12 +93,10 @@ Centuries earlier a bronze serpent healed dying Israel with a look. John uses th
 
 Believe on Christ, lifted up for you, and live.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -123,7 +119,7 @@ john 3 14, nicodemus, lifted up, bronze serpent, son of man, glory of christ, ty
 ```
 By night, Jesus tells a Pharisee: the lifting that shames Him is His glory. John 3:14-15. One word, shame and glory together. Believe on Christ, lifted up for you, and live.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _245 characters_
 
@@ -147,12 +143,10 @@ John 3:14-15. "And as Moses lifted up the serpent in the wilderness, even so mus
 
 The lifting that shamed Him is the word John uses for His glory. Believe on Christ, lifted up for you, and live.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -170,7 +164,7 @@ _527 characters_
 ```
 By night, Jesus tells a Pharisee: the lifting that shames Him is His glory. John 3:14-15. One word, shame and glory together. Believe on Christ, lifted up for you, and live.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _245 characters_
 

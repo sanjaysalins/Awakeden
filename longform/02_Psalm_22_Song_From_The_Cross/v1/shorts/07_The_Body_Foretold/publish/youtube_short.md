@@ -14,12 +14,10 @@ David never saw a crucifixion. Rome would not make it its instrument for centuri
 
 This is what Jesus bore to bring you home, every wrenched joint, every cold stare, recorded centuries early so you would know none of it was chance. He was crushed in your place.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 

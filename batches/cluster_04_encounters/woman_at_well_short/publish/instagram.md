@@ -9,7 +9,7 @@ To give that life, He died for our sins and rose the third day.
 
 Read it: John 4:4-42.
 
-Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 #WomanAtTheWell #John4 #Jesus #Bible #BibleStory
 

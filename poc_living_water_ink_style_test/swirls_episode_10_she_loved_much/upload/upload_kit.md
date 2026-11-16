@@ -62,12 +62,10 @@ To her: "Thy faith hath saved thee; go in peace."
 
 She came in carrying an alabaster box. She left carrying his peace.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -106,12 +104,10 @@ Then to the whole table: "Her sins, which are many, are forgiven; for she loved 
 
 Forgiveness came first. Love was the receipt, not the price. She came in carrying a shame the whole room already knew about. She left carrying his peace.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -134,7 +130,7 @@ Luke 7 sinful woman Bible study, woman washes Jesus feet with tears, alabaster b
 ```
 A woman known as a sinner crashed a Pharisee's dinner, knelt, and washed Jesus's feet with her own tears. The host was embarrassed. Jesus was not. "Her sins, which are many, are forgiven; for she loved much."
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _280 characters_
 
@@ -166,12 +162,10 @@ To her: "Thy faith hath saved thee; go in peace."
 
 She came in carrying an alabaster box. She left carrying his peace.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -189,7 +183,7 @@ _1016 characters_
 ```
 A woman known as a sinner crashed a Pharisee's dinner and washed Jesus's feet with her tears and her hair. The host was scandalized. Jesus was not. She came in carrying shame. She left carrying his peace.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _276 characters_
 

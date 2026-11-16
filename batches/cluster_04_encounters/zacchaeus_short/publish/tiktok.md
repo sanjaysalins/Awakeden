@@ -3,7 +3,7 @@
 ## CAPTION
 A man climbed a tree to see Jesus. But Jesus was looking for him. Jesus called him by name before Zacchaeus said a word. Jesus came first; the change came after. "For the Son of man is come to seek and to save that which was lost." (Luke 19:10) Full story: Luke 19:1-10.
 
-Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 #Zacchaeus #Jesus #Luke19 #BibleStory #BibleTok
 

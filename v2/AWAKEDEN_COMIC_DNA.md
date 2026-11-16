@@ -1,4 +1,4 @@
-# AWAKEDEN COMIC DNA — the series visual identity (v0.3 — CORRECTED post external panel)
+# SALT AND LIGHT KINGDOM COMIC DNA — the series visual identity (v0.3 — CORRECTED post external panel)
 
 > **Status: DRAFT, REVISED after a 4-lens red-team (2026-07-23), CORRECTED after 2 rounds of the**
 > **external panel (2026-07-23, see §10 review log — round 3 still REVISE, real code-level gaps**
@@ -176,7 +176,7 @@ superhero-costume colour. Arc: **Christ / glory = gold**; **law / judgment = sto
 
 ---
 
-## 3. Lettering — the Awakeden hand
+## 3. Lettering — the Salt and Light Kingdom hand
 
 - **ALL CAPS.** Emphasis = **bold-italic**. Crossbar-"I" only for the pronoun *I*.
 - **Caption box = the narrator voice.** Top-left, italic caps. Colour: **comic-yellow `#FFE100`**
@@ -275,7 +275,7 @@ counters from §3b.
 
 ## 7. Brand
 
-- **Awakeden masthead** in a retro logo treatment (Bangers / custom deco).
+- **Salt and Light Kingdom masthead** in a retro logo treatment (Bangers / custom deco).
 - INV-27 watermark + INV-26 landing hold unchanged.
 
 ---

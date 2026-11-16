@@ -5,8 +5,7 @@
 
 Send this to someone who needs to hear Jesus say: "Be not afraid."
 
-Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
-Art and voices made with AI tools.
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 #JairusDaughter #TalithaCumi #Jesus #Bible #Faith
 

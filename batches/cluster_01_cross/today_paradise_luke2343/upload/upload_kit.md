@@ -71,9 +71,7 @@ He asked for someday. Jesus gave him that same afternoon. No merit. No time to e
 
 We are all one of those two men. Ask what the thief asked: remember me. Then hear his answer: with me. Today. Paradise.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -112,9 +110,7 @@ In this piece: the two thieves in Luke's own words, why the penitent thief's con
 
 We are all one of those two men. Ask what the thief asked. Then hear the answer: with me. Today. Paradise.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -137,7 +133,7 @@ luke 23 43 explained, thief on the cross salvation, today shalt thou be with me 
 ```
 Two criminals. Same nails. Same hill. Opposite eternities. One asked: remember me, someday. Jesus answered: with me, TODAY, paradise. No merit. Just repentance and trust. We are all one of those two men.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _282 characters_
 
@@ -165,9 +161,7 @@ No merit. No time left to earn anything. Just repentance and trust, answered the
 
 We are all one of those two men. Ask what the thief asked, and hear his answer.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -189,13 +183,13 @@ One thief taunted. One asked: remember me. Jesus answered: with me. Today. Parad
 
 No merit, no time to earn it. Repentance and trust. We are all one of those two men.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _338 characters_
 
 **HASHTAGS** (copy):
 ```
-#Bible #Jesus #ThiefOnTheCross #Paradise #Cross #KJV #Gospel #BibleShorts #Awakeden
+#Bible #Jesus #ThiefOnTheCross #Paradise #Cross #KJV #Gospel #BibleShorts #SaltAndLightKingdom
 ```
 
 ---

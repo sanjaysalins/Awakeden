@@ -10,12 +10,10 @@ Mark 10:46-52: blind Bartimaeus sat begging by the road near Jericho. He cried o
 
 Read it: Mark 10:46-52, with Mark 10:32-34 and 1 Corinthians 15:3-4. Send this to someone who feels nobody stops for them.
 
-Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quotations: King James Version (KJV).
 

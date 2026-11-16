@@ -8,12 +8,10 @@ Psalm 22:14 (KJV): "I am poured out like water, and all my bones are out of join
 
 David never saw a crucifixion. Rome would not make it its instrument for centuries. Yet his song described what it does to a body, the joints pulled loose, every bone stretched and countable, onlookers staring. This is what Jesus bore. Recorded early so you would know none of it was chance.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 

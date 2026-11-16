@@ -12,13 +12,10 @@ They said, come down. He stayed. And on the cross He prayed for them: "Father, f
 
 Read it: Psalm 22:8 · Matthew 27:40,43 · Luke 23:34 · Matthew 27:54 · John 10:18 (KJV)
 
-Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
-Read it panel by panel: https://awakeden.com/read/ps22-02-mockers-words.html
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 

@@ -63,12 +63,10 @@ Then Hebrews turns the same invitation toward us: "Let us go forth therefore unt
 
 Simon carried it forced. We're only asked to carry the shame, freely this time. The atoning was His alone, with His own blood.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -103,12 +101,10 @@ And Hebrews doesn't stop at history. It turns to you: "Let us go forth therefore
 
 Simon was forced out. You are only asked. The atoning, the dying, the finishing, that was His, with His own blood. All that's left for us to carry is the shame, and this time, freely.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -131,7 +127,7 @@ Simon of Cyrene, cross of Jesus, Hebrews 13:11-13, Mark 15:21, Luke 23:26, carry
 ```
 The man who carried Jesus' cross wasn't even walking his way. Mark 15 says the soldiers forced Simon of Cyrene into it, and nobody asked him. Hebrews says the same road is now offered to you, freely.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _271 characters_
 
@@ -159,12 +155,10 @@ Hebrews then turns the same invitation toward us: "Let us go forth therefore unt
 
 Simon carried it forced. We're only asked to carry the shame, freely this time. The atoning was His alone.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -186,7 +180,7 @@ Simon of Cyrene wasn't heading toward Jesus. He was compelled, mid-stride, force
 
 Hebrews turns it toward you: "Let us go forth therefore unto him without the camp, bearing his reproach." Only the shame is yours to carry, freely this time.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _468 characters_
 

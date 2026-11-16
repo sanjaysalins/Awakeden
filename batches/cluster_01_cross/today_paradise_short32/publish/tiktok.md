@@ -3,7 +3,7 @@
 ## CAPTION
 Jesus promised paradise to a criminal. Why? Two men died beside Him. One asked to be remembered. Luke 23:39-43. Send this to someone who thinks it is too late to ask.
 
-Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 #ThiefOnTheCross #Luke23 #BibleStory #Jesus
 

@@ -67,9 +67,7 @@ A thousand years later, John stood at the cross and watched soldiers divide Jesu
 
 God had it written down early so that when it happened, you would know: the cross was no accident. It was the plan. They rolled dice for the clothes off his back, never seeing what he was doing: laying down his life to win you back.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -108,9 +106,7 @@ In this piece: why David's psalm cannot be about David, the strange precision of
 
 The suffering man of Psalm 22 has a name: Jesus. They rolled dice for the clothes off his back, never seeing what he was really doing: laying down his life to win you back.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -133,7 +129,7 @@ psalm 22 explained, psalm 22 18, crucifixion prophecy, messianic prophecy explai
 ```
 Ten centuries before the cross, a song recorded how a dying man's clothes would be divided. The soldiers rolled dice at Golgotha and landed on the script. The cross was no accident. It was the plan, and it was for you.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _297 characters_
 
@@ -159,9 +155,7 @@ A thousand years later, John watched soldiers divide Jesus' clothes and cast lot
 
 The cross was no accident. It was the plan, and it was to win you back.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -183,13 +177,13 @@ Psalm 22:18. The soldiers at the cross rolled dice for the clothes off his back,
 
 No accident. The plan.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _353 characters_
 
 **HASHTAGS** (copy):
 ```
-#Bible #Jesus #Psalm22 #Prophecy #Cross #KJV #OldTestament #BibleShorts #Awakeden
+#Bible #Jesus #Psalm22 #Prophecy #Cross #KJV #OldTestament #BibleShorts #SaltAndLightKingdom
 ```
 
 ---

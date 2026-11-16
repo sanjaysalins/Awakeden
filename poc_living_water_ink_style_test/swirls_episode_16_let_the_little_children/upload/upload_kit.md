@@ -64,12 +64,10 @@ Has someone told you "not now"? Jesus did not send those children away. You can 
 
 Read it: Mark 10:13-16 (also Matthew 19:13-15, Luke 18:15-17).
 
-Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -110,12 +108,10 @@ Has someone told you "not now"? Jesus did not send those children away. You can 
 
 Read it: Mark 10:13-16 (also Matthew 19:13-15, Luke 18:15-17).
 
-Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -138,7 +134,7 @@ let the children come to me, suffer the little children, jesus and the children,
 ```
 Has someone told you "not now"? In Mark 10, Jesus' own followers tried to stop people bringing children to Him. Jesus was angry, with them, not with the children. "Suffer the little children to come unto me, and forbid them not." In plain words: let them come. Mark 10:13-16.
 
-Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _347 characters_
 
@@ -170,12 +166,10 @@ Has someone told you "not now"? Jesus did not send those children away. You can 
 
 Read it: Mark 10:13-16.
 
-Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -195,7 +189,7 @@ Pushed away? Told "not now"? In Mark 10, Jesus' own followers tried to stop chil
 
 Send this to someone who has been told "not now".
 
-Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _366 characters_
 

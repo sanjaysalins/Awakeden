@@ -3,8 +3,7 @@
 ## CAPTION
 A general got leprosy. The cure felt too small for a man like him: wash in a river seven times. His own servants talked him into trying it anyway. New skin, like a child's. Jesus later told this exact story back home, and it nearly got him killed.
 
-Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
-Art and voices made with AI tools.
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 #Bible #Jesus #Naaman #Elisha #Healing #Faith #KJV
 

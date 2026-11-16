@@ -14,12 +14,10 @@ Psalm 22 doesn't foretell that cry. It paints the body that said it, a thousand 
 
 Think who is thirsting: the One who made every river, who offers the world living water, hanging there with nothing. He went dry in your place. He thirsted so you could drink and never thirst again. And that water is Himself.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 

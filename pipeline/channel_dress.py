@@ -83,7 +83,11 @@ def draw_wordmark(im: Image.Image, x: float, y: float, size: int,
                   tracking: float = 0.14, glow: bool = True, shadow: bool = False) -> float:
     """Site wordmark exactly as site.css renders it: AWAK bone + EDEN red-bright
     (with the site's red glow), letterspaced Arial Black. (User call 2026-07-21:
-    match the website - the earlier shared split-E is retired.)"""
+    match the website - the earlier shared split-E is retired.)
+
+    RETIRED 2026-11-16: the Awakeden brand is no longer supported (owner), so
+    this draws nothing. Every thumbnail script that calls it now renders clean."""
+    return 0.0
     f = font(ARIAL_BLK, size)
     if glow:
         from PIL import ImageFilter

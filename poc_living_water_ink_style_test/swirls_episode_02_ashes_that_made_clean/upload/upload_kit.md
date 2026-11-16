@@ -57,12 +57,10 @@ You do not have to have sinned to feel unclean. Living close to death can leave 
 
 He touched what makes us unclean and did not become unclean, so that we could finally be clean. Ready to let Him make you clean?
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -99,12 +97,10 @@ You do not have to have sinned to feel unclean. Living close to death can leave 
 
 He touched what makes us unclean and did not become unclean, so that we could finally be clean. Ready to let Him make you clean?
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -127,7 +123,7 @@ numbers 19, red heifer, water of separation, unclean, hebrews 9 14, purge your c
 ```
 Numbers 19. Touch a dead body and the law called you unclean for seven days. Hebrews 9 says the ashes pointed forward to Christ, who can purge your conscience from dead works. He touched what makes us unclean and did not become unclean.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _308 characters_
 
@@ -151,12 +147,10 @@ Numbers 19. "He that toucheth the dead body of any man shall be unclean seven da
 
 The ashes of the red heifer pointed forward. Hebrews says Christ can "purge your conscience from dead works to serve the living God" (Hebrews 9:14, KJV) He touched what makes us unclean and did not become unclean.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -174,7 +168,7 @@ _542 characters_
 ```
 Numbers 19. Touch a dead body and the law called you unclean for seven days. Hebrews 9 says the ashes pointed forward to Christ. He touched what makes us unclean and did not become unclean.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _261 characters_
 

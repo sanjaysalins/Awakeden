@@ -57,9 +57,7 @@ Matthew 26:40 - Jesus asked Peter, James and John to watch with him one hour in 
 
 The cup he asked to pass, he drank - on the cross, for you. He watched that hour alone, so that no hour of yours is watched alone. Bring Jesus the weak flesh he already knows.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -67,7 +65,7 @@ _687 characters_
 
 **TAGS** (copy — paste into the keyword/tags field):
 ```
-Matthew 26:40, Gethsemane, watch and pray, Jesus prayer, could ye not watch one hour, Bible shorts, KJV Bible, words of Jesus, Peter James John, the flesh is weak, Bible comic, Awakeden
+Matthew 26:40, Gethsemane, watch and pray, Jesus prayer, could ye not watch one hour, Bible shorts, KJV Bible, words of Jesus, Peter James John, the flesh is weak, Bible comic, Salt and Light Kingdom
 ```
 
 **HASHTAGS** (copy):
@@ -96,9 +94,7 @@ This episode of Questions Jesus Asked walks through the Gethsemane account in th
 
 He watched that hour alone. Now no hour of yours is watched alone. Bring Jesus the weak flesh he already knows - when you cannot watch, pray anyway.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -106,7 +102,7 @@ _1127 characters_
 
 **TAGS** (copy — paste into the keyword/tags field):
 ```
-Matthew 26:40, Gethsemane, watch and pray, could ye not watch with me one hour, Jesus in Gethsemane, KJV Bible study, words of Jesus, the spirit is willing but the flesh is weak, Peter James John, night before the cross, Bible comic, Questions Jesus Asked, Awakeden, Bible animation
+Matthew 26:40, Gethsemane, watch and pray, could ye not watch with me one hour, Jesus in Gethsemane, KJV Bible study, words of Jesus, the spirit is willing but the flesh is weak, Peter James John, night before the cross, Bible comic, Questions Jesus Asked, Salt and Light Kingdom, Bible animation
 ```
 
 **HASHTAGS** (copy):
@@ -121,7 +117,7 @@ Matthew 26:40, Gethsemane, watch and pray, could ye not watch with me one hour, 
 ```
 Jesus asked three fishermen for ONE thing. They failed inside an hour. Matthew 26:40 - Gethsemane, the night before the cross. His answer was not a curse. It was mercy. He watched that hour alone, so no hour of yours is watched alone.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _313 characters_
 
@@ -149,9 +145,7 @@ His question was not a curse. It was a diagnosis full of mercy - the spirit inde
 
 He watched that hour alone. Now no hour of yours is watched alone. Bring Jesus the weak flesh he already knows.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -169,7 +163,7 @@ _747 characters_
 ```
 Jesus asked three fishermen for ONE thing. They failed inside an hour. Matthew 26:40 - Gethsemane, the night before the cross. Not a curse. A diagnosis full of mercy. He watched that hour alone, so no hour of yours is watched alone.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _311 characters_
 

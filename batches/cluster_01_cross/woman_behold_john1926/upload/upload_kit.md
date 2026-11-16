@@ -69,9 +69,7 @@ While judgment fell on him, he cared for someone else. That is who is dying ther
 
 Your wound is not invisible to him either. Stand where Mary stood. The Son who saw her will behold you, and bind what the sword tore.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -110,9 +108,7 @@ In this piece: Simeon's sword and its thirty-year arc, Mary standing at the cros
 
 Your wound is not invisible to him. Stand where Mary stood. The Son who saw her will behold you, and bind what the sword tore.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -135,7 +131,7 @@ john 19 26 explained, woman behold thy son meaning, words from the cross, mary a
 ```
 A sword was promised at his birth. It landed at the cross. Mary watched her son die, and while dying he arranged her care: a son, a home. Your wound is not invisible to him. Stand where Mary stood.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _276 characters_
 
@@ -159,9 +155,7 @@ Simeon warned Mary at the temple (Luke 2:35): a sword shall pierce through thy o
 
 While judgment fell on him, he cared for someone else. Your wound is not invisible to him either. Stand where Mary stood.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -183,13 +177,13 @@ Thirty years later, at the cross, the sword landed. And the dying Son saw her wo
 
 Your wound is not invisible to him. Stand where Mary stood.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _378 characters_
 
 **HASHTAGS** (copy):
 ```
-#Bible #Jesus #Mary #Cross #WordsFromTheCross #KJV #Simeon #BibleShorts #Awakeden
+#Bible #Jesus #Mary #Cross #WordsFromTheCross #KJV #Simeon #BibleShorts #SaltAndLightKingdom
 ```
 
 ---

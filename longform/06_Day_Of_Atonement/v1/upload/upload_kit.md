@@ -58,13 +58,10 @@ The first goat is killed, its blood carried behind the veil. The second goat is 
 
 One goat pictures the price paid. The other pictures the guilt carried away. At the cross, one Priest did both, and sat down, because it was finished. Your sin is not just covered. It is carried away. Come to Him.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
-Read it panel by panel: https://awakeden.com
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -103,13 +100,10 @@ Every year, the priest does this again. The blood never finally finishes the job
 
 If your sin is on Him, it is not just covered for another year. It is carried away, as far as the east is from the west. You have only to come.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
-Read it panel by panel: https://awakeden.com
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -134,7 +128,7 @@ Why did ONE sacrifice need TWO goats?
 One died, its blood carried behind the veil. One lived, sent into the wilderness carrying Israel's sin, never to return.
 At the cross, one Priest did both. Your sin is not just covered. It is carried away. Come to Him.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _328 characters_
 
@@ -164,13 +158,10 @@ One goat shows the price paid. The other shows the guilt carried away, two halve
 
 Your sin is not just covered. It is carried away. Come to Him.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
-Read it panel by panel: https://awakeden.com
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -190,7 +181,7 @@ Why did ONE sacrifice need TWO goats?
 One died, blood carried behind the veil. One lived, sent into the wilderness carrying Israel's sin, never to return.
 At the cross, one Priest did both. Your sin is not covered, it is carried away. Come to Him.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _319 characters_
 

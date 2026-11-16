@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "doc": "Rule registry for the Awakeden eyewitness format (v2/EYEWITNESS_SPEC.md). Consumed by pipeline/eyewitness_gates.py (EW-G1..G6,G11,G12) and cli_witness_lock.py (+cluster). Deterministic, fail-closed. v2 adds the red-team doctrine + teeth fixes.",
+  "doc": "Rule registry for the Salt and Light Kingdom eyewitness format (v2/EYEWITNESS_SPEC.md). Consumed by pipeline/eyewitness_gates.py (EW-G1..G6,G11,G12) and cli_witness_lock.py (+cluster). Deterministic, fail-closed. v2 adds the red-team doctrine + teeth fixes.",
   "forms": {
     "short": {
       "word_min": 120,

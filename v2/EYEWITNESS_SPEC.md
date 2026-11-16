@@ -1,10 +1,10 @@
-# AWAKEDEN — Eyewitness Format SPEC (binding contract)
+# SALT AND LIGHT KINGDOM — Eyewitness Format SPEC (binding contract)
 
-> The binding contract for Awakeden's eyewitness format (short + long). The `/witness*`
+> The binding contract for Salt and Light Kingdom's eyewitness format (short + long). The `/witness*`
 > skills are the procedures that enforce it; the verification (`cli_witness_lock` + the
 > deterministic gates) is the fail-closed teeth; the 5-CLI panel is the outside review.
 > When this spec and a skill disagree, **the spec wins** — update the spec, don't drift.
-> Companion: `v2/EYEWITNESS_FOUNDATION.md` (the roadmap). Brand: **Awakeden**.
+> Companion: `v2/EYEWITNESS_FOUNDATION.md` (the roadmap). Brand: **Salt and Light Kingdom**.
 
 ---
 
@@ -38,7 +38,7 @@ Told *as the witness*. LONG hits all 7, in order. SHORT compresses to **B1 → B
 
 ## 2.1 The `narration.md` file format (what the gates parse)
 ```
-# <Title> — Awakeden eyewitness (<short|long>)
+# <Title> — Salt and Light Kingdom eyewitness (<short|long>)
 **Witness:** <name>  ·  **Core text:** <ref>  ·  **Type→fulfillment:** <Christ link>
 **Status:** <draft/lock notes>
 ---
@@ -170,7 +170,7 @@ Per episode, before any render:
 | 1b Voice | **`/witness-voice`** | duration-locked multi-voice `narration.mp3` |
 | 2 World + Stills | **`/witness-world`** | `world_manifest.json` + rendered/​reused stills |
 | 3 Cut + Finish | **`/witness-cut`** `--form short\|long` | scored, sfx'd, captioned cut |
-| 6 Publish | **`/publish`** (reused) | Awakeden social PUBLISH PACK |
+| 6 Publish | **`/publish`** (reused) | Salt and Light Kingdom social PUBLISH PACK |
 
 Reused engine (subprocess, never reimplement): `per_turn_synth` (voice), the 16:9/9:16 stills
 renderer + reuse banks, `_assemble_16x9` / the shorts assembler, `_add_score_lf` / music_library,
@@ -205,4 +205,4 @@ to the user. Mandatory for every LOCKED eyewitness narration (short and long).
 ## 11. Cost model (per episode, rough)
 - SHORT: voice ~$0.30 · stills (reuse-heavy, ~2–4 gaps) ~$1–2 · score/sfx/caption $0 → **~$2**.
 - LONG: voice ~$1–2 · stills (~6–12 gaps of ~24) ~$4–7 · veo3 animation ~$8–11 → **~$15–20**.
-- Reuse (§7) is the lever; the banks grow as Awakeden ships, so each episode trends cheaper.
+- Reuse (§7) is the lever; the banks grow as Salt and Light Kingdom ships, so each episode trends cheaper.

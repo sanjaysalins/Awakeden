@@ -8,12 +8,10 @@ Genesis 3:15. "And I will put enmity between thee and the woman, and between thy
 
 Before God spoke Adam and Eve's sentences, He spoke this promise, which Christians read as the first promise of Jesus. Grace was spoken first. Come and meet Him.
 
-Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 

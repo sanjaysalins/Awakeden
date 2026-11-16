@@ -29,11 +29,17 @@ from pipeline import release_state  # noqa: E402
 from pipeline.episode_state import gather_episodes  # noqa: E402
 
 SWIRLS_DIR = ROOT / "poc_living_water_ink_style_test"
-SWIRLS_PLATFORMS = ["youtube", "tiktok", "facebook", "instagram"]
+SWIRLS_PLATFORMS = ["youtube"]  # owner rule 2026-11-16: track YouTube only
 
 OUT = ROOT / "_UPLOAD_TRACKER.html"
-PLAT_LABEL = {"youtube": "▶ YouTube", "tiktok": "♪ TikTok",
-              "facebook": "f Facebook", "instagram": "◎ Instagram"}
+PLAT_LABEL = {"youtube": "▶ YouTube"}
+
+
+def hide_btn(key: str) -> str:
+    """Hide/unhide toggle for a card that already has a posted link (owner ask
+    2026-11-16). Per-viewer view setting only, kept in browser storage; the
+    ledger is never touched."""
+    return (f"<button class=hide onclick=\"toggleHide('{esc(key)}')\">Hide</button>")
 
 CANON = [
     ("Audience", "NOT made for kids"),
@@ -41,7 +47,7 @@ CANON = [
     ("Category", "Education"),
     ("License", "Standard YouTube licence"),
     ("Comments", "On — hold potentially inappropriate for review"),
-    ("Visibility", "Public (YouTube first; TikTok/FB/IG within 24–48h)"),
+    ("Visibility", "Public"),
 ]
 
 
@@ -110,13 +116,10 @@ def card(s: release_state.PieceState, missing: list[str]) -> str:
         links.append(flink(pub / "PUBLISH_INDEX.html", "📦 publish pack (copy buttons)"))
     if (pub / "captions.srt").is_file():
         links.append(flink(pub / "captions.srt", "📝 captions.srt"))
-    for key, lbl in (("16x9", "🖼 16:9 (YouTube)"), ("9x16", "🖼 9:16 (Shorts)"),
-                     ("tiktok", "🖼 TikTok cover"), ("1x1", "🖼 1:1")):
+    for key, lbl in (("16x9", "🖼 16:9 (YouTube)"), ("9x16", "🖼 9:16 (Shorts)")):
         t = thumbs / f"thumb_{key}.jpg"
         if t.is_file():
             links.append(flink(t, lbl))
-    if s.read_page:
-        links.append(f"<a href='https://awakeden.com/read/{esc(s.slug)}.html'>📖 read page</a>")
 
     tech = ""
     if s.video:
@@ -146,9 +149,11 @@ def card(s: release_state.PieceState, missing: list[str]) -> str:
                 f"<td><button onclick=\"cmd(this,'{esc(s.slug)}','{esc(plat)}')\">COPY command</button></td></tr>")
 
     badge = "<span class='c long'>LONG</span> " if s.kind == "long" else ""
-    todo = (f"<span class='c warn'>to post: {', '.join(missing)}</span>"
-            if missing else "<span class='c ok'>all platforms posted</span>")
-    return (f"<div class=card id='{esc(s.slug)}'>"
+    todo = (f"<span class='c warn'>to post on YouTube</span>"
+            if missing else "<span class='c ok'>on YouTube</span>")
+    posted = bool(s.ledger.get("youtube"))
+    return (f"<div class=card id='{esc(s.slug)}'" + (f" data-hide='{esc(s.slug)}'" if posted else "") + ">"
+            + (hide_btn(s.slug) if posted else "")
             + thumb_img(thumbs, "16x9" if s.kind == "long" else "9x16") +
             f"<h3>{badge}{esc(s.title)} <span class=slug>{esc(s.slug)}"
             f"{' · ' + esc(s.cluster) if s.cluster else ''}</span> {todo}</h3>"
@@ -195,7 +200,7 @@ def swirls_card(title: str, slug: str, final: Path | None, ledger_entry: dict) -
         links.append(flink(pub / "PUBLISH_INDEX.html", "📦 publish pack (copy buttons)"))
     if (pub / "captions.srt").is_file():
         links.append(flink(pub / "captions.srt", "📝 captions.srt"))
-    for key, lbl in (("16x9", "🖼 16:9"), ("9x16", "🖼 9:16 (Shorts/TikTok/Reels)"), ("1x1", "🖼 1:1")):
+    for key, lbl in (("16x9", "🖼 16:9"), ("9x16", "🖼 9:16 (Shorts)")):
         t = pub / "thumbs" / f"thumb_{key}.jpg"
         if t.is_file():
             links.append(flink(t, lbl))
@@ -215,10 +220,13 @@ def swirls_card(title: str, slug: str, final: Path | None, ledger_entry: dict) -
                 f"<td><input id='{iid}' placeholder='paste the {esc(plat)} URL after uploading'></td>"
                 f"<td><button onclick=\"swirls_cmd(this,'{esc(slug)}','{esc(plat)}')\">COPY command</button></td></tr>")
 
-    todo = (f"<span class='c warn'>to post: {', '.join(missing)}</span>"
-            if missing else "<span class='c ok'>all platforms posted</span>")
+    todo = (f"<span class='c warn'>to post on YouTube</span>"
+            if missing else "<span class='c ok'>on YouTube</span>")
     subref = f" · {esc(ref)}" if ref else ""
-    card_html = (f"<div class=card id='swirls-{esc(slug)}'>"
+    posted = "youtube" in ledger_entry
+    card_html = (f"<div class=card id='swirls-{esc(slug)}'"
+                 + (f" data-hide='swirls-{esc(slug)}'" if posted else "") + ">"
+                 + (hide_btn(f"swirls-{slug}") if posted else "")
                 + thumb_img(pub / "thumbs", "9x16") +
                 f"<h3><span class='c swirls'>SWIRLS OF LIFE</span> {esc(title)} "
                 f"<span class=slug>{esc(slug)}{subref}</span> {todo}</h3>"
@@ -443,7 +451,7 @@ def main() -> int:
     n_queue, n_posted = len(queue) + n_swirls_todo, len(posted) + n_swirls_done
     canon = "".join(f"<tr><td>{esc(k)}</td><td>{esc(v)}</td></tr>" for k, v in CANON)
 
-    page = f"""<!doctype html><meta charset=utf-8><title>Awakeden upload tracker</title>
+    page = f"""<!doctype html><meta charset=utf-8><title>YouTube upload tracker</title>
 <style>body{{font-family:Segoe UI,system-ui,sans-serif;background:#171410;color:#ece5d8;margin:0;padding:24px;max-width:1080px}}
 h1{{font-family:Georgia,serif;font-size:22px;margin:0 0 4px}} h2{{font-family:Georgia,serif;font-size:17px;margin:26px 0 8px}}
 .sub{{color:#a89e8e;font-size:13px;margin-bottom:6px;line-height:1.5}}
@@ -461,6 +469,8 @@ button.big{{padding:9px 16px;font-size:13px}}
 .c{{display:inline-block;font-size:11px;font-weight:700;padding:1px 8px;border-radius:99px}}
 .ok.c,.c.ok{{background:#1e3324;color:#7dbb8b}} .c.warn{{background:#37301c;color:#d9a94a}} .c.long{{background:#2a1d2e;color:#c99ad9}}
 .c.swirls{{background:#1c2e3a;color:#7ab8d9}}
+button.hide{{float:right;background:#38322a;color:#ece5d8;margin-left:8px}}
+.card.hidden{{display:none}} body.showhid .card.hidden{{display:block;opacity:.45}}
 .canon td:first-child{{color:#a89e8e;width:280px}}
 .epblock{{border:1px solid #4a3f2e;border-radius:10px;padding:4px 12px 12px;margin:16px 0;background:#1b1712}}
 .epblock-head h3{{margin:10px 0 4px;font-size:16px;font-family:Georgia,serif}}
@@ -468,35 +478,33 @@ button.big{{padding:9px 16px;font-size:13px}}
 .epblock .bar.posted{{background:#c9a55a;height:100%}}
 .epblock .card{{background:#211d17}}
 .inv th{{text-align:left;color:#b59e86;font-size:12px}} .inv .bad{{color:#e0675d}} .inv a{{color:#c9a55a}}</style>
-<h1>Awakeden — upload tracker</h1>
-<div class=sub>Every upload-ready piece, longs and shorts, in one place — the main catalogue
+<h1>YouTube upload tracker</h1>
+<div class=sub>YouTube links only. Every upload-ready piece, longs and shorts, in one place — the main catalogue
 (<code>data/release_ledger.json</code>) AND <span class='c swirls'>SWIRLS OF LIFE</span>
 (its own <code>poc_living_water_ink_style_test/_swirls_release_ledger.json</code> — a
 separate ledger and COPY command, since it isn't part of the site catalogue). This page
 is a view; regenerate: <code>.venv\\Scripts\\python.exe build_upload_tracker.py</code></div>
 <div class=flow><b>The loop, per video:</b><br>
 1. Open the piece's <b>📦 publish pack</b> — copy buttons for title, description, tags, captions.<br>
-2. Upload by hand (video file + the right thumbnail: 16:9 for YouTube longs, 9:16 for Shorts, TikTok cover for TikTok).<br>
-3. Paste the published URL into the platform's box below → <b>COPY command</b> → paste + run it in the repo terminal.<br>
-&nbsp;&nbsp;&nbsp;That logs the dated URL, and a YouTube URL also updates the website read page automatically.<br>
-4. Batch finished → deploy <code>_website</code> → run <code>release_check.py</code> (must be GREEN).</div>
+2. Upload to YouTube by hand (video file + thumbnail: 16:9 for longs, 9:16 for Shorts).<br>
+3. Paste the YouTube URL into the box below → <b>COPY command</b> → paste + run it in the repo terminal.<br>
+4. Run <code>release_check.py</code> (must be GREEN).<br>
+<b>Hide</b> on a posted card tucks it away. <b>Show hidden</b> brings them back.</div>
 <button class=big onclick="all_cmds(this)">COPY ALL filled boxes as one script</button>
 <h2>YouTube settings — same every video</h2>
 <div class=card><table class=canon>{canon}</table></div>
 <h2>Next up to post ({n_queue}) — in calendar order</h2>
-<div class=sub>Swirls of Life is on HOLD until 30 episodes (hidden here). Not ready: Psalm 22 LONG
-(awaiting catalogue approval). Pre-launch checklist items still open in RELEASE_CALENDAR.md:
-channel dress/playlist, brand fields, safe-zone test upload.</div>
+<div class=sub>Swirls of Life is on HOLD until 30 episodes (listed further down).</div>
 {cards_todo or "<div class=sub>nothing ready and unposted</div>"}
 <h2>On hold: Swirls of Life ({n_swirls_held}) &mdash; 30-episode rule</h2>
 <div class=sub>Finished Swirls episodes. NOT to be posted until 30 episodes exist. The URL boxes work, so a URL
-can still be logged if you ever break the hold. Once every platform is logged, the episode moves to Posted.</div>
+can still be logged if you ever break the hold. Once its YouTube link is logged, the episode moves to Posted.</div>
 {cards_held or "<div class=sub>none on hold</div>"}
 <h2>All other finished media — ready state ({inv_counts["blocked"] + inv_counts["hold"]})</h2>
 <div class=sub>Everything with a finished video on disk that is NOT in the list above, and exactly what it still needs.
 Red ✗ = missing. Nothing here can be logged until it is cleared and has a pack.</div>
 {inv_html}
-<h2>Posted ({n_posted})</h2>
+<h2>Posted ({n_posted}) <button id=showhid onclick="toggleShow()">Show hidden</button></h2>
 {cards_done or "<div class=sub>nothing posted yet</div>"}
 <script>
 function copy(t, btn) {{
@@ -519,6 +527,22 @@ function swirls_cmd(btn, slug, plat) {{
   copy('.venv\\\\Scripts\\\\python.exe poc_living_water_ink_style_test\\\\swirls_upload_tracker.py --set '
        + slug + ' ' + plat + ' "' + url + '"', btn);
 }}
+let HID = [];
+try {{ HID = JSON.parse(localStorage.getItem('yt_tracker_hidden') || '[]'); }} catch (e) {{ HID = []; }}
+function saveHid() {{ try {{ localStorage.setItem('yt_tracker_hidden', JSON.stringify(HID)); }} catch (e) {{}} }}
+function paint() {{
+  let n = 0;
+  document.querySelectorAll('.card[data-hide]').forEach(c => {{
+    const h = HID.includes(c.dataset.hide); if (h) n++;
+    c.classList.toggle('hidden', h);
+    const b = c.querySelector('button.hide'); if (b) b.textContent = h ? 'Unhide' : 'Hide';
+  }});
+  const s = document.getElementById('showhid');
+  if (s) s.textContent = (document.body.classList.contains('showhid') ? 'Hide hidden' : 'Show hidden') + ' (' + n + ')';
+}}
+function toggleHide(k) {{ HID = HID.includes(k) ? HID.filter(x => x !== k) : HID.concat([k]); saveHid(); paint(); }}
+function toggleShow() {{ document.body.classList.toggle('showhid'); paint(); }}
+paint();
 function all_cmds(btn) {{
   const lines = [];
   document.querySelectorAll('input[id^="u_"]').forEach(i => {{

@@ -8,13 +8,10 @@ At the cross (John 19:26), a thirty-year-old warning landed: Simeon had told Mar
 
 While judgment fell on him, he cared for someone else. Your wound is not invisible to him either. Stand where Mary stood.
 
-Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
-Read it panel by panel: https://awakeden.com/read/woman-behold-thy-son.html
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 

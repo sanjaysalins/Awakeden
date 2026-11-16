@@ -1,4 +1,4 @@
-# Awakeden website — session handoff (2026-06-20)
+# Salt and Light Kingdom website — session handoff (2026-06-20)
 
 Read this first for any **www.awakeden.com** work. The video pipeline is separate
 (see `RESUME.md` / `STATE.md`). Memory: `[[awakeden-catalogue-placeholders]]`.
@@ -10,7 +10,7 @@ Read this first for any **www.awakeden.com** work. The video pipeline is separat
 > by reading this doc's **OPEN ITEMS / TODO** to see what's still outstanding.
 
 ## What it is
-Static catalogue + study site for the Awakeden gospel-shorts series.
+Static catalogue + study site for the Salt and Light Kingdom gospel-shorts series.
 - **Live:** https://awakeden.com (apex is canonical) · also https://awakeden.netlify.app
 - **Repo:** `github.com:sanjaysalins/Awakeden.git`, branch `main` (THIS repo = `JesusInTheBible`; Netlify publishes only the `_website/` dir).
 - **Local:** `C:\Users\sanjay\PycharmProjects\JesusInTheBible\_website`

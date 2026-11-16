@@ -184,6 +184,19 @@ def check_unit(media_dir: str | Path, *, sibling_titles: list[str] | None = None
         for n, line in enumerate(md.read_text(encoding="utf-8").splitlines(), 1):
             if _AI.search(_url.sub("", line)):
                 fails.append(f"NO-AI-WORDING {md.name}:{n}: {line.strip()[:70]!r}")
+    # NO OLD BRAND (owner rule 2026-11-16: the Awakeden brand + awakeden.com are retired).
+    # Also scans the paste page and captions, since the owner copies from the HTML.
+    _OLD = re.compile(r"awakeden", re.I)
+    for f in sorted(pub.glob("*.md")) + [pub / "PUBLISH_INDEX.html", pub / "captions.srt"]:
+        if not f.is_file():
+            continue
+        for n, line in enumerate(f.read_text(encoding="utf-8", errors="replace").splitlines(), 1):
+            if _OLD.search(line):
+                fails.append(f"NO-OLD-BRAND {f.name}:{n}: {line.strip()[:70]!r}")
+    _idx = pub / "PUBLISH_INDEX.html"
+    if _idx.is_file() and re.search(r"made with AI|AI[- ]generated|\bAI (?:art|voice|tools?)\b",
+                                     _idx.read_text(encoding="utf-8", errors="replace"), re.I):
+        fails.append("NO-AI-WORDING PUBLISH_INDEX.html: AI method wording on the paste page")
     srt_path = pub / "captions.srt"
     if srt_path.exists():
         _srt_index_or_ts = re.compile(r"^\d+$|-->")

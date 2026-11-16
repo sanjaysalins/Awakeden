@@ -8,14 +8,12 @@ Numbers 19. "He that toucheth the dead body of any man shall be unclean seven da
 
 Hebrews says the ashes purified the flesh, and the blood of Christ can "purge your conscience from dead works to serve the living God" (Hebrews 9:14, KJV) Jesus touched what makes us unclean and did not become unclean. Ready to let Him make you clean?
 
-Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
-https://awakeden.com
-
-Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
+Scripture quoted from the King James Version (KJV), public domain.
 
 #Bible #Jesus #RedHeifer
 

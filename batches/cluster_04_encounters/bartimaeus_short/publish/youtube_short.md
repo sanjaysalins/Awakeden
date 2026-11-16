@@ -16,12 +16,10 @@ Read the whole story: Mark 10:46-52, with Mark 10:32-34 and 1 Corinthians 15:3-4
 
 On His way to die and rise again, Jesus stood still for one man.
 
-Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quotations: King James Version (KJV).
 

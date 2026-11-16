@@ -36,7 +36,7 @@ def _filled(v: str | None) -> bool:
 def build_footer(platform: str, brand: dict, read_url: str = "") -> str:
     """Verbatim brand footer. Full (with links) on YouTube/Facebook; minimal,
     link-free on TikTok/Instagram (links aren't clickable there). `read_url` is
-    the piece's own read-the-panels page on awakeden.com."""
+    ignored: the old read-the-panels website is retired (owner, 2026-11-16)."""
     # "Subscribe" is YouTube's verb; TikTok/Facebook/Instagram say "Follow"
     # (panel-convergent fix, user-approved 2026-07-21). cta_line_social falls
     # back to cta_line so a brand file without it keeps working.
@@ -52,8 +52,6 @@ def build_footer(platform: str, brand: dict, read_url: str = "") -> str:
         lines.append(cta)
 
     link_friendly = platform.startswith("youtube") or platform == "facebook"
-    if link_friendly and _filled(read_url):
-        lines.append(f"Read it panel by panel: {read_url}")
     if link_friendly:
         follow: list[str] = []
         for plat, key in [("YouTube", "youtube"), ("TikTok", "tiktok"),
@@ -148,8 +146,8 @@ def _harvest_batch_facts(d: Path, fmt: str = "short") -> SourceFacts:
         media_dir=str(d),
         video_path=_find_video(d, fmt),
         format=fmt,
-        series_name=meta.get("series", "Awakeden"),
-        brand=meta.get("brand", "Awakeden"),
+        series_name=meta.get("series", "Salt and Light Kingdom"),
+        brand=meta.get("brand", "Salt and Light Kingdom"),
         episode_title=title,
         anchor_ref=anchor_ref,
         anchor_kjv=anchor_kjv,
@@ -209,7 +207,7 @@ def _harvest_swirls_facts(d: Path) -> SourceFacts:
         video_path=_find_video(d, "short"),
         format="short",
         series_name="Swirls of Life",
-        brand="Awakeden",
+        brand="Salt and Light Kingdom",
         episode_title=title,
         anchor_ref=anchor_ref,
         anchor_kjv=anchor_kjv,

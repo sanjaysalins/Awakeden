@@ -1,4 +1,4 @@
-# AWAKEDEN RELEASE PLAN — from validated pilots to a publishing engine (v1)
+# SALT AND LIGHT KINGDOM RELEASE PLAN — from validated pilots to a publishing engine (v1)
 
 > Date: 2026-07-03 · Decided with the user (objective / cadence / website scope / platform
 > all chosen explicitly). Companion to `BATCH_PLAN.md` (the 7-cluster build slate),
@@ -15,7 +15,7 @@ events LED to him. The end of every piece is the same: the viewer finds and know
 better, from both Testaments, with fresh perspective — fully and completely grounded
 and rooted in the Bible.*
 
-**One line for the public:** *Awakeden — finding Jesus in the whole Bible, one panel at a time.*
+**One line for the public:** *Salt and Light Kingdom — finding Jesus in the whole Bible, one panel at a time.*
 
 Three lenses every piece uses (they ARE the content styles we've validated):
 1. **He is THERE** — Jesus in the OT: shadows, types, prophecies (Zech 12:10, Psalm 22,
@@ -50,7 +50,7 @@ Three lenses every piece uses (they ARE the content styles we've validated):
   the 60s SHORTS are the quick snack · the 10-min LONGS are the pudding · the
   WEBSITE is the MAIN MEAL — the place people sit down and actually read and study
   deeper. The site is the destination, not the companion; shorts and longs feed it.
-- **Wordmark:** in AWAKEDEN, the word EDEN stands out (AWAK + emphasized EDEN)
+- **Wordmark:** in SALT AND LIGHT KINGDOM, the word EDEN stands out (AWAK + emphasized EDEN)
   everywhere the name appears.
 - **The promise a viewer learns to trust:** every short is 60 seconds, every panel is
   drawn, every quote is the actual Bible, and every story ends at Jesus — and you will

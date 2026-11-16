@@ -12,13 +12,10 @@ Five centuries later Judas sold Jesus for the same sum, threw it down in the tem
 
 The cross was no accident. Jesus let himself be weighed like a slave, and his blood bought you back. Stop weighing out your own price. Receive his, and go free.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
-Read it panel by panel: https://awakeden.com/read/thirty-pieces-of-silver.html
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 

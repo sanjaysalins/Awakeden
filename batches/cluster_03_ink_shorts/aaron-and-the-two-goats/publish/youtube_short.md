@@ -10,12 +10,10 @@ Leviticus 16:21-22: on the Day of Atonement, Aaron the high priest handled two g
 
 When Jesus died, the temple curtain tore from the top to the bottom. Through Jesus, the curtain is open. Walk through, to God.
 
-Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 

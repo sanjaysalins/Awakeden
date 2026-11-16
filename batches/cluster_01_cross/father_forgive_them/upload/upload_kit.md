@@ -69,9 +69,7 @@ He gave himself willingly, and the Lord who prayed for his executioners still li
 
 That mercy is held out to you now. Come, and receive it by faith.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -110,9 +108,7 @@ In this piece: the first Word from the cross in Luke's own sequence, what the pr
 
 While we were yet sinners, Christ died for us. That mercy is held out to you now. Come, and receive it by faith.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -135,7 +131,7 @@ luke 23 34 explained, father forgive them meaning, seven words from the cross, w
 ```
 Nails through his hands. Soldiers gambling for his clothes. And his first words from the cross are a prayer FOR THEM. Not a curse. Mercy, pleading before anyone asked for it. That mercy is held out to you now.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _288 characters_
 
@@ -161,9 +157,7 @@ As they divided his clothing, Jesus prayed for the people putting him to death. 
 
 While we were yet sinners, Christ died for us. That mercy is held out to you now. Come, and receive it by faith.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -185,13 +179,13 @@ They were a prayer for the men holding the hammer. "Father, forgive them; for th
 
 Mercy was pleading for you before you knew you needed it. It is held out to you now.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _334 characters_
 
 **HASHTAGS** (copy):
 ```
-#Bible #Jesus #FatherForgiveThem #Cross #Gospel #KJV #WordsFromTheCross #BibleShorts #Awakeden
+#Bible #Jesus #FatherForgiveThem #Cross #Gospel #KJV #WordsFromTheCross #BibleShorts #SaltAndLightKingdom
 ```
 
 ---

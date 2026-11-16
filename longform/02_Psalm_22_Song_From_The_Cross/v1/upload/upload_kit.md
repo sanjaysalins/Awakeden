@@ -76,9 +76,7 @@ A reverent deep-dive through Psalm 22 with every quotation verbatim KJV.
 
 He was forsaken so that you never will be. Come and see where the song was pointing.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -124,9 +122,7 @@ Every quotation verbatim KJV. Reverent documentary pace, inked graphic-novel vis
 
 He was forsaken so that you never will be. However far you have run, the way home is open, and he opened it from the dark.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -149,7 +145,7 @@ psalm 22 explained, psalm 22 crucifixion, the song from the cross, my god my god
 ```
 Jesus' darkest cry was a quote from a 1,000-year-old song, and the song describes the whole crucifixion, first person, centuries before crosses existed. Full deep-dive: from forsaken to FINISHED. Link in bio.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _287 characters_
 
@@ -175,9 +171,7 @@ This 7-minute film walks the whole psalm: the death David never died, the wounds
 
 Every quotation verbatim KJV. He was forsaken so that you never will be.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -199,13 +193,13 @@ Jesus made it his own at the ninth hour, and the song he reached for describes t
 
 New 7-minute film: from forsaken to finished. Link in bio.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _366 characters_
 
 **HASHTAGS** (copy):
 ```
-#Bible #Jesus #Psalm22 #Prophecy #Cross #KJV #MessianicProphecy #BibleFilm #Awakeden
+#Bible #Jesus #Psalm22 #Prophecy #Cross #KJV #MessianicProphecy #BibleFilm #SaltAndLightKingdom
 ```
 
 ---

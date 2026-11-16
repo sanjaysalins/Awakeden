@@ -27,7 +27,7 @@ VERDICT: PASS
 - Off-thread check: every platform's copy stays on the single thread (promise-before-judgment, spoken to the serpent, fulfilled at the cross) -- no platform promises content (e.g. a debunking angle, a different verse, a different payoff) the video doesn't deliver.
 - Banned-phrase check: none of the constitution's banned openers ("Did you know...", "Have you ever wondered...", "hidden secret...", "the real meaning of...") or banned CTA tropes ("Drop a comment if...", "Like and follow for more") appear anywhere in the drafted copy.
 - Platform-fit check: TikTok leads with the hook in the first line and stays punchy; YouTube long has the fuller apologetic/deep-dive register the series calls for; titles avoid the generic auto-complete ("the crucifixion" centred only on physical suffering, etc.) the constitution specifically bans for this kind of topic.
-- One structural flag, not a copywriting defect: every stamped footer in this kit ("Find Jesus in the whole Bible, one panel at a time...✝") includes a non-ASCII cross glyph. If UK-G7's plain-ASCII anti-slop check is meant to cover the FULL rendered description (footer included, not just the drafted body), this will need checking against data/upload_brand.json -- that's a footer-stamping question, not something the auto-draft controls, but worth confirming before the gate runs.
+- One structural flag, not a copywriting defect: every stamped footer in this kit ("Find Jesus in the whole Bible, one story at a time...✝") includes a non-ASCII cross glyph. If UK-G7's plain-ASCII anti-slop check is meant to cover the FULL rendered description (footer included, not just the drafted body), this will need checking against data/upload_brand.json -- that's a footer-stamping question, not something the auto-draft controls, but worth confirming before the gate runs.
 - Also worth a human sanity check, not a fail: the brand footer's "one panel at a time" phrasing describes a comic-panel visual style; this piece is a painted living-sketchbook long-form, not comic panels. Likely just a fixed cross-format brand tagline (fine if so) -- flagging so a human can confirm it's intentional rather than a copy-paste mismatch from a different content line.
 
 No REVISE-worthy findings. The kit is honest, on-thread, KJV-exact, and does not oversell.
@@ -62,13 +62,10 @@ Centuries before a cross ever stood, the Deliverer was already named -- and the 
 
 Watch the full study of Genesis 3:15 -- how one verse holds the whole Bible's story in miniature, and how it still speaks today.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
-Read it panel by panel: https://awakeden.com
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -107,13 +104,10 @@ The whole Bible is one story. It starts here, in a garden, with a promise spoken
 
 Core text: Genesis 3:8-19
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
-Read it panel by panel: https://awakeden.com
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -136,7 +130,7 @@ Genesis 3:15, protoevangelium, seed of the woman, first gospel prophecy, messian
 ```
 When Eden fell, God's first words weren't a threat -- they were a promise. Spoken to the serpent, centuries before the cross: the woman's seed would crush his head. Genesis 3:15. The first gospel, preached in a garden.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _290 characters_
 
@@ -158,13 +152,10 @@ _48 characters_
 ```
 When the first sin breaks Eden, God's very first words aren't a threat to Adam and Eve -- they're a promise, spoken to the serpent: "it shall bruise thy head, and thou shalt bruise his heel" (Genesis 3:15). Centuries before a cross ever stood, the Deliverer was already named. This is the first gospel -- preached in a garden, fulfilled at Calvary.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
-Read it panel by panel: https://awakeden.com
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -182,7 +173,7 @@ _615 characters_
 ```
 God's first words after Eden fell weren't judgment -- they were a promise, spoken to the serpent. "It shall bruise thy head, and thou shalt bruise his heel." (Genesis 3:15) Centuries before the cross, the Deliverer was already named. The first gospel, preached in a garden.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _345 characters_
 

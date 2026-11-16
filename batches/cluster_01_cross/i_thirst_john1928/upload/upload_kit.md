@@ -71,9 +71,7 @@ The One who offers the world living water hung there dry, in your place.
 
 Bring him your thirst, and drink. That water is himself.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -114,9 +112,7 @@ In this piece: the potsherd line in David's psalm, John's fulfilment note, and t
 
 Bring him your thirst, and drink. That water is himself.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -139,7 +135,7 @@ john 19 28 explained, i thirst meaning, seven sayings of the cross, psalm 22 15 
 ```
 The One who made every ocean gasped two words on a cross: I thirst. Psalm 22 painted that dying thirst 1,000 years early. The Giver of living water hung dry, in your place. Bring him your thirst, and drink.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _285 characters_
 
@@ -165,9 +161,7 @@ Psalm 22 painted the thirst behind the cry a thousand years early: "My strength 
 
 The One who offers living water hung there dry, in your place. Bring him your thirst, and drink. That water is himself.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -189,13 +183,13 @@ Psalm 22 painted that thirst a thousand years early: strength dried like a potsh
 
 The Giver of living water hung dry, in your place. Bring him your thirst, and drink.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _360 characters_
 
 **HASHTAGS** (copy):
 ```
-#Bible #Jesus #IThirst #Psalm22 #LivingWater #KJV #Cross #BibleShorts #Awakeden
+#Bible #Jesus #IThirst #Psalm22 #LivingWater #KJV #Cross #BibleShorts #SaltAndLightKingdom
 ```
 
 ---

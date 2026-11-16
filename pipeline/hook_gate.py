@@ -160,7 +160,7 @@ def check(folder: str | Path, form: str = "short", judge: bool = False,
 
 # --- judgment half: a focused scroll-test via the repo's local-CLI reviewers (free) -------------
 JUDGE_LENS = """You are a strict SHORT-FORM SCROLL-TEST editor for a KJV gospel-shorts channel
-(Awakeden / Salt and Light Kingdom). Judge ONLY the opening HOOK and the closing LANDING of this 60s
+(Salt and Light Kingdom). Judge ONLY the opening HOOK and the closing LANDING of this 60s
 short. Score each 0-5:
   hook_stop_power  - would a thumb actually stop in the first 3 seconds?
   hook_earned      - is the hook EARNED by the text (a real, true thing), NOT manufactured/clickbait?

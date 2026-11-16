@@ -55,12 +55,10 @@ Jesus asked the question out loud: "But where are the nine?"
 
 Getting exactly what you asked for is not the same as turning back to the One who gave it.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -97,12 +95,10 @@ Then, to the one still on the ground: "Arise, go thy way: thy faith hath made th
 
 Ten received the same miracle. Only one received Jesus himself. Which one are you today: the nine walking on, or the one turning back?
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -125,7 +121,7 @@ Luke 17 Bible study, ten lepers healed, Jesus heals ten lepers, Samaritan leper 
 ```
 Ten men asked Jesus to heal them. All ten were healed. Only one came back to say thank you, and Jesus asked out loud where the other nine went. Getting what you asked for is not the same as turning back to Him.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _282 characters_
 
@@ -153,12 +149,10 @@ Nine kept walking. One turned back to fall at Jesus's feet and give thanks, and 
 
 Nine had exactly what they asked for. Only one had Jesus.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -178,7 +172,7 @@ Ten men were healed. Only one came back to say thank you, and he was the outside
 
 Jesus asked out loud where the other nine had gone. Getting what you asked for is not the same as turning back to the One who gave it. Luke 17:11-19.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _318 characters_
 

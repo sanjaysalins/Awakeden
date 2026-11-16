@@ -14,14 +14,12 @@ You do not have to have sinned to feel unclean. Living close to death can leave 
 
 Jesus touched what makes us unclean, like the bier at Nain (Luke 7:14), and did not become unclean. Ready to let Him make you clean?
 
-Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
-https://awakeden.com
-
-Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
+Scripture quoted from the King James Version (KJV), public domain.
 
 #Bible #Jesus #RedHeifer #Numbers19 #KJV
 

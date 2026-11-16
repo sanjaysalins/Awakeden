@@ -1,7 +1,7 @@
-# AWAKEDEN — Eyewitness Foundation & Roadmap
+# SALT AND LIGHT KINGDOM — Eyewitness Foundation & Roadmap
 
-> **Brand: Awakeden** (the series, the website awakeden.com, and the YouTube/TikTok/Reels/
-> Facebook channels — all work ships as Awakeden). The keystone doc for Awakeden's signature
+> **Brand: Salt and Light Kingdom** (the series, the website awakeden.com, and the YouTube/TikTok/Reels/
+> Facebook channels — all work ships as Salt and Light Kingdom). The keystone doc for Salt and Light Kingdom's signature
 > **eyewitness format.** Everything (skills, pipelines, slate, website, publishing) derives
 > from this. Proven by the Two Goats pilot (high priest, 1:49, fully produced).
 > Status: **FOUNDATION — for sign-off, then execute.**

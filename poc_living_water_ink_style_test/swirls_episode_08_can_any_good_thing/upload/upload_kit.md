@@ -60,12 +60,10 @@ A moment only heaven had seen, named out loud. The doubt did not fade. It fell. 
 
 He is not offended by honest questions. He already sees you, wherever your fig tree is. Come and see.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -94,12 +92,10 @@ _62 characters_
 ```
 John 1:45-51. Nathanael doubted Jesus before he met Him. Jesus answered with a compliment and a moment only heaven had seen.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -122,7 +118,7 @@ john 1, nathanael, come and see, fig tree, jacob's ladder, nazareth, philip, jes
 ```
 A man insulted Jesus behind His back. Jesus complimented him to his face. John 1:45-51. Come and see.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _173 characters_
 
@@ -146,12 +142,10 @@ John 1:45-51. Nathanael said, "Can there any good thing come out of Nazareth?" P
 
 The doubt did not fade. It fell. Jesus is not offended by honest questions. He already sees you under your fig tree. Come and see.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -169,7 +163,7 @@ _576 characters_
 ```
 A man insulted Jesus behind His back. Jesus complimented him to his face. John 1:45-51. He is not offended by honest questions. He already sees you. Come and see.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _234 characters_
 

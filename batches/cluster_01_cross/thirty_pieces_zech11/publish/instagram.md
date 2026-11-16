@@ -7,10 +7,9 @@ Zechariah: weighed, thrown down, to the potter, in the house of the LORD. Judas:
 
 Nobody was steering. Every coin found its mark. His blood bought you back. Receive his price, and go free.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
-Follow @awakeden
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
-#Bible #Jesus #Zechariah #Prophecy #ThirtyPiecesOfSilver #KJV #OldTestament #BibleShorts #Awakeden
+#Bible #Jesus #Zechariah #Prophecy #ThirtyPiecesOfSilver #KJV #OldTestament #BibleShorts #SaltAndLightKingdom
 
 ## HASHTAGS
-#Bible #Jesus #Zechariah #Prophecy #ThirtyPiecesOfSilver #KJV #OldTestament #BibleShorts #Awakeden
+#Bible #Jesus #Zechariah #Prophecy #ThirtyPiecesOfSilver #KJV #OldTestament #BibleShorts #SaltAndLightKingdom

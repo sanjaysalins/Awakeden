@@ -44,7 +44,7 @@ Built from `data/series.json` (10 greenlit series / 76 episodes). Red-team + 5-C
 - **Platforms:** YouTube (longs + shorts), TikTok, FB, IG Reels — the user's 4-platform tracker.
 - **Per-clip upload kit:** title · description (with the short→backing-long link) · hashtags · thumbnail · safe-area caption check. Wire to `0 Christianity/PRODUCTION & POSTING TRACKER.md` on GDrive.
 - **Cross-link:** every short's description points to its flagship long ('full story → deep-dive'); every long pins its shorts.
-- **Cadence:** decide shorts/week + long/2-weeks AFTER steps 1-2 give real retention data. Brand rollout: SLK → Awakeden → Either.
+- **Cadence:** decide shorts/week + long/2-weeks AFTER steps 1-2 give real retention data. Brand rollout: SLK → Salt and Light Kingdom → Either.
 
 ## 7. Cross-series collisions (same verse, two series — resolve, don't double-count)
 - **John 19:30 'It is finished'** — words-from-cross (primary) ↔ last-week (cross-file, don't rebuild; differentiate by lens: atonement vs chronology).
@@ -96,7 +96,7 @@ Built from `data/series.json` (10 greenlit series / 76 episodes). Red-team + 5-C
 - 📱 It is finished <John 19:30> — _planned_ — backed by: It Is Finished — tetelestai (planned)
 - 📱 Father, into thy hands I commend my spirit <Luke 23:46> — _planned_ — backed by: The 7 Words from the Cross (series deep-dive) (planned)
 
-## Types & Shadows  (types-shadows · Awakeden)
+## Types & Shadows  (types-shadows · Salt and Light Kingdom)
 *OT figures, objects, and events that foreshadow Christ - restricted to those the NT explicitly confirms or strongly implies.*
 > guardrail: No inventing types the Bible never names. Skip Rahab's scarlet cord, Eve from Adam's side, etc. unless you can show NT warrant.
 
@@ -141,7 +141,7 @@ Built from `data/series.json` (10 greenlit series / 76 episodes). Red-team + 5-C
 - 📱 King of Kings and Lord of Lords <Revelation 19:16> — _planned_ — backed by: Names and Titles of Jesus (series deep-dive) (planned)
 - 📱 The Lion of the tribe of Judah <Revelation 5:5> — _planned_ — backed by: Names and Titles of Jesus (series deep-dive) (planned)
 
-## Resurrection on Trial  (resurrection-trial · Awakeden)
+## Resurrection on Trial  (resurrection-trial · Salt and Light Kingdom)
 *Each episode tackles one skeptical objection to the resurrection, then lands at the risen Christ.*
 > guardrail: Always engage the STRONGEST version of the objection, not a strawman. Tone: invitation, not victory. Arguments clear the ground; the Holy Spirit convicts.
 
@@ -194,7 +194,7 @@ Built from `data/series.json` (10 greenlit series / 76 episodes). Red-team + 5-C
 - 📱 Have You Not Read <Matthew 19:4> — _planned_ — backed by: Questions Jesus Asked (series deep-dive) (planned)
 - 📱 Could You Not Watch With Me One Hour <Matthew 26:40> — _planned_ — backed by: Questions Jesus Asked (series deep-dive) (planned)
 
-## Jesus in the Old Testament  (jesus-in-ot · Awakeden)
+## Jesus in the Old Testament  (jesus-in-ot · Salt and Light Kingdom)
 *Christ foreshadowed and foretold in the Hebrew Scriptures — the OT prophecy or type, the NT fulfilment that confirms it, and why it proves the gospel was God's plan from the beginning. Apologetic in tone, worshipful in landing.*
 > guardrail: ENGAGE the strongest honest version — no proof-texting, no stretched types the NT never names. Every claim must cite a REAL NT fulfilment (the NT writer or Jesus Himself makes the link). Tone: invitation, not victory; the Spirit convicts, evidence clears the ground. Land on the risen Christ and a response to Him, never on 'see, Christianity wins'. KJV verbatim. Smart-default opening applies; for a confrontational or claim-of-deity text, open in the scene rather than forcing a felt problem.
 

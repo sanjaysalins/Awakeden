@@ -62,12 +62,10 @@ Then he touched what no one else would touch. "And he came and touched the bier:
 
 Death did not spread from the boy to Jesus. Life spread from Jesus to the boy.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -106,12 +104,10 @@ Under that same law, the touch should have made Jesus unclean. It did not work t
 
 That is still the only direction he moves toward anything dead in you. Not to catch what is wrong with you, but to give you what is his instead.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -134,7 +130,7 @@ Luke 7 Bible study, widow of Nain story, Jesus raises the widow's son, Jesus mir
 ```
 A widow was burying her only son. Everyone kept their distance, touching a dead body made you unclean. Jesus walked toward her instead. He touched the open coffin, and told the dead boy to get up. He did.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _276 characters_
 
@@ -164,12 +160,10 @@ Jesus walked toward her instead. "And when the Lord saw her, he had compassion o
 
 Death did not spread from the boy to Jesus. Life spread from Jesus to the boy.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -187,7 +181,7 @@ _802 characters_
 ```
 A widow was burying her only son. Touching a dead body made you unclean, so everyone kept their distance. Jesus touched the coffin anyway, and told the boy to get up. He did. Death did not spread to Jesus, life spread from Jesus.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _301 characters_
 

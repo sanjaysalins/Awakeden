@@ -60,12 +60,10 @@ Read the whole story: Mark 10:46-52 (and Mark 10:32-34).
 
 On His way to the cross, Jesus stood still for one man. He still hears the one who calls.
 
-Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -102,12 +100,10 @@ Read the whole story: Mark 10:32-52.
 
 On His way to die and rise again, Jesus stood still for one man.
 
-Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -130,7 +126,7 @@ blind bartimaeus, bartimaeus the blind man, who was bartimaeus, bartimaeus story
 ```
 A whole crowd told him to be quiet. Jesus was on His way to die. Would He stop for a blind beggar? Blind Bartimaeus, Mark 10:46-52.
 
-Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 ```
 _238 characters_
@@ -157,12 +153,10 @@ Mark 10:46-52: blind Bartimaeus sat begging by the road near Jericho. He cried o
 
 Read it: Mark 10:46-52. Send this to someone who feels nobody stops for them.
 
-Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -183,7 +177,7 @@ Jesus was on His way to die. Would He stop for one blind beggar?
 Blind Bartimaeus, Mark 10:46-52.
 Send this to someone who feels nobody stops for them.
 
-Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 ```
 _306 characters_

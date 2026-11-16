@@ -1,4 +1,4 @@
-# AWAKEDEN SERIES DNA — one grammar, every channel (draft, 2026-07-27)
+# SALT AND LIGHT KINGDOM SERIES DNA — one grammar, every channel (draft, 2026-07-27)
 
 > $0 planning doc. Ties together `v2/AWAKEDEN_COMIC_DNA.md` (visual doctrine) +
 > `poc_comic_page/_ACTION_PAINTERLY_DNA.md` (Gold Seam / Bowed Camera / Witness Edge)
@@ -47,7 +47,7 @@ stacked simultaneous release is what makes the series compelling, not any one tr
   hits. Layer stack fixed: Narration → Music → SFX, ducked in that order.
   Comic DNA §4/§5a: SFX = "the sound of Scripture," never BIFF/POW; NO SFX on
   crucifixion / veil-tear / resurrection.
-- **Gates:** INV-26 landing hold ≥3.0s; INV-27 AWAKEDEN watermark. Untouched.
+- **Gates:** INV-26 landing hold ≥3.0s; INV-27 SALT AND LIGHT KINGDOM watermark. Untouched.
 
 ---
 

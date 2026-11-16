@@ -10,20 +10,17 @@ Matthew 26:40, Jesus asked Peter, James and John to watch with him one hour in G
 
 The cup he asked to pass, he drank, on the cross, for you. He watched that hour alone, so that no hour of yours is watched alone. Bring Jesus the weak flesh he already knows.
 
-Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
-Read it panel by panel: https://awakeden.com/read/could-ye-not-watch-one-hour.html
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 
 #Bible #Jesus #Gethsemane #KJV #Shorts
 
 ## TAGS
-Matthew 26:40, Gethsemane, watch and pray, Jesus prayer, could ye not watch one hour, Bible shorts, KJV Bible, words of Jesus, Peter James John, the flesh is weak, Bible comic, Awakeden
+Matthew 26:40, Gethsemane, watch and pray, Jesus prayer, could ye not watch one hour, Bible shorts, KJV Bible, words of Jesus, Peter James John, the flesh is weak, Bible comic, Salt and Light Kingdom
 
 ## HASHTAGS
 #Bible #Jesus #Gethsemane #KJV #Shorts

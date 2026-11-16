@@ -1,4 +1,4 @@
-"""Deterministic, fail-closed gates for the Awakeden eyewitness format (EW-G1..EW-G6).
+"""Deterministic, fail-closed gates for the Salt and Light Kingdom eyewitness format (EW-G1..EW-G6).
 
 The binding contract is `v2/EYEWITNESS_SPEC.md` — §2.1 (the narration.md format these gates
 parse), §3 (EW-INV-1..10), §4 (the gate registry), §9 (the lock). These are PURE-CODE checks

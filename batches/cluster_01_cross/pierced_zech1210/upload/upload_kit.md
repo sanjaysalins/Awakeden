@@ -37,7 +37,7 @@ VERDICT: REVISE
   truthful only as a floor — do not inflate to "exactly 500".
 - tiktok: first line is good; hashtag set is broad-only. FIX: swap one broad tag for
   a niche one (#Zechariah1210 or #JesusInTheOldTestament) to earn the right feed.
-- youtube_long tag list includes "awakeden" (brand, not a search keyword a stranger
+- youtube_long tag list includes "Salt and Light Kingdom" (brand, not a search keyword a stranger
   types). Harmless, but replace with "spear pierced side of jesus" or "zechariah
   prophecy explained" for actual search value.
 - No clickbait, no doctrinal overclaim, primary anchor quote IS verbatim KJV,
@@ -76,9 +76,7 @@ And the promise begins with grace: "I will pour... the spirit of grace and of su
 
 Do what the verse says. Look at him — and live.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -117,9 +115,7 @@ In this piece: the prophecy in its own context, the first-person mystery inside 
 
 Look at him. Let grace turn looking into mourning, and mourning into trust. Look, and live.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -127,7 +123,7 @@ _1446 characters_
 
 **TAGS** (copy — paste into the keyword/tags field):
 ```
-zechariah 12 10, jesus in the old testament, messianic prophecy, crucifixion prophecy, pierced, john 19 37, kjv bible, old testament prophecy, jesus christ, cross of christ, bible teaching, who is jesus, prophecy fulfilled, awakeden
+zechariah 12 10, jesus in the old testament, messianic prophecy, crucifixion prophecy, pierced, john 19 37, kjv bible, old testament prophecy, jesus christ, cross of christ, bible teaching, who is jesus, prophecy fulfilled, Salt and Light Kingdom
 ```
 
 **HASHTAGS** (copy):
@@ -142,7 +138,7 @@ zechariah 12 10, jesus in the old testament, messianic prophecy, crucifixion pro
 ```
 A Roman spear finished a sentence God wrote 500 years earlier. Zechariah 12:10 — the LORD says the wound is HIS: "they shall look upon me whom they have pierced." The soldier saw a dying man. John saw God keeping his word. Look, and live.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _317 characters_
 
@@ -168,9 +164,7 @@ Look upon ME — God is speaking. John watched the spear go in and knew: this wa
 
 Look at him — and live.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -192,13 +186,13 @@ Zechariah 12:10: the LORD claims the wound as his own. "They shall look upon me 
 
 The promise starts with grace poured out, not wrath. Look at him — and live.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _411 characters_
 
 **HASHTAGS** (copy):
 ```
-#Bible #Jesus #Zechariah #MessianicProphecy #KJV #Cross #OldTestament #BibleShorts #Awakeden
+#Bible #Jesus #Zechariah #MessianicProphecy #KJV #Cross #OldTestament #BibleShorts #SaltAndLightKingdom
 ```
 
 ---

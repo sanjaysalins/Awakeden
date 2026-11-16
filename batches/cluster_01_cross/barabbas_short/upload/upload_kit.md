@@ -53,12 +53,10 @@ _54 characters_
 ```
 Barabbas means "son of the father." The crowd chose him to go free, and Jesus, the true Son of the Father, was sent to the cross. Matthew 27:17: "Whom will ye that I release unto you? Barabbas, or Jesus which is called Christ?" Quoted word for word from the KJV: Matthew 27:17, 21, 22, 23. "Robber" is from John 18:40. "Abba" is from Mark 14:36. Say the name slowly: Bar-Abba. Then watch who goes free.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -87,12 +85,10 @@ _66 characters_
 ```
 Barabbas means "son of the father." The crowd chose him to go free, and Jesus, the true Son of the Father, was sent to the cross. Matthew 27:17: "Whom will ye that I release unto you? Barabbas, or Jesus which is called Christ?" Quoted word for word from the KJV: Matthew 27:17, 21, 22, 23. "Robber" is from John 18:40. "Abba" is from Mark 14:36. Say the name slowly: Bar-Abba. Then watch who goes free.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -115,7 +111,7 @@ Barabbas, who was Barabbas, Barabbas meaning, Barabbas and Jesus, son of the fat
 ```
 Barabbas means "son of the father." The man set free in Jesus' place had that name. Say it slowly: Bar-Abba. Then watch who goes free. Matthew 27:15-26.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _224 characters_
 
@@ -137,12 +133,10 @@ _54 characters_
 ```
 Barabbas means "son of the father." The crowd chose him to go free, and Jesus, the true Son of the Father, was sent to the cross. Matthew 27:17: "Whom will ye that I release unto you? Barabbas, or Jesus which is called Christ?" Say the name slowly: Bar-Abba. Then watch who goes free.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -160,7 +154,7 @@ _506 characters_
 ```
 Barabbas means "son of the father." The man set free in Jesus' place had that name. Say it slowly: Bar-Abba. Then watch who goes free. Matthew 27:15-26.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _224 characters_
 

@@ -53,12 +53,10 @@ _45 characters_
 ```
 Genesis 28:10-17. Jacob tricked his blind father and took his brother's blessing. Now his brother wanted him dead, so he ran, and slept in the open with a stone for his pillow. What would God say to a man like that? Before Jacob did anything to make things right, God spoke: "I will not leave thee." Jacob woke and said, "Surely the LORD is in this place; and I knew it not." Centuries later, Jesus used that same picture of angels going up and down about himself (John 1:51). Jacob never climbed that ladder. God came to him first.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -66,7 +64,7 @@ _760 characters_
 
 **TAGS** (copy — paste into the keyword/tags field):
 ```
-Jacob's ladder, Genesis 28, Jacob and Esau, Bible story, Bible shorts, Jesus, John 1:51, grace, God with us, Old Testament, Awakeden, Swirls of Life
+Jacob's ladder, Genesis 28, Jacob and Esau, Bible story, Bible shorts, Jesus, John 1:51, grace, God with us, Old Testament, Salt and Light Kingdom, Swirls of Life
 ```
 
 **HASHTAGS** (copy):
@@ -87,12 +85,10 @@ _64 characters_
 ```
 Genesis 28:10-17. Jacob tricked his blind father and took his brother's blessing. Now his brother wanted him dead, so he ran, and slept in the open with a stone for his pillow. In a dream he saw a ladder with angels going up and down, and the LORD stood above it. Before Jacob did anything to make things right, God spoke: "I will not leave thee." Jacob woke and said, "Surely the LORD is in this place; and I knew it not." Centuries later, Jesus used that same picture about himself (John 1:51). Jacob never climbed that ladder. God came to him first.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -100,7 +96,7 @@ _780 characters_
 
 **TAGS** (copy — paste into the keyword/tags field):
 ```
-Jacob's ladder, Genesis 28, Jacob and Esau, Bible story, Jesus, John 1:51, grace, Old Testament, Awakeden, Swirls of Life
+Jacob's ladder, Genesis 28, Jacob and Esau, Bible story, Jesus, John 1:51, grace, Old Testament, Salt and Light Kingdom, Swirls of Life
 ```
 
 **HASHTAGS** (copy):
@@ -115,7 +111,7 @@ Jacob's ladder, Genesis 28, Jacob and Esau, Bible story, Jesus, John 1:51, grace
 ```
 He cheated his brother, then ran with nowhere to go. Genesis 28: before Jacob fixed a thing, God said "I will not leave thee." Jacob never climbed that ladder. God came to him first.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _254 characters_
 
@@ -137,12 +133,10 @@ _45 characters_
 ```
 Genesis 28:10-17. Jacob ran from a brother who wanted him dead and slept on open ground with a stone for a pillow. Before he did anything to make things right, God said, "I will not leave thee." Centuries later, Jesus used that same ladder picture about himself (John 1:51). Jacob never climbed that ladder. God came to him first.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -160,7 +154,7 @@ _552 characters_
 ```
 He cheated his brother, then ran with nowhere to go. Genesis 28: before Jacob fixed a thing, God said "I will not leave thee." Jacob never climbed that ladder. God came to him first.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _254 characters_
 

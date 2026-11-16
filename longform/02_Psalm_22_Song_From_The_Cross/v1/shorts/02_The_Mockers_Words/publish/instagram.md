@@ -3,7 +3,7 @@
 ## CAPTION
 They shook their heads and sneered the exact taunt Psalm 22 had written 1,000 years before. Same gesture. Same words. They thought they were mocking a failure. They were marking the Messiah. He could have come down. He chose you instead.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 #Psalm22 #BibleProphecy #Jesus #KJV #Christian #Faith #BibleVerse #OldTestament #Prophecy #JesusChrist
 

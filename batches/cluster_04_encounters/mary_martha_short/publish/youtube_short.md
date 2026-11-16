@@ -10,12 +10,10 @@ Martha opened her home to Jesus and was busy serving, while her sister Mary sat 
 
 In the film, quoted word for word from the KJV: Luke 10:40 (second half), Luke 10:41-42, John 11:5. Told in plain words: Luke 10:38-40; Lazarus as their brother: John 11:1-2. In Luke 10:41, "careful" means full of worry.
 
-Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 

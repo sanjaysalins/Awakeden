@@ -70,9 +70,7 @@ Two finished works. One Workman. He finished creation and rested; he finished re
 
 You were never asked to finish it. You are asked to rest in it. He bowed his head so you could lift yours. The work is finished. Enter his rest.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -113,9 +111,7 @@ In this piece: the Genesis rhyme behind the cross's greatest word, the prayer of
 
 He bowed his head so you could lift yours. Enter his rest.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -138,7 +134,7 @@ it is finished meaning, john 19 30 explained, tetelestai, words from the cross, 
 ```
 The first time the Bible says finished, nothing was broken yet. Creation: finished, then rest. Redemption: finished, then the tomb-rest, then MORNING. Two finished works. One Workman. You were never asked to finish it. Rest in it.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _309 characters_
 
@@ -164,9 +160,7 @@ He rested after each. And on the first day, morning came.
 
 You were never asked to finish the work. You are asked to rest in it. He bowed his head so you could lift yours.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
-
-https://awakeden.com
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -188,13 +182,13 @@ The second time, everything broken was being mended. (John 19:30)
 
 Two finished works. One Workman. He bowed his head so you could lift yours. Enter his rest.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
 _316 characters_
 
 **HASHTAGS** (copy):
 ```
-#Bible #Jesus #ItIsFinished #Cross #Gospel #KJV #Creation #BibleShorts #Awakeden
+#Bible #Jesus #ItIsFinished #Cross #Gospel #KJV #Creation #BibleShorts #SaltAndLightKingdom
 ```
 
 ---

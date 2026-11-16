@@ -54,12 +54,10 @@ The crushing is not handed to a warrior. Scripture gives a crushing verb to a pe
 
 That head was never yours to crush. Stand where His grace has set your feet.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -94,12 +92,10 @@ The crushing is not handed to a warrior. Scripture gives a crushing verb to a pe
 
 That head was never yours to crush. Stand where His grace has set your feet.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -122,7 +118,7 @@ romans 16 20, god of peace, bruise satan, genesis 3 15, seed of the woman, serpe
 ```
 A crushing verb given to a peace-title. Paul echoes Eden in Romans 16:20: the God of peace shall bruise Satan under your feet. That head was never yours to crush. Stand where His grace has set your feet.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _275 characters_
 
@@ -146,12 +142,10 @@ Romans 16:20. "And the God of peace shall bruise Satan under your feet shortly. 
 
 That head was never yours to crush. Stand where His grace has set your feet.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -169,7 +163,7 @@ _440 characters_
 ```
 A crushing verb given to a peace-title. Romans 16:20: the God of peace shall bruise Satan under your feet. Stand where His grace has set your feet.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _219 characters_
 

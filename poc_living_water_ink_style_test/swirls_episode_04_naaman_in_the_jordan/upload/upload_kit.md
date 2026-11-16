@@ -62,12 +62,10 @@ He went down. He washed, seven times. New skin, like a child's.
 
 The best thing Naaman ever did was lose that argument.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -106,12 +104,10 @@ Centuries later, Jesus stood up in his own hometown synagogue and told this exac
 
 The best thing Naaman ever did was lose that argument. If the cure God offers you feels too plain, too easy, too small, that is the same argument he almost lost his healing to. It is still worth losing.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -134,7 +130,7 @@ _1521 characters_
 ```
 A prophet told a leprous general to wash in a river seven times. He got furious, it felt too small. His own servants talked him into trying it anyway. New skin, like a child's. Jesus later told this exact story in his hometown, and they tried to kill him for it.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _334 characters_
 
@@ -164,12 +160,10 @@ He went down. He washed, seven times. New skin, like a child's.
 
 The best thing Naaman ever did was lose that argument.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 
 Follow:
-YouTube: @awakeden (https://youtube.com/@awakeden)
-
-https://awakeden.com
+YouTube: @saltandlightkingdomorg (https://www.youtube.com/@saltandlightkingdomorg)
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
@@ -187,7 +181,7 @@ _849 characters_
 ```
 A general got leprosy. The cure felt too small for a man like him: wash in a river seven times. His own servants talked him into trying it anyway. New skin, like a child's. Jesus later told this exact story back home, and it nearly got him killed.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 ```
 _319 characters_
 
