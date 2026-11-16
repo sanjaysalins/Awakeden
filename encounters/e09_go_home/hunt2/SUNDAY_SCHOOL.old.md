@@ -1,0 +1,17 @@
+## KILL LIST - the common sermons on Luke 8:22-39. DO NOT give any of these as your angle, and do not give a re-worded copy of one.
+
+- Jesus can calm any storm in your life, so trust Him in the storm (Luke 8:24)
+- "Where is your faith?" Fear and faith fight each other, so choose faith (Luke 8:25)
+- Jesus is in the boat with you, so you will not sink when He is with you (Luke 8:23)
+- Jesus is fully God and fully man: He sleeps like a man, and He rules the wind like God (Luke 8:23-25)
+- Jesus has power over demons, and no one is too far gone for Him to set free (Luke 8:29-33)
+- The demons know who Jesus is and must obey Him, so Satan is on a leash (Luke 8:28, 31-32)
+- One changed life is worth more to Jesus than a herd of pigs, but people often care more about money than about people (Luke 8:33-37)
+- Go home and tell what God has done for you, because your own story is your witness (Luke 8:39)
+- Following Jesus does not mean you will escape life’s storms (Luke 8:22-23)
+- Trust Jesus instead of letting fear take over (Luke 8:24-25)
+- Jesus has power over the wind and the waves (Luke 8:24-25)
+- Even demons must submit to Jesus’ authority (Luke 8:28-33)
+- No one is beyond Jesus’ power to rescue and restore (Luke 8:27-35)
+- Value people more than possessions (Luke 8:32-37)
+- Start at home and tell others what God has done for you (Luke 8:38-39)

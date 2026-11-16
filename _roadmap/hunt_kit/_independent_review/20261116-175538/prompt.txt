@@ -1,0 +1,79 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: plan
+
+RED-TEAM LENS — you are a HOSTILE adversary. Assume it is flawed and PROVE it. Hunt doctrinal error, Scripture misquote/overclaim, cheesy/tired lines, and anything that would embarrass a careful pastor. Default to REVISE/FAIL unless it is clearly clean.
+
+LENS — judge this PLAN on (be specific, cite the exact step/claim):
+- Feasibility against the real codebase / tools (does it assume things that exist?).
+- Hidden risks, false assumptions, single points of failure.
+- Over-engineering / premature building before the idea is proven.
+- Missing steps, edge cases, or verification gaps.
+- Reuse: does it duplicate tools that already exist instead of reusing them?
+- Cost / spend and whether it's justified.
+
+ADDITIONAL CONTEXT / BRIEF:
+RED TEAM the 'challenge gates' added to this /usr/bin/bash Bible fresh-angle hunt kit. Owner's standing challenge: every episode must carry a WHOLE-BIBLE insight new to the viewer, not a told-a-million-times angle; 100% Bible-rooted, KJV verbatim, never overclaim. Read the kit: _roadmap/hunt_kit/*.py, *_TEMPLATE.md, README.md, and _roadmap/TWO_DRIVERS_ROADMAP.md section 11. Attack: can a weak/familiar angle still pass (e.g. two-book check counting incidental citations)? can a gate be bypassed silently? does the WORDING-FIX escape hatch defeat SOUND? are the bars measurable? does the owner card really put the owner first? Report MUST-FIX with one-line fixes. Be fast.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block (on the VERDICT line write exactly ONE word —
+PASS or REVISE or FAIL — never the list of options):
+
+VERDICT: <PASS or REVISE or FAIL>
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# Hunt kit - find the fresh angle first ($0)
+
+Rule: **hunt the link first. No strong link, no film.** Contract: `_roadmap\TWO_DRIVERS_ROADMAP.md` (sections 2-3).
+One folder per hunt = the **topic dir** (e.g. `encounters\e09_go_home\hunt\`). Run from the repo root.
+`PY` = `.venv\Scripts\python.exe`, `KIT` = `_roadmap\hunt_kit`.
+
+> **CHALLENGE GATES (owner, 2026-11-16) - plain words**
+> 1. No loom, no hunt. `loom.py` must run on the passage first. The loom is ours only.
+> 2. No Sunday-school list, no hunt. `run_seats.py` refuses without `loom.md` and `SUNDAY_SCHOOL.md`.
+> 3. The kill list is the Sunday-school list, made by the machine - not written by us.
+> 4. TWO-BOOK RULE: every angle links the passage to another book, exact KJV from both.
+> 5. WHY-VERSE RULE: name the verse that gives the MEANING of the link. The film claims no more.
+> 6. `gate.py` decides: medians vs the bars (incl. DEPTH 7), SOUND all PASS, 2+ books cited. No PASS = no film.
+> 7. The owner sees the idea FIRST (`_OWNER_CARD.html`). Words are not written until the owner says NO to "Had you seen this before?"
+
+| Step | What | Command / file |
+|---|---|---|
+| 1 | Loom: word matches for the passage | `PY KIT\loom.py <topic> "Luke 8:22-39"` -> `<topic>\loom.md` (ours only, never sent) |
+| 2 | Sunday-school list = KILL LIST | `PY KIT\sunday_school.py <topic> "Luke 8:22-39"` (2 CLI seats) -> `<topic>\SUNDAY_SCHOOL.md`; read it, edit if wrong |
+| 3 | Brief + real verse text | copy `BRIEF_TEMPLATE.md` -> `<topic>\BRIEF.md` (no hand-written kill items), then `PY KIT\kjv_pack.py <topic> "Mark 5:1-20" "Luke 8:39"` |
+| 4 | 6 blind seats | `PY KIT\run_seats.py <topic>` (appends SUNDAY_SCHOOL.md; refuses without loom + list) + Fable and Sonnet (see below) |
+| 5 | Quote check + FACTS check | `PY KIT\check_quotes.py <topic>\hunt_claude.md ...`, then `FACTS_TEMPLATE.md` -> `<topic>\FACTS.md` by hand. A card with SOUND flags fixed by wording: add a line `WORDING-FIX: C, F` to FACTS.md |
+| 6 | Neutral cards | by hand -> `<topic>\CARDS.md` (no authors, random order, only checked quotes). Each card needs `LABEL:`, `WHY-VERSE:`, `DOES NOT PROVE:`, optional `INSIGHT:` (one line). Re-run `kjv_pack.py` with every card verse |
+| 7 | 6 fresh blind judges | copy `JUDGE_TEMPLATE.md` -> `<topic>\JUDGE_BRIEF.md`, then `PY KIT\run_judges.py <topic>` + Fable and Sonnet judges |
+| 8 | Gate | `PY KIT\gate.py <topic>` (Driver 1: add `--driver 1`) -> `<topic>\GATE.md`; exit 1 + "NO PASS - NO FILM" if nothing passes |
+| 9 | Owner card | `PY KIT\owner_card.py <topic> C` -> `<topic>\_OWNER_CARD.html`; give the owner the file:/// link, do not open it |
+| 10 | Bank winner AND losers | rows in `_roadmap\INSIGHT_BANK.md` (medians) |
+| 11 | Seed viewers (5-10 real people) | `SEED_VIEWER_FORM.md` -> put the % in the bank |
+| 12 | Owner says NO ("not seen before") | only then write words |
+
+## Fable + Sonnet seats
+The scripts cannot call them. The live Claude session runs them as **blind subagents**: a fresh agent each,
+given ONLY `BRIEF.md` + `KJV_PACK.md` (judges: `JUDGE_PROMPT.md`), no repo context, no other seat's work.
+Save as `hunt_fable.md` / `hunt_sonnet.md` (judges: `judge_fable.md` / `judge_sonnet.md`).
+A session that has seen our own candidate angle is not blind - it must not write a seat itself.
+
+## Bars (median of 6 judges)
+FRESH 7.0+ (6.0-6.9 = "classic", max 1 in 4 films) - TRUE 8.0+ - SOUND all PASS - CLEAR 7.0+ - JESUS 8.0+ - GROWTH 7.0+ (Driver 2) - DEPTH 7.0+ - 2+ distinct books cited. `gate.py` enforces all of these.
+Seed viewers decide: 60%+ "had not seen this".
+
+## Notes
+- Seats run in a temp folder outside the repo, so no CLAUDE.md or drafts leak in.
+- `run_seats.py <topic> grok` re-runs one seat. Grok often times out: note it, do not block.
+- `kjv_pack.py` rewrites `KJV_PACK.md` each run: give it the full list of refs every time.
+- CLI calls go through `_cli.py`, which uses this repo's `independent_review.py` (plan logins, no metered keys).
+  Timeouts are doubled (`REVIEW_TIMEOUT_MULT=2`); set the env var to change.
+- `check_quotes.py` only sees `Book C:V "quote"` on one line. Text in `<!-- -->` in a brief is not sent.
+- KJV logic lives once, in `prophecy\01_bethlehem\fresh_hunt\kjv_check.py` (loaded by `_kjv.py`).
+- $0: CLI plan usage only. No paid API, no pictures, no voice.
+----- ARTIFACT END -----

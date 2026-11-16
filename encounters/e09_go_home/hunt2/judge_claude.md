@@ -1,0 +1,26 @@
+**ANGLE A** | FRESH 7 | TRUE 7 | SOUND FLAG (it joins Isaiah 65:1, which Romans 10:20 applies to the Gentiles who were found, with 65:4, which describes the rebellious people Romans 10:21 calls Israel. The graves and swine belong to the rebels, not to the people who were found. The card admits this, but the hook still blends them. The man is never said to feel "unseen", so that line is ours.) | CLEAR 7 | JESUS 8 | GROWTH 6 | DEPTH 7 | COMMON? partly (Isaiah 65:4 behind the demoniac is in Mark commentaries, e.g. Marcus and France; rare in sermons)
+
+**ANGLE B** | FRESH 6 | TRUE 7 | SOUND FLAG ("what rages inside you": the man is never called raging or stormy. The card admits it, but the SO WHAT rests on that comparison. "The people" in Psalm 65:7 means nations, not one man.) | CLEAR 8 | JESUS 7 | GROWTH 5 | DEPTH 6 | COMMON? partly (Psalm 65:7 for the storm then the demoniac shows up in some Mark commentaries; "calm outside, calm inside" is a known sermon move, close to the kill list)
+
+**ANGLE C** | FRESH 7 | TRUE 7 | SOUND FLAG (saying the deep is "where Christ was brought up from" pushes Romans 10:7 toward the doctrine that Christ descended into hell. Romans 10:7 is Paul reworking Deuteronomy 30:13 as a rhetorical question, not a map of where Jesus went. The insight's paraphrase "brought up" is not the exact quote, which is "to bring up Christ again".) | CLEAR 5 | JESUS 7 | GROWTH 7 | DEPTH 6 | COMMON? partly (abyss = prison of demons, tied to Revelation 20, is standard in commentaries; the Romans 10:7 link is rarer)
+
+**ANGLE D** | FRESH 6 | TRUE 6 | SOUND FLAG (it brings in shame and hiding from Genesis 3:10; Luke gives the man no shame and no hiding. "Clothed" is a common word, so the link is thin. Galatians 3:27 brings in baptism, which this scene does not have.) | CLEAR 7 | JESUS 5 | GROWTH 6 | DEPTH 4 | COMMON? partly ("new creation, clothed and in his right mind" sermons exist; the Adam link turns up in devotionals)
+
+**ANGLE E** | FRESH 6 | TRUE 9 | SOUND PASS (careful and backed by the verse. The core is really a DETAIL inside 8:39; 1 Samuel 12:24 is decoration and adds little.) | CLEAR 8 | JESUS 10 | GROWTH 6 | DEPTH 8 | COMMON? partly (Bock, Green and Marshall note the God/Jesus swap as quiet Christology; rare in sermons, which stop at "go tell", a kill-list item)
+
+**ANGLE F** | FRESH 5 | TRUE 5 | SOUND FLAG (the picture does not fit. In Luke the chains were put on him by others and he broke them himself; Jesus removes no chains. "Solitary" is not Luke's word, and he had a house to go back to. "If you feel shut out" has no backing in the text. The card's own DOES NOT PROVE takes the core apart.) | CLEAR 6 | JESUS 5 | GROWTH 5 | DEPTH 3 | COMMON? partly (Psalm 68:6 is a stock cross-reference for deliverance and family)
+
+**ANGLE G** | FRESH 7 | TRUE 6 | SOUND FLAG ("Both ended in life given back": the man was not dead, so that is a stretch. The phrase is a common Hebrew idiom (Judges 11:12, 2 Kings 3:13, 2 Chronicles 35:21, John 2:4), so the link is not unique. Romans 8:1 is applied to a cry spoken by devils, which muddles who is "in Christ". The strong Elijah widow link in Luke is 7:15, not chapter 8.) | CLEAR 5 | JESUS 6 | GROWTH 5 | DEPTH 4 | COMMON? partly (the idiom's OT uses are listed in commentaries on Mark 1:24)
+
+**ANGLE H** | FRESH 4 | TRUE 8 | SOUND FLAG ("there is room beside him" sits badly with 8:38-39: he asked to be with Jesus and was sent away. The SO WHAT says more than the scene gives.) | CLEAR 9 | JESUS 7 | GROWTH 6 | DEPTH 5 | COMMON? yes (the disciple's posture, tied to Luke 10:39, is standard in Bock, Green and many sermons)
+
+**ANGLE I** | FRESH 6 | TRUE 7 | SOUND PASS (careful. Zechariah 13:2 is the only OT use of "the unclean spirit", a real lexical point, but the SO WHAT re-words the kill-list item "no one too bound".) | CLEAR 6 | JESUS 6 | GROWTH 4 | DEPTH 5 | COMMON? partly (Zechariah 13:2 is cited for Jesus' exorcisms as a sign of the kingdom in some commentaries; the SO WHAT is common)
+
+**YOUR TOP 3**
+1. **E**: the strongest link, because it sits inside one verse of the passage. The same deed is credited to God and to Jesus, and it lands on Jesus with no forcing.
+2. **A**: a vivid picture match (graves and swine), and Paul himself vouches for the Isaiah 65:1 step. It needs tighter wording so the rebels of 65:4 are not blended with the people who were found in 65:1.
+3. **B**: the order (calm sea, then calm man) is a real feature of the text, and Psalm 65:7 is a fair partner. The weak spot is that the "inner storm" is our comparison, not Luke's.
+
+**REJECT: F.** Its own caveats remove the core. Jesus removes no chains, the man was not "solitary", and he had a house. The picture does not fit.
+
+**MISSING:** Fear comes *after* each rescue, not only before it. The disciples were "afraid" after the calm (8:25), and the townspeople "were afraid" and had "great fear" after the man was healed (8:35, 8:37). This DETAIL is in the passage itself and is rarely shown. It lands on the question "What manner of man is this!" (8:25).

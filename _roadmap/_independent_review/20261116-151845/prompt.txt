@@ -1,0 +1,352 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: plan
+
+LENS — judge this PLAN on (be specific, cite the exact step/claim):
+- Feasibility against the real codebase / tools (does it assume things that exist?).
+- Hidden risks, false assumptions, single points of failure.
+- Over-engineering / premature building before the idea is proven.
+- Missing steps, edge cases, or verification gaps.
+- Reuse: does it duplicate tools that already exist instead of reusing them?
+- Cost / spend and whether it's justified.
+
+ADDITIONAL CONTEXT / BRIEF:
+Be fast: do NOT explore the repo widely. Read only the plan file and at most data/kjv_full for spot checks. Focus on: doctrinal soundness of the 24 angles (overclaims, stretches), whether the two drivers are clear, and whether the daily rhythm is realistic. Section 9 lists round-1 changes. Answer within 5 minutes.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block (on the VERDICT line write exactly ONE word —
+PASS or REVISE or FAIL — never the list of options):
+
+VERDICT: <PASS or REVISE or FAIL>
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# TWO DRIVERS ROADMAP
+
+Salt and Light Kingdom. Written 2026-11-16. Status: DRAFT for the owner. $0 spent.
+This is a plan. It needs the outside panel (`independent_review.py --type plan`) before it is called done.
+
+---
+
+## 0. Answer to the owner's challenge
+
+You asked: can AI find Bible insights nobody has seen before?
+Honest answer: no. AI cannot give new revelation, and we must never pretend it can.
+What AI can do is read all 66 books at once and find links that are **already in the text**: the same words in two books, a verse the New Testament quotes, a small detail most people read past.
+So the bar is **"old in the text, new to the viewer."** Never new doctrine.
+Our first hunt (Bethlehem) scored about 6 out of 10 for newness. Real, but small.
+It was small for one reason: we picked a famous topic first, then looked for a fresh angle after the film was made.
+This plan flips that. **We hunt the link first, and only make the film if the link is strong.** That is how we push 6 toward 7 or 8.
+
+---
+
+## 1. The two drivers
+
+| | **Driver 1: THE THREAD** | **Driver 2: THE ENCOUNTER** |
+|---|---|---|
+| What it is | Jesus in prophecy. Old Testament to New Testament links. | Jesus and the events around Him. What they mean for life. |
+| Promise to the viewer | "You will see two Bible verses, far apart, lock together on Jesus." | "You will see one moment with Jesus, and one true thing it changes for you." |
+| Shape | Old verse → New verse → the link → Jesus. | The event → the detail you missed → what it shows about Him → what it means for you. |
+| Ends on | Jesus as the one the Bible promised. | Jesus as the one you can trust today. |
+
+### What QUALIFIES an episode (hard tests, both drivers)
+
+| # | Test | Pass means |
+|---|---|---|
+| Q1 | Two anchors | At least 2 exact KJV verses. Driver 1 needs one OT + one NT. |
+| Q2 | Honest label | Every link is tagged PROPHECY, TYPE or ECHO (see section 2) and the film **says the label out loud**. |
+| Q3 | Machine check | Every quote passes `kjv_check.py`. 0 MISMATCH. |
+| Q4 | Newness | Blind judges give FRESH 7.0 or more (median). |
+| Q5 | Lands on Jesus | The last spoken beat is about Him, from the piece's own verses. |
+| Q6 | One line | A newcomer can say the insight in one plain sentence. |
+| Q7 (Driver 2 only) | Real "so what" | Passes the 4 tests in section 3. |
+
+### What is BANNED (both drivers)
+
+| Banned | Why |
+|---|---|
+| Calling a type or echo a "prediction" | Overclaim. Say which it is. |
+| Numerology, Bible codes, hidden number patterns | Not in the text's plain sense. |
+| Contrarian or clickbait readings ("the church got this wrong") | Surprising about the text, never about the truth. |
+| Gain / loss or fear framing | Grace-anchored only. The script invites. |
+| Hebrew or Greek claims that are not plain lexicon facts | We cannot check them by machine. Flag and keep rare. |
+| Stock closers ("come to Jesus" family) | Must pass `narration_gate.py`. |
+| Hard KJV words carrying the landing | Global audience rule. Plain words carry the meaning. |
+| "Nobody has ever seen this" claims | False. Say "you may not have seen this." |
+| Any AI wording in public text | House rule. |
+
+**Locked spine stays:** every piece lands on Jesus. KJV word for word. Grace-anchored. Doctrine proven both ways (my own check AND the panel).
+
+---
+
+## 2. The insight engine
+
+### 2a. The six kinds of link we allow
+
+| Kind of link | Example | Honesty label | What the film says out loud |
+|---|---|---|---|
+| A. NT says "fulfilled" or quotes it of Jesus | Psalm 16:10 in Acts 2 | **PROPHECY** | "The Bible itself says this was about Him." |
+| B. NT itself names the pattern or states the link | The veil, Hebrews 10:20 | **TYPE** | "The New Testament makes this link." |
+| C. Same words in two books (word-chain) | Genesis 3:7 and Luke 24:31 | **ECHO** | "The Bible does not say these are linked. But look at the words." |
+| D. Shape or order echo (structure) | Leper and Jesus swap places, Mark 1 | **ECHO** | Same as C. |
+| E. Overlooked detail in the passage itself | "would have passed by them", Mark 6:48 | **DETAIL** (no cross-book claim) | "It is right there in the verse." |
+| F. Culture or language fact the text grounds | Fringes on the garment, Numbers 15:38 | **ECHO** + "language note" | "Here is what that word meant." Keep rare. |
+
+Rule: the strongest label in a piece sets the headline. An ECHO can never be the title claim of a Driver 1 "prophecy" episode. It can be the surprise inside it.
+
+### 2b. The hunt (all $0, copy of `prophecy/01_bethlehem/fresh_hunt/`)
+
+| Step | What happens | Tool |
+|---|---|---|
+| 1. Loom first | Pull verbatim word matches across the whole KJV for the passage. | `/concordance-loom` |
+| 2. Kill list | Write the 4-6 angles "told a million times". Seats may not use them. | `BRIEF.md` template |
+| 3. Blind hunt | 6 seats (Fable + Sonnet + claude / codex / gemini / grok CLIs). Each works alone. Each gives angles + exact quotes + label + "what it does NOT prove". | `run_seats.py` |
+| 4. Machine check | Every quote checked. Any MISMATCH is fixed or the angle is dropped. | `kjv_check.py` |
+| 5. Neutral cards | Angles re-written as plain cards. No authors. Random order. | `CARDS.md` |
+| 6. Blind judges | 6 fresh seats score every card. | `run_judges.py` |
+| 7. Bank it | Winner goes in the Insight Bank with its scores. Losers are kept too. | `_roadmap/INSIGHT_BANK.md` (new, simple table) |
+
+### 2c. The scores and the bar
+
+| Score | Meaning | Pass bar (median of 6 judges) |
+|---|---|---|
+| FRESH | How few churchgoers have been shown this | **7.0 or more** |
+| TRUE | Really in the text, label honest | 8.0 or more |
+| SOUND | Doctrine and overclaim | All PASS. One factual FLAG = fix or drop. |
+| CLEAR | Newcomer follows it in 60 s | 7.0 or more |
+| JESUS | Lands on Him without forcing | 8.0 or more |
+
+- FRESH 6.0 to 6.9 = "classic, told well". Allowed, but at most **1 in 4** episodes.
+- FRESH under 6 = stays in the bank. No film.
+- Freshness never excuses a stretch. TRUE and SOUND win every tie.
+
+### 2d. What pushes newness above 6
+
+| Lever | Why it helps |
+|---|---|
+| Hunt before the topic is locked | Bethlehem was hunted after the film was paid for. Only a small fold-in was possible. |
+| Two-hop chains (OT → OT → NT) | One-hop links are the famous ones. The second hop is where "I never saw that" lives. |
+| Start from the loom, not from memory | The loom finds matches no seat thought to recall. |
+| Kill list on every brief | Stops seats handing back the Sunday-school answer. |
+| Show both verses on screen, side by side | The viewer sees the link with their own eyes. That is the "hyperlink" feel. |
+| Ask real people | 5-10 seed viewers: "Had you seen this before? Yes / No." AI judges only guess at this. |
+
+---
+
+## 3. Driver 2 needs its own "so what"
+
+A Jesus-event episode must end with a take-away that is **earned by the event**, not stuck on.
+
+| Test | Pass means | Fail looks like |
+|---|---|---|
+| S1. From the text | The take-away uses a word or act from the passage's own KJV. | "So trust God more." |
+| S2. About Him first | It says what **Jesus is like or did**, then what that means for you. Grace before duty. | A to-do list. |
+| S3. One true sentence | A newcomer can repeat it. No church words. | "Walk in your calling." |
+| S4. Life-size | It touches one real thing: fear, shame, failure, being unseen, purpose, loss. | Abstract ideas. |
+
+How to build it:
+1. Write the "so what" as **one line** during the hunt, before any narration. Judges score it as GROWTH 0-10 (bar: 7.0).
+2. Use the "earned landing word" pattern: the closing line turns on one concrete word from the passage (owner liked this before).
+3. No questions that push ("Will you...?"). State what He did. Let it sit.
+4. Run the 5 guardrail questions. "What is the main take-away" must come back the same from every seat. If seats give different take-aways, the film is not clear yet.
+
+---
+
+## 4. A daily rhythm (one person, real life)
+
+**Honest truth:** one finished film every day is not real with our gates. What IS real: **the engine moves every day**, and **2 films finish each week** (one per driver). The owner gives about 15-30 minutes a day.
+
+Three lanes run at once, so the owner is never waiting on one thing:
+
+| Lane | Speed | Cost |
+|---|---|---|
+| HUNT (find insights, fill the bank) | 1 hunt a day | $0 (uses CLI plan usage) |
+| WORDS (hunt winner → locked narration) | 2 a week | $0 |
+| FILM (voice, pictures, clips, score, pack) | 2 a week | Paid. Each step quoted. Each needs a yes. |
+
+### The week
+
+| Day | Claude does ($0 unless marked) | Owner does (short) |
+|---|---|---|
+| Mon | Hunt + judge 2 topics (one per driver). | Read one page. Pick or say "next". |
+| Tue | Words for both: blind writers → judge table → 2-3 candidates → global-audience test → guardrail panel. | Pick the words for each. (Locks WORDS only.) |
+| Wed | Packaging card for both. **Quote** voice + pictures + clips. | Say yes or no to each quote. |
+| Thu | **PAID** voice, pictures, clips for film 1. QC every still and clip. Hunt topic 3. | Ear-check the voice. Look at one clips page. |
+| Fri | Build film 1. **PAID** score (quoted). Start film 2 paid steps. Hunt topic 4. | Watch film 1. |
+| Sat | Build film 2. Blind film check on both. Publish packs to GREEN. Hunt topic 5. | Watch film 2. OK the packs. |
+| Sun | Rest. | Rest. |
+
+### Per episode (estimates, from our own last builds)
+
+| | Estimate | Based on |
+|---|---|---|
+| Money | about **$8-14** per short | Bethlehem about $8. Well about $13.69. Immanuel $2.47 through clips. |
+| Owner time | about 60-90 minutes, spread over 4-5 small decisions | Guess. Measure it. |
+| Days from hunt to pack | 5-6 | This week plan. |
+| Month | about 8 films, about **$65-110** | 2 a week. |
+
+Rules that do not bend:
+- A pick locks words. It never spends money.
+- Every paid step gets its own quote and its own yes.
+- A hunt that fails the bar costs nothing. That is the point: **we fail cheap, on paper.**
+- The bank should hold 6+ passed insights before we worry about speed. Then 3 films a week is possible.
+
+---
+
+## 5. Roadmap: 24 episodes
+
+Not re-proposed (already made): Isaiah 53, Psalm 22, Zechariah 12:10, Thirty Pieces, Genesis 3:15, Bethlehem, Immanuel, Nazareth, Passover Lamb, Bronze Serpent, Jonah, Two Goats, Manna, and the encounter shorts (Zacchaeus, the well, Mary and Martha, the second fire, Bartimaeus, the storm, the thief, and the Swirls episodes).
+
+All quotes below are exact KJV and machine-checked (section 8).
+Every "fresh angle" here is a **candidate**. Each one still has to pass its own blind hunt and judges before words.
+**★ = do these 3 first.**
+
+### DRIVER 1: THE THREAD
+
+**Arc 1 — "It Was Written Before He Came"** (the arrival)
+
+| # | Working title | KJV refs | The fresh angle | Label | Why a newcomer cares |
+|---|---|---|---|---|---|
+| T1 | What was the angel quoting? | 2 Samuel 7:13 "I will stablish the throne of his kingdom for ever" → Luke 1:32-33 "the throne of his father David ... of his kingdom there shall be no end" | Gabriel's words to Mary follow God's old promise to David almost line by line: throne, house, kingdom, for ever. | PROPHECY | The Christmas story did not start at Christmas. |
+| T2 | Why did Jesus have to go to Egypt? | Hosea 11:1 "called my son out of Egypt" → Matthew 2:15 "Out of Egypt have I called my son"; Deuteronomy 8:3 → Matthew 4:4 | Jesus walks Israel's road again: Egypt, water, wilderness. Then He answers every test with a line from Israel's own wilderness book. They failed there. He did not. | TYPE (Matthew names it) | Someone passed the test we all fail. |
+| T3 | Why did Jesus start in Galilee? | 2 Kings 15:29 "all the land of Naphtali, and carried them captive to Assyria" → Isaiah 9:2 "The people that walked in darkness have seen a great light" → Matthew 4:16 | The first land to fall into the dark was the first to see the light. Three books, one place. | PROPHECY (Matthew 4:14) + ECHO (2 Kings) | God goes first to the place that was hurt first. |
+| T4 | Who did Moses say to listen to? | Deuteronomy 18:15 "unto him ye shall hearken" → Matthew 17:5 "hear ye him" → Acts 3:22 | Moses says: one day, listen to Him. On the mountain Moses is standing there, and the voice says the same thing about Jesus. | PROPHECY (Acts 3:22) | Even Moses pointed away from himself. |
+
+**Arc 2 — "He Quoted It Himself"** (the last week)
+
+| # | Working title | KJV refs | The fresh angle | Label | Why a newcomer cares |
+|---|---|---|---|---|---|
+| T5 | Were they inside a prophecy and did not know? | Zechariah 9:9 "lowly, and riding upon an ass" → John 12:16 "These things understood not his disciples at the first"; Genesis 49:11 "Binding his foal unto the vine" | The disciples walked through a 500-year-old verse and missed it. John admits it. | PROPHECY (Matthew 21:4) + ECHO (Genesis 49) | You can be in God's plan and not see it yet. |
+| T6 | Did the crowd sing the song that warned them? | Psalm 118:26 "Blessed be he that cometh in the name of the LORD" → Matthew 21:9; Psalm 118:22 "The stone which the builders refused is become the head stone of the corner" → Matthew 21:42 | The crowd sang verse 26. Four verses up, the same song says the builders will refuse Him. Jesus quotes that line days later. | PROPHECY (Jesus quotes it) | The welcome and the rejection were in one song. |
+| ★ T7 | Did David walk Jesus' worst night first? | Psalm 41:9 "mine own familiar friend, in whom I trusted, which did eat of my bread, hath lifted up his heel against me" → John 13:18; 2 Samuel 15:23 "passed over the brook Kidron", 15:30 "went up by the ascent of mount Olivet, and wept as he went up", 17:23 "hanged himself" → John 18:1 "over the brook Cedron", Matthew 27:5 "went and hanged himself" | King David: betrayed by a table friend, crosses the Kidron, climbs Olivet weeping. The friend hangs himself. A thousand years on, David's Son walks the same road. And when Jesus quotes the psalm, He leaves out "in whom I trusted". | PROPHECY (John 13:18) + ECHO (the David road; the psalm does not name the friend) | Jesus knows what betrayal feels like. He knew, and still shared His bread. |
+| T8 | What question could no one answer? | Psalm 110:1 "The LORD said unto my Lord, Sit thou at my right hand" → Matthew 22:45 "If David then call him Lord, how is he his son?" → 22:46 "no man was able to answer him a word" | Jesus gives the experts a riddle from their own song book. Why would a king call his own grandson "my Lord"? Only one answer fits. | PROPHECY (Jesus and Acts 2:34 quote it) | He is more than a good teacher. The Old Testament said so. |
+
+**Arc 3 — "Now Read It Again"** (cross, grave, glory)
+
+| # | Working title | KJV refs | The fresh angle | Label | Why a newcomer cares |
+|---|---|---|---|---|---|
+| T9 | What one sentence got Jesus killed? | Daniel 7:13 "one like the Son of man came with the clouds of heaven" → Matthew 26:64 "Hereafter shall ye see the Son of man sitting on the right hand of power, and coming in the clouds of heaven" | Silent all night. Then one sentence, made of two old verses (Psalm 110 and Daniel 7). The judge tears his robe. He knew just what Jesus was claiming. | PROPHECY (Jesus claims it; the "coming" part is still ahead, and we say so) | Jesus was not killed for being kind. He was killed for who He said He was. |
+| T10 | What was sewn on the temple curtain? | Genesis 3:24 "Cherubims, and a flaming sword" → Exodus 26:31 "with cherubims shall it be made" → Matthew 27:51 "the veil of the temple was rent in twain from the top to the bottom" → Hebrews 10:20 "through the veil, that is to say, his flesh" | Angels guard the way back at Eden. The same angels are sewn on the curtain. When Jesus dies it tears, from the top. | TYPE (Hebrews 10:20) + ECHO (the cherubim) | The "keep out" sign came down. |
+| T11 | Why did Peter point at a grave? | Psalm 16:10 "neither wilt thou suffer thine Holy One to see corruption" → Acts 2:29 "his sepulchre is with us unto this day" → Acts 2:31 "spake of the resurrection of Christ" | The first Christian sermon was a Bible study with a proof: David's grave is still full. So the song was not about David. | PROPHECY (Acts 2:30-31) | The first believers gave reasons, not just feelings. |
+| ★ T12 | Who did Isaiah see on the throne? | Isaiah 6:1 "I saw also the Lord sitting upon a throne, high and lifted up" → John 12:41 "These things said Esaias, when he saw his glory, and spake of him" | Isaiah sees the King in the temple. 700 years later John says, in one quiet line, whose glory that was. | TYPE (NT-stated, John 12:41). Not a prediction. | The man on the cross is the King on the throne. |
+
+### DRIVER 2: THE ENCOUNTER
+
+**Arc 1 — "He Sees You"** (who you are)
+
+| # | Working title | KJV refs | The fresh angle | Label | So what (one line) |
+|---|---|---|---|---|---|
+| E1 | What had Jesus done to earn it? | Mark 1:11 "Thou art my beloved Son, in whom I am well pleased"; Psalm 2:7 "Thou art my Son"; Isaiah 42:1 "in whom my soul delighteth" | The Father says "well pleased" before one sermon or one miracle. The sentence joins a King's psalm and a Servant's song. | ECHO | With Him, love comes before work. |
+| ★ E2 | Why could Jesus not go into the city? | Leviticus 13:46 "he shall dwell alone; without the camp shall his habitation be" → Mark 1:41 "put forth his hand, and touched him" → Mark 1:45 "could no more openly enter into the city, but was without in desert places"; Hebrews 13:12 "suffered without the gate" | Read the end of the story. The man who had to live alone is now free to go out and tell everyone. Jesus ends up outside in desert places. Mark does not say "swap"; we show the two verses and let the viewer see it. | DETAIL + ECHO (Hebrews 13:12) | He took your place outside so you could come in. |
+| E3 | What did she grab? | Leviticus 15:25 "she shall be unclean"; Numbers 15:38 "fringes in the borders of their garments" → Luke 8:44 "touched the border of his garment" → Mark 5:34 "Daughter, thy faith hath made thee whole" | By the law her touch made others unclean. This time the clean flowed the other way. And He gives her a name: Daughter. | DETAIL + ECHO (the fringe) | Your shame does not stain Him. He calls you family. |
+| E4 | Why did she think He was the gardener? | Genesis 2:15 "put him into the garden of Eden to dress it and to keep it" → John 19:41 "in the place where he was crucified there was a garden" → John 20:15 "supposing him to be the gardener" → 20:16 "Jesus saith unto her, Mary"; John 10:3 "he calleth his own sheep by name" | The Bible's story starts with a man in a garden. Easter morning: a Man in a garden. She knows Him by one word, her name. | ECHO | He knows your name. |
+
+**Arc 2 — "He Grows You"** (how faith grows)
+
+| # | Working title | KJV refs | The fresh angle | Label | So what (one line) |
+|---|---|---|---|---|---|
+| E5 | What happens when you tell God to leave? | Isaiah 6:5 "Woe is me! for I am undone" → 6:8 "Here am I; send me"; Luke 5:8 "Depart from me; for I am a sinful man, O Lord" → 5:10 "Fear not; from henceforth thou shalt catch men" | Two men see who God is. Both fall apart. Both get a job. Peter says "go away". Jesus gives him a purpose. | ECHO | He does not leave when you feel unfit. He sends you. |
+| E6 | How did a blind man see more each time? | John 9:11 "A man that is called Jesus" → 9:17 "He is a prophet" → 9:35 "and when he had found him" → 9:38 "Lord, I believe. And he worshipped him" | Three steps: a man, a prophet, Lord. Each step comes under pressure. And when they throw him out, Jesus goes and finds him. | DETAIL | Faith grows in steps. He comes to find you at each one. |
+| E7 | Why did Jesus almost walk past the boat? | Mark 6:48 "would have passed by them"; Exodus 33:22 "while my glory passeth by"; Job 9:8 "treadeth upon the waves of the sea" → Mark 6:50 "Be of good cheer: it is I; be not afraid" | "Pass by" is what God does when He shows His glory. Job says only God walks on the sea. This is not a rescue trick. It is God showing who He is. | ECHO | The One who walks on what scares you says: it is I. |
+| E8 | What did Jesus do before Peter failed? | Luke 22:32 "I have prayed for thee, that thy faith fail not: and when thou art converted, strengthen thy brethren" → Luke 22:61 "the Lord turned, and looked upon Peter" | He said "when", not "if". The prayer came before the fall. The job after the fall was already set. | DETAIL | Your worst day did not surprise Him. He had already prayed. |
+
+**Arc 3 — "He Sends You"** (purpose)
+
+| # | Working title | KJV refs | The fresh angle | Label | So what (one line) |
+|---|---|---|---|---|---|
+| E9 | Why did Jesus say no to the man He healed? | Mark 5:18 "prayed him that he might be with him" → 5:19 "Go home to thy friends, and tell them how great things the Lord hath done for thee" → 5:20 "began to publish in Decapolis" | Three people ask Jesus for something in this story. The only one who hears "no" is the man who loves Him. The "no" was a mission. | DETAIL | A "no" from Him can be your purpose. |
+| E10 | What did Jesus see that no one counted? | Mark 12:40 "Which devour widows' houses" → 12:43 "this poor widow hath cast more in" → 12:44 "all that she had, even all her living" | Read the line before the story. He has just named men who eat up widows' houses. Then He sits and watches one widow. | DETAIL | He sees what nobody counts. |
+| E11 | Why were their eyes opened at a meal? | Genesis 3:7 "the eyes of them both were opened, and they knew that they were naked" → Luke 24:16 "their eyes were holden" → 24:31 "their eyes were opened, and they knew him"; 24:28 "he made as though he would have gone further"; 24:27 "in all the scriptures the things concerning himself" | The first meal in the Bible: eyes opened, and they knew shame. This meal: eyes opened, and they knew Him. Same words. | ECHO (word-chain) | He walks with you before you know it is Him. |
+| E12 | What was Jesus doing as He left? | Leviticus 9:22 "Aaron lifted up his hand toward the people, and blessed them" → Luke 24:50 "he lifted up his hands, and blessed them" → 24:51 "while he blessed them, he was parted from them"; Hebrews 7:25 "he ever liveth to make intercession for them" | The priest blessed the people after the offering. Jesus leaves with His hands still up. The blessing never ends on the page. | ECHO + NT support (Hebrews 7:25) | You live under a raised hand. |
+
+### The order
+
+| Weeks | Driver 1 | Driver 2 |
+|---|---|---|
+| 1 | ★ T7 friend who betrayed | ★ E2 leper swap |
+| 2 | ★ T12 Isaiah's throne | E11 Emmaus eyes |
+| 3-4 | T6, T8 (finish "He Quoted It Himself" with T5) | E7, E1 |
+| 5-8 | Arc 1: T1-T4 | Arc 1 rest, then Arc 2 |
+| 9-12 | Arc 3: T9-T11 | Arc 3 |
+
+Why these 3 first: they have the deepest links, the plainest stories, and the lowest risk of a doctrine stretch. T7 is a two-hop chain. T12 is stated by the New Testament itself. E2 is in one chapter and needs no outside claim.
+
+Before each hunt: check the title against what is already made. I could not confirm from file names alone that E4, E8 and T5 have no overlap with an older short.
+
+---
+
+## 6. Risks, and what I would measure
+
+Odds are my best guess. They are not measured. Wide error bars.
+
+| Risk | Odds | What we do |
+|---|---|---|
+| A roadmap angle fails its own hunt (FRESH under 7 or a SOUND flag) | about 30-40% of the 24 | Fine. That is why 24 are listed and the bank keeps spares. |
+| AI judges rate "fresh" too high or too low vs real people | likely off by 1-2 points | Seed viewers. One yes/no question. |
+| An ECHO gets heard as a prophecy | medium | The label is spoken in the film. Blind film check asks "what kind of link was this?" |
+| Six AI seats share the same blind spot on doctrine | low to medium | Machine quote check + owner read + a real pastor or Bible teacher on anything labelled ECHO, when possible. |
+| Owner time runs out; gates pile up | medium | The week plan caps owner work at one page a day. Drop to 1 film a week before dropping a gate. |
+| Fresh insight does not lift views | honest: unknown. Maybe 50/50 it shows in numbers in the first 10 films | The first 2 seconds and seed viewers matter more than the insight. Do not judge on one film. |
+| Cost creep | medium | Quote before every paid step. Log to the ledger. |
+
+### What I would measure
+
+| Measure | Target | How |
+|---|---|---|
+| FRESH (blind judges, median) | 7.0+ on 3 of 4 films | Hunt scores |
+| "Had you seen this before?" (real seed viewers) | 60%+ say No | 5-10 people per film |
+| Global-audience who / what / why | Every seat gets all three | House rule panel |
+| Take-away match (Driver 2) | All seats name the same take-away | Guardrail panel |
+| Hunt pass rate | Track only. Expect about 60%. | Insight Bank |
+| 48-hour retention + comments that quote the link | Track for 10 films, then set a target | YouTube |
+| Cost and owner minutes per film | $8-14, 60-90 min | Ledger + a note |
+
+---
+
+## 7. What is new in this plan vs what we do today
+
+| Today | This plan |
+|---|---|
+| Pick a famous topic, then look for an angle | Hunt the link first. No pass, no film. |
+| One hunt, after the film | One hunt a day, into a bank |
+| Labels in our notes | Label spoken in the film |
+| Driver 2 has no test of its own | 4 "so what" tests + a GROWTH score |
+| Newness is a hope | Newness has a bar (7.0) and a real-viewer check |
+
+---
+
+## 8. KJV check output
+
+Script: `F:\slk\PycharmProjects\JesusInTheBible\_roadmap\kjv_check_roadmap.py` (reuses `prophecy\01_bethlehem\fresh_hunt\kjv_check.py` against `data\kjv_full`).
+Run: `F:\slk\PycharmProjects\JesusInTheBible\.venv\Scripts\python.exe F:\slk\PycharmProjects\JesusInTheBible\_roadmap\kjv_check_roadmap.py`
+
+```
+TOTAL 86  OK 86  MISMATCH 0      (run 2026-11-16)
+```
+
+All 86 quoted phrases in section 5 matched. Note: the checker ignores capitals and punctuation. It checks words and word order only.
+It does **not** check the claims around the quotes (for example "Jesus leaves out 'in whom I trusted'", or "the judge tears his robe"). Those are checked by the blind judges in each hunt.
+
+Not checked by machine, flagged for the hunt:
+- T2 and T8: Deuteronomy 6:16, 6:13 and Acts 2:34 were checked afterwards by the lead session. All OK.
+- T12 label: John 12:41 states the link, so it is NT-stated. It is not a "prediction". Say "John tells us", not "Isaiah predicted".
+- E3: the fringe link (Numbers 15:38) is an ECHO. The Gospels do not explain why she chose the border.
+
+---
+
+## 9. Changes after the outside panel (round 1, 2 of 5 reviewers answered)
+
+| Point | What changed |
+|---|---|
+| Pilot first (Cursor) | Before the week plan starts, run ONE full pilot: hunt -> words -> film -> pack. Measure real time and cost. Only then commit to 2 films a week. |
+| Angle score vs film score (Cursor) | Two scores. ANGLE FRESH (hunt judges, bar 7.0). FILM FRESH (blind film check). If the film scores under 6.5, we fix the words once, then ship or shelve. |
+| Claims that are not quotes (Cursor) | Each hunt keeps a FACTS list (e.g. "Jesus leaves out 'in whom I trusted'", "He said when, not if"). Each fact is checked by hand against the KJV text before words lock. |
+| T7 and E2 safety (Cursor) | T7 title no longer says "first friend". The David-road is labelled ECHO out loud. E2 no longer says "the leper goes in"; it shows both verses. |
+| Slack in the week (Gemini) | Thu-Sat assume one redo. If a clip or still fails, film 2 slides to next week. Never skip a gate to keep the day. |
+| Cost $23 (Gemini) | Not changed. $23 is the old 4-stage engine's model. Our recent shorts measured $8-14 (ledger). We re-check against the ledger after the pilot. |
+| Use the API engine instead of CLI seats (Gemini) | Not changed. Owner rule: agent-bridge / CLI only, never metered API. `run_seats.py` already exists from Bethlehem. |
+----- ARTIFACT END -----
