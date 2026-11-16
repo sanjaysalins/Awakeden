@@ -230,6 +230,33 @@ def swirls_card(title: str, slug: str, final: Path | None, ledger_entry: dict) -
     return card_html, missing
 
 
+def look(s) -> str:
+    """Which visual style a catalogue piece is in (owner ask 2026-11-16: group
+    the shorts by style so each group is handled the same way)."""
+    v = str(s.video).replace("\\", "/").lower()
+    if "poc_living_sketchbook" in v:
+        return "Living sketchbook"
+    for key, name in (("mary_martha", "Warm storybook"), ("second_fire", "Folk print"),
+                      ("bartimaeus", "Desert storybook"), ("zacchaeus", "Scratchy ink"),
+                      ("woman_at_well", "Pop halftone")):
+        if key in v:
+            return name
+    return "Graphic comic"
+
+
+GROUP_HOW = {
+    "long": "Normal YouTube video (not a Short). Use the 16:9 thumbnail. Add the captions file.",
+    "swirls": "YouTube Short. Use the 9:16 thumbnail. Add the captions file.",
+    "comic": "YouTube Short. Use the 9:16 thumbnail. Add the captions file.",
+    "other": "YouTube Short. Use the 9:16 thumbnail. Add the captions file. The tag shows the style.",
+}
+
+
+def group_head(title: str, n: int, how: str) -> str:
+    return (f"<h3 class=grp>{esc(title)} ({n})</h3>"
+            f"<div class=how>{esc(how)}</div>")
+
+
 def blocked(card_html: str, reason: str) -> str:
     """A finished card that must NOT be posted yet: red reason, no URL box."""
     card_html = re.sub(r"<table>.*?</table>", "", card_html, flags=re.S)
@@ -394,11 +421,19 @@ def main() -> int:
     todo_sorted = sorted(todo_items, key=lambda x: rank.get(x.slug, 999))
     check_first = [x for x in todo_sorted if label.get(x.slug, "").startswith("SPARE BANK")]
     todo_sorted = [x for x in todo_sorted if x not in check_first]
-    ep_todo, standalone_todo = "", "".join(
-        f"<div class=sub><b>#{i} &middot; {esc(label.get(x.slug, 'no date set'))}</b></div>"
-        + card(x, partial.get(x.slug, []))
-        for i, x in enumerate(todo_sorted, 1))
-    next_no = len(todo_sorted) + 1
+    # Next up, split: long films / shorts by style (owner ask 2026-11-16).
+    groups = {"long": [], "comic": [], "other": [], "swirls": []}
+    for x in todo_sorted:
+        if x.kind == "long":
+            groups["long"].append(("", card(x, partial.get(x.slug, [])).replace(
+            "</h3>", f" <span class='c style'>{esc(look(x))}</span></h3>", 1)))
+        else:
+            st = look(x)
+            c = card(x, partial.get(x.slug, []))
+            if st != "Graphic comic":
+                c = c.replace("</h3>", f" <span class='c style'>{esc(st)}</span></h3>", 1)
+            groups["comic" if st == "Graphic comic" else "other"].append((st, c))
+    ep_todo = standalone_todo = ""
     _e, _s = _group_by_episode([], episodes, partial)
     ep_done, standalone_done = _group_by_episode(posted, episodes, partial)
     cards_todo = ep_todo + standalone_todo
@@ -430,10 +465,20 @@ def main() -> int:
             cards_held += card_html          # 30-ep hold: tracked, URL boxes live, not in Next up
             n_swirls_held += 1
         else:
-            cards_todo += f"<div class=sub><b>#{next_no} &middot; Swirls of Life</b></div>" + card_html
-            next_no += 1
+            groups["swirls"].append(("", card_html))
             n_swirls_todo += 1
 
+    def numbered(cards: list) -> str:
+        # keep each style together (stable sort keeps calendar order inside a style)
+        cards = sorted(cards, key=lambda t: t[0])
+        return "".join(f"<div class=sub><b>#{i}</b></div>{c}" for i, (_st, c) in enumerate(cards, 1))
+    cards_todo = (
+        f"<h2>Long films ({len(groups['long'])})</h2><div class=how>{esc(GROUP_HOW['long'])}</div>"
+        + (numbered(groups["long"]) or "<div class=sub>none</div>")
+        + f"<h2>Shorts ({len(groups['swirls']) + len(groups['comic']) + len(groups['other'])})</h2>"
+        + group_head("Swirls of Life", len(groups["swirls"]), GROUP_HOW["swirls"]) + (numbered(groups["swirls"]) or "<div class=sub>none</div>")
+        + group_head("Graphic comic", len(groups["comic"]), GROUP_HOW["comic"]) + (numbered(groups["comic"]) or "<div class=sub>none</div>")
+        + group_head("Other styles", len(groups["other"]), GROUP_HOW["other"]) + (numbered(groups["other"]) or "<div class=sub>none</div>"))
     inv_html, inv_counts = finished_inventory(states, q_slugs)
     n_queue, n_posted = len(todo_sorted) + n_swirls_todo, len(posted) + n_swirls_done
     n_inv = inv_counts["blocked"] + inv_counts["hold"]
@@ -459,7 +504,9 @@ button{{background:#a8231d;color:#f5f0d0;border:0;border-radius:4px;padding:6px 
 button.big{{padding:9px 16px;font-size:13px}}
 .c{{display:inline-block;font-size:11px;font-weight:700;padding:1px 8px;border-radius:99px}}
 .ok.c,.c.ok{{background:#1e3324;color:#7dbb8b}} .c.warn{{background:#37301c;color:#d9a94a}} .c.long{{background:#2a1d2e;color:#c99ad9}}
-.c.swirls{{background:#1c2e3a;color:#7ab8d9}} .c.bad{{background:#3a1c1c;color:#e08a7a}}
+.c.swirls{{background:#1c2e3a;color:#7ab8d9}} .c.style{{background:#2a2a1a;color:#e0d27a}}
+h3.grp{{font-family:Georgia,serif;font-size:19px;margin:22px 0 2px;color:#e8c27a}} .how{{font-size:15px;color:#ece5d8;background:#2a241b;border-left:4px solid #c9a55a;padding:6px 10px;margin:4px 0 10px}}
+h1.big2{{font-size:24px;margin:30px 0 4px}} .c.bad{{background:#3a1c1c;color:#e08a7a}}
 button.hide{{float:right;background:#38322a;color:#ece5d8;margin-left:8px}}
 .card.hidden{{display:none}} body.showhid .card.hidden{{display:block;opacity:.45}}
 .canon td:first-child{{color:#a89e8e;width:280px}}
@@ -484,9 +531,9 @@ is a view; regenerate: <code>.venv\\Scripts\\python.exe build_upload_tracker.py<
 <button class=big onclick="all_cmds(this)">COPY ALL filled boxes as one script</button>
 <h2>YouTube settings — same every video</h2>
 <div class=card><table class=canon>{canon}</table></div>
-<h2>Next up to post ({n_queue}) — top first</h2>
-<div class=sub>Main catalogue first (calendar order), then Swirls of Life episodes.</div>
-{cards_todo or "<div class=sub>nothing ready and unposted</div>"}
+<h1 class=big2>Ready to post ({n_queue})</h1>
+<div class=sub>Not on YouTube yet, all ready. Split into long films and shorts, and the shorts by style. Post from the top of each group.</div>
+{cards_todo}
 <h2>Finished but not ready ({n_swirls_held})</h2>
 <div class=sub>Do not post these yet. The red note says why.</div>
 {cards_held or "<div class=sub>none</div>"}
