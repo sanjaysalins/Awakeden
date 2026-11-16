@@ -1,0 +1,11 @@
+<speaker name="narrator">A frightened king told God no. God answered anyway.</speaker>
+<speaker name="narrator">King Ahaz, from King David's family, was afraid of war. God said, "fear not," and offered any sign, as proof. Ahaz refused. In that same war, he begged a foreign king: "save me." God chose the sign:</speaker>
+<speaker name="prophet">Behold, a virgin shall conceive, and bear a son, and shall call his name Immanuel.</speaker>
+<speaker name="narrator">Seven hundred years later, it came true. Mary, a virgin, was pregnant by God's Holy Spirit.</speaker>
+<speaker name="narrator">An angel told Joseph:</speaker>
+<speaker name="angel">Joseph, thou son of David, fear not to take unto thee Mary thy wife:</speaker>
+<speaker name="angel">thou shalt call his name JESUS: for he shall save his people from their sins.</speaker>
+<speaker name="narrator">Joseph obeyed. Ahaz begged a king to save him. This child saves. Immanuel means: God with us.</speaker>
+<speaker name="narrator">With us at the cross, where He died for our sins. On the third day, He rose from the dead. He promised:</speaker>
+<speaker name="jesus">I am with you alway.</speaker>
+<speaker name="narrator">That was God's answer.</speaker>

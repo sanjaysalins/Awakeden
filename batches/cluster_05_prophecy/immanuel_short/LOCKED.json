@@ -1,0 +1,18 @@
+{
+ "piece": "immanuel_short",
+ "locked": "2026-11-16",
+ "locked_by": "owner ('lock it', 2026-11-16) on film v3 (words v2.2); title + poster = owner picks of 2026-11-16",
+ "final_video": "visual/immanuel_final.mp4",
+ "final_sha256": "0129d206972bd064206616e2dd55fed5aef2150f5b3f4ca388a9472a3c0350eb",
+ "source": "prophecy/02_immanuel/film/IMMANUEL_FINAL_v3.mp4 (same bytes); pin prophecy/02_immanuel/film/FINAL_VIDEO.txt; resume prophecy/02_immanuel/HANDOVER_RESUME.md",
+ "words": "prophecy/02_immanuel/words/FINAL_WORDS_v2.md (v2.1) + v2.2 'Seven hundred years later, it came true.'",
+ "audio": "audio/narration.mp3 = prophecy/02_immanuel/audio_v2/narration.mp3, 4 voices (narrator/prophet/angel/jesus); film 65.43 s",
+ "spend_usd": 6.39,
+ "packaging": "packaging/PACKAGING_LOCK.md (title_r1 + poster_r1 blind rounds; owner poster pick A The Split)",
+ "not_done": [
+  "upload (30-episode hold)",
+  "seed viewers",
+  "commit (text only, NO media)"
+ ],
+ "note": "Any change to the film or words needs the owner's say-so and a new sha."
+}

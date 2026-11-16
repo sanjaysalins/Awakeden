@@ -1,0 +1,10 @@
+<speaker name="narrator">Jesus has another name. It tells you where God is.</speaker>
+<speaker name="narrator">About seven hundred years before Jesus, in King Ahaz's day, God gave a promise through Isaiah, a man who spoke God's message:</speaker>
+<speaker name="prophet">Behold, a virgin shall conceive, and bear a son, and shall call his name Immanuel.</speaker>
+<speaker name="narrator">Mary, a virgin, who had never been with a man, was pregnant by God's Holy Spirit.</speaker>
+<speaker name="narrator">An angel told her husband Joseph:</speaker>
+<speaker name="angel">thou shalt call his name JESUS: for he shall save his people from their sins.</speaker>
+<speaker name="narrator">Matthew's book about Jesus says the promise came true. Jesus is that promised son, and His other name, Immanuel, means: God with us.</speaker>
+<speaker name="narrator">With us as a baby. With us at the cross, where He died for our sins. On the third day, He rose from the dead. He promised:</speaker>
+<speaker name="jesus">I am with you alway.</speaker>
+<speaker name="narrator">Still true.</speaker>

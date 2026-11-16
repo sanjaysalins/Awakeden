@@ -1,0 +1,75 @@
+{
+  "schema": "packaging/1",
+  "_status": "2026-11-16 card for the LOCKED film v3 (words v2.2, owner 'lock it'). Title locked by the owner after a blind title round (packaging/title_r1: 4 writers, 4 judges; Fable + Claude picked it). Poster = owner pick 'A. The Split' from a blind key-art round (packaging/poster_r1: Fable + claude/gemini/grok seats, 3 blind phone-size judges: Fable + Opus picked it). Honest line: the film says Ahaz refused God's offered sign and, in that same war, begged a foreign king; it never says he was punished, and Ahaz vs Joseph is told as a contrast, not a fulfilment. Publish panel 2026-11-16 (upload/_independent_review/20261116-152408, 4 of 4 REVISE, codex timed out): applied Isaiah 7:14 front-loaded (4/4), 'Watch to the end.' cut from TikTok + Instagram (4/4), 'About 700 years later' (2/4), plainer 'One king begged another king' (1/4).",
+  "episode": "20_immanuel",
+  "person": "Immanuel",
+  "person_tag": "#Immanuel",
+  "name_match": "Immanuel|Emmanuel",
+  "women": false,
+  "search_class": "strong: 'why is jesus called emmanuel' (+ 'why wasn't jesus named immanuel'), 'what does immanuel mean', 'immanuel meaning', 'emmanuel god with us' (+ song results), 'jesus birth prophecy', 'isaiah prophecy about jesus birth', 'king ahaz in the bible', 'prophecies fulfilled by jesus'; 'isaiah 7:14' and 'ahaz sign' have no suggestions.",
+  "search_phrases": [
+    "why is jesus called emmanuel",
+    "what does immanuel mean",
+    "immanuel meaning",
+    "emmanuel god with us",
+    "jesus birth prophecy",
+    "isaiah prophecy about jesus birth",
+    "king ahaz in the bible",
+    "prophecies fulfilled by jesus"
+  ],
+  "search_evidence": {
+    "source": "YouTube search suggestions (suggestqueries.google.com, client=firefox, ds=yt), fetched 2026-11-16, 16 queries; file _packaging/20_immanuel/autocomplete_2026-11-16.txt",
+    "grade": "B (one dated snapshot of autocomplete, not search volume)"
+  },
+  "famous_neighbours": ["Isaiah", "Ahaz", "Joseph", "Christmas", "Emmanuel"],
+  "curiosity_gap": "The famous Christmas promise of Immanuel was first given to a frightened king who told God no. Why did God give the sign anyway, and what does the name mean?",
+  "curiosity_question": "Why would God answer a king who told Him no?",
+  "scripture": {
+    "primary": "Isaiah 7:14",
+    "read_it": "Isaiah 7:1-14; 2 Kings 16:5-8; Matthew 1:18-25; Matthew 28:20; 1 Corinthians 15:3-4",
+    "narration_covers": ["Isaiah 7:2-14", "2 Kings 16:7-8", "Matthew 1:18-25", "1 Corinthians 15:3-4", "Matthew 28:20"]
+  },
+  "name_reveal": {
+    "decision": "early_spoken",
+    "note": "'Immanuel' is first spoken at 23.0 s (35% of runtime) in the prophet's line, and is in the title and the IMMANUEL / GOD WITH US on-screen word; 'Ahaz' is spoken at 4.0 s; 'Jesus' first spoken at 40.8 s but is in the title.",
+    "compensation": ["title", "description_line_1", "pinned_comment"]
+  },
+  "first_seconds": {
+    "stake_in_3s": true,
+    "first_spoken_line": "A frightened king told God no. God answered anyway.",
+    "stake_source": "spoken line 0.0-3.7 s with the big comic word NO. and the thumbnail's A KING TOLD GOD / NO",
+    "waiver": ""
+  },
+  "youtube": {
+    "title": "Why Is Jesus Called Immanuel?",
+    "line1": "Why is Jesus called Immanuel? In the Bible, a frightened king told God no. God answered anyway, with a sign (Isaiah 7:14).",
+    "line2": "\"Therefore the Lord himself shall give you a sign; Behold, a virgin shall conceive, and bear a son, and shall call his name Immanuel.\" (Isaiah 7:14, KJV)",
+    "read_it": "Read it yourself: Isaiah 7:1-14; 2 Kings 16:5-8; Matthew 1:18-25; Matthew 28:20; 1 Corinthians 15:3-4.",
+    "hashtags": ["#Immanuel", "#Jesus", "#Bible", "#Isaiah714", "#Christmas"],
+    "tags": ["why is jesus called immanuel", "why is jesus called emmanuel", "what does immanuel mean", "immanuel in the bible", "emmanuel god with us", "isaiah 7 14", "jesus birth prophecy", "king ahaz in the bible", "prophecies fulfilled by jesus", "christmas bible story"],
+    "insight_line": "The Immanuel sign was first given to King Ahaz, who refused God's offer and, in that same war, begged the king of Assyria \"save me\" (2 Kings 16:7). God gave the sign anyway, and the child it pointed to was named JESUS, \"for he shall save\"."
+  },
+  "title_class": "A",
+  "send_to": "someone who loves the Christmas story",
+  "next_teaser": "More Old Testament promises that came true in Jesus, one at a time.",
+  "shareable_fact": "The Immanuel promise of Isaiah 7:14 was first spoken to King Ahaz, who had just refused God's offer of any sign; in that same war he begged the king of Assyria to save him (2 Kings 16:7).",
+  "ask_line": "Follow for Old Testament promises that came true in Jesus, one at a time.",
+  "pinned_comment": "The Immanuel promise was first given to King Ahaz, a frightened son of David who refused God's offer of a sign (Isaiah 7:10-14). In that same war he begged the king of Assyria to save him (2 Kings 16:7). About 700 years later another son of David, Joseph, heard \"fear not\" and obeyed (Matthew 1:20-24). Which son of David are you more like when you are afraid? Read it: Isaiah 7:1-14; 2 Kings 16:5-8; Matthew 1:18-25; Matthew 28:20; 1 Corinthians 15:3-4.",
+  "spoiler_patterns": ["this child saves", "that was god's answer", "rose from the dead", "joseph obeyed"],
+  "release": {"stage": 1, "order": 7, "note": "Publish pack built 2026-11-16. Owner decides when to post (30-episode posting hold applies)."},
+  "content_note": "Mentions war (a king afraid of invading armies) and that Jesus died for our sins and rose on the third day; no violence is shown.",
+  "measured": {
+    "violence_words_in_narration": 3,
+    "duration_s": 65.4,
+    "name_first_spoken_pct": 35,
+    "ending_pct": 5,
+    "source": "measured on batches/cluster_05_prophecy/immanuel_short/visual/immanuel_final.mp4 (film v3, sha 0129d206...) and its words.json: 'Ahaz' first at 3.96 s, 'Immanuel' first at 23.0 s, 'Jesus' first at 40.78 s, voice ends 62.24 s, 65.43 s film; 'war' twice, 'died' once (1 Corinthians 15:3)"
+  },
+  "panels": {
+    "discoverability": {"run": true, "record": "prophecy/02_immanuel/packaging/title_r1 + poster_r1", "note": "2026-11-16. Blind title round (4 writers + 4 judges incl. Fable), blind key-art round (Fable + 3 CLI seats, 3 blind phone-size judges). Publish copy then went to the external 5-CLI panel in cli_publish.py."},
+    "guardrails": {"run": true, "record": "prophecy/02_immanuel/guardrail_film + guardrail_film_r2", "note": "2026-11-16. Blind finished-film panel (6 seats: Fable judge, Sonnet newcomer, Claude Bible with KJV, Codex hook, Gemini + Grok global) 6.2 -> fixes -> fresh seats 6.5, 0 Bible errors both rounds; words: insight hunt + blind writers + 2 blind tests (words/v2/test)."}
+  },
+  "overrides": {
+    "R03": "Title locked by the owner after a blind title round: 'Why Is Jesus Called Immanuel?' is the searched question form ('why is jesus called emmanuel'). 'Bible' is carried by description line 1, #Bible and the tags."
+  }
+}
