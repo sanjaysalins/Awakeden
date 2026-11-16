@@ -319,30 +319,7 @@ def finished_inventory(states, queue_slugs: set) -> tuple[str, dict]:
                      else "NEEDS PUBLISH PACK")
             rows.append(_row(st.title, st.kind, st.video, st.source_dir, state, "warn"))
             counts["blocked"] += 1
-    # 2. Swirls of Life — every folder
-    for d in sorted(SWIRLS_DIR.glob("swirls_*")):
-        if not d.is_dir():
-            continue
-        pin = d / "FINAL_VIDEO.txt"
-        video = None
-        if pin.is_file():
-            cand = d / pin.read_text(encoding="utf-8").strip().splitlines()[0].strip()
-            video = cand if cand.is_file() else None
-        if video is None:
-            fin = sorted(d.glob("*final*sfx*.mp4"), key=lambda x: x.stat().st_mtime)
-            video = fin[-1] if fin else None
-        if "episode_12" in d.name:
-            state, tone = "BLOCKED: 'cuts off' playback bug still open", "bad"
-        elif video is None:
-            continue
-        elif "pilot" in d.name and not (d / "episode.py").is_file():
-            state, tone = "PILOT: no episode.py, narration needs rewrite, not packed (30-ep hold)", "swirls"
-        elif not (d / "publish" / "PUBLISH_INDEX.html").is_file():
-            state, tone = "HOLD (30-ep rule) + NEEDS PUBLISH PACK", "warn"
-        else:
-            state, tone = "HOLD (30-ep rule) — pack ready", "swirls"
-        rows.append(_row(d.name.replace("swirls_", "Swirls: ").replace("_", " "), "swirls", video, d, state, tone))
-        counts["hold"] += 1
+    # 2. Swirls of Life: no longer listed here (they are cards above: Next up / blocked / posted)
     # 3. Living-sketchbook ink shorts / longs not in the catalogue
     _pinned = " ".join(
         pf.read_text(encoding="utf-8") for pf in (ROOT / "batches").glob("cluster_*/*/FINAL_VIDEO.txt"))
@@ -397,8 +374,11 @@ POST_ORDER = [
     ("ps22-06-ends-of-the-earth", "SPARE BANK - style-check first"),
     ("ps22-07-body-foretold", "SPARE BANK - style-check first"),
 ]
-# Owner's rule: ALL Swirls posting is held until the 30-episode target.
-SWIRLS_HOLD = True
+# 30-episode hold LIFTED by the owner 2026-11-16 ("if they are ready, we should
+# start looking at posting them already"). Ready Swirls episodes join Next up.
+SWIRLS_HOLD = False
+# Finished but NOT postable yet (shown in their own small section, never in Next up).
+SWIRLS_BLOCKED = {"swirls_episode_12_ye_are_not_all_clean": "BLOCKED: 'cuts off' playback bug still open"}
 
 
 def main() -> int:
@@ -437,7 +417,10 @@ def main() -> int:
             continue
         _seen_sw.add(slug)
         card_html, missing = swirls_card(title, slug, final, swirls_ledger.get(slug, {}))
-        if not missing:
+        if slug in SWIRLS_BLOCKED:
+            cards_held += card_html.replace("</h3>", f" <span class='c bad'>{esc(SWIRLS_BLOCKED[slug])}</span></h3>", 1)
+            n_swirls_held += 1
+        elif not missing:
             cards_done += card_html          # fully posted -> Posted, hold or not
             n_swirls_done += 1
         elif SWIRLS_HOLD:
@@ -449,6 +432,10 @@ def main() -> int:
 
     inv_html, inv_counts = finished_inventory(states, q_slugs)
     n_queue, n_posted = len(queue) + n_swirls_todo, len(posted) + n_swirls_done
+    n_inv = inv_counts["blocked"] + inv_counts["hold"]
+    inv_block = (f"<h2>Other finished videos, not ready ({n_inv})</h2>"
+                 "<div class=sub>Finished on disk but not in the lists above. Red ✗ = what is missing.</div>"
+                 + inv_html) if n_inv else ""
     canon = "".join(f"<tr><td>{esc(k)}</td><td>{esc(v)}</td></tr>" for k, v in CANON)
 
     page = f"""<!doctype html><meta charset=utf-8><title>YouTube upload tracker</title>
@@ -468,7 +455,7 @@ button{{background:#a8231d;color:#f5f0d0;border:0;border-radius:4px;padding:6px 
 button.big{{padding:9px 16px;font-size:13px}}
 .c{{display:inline-block;font-size:11px;font-weight:700;padding:1px 8px;border-radius:99px}}
 .ok.c,.c.ok{{background:#1e3324;color:#7dbb8b}} .c.warn{{background:#37301c;color:#d9a94a}} .c.long{{background:#2a1d2e;color:#c99ad9}}
-.c.swirls{{background:#1c2e3a;color:#7ab8d9}}
+.c.swirls{{background:#1c2e3a;color:#7ab8d9}} .c.bad{{background:#3a1c1c;color:#e08a7a}}
 button.hide{{float:right;background:#38322a;color:#ece5d8;margin-left:8px}}
 .card.hidden{{display:none}} body.showhid .card.hidden{{display:block;opacity:.45}}
 .canon td:first-child{{color:#a89e8e;width:280px}}
@@ -494,16 +481,12 @@ is a view; regenerate: <code>.venv\\Scripts\\python.exe build_upload_tracker.py<
 <h2>YouTube settings — same every video</h2>
 <div class=card><table class=canon>{canon}</table></div>
 <h2>Next up to post ({n_queue}) — in calendar order</h2>
-<div class=sub>Swirls of Life is on HOLD until 30 episodes (listed further down).</div>
+<div class=sub>Main catalogue first (calendar order), then Swirls of Life episodes.</div>
 {cards_todo or "<div class=sub>nothing ready and unposted</div>"}
-<h2>On hold: Swirls of Life ({n_swirls_held}) &mdash; 30-episode rule</h2>
-<div class=sub>Finished Swirls episodes. NOT to be posted until 30 episodes exist. The URL boxes work, so a URL
-can still be logged if you ever break the hold. Once its YouTube link is logged, the episode moves to Posted.</div>
-{cards_held or "<div class=sub>none on hold</div>"}
-<h2>All other finished media — ready state ({inv_counts["blocked"] + inv_counts["hold"]})</h2>
-<div class=sub>Everything with a finished video on disk that is NOT in the list above, and exactly what it still needs.
-Red ✗ = missing. Nothing here can be logged until it is cleared and has a pack.</div>
-{inv_html}
+<h2>Finished but blocked ({n_swirls_held})</h2>
+<div class=sub>Do not post these yet. The red note says why.</div>
+{cards_held or "<div class=sub>none</div>"}
+{inv_block}
 <h2>Posted ({n_posted}) <button id=showhid onclick="toggleShow()">Show hidden</button></h2>
 {cards_done or "<div class=sub>nothing posted yet</div>"}
 <script>
