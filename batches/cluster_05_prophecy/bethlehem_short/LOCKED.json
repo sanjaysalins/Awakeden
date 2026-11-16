@@ -1,0 +1,19 @@
+{
+ "piece": "bethlehem_short",
+ "locked": "2026-11-16",
+ "locked_by": "owner ('lock it', 2026-11-16) on film v6 (words v4.1); title + poster stay the owner picks of 2026-11-15",
+ "final_video": "visual/bethlehem_final.mp4",
+ "final_sha256": "f1ac7b19e61119161dcfb4c46a5570f34f4f17deb3a0350e13995b649b24fa20",
+ "source": "prophecy/01_bethlehem/film/BETHLEHEM_FINAL_v6.mp4 (same bytes); pin prophecy/01_bethlehem/film/FINAL_VIDEO.txt; resume prophecy/01_bethlehem/HANDOVER_RESUME.md; replaces film v4 (visual/bethlehem_final.v4.bak.mp4)",
+ "words": "prophecy/01_bethlehem/words/FINAL_WORDS_v4.md (v4.1)",
+ "audio": "audio/narration.mp3 = prophecy/01_bethlehem/audio_v4/narration_v41.mp3, 3 voices (narrator/prophet/scribe); film 59.4 s, audio starts at 0",
+ "visual": "prophecy/01_bethlehem (Prophecy 01, Micah 5:2 -> Matthew 2 / Luke 2)",
+ "spend_usd": 8.81,
+ "packaging": "packaging/PACKAGING_LOCK.md (title_r1 + poster_r1 blind rounds; owner poster pick A The Lamp)",
+ "not_done": [
+  "upload (30-episode hold)",
+  "seed viewers",
+  "commit (text only, NO media)"
+ ],
+ "note": "Any change to the film or words needs the owner's say-so and a new sha. Previous lock (film v4, words v3, 2026-11-15) kept as *.v4.bak / *.v3.bak files."
+}

@@ -1,0 +1,329 @@
+{
+ "frames": 1779,
+ "edl": [
+  [
+   "P1",
+   0.0,
+   4.0,
+   0.0
+  ],
+  [
+   "P2",
+   4.0,
+   9.1,
+   0.0
+  ],
+  [
+   "M1",
+   9.1,
+   14.1,
+   0.0
+  ],
+  [
+   "P2",
+   14.1,
+   15.85,
+   5.55
+  ],
+  [
+   "P2",
+   15.85,
+   17.8,
+   8.0
+  ],
+  [
+   "P3",
+   17.8,
+   27.8,
+   0.0
+  ],
+  [
+   "P4",
+   27.8,
+   33.4,
+   0.0
+  ],
+  [
+   "P1",
+   33.4,
+   37.4,
+   5.6
+  ],
+  [
+   "P1",
+   37.4,
+   40.5,
+   1.5
+  ],
+  [
+   "M2",
+   40.5,
+   43.5,
+   0.0
+  ],
+  [
+   "P5",
+   43.5,
+   51.7,
+   0.0
+  ],
+  [
+   "M3",
+   51.7,
+   59.3,
+   0.0
+  ]
+ ],
+ "items": [
+  {
+   "id": "h1",
+   "kind": "pill",
+   "start": 0.0,
+   "end": 3.1,
+   "lines": [
+    "The Bible experts knew",
+    "where the King would be born."
+   ]
+  },
+  {
+   "id": "h2",
+   "kind": "pill",
+   "start": 3.1,
+   "end": 5.8,
+   "lines": [
+    "Did they go?"
+   ]
+  },
+  {
+   "id": "s2",
+   "kind": "slab",
+   "start": 4.04,
+   "end": 6.2,
+   "lines": [
+    "ABOUT 700 YEARS",
+    "EARLIER"
+   ]
+  },
+  {
+   "id": "m1",
+   "kind": "pill",
+   "start": 5.86,
+   "end": 7.4,
+   "lines": [
+    "a prophet called Micah,"
+   ]
+  },
+  {
+   "id": "m2",
+   "kind": "pill",
+   "start": 7.42,
+   "end": 9.6,
+   "lines": [
+    "a man who spoke",
+    "God's message,"
+   ]
+  },
+  {
+   "id": "m3",
+   "kind": "pill",
+   "start": 9.62,
+   "end": 12.6,
+   "lines": [
+    "named a small town:",
+    "Bethlehem."
+   ],
+   "gold": {
+    "word": "Bethlehem",
+    "from": 11.34,
+    "to": 12.6
+   }
+  },
+  {
+   "id": "m4",
+   "kind": "pill",
+   "start": 12.64,
+   "end": 15.6,
+   "lines": [
+    "Out of it, he said,",
+    "a ruler would come,"
+   ]
+  },
+  {
+   "id": "c1",
+   "kind": "scroll",
+   "start": 15.82,
+   "end": 17.8,
+   "lines": [
+    "that is to be",
+    "ruler in Israel."
+   ],
+   "wt": [
+    [
+     15.82,
+     15.9,
+     16.04,
+     16.24
+    ],
+    [
+     16.4,
+     16.7,
+     17.22
+    ]
+   ],
+   "chip": "MICAH 5:2"
+  },
+  {
+   "id": "j1",
+   "kind": "pill",
+   "start": 17.86,
+   "end": 20.5,
+   "lines": [
+    "Mary and Joseph",
+    "lived far away."
+   ]
+  },
+  {
+   "id": "j2",
+   "kind": "pill",
+   "start": 20.52,
+   "end": 22.7,
+   "lines": [
+    "A tax order sent them",
+    "to Bethlehem."
+   ]
+  },
+  {
+   "id": "j3",
+   "kind": "pill",
+   "start": 22.76,
+   "end": 25.1,
+   "lines": [
+    "There, Jesus was born."
+   ],
+   "sacred": true
+  },
+  {
+   "id": "w1",
+   "kind": "pill",
+   "start": 25.18,
+   "end": 29.2,
+   "lines": [
+    "Wise men from the east came",
+    "asking for the one born King."
+   ]
+  },
+  {
+   "id": "w2",
+   "kind": "pill",
+   "start": 29.32,
+   "end": 32.2,
+   "lines": [
+    "King Herod asked",
+    "the experts where."
+   ]
+  },
+  {
+   "id": "sp",
+   "kind": "speech",
+   "start": 32.24,
+   "end": 34.7,
+   "lines": [
+    "In Bethlehem of Judaea."
+   ],
+   "tab": "A SCRIBE",
+   "chip": "MATTHEW 2:5",
+   "gold": {
+    "word": "Bethlehem",
+    "from": 32.48,
+    "to": 34.7
+   }
+  },
+  {
+   "id": "cb",
+   "kind": "pill",
+   "start": 34.8,
+   "end": 37.3,
+   "lines": [
+    "Bethlehem was close by."
+   ]
+  },
+  {
+   "id": "n1",
+   "kind": "pill",
+   "start": 37.44,
+   "end": 40.4,
+   "lines": [
+    "The Bible never says",
+    "the experts went."
+   ],
+   "underline": {
+    "word": "never",
+    "at": 37.88
+   }
+  },
+  {
+   "id": "n2",
+   "kind": "pill",
+   "start": 40.52,
+   "end": 43.4,
+   "lines": [
+    "The wise men went,",
+    "and found the child."
+   ]
+  },
+  {
+   "id": "l1",
+   "kind": "pill",
+   "start": 43.52,
+   "end": 45.9,
+   "lines": [
+    "But Jesus had come",
+    "much farther."
+   ],
+   "sacred": true
+  },
+  {
+   "id": "l2",
+   "kind": "pill",
+   "start": 46.04,
+   "end": 48.0,
+   "lines": [
+    "He came down",
+    "from heaven."
+   ],
+   "sacred": true
+  },
+  {
+   "id": "l3",
+   "kind": "pill",
+   "start": 48.1,
+   "end": 50.4,
+   "lines": [
+    "He died for our sins."
+   ],
+   "sacred": true
+  },
+  {
+   "id": "l4",
+   "kind": "pill",
+   "start": 50.52,
+   "end": 52.4,
+   "lines": [
+    "He rose again",
+    "the third day."
+   ],
+   "sacred": true
+  },
+  {
+   "id": "p10",
+   "kind": "pill",
+   "start": 52.5,
+   "end": 58.6,
+   "lines": [
+    "Before anyone went to Him,",
+    "He came to us."
+   ],
+   "sacred": true
+  }
+ ]
+}

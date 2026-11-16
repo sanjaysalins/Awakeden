@@ -368,7 +368,13 @@ def write_unit_pack(kit: UploadKit, *, chapters: str = "", pinned: str = "",
     srt_note = ""
     captions_source = "missing"
     existing_srt = sorted(media.glob("*.srt"))
-    if words:
+    locked_srt = pub / "captions_locked.srt"
+    if locked_srt.is_file():
+        # a hand-fixed (red-teamed) srt wins over the mechanical rebuild; without this
+        # an --index refresh silently overwrote the fixed captions (Bethlehem, 2026-11-16)
+        (pub / "captions.srt").write_text(deslop_caption_text(locked_srt.read_text(encoding="utf-8")), encoding="utf-8")
+        captions_source = "locked"
+    elif words:
         (pub / "captions.srt").write_text(deslop_caption_text(build_srt(words)), encoding="utf-8")
         captions_source = "aligned"
     elif existing_srt:

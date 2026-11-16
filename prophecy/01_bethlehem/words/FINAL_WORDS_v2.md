@@ -1,0 +1,10 @@
+<!-- Born in Bethlehem: words v2 LOCKED 2026-11-14 (owner 'go'). Source words/v2/CAND_A3.md; blind 5 writers + 2 test rounds (_PICK_WORDS_v2.html). -->
+[narrator] The Bible experts knew where the King would be born. Did they go?
+[narrator] About seven hundred years earlier, a prophet called Micah, a man who spoke God's message, named a small town: Bethlehem. Out of it, he said, a ruler would come,
+[prophet] that is to be ruler in Israel.
+[narrator] Mary and Joseph lived far away. A tax order sent them to Bethlehem. There, Jesus was born.
+[narrator] Wise men from the east came asking for the one born King. King Herod asked the experts where.
+[scribe] In Bethlehem of Judaea.
+[narrator] Bethlehem was close by. (pause) The Bible never says the experts went. The wise men went, and found the child.
+[narrator] But Jesus had come much farther. He came down from heaven. He died for our sins. He rose again the third day.
+[narrator] Before anyone went to Him, He came to us.

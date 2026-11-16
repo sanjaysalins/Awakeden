@@ -1,0 +1,9 @@
+<speaker name="narrator">The Bible experts knew where the King would be born. Did they go?</speaker>
+<speaker name="narrator">About seven hundred years earlier, a prophet called Micah, a man who spoke God's message, named a small town: Bethlehem. Out of it, he said, a ruler would come,</speaker>
+<speaker name="prophet">that is to be ruler in Israel.</speaker>
+<speaker name="narrator">Mary and Joseph lived far away. A tax order sent them to Bethlehem. There, Jesus was born. Wise men from the east came asking for the one born King. King Herod asked the experts where.</speaker>
+<speaker name="scribe">In Bethlehem of Judaea.</speaker>
+<speaker name="narrator">Bethlehem was close by.</speaker>
+<speaker name="narrator">The Bible never says the experts went. The wise men went, and found the child.</speaker>
+<speaker name="narrator">But Jesus had come much farther. He came down from heaven. He died for our sins. He rose again the third day.</speaker>
+<speaker name="narrator">Before anyone went to Him, He came to us.</speaker>

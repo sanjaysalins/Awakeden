@@ -1,0 +1,97 @@
+# Blind test: two 55-60 second narrations for a vertical Bible short (series: an Old Testament promise and how it came true in Jesus)
+You judge ALONE. You wrote none of these. Pictures are not made yet: judge the words as heard. Voices: [narrator], [prophet], [scribe], [angel], [crowd].
+
+### SCRIPT P
+[narrator] A tax order sent a pregnant woman to a small town far from home. Why that town?
+[narrator] Mary and Joseph lived in Nazareth. The Roman emperor ordered everyone taxed in their own city. Joseph was from King David's family, so he went to David's town, Bethlehem.
+[narrator] About seven hundred years before, Micah, a prophet, a man who spoke God's message, had named it.
+[prophet] But thou, Bethlehem... out of thee shall he come forth unto me that is to be ruler in Israel.
+[narrator] There, Mary gave birth to Jesus.
+[angel] For unto you is born this day in the city of David a Saviour, which is Christ the Lord.
+(pause)
+[narrator] An emperor gave the order. God kept the promise. Jesus, the Saviour, died for our sins and rose the third day.
+
+### SCRIPT Q
+[narrator] The religious experts knew the exact town where God's promised King would be born. The Bible never says they went to look.
+[narrator] About seven hundred years earlier, Micah, a prophet, a man who spoke God's message, named one small town.
+[prophet] But thou, Bethlehem... out of thee shall he come forth unto me that is to be ruler in Israel.
+[narrator] When Jesus was born there, King Herod asked the experts where this promised ruler would be born.
+[scribe] In Bethlehem of Judaea.
+[narrator] They knew where. (pause) But Jesus had already come.
+[narrator] Micah said this ruler came "from everlasting": He was alive before He was born. He came as a baby so He could die for our sins, and He rose the third day.
+
+## Answer for EACH script, as three viewers
+1. NEWCOMER (English second language, no Bible knowledge, scrolling fast): after one listen, can you say WHO, WHAT happened, and WHY it matters? Any word or line you would not understand? (quote it)
+2. BIBLE READER: is there something new to you, or just the Christmas story again?
+3. CURIOSITY GAP: does the first line make you stay, and does the ending pay it off? Score 0-10.
+4. ACCURATE + HONEST: check every quote and claim against the KJV below. Any misquote, overclaim, invented detail, or blame on a people group? (quote it)
+5. GRACE: does the ending land on Jesus without pressure or a stock "come to Jesus" line?
+
+6. LENGTH: anything to cut so it stays under 60 seconds?
+7. SCORE 0-10 overall.
+
+## Then
+RANK P/Q, your #1, the ONE fix your #1 most needs (exact words), and anything that would confuse a newcomer in your #1.
+
+## KJV (for checking)
+## Micah 5:2-4
+Micah 5:2 But thou, Bethlehem Ephratah, though thou be little among the thousands of Judah, yet out of thee shall he come forth unto me that is to be ruler in Israel; whose goings forth have been from of old, from everlasting.
+Micah 5:3 Therefore will he give them up, until the time that she which travaileth hath brought forth: then the remnant of his brethren shall return unto the children of Israel.
+Micah 5:4 And he shall stand and feed in the strength of the LORD, in the majesty of the name of the LORD his God; and they shall abide: for now shall he be great unto the ends of the earth.
+
+## Matthew 2:1-11
+Matthew 2:1 Now when Jesus was born in Bethlehem of Judaea in the days of Herod the king, behold, there came wise men from the east to Jerusalem,
+Matthew 2:2 Saying, Where is he that is born King of the Jews? for we have seen his star in the east, and are come to worship him.
+Matthew 2:3 When Herod the king had heard these things, he was troubled, and all Jerusalem with him.
+Matthew 2:4 And when he had gathered all the chief priests and scribes of the people together, he demanded of them where Christ should be born.
+Matthew 2:5 And they said unto him, In Bethlehem of Judaea: for thus it is written by the prophet,
+Matthew 2:6 And thou Bethlehem, in the land of Juda, art not the least among the princes of Juda: for out of thee shall come a Governor, that shall rule my people Israel.
+Matthew 2:7 Then Herod, when he had privily called the wise men, enquired of them diligently what time the star appeared.
+Matthew 2:8 And he sent them to Bethlehem, and said, Go and search diligently for the young child; and when ye have found him, bring me word again, that I may come and worship him also.
+Matthew 2:9 When they had heard the king, they departed; and, lo, the star, which they saw in the east, went before them, till it came and stood over where the young child was.
+Matthew 2:10 When they saw the star, they rejoiced with exceeding great joy.
+Matthew 2:11 And when they were come into the house, they saw the young child with Mary his mother, and fell down, and worshipped him: and when they had opened their treasures, they presented unto him gifts; gold, and frankincense, and myrrh.
+
+## Luke 2:1-16
+Luke 2:1 And it came to pass in those days, that there went out a decree from Caesar Augustus, that all the world should be taxed.
+Luke 2:2 (And this taxing was first made when Cyrenius was governor of Syria.)
+Luke 2:3 And all went to be taxed, every one into his own city.
+Luke 2:4 And Joseph also went up from Galilee, out of the city of Nazareth, into Judaea, unto the city of David, which is called Bethlehem; (because he was of the house and lineage of David:)
+Luke 2:5 To be taxed with Mary his espoused wife, being great with child.
+Luke 2:6 And so it was, that, while they were there, the days were accomplished that she should be delivered.
+Luke 2:7 And she brought forth her firstborn son, and wrapped him in swaddling clothes, and laid him in a manger; because there was no room for them in the inn.
+Luke 2:8 And there were in the same country shepherds abiding in the field, keeping watch over their flock by night.
+Luke 2:9 And, lo, the angel of the Lord came upon them, and the glory of the Lord shone round about them: and they were sore afraid.
+Luke 2:10 And the angel said unto them, Fear not: for, behold, I bring you good tidings of great joy, which shall be to all people.
+Luke 2:11 For unto you is born this day in the city of David a Saviour, which is Christ the Lord.
+Luke 2:12 And this shall be a sign unto you; Ye shall find the babe wrapped in swaddling clothes, lying in a manger.
+Luke 2:13 And suddenly there was with the angel a multitude of the heavenly host praising God, and saying,
+Luke 2:14 Glory to God in the highest, and on earth peace, good will toward men.
+Luke 2:15 And it came to pass, as the angels were gone away from them into heaven, the shepherds said one to another, Let us now go even unto Bethlehem, and see this thing which is come to pass, which the Lord hath made known unto us.
+Luke 2:16 And they came with haste, and found Mary, and Joseph, and the babe lying in a manger.
+
+## John 7:40-43
+John 7:40 Many of the people therefore, when they heard this saying, said, Of a truth this is the Prophet.
+John 7:41 Others said, This is the Christ. But some said, Shall Christ come out of Galilee?
+John 7:42 Hath not the scripture said, That Christ cometh of the seed of David, and out of the town of Bethlehem, where David was?
+John 7:43 So there was a division among the people because of him.
+
+## Genesis 35:19
+Genesis 35:19 And Rachel died, and was buried in the way to Ephrath, which is Bethlehem.
+
+## 1 Samuel 16:1
+1 Samuel 16:1 And the LORD said unto Samuel, How long wilt thou mourn for Saul, seeing I have rejected him from reigning over Israel? fill thine horn with oil, and go, I will send thee to Jesse the Bethlehemite: for I have provided me a king among his sons.
+
+## 1 Samuel 17:12
+1 Samuel 17:12 Now David was the son of that Ephrathite of Bethlehemjudah, whose name was Jesse; and he had eight sons: and the man went among men for an old man in the days of Saul.
+
+## Luke 2:11
+Luke 2:11 For unto you is born this day in the city of David a Saviour, which is Christ the Lord.
+
+## John 6:35
+John 6:35 And Jesus said unto them, I am the bread of life: he that cometh to me shall never hunger; and he that believeth on me shall never thirst.
+
+## John 6:51
+John 6:51 I am the living bread which came down from heaven: if any man eat of this bread, he shall live for ever: and the bread that I will give is my flesh, which I will give for the life of the world.
+
+

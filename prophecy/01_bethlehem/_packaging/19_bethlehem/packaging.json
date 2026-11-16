@@ -1,0 +1,128 @@
+{
+  "schema": "packaging/1",
+  "_status": "2026-11-16 UPDATED for the LOCKED film v6 (words v4.1, owner 'lock it'): 2026-11-15 card for the LOCKED film v4 (owner 'yes lock it'; words v3 owner 'yes'). Title locked by the owner after a blind title round (packaging/title_r1: 5 writers, 5 judges, won 3 of 5; judge fix THEY KNEW -> EXPERTS KNEW). Poster = owner pick 'A. The Lamp' from a blind key-art round (packaging/poster_r1: Fable + claude/codex/gemini/grok seats, 3 blind phone-size judges). Honest line: the Bible is silent on whether the experts went, so no copy says they refused, stayed or ignored; the copy asks who went to see the King instead of repeating the thumbnail's question. PUBLISH PANEL 2026-11-15 (upload/_independent_review/20261115-172827, 5 of 5 REVISE): applied 'public domain' footer removed (5/5), line 1 'named' -> 'pointed to' (Bethlehem already existed, Genesis 35:19; 3/5), tags trimmed of Micah-bio, 1 Cor tag and the duplicate Herod tag (4/5), Jesus landing line added to TikTok + Instagram (2/5), Instagram cut to 5 hashtags (Instagram limit; 1/5), TikTok/Instagram first line no longer repeats the title (2/5), captions re-cut by phrase with Judaea spelling.",
+  "episode": "19_bethlehem",
+  "person": "Bethlehem",
+  "person_tag": "#Bethlehem",
+  "name_match": "Bethlehem",
+  "women": false,
+  "search_class": "strong: 'why was jesus born in bethlehem' (+ or nazareth, + song, + story), 'where was jesus born' (+ in bethlehem), 'prophecies fulfilled by jesus' (+ old testament prophecies fulfilled by jesus), 'king herod and the wise men', 'christmas story bible', 'nativity bible story'; 'micah 5:2', 'jesus born in bethlehem prophecy' and 'bethlehem prophecy' have no suggestions.",
+  "search_phrases": [
+    "why was jesus born in bethlehem",
+    "where was jesus born",
+    "prophecies fulfilled by jesus",
+    "old testament prophecies jesus fulfilled",
+    "king herod and the wise men",
+    "christmas story bible",
+    "nativity bible story"
+  ],
+  "search_evidence": {
+    "source": "YouTube search suggestions (suggestqueries.google.com, client=firefox, ds=yt), fetched 2026-11-15, 14 queries; file _packaging/19_bethlehem/autocomplete_2026-11-15.txt",
+    "grade": "B (one dated snapshot of autocomplete, not search volume)"
+  },
+  "famous_neighbours": [
+    "Herod",
+    "wise men",
+    "Micah",
+    "Christmas",
+    "Mary and Joseph"
+  ],
+  "curiosity_gap": "A prophet pointed to Bethlehem about 700 years before Jesus, and the Bible experts of the day knew it. Who actually went to see the King?",
+  "curiosity_question": "Who actually went to see the newborn King?",
+  "scripture": {
+    "primary": "Micah 5:2",
+    "read_it": "Micah 5:2; Matthew 2:1-11; Luke 2:4-7; Luke 2:15-16; Luke 2:39; John 7:41-43; John 6:38; 1 Corinthians 15:3-4",
+    "narration_covers": [
+      "Micah 5:2",
+      "Matthew 2:1-11",
+      "Luke 2:4-7",
+      "Luke 2:15-16",
+      "Luke 2:39",
+      "John 7:41-43",
+      "John 6:38",
+      "1 Corinthians 15:3-4"
+    ]
+  },
+  "name_reveal": {
+    "decision": "early_spoken",
+    "note": "'Bethlehem' is spoken at 8.32 s (14% of runtime) and is in the title; 'Jesus' is first spoken at 20.68 s (35%) but is in the title and the opening lines (the King, the experts, Did they go?) hold the stake.",
+    "compensation": [
+      "title",
+      "description_line_1",
+      "pinned_comment"
+    ]
+  },
+  "first_seconds": {
+    "stake_in_3s": true,
+    "first_spoken_line": "The Bible experts knew where the King would be born. Did they go?",
+    "stake_source": "spoken question 0.0-3.8 s ('Did they go?' at 3.6 s) with the thumbnail's EXPERTS KNEW / DID THEY GO? idea",
+    "waiver": ""
+  },
+  "youtube": {
+    "title": "Why Was Jesus Born in Bethlehem?",
+    "line1": "Why was Jesus born in Bethlehem? The Bible experts knew where He would be born. Did they go? Micah pointed to it about 700 years earlier (Micah 5:2).",
+    "line2": "\"But thou, Bethlehem Ephratah, though thou be little among the thousands of Judah, yet out of thee shall he come forth unto me that is to be ruler in Israel; whose goings forth have been from of old, from everlasting.\" (Micah 5:2, KJV)",
+    "read_it": "Read it yourself: Micah 5:2; Matthew 2:1-11; Luke 2:4-7; Luke 2:15-16; Luke 2:39; John 7:41-43; John 6:38; 1 Corinthians 15:3-4.",
+    "hashtags": [
+      "#Bethlehem",
+      "#BibleProphecy",
+      "#Jesus",
+      "#Bible",
+      "#Micah5"
+    ],
+    "tags": [
+      "why was jesus born in bethlehem",
+      "where was jesus born",
+      "jesus born in bethlehem prophecy",
+      "prophecies fulfilled by jesus",
+      "old testament prophecies jesus fulfilled",
+      "king herod and the wise men",
+      "christmas story bible",
+      "nativity bible story",
+      "micah 5 2",
+      "bethlehem in the bible"
+    ],
+    "insight_line": "Micah adds \"from of old, from everlasting.\" With Jesus' own words, \"I came down from heaven\" (John 6:38), Christians read it this way: Bethlehem was His birthplace, not His beginning."
+  },
+  "title_class": "A",
+  "send_to": "someone who loves the Christmas story",
+  "next_teaser": "More Old Testament promises that came true in Jesus, one at a time.",
+  "shareable_fact": "In Micah 5:2 the town of Bethlehem is named about 700 years before Matthew 2 and Luke 2 tell of Jesus being born there, and Micah adds \"from of old, from everlasting\".",
+  "ask_line": "Follow for Old Testament promises that came true in Jesus, one at a time.",
+  "pinned_comment": "Micah pointed to Bethlehem about 700 years before Jesus was born, and added \"from of old, from everlasting.\" Christians read it this way: Bethlehem was His birthplace, not His beginning (John 6:38). The Bible does not say whether the experts went. The wise men went, and so did the shepherds (Luke 2:15-16). Some people argued among themselves about where the Christ would come from (John 7:41-43). What surprised you more: how old the promise was, or that Jesus came down from heaven to us? Read it: Micah 5:2; Matthew 2:1-11; Luke 2:4-7; Luke 2:15-16; Luke 2:39; John 7:41-43; John 6:38; 1 Corinthians 15:3-4.",
+  "spoiler_patterns": [
+    "never says",
+    "wise men went",
+    "found the child",
+    "came down from heaven",
+    "rose from the dead"
+  ],
+  "release": {
+    "stage": 1,
+    "order": 6,
+    "note": "Publish pack built 2026-11-15. Owner decides when to post (30-episode posting hold applies)."
+  },
+  "content_note": "Mentions that Jesus died for our sins and rose on the third day; no violence is shown.",
+  "measured": {
+    "violence_words_in_narration": 1,
+    "duration_s": 59.4,
+    "name_first_spoken_pct": 14,
+    "ending_pct": 5,
+    "source": "measured on batches/cluster_05_prophecy/bethlehem_short/visual/bethlehem_final.mp4 (film v6, sha f1ac7b19...) and its words.json: 'Bethlehem' first at 8.32 s, 'Jesus' first at 20.68 s, voice ends 56.4 s, 59.4 s film; 'died' once (1 Corinthians 15:3)"
+  },
+  "panels": {
+    "discoverability": {
+      "run": true,
+      "record": "prophecy/01_bethlehem/packaging/title_r1 + poster_r1",
+      "note": "2026-11-15. Blind title round (5 writers + 5 judges incl. Fable), blind key-art round (Fable + 4 CLI seats, 3 blind phone-size judges). Publish copy then goes to the external 5-CLI panel in cli_publish.py."
+    },
+    "guardrails": {
+      "run": true,
+      "record": "prophecy/01_bethlehem/guardrail_film_v3",
+      "note": "2026-11-15. Blind finished-film panel on the film (global newcomer, Bible reader, curiosity) plus the words panels (_PICK_WORDS_v3.html): fresh retest 8/8/8/9. UPDATE 2026-11-16: film v6 / words v4.1 had its own blind words + film panels (see prophecy/01_bethlehem/_PICK_WORDS_v4.html)."
+    }
+  },
+  "overrides": {
+    "R03": "Title locked by the owner after a blind title round (won 3 of 5 judges): 'Why Was Jesus Born in Bethlehem?' is the exact searched phrase. 'Bible' is carried by description line 1, #Bible, #BibleProphecy and the tags."
+  }
+}

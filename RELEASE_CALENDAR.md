@@ -42,6 +42,7 @@ Public one-liner (unchanged): *Awakeden — finding Jesus in the whole Bible, on
   distills. Longs: Bronze Serpent + Seed of the Woman.
 - **Month 4 (Shadows):** Exodus distills; longs EW08/EW04 films (build) or held EW01.
 - December = hold Season 6 (Nativity) for its month.
+- **2026-12-01: "Why Was Jesus Born in Bethlehem?"** (prophecy Ep 01, `batches/cluster_05_prophecy/bethlehem_short`, film v6 sha f1ac7b19). Owner Christmas exception to the posting hold, set 2026-11-16 ("keep, 1 Dec"). Pack GREEN + PACKAGING-READY, red-teamed r1-r4. Poster kept as is (owner, 2026-11-16). YouTube first; follow `UPLOAD_CHECKLIST.md` (write the exact time + time zone at its top before scheduling).
 
 ## SEASON 1 — THE CROSS (weekly detail, original 3/wk draft below for reference)
 

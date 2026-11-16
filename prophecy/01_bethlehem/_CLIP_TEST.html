@@ -1,0 +1,37 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PixVerse Test Clip</title>
+<style>body{background:#111;color:#eee;font:20px/1.4 Arial,sans-serif;margin:16px}.r{display:flex;flex-wrap:wrap;gap:20px}
+video{width:360px;border:3px solid #333}img{max-width:100%}.ok{color:#7d7}.bad{color:#f88}</style></head><body>
+<h1>PixVerse V6 test: Micah page (5 s, $0.14)</h1>
+<div class="r"><video src="clips/pv6_test_P2.mp4" controls loop muted autoplay></video>
+<div><p class="ok">Good: borders stay put. Each panel moves on its own. Face, cloak, flame all move well.</p>
+<p class="bad">Bad 1: at the end, a lamp flame appears in Micah's hand (top panel).</p>
+<p class="bad">Bad 2: tree branches grow into the middle and bottom panels at the end.</p>
+<p>Fix: cut words that invite new things (no "leaves", say "nothing new enters"). Lamp only in the middle panel.</p></div></div>
+<h2>Frames: start to end</h2><a href="clips/_pv6_frames.jpg"><img src="clips/_pv6_frames.jpg"></a>
+
+<h1>Test 2: new words ($0.14)</h1>
+<div class="r"><video src="clips/pv6_test2_P2.mp4" controls loop muted autoplay></video>
+<div><p class="ok">Good: nothing new drawn in. Flame and face move well.</p>
+<p class="bad">Bad: the camera zooms into the middle panel. The page layout breaks.</p>
+<p>So PixVerse can't be trusted to hold a 3-panel page.</p></div></div>
+<a href="clips/_pv6_frames2.jpg"><img src="clips/_pv6_frames2.jpg"></a>
+
+<h1>Tests 3 + 4: short guide-style prompts ($0.28)</h1>
+<div class="r"><div><video src="clips/pv6_A.mp4" controls loop muted autoplay></video><p class="bad">A: page vanishes, becomes ONE new scene (Micah on the hill holding the lamp).</p></div>
+<div><video src="clips/pv6_B.mp4" controls loop muted autoplay></video><p class="bad">B: page cuts to a big face close-up.</p></div></div>
+<a href="clips/_pv6_frames_A.jpg"><img src="clips/_pv6_frames_A.jpg"></a><br><a href="clips/_pv6_frames_B.jpg"><img src="clips/_pv6_frames_B.jpg"></a>
+<h2>What we learned</h2><p>PixVerse reads a 3-panel page as a storyboard and turns it into a movie shot. Shorter words made it worse. Its motion on faces, cloth and flame is good. So: give it ONE panel at a time.</p>
+
+<h1>How Barabbas did it</h1>
+<p>Barabbas clip a2 (Gemini Omni, 10 s): it starts as the page, then the camera goes INTO the panels one by one. The page does NOT stay still.</p>
+<a href="clips/_barabbas_a2_frames.jpg"><img src="clips/_barabbas_a2_frames.jpg"></a>
+<p>Its prompt said: "Animate the sequence of events directly from the vertical comic strip grid panels. The camera smoothly pans from top to bottom down the stacked comic panels, bringing each panel to life..."</p>
+<p>The editor then used only the best seconds of each clip.</p>
+
+<h1>Test 5: PixVerse + the Barabbas prompt (10 s, $0.28)</h1>
+<div class="r"><video src="clips/pv6_barabbas_prompt.mp4" controls loop muted autoplay></video>
+<div><p class="ok">0 to 5 s: the whole page is alive. Cloak blows, flame flickers, sun shimmers. Borders stay. Clean.</p>
+<p>5 to 10 s: it dives in, like Barabbas. A big lamp close-up, then Micah's face. The town panel goes away.</p>
+<p class="ok">Use: the first 5 s as the page. The lamp close-up can be a bonus shot.</p></div></div>
+<a href="clips/_pv6_barabbas_frames.jpg"><img src="clips/_pv6_barabbas_frames.jpg"></a><br><a href="clips/_pv6_b_mid.jpg"><img src="clips/_pv6_b_mid.jpg"></a>
+</body></html>

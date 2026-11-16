@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bethlehem - comic look v6</title>
+<style>
+body{margin:0;background:#16181d;color:#f2efe6;font-family:Verdana,Arial,sans-serif;font-size:22px;line-height:1.6}
+main{max-width:1100px;margin:0 auto;padding:24px 16px 60px}
+h1{font-size:34px;margin:8px 0}h2{font-size:28px;margin:44px 0 6px;color:#f6b923}
+p{margin:8px 0}.big{font-size:26px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:12px}
+figure{margin:0}figcaption{font-size:20px;font-weight:bold;padding:6px 0;letter-spacing:1px}
+.old figcaption{color:#b9b3a6}.new figcaption{color:#f6b923}
+img{width:100%;border-radius:10px;cursor:zoom-in;display:block;border:3px solid #333}
+.new img{border-color:#f6b923}
+.box{background:#22262e;border-radius:12px;padding:14px 18px;margin-top:14px}
+#z{display:none;position:fixed;inset:0;background:rgba(0,0,0,.94);z-index:9;cursor:zoom-out;overflow:auto;text-align:center}
+#z img{width:auto;max-width:none;height:auto;border:0;margin:10px auto;cursor:zoom-out;display:inline-block}
+ul{margin:6px 0 0 0;padding-left:26px}
+</style></head><body><main>
+<h1>Born in Bethlehem - comic look</h1>
+<p class="big">Left = the film now. Right = the new comic look. Click a picture to zoom.</p>
+<div class="box"><b>The one big idea: the Promise Panel.</b><br>
+A promise is an <b>empty dashed panel</b>. When it comes true, the same panel gets a <b>solid gold line</b>.<br>
+Same code for the footprints: <b>dashed = not done. Gold = done.</b></div>
+
+<h2>1. The hook: "Did they go?"</h2>
+<p>Big comic letters. Bold empty footprints on the real road.</p>
+<div class="row"><figure class="old"><figcaption>NOW</figcaption><img src="current_1.jpg" alt="now 1"></figure>
+<figure class="new"><figcaption>NEW</figcaption><img src="preview_1.png" alt="new 1"></figure></div>
+
+<h2>2. "Bethlehem was close by."</h2>
+<p>The map is now one comic panel. The page stays. No cream paper.</p>
+<div class="row"><figure class="old"><figcaption>NOW</figcaption><img src="current_2.jpg" alt="now 2"></figure>
+<figure class="new"><figcaption>NEW</figcaption><img src="preview_2.png" alt="new 2"></figure></div>
+
+<h2>3. "There, God's promise came true."</h2>
+<p>Holy moment, so it is calm. No red stamp. One gold line round the panel.</p>
+<div class="row"><figure class="old"><figcaption>NOW</figcaption><img src="current_3.jpg" alt="now 3"></figure>
+<figure class="new"><figcaption>NEW</figcaption><img src="preview_3.png" alt="new 3"></figure></div>
+
+<h2>4. The slam: "The wise men WENT"</h2>
+<p>The camel panel slams in. The footprints turn gold.</p>
+<div class="row"><figure class="old"><figcaption>NOW</figcaption><img src="current_4.jpg" alt="now 4"></figure>
+<figure class="new"><figcaption>NEW</figcaption><img src="preview_4.png" alt="new 4"></figure></div>
+
+<h2>Honest notes</h2>
+<div class="box"><ul>
+<li>These are still pictures. The comic feel comes mostly from the motion.</li>
+<li>The drawn map looks flatter than the painted panels. This is the main risk.</li>
+<li>The word pills are the same see-through pills you locked.</li>
+<li>No money spent. Same clips. Same voice.</li>
+</ul></div>
+<div class="box"><b>My pick:</b> build a 9 second motion test of the map + "WENT" part first ($0). Say yes?</div>
+</main>
+<div id="z" onclick="this.style.display='none'"><img id="zi" alt="zoom"></div>
+<script>
+document.querySelectorAll('figure img').forEach(function(i){i.onclick=function(){document.getElementById('zi').src=i.src;document.getElementById('z').style.display='block';};});
+</script></body></html>
