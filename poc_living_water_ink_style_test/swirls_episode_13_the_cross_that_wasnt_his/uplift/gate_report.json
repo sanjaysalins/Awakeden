@@ -1,0 +1,36 @@
+{
+ "G-AUDIO audio bit-identical to shipped": {
+  "pass": true,
+  "evidence": "shipped MD5=2de0f01956b933992cd35bffbc562695 / new MD5=2de0f01956b933992cd35bffbc562695"
+ },
+ "G-FRAMES 3190 frames 1080x1920": {
+  "pass": true,
+  "evidence": "1080,1920,3190; dur 106.333s vs shipped 106.333s"
+ },
+ "G-SLOT every clip >= slot+0.05 s, trim only (no tpad/reverse/zoompan/loop)": {
+  "pass": true,
+  "evidence": "S01 5.04/4.93; S02 8.04/7.97; S03 3.04/2.20; S04 8.04/7.93; S05 4.04/3.07; S06 8.04/7.93; S07 4.04/3.37; S08 5.04/4.93; S09 10.04/7.87; S10 5.04/4.10; S11 10.04/9.93; S12 3.04/2.77; S13 6.04/5.93; S14 5.04/4.27; S15 5.04/4.93; S16 8.04/7.97; S17 7.04/6.40; S18 10.04/9.83"
+ },
+ "G-MOTION new clips: zoom ~1, not frozen, baked text first==last, motif px stable": {
+  "pass": false,
+  "evidence": "cover_5s: zoom 1.000 meandiff 8.54 title 13.99 caption 0.00 blue px 0->0 CHECK | f01b_3s: zoom 1.000 meandiff 4.75 title 3.98 caption 1.73 blue px 0->0 ok | f02b_4s: zoom 1.000 meandiff 1.64 title 2.76 caption 1.49 blue px 24->108 CHECK | f03b_4s: zoom 1.000 meandiff 1.45 title 2.21 caption 2.72 blue px 16->0 CHECK | f05b_5s: zoom 1.000 meandiff 1.50 title 3.73 caption 2.99 blue px 80->68 ok | f06b_3s: zoom 1.000 meandiff 1.26 title 3.47 caption 2.07 blue px 8004->10352 CHECK | f07b_5s: zoom 1.009 meandiff 3.68 title 3.04 caption 2.30 blue px 4272->4168 ok | f09b_7s: zoom 1.000 meandiff 0.48 title 3.11 caption 3.34 blue px 17328->13960 ok"
+ },
+ "G-KEEPOUT no stroke on baked text / faces / blue motif (real frames, <3% px)": {
+  "pass": true,
+  "evidence": "M1: 2990px, text/face/motif overlap 0.8% ok | M2: 2054px, text/face/motif overlap 0.0% ok | M5: 3161px, text/face/motif overlap 0.5% ok | M3: 4289px, text/face/motif overlap 0.0% ok | M4: 4187px, text/face/motif overlap 0.0% ok | M7: 1599px, text/face/motif overlap 0.0% ok | M6: 11422px, text/face/motif overlap 2.5% ok"
+ },
+ "G-MARKS word-tied (+-3 f), spacing, count, quiet zones, leave before cut": {
+  "pass": true,
+  "evidence": "M1 \"out\"@7.36 start f219 (-2f) ends f340 in S02 ok; M2 \"country.\"@13.8 start f412 (-2f) ends f448 in S03 ok; M5 \"without.\"@40.92 start f1226 (-2f) ends f1265 in S08 ok; M3 \"blood\"@46.48 start f1392 (-2f) ends f1480 in S09 ok; M4 \"out,\"@51.28 start f1536 (-2f) ends f1620 in S10 ok; M7 \"forth\"@69.86 start f2094 (-2f) ends f2180 in S13 ok; M6 \"forced\"@82.8 start f2482 (-2f) ends f2690 in S16 ok; spacing>=90f ok; max 5 marks in any 60 s; first f219; last ends f2690 <= 3100; covers (S01, S18) untouched"
+ },
+ "_marks_detail": [
+  "M1 \"out\"@7.36 start f219 (-2f) ends f340 in S02 ok",
+  "M2 \"country.\"@13.8 start f412 (-2f) ends f448 in S03 ok",
+  "M5 \"without.\"@40.92 start f1226 (-2f) ends f1265 in S08 ok",
+  "M3 \"blood\"@46.48 start f1392 (-2f) ends f1480 in S09 ok",
+  "M4 \"out,\"@51.28 start f1536 (-2f) ends f1620 in S10 ok",
+  "M7 \"forth\"@69.86 start f2094 (-2f) ends f2180 in S13 ok",
+  "M6 \"forced\"@82.8 start f2482 (-2f) ends f2690 in S16 ok",
+  "spacing>=90f ok; max 5 marks in any 60 s; first f219; last ends f2690 <= 3100; covers (S01, S18) untouched"
+ ]
+}
