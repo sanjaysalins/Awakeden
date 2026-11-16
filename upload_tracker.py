@@ -11,7 +11,6 @@ After a batch of --set calls, run release_check.py.
 
   .venv\\Scripts\\python.exe upload_tracker.py --list
   .venv\\Scripts\\python.exe upload_tracker.py --set sign-of-jonah youtube https://youtube.com/shorts/AbCdEf12345
-  .venv\\Scripts\\python.exe upload_tracker.py --set sign-of-jonah tiktok https://www.tiktok.com/@awakeden/video/123...
   .venv\\Scripts\\python.exe upload_tracker.py --set it-is-finished https://youtu.be/XyZ...   (platform omitted = youtube)
 """
 from __future__ import annotations
@@ -29,7 +28,7 @@ MANIFEST = ROOT / "_website" / "manifest.yaml"
 
 from pipeline import finality, release_state  # noqa: E402
 
-PLATFORMS = release_state.PLATFORMS  # youtube, tiktok, facebook, instagram
+PLATFORMS = release_state.PLATFORMS  # youtube only (owner rule 2026-11-16)
 
 
 def video_id(url: str) -> str:
@@ -105,7 +104,9 @@ def _set(slug: str, platform: str, url: str, *, repost: bool) -> None:
             MANIFEST, yaml.safe_dump(m, sort_keys=False, allow_unicode=True))
         print(f"  manifest: youtube_id = {entry['video_id']}"
               + (f" (was {was})" if was else "") + " · status -> live")
-        print("  done - run release_check.py")
+        import subprocess
+        subprocess.run([sys.executable, str(ROOT / "build_upload_tracker.py")], check=False)
+        print("  done - tracker page rebuilt; run release_check.py")
 
 
 def main() -> int:

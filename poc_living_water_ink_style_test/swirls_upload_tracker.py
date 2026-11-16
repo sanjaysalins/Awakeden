@@ -77,7 +77,7 @@ def _write_final_pin(folder: Path, final: Path) -> None:
         final = sfx
     rel = final.relative_to(folder).as_posix()
     pin = folder / _FINAL_PIN
-    if not pin.is_file() or pin.read_text(encoding="utf-8").strip().splitlines()[:1] != [rel]:
+    if not pin.is_file():  # never overwrite an existing (possibly hand-set) pin (red-team 2026-11-16)
         pin.write_text(rel + "\n", encoding="utf-8")
 
 
@@ -227,17 +227,37 @@ def build() -> None:
     print(f"[ok] {BOARD}")
 
 
-def set_posted(slug: str, platform: str, url: str) -> None:
+def set_posted(slug: str, platform: str, url: str, repost: bool = False) -> None:
     if platform != "youtube":  # owner rule 2026-11-16: only YouTube links are tracked
         raise SystemExit(f"'{platform}' is not tracked - only YouTube links are tracked.")
+    known = {s for _t, s, _f in LEGACY} | {s for _t, s, _f in discover()}
+    if slug not in known:
+        raise SystemExit(f"unknown episode '{slug}'. Known: {sorted(known)}")
+    sys.path.insert(0, str(HERE.parent))
+    from upload_tracker import video_id  # same YouTube URL check as the main tracker
+    vid = video_id(url)
+    url = f"https://youtube.com/shorts/{vid}" if "/shorts/" in url else f"https://youtu.be/{vid}"
     ledger = load_ledger()
+    old = ledger.get(slug, {}).get(platform)
+    if old and old[0] == url:
+        print(f"[ok] {slug} already recorded with this link")
+        return
+    if old and not repost:
+        raise SystemExit(f"{slug} already has {old[0]} ({old[1]}). Add --repost only if you really re-posted it.")
     ledger.setdefault(slug, {})[platform] = [url, date.today().isoformat()]
-    save_ledger(ledger)
+    tmp = LEDGER.with_suffix(".tmp")
+    tmp.write_text(json.dumps(ledger, indent=2), encoding="utf-8")
+    tmp.replace(LEDGER)
     print(f"[ok] recorded {slug} / {platform} -> {url}")
 
 
 if __name__ == "__main__":
-    if len(sys.argv) >= 2 and sys.argv[1] == "--set":
-        _, _, slug, platform, url = sys.argv
-        set_posted(slug, platform, url)
-    build()
+    args = [a for a in sys.argv[1:] if a != "--repost"]
+    if args and args[0] == "--set":
+        if len(args) != 4:
+            raise SystemExit("usage: swirls_upload_tracker.py --set <episode_folder> youtube <url> [--repost]")
+        set_posted(args[1], args[2].lower(), args[3], repost="--repost" in sys.argv)
+        import subprocess
+        subprocess.run([sys.executable, str(HERE.parent / "build_upload_tracker.py")], check=False)
+    else:
+        build()

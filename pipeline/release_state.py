@@ -25,10 +25,9 @@ SITE = ROOT / "_website"
 MANIFEST = SITE / "manifest.yaml"
 LEDGER = ROOT / "data" / "release_ledger.json"
 
-PLATFORMS = ["youtube", "tiktok", "facebook", "instagram"]
+PLATFORMS = ["youtube"]  # owner rule 2026-11-16: only YouTube is tracked
 LONG_POST_PLATFORMS = ["youtube"]  # matches LONG_PLATFORMS in publish_pack
 # Owner rule 2026-11-16: only YouTube links are tracked (shorts and longs alike).
-# PLATFORMS stays the list --set accepts; TRACKED_PLATFORMS drives the queue.
 TRACKED_PLATFORMS = ["youtube"]
 
 # public_status tiers that MUST be fully wired (fail-closed)

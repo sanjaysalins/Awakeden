@@ -2,11 +2,11 @@
 """build_upload_tracker.py — the paste-ready UPLOAD TRACKER page (_UPLOAD_TRACKER.html).
 
 The browser runbook for posting: every ready piece as a card (video file,
-publish pack, captions.srt, all four thumbnails, read page, tech check), one
+publish pack, captions.srt, thumbnails, tech check), one
 row per platform. Paste the URL you got after uploading into the row's box and
 click COPY — you get the exact `upload_tracker.py --set` command; run it in the
 repo terminal. That command is THE one write path: it records the dated ledger
-entry and (for YouTube) updates the website manifest + read pages.
+entry (YouTube only) and rebuilds this page.
 
 Durable state lives in data/release_ledger.json — NEVER in this page (the
 HF-POC localStorage tracker lost batches; this one is a stateless view that
@@ -17,6 +17,7 @@ regenerates from the ledger).
 from __future__ import annotations
 
 import html
+import re
 import importlib.util
 import json
 import subprocess
@@ -43,7 +44,7 @@ def hide_btn(key: str) -> str:
 
 CANON = [
     ("Audience", "NOT made for kids"),
-    ("Altered content / AI disclosure", "YES (synthetic/altered imagery)"),
+    ("Altered content (a YouTube Studio setting, not text)", "YES"),
     ("Category", "Education"),
     ("License", "Standard YouTube licence"),
     ("Comments", "On — hold potentially inappropriate for review"),
@@ -71,7 +72,7 @@ def flink(p: Path, label: str) -> str:
 
 def thumb_img(thumbs: Path, prefer: str) -> str:
     """Small clickable thumbnail so each card shows at a glance what the video is."""
-    for key in (prefer, "9x16", "16x9", "tiktok", "1x1"):
+    for key in (prefer, "9x16", "16x9", "1x1"):
         t = thumbs / f"thumb_{key}.jpg"
         if t.is_file():
             u = "file:///" + str(t).replace(chr(92), "/")
@@ -106,12 +107,6 @@ def card(s: release_state.PieceState, missing: list[str]) -> str:
     links = []
     if s.video:
         links.append(flink(s.video, "▶ video file"))
-    if s.slug in V5:
-        v5p, v5d = V5[s.slug]
-        cards = ([" ".join(str(v5d["hook_text"]).split())] if v5d.get("hook_text") else []) + [
-            f'{c.get("old")}={c.get("plain")}' for c in v5d.get("decode_cards", [])]
-        links.append(flink(v5p, "✨ v5 hook-fixed (PINNED final; old pin in FINAL_VIDEO.txt.prev_v4)" if Path(v5p).resolve() == Path(s.video).resolve() else "✨ v5 hook candidate (review, not pinned)") +
-                     f" <span class=slug>cards: {esc('; '.join(cards)) or '-'}</span>")
     if (pub / "PUBLISH_INDEX.html").is_file():
         links.append(flink(pub / "PUBLISH_INDEX.html", "📦 publish pack (copy buttons)"))
     if (pub / "captions.srt").is_file():
@@ -235,6 +230,13 @@ def swirls_card(title: str, slug: str, final: Path | None, ledger_entry: dict) -
     return card_html, missing
 
 
+def blocked(card_html: str, reason: str) -> str:
+    """A finished card that must NOT be posted yet: red reason, no URL box."""
+    card_html = re.sub(r"<table>.*?</table>", "", card_html, flags=re.S)
+    card_html = card_html.replace("<span class='c warn'>to post on YouTube</span>", "")
+    return card_html.replace("</h3>", f" <span class='c bad'>{esc(reason)}</span></h3>", 1)
+
+
 def episode_block(ep, members: list) -> str:
     """One release CAMPAIGN, not N unrelated rows: the long, then its shorts in
     order, wrapped together the way Furgiven groups an episode's whole rollout.
@@ -252,13 +254,9 @@ def episode_block(ep, members: list) -> str:
         f"<div class=epblock><div class=epblock-head>"
         f"<h3>{esc(ep.title)} <span class=slug>episode</span> "
         f"<span class='c warn'>{esc(ep.status)}</span></h3>"
-        f"<div class=sub>{ep.shorts_posted}/{ep.shorts_total} shorts fully posted"
-        f" ({ep.shorts_posted_any}/{ep.shorts_total} posted somewhere) · long "
-        + (esc("posted") if ep.long_posted else
-           esc("ready to post (not shown below — mark it studio_complete in the manifest first)")
-           if ep.long_ready else esc("not yet marked ready in the catalogue"))
-        + " — check RELEASE_CALENDAR.md for this episode's actual posting order"
-          "</div>"
+        f"<div class=sub>{ep.shorts_posted} of {ep.shorts_total} shorts on YouTube · long: "
+        + (esc("on YouTube") if ep.long_posted else esc("in Next up") if ep.long_ready else esc("not ready yet"))
+        + "</div>"
         f"<div class=barwrap><div class='bar posted' style='width:{pct}%'></div></div>"
         f"</div>{inner}</div>")
 
@@ -394,10 +392,13 @@ def main() -> int:
     rank = {slug: i for i, (slug, _l) in enumerate(POST_ORDER)}
     label = dict(POST_ORDER)
     todo_sorted = sorted(todo_items, key=lambda x: rank.get(x.slug, 999))
+    check_first = [x for x in todo_sorted if label.get(x.slug, "").startswith("SPARE BANK")]
+    todo_sorted = [x for x in todo_sorted if x not in check_first]
     ep_todo, standalone_todo = "", "".join(
-        f"<div class=sub><b>#{i} &middot; {esc(label.get(x.slug, 'unscheduled'))}</b></div>"
+        f"<div class=sub><b>#{i} &middot; {esc(label.get(x.slug, 'no date set'))}</b></div>"
         + card(x, partial.get(x.slug, []))
         for i, x in enumerate(todo_sorted, 1))
+    next_no = len(todo_sorted) + 1
     _e, _s = _group_by_episode([], episodes, partial)
     ep_done, standalone_done = _group_by_episode(posted, episodes, partial)
     cards_todo = ep_todo + standalone_todo
@@ -410,7 +411,9 @@ def main() -> int:
     swirls_entries = ([(t, s, SWIRLS_DIR / s / f) for t, s, f in swirls_mod.LEGACY]
                       + swirls_mod.discover())
     n_swirls_todo = n_swirls_done = 0
-    cards_held, n_swirls_held = "", 0
+    cards_held = "".join(blocked(card(x, partial.get(x.slug, [])), "Check the style first (older look)")
+                         for x in check_first)
+    n_swirls_held = len(check_first)
     _seen_sw = set()
     for title, slug, final in swirls_entries:
         if slug in _seen_sw:
@@ -418,7 +421,7 @@ def main() -> int:
         _seen_sw.add(slug)
         card_html, missing = swirls_card(title, slug, final, swirls_ledger.get(slug, {}))
         if slug in SWIRLS_BLOCKED:
-            cards_held += card_html.replace("</h3>", f" <span class='c bad'>{esc(SWIRLS_BLOCKED[slug])}</span></h3>", 1)
+            cards_held += blocked(card_html, SWIRLS_BLOCKED[slug])
             n_swirls_held += 1
         elif not missing:
             cards_done += card_html          # fully posted -> Posted, hold or not
@@ -427,11 +430,12 @@ def main() -> int:
             cards_held += card_html          # 30-ep hold: tracked, URL boxes live, not in Next up
             n_swirls_held += 1
         else:
-            cards_todo += card_html
+            cards_todo += f"<div class=sub><b>#{next_no} &middot; Swirls of Life</b></div>" + card_html
+            next_no += 1
             n_swirls_todo += 1
 
     inv_html, inv_counts = finished_inventory(states, q_slugs)
-    n_queue, n_posted = len(queue) + n_swirls_todo, len(posted) + n_swirls_done
+    n_queue, n_posted = len(todo_sorted) + n_swirls_todo, len(posted) + n_swirls_done
     n_inv = inv_counts["blocked"] + inv_counts["hold"]
     inv_block = (f"<h2>Other finished videos, not ready ({n_inv})</h2>"
                  "<div class=sub>Finished on disk but not in the lists above. Red ✗ = what is missing.</div>"
@@ -480,10 +484,10 @@ is a view; regenerate: <code>.venv\\Scripts\\python.exe build_upload_tracker.py<
 <button class=big onclick="all_cmds(this)">COPY ALL filled boxes as one script</button>
 <h2>YouTube settings — same every video</h2>
 <div class=card><table class=canon>{canon}</table></div>
-<h2>Next up to post ({n_queue}) — in calendar order</h2>
+<h2>Next up to post ({n_queue}) — top first</h2>
 <div class=sub>Main catalogue first (calendar order), then Swirls of Life episodes.</div>
 {cards_todo or "<div class=sub>nothing ready and unposted</div>"}
-<h2>Finished but blocked ({n_swirls_held})</h2>
+<h2>Finished but not ready ({n_swirls_held})</h2>
 <div class=sub>Do not post these yet. The red note says why.</div>
 {cards_held or "<div class=sub>none</div>"}
 {inv_block}
