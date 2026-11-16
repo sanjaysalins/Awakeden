@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "F:\slk\PycharmProjects\JesusInTheBible\poc_scratchy_ink\zacchaeus\make_clips.py", line 38, in <module>
+    for k in (sys.argv[1].split(",") if len(sys.argv) > 1 else list(CLIPS)): make(k)
+                                                                             ~~~~^^^
+  File "F:\slk\PycharmProjects\JesusInTheBible\poc_scratchy_ink\zacchaeus\make_clips.py", line 36, in make
+    urllib.request.urlretrieve(url[-1], out); (OUT/f"{k}.url").write_text(url[-1]); print(k, "ok", flush=True)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\urllib\request.py", line 244, in urlretrieve
+    tfp.write(block)
+    ~~~~~~~~~^^^^^^^
+OSError: [Errno 28] No space left on device

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Swirls uplift kit - mock</title>
+<style>
+:root{--paper:#f4ead6;--ink:#2a2622;--pencil:#4a4640;--red:#a8432f;--bg:#171410;--fg:#ece5d8;--gold:#e8c27a}
+body{margin:0;background:var(--bg);color:var(--fg);font:18px/1.5 "Segoe UI",system-ui,sans-serif;padding:20px}
+h1{font-size:26px;margin:0 0 4px} p{margin:6px 0 14px;max-width:760px}
+.wrap{display:flex;gap:26px;flex-wrap:wrap;align-items:flex-start}
+.stage{width:360px;height:640px;position:relative;overflow:hidden;border-radius:6px;background:#000;flex:none}
+.page{position:absolute;inset:0;background:var(--paper)}
+.page svg{position:absolute;inset:0;width:100%;height:100%}
+#pageB{transform-origin:0 100%}
+.run #pageA.turn{animation:turn .32s cubic-bezier(.6,0,.3,1) 9.6s forwards}
+@keyframes turn{to{transform:translateX(-104%) rotate(-3deg);box-shadow:30px 0 40px rgba(0,0,0,.5)}}
+.pc{fill:none;stroke:var(--pencil);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;opacity:.85;stroke-dasharray:var(--l);stroke-dashoffset:var(--l)}
+.red{stroke:var(--red)} .thin{stroke-width:1.6} .dash{stroke-dasharray:7 6;stroke-dashoffset:0;opacity:0}
+.run .pc{animation:draw var(--d,.35s) ease-out var(--t) forwards}
+.run .dash{animation:show .5s steps(6) var(--t) forwards}
+.run .tag{animation:wipe .45s linear var(--t) forwards}
+.tag{font:italic 15px "Segoe Script","Comic Sans MS",cursive;fill:var(--pencil);clip-path:inset(0 100% 0 0)}
+@keyframes draw{to{stroke-dashoffset:0}} @keyframes show{to{opacity:.85}} @keyframes wipe{to{clip-path:inset(0 0 0 0)}}
+.cap{font:italic 15px "Segoe Script","Comic Sans MS",cursive;fill:var(--ink)}
+.sm{font:11px "Segoe Script","Comic Sans MS",cursive;fill:var(--ink)}
+.hdr{font:12px "Segoe UI",sans-serif;fill:var(--ink);letter-spacing:.5px}
+ol{margin:0;padding-left:22px;max-width:430px} li{margin:0 0 10px} b{color:var(--gold)}
+button{font:700 18px "Segoe UI",sans-serif;padding:10px 22px;border-radius:99px;border:0;background:var(--gold);color:#221a0c;cursor:pointer;margin:8px 0 16px}
+.no{background:#3a2a14;border:2px solid #d9a94a;border-radius:10px;padding:10px 14px;max-width:430px;margin-top:14px}
+#say{position:absolute;left:0;right:0;bottom:0;background:rgba(0,0,0,.72);color:#fff;font-size:14px;padding:6px 10px;min-height:22px}
+</style></head><body>
+<h1>Swirls uplift kit - what the pencil marks look like</h1>
+<p>This is a <b>mock</b>, not real art. Grey boxes stand in for the pictures. Watch the <b>pencil</b>. The blue swirl never moves.</p>
+<div class="wrap">
+<div>
+<button onclick="replay()">Play again</button>
+<div class="stage" id="stage">
+  <!-- page B sits underneath, ready for the page turn -->
+  <div class="page" id="pageB"><svg viewBox="0 0 360 640">
+    <text x="14" y="22" class="hdr">SEQ: NEXT PAGE</text><text x="320" y="22" class="hdr">F05</text>
+    <rect x="14" y="40" width="100" height="90" fill="#8a9a94"/><rect x="130" y="40" width="100" height="90" fill="#9aa08a"/><rect x="246" y="40" width="100" height="90" fill="#8f8a78"/>
+    <rect x="14" y="170" width="332" height="390" fill="#d9cdb0" stroke="#2a2622"/>
+    <circle cx="180" cy="360" r="60" fill="#b9a26a"/><text x="110" y="600" class="cap">"the next page"</text>
+    <!-- S8 tick burst on page B -->
+    <path class="pc" style="--l:30;--t:10.3s;--d:.12s" d="M120 440 l-22 10"/><path class="pc" style="--l:30;--t:10.36s;--d:.12s" d="M126 452 l-18 20"/><path class="pc" style="--l:30;--t:10.42s;--d:.12s" d="M140 458 l-6 26"/>
+  </svg></div>
+  <div class="page turn" id="pageA"><svg viewBox="0 0 360 640">
+    <text x="14" y="22" class="hdr">SEQ: MOCK PAGE</text><text x="320" y="22" class="hdr">F04</text>
+    <line x1="14" y1="27" x2="150" y2="27" stroke="#2a2622" stroke-width=".8"/>
+    <!-- three small top panels -->
+    <rect x="14" y="40" width="100" height="90" fill="#6f8a86" stroke="#2a2622"/><rect x="130" y="40" width="100" height="90" fill="#a79c6c" stroke="#2a2622"/><rect x="246" y="40" width="100" height="90" fill="#7c8a7a" stroke="#2a2622"/>
+    <text x="24" y="148" class="sm">unseen prayer</text><text x="146" y="148" class="sm">from beneath</text><text x="262" y="148" class="sm">present time</text>
+    <!-- the big picture: a tree seen from above, a small man under it -->
+    <circle cx="170" cy="380" r="118" fill="#b9c08e" stroke="#6b7a4a" stroke-width="3"/><circle cx="170" cy="380" r="62" fill="#a8946a"/>
+    <rect x="160" y="372" width="20" height="26" rx="8" fill="#c9962e"/><circle cx="170" cy="368" r="8" fill="#3a2a1c"/>
+    <!-- the blue-and-gold swirl: STATIC, never animated, pencil keeps off it -->
+    <path d="M150 200 q20 -26 44 -6 q16 16 -6 28 q-24 10 -38 -22" fill="#9cc3de" opacity=".8"/><path d="M168 196 q10 8 2 20" stroke="#d9a94a" stroke-width="3" fill="none"/>
+    <text x="96" y="590" class="cap">under the fig tree</text><text x="268" y="618" class="sm">NOTE: it fell</text>
+    <!-- S1 panel ring: draws round panel 1 when its word is spoken -->
+    <path class="pc" style="--l:420;--t:.6s;--d:.4s" d="M10 38 q52 -6 106 -1 q5 46 1 96 q-54 5 -108 0 q-5 -48 1 -95"/>
+    <path class="pc thin" style="--l:420;--t:.95s;--d:.25s;opacity:.4" d="M12 36 q54 -3 106 2 q2 48 -1 95 q-52 4 -106 -2 q-3 -46 1 -95"/>
+    <!-- S5 idea doodle: an eye in the margin + a dashed sight line to the man. The line hops over the swirl and never touches it. -->
+    <path class="pc" style="--l:90;--t:3s;--d:.3s" d="M306 214 q20 -16 40 0 q-20 16 -40 0"/><circle class="pc" style="--l:30;--t:3.3s;--d:.15s" cx="326" cy="214" r="4"/>
+    <path class="pc dash" style="--t:3.6s" d="M300 226 L190 362"/>
+    <path class="pc" style="--l:30;--t:4.1s;--d:.12s" d="M190 362 l12 -4 M190 362 l2 -13"/>
+    <!-- S2 underline under the baked caption word -->
+    <path class="pc" style="--l:120;--t:5.4s;--d:.3s" d="M152 596 q40 5 100 -1"/>
+    <!-- S3 red circle: the ONE red mark of the film -->
+    <path class="pc red" style="--l:230;--t:6.6s;--d:.4s" d="M150 578 q50 -16 106 -2 q10 12 -8 22 q-52 10 -98 0 q-14 -10 2 -22"/>
+    <!-- S4 margin arrow -->
+    <path class="pc" style="--l:120;--t:7.6s;--d:.35s" d="M34 250 q-6 60 44 96"/><path class="pc" style="--l:30;--t:7.95s;--d:.12s" d="M78 346 l-16 -2 M78 346 l-5 -15"/>
+    <!-- S6 verse tag -->
+    <text class="tag" style="--t:8.5s" x="232" y="170">John 1:48</text>
+  </svg></div>
+  <div id="say"></div>
+</div></div>
+<div>
+<ol>
+  <li><b>Look-up ring.</b> A pencil ring draws round one small top panel when the voice names it.</li>
+  <li><b>Idea doodle.</b> One tiny sketch that shows the point. Here: an eye and a dotted line for "I saw thee".</li>
+  <li><b>Underline.</b> A pencil line under the hand-written words already on the page.</li>
+  <li><b>Red circle.</b> One red-pencil circle per film, on the key word.</li>
+  <li><b>Margin arrow.</b> Points at one detail in the picture.</li>
+  <li><b>Verse tag.</b> A Bible reference writes itself in the margin (optional).</li>
+  <li><b>Page turn.</b> The page slides away like paper. Used 3 times at most.</li>
+  <li><b>Tick burst.</b> Three small ticks on one hit. Once per film.</li>
+</ol>
+<div class="no"><b>Never:</b> no pencil on the blue swirl. No glow. No zoom. No captions. No mark on Jesus' face or hands. One mark at a time. At most 8 marks a minute.</div>
+</div></div>
+<script>
+const cues=[[0.6,'"...under the fig tree" -> ring on panel 1'],[3,'"I saw thee" -> eye + dotted line'],[5.4,'underline the page caption'],[6.6,'the one red circle'],[7.6,'margin arrow'],[8.5,'verse tag writes in'],[9.6,'page turn'],[10.3,'tick burst on a hit'],[11.6,'']];
+let timers=[];
+function replay(){const s=document.getElementById('stage');s.classList.remove('run');void s.offsetWidth;s.classList.add('run');
+ timers.forEach(clearTimeout);timers=cues.map(c=>setTimeout(()=>{document.getElementById('say').textContent=c[1]},c[0]*1000));}
+replay();
+</script>
+</body></html>

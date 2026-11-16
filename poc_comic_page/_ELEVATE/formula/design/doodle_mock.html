@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Doodle mock</title>
+<style>
+  :root { --bg:#f6efe0; --ink:#1b1510; --soft:#6a5a48; --card:#fffaf0; --gold:#c8881c; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font-family: Verdana, Arial, sans-serif; font-size:20px; line-height:1.6; }
+  main { max-width:1100px; margin:0 auto; padding:24px 16px 60px; }
+  h1 { font-size:34px; margin:0 0 6px; }
+  h2 { font-size:24px; margin:0 0 10px; }
+  p { margin:6px 0; }
+  .row { display:flex; gap:28px; flex-wrap:wrap; align-items:flex-start; margin-top:22px; }
+  .card { background:var(--card); border:4px solid var(--ink); border-radius:14px; padding:16px; }
+  .small { flex:0 0 300px; }
+  .big { flex:1 1 460px; max-width:560px; }
+  .frame { position:relative; width:100%; aspect-ratio:9/16; overflow:hidden; border:3px solid var(--ink); border-radius:8px; background:#333; }
+  .frame img, .frame svg { position:absolute; inset:0; width:100%; height:100%; display:block; }
+  .tag { display:inline-block; background:var(--gold); color:#fff; font-weight:bold; border-radius:8px; padding:2px 12px; margin-bottom:8px; }
+  button { font:inherit; font-weight:bold; padding:10px 18px; margin:12px 10px 0 0; border:3px solid var(--ink); border-radius:10px; background:#fff; cursor:pointer; }
+  ul { margin:8px 0 0; padding-left:24px; }
+  .pick { margin-top:26px; font-size:24px; font-weight:bold; }
+  .note { color:var(--soft); font-size:17px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>One doodle</h1>
+  <p>For the paradise short. It plays in the last 3 seconds. No words.</p>
+
+  <div class="row">
+    <div class="card small">
+      <span class="tag">1. In the film now</span>
+      <h2>He kneels.</h2>
+      <div class="frame"><img src="frame_knelt.jpg" alt="Two men kneel at the cross. One wears a tan hood."></div>
+      <p>The man in the tan hood asks.</p>
+    </div>
+
+    <div class="card big">
+      <span class="tag">2. New drawing</span>
+      <h2>He walks up to Jesus.</h2>
+      <div class="frame">
+        <img src="frame_with_him.jpg" alt="Jesus stands on a garden hill.">
+        <svg viewBox="0 0 1080 1920" aria-hidden="true">
+          <defs>
+            <filter id="rough" x="-20%" y="-20%" width="140%" height="140%">
+              <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" seed="7" result="n"/>
+              <feDisplacementMap in="SourceGraphic" in2="n" scale="3.5" xChannelSelector="R" yChannelSelector="G"/>
+            </filter>
+            <clipPath id="body"><path d="M34,44 C28,50 20,54 14,62 C8,84 12,110 14,128 C14,156 8,182 4,202 C22,210 40,206 52,210 C68,212 84,208 98,200 C94,180 88,154 86,126 C90,108 92,82 86,62 C80,54 72,50 66,44 C72,24 66,6 50,6 C34,6 28,24 34,44Z"/></clipPath>
+          </defs>
+          <g id="doodle" transform="translate(436 588)" filter="url(#rough)">
+            <path id="shadow" d="M6,206 C-14,236 -44,272 -74,308 C-52,316 -24,314 -6,306 C26,274 62,240 96,204 C66,214 34,214 6,206Z" fill="#14100a" opacity="0"/>
+            <g clip-path="url(#body)">
+              <rect id="wash" x="0" y="212" width="100" height="212" fill="#CDAC7C"/>
+              <path id="shade" d="M14,62 C8,84 12,110 14,128 C14,156 8,182 4,202 C12,206 20,207 26,206 C29,180 27,158 29,134 C24,110 24,84 30,60 C24,58 18,58 14,62Z" fill="#96703F" opacity="0"/>
+            </g>
+            <g fill="none" stroke="#14100C" stroke-linecap="round" stroke-linejoin="round">
+              <path class="s" data-a="0.00" data-b="0.18" stroke-width="6" d="M34,44 C28,24 34,6 50,6 C66,6 72,24 66,44"/>
+              <path class="s" data-a="0.18" data-b="0.45" stroke-width="7" d="M34,44 C28,50 20,54 14,62 C8,84 12,110 14,128 C14,156 8,182 4,202"/>
+              <path class="s" data-a="0.40" data-b="0.65" stroke-width="6" d="M66,44 C72,50 80,54 86,62 C92,82 90,108 86,126 C88,154 94,180 98,200"/>
+              <path class="s" data-a="0.65" data-b="0.80" stroke-width="6" d="M4,202 C22,210 40,206 52,210 C68,212 84,208 98,200"/>
+              <path class="s" data-a="0.78" data-b="0.88" stroke-width="4" d="M34,44 C42,60 58,60 66,44"/>
+              <path class="s" data-a="0.84" data-b="0.90" stroke-width="3" d="M50,57 C51,64 49,70 50,76"/>
+              <path class="s" data-a="0.85" data-b="0.95" stroke-width="4" d="M14,123 C36,132 64,132 86,121"/>
+              <path class="s" data-a="0.92" data-b="1.06" stroke-width="3" d="M50,133 C48,158 53,182 50,208"/>
+              <path class="s" data-a="0.94" data-b="1.06" stroke-width="3" d="M72,132 C74,156 72,178 77,203"/>
+              <path class="s" data-a="0.96" data-b="1.06" stroke-width="3" d="M80,72 C86,90 87,104 83,118"/>
+              <path class="s" data-a="1.04" data-b="1.12" stroke-width="5" d="M30,206 C28,214 34,219 43,215"/>
+              <path class="s" data-a="1.04" data-b="1.12" stroke-width="5" d="M62,210 C62,217 70,219 77,214"/>
+            </g>
+          </g>
+          <rect id="zone" x="0" y="1190" width="1080" height="380" fill="#2a6fdb" opacity="0"/>
+        </svg>
+      </div>
+      <button id="again" type="button">Play again</button>
+      <button id="zoneBtn" type="button">Show subtitle area</button>
+      <ul>
+        <li>Same tan hood. Same man.</li>
+        <li>He asked. Now he is with Him.</li>
+        <li>No words. Any language gets it.</li>
+        <li>Nothing is drawn on Jesus.</li>
+      </ul>
+      <p class="note">This is a rough sketch. The real one is traced from the kneeling man and sticks to the hill as the camera moves.</p>
+    </div>
+  </div>
+
+  <p class="pick">My pick: one doodle only, this one. Say yes?</p>
+  <p class="note">I tried a second doodle in 5 places. Each one sat on a holy picture, hid behind subtitles, or looked forced. Details are in DOODLE_DESIGN.md.</p>
+</main>
+
+<script>
+(function () {
+  var strokes = [].slice.call(document.querySelectorAll('.s'));
+  var wash = document.getElementById('wash'), shade = document.getElementById('shade'), shadow = document.getElementById('shadow');
+  var doodle = document.getElementById('doodle'), zone = document.getElementById('zone');
+  strokes.forEach(function (p) {
+    var L = p.getTotalLength(); p.dataset.len = L;
+    p.style.strokeDasharray = L + ' ' + L; p.style.strokeDashoffset = L;
+  });
+  var WAIT = 0.9, DRAW = 1.25, HOLD = 3.2, FADE = 0.5, LOOP = WAIT + DRAW + HOLD + FADE;
+  var t0 = performance.now();
+  function cl(x) { return Math.max(0, Math.min(1, x)); }
+  function tick(now) {
+    var t = ((now - t0) / 1000) % LOOP, d = t - WAIT;
+    strokes.forEach(function (p) {
+      var a = +p.dataset.a, b = +p.dataset.b, k = cl((d - a) / (b - a)), L = +p.dataset.len;
+      p.style.strokeDashoffset = L * (1 - k);
+      p.style.visibility = k > 0 ? 'visible' : 'hidden';
+    });
+    var w = cl((d - 0.70) / 0.40);
+    wash.setAttribute('y', 212 - 212 * w);
+    shade.setAttribute('opacity', cl((d - 0.95) / 0.2));
+    shadow.setAttribute('opacity', 0.45 * cl((d - 1.02) / 0.23));
+    doodle.setAttribute('opacity', 1 - cl((t - (WAIT + DRAW + HOLD)) / FADE));
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+  document.getElementById('again').onclick = function () { t0 = performance.now(); };
+  var on = false;
+  document.getElementById('zoneBtn').onclick = function () {
+    on = !on; zone.setAttribute('opacity', on ? 0.35 : 0);
+    this.textContent = on ? 'Hide subtitle area' : 'Show subtitle area';
+  };
+})();
+</script>
+</body>
+</html>

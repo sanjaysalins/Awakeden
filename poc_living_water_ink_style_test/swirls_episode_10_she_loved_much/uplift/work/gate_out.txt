@@ -1,0 +1,13 @@
+PASS G-AUDIO audio bit-identical :: shipped MD5=856871eba68df507909379f3f08a7acf / new MD5=856871eba68df507909379f3f08a7acf
+PASS G-FRAMES 3185 frames 1080x1920 :: 1080,1920,3185; dur 106.166s vs shipped 106.166s
+FAIL G-SLOT every clip >= slot+0.05 s, trim only (no tpad/reverse/setpts/zoompan in cut_uplift.py) :: S01 4.04/2.00; S02 8.04/7.97; S03 4.04/3.93; S04 8.04/7.97; S05 4.04/3.13; S06 4.04/3.60; S07 4.04/3.90; S08 8.04/7.97; S09 3.04/2.93; S10 10.04/9.90; S11 7.04/5.00; S12 4.04/3.60; S13 7.04/6.97; S14 10.04/9.13; S15 6.04/5.90; S16 8.04/7.97; S17 7.04/6.53; S18 8.04/7.77
+FAIL G-MOTION new clips: zoom 1.000+-0.010, not frozen, baked text first==last :: f03a_4s: zoom 1.000 meandiff 0.24 title 2.22 caption 3.33 blue-motif px 1028->956 used 76f ok | f03b_4s: zoom 1.000 meandiff 1.57 title 1.51 caption 5.53 blue-motif px 1376->1344 used 87f CHECK | f03c_4s: zoom 1.000 meandiff 0.76 title 1.36 caption 3.15 blue-motif px 2164->2724 used 95f CHECK | f04b_3s: zoom 1.000 meandiff 0.64 title 1.67 caption 0.84 blue-motif px 512->296 used 71f CHECK | f06b_4s: zoom 1.001 meandiff 1.57 title 2.72 caption 2.67 blue-motif px 216->276 used 87f CHECK | f08b_6s: zoom 1.001 meandiff 0.86 title 1.69 caption 1.11 blue-motif px 72->0 used 143f CHECK | f09b_7s: zoom 1.000 meandiff 1.65 title 2.55 caption 3.26 blue-motif px 7124->200 used 158f CHECK
+PASS G-KEEPOUT no stroke on baked text / faces / blue motif (real frames, <3% px) :: M1: 26889px, motif/text overlap 0.1% (dark-ink 0.1%) ok | M2: 3127px, motif/text overlap 0.0% (dark-ink 0.0%) ok | M3: 3925px, motif/text overlap 1.5% (dark-ink 1.5%) ok | M4: 1418px, motif/text overlap 0.0% (dark-ink 0.0%) ok | M5: 1305px, motif/text overlap 0.0% (dark-ink 0.0%) ok
+   M1 "kiss oil"@2.5 start f73 (-2f) ok
+   M2 "five fifty both"@46.46 start f1392 (-2f) ok
+   M3 "forgiven"@71.08 start f2130 (-2f) ok
+   M4 "receipt"@80.2 start f2404 (-2f) ok
+   M5 "faith"@91.9 start f2756 (-1f) ok
+   spacing>=90f ok count 5<=8; first 73f>=30; last mark ends f2930 <= 3095 (last 3 s quiet); covers S01 0-60 / S18 2952+ untouched
+PASS G-MARKS word-tied, spacing, count, quiet zones :: 5 marks; all within -3..0 f of the word
+FINISHED

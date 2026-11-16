@@ -1,0 +1,113 @@
+{
+  "schema": "packaging/1",
+  "_status": "2026-11-10 card for the LOCKED film (owner: lock it, post tonight). Title proposed by Claude; checked by the blind guardrail panel's hook seat (panel_final_r1). Owner has not yet seen the title.",
+  "episode": "06_talitha_cumi",
+  "person": "Jairus' daughter",
+  "person_tag": "#JairusDaughter",
+  "name_match": "Jairus",
+  "women": true,
+  "search_class": "modest: 'jairus daughter bible story', 'jesus raises jairus daughter', 'talitha cumi' (sermon/song results) all autocomplete; 'mark 5' is crowded by Iron Man. 'too late jesus' returns almost nothing.",
+  "search_phrases": [
+    "jairus daughter bible story",
+    "jesus raises jairus daughter",
+    "talitha cumi",
+    "be not afraid only believe",
+    "mark 5"
+  ],
+  "search_evidence": {
+    "source": "YouTube search suggestions (suggestqueries.google.com, client=firefox, ds=yt, hl=en), fetched 2026-11-10, 10 queries; file _packaging/06_talitha_cumi/autocomplete_2026-11-10.txt",
+    "grade": "B (one dated snapshot of autocomplete, not search volume)"
+  },
+  "famous_neighbours": [
+    "Jesus",
+    "Mark 5",
+    "the woman who touched His cloak"
+  ],
+  "curiosity_gap": "The news says the girl is dead and it is too late; Jesus keeps walking. What does He do when He gets there?",
+  "curiosity_question": "Why would Jesus keep walking after the news said the girl was dead?",
+  "scripture": {
+    "primary": "Mark 5:35-43",
+    "read_it": "Mark 5:21-24, Mark 5:35-43",
+    "narration_covers": [
+      "Mark 5:22-24",
+      "Mark 5:35-43"
+    ]
+  },
+  "name_reveal": {
+    "decision": "early_spoken",
+    "note": "Jesus is named in the first spoken words. Jairus is never named in the film (he is 'a father'); the title tail, description line 1 and tags carry 'Jairus' daughter' for search.",
+    "compensation": [
+      "title",
+      "description_line_1",
+      "pinned_comment"
+    ]
+  },
+  "first_seconds": {
+    "stake_in_3s": true,
+    "first_spoken_line": "A father begs Jesus: my little girl is dying.",
+    "stake_source": "on-screen text box from frame 0: 'A father begs Jesus' / 'My little girl is dying.' (a text box that stays 5.3 s as part of the film, not a separate 2.4 s hook label; the spoken opener states the stake at 2.4-4.0 s)",
+    "waiver": ""
+  },
+  "youtube": {
+    "title": "She Was Dead. Jesus Went Anyway | Jairus' Daughter Bible Story",
+    "line1": "Jairus' daughter in the Bible: a father begs Jesus to save his dying girl. On the road, the news comes that she is dead (Mark 5:35-43).",
+    "line2": "\"Thy daughter is dead: why troublest thou the Master any further?\" In plain words: it is too late, do not bother Him now.",
+    "read_it": "Read it: Mark 5:21-24, Mark 5:35-43.",
+    "hashtags": [
+      "#JairusDaughter",
+      "#TalithaCumi",
+      "#Mark5",
+      "#Jesus",
+      "#Bible"
+    ],
+    "tags": [
+      "jairus daughter",
+      "jairus daughter bible story",
+      "jesus raises jairus daughter",
+      "talitha cumi",
+      "talitha koum",
+      "mark 5",
+      "mark 5 35-43",
+      "be not afraid only believe",
+      "jesus raises the dead",
+      "bible story short"
+    ]
+  },
+  "title_class": "B",
+  "send_to": "someone who needs to hear Jesus say: Be not afraid",
+  "next_teaser": "Next: another time someone told Jesus to stop, and He did not.",
+  "shareable_fact": "In Mark 5 Jesus speaks to the dead girl in her own language, Aramaic: Talitha cumi, little girl, get up (5:41). She was twelve (5:42).",
+  "ask_line": "Follow for Jesus in the whole Bible, one story at a time.",
+  "pinned_comment": "Has anyone ever told you it was too late? What did Jesus say back to the father? Read it: Mark 5:35-43.",
+  "spoiler_patterns": [
+    "raised",
+    "came back to life",
+    "rose from the dead",
+    "she lived"
+  ],
+  "release": {
+    "stage": 1,
+    "order": 1,
+    "note": "Owner posts tonight, 2026-11-10 (before the 30-episode hold ends; the owner's own call)."
+  },
+  "content_note": "Content note: a child is said to have died; nothing violent is shown.",
+  "measured": {
+    "violence_words_in_narration": 0,
+    "duration_s": 53.9,
+    "name_first_spoken_pct": 2,
+    "ending_pct": 6,
+    "source": "measured on swirls_episode_06_talitha_cumi_final_sfx.mp4 (voice ends 50.8 s)"
+  },
+  "panels": {
+    "discoverability": {
+      "run": true,
+      "record": "swirls_episode_06_talitha_cumi/panel_final_r1/panel_r1",
+      "note": "2026-11-10. Hook and retention seat (codex) judged a draft title as a stranger would tap it; the title was then rewritten to name the dying daughter (its main note). No separate 6-seat packaging panel was run, to make tonight's post."
+    },
+    "guardrails": {
+      "run": true,
+      "record": "swirls_episode_06_talitha_cumi/panel_final_r1/panel_r1",
+      "note": "2026-11-10. Blind, film only: Fable judge, Sonnet newcomer, Claude CLI Bible reader, Codex CLI hook, Grok CLI global."
+    }
+  }
+}

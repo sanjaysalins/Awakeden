@@ -1,0 +1,125 @@
+{
+  "schema": "packaging/1",
+  "_status": "2026-11-14 card for the LOCKED v3 film (owner 'lock it') with the owner-picked title + movie-poster thumbnail ('go with your pick'). Title from a blind title round (packaging/title_r1: 5 writers incl. Fable, 4 of 5 converged; 5 blind judges). Poster from a blind key-art round (packaging/poster_r1: 4 seats, 10 renders, 4 blind judges all #1 the jar poster; judge-converged fix: bigger teal runner). Publish copy: in-engine red team + external 5-CLI panel (cursor/claude/gemini/codex/grok, upload/_independent_review/20261114-112129), all REVISE, convergent fixes applied ('ran' and 'went home' cut to match John 4:28 'went her way into the city'; 'a water' -> 'water from God'; John 4 front-loaded on Facebook; gospel line added; Instagram 5 hashtags). Open for owner: 3 of 5 panel seats + real autocomplete say '| Woman at the Well' beats '| Jesus at the Well' for search. | 2026-11-14 owner 'yes': title tail -> '| Woman at the Well'.",
+  "episode": "17_woman_at_well",
+  "person": "Jesus and the woman at the well",
+  "person_tag": "#WomanAtTheWell",
+  "name_match": "Woman|Jesus",
+  "women": true,
+  "search_class": "strong: 'woman at the well' (+ bible story, + the chosen, + sermon, + explained), 'jesus and the samaritan woman' (+ at the well, + bible story, + cartoon), 'samaritan woman at the well', 'john 4' (+ kjv, + woman at the well), 'come see a man' all autocomplete. 'jesus at the well', 'she left her water jar', 'why did the woman leave her jar' have no suggestions.",
+  "search_phrases": [
+    "woman at the well",
+    "jesus and the samaritan woman",
+    "samaritan woman at the well",
+    "woman at the well bible story",
+    "john 4 woman at the well",
+    "come see a man"
+  ],
+  "search_evidence": {
+    "source": "YouTube search suggestions (suggestqueries.google.com, client=firefox, ds=yt, hl=en), fetched 2026-11-14, 10 queries; file _packaging/17_woman_at_well/autocomplete_2026-11-14.txt",
+    "grade": "B (one dated snapshot of autocomplete, not search volume)"
+  },
+  "famous_neighbours": [
+    "Jesus",
+    "woman at the well",
+    "Samaritan woman",
+    "living water"
+  ],
+  "curiosity_gap": "She walked to a well to fetch water, then left her jar behind and went back to town. Why would anyone leave the thing she came for?",
+  "curiosity_question": "What would make you drop the thing you came for?",
+  "scripture": {
+    "primary": "John 4:4-42",
+    "read_it": "John 4:4-42",
+    "narration_covers": [
+      "John 4:6-7",
+      "John 4:9",
+      "John 4:13-14",
+      "John 4:16-18",
+      "John 4:25-26",
+      "John 4:28-29",
+      "John 4:39-42"
+    ]
+  },
+  "name_reveal": {
+    "decision": "early_spoken",
+    "note": "Jesus is named in the second spoken sentence (8.1 s, 9% of runtime) and seen from the first shots.",
+    "compensation": [
+      "title",
+      "description_line_1"
+    ]
+  },
+  "first_seconds": {
+    "stake_in_3s": true,
+    "first_spoken_line": "She came for water. She left without her jar. Why?",
+    "stake_source": "spoken 0.0-2.6 s over the jar alone by the well",
+    "waiver": ""
+  },
+  "youtube": {
+    "title": "Why Did She Leave Her Jar? | Woman at the Well",
+    "line1": "Jesus and the woman at the well in the Bible (John 4): she came for water and went back to town without her jar. Why?",
+    "line2": "\"The woman then left her waterpot, and went her way into the city, and saith to the men, Come, see a man, which told me all things that ever I did: is not this the Christ?\" (John 4:28-29, KJV)",
+    "read_it": "Read the whole story: John 4:4-42.",
+    "hashtags": [
+      "#WomanAtTheWell",
+      "#John4",
+      "#Jesus",
+      "#Bible",
+      "#LivingWater"
+    ],
+    "tags": [
+      "woman at the well",
+      "jesus and the samaritan woman",
+      "samaritan woman at the well",
+      "woman at the well bible story",
+      "jesus and the woman at the well bible story",
+      "john 4",
+      "john 4 kjv",
+      "john 4 woman at the well",
+      "living water",
+      "living water jesus",
+      "come see a man",
+      "never thirst again",
+      "jesus at the well",
+      "bible story short"
+    ]
+  },
+  "title_class": "A",
+  "send_to": "someone who feels too known to be wanted",
+  "next_teaser": "More people who met Jesus, one story at a time.",
+  "shareable_fact": "In John 4:28 the woman leaves her waterpot at the well and goes into the city to tell the men about Jesus.",
+  "ask_line": "Follow for Jesus in the whole Bible, one story at a time.",
+  "pinned_comment": "She came for water and left her jar behind. What would make you drop the thing you came for? Read it: John 4:4-42.",
+  "spoiler_patterns": [
+    "I that speak unto thee",
+    "five husbands",
+    "saviour of the world"
+  ],
+  "release": {
+    "stage": 1,
+    "order": 4,
+    "note": "Upload-ready 2026-11-14. Owner decides when to post (30-episode posting hold applies)."
+  },
+  "content_note": "",
+  "measured": {
+    "violence_words_in_narration": 0,
+    "duration_s": 91.05,
+    "name_first_spoken_pct": 9,
+    "ending_pct": 3,
+    "source": "measured on batches/cluster_04_encounters/woman_at_well_short/visual/woman_at_well_final.mp4 (sha d3fb8f53...) and its words.json: 'Jesus' first at 8.08 s, voice ends 88.02 s, 3.0 s hold"
+  },
+  "panels": {
+    "discoverability": {
+      "run": true,
+      "record": "poc_pop_halftone/woman_at_well/packaging/title_r1 + poster_r1; batches/cluster_04_encounters/woman_at_well_short/upload/_independent_review/20261114-112129",
+      "note": "2026-11-14. Blind title round (5 writers + 5 judges), blind key-art round (4 seats + 4 judges incl. Fable), then the external 5-CLI panel on the real upload text."
+    },
+    "guardrails": {
+      "run": true,
+      "record": "poc_pop_halftone/woman_at_well/film_panel/panel_r1",
+      "note": "2026-11-13. Blind finished-film panel, 5 seats (Fable judge, Claude Bible, Codex hook, Grok global, Sonnet newcomer): 0 Bible errors, scores 7/6/7/7/5; 3 narrator lines fixed (owner yes)."
+    }
+  },
+  "overrides": {
+    "R03": "Owner picked 'Why Did She Leave Her Jar? | Woman at the Well' on 2026-11-14 (swap from '| Jesus at the Well' after 3/5 panel seats + real autocomplete). 'Bible' is carried by description line 1, #Bible and the tags; the title's job is the curiosity gap plus the searched phrase."
+  }
+}

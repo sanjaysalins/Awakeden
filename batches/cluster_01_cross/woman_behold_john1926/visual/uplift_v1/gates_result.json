@@ -1,0 +1,84 @@
+{
+ "U1": {
+  "pass": true,
+  "evidence": "new 1080x1920 30/1 frames 1772 vs shipped 1772; audio 59.070998s vs 59.070998s; video 59.066667s vs 59.066667s"
+ },
+ "U2": {
+  "pass": true,
+  "evidence": "audio MD5 new=MD5=ec440b1d91ccee198b6340dd676a17b2 shipped=MD5=ec440b1d91ccee198b6340dd676a17b2"
+ },
+ "U4": {
+  "pass": true,
+  "evidence": "23 panel slots; worst factor 1.038x; boomerang slots 0; stretched slots: beat 3 p0 mary_infant_shadow slot 5.233s clip 5.042s x1.038"
+ },
+ "U5": {
+  "pass": true,
+  "evidence": "uses per clip {'simeon_baby_temple': 1, 'mary_infant_shadow_arc': 1, 'mary_infant_shadow': 1, 'golgotha_hill_wide': 3, 'mary_at_cross': 3, 'jesus_looks_down': 2, 'mary_and_john': 3, 'john_watching': 3, 'john_leads_home': 1, 'face_on_cross': 1, 'nail_through_hand': 1, 'us_under_cross_shadow': 1, 'mourners_only_son': 1, 'risen_mercy_hand': 1}; full-bleed uses {'simeon_baby_temple': 1, 'mary_infant_shadow_arc': 1, 'mary_at_cross': 1, 'golgotha_hill_wide': 1, 'mary_and_john': 1, 'john_watching': 1, 'john_leads_home': 1, 'face_on_cross': 1, 'nail_through_hand': 1, 'mourners_only_son': 1, 'risen_mercy_hand': 1}; same clip twice on a page: none; >3 uses: none; full-bleed >1: none; inserts (4-frame recalls) are exempt by design"
+ },
+ "U6a": {
+  "pass": true,
+  "evidence": "4 marks; count ok, none overlap, none before their word, none in a JESUS beat, none on the last beat"
+ },
+ "_marks": [
+  {
+   "id": "M1",
+   "kind": "thread",
+   "at": 347,
+   "until": 392,
+   "word": {
+    "w": "sword",
+    "start": 11.545,
+    "frame": 347
+   }
+  },
+  {
+   "id": "M2",
+   "kind": "route",
+   "at": 600,
+   "until": 645,
+   "word": {
+    "w": "her",
+    "start": 19.928,
+    "frame": 598
+   }
+  },
+  {
+   "id": "M3",
+   "kind": "route",
+   "at": 1148,
+   "until": 1198,
+   "word": {
+    "w": "took",
+    "start": 38.235,
+    "frame": 1148
+   }
+  },
+  {
+   "id": "M4",
+   "kind": "thread",
+   "at": 1265,
+   "until": 1308,
+   "word": {
+    "w": "son",
+    "start": 42.137,
+    "frame": 1265
+   }
+  }
+ ],
+ "U6b/U7": {
+  "pass": true,
+  "evidence": "marks-only render sampled 6 times per mark against no_draw boxes and caption zones: 0 px inside any no_draw box or caption zone"
+ },
+ "U3": {
+  "pass": true,
+  "evidence": "unchanged beats [1, 2, 4, 9]: 17 frames compared, max mean-abs pixel diff 1.846 (limit 2.0); [(1, 1.741), (1, 1.846), (1, 1.587), (1, 1.659), (1, 1.739), (2, 1.127), (2, 1.354), (2, 1.529), (2, 1.482), (2, 1.625), (4, 0.732), (4, 0.904), (4, 0.981), (4, 1.069), (4, 1.046), (9, 1.722), (9, 1.637)]"
+ },
+ "U8": {
+  "pass": null,
+  "evidence": "manual contact-sheet look, see run notes"
+ },
+ "U9": {
+  "pass": null,
+  "evidence": "NOT RUN: needs the independent Fable seat + AI panel before any pin or upload"
+ }
+}

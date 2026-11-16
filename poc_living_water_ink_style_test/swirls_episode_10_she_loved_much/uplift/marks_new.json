@@ -1,0 +1,6 @@
+[
+ {"id": "M4", "device": "S5 receipt tick", "shot": "S15", "word": "receipt", "word_t": 80.20, "until": 2495,
+  "strokes": [{"pts": [[108, 905], [150, 948], [244, 838]], "t0": 2404, "dur": 10, "width": 6}]},
+ {"id": "M5", "device": "S2 underline", "shot": "S17", "word": "faith", "word_t": 91.90, "until": 2930,
+  "strokes": [{"pts": [[425, 1888], [668, 1884]], "t0": 2756, "dur": 10, "width": 5}]}
+]

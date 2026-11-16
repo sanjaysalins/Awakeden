@@ -1,3 +1,89 @@
+## 2026-11-16 (night) STOPPED - Quality uplift of the ready shorts (Swirls + comic); Awakeden retired, YouTube-only tracker.
+**Full detail:** `_quality_uplift_20261116/HANDOVER_RESUME.md` (top block = first thing tomorrow).
+- Ready to lock (owner OK needed): Can Any Good Thing fix1, The Cross That Wasn't His fix1, Where Are the Nine fix1, Woman Behold fix1, She Loved Much fix1.
+- Waiting on owner: Bier redo (cap $49 -> $56), Jacob's Ladder cinematic score (~$1, blind panel first), OpenArt top-up (49 credits).
+- F: has room again: first job = move fixed films from C:\Users\sanjay\JesusInTheBible_overflow\uplift_fix\ to F:.
+- Spend ~$38.91 of $49 cap, ledgered. Nothing running.
+
+## 2026-11-16 (night) STOPPED - Two Drivers + challenge gates. E9 (Luke 8) gate = NO PASS, NO FILM.
+**Full detail:** `_roadmap/HANDOVER_RESUME.md` (start-tomorrow block at top).
+- Gates built + red-teamed; first real run on E9 hunt2 -> no card passed (best card "God"->"Jesus" judged already known; others stretches). E9 words C3 NOT locked.
+- Next: ask owner "shelve E9, run the gates on T12 (Isaiah 6 -> John 12:41)?" + fix Grok judge-row parser. $0 spent. Committed.
+
+## 2026-11-16 (00:00) STOPPED - Prophecy "Immanuel" (Isaiah 7:14 -> Matthew 1), folder prophecy/02_immanuel (Christmas pair to Ep 01 Bethlehem).
+**Full detail:** `prophecy/02_immanuel/HANDOVER_RESUME.md` (top block = first thing tomorrow).
+- Words LOCKED, voice LOCKED (Mix B, 54.0 s), 6 pictures + ending M3d (walking, flame, human size), 7 PixVerse V6 clips done + QC'd. Spend ~$2.47 ledgered.
+- Next: owner looks at `prophecy/02_immanuel/_CLIPS.html` (P1/P4 small fixes in edit, M2 angel kneels = owner call) -> Remotion build (copy BethlehemV6, comp id without "_") -> score quote -> film panel -> packaging. Posting held. Nothing committed.
+- Note: a separate session also has an "Ep 02" (prophecy/02_nazareth, below). Episode numbering needs the owner's call.
+
+## 2026-11-15 (late night) STOPPED - Prophecy 02 "He stopped mid-sentence" (Isaiah 61 -> Luke 4, Nazareth) + Thief comic formula LOCKED.
+**Full detail:** `prophecy/02_nazareth/HANDOVER_RESUME.md` (top block = first thing tomorrow).
+- Thief comic-pages model film LOCKED (v3): `poc_comic_page/_ELEVATE/formula/MODEL_FILM_LOCK.json`; formula card `poc_comic_page/_ELEVATE/formula/design/FORMULA_CARD.md` (comic pages, >=60% on 2+ panel pages). Test copy only; the uploaded Thief film is not replaced.
+- Nazareth: words v5 LOCKED (blind writers + 4 blind tests), voice 59.18 s, 14 stills + 14 clips (OpenArt), film v1 built ($0, gates pass, old ending). Film v2 (new spoken closing line "His welcome is still open, for you, today." + $0 fixes) was building at stop: check `prophecy/02_nazareth/film/NAZARETH_COMIC_v2.mp4`; if missing, rerun from `prophecy/02_nazareth/V2_REQUEST.md`.
+- Next: owner watches v2 -> score (~$0.90, quote) -> SFX -> blind film check -> packaging. Spend ~$5.10 ledgered. Nothing committed. Posting held.
+
+## 2026-11-15 (night) STOPPED - Prophecy 01 "Born in Bethlehem": v3 and v4 films built (59.3 s, no music yet), owner to pick tomorrow.
+**Full detail:** `prophecy/01_bethlehem/HANDOVER_RESUME.md` (top block). New words v2 LOCKED (hook "Did they go?" / landing "Before anyone went to Him, He came to us."), new voice (~$0.25), Nano Banana 2 Lite pages + PixVerse V6 clips (Barabbas pan prompt). v3 = Fable design built by me; v4 = Fable designed + built (hand-drawn map, footprints, camels). Next: owner picks v3/v4 -> score + SFX -> guardrail film panel -> packaging. Episode ~$6.00 ledgered. Nothing committed.
+
+## 2026-11-14 (late night) HANDOVER - Blind Bartimaeus DONE + PUBLISH-READY; no-AI-wording rule enforced; committed + pushed to main (91ddce8). Stopped for the night.
+
+**Full detail:** `poc_desert_storybook_heroes/bartimaeus/HANDOVER_RESUME.md`. **Recipe for similar episodes:** `poc_desert_storybook_heroes/EPISODE_PLAYBOOK.md` (13 steps).
+- Final film: `batches/cluster_04_encounters/bartimaeus_short/visual/bartimaeus_final.mp4` (= `poc_desert_storybook_heroes/bartimaeus/motion_v2_type/BARTIMAEUS_MOTION_v2.mp4`, 79.17 s). Motion "The Road Stops" + Fable lettering "Three Hands" (`_remotion/src/BartimaeusV2.tsx`).
+- Title "On His Way to Die, Jesus Stopped | Blind Bartimaeus"; poster = owner pick STOOD STILL / "for one blind man." Pack GREEN --strict, PACKAGING-READY, release_check GREEN, owner red team (5 blind seats) fixes applied. Paste page: `batches/cluster_04_encounters/bartimaeus_short/publish/PUBLISH_INDEX.html`. Posting held (30-ep target). Spend ~$17.
+- **No AI wording, ever (owner, restated):** ai_note removed from brand + engine; `publish_check` FAILs AI wording; 182 old pack files swept (`tools_strip_ai_wording.py`). CONFLICT: another session committed e5db3f6 ADDING the AI line (citing the old 2026-09-19 rule); 91ddce8 reverses it.
+- **RESUME FIRST (owner wants to "sort this tomorrow"):**
+  1. Confirm with the owner the AI rule is final, and tell any other session (memory `feedback_no_ai_wording_public_text.md`).
+  2. 3 old packs had mixed edits, so they were swept on disk but NOT committed; also not committed: `data/spend_ledger.jsonl`, `_website/manifest.yaml` (Bartimaeus entry), Woman-at-well/Bethlehem Remotion files (other sessions' work).
+  3. Already-posted videos (e.g. Zacchaeus, Barabbas, Jesus Wept, Swirls ep5, + the 6 logged in e5db3f6) may still show the AI line online: owner edits by hand in Studio.
+  4. Gotcha: `cli_publish --index` rebuilds captions.srt; re-copy `publish/captions_redteam_fixed.srt` for Bartimaeus after any --index.
+
+## 2026-11-14 NEW DIRECTION: prophecy episodes (OT promise -> fulfilled in Jesus), under 60 s. Prophecy 01 "Born in Bethlehem" WORDS LOCKED (A, the experts): prophecy/01_bethlehem/words/FINAL_WORDS_v1.md. VOICE LOCKED (Mix A, 48.5 s, ~$0.35). Next: look/style.
+
+## 2026-11-13 (late night) HANDOVER - Pop-halftone POC "Woman at the well" (John 4): bold motion + score LOCKED, 3 lines fixed, v3 awaits owner watch. Stopped for the night.
+
+**Full detail:** `poc_pop_halftone/woman_at_well/HANDOVER_RESUME.md`.
+- Owner asked for "bolder, fuller motion graphics" -> Fable design + Sonnet Remotion build (`_remotion/src/WomanWellV2.tsx`), owner LOCKED. Score (blind 4-seat panel, oud/claps/handpan, $1.31) LOCKED.
+- Film panel (5 blind seats, 0 Bible errors, scores 7/6/7/7/5) -> owner yes to fix 3 narrator lines ($0.15). Re-timed film/graphics/score for $0 -> `poc_pop_halftone/woman_at_well/WOMAN_AT_WELL_SCORED_v3.mp4` (91.04 s).
+- **2026-11-14: Woman at the well PUBLISH-READY** (pack GREEN --strict, PACKAGING-READY): batches/cluster_04_encounters/woman_at_well_short/publish/PUBLISH_INDEX.html. Title: "Why Did She Leave Her Jar? | Woman at the Well". Posting held.
+- Episode spend ~$12.63 (ledgered, `poc_pop_halftone_woman_at_well`). Nothing committed. Posting held (30-ep hold).
+
+## 2026-11-13 (night) HANDOVER - NEW desert-storybook (GPT Image 2) POC: "Blind Bartimaeus" (Mark 10:46-52). Words + voice + 17 pictures done. Stopped for the night.
+
+**Full detail:** `poc_desert_storybook_heroes/bartimaeus/HANDOVER_RESUME.md`.
+- Style: owner's Pinterest gouache look ref + GPT Image 2 (owner: "gpt did a much better job" than Nano Banana Pro). 8 hero tests in `poc_desert_storybook_heroes/` (`_HEROES.html`, `_TEST_V5.html`).
+- Words v3 LOCKED (blind writers + 2 tests + 5-guardrail panel x2, 0 Bible errors). Voice Mix A LOCKED (68.3 s). 2 character refs + 17 stills OK (2 redone). Spent ~$2.48 (ledgered, episode `poc_desert_storybook_bartimaeus`).
+- **RESUME FIRST:** ask the owner "Make the 17 clips for about $6? Say yes?" Page `poc_desert_storybook_heroes/bartimaeus/_BARTIMAEUS_PICTURES.html`. Then build -> music -> film panel -> packaging, each paid step its own yes.
+- Nothing committed.
+
+## 2026-11-12 (night) HANDOVER - NEW "Folk Print" POC: "The Second Fire" (John 21, Peter restored). Preview v1 built. Stopped for the night.
+
+**Full detail:** `poc_folk_print_style/HANDOVER_RESUME.md` (top section = resume here).
+- Owner's style ref (flat folk-art, orange/teal) -> story picked: breakfast after failure (John 21). Hook: "a fire of coals" appears only twice in the whole KJV (John 18:18 denial, John 21:9 breakfast) - verified by full-KJV search.
+- Words LOCKED (5 blind writers + 2 blind test rounds, C won 4/4). Voice LOCKED (B, 84.89 s). 17 "fuller" stills + 17 Kling pro clips done. Preview `poc_folk_print_style/SECOND_FIRE_PREVIEW_v1.mp4` (87.9 s, 9:16). Owner: "this is great".
+- **RESUME FIRST:** ask the owner "Fix clip 16 (cartoon smoke cloud) for ~$0.42?" Page `poc_folk_print_style/_WATCH_v1.html`. Then music (~$2.50), film panel, title+thumb, packaging - each paid step its own yes.
+- Spent ~$11.01 (ledgered, episode `poc_folk_print_second_fire`). Nothing committed.
+- Still open from before: Zacchaeus / Jesus Wept / Barabbas upload links; Mary & Martha (see its own handover).
+
+## 2026-11-11 (night) HANDOVER - Zacchaeus DONE, committed + pushed (291fa6b). Stopped for the night.
+
+**Full detail:** `poc_scratchy_ink/zacchaeus/HANDOVER_RESUME.md`.
+- **RESUME FIRST:** ask the owner for the Zacchaeus upload links. Log each with `.venv\Scripts\python.exe upload_tracker.py --set zacchaeus-who-was-looking <platform> <url>`, then `release_check.py` + `build_upload_tracker.py`. Turn on each platform's AI label.
+- Upload kit: `batches/cluster_04_encounters/zacchaeus_short/publish/` (PUBLISH_INDEX.html, thumbs). Film `visual/zacchaeus_final.mp4` (sha 6997b049...).
+- Still waiting on upload too: Jesus Wept (`jesus-wept-the-sentence`), Barabbas (`barabbas-son-of-the-father`).
+- Not done (optional, $0): fresh-seat re-test of the red-team fixes; search terms not checked against real autocomplete.
+- Left uncommitted on purpose: Zacchaeus media (no media rule), `_remotion/src/Root.tsx` + `ZaccPreview.tsx` (other sessions' work / rejected preview), and other sessions' edits (spend ledger lines for ep16 + Mary & Martha, STATE.md, website, Barabbas packs).
+- Gentle mode file still ON (`C:\Users\sanjay\.claude\.gentle-state` = 3).
+
+## 2026-11-11 (night) HANDOVER - NEW "Warm Storybook" POC: Mary and Martha (Luke 10:38-42). Stopped for the night.
+
+**Full detail:** `poc_warm_storybook_style/HANDOVER_RESUME.md`.
+- **RESUME FIRST:** ask the owner "Redraw 3 pictures (s03 door handle, s14 Jesus face, s15 door handle) for ~$0.25?" Page `poc_warm_storybook_style/_PICTURES.html`. No spend without a fresh yes.
+- Style = owner's 3 refs (`refs/`, `STYLE.md`); consistency sheet `CONSISTENCY.md` (owner: keep character, era, setting consistent).
+- Words D LOCKED (5 blind writers + 2 blind tests), voice LOCKED (82.13 s, narrator/Jesus/Martha), 15-shot plan, 14 stills made. Spent ~$1.61.
+- Next: redraw 3 -> owner OK -> 15 Kling pro clips (~$7 quote) -> build -> music (~$2.50 quote) -> film panel -> packaging.
+- Ep16 "Let the Little Children" is LOCKED + committed (430b42f); 2 optional $0 film fixes still unanswered (see its HANDOVER_RESUME.md).
+- Nothing committed for the new POC. Commit text only, only when asked.
+
 ## 2026-11-10 (late night) HANDOVER - SWIRLS lane: ep12 + Talitha upload-ready; NEW "Let the Little Children Come" (Mark 10) words ready to lock. Stopped for the night.
 
 **Full detail:** `poc_living_water_ink_style_test/swirls_episode_16_let_the_little_children/HANDOVER_RESUME.md`.
@@ -8884,7 +8970,7 @@ Mp4/mp3/png are git-ignored: the finals live only on disk (paths above).
 #   voice test) · ADAPT $0 reveal primitives (text_mask_reveal/iris/peel/hunt_and_lock)
 #   · SKIP higgsfield-video-explainer.
 # NEW DRAFT SKILL (all of it synthesized + every lesson from today's builds):
-#   .claude/skills/living-sketchbook/SKILL.md — the Awakeden sketch-reenactment engine
+#   .claude/skills/living-sketchbook/SKILL.md — the Salt and Light Kingdom sketch-reenactment engine
 #   (frozen style block, cast-bible casting, spread grammar 10-14/60s, multi-stage hard cuts,
 #   designed acting spreads, word-timed verse lettering + letterer laws, torn-page landing,
 #   motif-and-silence sound, measured ~105cr/60s cost model, failure-mode checklist).
@@ -9135,7 +9221,7 @@ Mp4/mp3/png are git-ignored: the finals live only on disk (paths above).
 #      at the standalone phrase (occurrence NOT preceded by "will", window 21.04-33.14); page5
 #      band "COME" at first "come" in "So come" (window 43.78-54.44), lower third of big cell.
 #   5. Concat 5 pages → ~57.68s, mux FULL narration.mp3 (PythonProject1\jesus\narration\
-#      36_In_No_Wise_Cast_Out\v1\) with apad so audio==video (INV-26), AWAKEDEN watermark
+#      36_In_No_Wise_Cast_Out\v1\) with apad so audio==video (INV-26), SALT AND LIGHT KINGDOM watermark
 #      (add_watermark.py), verify ≥3.0s hold after last word. NO captions yet (caption stage runs
 #      only after the user approves this cut by eye+ear).
 #   6. Output poc_comic_page\rung2\IN_NO_WISE_comic_v1.mp4 + _FINAL_REVIEW.html (hero video,
@@ -9174,7 +9260,7 @@ Mp4/mp3/png are git-ignored: the finals live only on disk (paths above).
 #    result, now documented honestly), and Stage 3 of the E2E doc citing a tool
 #    (`grid_choreography.py`) with the wrong input shape. Both docs updated with the fixes; a second
 #    review pass has NOT been run yet.
-# 2. Locked decision (user, 2026-07-25): painted-comic (oil painting) and the AWAKEDEN retro-comic/
+# 2. Locked decision (user, 2026-07-25): painted-comic (oil painting) and the SALT AND LIGHT KINGDOM retro-comic/
 #    Remotion track are BOTH DEPRECATED. comic-strip-native is the sole go-forward visual technique.
 #    Ink-based strips from before are UNDECIDED, not deprecated — don't assume either way.
 # 3. Ran the crop-and-recomposite test the red-team said was required, not optional, before shipping
@@ -9867,13 +9953,13 @@ ps22-02/04/05/06/07 (read_source + preview fields); `read/` grew from 14 to 19 s
 inserted into each pack's YouTube/Facebook footer. Site was built LOCALLY only — never
 deployed to awakeden.com (no `_website` deploy command was run).
 
-**5. Brand footer: "Follow Awakeden" on TikTok/Instagram/Facebook** (was "Subscribe"
+**5. Brand footer: "Follow Salt and Light Kingdom" on TikTok/Instagram/Facebook** (was "Subscribe"
 everywhere) — YouTube keeps "Subscribe". New `cta_line_social` in
 `data/upload_brand.json`; `build_footer()` picks it for non-YouTube platforms. All 57
 existing platform-copy files across 19 pieces updated, every pack re-indexed and
 re-gated GREEN.
 
-**6. AWAKEDEN watermark — designed, locked, and burned into all 22 shipped finals**
+**6. SALT AND LIGHT KINGDOM watermark — designed, locked, and burned into all 22 shipped finals**
 (now **INV-27** in `v2/SPEC.md`). Site-exact wordmark (AWAK bone + EDEN red-bright,
 Arial Black, soft shadow) — the OLD "shared split-E" mark used on thumbnails is retired
 (`pipeline/channel_dress.py draw_wordmark` rewritten; `pipeline/thumbnails.py
@@ -11070,7 +11156,7 @@ keep placeholder covers until inked rebuilds; watch-list nits from the 07-07 aud
 **LAUNCH IS PREPPED.** L1-L7 all done: 21 human-approved video finals, 13 GREEN
 publish packs (@awakeden stamped, read-links in), 39 thumbnails + watermark +
 channel dress (banner strip WRITTEN->PIERCED->FINISHED->RISEN; avatar = crown art
-+ AWAKEDEN chip; _brand/CHANNEL_DRESS.html has the instructions), upload_tracker.py
++ SALT AND LIGHT KINGDOM chip; _brand/CHANNEL_DRESS.html has the instructions), upload_tracker.py
 + site watch-modals ready. RELEASE_CALENDAR.md = launch bulk + 8 shorts/2-3 longs
 monthly. Production board: production_board.py.
 
@@ -11640,7 +11726,7 @@ and in doing so built a reusable WORLD-CONSISTENCY system for long-form stills. 
 
 ## (prev session) — SHORTS GALLERY ENGINE LOCKED + EW01/EW02 — 2026-06-27 PM
 
-**This session = designed + LOCKED the Awakeden SHORT visual engine WITH the user, built 2 finished shorts, designed plans for the other 7.**
+**This session = designed + LOCKED the Salt and Light Kingdom SHORT visual engine WITH the user, built 2 finished shorts, designed plans for the other 7.**
 
 ### ✅ What got done
 1. **SHORTS "gallery hard-cut" ENGINE — designed with the user, locked + baked.** A short = a guided GALLERY WALK of rich Baroque
@@ -11709,9 +11795,9 @@ and in doing so built a reusable WORLD-CONSISTENCY system for long-form stills. 
 
 ---
 
-## ⚡⚡⚡ (prior) TOMORROW START HERE — AWAKEDEN EYEWITNESS BATCH (2026-06-25 night) ⚡⚡⚡
+## ⚡⚡⚡ (prior) TOMORROW START HERE — SALT AND LIGHT KINGDOM EYEWITNESS BATCH (2026-06-25 night) ⚡⚡⚡
 
-**The big pivot:** the project is now branded **Awakeden**, and we built + launched its SIGNATURE format —
+**The big pivot:** the project is now branded **Salt and Light Kingdom**, and we built + launched its SIGNATURE format —
 the **eyewitness** (a biblical witness tells their story first-person, lands the CTA on Jesus). The 1:49
 Aaron pilot won the user over completely ("I am in love with this"). Foundation: `v2/EYEWITNESS_FOUNDATION.md`
 (roadmap) + `v2/EYEWITNESS_SPEC.md` (binding contract). Memories: [[awakeden-brand]], [[eyewitness-format]].
@@ -13477,7 +13563,7 @@ All edited episodes (32/33/35) re-stamped via `short_gate.py … --stamp --regis
   in it, the wolf comes first (substitution/protection). Shipped v-a as-is at the user's choice (devotional
   latitude). ⚠️ KNOWN ACCEPTED RISK: rests on the CONTESTED fold-folklore ("no gate, shepherd's body = the
   door", "no figure of speech") — John 10:1-3 itself names a doorkeeper+door. Agent flagged it pre-render;
-  user accepted (SLK = devotional, not Awakeden apologetics). Faithful core is sound (only-access + body-takes-
+  user accepted (SLK = devotional, not Salt and Light Kingdom apologetics). Faithful core is sound (only-access + body-takes-
   the-wolf grounded in John 10:11 "the good shepherd giveth his life for the sheep").
   `PythonProject1/jesus/narration/33_The_Shepherd_In_The_Gap/v1/narration.mp3`
 
@@ -13773,8 +13859,8 @@ upload kits, and a RED-TEAM of the whole plan with fixes applied (below).
 - **Per-slot verify samples mid-reframe** — the assembly Vision verify grabs a MID-slot frame,
   which often lands on a macro/insert (the mat, the pool, the crowd) instead of the establishing
   subject. Sample the establishing (early) frame per slot for stricter, truer reads.
-- **Awakeden brand signature** — Types & Shadows + Resurrection on Trial are Awakeden, not SLK;
-  their kits should sign off Awakeden + apologetic tone. (QJA/I AM/Encounters = SLK.)
+- **Salt and Light Kingdom brand signature** — Types & Shadows + Resurrection on Trial are Salt and Light Kingdom, not SLK;
+  their kits should sign off Salt and Light Kingdom + apologetic tone. (QJA/I AM/Encounters = SLK.)
 - **Cross-series overlap** — decide a dedup/stagger strategy (tracker has the map): same passage
   in multiple series = near-duplicate videos; pick one angle or space them months apart.
 - **Agent-mode servicing is heavy** (~90+ bridge calls/episode). Consider a small batch-serve

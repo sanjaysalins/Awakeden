@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Our Comic Style So Far</title>
+<style>
+:root{--bg:#f7f3ea;--ink:#1b1b1b;--card:#fff;--gold:#b8860b;--mute:#555}
+@media (prefers-color-scheme:dark){:root{--bg:#15171c;--ink:#f1ede2;--card:#20232a;--gold:#e0b44a;--mute:#aaa}}
+body{margin:0;background:var(--bg);color:var(--ink);font:20px/1.5 system-ui,Segoe UI,sans-serif;padding:0 16px 60px}
+.w{max-width:1100px;margin:auto}
+h1{font-size:2.2rem;margin:28px 0 4px}
+h2{font-size:1.6rem;margin:44px 0 8px;border-left:8px solid var(--gold);padding-left:12px}
+p{margin:6px 0 14px;color:var(--mute)}
+.pick{background:var(--card);border:3px solid var(--gold);border-radius:12px;padding:14px 18px;margin:18px 0}
+.g{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+figure{margin:0;background:var(--card);border-radius:10px;padding:8px}
+img{width:100%;display:block;border-radius:6px;cursor:zoom-in}
+figcaption{font-size:.9rem;color:var(--mute);padding:6px 2px}
+ul{padding-left:22px}li{margin:6px 0}
+#z{position:fixed;inset:0;background:#000d;display:none;align-items:center;justify-content:center;z-index:9;cursor:zoom-out}
+#z img{max-width:96vw;max-height:96vh;width:auto}
+</style></head><body><div class="w">
+
+<h1>Our Comic Style So Far</h1>
+<p>Name: <b>Gold Seam</b> (painted comic). Click any image to zoom.</p>
+
+<div class="pick"><b>In plain words:</b>
+<ul>
+<li>Bold black ink lines</li>
+<li>Painted colour, deep night blue + warm gold</li>
+<li>One light source. <b>Gold light</b> glows round Jesus</li>
+<li>Same face and robe every time (locked reference)</li>
+<li>No words baked in. Text is added later</li>
+</ul></div>
+
+<h2>1. The look: Cross (style proof)</h2>
+<div class="g">
+<figure><img src="_style_bakeoff/_goldseam_proof/goldseam_cross_final.png"><figcaption>Cross: ink + paint + night blue</figcaption></figure>
+<figure><img src="_style_bakeoff/_goldseam_proof/goldseam_doorway.png"><figcaption>Doorway</figcaption></figure>
+<figure><img src="_style_bakeoff/_goldseam_proof/goldseam_resurrection_heroshot.png"><figcaption>Resurrection hero shot</figcaption></figure>
+</div>
+
+<h2>2. Full piece: "In No Wise Cast Out"</h2>
+<p>5 comic pages. Each page = 3 panels.</p>
+<div class="g">
+<figure><img src="_piece1/stills_v2/_strip_page1.png"><figcaption>Page 1</figcaption></figure>
+<figure><img src="_piece1/stills_v2/_strip_page2.png"><figcaption>Page 2</figcaption></figure>
+<figure><img src="_piece1/stills_v2/_strip_page3.png"><figcaption>Page 3</figcaption></figure>
+<figure><img src="_piece1/stills_v2/_strip_page4.png"><figcaption>Page 4</figcaption></figure>
+<figure><img src="_piece1/stills_v2/_strip_page5.png"><figcaption>Page 5</figcaption></figure>
+</div>
+
+<h2>3. The final shot (animated version)</h2>
+<div class="g">
+<figure><img src="_piece1/pages_v3/page5_v3_last.png"><figcaption>Last frame, v3 "ALIVE". Gold light on Jesus, open arms</figcaption></figure>
+<figure><img src="_piece1/pages_v3/page1_v3_last.png"><figcaption>Page 1 last frame</figcaption></figure>
+<figure><img src="_piece1/pages_v3/page3_v3_last.png"><figcaption>Page 3 last frame</figcaption></figure>
+</div>
+
+<h2>4. Other styles we tried and passed on</h2>
+<div class="g">
+<figure><img src="_style_bakeoff/_contact_strip.png"><figcaption>Round 1: storybook, action, webtoon, manga, noir, Doré...</figcaption></figure>
+<figure><img src="_style_bakeoff/_contact_strip_round2.png"><figcaption>Round 2</figcaption></figure>
+</div>
+
+<h2>Videos (file links)</h2>
+<ul>
+<li><a href="_piece1/IN_NO_WISE_GOLDSEAM_v3_ALIVE_sfx.mp4">Latest cut: v3 ALIVE + sound</a></li>
+<li><a href="_piece1/IN_NO_WISE_GOLDSEAM_LOCKED.mp4">LOCKED cut</a></li>
+</ul>
+
+<h2>Other comic work found</h2>
+<ul>
+<li><a href="../.claude/skills/painted-comic/_PAINTED_COMIC_DNA_REFERENCE.html">Painted-comic (Noah / Ark) reference</a></li>
+<li><a href="../longform/_style_poc/COMIC.html">Long-form comic style test</a></li>
+<li><a href="_GOLD_SEAM_DNA_SHOWCASE.html">Gold Seam DNA showcase (earlier page)</a></li>
+</ul>
+
+</div>
+<div id="z"><img></div>
+<script>
+const z=document.getElementById('z'),zi=z.querySelector('img');
+document.querySelectorAll('figure img').forEach(i=>i.onclick=()=>{zi.src=i.src;z.style.display='flex'});
+z.onclick=()=>z.style.display='none';
+</script></body></html>

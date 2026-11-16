@@ -1,0 +1,154 @@
+{
+ "fps": 30,
+ "size": [
+  1080,
+  1920
+ ],
+ "total_frames": 3185,
+ "shots": [
+  {
+   "id": "S01",
+   "page": "front",
+   "f0": 0,
+   "f1": 60,
+   "src": "front_cover.mp4",
+   "words": "No water for his feet."
+  },
+  {
+   "id": "S02",
+   "page": "F01",
+   "f0": 60,
+   "f1": 299,
+   "src": "swirls_episode_10_she_loved_much_f01_9x16.mp4",
+   "words": "No kiss. No oil. ... at his own table."
+  },
+  {
+   "id": "S03",
+   "page": "cover-notitle",
+   "f0": 299,
+   "f1": 417,
+   "src": "../_bakeoff_format_v2/B1/ep10_cover_notitle_try1.mp4",
+   "words": "A woman he hadn't invited walked in anyway"
+  },
+  {
+   "id": "S04",
+   "page": "F02",
+   "f0": 417,
+   "f1": 656,
+   "src": "swirls_episode_10_she_loved_much_f02_9x16.mp4",
+   "words": "A woman in the city, which was a sinner... behind him weeping,"
+  },
+  {
+   "id": "S05",
+   "page": "F03A",
+   "f0": 656,
+   "f1": 750,
+   "src": "uplift/clips/f03a_4s.mp4",
+   "words": "and began to wash his feet"
+  },
+  {
+   "id": "S06",
+   "page": "F03B",
+   "f0": 750,
+   "f1": 858,
+   "src": "uplift/clips/f03b_4s.mp4",
+   "words": "with tears... and kissed his feet,"
+  },
+  {
+   "id": "S07",
+   "page": "F03C",
+   "f0": 858,
+   "f1": 975,
+   "src": "uplift/clips/f03c_4s.mp4",
+   "words": "and anointed them with the ointment."
+  },
+  {
+   "id": "S08",
+   "page": "F04",
+   "f0": 975,
+   "f1": 1214,
+   "src": "swirls_episode_10_she_loved_much_f04_9x16.mp4",
+   "words": "Simon thought it, not out loud"
+  },
+  {
+   "id": "S09",
+   "page": "F04B",
+   "f0": 1214,
+   "f1": 1302,
+   "src": "uplift/clips/f04b_3s.mp4",
+   "words": "Jesus answered anyway."
+  },
+  {
+   "id": "S10",
+   "page": "F05",
+   "f0": 1302,
+   "f1": 1599,
+   "src": "swirls_episode_10_she_loved_much_f05_9x16.mp4",
+   "words": "A creditor had two debtors"
+  },
+  {
+   "id": "S11",
+   "page": "F06",
+   "f0": 1599,
+   "f1": 1749,
+   "src": "swirls_episode_10_she_loved_much_f06_9x16.mp4",
+   "words": "Which of them will love him most?"
+  },
+  {
+   "id": "S12",
+   "page": "F06B",
+   "f0": 1749,
+   "f1": 1857,
+   "src": "uplift/clips/f06b_4s.mp4",
+   "words": "I suppose that he, to whom he forgave most."
+  },
+  {
+   "id": "S13",
+   "page": "F07",
+   "f0": 1857,
+   "f1": 2066,
+   "src": "swirls_episode_10_she_loved_much_f07_9x16.mp4",
+   "words": "Seest thou this woman?"
+  },
+  {
+   "id": "S14",
+   "page": "F08",
+   "f0": 2066,
+   "f1": 2340,
+   "src": "swirls_episode_10_she_loved_much_f08_9x16.mp4",
+   "words": "Her sins, which are many, are forgiven"
+  },
+  {
+   "id": "S15",
+   "page": "F08B",
+   "f0": 2340,
+   "f1": 2517,
+   "src": "uplift/clips/f08b_6s.mp4",
+   "words": "Forgiven first - love was the receipt"
+  },
+  {
+   "id": "S16",
+   "page": "F09",
+   "f0": 2517,
+   "f1": 2756,
+   "src": "swirls_episode_10_she_loved_much_f09_9x16.mp4",
+   "words": "Thy faith hath saved thee; go in peace."
+  },
+  {
+   "id": "S17",
+   "page": "F09B",
+   "f0": 2756,
+   "f1": 2952,
+   "src": "uplift/clips/f09b_7s.mp4",
+   "words": "Thy faith. That answer holds for whoever..."
+  },
+  {
+   "id": "S18",
+   "page": "back",
+   "f0": 2952,
+   "f1": 3185,
+   "src": "back_cover.mp4",
+   "words": "She came in carrying an alabaster box... + hold"
+  }
+ ]
+}

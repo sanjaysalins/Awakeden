@@ -1,0 +1,13 @@
+PASS G-AUDIO audio bit-identical :: shipped MD5=bac739ff0d413796b762109e3e10139e / new MD5=bac739ff0d413796b762109e3e10139e
+PASS G-FRAMES 1858 frames 1080x1920 :: 1080,1920,1858; dur 61.933s vs shipped 61.933s
+PASS G-SLOT every clip >= slot+0.05 s, trim only (no tpad/reverse/setpts/zoompan in cut_uplift.py) :: S01 4.00/3.93; S02 4.00/3.93; S03 3.04/2.93; S04 6.00/5.93; S05 6.04/5.97; S06 6.04/5.93; S07 4.04/3.67; S08 8.04/7.00; S09 7.04/6.90; S10 4.04/3.40; S11 9.04/8.50; S12 4.00/3.83
+FAIL G-MOTION new clips: zoom 1.000+-0.010, not frozen, baked text first==last :: f02b_3s: zoom 1.001 meandiff 3.59 title 3.05 (text-mask match 1.000) caption 2.83 blue-motif px 240->244 used 71f ok | f02c_6s: zoom 1.000 meandiff 0.30 title 2.35 (text-mask match 1.000) caption 2.52 blue-motif px 0->0 used 144f ok | f02d_6s: zoom 1.000 meandiff 2.90 title 3.90 (text-mask match 1.000) caption 3.97 blue-motif px 540->412 used 143f CHECK | f03a_4s: zoom 1.000 meandiff 3.15 title 3.27 (text-mask match 1.000) caption 2.27 blue-motif px 0->0 used 89f ok | f03_8s: zoom 1.000 meandiff 0.44 title 3.13 (text-mask match 1.000) caption 3.77 blue-motif px 232->256 used 169f ok | f04b_4s: zoom 1.000 meandiff 2.74 title 2.59 (text-mask match 1.000) caption 2.47 blue-motif px 3040->3388 used 83f ok | f05_9s: zoom 1.000 meandiff 0.73 title 5.53 (text-mask match 0.997) caption 3.99 blue-motif px 0->0 used 205f ok
+PASS G-KEEPOUT no stroke on baked text / faces / blue motif (real frames, <3% px) :: M1: 13094px, motif/text overlap 0.3% (dark-ink 0.3%) ok | M2: 2564px, motif/text overlap 0.0% (dark-ink 0.0%) ok | M3: 7308px, motif/text overlap 0.0% (dark-ink 0.0%) ok | M4: 2711px, motif/text overlap 2.0% (dark-ink 2.0%) ok | M5: 830px, motif/text overlap 0.0% (dark-ink 0.0%) ok
+   M1 "ash,"@12.08 start f360 (-2f) ok
+   M2 "unclean"@21.64 start f647 (-2f) ok
+   M3 "third"@25.06 start f750 (-2f) ok
+   M4 "stain"@36.7 start f1099 (-2f) ok
+   M5 "unclean"@51.3 start f1537 (-2f) ok
+   spacing>=90f ok count 5<=8; first 360f>=30; last mark ends f1736 <= 1768 (last 3 s quiet); covers 0-118 / 1743+ untouched
+PASS G-MARKS word-tied, spacing, count, quiet zones :: 5 marks; all within -3..0 f of the word
+GATEDONE2

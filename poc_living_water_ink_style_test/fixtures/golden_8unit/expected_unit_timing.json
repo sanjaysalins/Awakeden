@@ -1,0 +1,53 @@
+{
+ "narration_seconds": 42.3,
+ "units": {
+  "front": {
+   "start_s": 0.0,
+   "end_s": 2.6,
+   "clip_duration": 4,
+   "frames": 78
+  },
+  "f01": {
+   "start_s": 2.6,
+   "end_s": 8.6,
+   "clip_duration": 7,
+   "frames": 180
+  },
+  "f02": {
+   "start_s": 8.6,
+   "end_s": 15.1,
+   "clip_duration": 7,
+   "frames": 195
+  },
+  "f03": {
+   "start_s": 15.1,
+   "end_s": 20.6,
+   "clip_duration": 6,
+   "frames": 165
+  },
+  "f04": {
+   "start_s": 20.6,
+   "end_s": 26.6,
+   "clip_duration": 7,
+   "frames": 180
+  },
+  "f05": {
+   "start_s": 26.6,
+   "end_s": 32.6,
+   "clip_duration": 7,
+   "frames": 180
+  },
+  "f06": {
+   "start_s": 32.6,
+   "end_s": 38.1,
+   "clip_duration": 6,
+   "frames": 165
+  },
+  "back": {
+   "start_s": 38.1,
+   "end_s": 45.3,
+   "clip_duration": 10,
+   "frames": 216
+  }
+ }
+}

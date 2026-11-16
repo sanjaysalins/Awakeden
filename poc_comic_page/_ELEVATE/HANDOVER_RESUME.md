@@ -1,59 +1,36 @@
-# ELEVATE (Comic lane) - handover + resume. Written 2026-11-08 night.
+# ELEVATE (Comic lane) - handover + resume. Written 2026-11-09 night (supersedes the 2026-11-08 version).
 
 Lane: comic (Higgsfield). Worker brief: `F:\slk\PycharmProjects\JesusInTheBible\coord\LANE_COMIC.md`.
-**Spend so far: $0.** Nothing paid. Every paid step needs a quoted price + the owner's own yes.
-Owner is dyslexic: short plain words, ONE question at the end, full absolute paths + `file:///` links, NEVER auto-open anything.
+Owner is dyslexic: short plain words, ONE question at the end, full absolute paths + `file:///` links, NEVER auto-open anything. Gentle mode is ON (`C:\Users\sanjay\.claude\.gentle-state` = 3): one heavy job at a time, ffmpeg `-threads 2`, BelowNormal priority.
+Standing owner rules: nothing paid without a quoted price + the owner's own separate yes (a pick locks WORDS only); blind panels always include a Fable seat + AI seats; the 4 questions on every pick page (who for / take-away / curiosity gap / global audience); NO media to GitHub (text/code/json/html only); no AI/method wording in public text.
 
-## Goal (owner, 2026-11-08)
-"Deep analysis of how to elevate the graphic comic to a significantly better version, build a pipeline, do a bake-off."
-Then: "Don't fix current (Mockers). Work on how to elevate NEW episodes and what a great bake-off looks like."
-Budget chosen: **$0 first.**
+## STATE: Barabbas short is FINISHED, LOCKED (A5) and upload-ready. Not uploaded. Not committed.
+Piece: `F:\slk\PycharmProjects\JesusInTheBible\batches\cluster_01_cross\barabbas_short\` (slug `barabbas-son-of-the-father`, series Words from the Cross, ref Matthew 27:15-26).
+- **Final film:** `...\barabbas_short\visual\barabbas_short_A5_animated.mp4` (41.6 s, audio=video, 3.08 s landing hold). `FINAL_VIDEO.txt` points at it. `LOCKED.json` has its sha256 (re-locked after the red team, owner yes each time).
+- **Words v4 (locked):** `poc_comic_page\_ELEVATE\short_barabbas\FINAL_WORDS.md`. Angle = the NAME: "In Aramaic, Barabbas means son of the father" -> Jesus said "Abba" (Mark 14:36) -> last line "Barabbas only had the name. Jesus died so we could call God Father too." (tag GALATIANS 4:5-6). Matt 27:25 never used; no group blamed. Took 3 blind rounds: rounds 1-2 felt "tired, heard it before" (owner), the fresh-detail angle fixed it.
+- **Audio:** `...\barabbas_short\audio\narration.mp3` (38.52 s; voices narrator / pilate / crowd). v1 backup `narration_v1_backup.mp3`. Mix = score + crowd + door + choir, sidechain-ducked (built in `build_barabbas.py`, file `poc_comic_page\_ELEVATE\work\barabbas\mix_v2.m4a`). **The sound mix has NEVER been heard by Claude or (as far as noted) the owner. Ask for an ear-check.**
+- **Picture:** owner's idea = 3-panel manga grid still (nano_banana_2 9:16, character ref via --image-references) animated 10 s with `gemini_omni_flash_1_2` image-to-video (22.5 cr/10 s, 11.25/5 s, 9/4 s at 720p). 4 grid clips (`visual\grids\a1..a4.mp4`, stills g1..g4) + 6 "moment" clips replacing slideshow stretches (`visual\moments\c1-c3, d1-d3`). Owner verdict on animated grids: "absolutely great".
+- **Builder:** `poc_comic_page\_ELEVATE\build_barabbas.py` (`.venv\Scripts\python.exe poc_comic_page/_ELEVATE/build_barabbas.py A5`). Versions A..A4 + B are STALE vs the new narration timing (only A5 matches). B (pan-only control) was built from the first 4 grids with the OLD audio/lettering: if the A/B audience test is wanted, rebuild B for the new timing ($0).
+- **Pack:** `...\barabbas_short\publish\` GREEN (0 fail, 0 warn): youtube_short/tiktok/facebook/instagram .md, captions.srt (aligned to the new audio), PUBLISH_INDEX.html, thumbs 16x9/9x16/1x1/tiktok (title SON OF THE FATHER? / MATTHEW 27). Title: `In Aramaic, Barabbas means "son of the father": look who went free`. Hashtags #Barabbas #Jesus #BibleStory #Gospel #Matthew27. Catalogue entry in `_website\manifest.yaml`; `_UPLOAD_TRACKER.html` rebuilt; `release_check.py` GREEN (83 items, 0 FAIL); `check_landing_hold.py` 0 FAIL.
+- **Review pages (never auto-opened):** `...\barabbas_short\visual\_BARABBAS_AB.html` (older A4 vs A3 page, update to A5 if wanted), `...\barabbas_short\red_team\_RED_TEAM_BARABBAS.html`, `...\barabbas_short\publish\PUBLISH_INDEX.html`, `F:\slk\PycharmProjects\JesusInTheBible\_UPLOAD_TRACKER.html`.
 
-## What is DONE
-1. **Diagnosis** (4 blind seats that SAW frames: Fable, Opus, Sonnet artist, Sonnet viewer) on the finished Mockers film.
-   Page: `F:\slk\PycharmProjects\JesusInTheBible\poc_comic_page\_ELEVATE\_ELEVATE_DIAGNOSIS.html`
-   Avg scores: art 6.9, layout 4.8, motion 3.9, lettering 3.8, story 5.8, premium 4.6.
-   Convergence: 4/4 lettering = subtitles (no tails); 4/4 slideshow (long holds); 3/4 no panel grammar (split panels);
-   3/4 story too long / weak open; 3/4 face drift. Split: real clips at peaks (2 yes, Fable no).
-   Key finding: our old panels were TEXT-ONLY. Seats must SEE frames.
-2. **New-episode recipe (10 steps) + bake-off design.**
-   Page: `F:\slk\PycharmProjects\JesusInTheBible\poc_comic_page\_ELEVATE\_NEW_EPISODE_AND_BAKEOFF.html`
-   Plan page: `...\_ELEVATE\_ELEVATE_PLAN.html`
-3. **Test episodes chosen by AI panel (4 seats):** story = **today_paradise_luke2343** (OWNER PICKED; 2 seat votes, Fable preferred woman_behold).
-   Proof = **thirty_pieces_zech11** (3 of 4 seats; NOT yet confirmed by owner; second bake-off not started).
-   Design cautions from seats: keep SAME audio in every arm; test one change per arm; blind + random order; hook-first changes WORDS so test it separately.
-4. **Bake-off 1 plan page:** `F:\slk\PycharmProjects\JesusInTheBible\poc_comic_page\_ELEVATE\_BAKEOFF_1_TODAY_PARADISE.html`
-5. **Pilot (Mockers, $0, evidence only, not fixing):** arms A/B/C in `...\_ELEVATE\arms\A.mp4 B.mp4 C.mp4`, builder `...\_ELEVATE\build_arms.py`. A rebuild with a shorter balloon tail was STOPPED at owner's request.
-6. **Bake-off 1 arms BUILT ($0), all 59.07s, same audio (shipped film mix):**
-   `...\_ELEVATE\arms\TP_R0.mp4` shipped film (control) - `TP_B0` rebuilt base, old grey pills - `TP_L` +new lettering - `TP_S` +fast cut-ins - `TP_P` +3 split panels - `TP_R1` = L+S+P - `TP_W` Fable's blind wild-card recipe.
-   Builder: `...\_ELEVATE\build_tp.py <arm>` (arms R0 B0 L S P R1 W). Fable recipe: `...\_ELEVATE\tp\W_recipe.json`, rationale `...\tp\W_rationale.md`.
-   Run: `.venv\Scripts\python.exe poc_comic_page/_ELEVATE/build_tp.py <arm>` (~5-8 min per arm; run 3 in parallel).
-7. **Blind pack BUILT:** `...\_ELEVATE\pack_tp\` = film_A..G.png (24-frame sheets) + `measures.md` (cuts, longest gap, cuts/min).
-   Code key (PRIVATE, do NOT show seats): `...\_ELEVATE\KEY_tp_PRIVATE.json`
-   = A:S B:B0 C:R1 D:W E:L F:R0 G:P.
-   Measures: cuts A31 B18 C26 D28 E18 F21 G17; longest still-hold (s) A2.8 B5.0 C5.0 D3.5 E5.0 F7.9 G5.0.
+## Red team (3 blind seats, Fable + Opus + Sonnet, film-only pack in `...\barabbas_short\red_team\pack\`): all REVISE
+Fixed: Japanese-looking sky marks in the crowd clip (cut around them), tag Matt 27:22 -> 27:23, break-out burst moved to "So the robber went free", film now ends on Jesus with the cross (hand just before), clean tall thumbs, "In Aramaic" hedge (card, narration, copy), "Pilate knew", clearer last line + Galatians tag, #Easter -> #Gospel.
+NOT fixed (owner choice): flame aura (owner's style); carried cross beam reads like an X (an upright cross picture would be ~$0.70, optional); faint ghost Jesus in the first-3-seconds grid overview (minor); two seats wanted an AI-disclosure line (left out per the owner's no-AI-wording rule); Pilate-pointing beat is slowed/held so it is calm and near-still.
 
-## NEXT (do in this order)
-1. **Send blind judge seats** (Fable + Opus + Sonnet artist + Sonnet newcomer viewer; add Codex/Grok only if they can read images). Each Reads
-   `pack_tp\film_A..G.png`, `pack_tp\measures.md`, and `batches\cluster_01_cross\today_paradise_luke2343\narration.md`. NO key, NO arm names, NO my notes.
-   Ask: score 0-10 each film on stop / finish / feel / share / premium / who-what-why; rank all 7; pick best of each pair (best two vs each other);
-   top 3 reasons; "which ONE change made the difference". Note seats judge FRAMES only (not motion): motion shown by the measures.
-2. Unblind with the key. Compute per-lever gain: L vs B0 (lettering), S vs B0 (rhythm), P vs B0 (split), R1 vs B0 (all), W vs R1 (wild card), R0 vs B0.
-   Apply the pre-set rule: adopt a lever only if most seats rate it +1.0 or more.
-3. ONE simple HTML result page (big images, short words, before/after scores, "still weak" list, my pick + ONE question). Never auto-open.
-4. Paid rungs, ONLY after owner sees step 3, each with a real quote + owner yes: R3 cast sheets + cut-in plates; R4 three real clips (thief plea, Jesus turns, paradise).
-5. Confirm 2nd episode (`thirty_pieces_zech11`) with owner, then repeat on it. A win must repeat on 2 episodes.
-6. Seed viewers (5-10 real people), report odds with error bars. Simulated seats are not real viewers.
+## SPEND (all owner-approved with quoted prices; ledger rows `est_only`; the auto hook under-counts, corrective rows added)
+Manga page test 0.30; grid test 1.23; A/B POC grids+clips ~3.78 + clip 4 1.13; moments 1.86; moments 2 1.76; voice 0.09 + re-record 0.04. **Total ~$8.55.** Higgsfield credit balance is SHARED with other sessions (it ran out once; owner topped up to ~502; last seen ~381 on 2026-11-09 night). Check `~/bin/hf.exe account status` first.
 
-## Known flaws in the pilot (not bugs to chase)
-- Panels judge FRAMES; motion is only visible through the measures. Say so in the result page.
-- R1 split-panel windows show a stamp that repeats the caption text ("SAME NAILS. SAME HILL.") - minor redundancy.
-- Balloon tail anchors are estimated crop positions; some tails may be slightly off a mouth.
-- R0 (shipped film) was made by the livingpage engine; B0/L/S/P/R1 are my rebuild with old-style grey pills. Compare levers against B0, show R0 as the real baseline.
-- Hook-first WORDS not tested (audio fixed). Separate later test.
+## RESUME TOMORROW (needs owner)
+1. Owner watches `barabbas_short_A5_animated.mp4` and LISTENS to the sound (nobody has heard it). Fix anything by ear (free).
+2. Owner uploads and sends links; record with `.venv\Scripts\python.exe upload_tracker.py --set barabbas-son-of-the-father <youtube|tiktok|facebook|instagram> <url>`.
+3. Commit/push only when the owner says so. TEXT ONLY: before committing run `git diff --cached --name-only` and unstage any mp4/mp3/wav/png/jpg/gif/webm/mov; never `git add -f` media. Stage by explicit path.
+4. Optional free/cheap: update `_BARABBAS_AB.html` to A5; rebuild B for the A/B audience test; upright cross picture (~$0.70, needs a yes); hide the opening ghost Jesus.
+5. A/B audience test plan (owner approved the idea): same Barabbas film animated (A5) vs pan-only (B), post alternately on YouTube Shorts/TikTok; watch 3-second hold, average % watched, shares; odds with error bars; seed viewers matter more than the words.
+6. Next story ideas already proposed (none started): "Jesus wept" John 11:35, Zacchaeus Luke 19. Rule: find a FRESH true detail first (the Barabbas lesson), words before money, 4 questions, blind panel with Fable.
+7. Owner's two master prompts exist only in the conversation: (a) one-page manga prompt template; (b) 3-step pipeline = 3x1 grid still (nano_banana_2 9:16) -> 10 s image-to-video pan -> voice/SFX script. The grid pipeline is now the proven comic format.
+8. Coordinator housekeeping: `barabbas_short` and `today_paradise_short32` are not on `coord/BOARD.json` (only the coordinator adds); leave a note via `coord.py note comic "..."`.
 
-## Rules to keep
-- Lane folders only: `poc_comic_page/`, `poc_living_sketchbook/`, `batches/`. Never edit coordinator-only files (RESUME.md, STATE.md, tracker, pipeline/, etc.). Never git add/commit.
-- Piece `comic_elevate` is NOT on the board (only the coordinator can add). Notes go via `coord.py note comic "..."`.
-- Panels are BLIND: independent Fable seat + AI panel, no draft shown, no key. A panel pass never authorizes spend.
-- Do not auto-open any file or link.
+## Earlier work in this lane (done, kept for context)
+- 2026-11-09 earlier: comic ELEVATE bake-offs 1+2 done ($0); Mockers-style translucent pill lettering won on 2 episodes (`_BAKEOFF_1_RESULT.html`, `_BAKEOFF_2_RESULT.html`); Today in Paradise 38 s short built, locked, in catalogue/tracker, commit 76532a5 pushed (no media). Thirty Pieces already uploaded by owner: stop work on it.
+- 2026-11-08: diagnosis (4 blind seats), 10-step new-episode recipe, bake-off design (`_ELEVATE_DIAGNOSIS.html`, `_NEW_EPISODE_AND_BAKEOFF.html`).

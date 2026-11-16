@@ -1,0 +1,22 @@
+{
+ "id": "bronze-serpent-02-the-thing-that-killed-them",
+ "source": "F:/slk/PycharmProjects/JesusInTheBible/poc_living_sketchbook/god_hung_up_a_snake/GODHUNGUPASNAKE_living_sketchbook_cc_scored_sfx.mp4",
+ "output": "F:/slk/PycharmProjects/JesusInTheBible/poc_living_sketchbook/god_hung_up_a_snake/GODHUNGUPASNAKE_living_sketchbook_cc_scored_sfx_v5hook.mp4",
+ "hook_text": null,
+ "hook_skipped_reason": "Burned-in title card already shows from ~0.6s (GOD HUNG UP A SNAKE.) so hook skipped.",
+ "decode_cards": [
+  {
+   "old": "BEHELD",
+   "plain": "LOOKED AT",
+   "t0": 25.572,
+   "t1": 27.272
+  }
+ ],
+ "skipped_decodes": [
+  "serpent/pole: plain",
+  "BRASS (removed after panel round)"
+ ],
+ "title_question_proposal": "Why Did God Hang Up a Snake?",
+ "verified": true,
+ "notes": "Cards mid-frame, clear of bottom caption. Brass=bronze is the usual note on the Hebrew word. Duration equals source (checked ffprobe). Audio stream copied. Frames checked at each card time. Panel round: BRASS = BRONZE removed. Re-rendered from original source; frames re-checked."
+}

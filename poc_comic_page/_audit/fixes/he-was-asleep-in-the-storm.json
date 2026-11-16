@@ -1,0 +1,16 @@
+{
+ "id": "he-was-asleep-in-the-storm",
+ "source": "F:/slk/PycharmProjects/JesusInTheBible/poc_living_sketchbook/storm/STORM_living_sketchbook_cc.mp4",
+ "output": "F:/slk/PycharmProjects/JesusInTheBible/poc_living_sketchbook/storm/STORM_living_sketchbook_cc_v5hook.mp4",
+ "hook_text": null,
+ "hook_skipped_reason": "",
+ "decode_cards": [],
+ "skipped_decodes": [
+  "rebuked: nuance, skipped",
+  "O ye of little faith: only first YE decoded",
+  "YE (removed after panel round)"
+ ],
+ "title_question_proposal": "Why Was Jesus Asleep in the Storm?",
+ "verified": true,
+ "notes": "Hook text: WHY IS HE ASLEEP / IN THE STORM? (0-2.0s, mid-frame; Galilee note at top untouched). Source is STORM_living_sketchbook_cc.mp4 (the file in videos.json; no scored_sfx variant). Duration equals source (checked ffprobe). Audio stream copied. Frames checked at each card time. Panel round: YE = YOU removed; hook only. Re-rendered from original source; frames re-checked."
+}

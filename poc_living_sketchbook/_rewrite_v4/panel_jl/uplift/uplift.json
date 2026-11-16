@@ -1,0 +1,18 @@
+{
+ "fps": 30, "size": [1080, 1920], "total_frames": 1695,
+ "audio_from": "F:/slk/PycharmProjects/JesusInTheBible/poc_living_sketchbook/_rewrite_v4/panel_jl/video/jacobs_ladder_v3_sfx.mp4",
+ "words": "F:/slk/PycharmProjects/JesusInTheBible/_quality_uplift_20261116/design_swirls/word_timings/jl_words.txt",
+ "shots": [
+  {"id":"S01","page":"front cover","f0":0,"f1":104,"src":"F:/slk/PycharmProjects/JesusInTheBible/poc_living_water_ink_style_test/swirls_pilot_01_jacobs_ladder/_style_test_durer_woodcut/front_cover_woodcut.mp4"},
+  {"id":"S02","page":"F01","f0":104,"f1":222,"src":"F:/slk/PycharmProjects/JesusInTheBible/poc_living_water_ink_style_test/swirls_pilot_01_jacobs_ladder/the_ladder_f01_9x16.mp4"},
+  {"id":"S03","page":"F02","f0":222,"f1":371,"src":"F:/slk/PycharmProjects/JesusInTheBible/poc_living_water_ink_style_test/swirls_pilot_01_jacobs_ladder/the_ladder_f02_9x16.mp4"},
+  {"id":"S04","page":"F03","f0":371,"f1":618,"src":"clips/f03_9s.mp4","new":true},
+  {"id":"S05","page":"F04","f0":618,"f1":890,"src":"clips/f04_10s.mp4","new":true},
+  {"id":"S06","page":"F05","f0":890,"f1":969,"src":"F:/slk/PycharmProjects/JesusInTheBible/poc_living_water_ink_style_test/swirls_pilot_01_jacobs_ladder/the_ladder_f05_9x16.mp4"},
+  {"id":"S07","page":"F06","f0":969,"f1":1118,"src":"F:/slk/PycharmProjects/JesusInTheBible/poc_living_water_ink_style_test/swirls_pilot_01_jacobs_ladder/the_ladder_f06_9x16.mp4"},
+  {"id":"S08","page":"F07 Jesus","f0":1118,"f1":1311,"src":"clips/f07_7s.mp4","new":true},
+  {"id":"S09","page":"ep08 F06 (borrowed)","f0":1311,"f1":1506,"src":"F:/slk/PycharmProjects/JesusInTheBible/poc_living_water_ink_style_test/swirls_episode_08_can_any_good_thing/swirls_episode_08_can_any_good_thing_f06_9x16.mp4"},
+  {"id":"S10","page":"new back cover","f0":1506,"f1":1695,"src":"clips/back_7s.mp4","new":true}
+ ],
+ "transition": {"at":1307,"frames":8,"from":"S08","to":"S09"}
+}

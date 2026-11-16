@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Episode 12 Red Team</title>
+<style>
+:root{--bg:#fbf8f3;--fg:#1d1d1d;--card:#fff;--ok:#1f7a3d;--bad:#b3261e;--warn:#9a5b00;--mut:#666;--line:#e3dccf}
+@media (prefers-color-scheme:dark){:root{--bg:#161616;--fg:#eee;--card:#222;--ok:#5fd08a;--bad:#ff7b72;--warn:#f0b35a;--mut:#aaa;--line:#333}}
+body{background:var(--bg);color:var(--fg);font:20px/1.5 system-ui,sans-serif;margin:0 auto;padding:16px;max-width:960px}
+h1{font-size:30px;margin:8px 0}h2{font-size:24px;margin:22px 0 6px}
+.card{background:var(--card);border-radius:10px;padding:12px 16px;margin:12px 0}
+img{width:100%;border-radius:8px;cursor:zoom-in}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:600px){.two{grid-template-columns:1fr}}
+.bad{color:var(--bad);font-weight:700}.ok{color:var(--ok);font-weight:700}.warn{color:var(--warn);font-weight:700}
+table{border-collapse:collapse;width:100%}td,th{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.cap{font-size:17px;color:var(--mut)}
+</style></head><body>
+<h1>Episode 12: red team result</h1>
+<div class="card">
+  3 blind seats looked at every frame. All 3 say <span class="bad">FIX</span>.<br>
+  Fable <b>4.5</b> &middot; Opus <b>4.5</b> &middot; Sonnet <b>5.5</b> (out of 10)<br>
+  You were right: the gaps are in the pictures and the motion.
+</div>
+
+<h2>The 4 worst problems (all 3 seats agree)</h2>
+<div class="two">
+  <div class="card"><a href="z_f03_text.jpg"><img src="z_f03_text.jpg" alt="F03 page with prompt text drawn under the panels"></a>
+    <span class="bad">1. Prompt text drawn on the page</span><br>
+    "single washed foot, dry, resting no floor..." On screen 15 s (20-34 s).</div>
+  <div class="card"><a href="z_towel.jpg"><img src="z_towel.jpg" alt="End card with the towel lying on the floor"></a>
+    <span class="bad">2. Towel lies on the floor</span><br>
+    The voice says "He has not put the towel down". The picture shows it put down.</div>
+</div>
+<div class="card">
+  <span class="bad">3. Half the film is nearly still</span><br>
+  From 20 s to 62 s the picture barely moves (motion 0.03-0.19; normal is 1-3).<br>
+  Only 8 pictures in 78 s. One page stays 15 s.
+</div>
+<div class="card">
+  <span class="bad">4. Pictures come late</span><br>
+  The voice was re-recorded shorter, but the cuts stayed. From 33 s on, each picture comes 1.5-2.5 s after its words.<br>
+  "Went out, and it was night" is almost over before the door appears.
+</div>
+
+<h2>More problems (all 3 seats)</h2>
+<div class="two">
+  <div class="card"><a href="z_f06.jpg"><img src="z_f06.jpg" alt="F06: Jesus kneels at an empty basin, blue smudge by his head"></a>
+    F06 (51-63 s): Jesus at an empty basin. No feet, no Judas. Blue smudge by His head. Label "knowing he wouldn't" says the opposite of the voice.</div>
+  <div class="card"><a href="z_f04_bed.jpg"><img src="z_f04_bed.jpg" alt="F04: bread handed over standing, a bed behind"></a>
+    F04 (35-46 s): a bed in the supper room. The bread is handed over standing, like a handshake. John 13:26 says He dipped it at the table.</div>
+</div>
+<div class="card">
+  <table>
+    <tr><td>5-13 s</td><td>"The devil put it into the heart of Judas" plays over a calm Jesus face. Eyes close at 8 s.</td></tr>
+    <tr><td>4 s</td><td>The F01 page shows for 1.5 s. Nobody can read it.</td></tr>
+    <tr><td>All</td><td>Jesus's and Judas's clothes change. The table changes every page.</td></tr>
+    <tr><td>20-34 s</td><td>Jesus stands fully dressed while a man kneels to Him. John 13:4-5: He took off His garments and knelt to wash.</td></tr>
+    <tr><td>64-78 s</td><td>A floating ring like a halo. "1 JOHN 1:9" is never read out. 6.6 s of silence at the end.</td></tr>
+  </table>
+</div>
+
+<h2>What works</h2>
+<div class="card"><span class="ok">Keep</span> the opening (Judas walking out, 0-4 s) and the dark door shot (47-50 s). The words are fine.</div>
+
+<h2>Options</h2>
+<div class="card">
+  <b>A. Rebuild the pictures (recommended)</b><br>
+  Keep the locked words and voice. Make about 6 new pages and about 10 new clips with real motion, cut to the real voice timings.<br>
+  About <b>$5-6</b> on OpenArt. I will quote the exact price before any spend.<br><br>
+  <b>B. Free fixes only</b><br>
+  Re-time the cuts, trim the silent end, crop the leaked text out, add gentle camera moves.<br>
+  $0, but it stays mostly still. Seats think about 5.5-6 at best.
+</div>
+<p class="cap">Seat files: seat_fable.md, seat_sonnet.md, seat_opus.md. Evidence: BRIEF.md, sheet_1-4.jpg.</p>
+</body></html>

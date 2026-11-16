@@ -1,0 +1,526 @@
+{
+  "backend": "whisper",
+  "model": "base",
+  "words": [
+    {
+      "text": "A",
+      "start": 0.0,
+      "end": 0.1
+    },
+    {
+      "text": "father",
+      "start": 0.1,
+      "end": 0.48
+    },
+    {
+      "text": "begs",
+      "start": 0.48,
+      "end": 1.02
+    },
+    {
+      "text": "Jesus:",
+      "start": 1.02,
+      "end": 1.38
+    },
+    {
+      "text": "my",
+      "start": 2.4,
+      "end": 2.74
+    },
+    {
+      "text": "little",
+      "start": 2.74,
+      "end": 2.98
+    },
+    {
+      "text": "girl",
+      "start": 2.98,
+      "end": 3.22
+    },
+    {
+      "text": "is",
+      "start": 3.22,
+      "end": 3.52
+    },
+    {
+      "text": "dying.",
+      "start": 3.52,
+      "end": 3.84
+    },
+    {
+      "text": "On",
+      "start": 5.44,
+      "end": 5.7
+    },
+    {
+      "text": "the",
+      "start": 5.7,
+      "end": 5.82
+    },
+    {
+      "text": "road,",
+      "start": 5.82,
+      "end": 6.06
+    },
+    {
+      "text": "the",
+      "start": 6.06,
+      "end": 6.24
+    },
+    {
+      "text": "news",
+      "start": 6.24,
+      "end": 6.46
+    },
+    {
+      "text": "comes:",
+      "start": 6.46,
+      "end": 6.98
+    },
+    {
+      "text": "\"Thy",
+      "start": 7.76,
+      "end": 7.94
+    },
+    {
+      "text": "daughter",
+      "start": 7.94,
+      "end": 8.22
+    },
+    {
+      "text": "is",
+      "start": 8.22,
+      "end": 8.46
+    },
+    {
+      "text": "dead:",
+      "start": 8.46,
+      "end": 8.72
+    },
+    {
+      "text": "why",
+      "start": 9.18,
+      "end": 9.24
+    },
+    {
+      "text": "troublest",
+      "start": 9.24,
+      "end": 9.76
+    },
+    {
+      "text": "thou",
+      "start": 9.76,
+      "end": 9.94
+    },
+    {
+      "text": "the",
+      "start": 9.94,
+      "end": 10.1
+    },
+    {
+      "text": "Master",
+      "start": 10.1,
+      "end": 10.42
+    },
+    {
+      "text": "any",
+      "start": 10.42,
+      "end": 10.66
+    },
+    {
+      "text": "further?\"",
+      "start": 10.66,
+      "end": 11.0
+    },
+    {
+      "text": "Too",
+      "start": 12.28,
+      "end": 12.52
+    },
+    {
+      "text": "late.",
+      "start": 12.52,
+      "end": 12.76
+    },
+    {
+      "text": "Jesus",
+      "start": 13.42,
+      "end": 14.04
+    },
+    {
+      "text": "heard",
+      "start": 14.04,
+      "end": 14.38
+    },
+    {
+      "text": "it,",
+      "start": 14.38,
+      "end": 14.56
+    },
+    {
+      "text": "and",
+      "start": 14.56,
+      "end": 15.08
+    },
+    {
+      "text": "did",
+      "start": 15.08,
+      "end": 15.2
+    },
+    {
+      "text": "not",
+      "start": 15.2,
+      "end": 15.46
+    },
+    {
+      "text": "turn",
+      "start": 15.46,
+      "end": 15.76
+    },
+    {
+      "text": "back.",
+      "start": 15.76,
+      "end": 16.2
+    },
+    {
+      "text": "\"Be",
+      "start": 17.46,
+      "end": 17.8
+    },
+    {
+      "text": "not",
+      "start": 17.8,
+      "end": 18.0
+    },
+    {
+      "text": "afraid,",
+      "start": 18.0,
+      "end": 18.42
+    },
+    {
+      "text": "only",
+      "start": 19.1,
+      "end": 19.5
+    },
+    {
+      "text": "believe.\"",
+      "start": 19.5,
+      "end": 19.9
+    },
+    {
+      "text": "He",
+      "start": 19.9,
+      "end": 20.38
+    },
+    {
+      "text": "went",
+      "start": 20.38,
+      "end": 20.56
+    },
+    {
+      "text": "into",
+      "start": 20.56,
+      "end": 20.88
+    },
+    {
+      "text": "the",
+      "start": 20.88,
+      "end": 21.04
+    },
+    {
+      "text": "room",
+      "start": 21.04,
+      "end": 21.26
+    },
+    {
+      "text": "with",
+      "start": 21.26,
+      "end": 21.52
+    },
+    {
+      "text": "her",
+      "start": 21.52,
+      "end": 21.62
+    },
+    {
+      "text": "father",
+      "start": 21.62,
+      "end": 21.96
+    },
+    {
+      "text": "and",
+      "start": 21.96,
+      "end": 22.14
+    },
+    {
+      "text": "mother,",
+      "start": 22.14,
+      "end": 22.42
+    },
+    {
+      "text": "and",
+      "start": 22.42,
+      "end": 22.98
+    },
+    {
+      "text": "took",
+      "start": 22.98,
+      "end": 23.16
+    },
+    {
+      "text": "her",
+      "start": 23.16,
+      "end": 23.3
+    },
+    {
+      "text": "by",
+      "start": 23.3,
+      "end": 23.44
+    },
+    {
+      "text": "the",
+      "start": 23.44,
+      "end": 23.6
+    },
+    {
+      "text": "hand.",
+      "start": 23.6,
+      "end": 23.96
+    },
+    {
+      "text": "\"Talitha",
+      "start": 25.4,
+      "end": 26.04
+    },
+    {
+      "text": "cumi.\"",
+      "start": 26.04,
+      "end": 26.44
+    },
+    {
+      "text": "\"Damsel,",
+      "start": 27.02,
+      "end": 27.94
+    },
+    {
+      "text": "I",
+      "start": 28.68,
+      "end": 28.72
+    },
+    {
+      "text": "say",
+      "start": 28.72,
+      "end": 28.96
+    },
+    {
+      "text": "unto",
+      "start": 28.96,
+      "end": 29.24
+    },
+    {
+      "text": "thee,",
+      "start": 29.24,
+      "end": 29.66
+    },
+    {
+      "text": "arise.\"",
+      "start": 29.66,
+      "end": 30.64
+    },
+    {
+      "text": "Little",
+      "start": 31.82,
+      "end": 32.46
+    },
+    {
+      "text": "girl,",
+      "start": 32.46,
+      "end": 32.76
+    },
+    {
+      "text": "get",
+      "start": 33.28,
+      "end": 33.42
+    },
+    {
+      "text": "up.",
+      "start": 33.42,
+      "end": 33.64
+    },
+    {
+      "text": "She",
+      "start": 34.14,
+      "end": 35.04
+    },
+    {
+      "text": "got",
+      "start": 35.04,
+      "end": 35.22
+    },
+    {
+      "text": "up",
+      "start": 35.22,
+      "end": 35.4
+    },
+    {
+      "text": "and",
+      "start": 35.4,
+      "end": 35.56
+    },
+    {
+      "text": "walked.",
+      "start": 35.56,
+      "end": 35.98
+    },
+    {
+      "text": "The",
+      "start": 37.44,
+      "end": 37.76
+    },
+    {
+      "text": "news",
+      "start": 37.76,
+      "end": 38.02
+    },
+    {
+      "text": "had",
+      "start": 38.02,
+      "end": 38.22
+    },
+    {
+      "text": "said",
+      "start": 38.22,
+      "end": 38.44
+    },
+    {
+      "text": "it",
+      "start": 38.44,
+      "end": 38.58
+    },
+    {
+      "text": "was",
+      "start": 38.58,
+      "end": 38.72
+    },
+    {
+      "text": "over.",
+      "start": 38.72,
+      "end": 39.02
+    },
+    {
+      "text": "Jesus",
+      "start": 39.96,
+      "end": 40.28
+    },
+    {
+      "text": "had",
+      "start": 40.28,
+      "end": 40.56
+    },
+    {
+      "text": "heard",
+      "start": 40.56,
+      "end": 40.76
+    },
+    {
+      "text": "it,",
+      "start": 40.76,
+      "end": 40.98
+    },
+    {
+      "text": "and",
+      "start": 40.98,
+      "end": 41.32
+    },
+    {
+      "text": "gone",
+      "start": 41.32,
+      "end": 41.5
+    },
+    {
+      "text": "on.",
+      "start": 41.5,
+      "end": 41.88
+    },
+    {
+      "text": "If",
+      "start": 41.88,
+      "end": 42.62
+    },
+    {
+      "text": "you",
+      "start": 42.62,
+      "end": 43.38
+    },
+    {
+      "text": "hear",
+      "start": 43.38,
+      "end": 43.64
+    },
+    {
+      "text": "that",
+      "start": 43.64,
+      "end": 43.86
+    },
+    {
+      "text": "it",
+      "start": 43.86,
+      "end": 43.98
+    },
+    {
+      "text": "is",
+      "start": 43.98,
+      "end": 44.16
+    },
+    {
+      "text": "too",
+      "start": 44.16,
+      "end": 44.36
+    },
+    {
+      "text": "late,",
+      "start": 44.36,
+      "end": 44.68
+    },
+    {
+      "text": "hear",
+      "start": 45.42,
+      "end": 45.58
+    },
+    {
+      "text": "Him",
+      "start": 45.58,
+      "end": 45.94
+    },
+    {
+      "text": "instead:",
+      "start": 45.94,
+      "end": 46.66
+    },
+    {
+      "text": "\"Be",
+      "start": 47.44,
+      "end": 48.26
+    },
+    {
+      "text": "not",
+      "start": 48.26,
+      "end": 48.44
+    },
+    {
+      "text": "afraid,",
+      "start": 48.44,
+      "end": 48.84
+    },
+    {
+      "text": "only",
+      "start": 49.5,
+      "end": 50.12
+    },
+    {
+      "text": "believe.\"",
+      "start": 50.12,
+      "end": 50.52
+    }
+  ]
+}

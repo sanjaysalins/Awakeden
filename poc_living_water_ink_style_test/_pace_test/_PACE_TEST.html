@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Swirls Short Picks</title>
+<style>
+:root{--bg:#faf6ee;--fg:#1d1a16;--card:#fff;--line:#d9cfbd;--acc:#1f4e8c;--bad:#b3261e;--ok:#2e7d32;--gold:#a8741a}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17150f;--fg:#f1ebdd;--card:#221f17;--line:#3b362a;--acc:#7fb0ee;--bad:#ff8a80;--ok:#81c784;--gold:#e0b050}}
+body{background:var(--bg);color:var(--fg);font:20px/1.55 Georgia,serif;margin:0;padding:16px}
+main{max-width:900px;margin:auto}
+h1{font-size:34px;margin:8px 0}h2{font-size:26px;margin:34px 0 8px;color:var(--acc)}
+.card{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:14px 18px;margin:12px 0}
+.row{display:flex;gap:12px;flex-wrap:wrap}.row>figure{flex:1 1 130px;margin:0}
+figure img{width:100%;border-radius:10px;border:2px solid var(--line);cursor:zoom-in;display:block}
+video{width:100%;max-width:300px;border-radius:12px;background:#000}
+figcaption{font-size:16px;opacity:.8;margin-top:4px}
+table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
+.ok{color:var(--ok)}.bad{color:var(--bad)}.gold{color:var(--gold)}
+.pick{border-color:var(--ok);border-width:3px}
+#zoom{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);align-items:center;justify-content:center;z-index:9}
+#zoom img{max-width:96vw;max-height:96vh}
+</style></head><body><main>
+
+<h1>Swirls Short: speed test + 3 picks</h1>
+<p>Fable designed the new Swirls Short pipeline. The panel checked it twice. Nothing is built or spent yet.</p>
+
+<h2>1. Speed test ($0)</h2>
+<p>These are old pages, cut to 6 s each, the way the new 45 s film would run.
+<b>Please watch them on your phone.</b></p>
+<div class="row">
+<div><video src="ep13_pace_6s.mp4" controls playsinline preload="metadata"></video><div><small>Ep 13, 45 s</small></div></div>
+<div><video src="ep10_pace_6s.mp4" controls playsinline preload="metadata"></video><div><small>Ep 10, 45 s</small></div></div>
+</div>
+<p><small>The voice cuts off mid-line on purpose. The old words were written for 10 s pages.</small></p>
+
+<h2>2. What 3 blind readers saw on a phone</h2>
+<div class="row">
+<figure><img src="phone_ep10_f01.jpg"><figcaption>Ep 10 F01</figcaption></figure>
+<figure><img src="phone_ep13_f02.jpg"><figcaption>Ep 13 F02</figcaption></figure>
+<figure><img src="phone_ep13_f06.jpg"><figcaption>Ep 13 F06</figcaption></figure>
+<figure><img src="phone_ep10_f09.jpg"><figcaption>Ep 10 F09</figcaption></figure>
+</div>
+<div class="card"><table>
+<tr><th>Part of the page</th><th>Fable, Claude, Codex</th></tr>
+<tr><td>Big caption</td><td class="ok">Fast. All 3 read it.</td></tr>
+<tr><td>3 panel labels</td><td class="ok">Read. A bit small.</td></tr>
+<tr><td>Title + F number</td><td class="gold">Slow.</td></tr>
+<tr><td>Small NOTE line</td><td class="bad">Slowest. Tiny on a phone.</td></tr>
+</table>
+<p>Every word was readable. Only 2-3 of 12 pages read fully in 6 s.</p>
+<p><b>So I will drop the small NOTE line.</b> It makes the page easier to read in 6 s.</p>
+<p><small>They also spotted text drawn twice on old pages, e.g. "without the camp". The new check catches that.</small></p>
+</div>
+
+<h2>3. Three picks</h2>
+<div class="card pick">
+<p><b>Pick 1: Length.</b> <b>45 s, 6 pages</b> (my pick, about $7, cap $12). 30 s and 60 s come later.</p>
+</div>
+<div class="card pick">
+<p><b>Pick 2: Front cover.</b> <b>Keep the woodcut title cover, 2-3 s, voice from the first frame</b> (my pick). The old covers sat silent for 4-10 s.</p>
+</div>
+<div class="card pick">
+<p><b>Pick 3: First test story.</b> Fable picked John 13 (the bread). But ep 12 already tells John 13.</p>
+<p><b>My pick: Isaiah 40:3 &rarr; John 1:23,</b> "the voice crying in the wilderness". It is a prophecy story with few people and no cross. Or name your own.</p>
+</div>
+
+<div class="card">
+<p><b>After your yes ($0):</b> I build the code, then fix the panel's notes. You'll get the words for the test story to lock before any money is spent.</p>
+</div>
+
+<p style="font-size:24px"><b>Say yes to 45 s, woodcut cover, Isaiah 40:3?</b></p>
+
+<div id="zoom" onclick="this.style.display='none'"><img id="zi" alt=""></div>
+<script>
+document.querySelectorAll('figure img').forEach(function(i){i.onclick=function(){document.getElementById('zi').src=i.src;document.getElementById('zoom').style.display='flex';};});
+</script>
+</main></body></html>

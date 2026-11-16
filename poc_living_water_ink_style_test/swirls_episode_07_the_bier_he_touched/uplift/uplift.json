@@ -1,0 +1,22 @@
+{
+ "episode": "swirls_episode_07_the_bier_he_touched",
+ "audio_from": "swirls_episode_07_the_bier_he_touched_final_piano_sfx.mp4",
+ "words": "F:/slk/PycharmProjects/JesusInTheBible/_quality_uplift_20261116/design_swirls/word_timings/ep07_words.txt",
+ "fps": 30, "total_frames": 2157,
+ "shots": [
+  {"id": "S01", "page": "front", "f0": 0,    "f1": 231,  "src": "front_cover.mp4"},
+  {"id": "S02", "page": "F01",   "f0": 231,  "f1": 390,  "src": "swirls_episode_07_the_bier_he_touched_f01_9x16.mp4"},
+  {"id": "S03", "page": "F01B",  "f0": 390,  "f1": 510,  "src": "uplift/clips/f01b_5s.mp4"},
+  {"id": "S04", "page": "F02A",  "f0": 510,  "f1": 591,  "src": "uplift/clips/f02a_3s.mp4"},
+  {"id": "S05", "page": "F02",   "f0": 591,  "f1": 765,  "src": "swirls_episode_07_the_bier_he_touched_f02_9x16.mp4"},
+  {"id": "S06", "page": "F03A",  "f0": 765,  "f1": 900,  "src": "uplift/clips/f03a_5s.mp4"},
+  {"id": "S07", "page": "F03",   "f0": 900,  "f1": 1020, "src": "uplift/clips/f03_5s.mp4"},
+  {"id": "S08", "page": "F03B",  "f0": 1020, "f1": 1206, "src": "uplift/clips/f03b_7s.mp4"},
+  {"id": "S09", "page": "F04",   "f0": 1206, "f1": 1338, "src": "uplift/clips/f04_5s.mp4"},
+  {"id": "S10", "page": "F05",   "f0": 1338, "f1": 1517, "src": "swirls_episode_07_the_bier_he_touched_f05_9x16.mp4"},
+  {"id": "S11", "page": "F06",   "f0": 1517, "f1": 1695, "src": "swirls_episode_07_the_bier_he_touched_f06_9x16.mp4"},
+  {"id": "S12", "page": "F06B",  "f0": 1695, "f1": 1839, "src": "uplift/clips/f06b_5s.mp4"},
+  {"id": "S13", "page": "F06C",  "f0": 1839, "f1": 1980, "src": "uplift/clips/f06c_5s.mp4"},
+  {"id": "S14", "page": "back",  "f0": 1980, "f1": 2157, "src": "uplift/clips/back_7s.mp4"}
+ ]
+}

@@ -1,0 +1,113 @@
+{
+  "schema": "packaging/1",
+  "_status": "2026-11-10 card for the LOCKED v3 retro film. Title proposed by Claude from real autocomplete; the blind film panel (panel_final_v3) judged the film, hook and ending. Owner has not yet seen the title. 2026-11-10 copy review (claude+codex, publish/_independent_review/20261110-201409): titles say 'betray', range 13:1-30, 38, TikTok opens on the viewer's question, tags trimmed. AI-disclosure note declined: owner override 2026-10-31 bans AI wording in public text. Class A: 'jesus washing feet' has real search demand. 2026-11-10 red team r2 (Fable + claude + codex + grok, blind, publish/_redteam_r2): 13:11 gloss fixed (Judas, Peter on 13:38), Jesus named in FB title, TikTok opens on the film's own question, share line softened, one plain line pointing to Jesus, KJV capitals kept lowercase mid-sentence, tags fixed, thumbnail range John 13.",
+  "episode": "12_ye_are_not_all_clean",
+  "person": "Jesus washing the disciples' feet",
+  "person_tag": "#JesusWashingFeet",
+  "name_match": "Jesus",
+  "women": false,
+  "search_class": "strong: 'jesus washing feet' (+ meaning, of disciples, sermon), 'jesus washes the disciples feet', 'did jesus wash judas feet', 'john 13' (+ explained, kjv) all autocomplete. 'last supper' is crowded by art and songs. 'and it was night' returns songs only.",
+  "search_phrases": [
+    "jesus washing feet",
+    "jesus washes the disciples feet",
+    "did jesus wash judas feet",
+    "john 13",
+    "last supper"
+  ],
+  "search_evidence": {
+    "source": "YouTube search suggestions (suggestqueries.google.com, client=firefox, ds=yt, hl=en), fetched 2026-11-10, 11 queries; file _packaging/12_ye_are_not_all_clean/autocomplete_2026-11-10.txt",
+    "grade": "B (one dated snapshot of autocomplete, not search volume)"
+  },
+  "famous_neighbours": [
+    "Jesus",
+    "the Last Supper",
+    "Judas",
+    "Peter"
+  ],
+  "curiosity_gap": "Jesus knew one friend would betray Him and another would deny Him. What does He do with friends like that?",
+  "curiosity_question": "If people really knew me, would they leave?",
+  "scripture": {
+    "primary": "John 13:1-30",
+    "read_it": "John 13:1-30, John 13:38",
+    "narration_covers": [
+      "John 13:1-5",
+      "John 13:10-12",
+      "John 13:30",
+      "John 13:38"
+    ]
+  },
+  "name_reveal": {
+    "decision": "early_spoken",
+    "note": "Jesus is named in the second spoken sentence (6.6 s). The hook box from frame 0 states the viewer's own fear; Judas and Peter get name tags on screen.",
+    "compensation": [
+      "title",
+      "description_line_1"
+    ]
+  },
+  "first_seconds": {
+    "stake_in_3s": true,
+    "first_spoken_line": "Do you ever think: if people really knew me, they would leave?",
+    "stake_source": "on-screen text box from frame 0: 'If people really knew me, / would they leave?' (stays 6.1 s); spoken at 0.0-4.7 s",
+    "waiver": ""
+  },
+  "youtube": {
+    "title": "Jesus Knew Who Would Betray Him. He Washed Their Feet | Bible Story",
+    "line1": "Jesus washing the disciples' feet in the Bible (John 13): He knew Judas would betray Him, and still tied a towel around Himself and washed their feet.",
+    "line2": "\"For he knew who should betray him; therefore said he, Ye are not all clean.\" In plain words: He knew about Judas, and He washed their feet anyway. Later that night He told Peter that before morning Peter would say three times that he did not know Him (John 13:38).",
+    "read_it": "Read it: John 13:1-30, John 13:38.",
+    "hashtags": [
+      "#JesusWashingFeet",
+      "#John13",
+      "#LastSupper",
+      "#Jesus",
+      "#Bible"
+    ],
+    "tags": [
+      "jesus washing feet",
+      "jesus washing feet bible story",
+      "foot washing in the bible",
+      "jesus washes the disciples feet",
+      "john 13 kjv",
+      "john 13",
+      "last supper",
+      "jesus knew judas would betray him",
+      "judas betrayal",
+      "maundy thursday",
+      "bible story short"
+    ]
+  },
+  "title_class": "A",
+  "send_to": "someone who needs to hear it",
+  "next_teaser": "Next: a woman Jesus seemed to turn away, and the answer she gave back.",
+  "shareable_fact": "In John 13 Jesus washes His friends' feet knowing one will betray Him (13:11). When Judas walks out, John adds four words: and it was night (13:30).",
+  "ask_line": "Follow for Jesus in the whole Bible, one story at a time.",
+  "pinned_comment": "Have you ever been sure that if people really knew you, they would leave? Who was holding the towel in that room? Read it: John 13:1-38.",
+  "spoiler_patterns": [
+    "holding the towel"
+  ],
+  "release": {
+    "stage": 1,
+    "order": 2,
+    "note": "Upload-ready 2026-11-10. Owner decides when to post."
+  },
+  "content_note": "",
+  "measured": {
+    "violence_words_in_narration": 0,
+    "duration_s": 81.33,
+    "name_first_spoken_pct": 8,
+    "ending_pct": 4,
+    "source": "measured on swirls_episode_12_ye_are_not_all_clean_v3_final_sfx.mp4 (voice ends 78.1 s, 3.0 s hold); 'betray' and 'die on a cross' are spoken, nothing violent is shown"
+  },
+  "panels": {
+    "discoverability": {
+      "run": true,
+      "record": "swirls_episode_12_ye_are_not_all_clean/panel_final_v3/panel_r1",
+      "note": "2026-11-10. Hook seat (codex) judged the film's first seconds and payoff blind. Copy reviewed by claude + codex CLIs (publish/_independent_review). No separate 6-seat title panel."
+    },
+    "guardrails": {
+      "run": true,
+      "record": "swirls_episode_12_ye_are_not_all_clean/panel_final_v3/panel_r1",
+      "note": "2026-11-10. Blind, film only: Fable judge, Claude CLI Bible reader, Codex CLI hook, Sonnet newcomer. Fixes applied and re-voiced."
+    }
+  }
+}

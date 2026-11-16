@@ -1,0 +1,22 @@
+{
+ "judge": [
+  "JUDGE, NO HAT",
+  "Judge this film for the whole worldwide audience at once. Answer the five questions and name the ONE change that helps most."
+ ],
+ "newcomer": [
+  "THE TOTAL NEWCOMER",
+  "You have never opened a Bible and know nothing about Jesus beyond the pack. English is your second language, on a phone. For question 4 say you cannot judge accuracy and list what you were TOLD that you could not follow. Report what you understood, guessed, and every question you are left with."
+ ],
+ "bible": [
+  "BIBLE FACT-CHECKER",
+  "Check every claim in the SPOKEN lines against the KJV text supplied: RIGHT / OVERCLAIMED / UNSUPPORTED / WRONG, quoting the line and verse. Check each quote is verbatim."
+ ],
+ "hook": [
+  "HOOK AND RETENTION",
+  "Judge the first 5 seconds after the card, pacing, the weakest 10 seconds, and give odds with error bars for watching to the end."
+ ],
+ "global": [
+  "SECOND-LANGUAGE READER",
+  "Quote every word or idiom that would fail in translation or on a small screen; who is served and who is not; anything that could offend."
+ ]
+}

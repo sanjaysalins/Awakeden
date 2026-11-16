@@ -1,0 +1,165 @@
+{
+  "folder": "audio",
+  "stage": "per_turn_synth",
+  "mode": "dialogue_per_turn_with_narrator_atempo",
+  "generated_at": "2026-11-13T11:24:06Z",
+  "model_id": "eleven_v3",
+  "output_format": "mp3_44100_128",
+  "target_seconds": 80.0,
+  "natural_total_seconds": 79.76,
+  "narrator_natural_seconds": 59.04,
+  "quote_total_seconds": 20.72,
+  "narrator_atempo_factor": 1.0,
+  "pre_quote_pause_seconds": 0.4,
+  "post_quote_pause_seconds": 0.0,
+  "pause_total_seconds": 2.0,
+  "final_total_seconds": 81.674,
+  "delta_vs_target_seconds": 1.674,
+  "turns": [
+    {
+      "index": 0,
+      "speaker": "narrator",
+      "chars": 50,
+      "natural_seconds": 4.4,
+      "final_seconds": 4.398,
+      "atempo_applied": true
+    },
+    {
+      "index": 1,
+      "speaker": "narrator",
+      "chars": 79,
+      "natural_seconds": 6.8,
+      "final_seconds": 6.79,
+      "atempo_applied": true
+    },
+    {
+      "index": 2,
+      "speaker": "jesus",
+      "chars": 17,
+      "natural_seconds": 1.28,
+      "final_seconds": 0.4,
+      "atempo_applied": false
+    },
+    {
+      "index": 3,
+      "speaker": "woman",
+      "chars": 53,
+      "natural_seconds": 4.32,
+      "final_seconds": 1.28,
+      "atempo_applied": false
+    },
+    {
+      "index": 4,
+      "speaker": "narrator",
+      "chars": 47,
+      "natural_seconds": 3.84,
+      "final_seconds": 0.4,
+      "atempo_applied": true
+    },
+    {
+      "index": 5,
+      "speaker": "jesus",
+      "chars": 52,
+      "natural_seconds": 4.64,
+      "final_seconds": 4.32,
+      "atempo_applied": false
+    },
+    {
+      "index": 6,
+      "speaker": "narrator",
+      "chars": 150,
+      "natural_seconds": 10.8,
+      "final_seconds": 3.834,
+      "atempo_applied": true
+    },
+    {
+      "index": 7,
+      "speaker": "narrator",
+      "chars": 102,
+      "natural_seconds": 7.2,
+      "final_seconds": 0.4,
+      "atempo_applied": true
+    },
+    {
+      "index": 8,
+      "speaker": "narrator",
+      "chars": 53,
+      "natural_seconds": 3.68,
+      "final_seconds": 4.64,
+      "atempo_applied": true
+    },
+    {
+      "index": 9,
+      "speaker": "jesus",
+      "chars": 29,
+      "natural_seconds": 2.72,
+      "final_seconds": 10.792,
+      "atempo_applied": false
+    },
+    {
+      "index": 10,
+      "speaker": "narrator",
+      "chars": 17,
+      "natural_seconds": 1.84,
+      "final_seconds": 7.191,
+      "atempo_applied": true
+    },
+    {
+      "index": 11,
+      "speaker": "narrator",
+      "chars": 41,
+      "natural_seconds": 2.4,
+      "final_seconds": 3.669,
+      "atempo_applied": true
+    },
+    {
+      "index": 12,
+      "speaker": "woman",
+      "chars": 82,
+      "natural_seconds": 7.76,
+      "final_seconds": 0.4,
+      "atempo_applied": false
+    },
+    {
+      "index": 13,
+      "speaker": "narrator",
+      "chars": 61,
+      "natural_seconds": 4.4,
+      "final_seconds": 2.72,
+      "atempo_applied": true
+    },
+    {
+      "index": 14,
+      "speaker": "narrator",
+      "chars": 113,
+      "natural_seconds": 10.32,
+      "final_seconds": 1.83,
+      "atempo_applied": true
+    },
+    {
+      "index": 15,
+      "speaker": "narrator",
+      "chars": 51,
+      "natural_seconds": 3.36,
+      "final_seconds": 2.394,
+      "atempo_applied": true
+    }
+  ],
+  "speakers": {
+    "narrator": {
+      "voice_id": "LSi9zNCeliLuhIGGS0By",
+      "audio_tag": null
+    },
+    "jesus": {
+      "voice_id": "tlETan7Okc4pzjD0z62P",
+      "audio_tag": null
+    },
+    "woman": {
+      "voice_id": "NbkKnEAZ7Bqw4EAkVEaz",
+      "audio_tag": null
+    }
+  },
+  "settings": {
+    "stability": 0.5
+  }
+}

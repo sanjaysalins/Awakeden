@@ -1,0 +1,107 @@
+{
+ "episode_dir": "F:/slk/PycharmProjects/JesusInTheBible/poc_living_water_ink_style_test/swirls_episode_02_ashes_that_made_clean",
+ "fps": 30,
+ "size": [
+  1080,
+  1920
+ ],
+ "total_frames": 1858,
+ "shots": [
+  {
+   "id": "S01",
+   "page": "front",
+   "f0": 0,
+   "f1": 118,
+   "src": "front_cover.mp4",
+   "status": "existing"
+  },
+  {
+   "id": "S02",
+   "page": "F02",
+   "f0": 118,
+   "f1": 236,
+   "src": "swirls_episode_02_ashes_that_made_clean_f02_9x16.mp4",
+   "status": "existing"
+  },
+  {
+   "id": "S03",
+   "page": "F02B",
+   "f0": 236,
+   "f1": 324,
+   "src": "uplift/clips/f02b_3s.mp4",
+   "status": "NEW"
+  },
+  {
+   "id": "S04",
+   "page": "F01",
+   "f0": 324,
+   "f1": 502,
+   "src": "swirls_episode_02_ashes_that_made_clean_f01_9x16.mp4",
+   "status": "existing (shipped clip)"
+  },
+  {
+   "id": "S05",
+   "page": "F02C",
+   "f0": 502,
+   "f1": 681,
+   "src": "uplift/clips/f02c_6s.mp4",
+   "status": "NEW"
+  },
+  {
+   "id": "S06",
+   "page": "F02D",
+   "f0": 681,
+   "f1": 859,
+   "src": "uplift/clips/f02d_6s.mp4",
+   "status": "NEW"
+  },
+  {
+   "id": "S07",
+   "page": "F03A",
+   "f0": 859,
+   "f1": 969,
+   "src": "uplift/clips/f03a_4s.mp4",
+   "status": "NEW"
+  },
+  {
+   "id": "S08",
+   "page": "F03",
+   "f0": 969,
+   "f1": 1179,
+   "src": "uplift/clips/f03_8s.mp4",
+   "status": "RE-ANIM"
+  },
+  {
+   "id": "S09",
+   "page": "F04",
+   "f0": 1179,
+   "f1": 1386,
+   "src": "swirls_episode_02_ashes_that_made_clean_f04_9x16.mp4",
+   "status": "existing"
+  },
+  {
+   "id": "S10",
+   "page": "F04B",
+   "f0": 1386,
+   "f1": 1488,
+   "src": "uplift/clips/f04b_4s.mp4",
+   "status": "NEW"
+  },
+  {
+   "id": "S11",
+   "page": "F05",
+   "f0": 1488,
+   "f1": 1743,
+   "src": "uplift/clips/f05_9s.mp4",
+   "status": "NEW"
+  },
+  {
+   "id": "S12",
+   "page": "back",
+   "f0": 1743,
+   "f1": 1858,
+   "src": "back_cover.mp4",
+   "status": "existing"
+  }
+ ]
+}

@@ -1,0 +1,48 @@
+# Red team: 7 "uplifted" films vs their shipped originals (2026-11-16)
+
+The owner asked for finished, unposted 45-106 s YouTube Shorts (KJV narration, every piece lands on Jesus) to be enhanced before upload: fix issues, add motion and hand-drawn doodle marks, remove stretched clips. New versions were built. YOUR job: independently judge each NEW film against its OLD one and the owner's rules. Do not trust any builder note; look yourself.
+
+## Films (old shipped final -> new uplift)
+1. Swirls ep08 Can Any Good Thing (LOCKED already)
+   old: F:\slk\PycharmProjects\JesusInTheBible\poc_living_water_ink_style_test\swirls_episode_08_can_any_good_thing\CAN_ANY_GOOD_THING_final_sfx.mp4
+   new: ...\swirls_episode_08_can_any_good_thing\uplift\ep08_uplift_final.mp4
+2. Swirls ep13 The Cross That Wasn't His (LOCKED already)
+   old: ...\swirls_episode_13_the_cross_that_wasnt_his\swirls_episode_13_the_cross_that_wasnt_his_final_piano_sfx.mp4
+   new: ...\swirls_episode_13_the_cross_that_wasnt_his\uplift\ep13_uplift_final.mp4
+3. Swirls Jacob's Ladder
+   old: F:\slk\PycharmProjects\JesusInTheBible\poc_living_sketchbook\_rewrite_v4\panel_jl\video\jacobs_ladder_v3_sfx.mp4
+   new: F:\slk\PycharmProjects\JesusInTheBible\poc_living_sketchbook\_rewrite_v4\panel_jl\uplift\jl_uplift_final.mp4
+4. Swirls ep07 The Bier He Touched
+   old: ...\swirls_episode_07_the_bier_he_touched\swirls_episode_07_the_bier_he_touched_final_piano_sfx.mp4
+   new: ...\swirls_episode_07_the_bier_he_touched\uplift\ep07_uplift_final.mp4
+5. Swirls ep10 She Loved Much
+   old: ...\swirls_episode_10_she_loved_much\swirls_episode_10_she_loved_much_final_piano_sfx.mp4
+   new: ...\swirls_episode_10_she_loved_much\uplift\ep10_uplift_final.mp4
+6. Swirls ep11 Where Are the Nine
+   old: ...\swirls_episode_11_where_are_the_nine\swirls_episode_11_where_are_the_nine_final_piano_sfx.mp4
+   new: ...\swirls_episode_11_where_are_the_nine\uplift\ep11_uplift_final.mp4
+7. Graphic comic Woman, Behold Thy Son
+   old: F:\slk\PycharmProjects\JesusInTheBible\batches\cluster_01_cross\woman_behold_john1926\visual\woman_behold_john1926_sfx_v5hook.mp4
+   new: ...\woman_behold_john1926\visual\woman_behold_john1926_uplift_v1.mp4
+("..." for 1-2 and 4-6 = F:\slk\PycharmProjects\JesusInTheBible\poc_living_water_ink_style_test)
+Narration text: narration.md in each film's folder (Jacob's Ladder: poc_living_water_ink_style_test\swirls_pilot_01_jacobs_ladder\narration.md + the rewrite under poc_living_sketchbook\_rewrite_v4\). Intended design: _quality_uplift_20261116\design_swirls\SWIRLS_UPLIFT_SPEC.md and _quality_uplift_20261116\design_comic\COMIC_UPLIFT_SPEC.md.
+
+## Owner rules to judge against
+- Biblical accuracy: pictures must not contradict the KJV text or the era (1st-century / OT setting; no anachronisms; right number of people; recurring people keep the same face and clothes).
+- Reverent: nothing that reads as immodest, comic, or disrespectful to Jesus.
+- Swirls: the blue/gold ink motif must NEVER be animated (it should stay still); no burned-in captions added; storyboard-page look kept.
+- No stretched clips: no freeze, slow-motion, boomerang/reverse, zoom-to-fill. Every shot a real moving clip, hard cuts.
+- Hero moments are real animated clips, not stills with a camera slide.
+- Marks/doodles: tied to the spoken word, never on Jesus' face, never cluttered, never adding words that are not spoken, never covering faces or baked captions.
+- No invented content (speech bubbles, garbled text, extra limbs, objects appearing, people walking out of panels).
+- The narration audio must be unchanged.
+- Global audience: picture must help a newcomer follow who/what/why.
+
+## How
+Pull frames with ffmpeg (e.g. 1 frame/second, plus extra around every cut) from BOTH old and new into %TEMP%, and look at them with your Read tool. Check audio with `ffmpeg -i f -map 0:a -c copy -f md5 -`. Read-only: never edit, move or delete repo files; no generation; no spending.
+
+## Output per film
+- VERDICT: LOCK / LOCK AFTER FREE FIX / NEEDS PAID FIX / REJECT (keep old)
+- Is the new one clearly better than the old? (yes/no + why, 1-2 lines)
+- Defects, most severe first: timestamp, what is wrong, which rule, fix (free or rough $), CONFIRMED (seen in a frame - give the frame path) or SUSPECTED.
+Then an overall top-5 list across all films you reviewed.

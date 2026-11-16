@@ -1,0 +1,53 @@
+{
+  "_about": "PILOT build data: Swirls ep08 'Can Any Good Thing' uplift. Shot list (trim only, 1.0x, hard cuts) + pencil marks. Spec: SWIRLS_UPLIFT_SPEC.md sections 5-6. Times are frames at 30 fps on the film timeline; voice starts at frame 0. Geometry is normalised 0..1 of the 1080x1920 frame, read off audit/sheet_p8.jpg (10x10 red grid) - the executor must re-measure on the real frame before render (gate G-KEEP).",
+  "episode_dir": "F:/slk/PycharmProjects/JesusInTheBible/poc_living_water_ink_style_test/swirls_episode_08_can_any_good_thing",
+  "audio_from": "F:/slk/PycharmProjects/JesusInTheBible/poc_living_water_ink_style_test/swirls_episode_08_can_any_good_thing/CAN_ANY_GOOD_THING_final_sfx.mp4",
+  "out_dir": "F:/slk/PycharmProjects/JesusInTheBible/poc_living_water_ink_style_test/swirls_episode_08_can_any_good_thing/uplift",
+  "fps": 30,
+  "size": [1080, 1920],
+  "total_frames": 1921,
+  "shots": [
+    {"id": "S01", "page": "front", "f0": 0,    "f1": 108,  "src": "front_cover.mp4", "status": "existing", "clip_s": 4.00, "words": "A man insulted Jesus behind His back. Jesus complimented him to his face."},
+    {"id": "S02", "page": "F01",   "f0": 108,  "f1": 216,  "src": "swirls_episode_08_can_any_good_thing_f01_9x16.mp4", "status": "existing", "clip_s": 5.04, "words": "Philip told Nathanael the news: the Messiah - Jesus, of Nazareth."},
+    {"id": "S03", "page": "F02",   "f0": 216,  "f1": 365,  "src": "swirls_episode_08_can_any_good_thing_f02_9x16.mp4", "status": "existing", "clip_s": 5.04, "words": "Nathanael's answer: Can there any good thing come out of Nazareth? Philip did not argue - he invited."},
+    {"id": "S04", "page": "F03",   "f0": 365,  "f1": 579,  "src": "uplift/clips/f03_8s.mp4", "status": "NEW CLIP of the existing still (8 s)", "clip_s": 8, "words": "Jesus spoke first: Behold an Israelite indeed, in whom is no guile! Nathanael asked:"},
+    {"id": "S05", "page": "F03B",  "f0": 579,  "f1": 636,  "src": "uplift/clips/f03b_3s.mp4", "status": "NEW STILL + NEW CLIP (3 s)", "clip_s": 3, "words": "Whence knowest thou me?"},
+    {"id": "S06", "page": "F04",   "f0": 636,  "f1": 909,  "src": "uplift/clips/f04_10s.mp4", "status": "NEW CLIP of the existing still (10 s)", "clip_s": 10, "words": "Jesus answered: Before that Philip called thee, when thou wast under the fig tree, I saw thee. A moment only heaven had seen - named."},
+    {"id": "S07", "page": "F05A",  "f0": 909,  "f1": 981,  "src": "uplift/clips/f05a_3s.mp4", "status": "NEW STILL + NEW CLIP (3 s)", "clip_s": 3, "words": "The doubt did not fade. It fell."},
+    {"id": "S08", "page": "F05",   "f0": 981,  "f1": 1191, "src": "swirls_episode_08_can_any_good_thing_f05_9x16.mp4", "status": "existing", "clip_s": 9.04, "words": "Nathanael said: Rabbi, thou art the Son of God; thou art the King of Israel."},
+    {"id": "S09", "page": "F05B",  "f0": 1191, "f1": 1340, "src": "uplift/clips/f05b_5s.mp4", "status": "NEW STILL + NEW CLIP (5 s)", "clip_s": 5, "words": "And Jesus went further: Thou shalt see greater things than these..."},
+    {"id": "S10", "page": "F06",   "f0": 1340, "f1": 1560, "src": "swirls_episode_08_can_any_good_thing_f06_9x16.mp4", "status": "existing", "clip_s": 9.04, "words": "Hereafter ye shall see heaven open, and the angels of God ascending and descending upon the Son of man."},
+    {"id": "S11", "page": "JL-F03","f0": 1560, "f1": 1680, "src": "../swirls_pilot_01_jacobs_ladder/the_ladder_f03_9x16.mp4", "status": "existing, borrowed from the Jacob's Ladder film on purpose (page turn in)", "clip_s": 5.04, "words": "That is Jacob's ladder - the one Jesus said He is, standing open, permanently."},
+    {"id": "S12", "page": "F07",   "f0": 1680, "f1": 1806, "src": "uplift/clips/f07_5s.mp4", "status": "NEW STILL + NEW CLIP (5 s)", "clip_s": 5, "words": "He is not offended by honest questions. He already sees you, under your fig tree."},
+    {"id": "S13", "page": "back",  "f0": 1806, "f1": 1921, "src": "back_cover.mp4", "status": "existing", "clip_s": 4.00, "words": "Come and see. + 3.1 s hold"}
+  ],
+  "transitions": [
+    {"kind": "page_turn", "at": 1556, "frames": 8, "from": "S10", "to": "S11", "why": "the borrowed page arrives like a leaf from another sketchbook"}
+  ],
+  "marks": [
+    {"id": "M1", "kind": "underline",   "shot": "S03", "at": 276,  "draw": 10, "until": 360,  "word": "good@9.28",  "path": [[0.04, 0.975], [0.36, 0.972]], "note": "under the baked caption 'any good thing' (bottom left)"},
+    {"id": "M2", "kind": "circle",      "shot": "S04", "at": 534,  "draw": 12, "until": 574,  "word": "no@17.88",   "tone": "red", "box": [0.60, 0.862, 0.115, 0.04], "note": "the ONE red mark: round 'no guile' in the baked caption 'in whom is no guile'"},
+    {"id": "M3", "kind": "panel_ring",  "shot": "S06", "at": 669,  "draw": 10, "until": 740,  "word": "Before@22.38", "box": [0.04, 0.07, 0.28, 0.27], "note": "top panel 1 'unseen prayer'"},
+    {"id": "M4", "kind": "idea_sightline", "shot": "S06", "at": 805, "until": 899, "word": "I@26.90 saw@27.14 thee@27.40",
+      "eye": {"c": [0.92, 0.455], "w": 0.07, "draw": 10},
+      "line": {"from": [0.89, 0.475], "to": [0.545, 0.675], "dash": true, "draw_from": 815, "draw": 14, "gap_at_motif": true},
+      "note": "pencil eye in the right margin, then a dashed line to the man under the tree. The dash must LIFT where it crosses the blue contour ring round the tree (leave a 48 px gap centred on the ring) and must stay clear of the blue-gold cloud above the tree (keep-out box below)."},
+    {"id": "M5", "kind": "tick_burst",  "shot": "S07", "at": 962,  "until": 976,  "word": "fell.@32.12", "pos": "at the knees in the NEW still F05A; measure after the still is approved", "n": 3},
+    {"id": "M6", "kind": "underline",   "shot": "S08", "at": 1067, "draw": 10, "until": 1186, "word": "Son@35.64", "path": [[0.36, 0.93], [0.64, 0.928]], "note": "under the baked caption 'the Son of God'"},
+    {"id": "M7", "kind": "idea_updown", "shot": "S10", "at": 1468, "until": 1551, "word": "ascending@49.00 descending@49.96",
+      "up":   {"from": [0.09, 0.74], "to": [0.09, 0.56], "at": 1468, "draw": 10},
+      "down": {"from": [0.135, 0.56], "to": [0.135, 0.74], "at": 1497, "draw": 10},
+      "note": "two pencil arrows in the blank LEFT margin beside the picture box (x < 0.17). Fades before the page turn at 1556."},
+    {"id": "M8", "kind": "margin_arrow","shot": "S12", "at": 1773, "draw": 12, "until": 1801, "word": "your@59.16", "pos": "from the blank right margin to the empty mat under the tree in the NEW still F07; measure after the still is approved"}
+  ],
+  "keepouts": {
+    "S04": [[0.56, 0.50, 0.18, 0.32]],
+    "S06": [[0.36, 0.37, 0.28, 0.14], "blue contour ring round the tree canopy: circle centre (0.50, 0.665), radius 0.40 of frame width, pad 24 px"],
+    "S08": [[0.03, 0.47, 0.20, 0.14], [0.82, 0.44, 0.16, 0.20]],
+    "S10": [[0.22, 0.60, 0.30, 0.30]],
+    "all": "motif boxes above are estimates from audit/sheet_p8.jpg; baked text and Jesus' face/hands are keep-outs on every shot"
+  },
+  "new_stills": ["F03B", "F05A", "F05B", "F07"],
+  "new_clip_seconds": {"F03": 8, "F03B": 3, "F04": 10, "F05A": 3, "F05B": 5, "F07": 5, "_total": 34},
+  "quote_usd": {"clips_kling_pro_31.6cr_per_s": 2.15, "stills_nbp_40cr": 0.32, "first_take_total": 2.47, "with_usual_redos_x1.5": 3.70, "cap": 4.50}
+}

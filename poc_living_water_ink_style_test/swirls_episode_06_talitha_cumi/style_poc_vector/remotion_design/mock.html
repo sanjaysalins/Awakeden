@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Talitha Cumi — motion design mock</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F6E9CA; --teal:#0E434D; --navy:#15253C; --turq:#2DAFB1;
+  --orange:#EE8D44; --burnt:#BE6829; --gold:#F2B63C; --ink:#101418;
+  --s:.36; /* preview scale of the 1080x1920 frame */
+}
+*{box-sizing:border-box}
+body{margin:0;padding:28px 16px 60px;background:#0b1e24;color:var(--cream);
+  font-family:Kalam,"Comic Sans MS",cursive;}
+h1{font-size:34px;margin:0 0 4px}
+p.lead{font-size:20px;margin:0 0 26px;max-width:900px;line-height:1.4;font-weight:400}
+.grid{display:flex;flex-wrap:wrap;gap:30px 26px}
+.card{width:calc(1080px*var(--s))}
+.card h2{font-size:22px;margin:0 0 2px}
+.card .why{font-size:17px;font-weight:400;line-height:1.35;margin:8px 0 0;opacity:.9}
+.stamp{display:inline-block;background:var(--gold);color:var(--ink);font-weight:700;
+  border-radius:999px;padding:0 12px;font-size:17px;margin-bottom:8px}
+.wrap{width:calc(1080px*var(--s));height:calc(1920px*var(--s));overflow:hidden;
+  border-radius:14px;border:2px solid #24525c;position:relative;background:#000}
+/* The real frame: build at true 1080x1920 pixels, then scale down */
+.frame{width:1080px;height:1920px;position:absolute;left:0;top:0;
+  transform:scale(var(--s));transform-origin:0 0;
+  background-size:cover;background-position:center;overflow:hidden}
+
+/* ---------- shared parts (same numbers as DESIGN.md) ---------- */
+.pill{position:absolute;left:50%;transform:translateX(-50%);
+  max-width:920px;width:max-content;text-align:center;
+  background:rgba(14,67,77,.66);border:4px solid rgba(246,233,202,.9);
+  border-radius:44px;padding:26px 44px;
+  color:var(--cream);font-weight:700;font-size:84px;line-height:1.15;
+  text-shadow:0 3px 0 rgba(16,20,24,.55)}
+.pill.big{font-size:112px}
+.pill.verdict{background:rgba(21,37,60,.80);font-size:150px;padding:14px 60px}
+.tab{position:absolute;left:36px;top:-32px;font-size:40px;line-height:1.3;
+  border-radius:20px;padding:4px 22px;text-shadow:none;
+  background:var(--burnt);color:var(--cream);white-space:nowrap}
+.tab.jesus{background:var(--turq);color:var(--ink)}
+.chip{position:absolute;right:36px;bottom:-30px;font-size:38px;line-height:1.35;
+  border-radius:999px;padding:2px 24px;text-shadow:none;
+  background:var(--gold);color:var(--ink);white-space:nowrap}
+svg.strike{position:absolute;left:0;top:0;width:1080px;height:1920px;pointer-events:none}
+.dim{opacity:.45}
+
+/* optional motion on the strike frames */
+.draw path{stroke-dasharray:1100;stroke-dashoffset:1100;animation:draw 3.2s ease-out infinite}
+@keyframes draw{0%,15%{stroke-dashoffset:1100}45%,100%{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.draw path{animation:none;stroke-dashoffset:0}}
+</style>
+</head>
+<body>
+<h1>Talitha Cumi — motion design mock</h1>
+<p class="lead">Six key frames. One idea: the news says <b>"Too late."</b> — one orange stroke runs through it and keeps going. Then only His words are left.</p>
+
+<div class="grid">
+
+  <!-- 1 HOOK -->
+  <div class="card">
+    <span class="stamp">0:01.8 · frame 54</span>
+    <h2>1. Hook</h2>
+    <div class="wrap"><div class="frame" style="background-image:url('../pages/p1_plea.png')">
+      <div class="pill" style="top:180px;font-size:96px">
+        <span class="tab" style="font-size:48px;top:-38px">A father begs Jesus</span>My little girl<br>is dying.</div>
+    </div></div>
+    <p class="why">Words on screen from frame 0. The stake is up before 2 seconds.</p>
+  </div>
+
+  <!-- 2 MESSENGER -->
+  <div class="card">
+    <span class="stamp">0:08.5 · frame 255</span>
+    <h2>2. The news</h2>
+    <div class="wrap"><div class="frame" style="background-image:url('../pages/p2_news_v3.png')">
+      <div class="pill" style="top:1240px;font-size:96px">
+        <span class="tab">The messenger</span>Thy daughter<br>is dead
+        <span class="chip">Mark 5:35</span></div>
+    </div></div>
+    <p class="why">Four Bible words. Low on the screen, so no face is covered.</p>
+  </div>
+
+  <!-- 3 TOO LATE LANDS -->
+  <div class="card">
+    <span class="stamp">0:12.9 · frame 387</span>
+    <h2>3. "Too late." lands</h2>
+    <div class="wrap"><div class="frame" style="background-image:url('../pages/p2_news_v3.png')">
+      <div class="pill verdict" style="top:1300px">Too late.</div>
+    </div></div>
+    <p class="why">The verdict. Dark pill, drops in and stops hard. It stays on screen through the picture change.</p>
+  </div>
+
+  <!-- 4 STRIKE -->
+  <div class="card">
+    <span class="stamp">0:15.6 · frame 468</span>
+    <h2>4. The stroke keeps going</h2>
+    <div class="wrap"><div class="frame" style="background-image:url('../pages/p3_walk.png')">
+      <div class="pill verdict dim" style="top:1300px">Too late.</div>
+      <svg class="strike draw" viewBox="0 0 1080 1920" fill="none" stroke-linecap="round">
+        <path d="M150 1420 C 330 1392, 520 1436, 720 1404 S 980 1396, 1100 1384"
+              stroke="#EE8D44" stroke-width="26"/>
+        <path d="M190 1436 C 360 1412, 540 1450, 740 1420 S 990 1412, 1100 1402"
+              stroke="#EE8D44" stroke-opacity=".6" stroke-width="6"/>
+      </svg>
+    </div></div>
+    <p class="why">"...and did not turn back." One brush stroke. It does not stop at the word — it runs off the screen. That is "He kept going".</p>
+  </div>
+
+  <!-- 5 TALITHA CUMI -->
+  <div class="card">
+    <span class="stamp">0:30.6 · frame 918</span>
+    <h2>5. Talitha cumi</h2>
+    <div class="wrap"><div class="frame" style="background-image:url('../pages/p4c_arise_v2.png')">
+      <div class="pill big" style="top:210px">
+        <span class="tab jesus">Jesus</span>Talitha cumi.
+        <span class="chip">Mark 5:41</span></div>
+      <div class="pill" style="top:450px;font-size:76px">Little girl, get up.</div>
+    </div></div>
+    <p class="why">His words, big, held the whole beat. Then the plain meaning. No stroke, no effects here.</p>
+  </div>
+
+  <!-- 6 ENDING -->
+  <div class="card">
+    <span class="stamp">0:50.4 · frame 1512</span>
+    <h2>6. Ending</h2>
+    <div class="wrap"><div class="frame" style="background-image:url('../pages/p7_believe.png')">
+      <div class="pill verdict dim" style="top:1010px;font-size:68px;padding:8px 36px">Too late.</div>
+      <svg class="strike" viewBox="0 0 1080 1920" fill="none" stroke-linecap="round">
+        <path d="M360 1070 C 470 1056, 600 1080, 730 1062 S 980 1056, 1100 1048"
+              stroke="#EE8D44" stroke-opacity=".5" stroke-width="14"/>
+      </svg>
+      <div class="pill big" style="top:1150px">
+        <span class="tab jesus">Jesus</span>Be not afraid,<br>only believe.
+        <span class="chip">Mark 5:36</span></div>
+    </div></div>
+    <p class="why">"Too late." is small, struck, pushed aside — then gone. His words stay alone for 3 quiet seconds. No end card.</p>
+  </div>
+
+</div>
+</body>
+</html>

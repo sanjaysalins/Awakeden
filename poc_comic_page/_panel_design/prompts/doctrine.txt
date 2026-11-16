@@ -1,0 +1,297 @@
+You are ONE independent, HOSTILE voice on a review panel (you have not seen the other voices). Assume the plan is flawed and PROVE it; no flattery; no generic advice. Everything is in the EVIDENCE PACK. Do not ask questions. Do not use tools. Output the review text only.
+
+EVIDENCE PACK:
+# PROPOSAL UNDER REVIEW
+A 60s Bible-gospel YouTube Short channel (KJV verbatim, 9:16, painted-comic style). Owner wants every episode to feel like a comic that has come alive. Review the DESIGN and the RECIPE below.
+
+## DESIGN
+
+ Living Comic Design
+ LIVING COMIC 
+ The film language for our Bible comic shorts. The page is drawn in front of you, and it wakes up.
+ Light / Dark 
+ Motion is off (your system setting). Previews are paused.
+ 1 · The idea 2 · The moves 3 · Dialogue 
+ 4 · Storyboard 5 · Episode file 6 · Risks 7 · My pick
+ Real art from "In No Wise Cast Out" (John 6:37). All previews are CSS on downscaled stills. No money spent. Click any still to zoom. The slow drift in a resting panel stands in for the real generated clip.
+ 1 THE ONE IDEA 
+ The comic is being drawn while you watch. When the ink dries, the panel wakes up. Every move, every word, lands on the voice. 
+ Pencil, then ink, then colour, then alive. Fast. One big panel at a time. The reviewers' favourite thing in the old film (pencil to ink) becomes the whole language, not a one-off.
+ Three candidates. Ranked.
+ 1 A · WET INK easy-medium
+ pencil → ink → colour → alive
+ What it is. Each panel is drawn in under half a second, then the real clip plays. A pen-scratch sound sells it. 
+ Cost. $0. Pencil pass + a diagonal "ink front" over the clip's first frame (we already have blue-line 's wobbled front). About 1–2 build days. 
+ Risk. If it is slow it becomes a tic and the film drags again. Rule: 0.5s max, 0.8s only for Jesus.
+ 2 B · BREAK THE GUTTER medium
+ light, then the figure, cross the border
+ What it is. Panel borders are real. At the turn, light spills across the gutter, then the figure steps over the border. 
+ Cost. $0 but needs a cutout per break-out (rembg; one already exists). About 2 build days. 
+ Risk. A cutout from a still over a moving clip can drift. Best as ONE move at the pivot, not the whole language.
+ 3 C · PAGE CAMERA easy
+ the camera walks down a real page
+ What it is. One big printed page. The camera is the reader's eye, moving panel to panel. 
+ Cost. $0, one build day (crop + pan over a composed page). 
+ Risk. Every motion-comic channel does this. It is close to what scored 4.75/10 for "alive". Keep it as a move, not the idea.
+ Pick: A. Wet Ink is the signature. B becomes one move (the pivot). C becomes one move (the walk).
+ Where this agrees with the specs, and where it departs
+ Keeps MOTIONCOMIC_SPEC: camera-only clips, ink held (MC-R2). Scripture gets its own look (MC-R4). "Clear a hole" before the verse (MC-R5). No SFX on sacred beats. 
+ Keeps COMIC DNA: fonts Bangers / Kalam / Permanent Marker. Christ dignified, one face. Dots masked off faces, now capped at 4%. 
+ Keeps panel_animator names: blue-line front, line-boil, impact-burst, typography-panel, ink-transition, print-grade last. 
+ Departs from COMIC_PAGE_PIPELINE rev 2.1 "no speech bubbles". The owner now asks for dialogue. Balloons return, with a verbatim gate and an "invented" flag. 
+ Departs from DNA "Christ speech never in a balloon". It IS a balloon now, but a distinct one: gold rule + verse tag. Never an ordinary balloon. 
+ Departs from DNA "Remotion engine". This build is ffmpeg + PIL, $0, the tools we have. 
+ Departs from 1–4 panels per page. One big panel at a time. A grid only as a rare page reveal.
+ 2 THE MOVES 
+ Eight moves. Each reads in one second on a phone. At rest: one big panel, always a real clip.
+ 1 · INK WAKE easy-med
+ Use: how most panels enter. Hook at 0.5s. Jesus at 0.8s, the only slow one. Beat: any new panel. Build: pencil pass (exists) + wobbled ink front ( blue-line ) + the clip.
+ 2 · GUTTER CUT easy
+ Use: the normal cut. Two black frames (the gutter) and a tiny page nudge. Beat: every 3–4s, so something new is always on screen. Build: ffmpeg concat + 2 black frames + 1 offset frame.
+ 3 · PANEL WALK easy
+ Use: the camera travels across a real page from one panel to the next. Beat: cause → effect ("the record" → "keeps you at the door"). Build: crop-pan over a 2-panel composite ( grid-choreography primitives).
+ 4 · BREAK-OUT medium
+ Use: once per episode. Light crosses the gutter first, then the figure breaks the border. Beat: the gospel pivot. Build: rembg cutout + layered PIL composite over a held frame.
+ 5 · ZOOM-THROUGH easy-med
+ Use: push into a detail in one panel, and it becomes the next panel. Beat: "your record" → the scroll. Build: zoompan to an anchor + 0.3s crossfade.
+ 6 · CARD SLAM easy
+ AFRAID GOD WILL TURN YOU AWAY?
+ OLD WORD IN NO WISE = NEVER
+ Use: the question card at 0.8s. The OLD = PLAIN decode after any hard KJV word. Beat: hook, decode, landing line. Build: typography-panel + a new card style. White + gold, Bangers.
+ 7 · PAGE TURN medium
+ Use: once. The whole page leaves. The next act is underneath. Beat: the act turn (fear → His words). Build: PIL perspective warp per frame. Doable, not free of effort. Could ship later.
+ 8 · SFX HIT easy
+ KNOCK
+ Use: a real sound only (knock, creak, wind). Max 2 per episode. Never on Jesus or the cross. Beat: the hand on the door. Build: impact-burst + Bangers lettering, timed to the sound file.
+ At rest a panel is a real Kling/Seedance clip. On top, $0 layers only: line-boil , a breathing lamp ( candle-only ), the ink front. No still is ever left half-drawn on screen: the pencil stage always completes.
+ 3 DIALOGUE SYSTEM 
+ Five text shapes. One on screen at a time. Shape = who is speaking.
+ Rules
+ Jesus
+ His own KJV words. Verbatim. Never changed. 
+ Ivory fill. Ink rule + inner gold rule. Verse tag under the corner. 
+ Long verse → chained balloons, in order, each ≤ 8 words. 
+ His own voice. The narrator never reads His line. 
+ A hard old word gets the decode card right after.
+ The human
+ Spoken: white fill, ink rule. Thought: grey dashed cloud, italic. 
+ Invented lines: max 2 per episode, max 6 words. 
+ Each one is flagged "invented": true in the file, with a reason. Doctrine review sees the list. 
+ An invented line may only say what the narration already says. No new claims.
+ Narrator, SFX, cards
+ Narrator = the parchment band. Top-left. Bold plain sans. 
+ SFX = Bangers, angled, stroked. Real sounds only. 
+ Cards = white + gold. The hook question. The OLD = PLAIN decode. The landing. 
+ No halftone dots over any text. Ever.
+ How a balloon pops
+ The balloon pops from its tail on the first spoken word (from alignment.json ). 0.18s, tiny overshoot. It stays while the words are said, then leaves 0.4s after the last word. The next text waits 0.2s.
+ All that the Father giveth me shall come to me;
+ ▲ balloon pops here · words light as the voice says them (optional highlight, off by default for ESL calm)
+ Max words: 8 per balloon. 6 for a thought. 7 for a card line. 
+ Min time on screen: 1.2s + 0.25s per word. 
+ Tail: aims at the mouth anchor stored in the file. Speaker off-panel → tail points at the frame edge nearest them. 
+ One text layer: a balloon replaces the caption. Never both.
+ Fonts (checked in C:\Windows\Fonts and the repo)
+ Balloons · Kalam Bold (repo) him that cometh to me Comic hand, still clear at phone size. Chosen. 
+ Cards + SFX · Bangers (Windows + repo) IN NO WISE = NEVER Big, loud, comic. Chosen. 
+ Verse tag · Permanent Marker John 6:37 · KJV Small tag only. Chosen. 
+ Narrator band · Bahnschrift Bold (Windows) Somewhere in you is the quiet fear Plain and bold. Easy for ESL and dyslexic readers. Chosen. 
+ Comic Sans (Windows) What if He says no? Rejected. Reads cheap. 
+ Ink Free (Windows) What if He says no? Rejected. Too thin on a phone.
+ Voices, and when dialogue beats narration
+ Cast
+ Narr the voice we already have. 
+ Jesus calm, low, unhurried. Never "dramatic". Speaks KJV only. 
+ Man older, tired. Thoughts are near a whisper.
+ The pipeline already does per-speaker audio ( per_turn_synth.py , voices.json ).
+ Dialogue wins when…
+ The verse IS speech (Jesus said it). Always His balloon, His voice. 
+ The narration describes a feeling "in you". One thought line can carry it instead. 
+ A question → answer beat. The man asks, Jesus answers with the verse.
+ Narration wins for the explanation and the call to Jesus. Target: dialogue ≤ 30% of lines.
+ 4 STORYBOARD · FIRST 20 SECONDS 
+ "In No Wise Cast Out", redone in this language. Voice at 0s. Face and hand first. No logo open.
+ 0.0s
+ Play 
+ Restart 
+ Beat 1
+ Narr … 
+ Press Play. The loop runs ~28s: the first 20s plus the verse and the decode card. 
+ Script changes vs the current film: the man's thought replaces "rehearsing whether you're allowed in" (dialogue beats narration there), and "But listen to His own words" shrinks to "His own words". Both go through the words-lock process before any recording.
+ Beat table
+ Time On screen Move Voice Sound
+ 0.0–0.8 The hand on the door. Big. Drawn in half a second. Ink Wake (0.5s) Narr Somewhere in you is the quiet fear pen scratch · night wind 
+ 0.8–2.6 Question card over the hand: AFRAID GOD WILL TURN YOU AWAY? Card Slam (narration continues) soft card thud 
+ 2.6–5.2 Wide night door. The man small, scroll in hand. The lamp breathes. Gutter Cut Narr that if you actually came to God, lamp crackle 
+ 5.2–8.0 Push into the scroll. The record fills the frame. Zoom-Through Narr He'd look at your record and turn you away. paper 
+ 8.2–10.4 Back to the hand on the door. KNOCK lettering on the knuckles. Panel Walk + SFX Hit Narr That fear keeps you at the door, knock on wood 
+ 10.6–12.6 The man's face by the lamp. His thought. Ink Wake + Thought pop Man What if He says no? invented breath · lamp 
+ 12.8–15.2 Jesus. Calm. The same face as the landing. Ink Wake (0.8s, the slow one) Narr Jesus answers it before you can ask. low warm tone · clear a hole 
+ 15.2–16.2 Small card: HIS OWN WORDS · JOHN 6:37 Card Slam Narr His own words: — 
+ 16.2–21.0 Jesus balloon, gold rule, pops on the first word. Balloon pop Jesus All that the Father giveth me shall come to me; silence under the voice 
+ 21.3–25.6 Two chained balloons, same panel. Balloon pop ×2 Jesus and him that cometh to me / I will in no wise cast out. — 
+ 25.8–28.0 Decode card: IN NO WISE = NEVER Card Slam (no voice, let it land) soft bell
+ Timings come from the real caption windows in _compose_piece1_pages_v4.py , shifted for the new beats. Matt 11:28 ("Come unto me, all ye that labour and are heavy laden, and I will give you rest.") is a verbatim option for the landing exchange at ~55s, not the open.
+ 5 ONE FILE PER EPISODE 
+ Every new episode fills in episode.json . The build reads it. Nothing else to hand-edit.
+ Fields
+ verse ref + KJV text (checked against kjv_cache ) 
+ voices narrator / jesus / man → voice ids 
+ panels[] id, clip, still, t0, t1, enter move + duration, exit move, rest layer, light anchor, mouth anchor, sacred flag 
+ text[] kind (card / balloon / thought / cap / decode / sfx), speaker, text, word_t0, word_t1, panel, anchor, invented + why, kjv_ref 
+ sound[] time, cue file, gain 
+ rules one text layer · max 8 words · new thing every 4s · no SFX on sacred
+ $0 gates the build runs
+ Jesus balloon text == KJV byte-for-byte, or FAIL. 
+ Invented lines ≤ 2, all flagged, listed in the review page. 
+ Never two text layers at once. 
+ Something new on screen every ≤ 4s. 
+ No SFX / no break-out on a sacred panel. 
+ Every panel has a real clip. A still alone FAILs. 
+ Print grade: dots ≤ 4%, faces masked.
+ Show the file (short example) 
+ {
+ "episode": "in_no_wise_cast_out",
+ "verse": { "ref": "John 6:37", "kjv": "All that the Father giveth me shall come to me; and him that cometh to me I will in no wise cast out." },
+ "voices": { "narrator": "narr_v2", "jesus": "jesus_calm", "man": "man_older" },
+ "panels": [
+ { "id": "p1b", "clip": "clips/p1b.mp4", "still": "stills/p1b.png", "t0": 0.0, "t1": 2.6,
+ "enter": { "move": "ink_wake", "dur": 0.5 }, "exit": "cut",
+ "rest": ["line_boil"], "light_anchor": null, "mouth_anchor": null, "sacred": false },
+ { "id": "p2a", "clip": "clips/p2a.mp4", "t0": 10.6, "t1": 12.6,
+ "enter": { "move": "ink_wake", "dur": 0.4 }, "exit": "cut", "mouth_anchor": [0.64, 0.37] },
+ { "id": "p2b", "clip": "clips/p2b.mp4", "t0": 12.8, "t1": 25.6,
+ "enter": { "move": "ink_wake", "dur": 0.8 }, "exit": "cut", "mouth_anchor": [0.54, 0.30], "sacred": true }
+ ],
+ "text": [
+ { "kind": "card", "style": "question", "lines": ["AFRAID GOD WILL", "TURN YOU AWAY?"], "t0": 0.8, "t1": 2.6 },
+ { "kind": "cap", "text": "that if you actually came to God,", "word_t0": 2.62, "word_t1": 5.0 },
+ { "kind": "sfx", "text": "KNOCK", "t": 9.1, "panel": "p1b", "anchor": [0.62, 0.46], "sound": "knock_wood_01.wav" },
+ { "kind": "thought", "speaker": "man", "text": "What if He says no?", "word_t0": 10.9, "word_t1": 12.4,
+ "panel": "p2a", "invented": true, "why": "gives the fear a voice; narration already says 'rehearsing'" },
+ { "kind": "balloon", "speaker": "jesus", "text": "All that the Father giveth me shall come to me;",
+ "kjv_ref": "John 6:37", "word_t0": 16.2, "word_t1": 21.0, "panel": "p2b", "invented": false },
+ { "kind": "decode", "old": "IN NO WISE", "plain": "NEVER", "t0": 25.8, "t1": 28.0 }
+ ],
+ "sound": [ { "t": 0.0, "cue": "pen_scratch_short.wav" }, { "t": 12.8, "cue": "warm_tone.wav", "gain": -14 } ],
+ "rules": { "one_text_layer": true, "max_balloon_words": 8, "new_thing_every_s": 4, "sfx_on_sacred": false }
+}
+ Build pieces, in order
+ # Piece Status What it does Effort
+ 1 sketch_pass.py exists pencil version of a still (the _sketch folder proves it). Make it a tool. easy 
+ 2 ink_wake.py new pencil → ink → colour front over the clip's first frame, then the clip. Reuses blue-line 's wobbled front. easy-med 
+ 3 text_layer.py new balloons, thoughts, caption band, cards, decode, SFX. From episode.json + word times. Reuses typography-panel band + impact-burst . medium 
+ 4 page_camera.py new Panel Walk + Zoom-Through + Gutter Cut. Crop/pan over a 2-panel composite. Reuses grid-choreography primitives. easy 
+ 5 breakout.py new light spill across the gutter + cutout pop over a held frame. rembg for cutouts. medium 
+ 6 compose_episode.py new the timeline builder. Reads episode.json , calls 1–5, runs the gates. Replaces _compose_piece1_pages_v4.py . medium 
+ 7 lc_gates.py new the $0 gates above. Fail-closed. easy 
+ 8 page_turn.py new · optional PIL perspective per frame. Ship after the rest. medium 
+ 9 print_grade · sfx · landing hold · watermark exists last passes, unchanged. Print grade gets a face mask + 4% cap. easy
+ Cost. Build: $0 cash, about 4 build days (Sonnet executes). Per episode after that: same clip spend as today (~$9–10 for a short on Kling/Seedance). No new paid step.
+ 6 THE RISKS
+ Could look cheap
+ Too many reveals. The ink wake becomes a tic. Rule: 0.5s, and not on every cut. 
+ A CSS wipe is smooth. An ffmpeg wipe can band. Use the wobbled front at 30fps, not a straight line. 
+ The thought cloud can look childish. Keep it small, grey, dashed. 
+ Halftone over faces. Mask faces, cap at 4%, or drop the dots.
+ Hard or impossible in ffmpeg
+ A true 3D page turn. Needs PIL per-frame warp. Medium effort, so it ships last. 
+ A figure really stepping across panels. The break-out here is a still cutout or light. Honest limit. 
+ A cutout over a moving clip drifts. Break-out only on a held frame, ≤ 0.8s.
+ Needs paid animation
+ Any acting: Jesus turning, the man stepping through the door. 
+ Lips moving for dialogue. We do NOT do this. Balloons + voice carry it. Lip-sync on ink art reads wrong.
+ Doctrine and faces
+ Invented lines must stay inside what the narration already says. Flagged, ≤ 2, panel-reviewed. 
+ Jesus must be ONE man in every panel, including the landing. That is a stills problem (ref chaining), not a motion problem. Still the top risk. 
+ A wrong word in His balloon is a FAIL, not a note.
+ 7 MY PICK 
+ A · WET INK as the signature. Break-Out saved for the one pivot. Balloons for Jesus (KJV only) and one thought for the man. 
+ Build pieces 1–7 ($0, ~4 days), then rebuild the first 20s of "In No Wise Cast Out" as the proof. Then the blind panel again. 
+ My pick: A. Say yes?
+ Living Comic design · 2026-11-07 · previews on downscaled stills in img/ , fonts in fonts/ . Nothing here was generated or uploaded.
+
+
+## RECIPE
+
+ Repeatable Episode Recipe
+ Great, repeatable episodes 
+ Status: DRAFT. Not reviewed by the outside panel yet.
+ The big idea 
+Today we fixed problems after the film was built. That is slow and costs money. 
+The recipe moves every check before the money is spent, and turns each lesson into a rule or a gate.
+ 1. Rules that come from this episode
+ Rule What went wrong here 
+ Hook first. Frame 1 = a face or hand + a question card. Voice at 0s. No masthead. 1.3s logo open. 5 of 5 seats flagged it. 
+ Plain words. No old word carries the key line. If a quote is old English, show a card: "OLD WORD = PLAIN WORD". "in no wise", "cometh", "rehearsing", "fine print": 5 of 5. 
+ Say who Jesus is once , early, in plain words. 4 of 5 seats lost here. 
+ No claim beyond the verse. Every bridge line names the verse that backs it. "only way to be cast out is to never come": 4 of 5. 
+ Pictures must not fight the words. A bolt on the door, then "never locked". 
+ One big panel at a time. Grids only as a rare reveal. No empty cells. Something new every 4 seconds. 8 seconds of near-still. Alive score stuck at 4.75. 
+ One face for Jesus , chained to every shot, landing too. Calm welcome. No glow sticker. Landing Jesus was off-model: 3 of 4. 
+ One text layer at a time. Big bold captions. Cards for hook, decode, ask. 3 text layers at the key line. 
+ Colour is measured, not eyeballed. A shared tool turned paper green. 4 of 4 saw it. Nobody caught it for weeks.
+ 2. The flow. Checks come BEFORE spend 
+ 1 Words $0 Blind multi-writer drafts, global-audience test, 5 guardrail questions. A pick locks words only. 
+ 2 Panel map + refs $0 12 to 16 panels. One big panel per beat. Locked Jesus + character refs. Hook card, decode cards, ask card written in. 
+ 3 Stills ~$5 Render key stills first. 
+ 4 STYLE PANEL on stills $0 Blind seats with Fable. Faces match? Colour right? Fix BEFORE animating. This is the new step. 
+ 5 Animatic $0 Stills + voice + cards. Check pacing and the 4-second rule. 
+ 6 Voice recording ~$0.5 Only after words are locked. 
+ 7 Animation ~$11, the big one Only after steps 1 to 5 pass. Reuse a clip when one fits. 
+ 8 Compose + assemble $0 One data file in, one film out. Gates run. 
+ 9 Final panel + packaging card $0 Title, hook, share line. Panel again on the finished film. 
+ Each paid step needs your own yes and a quoted price. A panel pass never authorizes spend.
+ 3. What is reusable and what is new each time
+ Built once (the machine) New per episode 
+ One data file ( episode.json ): narration, timing, panels, captions, cards, sound cues. One compose + assemble script that reads it. Gates (below). Panel packs. Watermark. Packaging. The narration (Bible thread). 12 to 16 panels + refs. Hook question, decode words, ask line.
+ Today's compose and assemble scripts have the pages hard-coded. We turn them into reading from the data file. This is the main build.
+ 4. Gates that run on their own ($0)
+ Gate Catches 
+ Colour drift Paper / sky colour changed by more than ~5% between composite and final (the green bug) 
+ Text layers More than 2 text objects on screen at once 
+ Static stretch Any span over ~4s with almost no pixel change 
+ Hook present Hook card by 0s. Voice starts at 0s. No logo open 
+ Decode card Every old-English key word has its plain card 
+ Caption size Smaller than the minimum on a phone 
+ Landing hold Under 3.0s, or audio and video length mismatch (exists already)
+ 5. Honest targets
+ Panel score of 7 or more on words AND on style, before animation spend. Today's film is 6.4. 
+ The bigger lever for viewers is the hook and the plain words, not the art style. 
+ Seats are AI. Odds are ranges with wide error bars. Not promises. 
+ Cost per episode, from our own record: about $22 to $30 (Piece 1 was $28 to $30). Not yet verified for the new flow.
+ 5b. The Living Comic look (owner: "incorporate all of them")
+ Part Job in every episode Guard rail 
+ Wet Ink Opens each page: pencil, then ink, then colour, then the panel wakes into its clip. Not on every cut. Max once per page, or it becomes a tic. 
+ Page Camera Default glue. The camera travels across the page from panel to panel. One big panel at a time. Never a flat pan. Each move has a reason. 
+ Break the Gutter The ONE big moment: figure or light leaves the panel at the key line or landing. Once per episode. Needs a clean Jesus cutout (the old one has a clipped arm). 
+ 8 moves Ink Wake, Gutter Cut, Panel Walk, Break-Out, Zoom-Through, Card Slam, Page Turn, SFX Hit. Spread thin. Gate checks no move is used 3 times in a row. 
+ Dialogue Jesus: gold-ruled balloon, KJV word for word. Human balloon. Grey thought cloud. Narrator band. Dialogue 30% or less. Invented lines max 2, flagged invented:true . Doctrine panel reviews them.
+ Owner decisions this overrides: old "no speech bubbles" and "Christ never in a balloon". Engine is ffmpeg + PIL, not Remotion. Full design: LIVING_COMIC_DESIGN.html
+ 6. How we build it
+ Step Cost 
+ A. Fix the shared print-grade colour bug (small, careful change) $0 
+ B. Data-driven compose + assemble, from today's working v4 scripts, reading episode.json (~4 build days: sketch_pass, ink_wake, text_layer, page_camera, breakout, compose, lc_gates, page_turn) $0 
+ C. The 7 gates $0 
+ D. Run the recipe on Piece 2: "The Mockers" (already planned, words already locked, ~$22 set aside) paid steps need your yes 
+ E. Outside 5-CLI panel reviews this recipe before we lock it $0
+ My pick: build the machine WHILE making Piece 2. 
+A real new episode proves it repeats. Doing it on Piece 1 again proves nothing new. 
+Order: A, B, C, then E (panel review), then D with your yes on each spend.
+ Links
+ Existing proposal: v2/COMIC_PAGE_PIPELINE_PROPOSAL.md 
+ Gold Seam showcase: _COMIC_STYLE_SO_FAR.html 
+ Round 1 words panel: _PANEL_REPORT.html 
+ Style panel r2: _STYLE_R2_REPORT.html
+
+
+YOUR LENS: DOCTRINE AND REVERENCE
+Judge only: Jesus speaking in a balloon, invented human lines and thought clouds, KJV-verbatim rule, any risk of putting words in Christ's mouth or trivialising. Is it sound and grounded in the Bible?
+
+OUTPUT FORMAT (Markdown, max ~500 words, exactly these headings):
+## VERDICT (PASS / REVISE / FAIL) and score 0-10
+## BIGGEST RISK (quote the line)
+## WHAT TO CUT OR SIMPLIFY
+## WHAT IS MISSING
+## THREE SMALLEST FIXES (exact wording or rule)
+## ODDS this makes episodes more watched than a plain Ken Burns comic (range with error bars)

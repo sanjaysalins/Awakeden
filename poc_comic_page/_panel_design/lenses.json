@@ -1,0 +1,18 @@
+{
+    "viewer":  [
+                   "SCROLLER AND GLOBAL VIEWER",
+                   "Play a mobile scroller worldwide, English as second language. Will this hold attention, is text readable, is dialogue clear, is it a gimmick that tires by episode 3."
+               ],
+    "judge":  [
+                  "JUDGE, NO HAT",
+                  "Judge the whole plan for the worldwide audience: is it a real step up in how alive the film feels, is it repeatable, is it reverent. Name the ONE change that helps most."
+              ],
+    "build":  [
+                  "BUILD AND REPEATABILITY",
+                  "Judge only: can ffmpeg+PIL really deliver these moves at the stated time and cost; what breaks; are the gates enough; is the order of work right; what will go wrong on episode 2."
+              ],
+    "doctrine":  [
+                     "DOCTRINE AND REVERENCE",
+                     "Judge only: Jesus speaking in a balloon, invented human lines and thought clouds, KJV-verbatim rule, any risk of putting words in Christ\u0027s mouth or trivialising. Is it sound and grounded in the Bible?"
+                 ]
+}

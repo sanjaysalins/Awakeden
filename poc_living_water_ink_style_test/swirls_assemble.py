@@ -12,7 +12,9 @@ SCORE_STYLE_BANK.md).
 """
 from __future__ import annotations
 
+import hashlib
 import json
+import shutil
 import subprocess
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -30,7 +32,7 @@ class Unit:
     tag: str
     src: Path
     words: int
-    mode: Literal["freeze", "boomerang"]
+    mode: Literal["freeze", "boomerang", "trim"]
     tail_loop_seconds: float | None = None
     # freeze units only: when set, the slot-filling extension ping-pongs the clip's
     # own last `tail_loop_seconds` (see make_freeze_tail_loop) instead of a static
@@ -67,6 +69,30 @@ class EpisodeManifest:
     w: int = 720
     h: int = 1280
     fps: int = 30
+
+
+TRIM_SIZE = (1080, 1920)     # a trim (Swirls short) episode must declare this; the 720 default is refused
+
+
+class ShortClipError(RuntimeError):
+    """Trim mode: a clip is shorter than its slot. Never filled (no freeze, no
+    boomerang, no speed change) -- the clip must be re-rendered longer."""
+
+
+def is_trim_episode(manifest: EpisodeManifest) -> bool:
+    """A trim episode = every unit is `trim`. A mix of `trim` and another mode is an
+    error. A trim episode needs a unit_timing.json carrying every tag (no word-count
+    guess)."""
+    modes = {u.mode for u in manifest.units}
+    if "trim" not in modes:
+        return False
+    if modes != {"trim"}:
+        raise ValueError(f"mixed unit modes {sorted(modes)}: a trim episode must be all `trim`")
+    real = _unit_slots_from_timing_file(manifest)
+    missing = [u.tag for u in manifest.units if real is None or u.tag not in real]
+    if missing:
+        raise ValueError(f"trim episode needs unit_timing.json with every tag; missing: {missing}")
+    return True
 
 
 def dur(p: Path) -> float:
@@ -201,6 +227,22 @@ def make_freeze_tail_loop(src: Path, out: Path, slot: float, cdur: float, work: 
     run(cmd)
 
 
+def make_trim(src: Path, out: Path, slot: float, cdur: float, manifest: EpisodeManifest,
+              frames: int | None = None) -> None:
+    """Short-form mode: play the clip from frame 0 at 1.0x and cut it after exactly `frames` frames
+    (default round(slot x fps)). A clip shorter than that is an error -- never freeze / boomerang /
+    speed-fill. The picture is SCALED then centre-CROPPED to w x h (Kling's 1072x1928 -> 1080x1920):
+    the aspect ratio is kept, never stretched. Encoded with fps stated and -frames:v."""
+    n = frames if frames is not None else round(slot * manifest.fps)
+    if cdur < n / manifest.fps + 0.05:
+        raise ShortClipError(f"{src.name}: clip {cdur:.2f}s is shorter than its slot {n / manifest.fps:.2f}s "
+                             "(+0.05s) -- re-render it longer; trim mode never fills")
+    vf = (f"fps={manifest.fps},scale={manifest.w}:{manifest.h}:force_original_aspect_ratio=increase:flags=lanczos,"
+          f"crop={manifest.w}:{manifest.h},setsar=1")
+    run(["ffmpeg", "-y", "-v", "error", "-i", str(src), "-vf", vf, "-frames:v", str(n), "-r", str(manifest.fps),
+         "-c:v", "libx264", "-crf", "18", "-preset", "medium", "-pix_fmt", "yuv420p", "-an", str(out)])
+
+
 def make_boomerang(src: Path, out: Path, slot: float, cdur: float, work: Path, tag: str,
                     manifest: EpisodeManifest) -> None:
     if slot <= cdur:
@@ -267,6 +309,18 @@ def _unit_slots_from_timing_file(manifest: EpisodeManifest) -> dict[str, float] 
     return slots
 
 
+def _unit_ends_from_timing_file(manifest: EpisodeManifest) -> dict[str, float] | None:
+    path = manifest.episode_dir / "unit_timing.json"
+    if not path.exists():
+        return None
+    units = json.loads(path.read_text(encoding="utf-8")).get("units", {})
+    return {tag: float(span["end_s"]) for tag, span in units.items()}
+
+
+def _sha(p: Path) -> str:
+    return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+
+
 def _unit_slot_seconds(manifest: EpisodeManifest, u: "Unit", narration_len: float,
                         total_words: int, real_slots: dict[str, float] | None) -> float:
     if real_slots is not None and u.tag in real_slots:
@@ -278,6 +332,7 @@ def plan_units(manifest: EpisodeManifest) -> list[dict]:
     """$0 -- real-timing slot (if unit_timing.json exists) or word-proportional
     slot, + native duration per unit, no rendering. Used by `swirls_episode.py
     plan` and swirls_verify.py's freeze-hold gate."""
+    is_trim_episode(manifest)  # raises on a mixed / un-timed trim episode
     narration_len = dur(manifest.narration)
     total_words = sum(u.words for u in manifest.units)
     real_slots = _unit_slots_from_timing_file(manifest)
@@ -290,8 +345,43 @@ def plan_units(manifest: EpisodeManifest) -> list[dict]:
     return stats
 
 
-def assemble(manifest: EpisodeManifest, score_name: str, *, work_dirname: str = "_assembly") -> dict:
-    variant = manifest.scores[score_name]
+def write_receipt(manifest: EpisodeManifest, res: dict, kind: str) -> dict | None:
+    """Trim episodes only: the assembly receipt carries the hash chain (unit clips, narration, timing,
+    output). The draft's is `assembly_receipt.json` (the owner's draft_cut look is bound to it); the
+    scored cut's is `assembly_receipt_scored.json`."""
+    if not all(u.mode == "trim" for u in manifest.units):
+        return None
+    d = manifest.episode_dir
+    pr = json.loads(subprocess.run(
+        ["ffprobe", "-v", "error", "-select_streams", "v:0", "-count_frames", "-show_entries",
+         "stream=nb_read_frames,width,height,r_frame_rate", "-of", "json", str(res["out"])],
+        capture_output=True, text=True, check=True).stdout)["streams"][0]
+    rec = {"kind": kind, "output": str(res["out"]), "output_sha256": _sha(res["out"]),
+           "modes": sorted({u.mode for u in manifest.units}), "uses_shortest": False,
+           "fps": manifest.fps, "size": [int(pr["width"]), int(pr["height"])],
+           "total_frames": int(pr["nb_read_frames"]), "total": res["total"],
+           "units": [{"tag": u.tag, "src": str(u.src), "src_sha256": _sha(u.src), "frames": st["frames"]}
+                     for u, st in zip(manifest.units, res["units"])],
+           "narration_sha256": _sha(manifest.narration),
+           "unit_timing_sha256": _sha(d / "unit_timing.json")}
+    name = "assembly_receipt.json" if kind == "draft" else "assembly_receipt_scored.json"
+    if kind == "scored" and (d / "assembly_receipt.json").exists():
+        rec["draft_receipt_sha256"] = _sha(d / "assembly_receipt.json")
+    (d / name).write_text(json.dumps(rec, indent=2), encoding="utf-8")
+    return rec
+
+
+def assemble(manifest: EpisodeManifest, score_name: str | None, *,
+             work_dirname: str = "_assembly") -> dict:
+    """score_name=None is a DRAFT (picture + voice, no music) and is only allowed on a
+    trim episode; it writes <episode>_draft.mp4."""
+    trim = is_trim_episode(manifest)
+    if score_name is None and not trim:
+        raise ValueError("score_name=None (draft) is only allowed on a trim episode")
+    if trim and (manifest.w, manifest.h) != TRIM_SIZE:
+        raise ValueError(f"a trim episode must declare w={TRIM_SIZE[0]}, h={TRIM_SIZE[1]} "
+                         f"(manifest declares {manifest.w}x{manifest.h}; the 720 default is refused)")
+    variant = manifest.scores[score_name] if score_name is not None else None
     narration_len = dur(manifest.narration)
     total_words = sum(u.words for u in manifest.units)
     total = narration_len + manifest.outro_hold
@@ -307,11 +397,22 @@ def assemble(manifest: EpisodeManifest, score_name: str, *, work_dirname: str = 
 
     held = []
     unit_stats = []
-    for u in manifest.units:
+    ends = _unit_ends_from_timing_file(manifest) if trim else None
+    prev_b = 0
+    for i, u in enumerate(manifest.units):
         slot = _unit_slot_seconds(manifest, u, narration_len, total_words, real_slots)
         cdur = dur(u.src)
         out = work / f"{u.tag}__held.mp4"
-        if u.mode == "boomerang":
+        frames_n = None
+        if u.mode == "trim":
+            # cumulative, frame-exact cuts: B(k) = round(end_s(k) x fps), counted from the film start
+            end_s = total if i == len(manifest.units) - 1 else ends[u.tag]
+            b = round(end_s * manifest.fps)
+            frames_n = b - prev_b
+            prev_b = b
+            slot = frames_n / manifest.fps
+            make_trim(u.src, out, slot, cdur, manifest, frames=frames_n)
+        elif u.mode == "boomerang":
             make_boomerang(u.src, out, slot, cdur, work, u.tag, manifest)
         elif u.tail_loop_seconds is not None:
             make_freeze_tail_loop(u.src, out, slot, cdur, work, u.tag, manifest,
@@ -323,20 +424,45 @@ def assemble(manifest: EpisodeManifest, score_name: str, *, work_dirname: str = 
         print(f"  [{u.tag}] native={cdur:.2f}s -> slot={slot:.2f}s held={held_duration:.2f}s ({mode_label})")
         held.append(out)
         unit_stats.append({"tag": u.tag, "mode": u.mode, "native": cdur, "slot": slot,
-                            "held_duration": held_duration})
+                            "held_duration": held_duration, "frames": frames_n})
 
     concat_list = work / "concat.txt"
     concat_list.write_text("\n".join(f"file '{p.resolve()}'" for p in held), encoding="utf-8")
     silent_video = work / "silent_concat.mp4"
-    run(["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0",
-         "-i", str(concat_list), "-r", str(manifest.fps), "-c:v", "libx264", "-crf", "18",
-         "-preset", "medium", "-pix_fmt", "yuv420p", str(silent_video)])
+    if trim:
+        run(["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", str(concat_list),
+             "-c", "copy", str(silent_video)])
+    else:
+        run(["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0",
+             "-i", str(concat_list), "-r", str(manifest.fps), "-c:v", "libx264", "-crf", "18",
+             "-preset", "medium", "-pix_fmt", "yuv420p", str(silent_video)])
     print(f"[concat] {dur(silent_video):.2f}s silent video")
 
     with_narration = work / "with_narration.mp4"
-    run(["ffmpeg", "-y", "-v", "error", "-i", str(silent_video), "-i", str(manifest.narration),
-         "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",
-         "-shortest", str(with_narration)])
+    if trim:
+        # HOLD FIX (2026-11-15): `-shortest` cut the picture at the voice length and
+        # score_mix.mix_tail then tpad-CLONED the last frame for the outro hold -> the
+        # 3 s landing hold was a frozen frame. In trim mode the picture already runs to
+        # `total` (the back clip fills last line + hold), so keep it whole; mix_tail's
+        # clone lands AFTER `total` and is cut by output_args' `-t total`.
+        draft_args = ["-af", f"apad=whole_dur={total}", "-movflags", "+faststart"] if variant is None else []
+        run(["ffmpeg", "-y", "-v", "error", "-i", str(silent_video), "-i", str(manifest.narration),
+             "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",
+             "-t", f"{total:.3f}"] + draft_args + [str(with_narration)])
+    else:
+        run(["ffmpeg", "-y", "-v", "error", "-i", str(silent_video), "-i", str(manifest.narration),
+             "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",
+             "-shortest", str(with_narration)])
+
+    if variant is None:  # draft: picture + voice only
+        draft = manifest.episode_dir / f"{manifest.episode_dir.name}_draft.mp4"
+        shutil.copyfile(with_narration, draft)
+        final_dur = dur(draft)
+        print(f"[draft] {draft}  ({final_dur:.2f}s)")
+        res = {"out": draft, "total": total, "narration_len": narration_len,
+               "units": unit_stats, "final_duration": final_dur}
+        res["receipt"] = write_receipt(manifest, res, "draft")
+        return res
 
     music_chain = f"[1:a]{score_mix.AFMT},volume={variant.duck.gain_db}dB[mus];"
     tail = score_mix.mix_tail(total, manifest.outro_hold, fmt_narration=True,
@@ -351,7 +477,9 @@ def assemble(manifest: EpisodeManifest, score_name: str, *, work_dirname: str = 
     final_dur = dur(variant.out)
     print(f"[done] {variant.out}  ({final_dur:.2f}s)")
 
-    return {
+    res = {
         "out": variant.out, "total": total, "narration_len": narration_len,
         "units": unit_stats, "final_duration": final_dur,
     }
+    res["receipt"] = write_receipt(manifest, res, "scored")
+    return res

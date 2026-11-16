@@ -1,0 +1,16 @@
+<speaker name="narrator">She came for water. She left without her jar. Why?</speaker>
+<speaker name="narrator">About noon, a Samaritan woman comes to a well. Jesus, a Jew, sits there, tired.</speaker>
+<speaker name="jesus">Give me to drink.</speaker>
+<speaker name="woman">How is it that thou, being a Jew, askest drink of me?</speaker>
+<speaker name="narrator">Jews and Samaritans kept apart. He asks anyway.</speaker>
+<speaker name="jesus">Whosoever drinketh of this water shall thirst again.</speaker>
+<speaker name="narrator">Then He offers her a different water, a gift from God. Drink it, and you "shall never thirst": life from God inside you, a spring that never runs dry.</speaker>
+<speaker name="narrator">Then He tells her the truth about her life: five husbands, and the man she has now is not her husband. He knew it all, and stayed.</speaker>
+<speaker name="narrator">She says the Christ, the one God promised, will come.</speaker>
+<speaker name="jesus">I that speak unto thee am he.</speaker>
+<speaker name="narrator">He is the Christ.</speaker>
+<speaker name="narrator">She leaves her jar and goes back to town.</speaker>
+<speaker name="woman">Come, see a man, which told me all things that ever I did: is not this the Christ?</speaker>
+<speaker name="narrator">Many come, hear Him, and call Him "the Saviour of the world."</speaker>
+<speaker name="narrator">The jar stayed. She came for water, and found the One who gives better water: Jesus, who knew her whole story and offered her life.</speaker>
+<speaker name="narrator">To give that life, He died for our sins and rose the third day.</speaker>

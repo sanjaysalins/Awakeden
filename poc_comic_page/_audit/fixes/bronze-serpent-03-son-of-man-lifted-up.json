@@ -1,0 +1,28 @@
+{
+ "id": "bronze-serpent-03-son-of-man-lifted-up",
+ "source": "F:/slk/PycharmProjects/JesusInTheBible/poc_living_sketchbook/son_of_man_lifted_up/SONOFMANLIFTEDUP_living_sketchbook_cc_scored_sfx.mp4",
+ "output": "F:/slk/PycharmProjects/JesusInTheBible/poc_living_sketchbook/son_of_man_lifted_up/SONOFMANLIFTEDUP_living_sketchbook_cc_scored_sfx_v5hook.mp4",
+ "hook_text": null,
+ "hook_skipped_reason": "Burned-in title card already shows from ~0.6s (EVEN SO MUST THE SON OF MAN BE LIFTED UP.) so hook skipped (it is a quote, not a question; owner may want a question card).",
+ "decode_cards": [
+  {
+   "old": "EVEN SO",
+   "plain": "IN THE SAME WAY",
+   "t0": 24.792,
+   "t1": 26.792
+  },
+  {
+   "old": "WHOSOEVER",
+   "plain": "ANYONE WHO",
+   "t0": 28.288,
+   "t1": 30.288
+  }
+ ],
+ "skipped_decodes": [
+  "believeth (same sense as whosoever line, one card enough)",
+  "perish: plain"
+ ],
+ "title_question_proposal": "Why Must the Son of Man Be Lifted Up?",
+ "verified": true,
+ "notes": "WHOSOEVER card placed under the JOHN 3:15 tag, above caption; baked red verse text left untouched at top. Duration equals source (checked ffprobe). Audio stream copied. Frames checked at each card time."
+}

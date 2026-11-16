@@ -1,0 +1,119 @@
+{
+ "end": 91.04,
+ "cuts": [
+  {
+   "clip": "c01",
+   "start": 0.0,
+   "slot": 4.4,
+   "clip_len": 5.04
+  },
+  {
+   "clip": "c02",
+   "start": 4.4,
+   "slot": 3.6,
+   "clip_len": 4.04
+  },
+  {
+   "clip": "c03",
+   "start": 8.0,
+   "slot": 3.59,
+   "clip_len": 4.04
+  },
+  {
+   "clip": "c04",
+   "start": 11.59,
+   "slot": 2.88,
+   "clip_len": 4.04
+  },
+  {
+   "clip": "c05",
+   "start": 14.47,
+   "slot": 4.48,
+   "clip_len": 5.04
+  },
+  {
+   "clip": "c06",
+   "start": 18.95,
+   "slot": 3.83,
+   "clip_len": 4.04
+  },
+  {
+   "clip": "c07",
+   "start": 22.78,
+   "slot": 3.92,
+   "clip_len": 5.04
+  },
+  {
+   "clip": "c08",
+   "start": 26.7,
+   "slot": 6.0,
+   "clip_len": 6.04
+  },
+  {
+   "clip": "c09",
+   "start": 32.7,
+   "slot": 4.79,
+   "clip_len": 6.04
+  },
+  {
+   "clip": "c10",
+   "start": 37.49,
+   "slot": 8.04,
+   "clip_len": 8.04
+  },
+  {
+   "clip": "c11",
+   "start": 45.53,
+   "slot": 5.04,
+   "clip_len": 5.04
+  },
+  {
+   "clip": "c12",
+   "start": 50.57,
+   "slot": 3.79,
+   "clip_len": 4.04
+  },
+  {
+   "clip": "c13",
+   "start": 54.36,
+   "slot": 2.83,
+   "clip_len": 3.04
+  },
+  {
+   "clip": "c14",
+   "start": 57.19,
+   "slot": 2.8,
+   "clip_len": 3.04
+  },
+  {
+   "clip": "c15",
+   "start": 59.99,
+   "slot": 8.0,
+   "clip_len": 8.04
+  },
+  {
+   "clip": "c16",
+   "start": 67.99,
+   "slot": 5.0,
+   "clip_len": 5.04
+  },
+  {
+   "clip": "c17",
+   "start": 72.99,
+   "slot": 4.97,
+   "clip_len": 6.04
+  },
+  {
+   "clip": "c18",
+   "start": 77.96,
+   "slot": 6.04,
+   "clip_len": 6.04
+  },
+  {
+   "clip": "c19",
+   "start": 84.0,
+   "slot": 7.04,
+   "clip_len": 7.04
+  }
+ ]
+}

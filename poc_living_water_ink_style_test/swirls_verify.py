@@ -389,6 +389,203 @@ def audit_page_still(png: Path, spec: PageSpec) -> ImageAudit:
     return audit
 
 
+# ============================ V2b: ONE STILL AUDIT FOR SHORTS (SW-V2 == SWS-G9) ===
+# Vision only READS the page (the raw strings, counts, yes/no flags); CODE decides, on the RAW
+# strings. Design v3.2 step 5: a dash / quote mark / ellipsis, a digit that differs from the plan,
+# ANY token not in the plan (even 1-3 letters), an expected string missing or present twice (also
+# twice inside one seen string), ANY wording difference after lower-casing and trimming = FAIL.
+# A text FAIL may be a Vision misread: it is cleared only by a recorded human read bound to the
+# PNG hash (record_read). WARN never counts as pass (callers use swirls_short.is_pass).
+
+AUDIT_VERSION = 3
+
+STILL_V3_ROLE = (
+    "You are a strict READER of a hand-drawn storyboard page or book cover. Do NOT judge it. "
+    "Report only what you see. Return ONLY a JSON object (optionally in a ```json fence):\n"
+    '{"texts_seen": ["every separate piece of lettering on the image, one string each, EXACTLY as '
+    'written (keep every dash, quote mark, digit and misspelling), including any that appear twice"], '
+    '"full_figures": <number of full human figures>, "crowd": true|false, "speech_bubble": true|false, '
+    '"motif_marks": [{"colour": "...", "where": "..."}], "motif_bad_shape": true|false, '
+    '"drawn_border": true|false, "caption_bottom_pct": <how far down the page the caption ends, 0-100>}\n'
+    "speech_bubble = any speech/thought bubble or box around lettering. motif_marks = every blue or "
+    "gold ink brushstroke that is NOT part of the art itself. motif_bad_shape = such a mark drawn as a "
+    "cord, drip, flower, ring or loop. drawn_border = a ruled frame/border line drawn around the page."
+)
+
+_DASHES = "-‐‑‒–—―−"
+_QUOTE_MARKS = "\"“”„‘«»"
+
+
+def _norm_text(s: str) -> str:
+    import re
+    return re.sub(r"\s+", " ", str(s).strip().lower())
+
+
+def judge_still_raw(expected: list[str], raw: dict, plan_unit: dict | None = None,
+                    texts_only: bool = False) -> list[GateResult]:
+    """Pure STRICT judge for SWS-G9 over the raw strings. See the block comment above."""
+    import re
+    plan_unit = plan_unit or {}
+    seen = [str(x) for x in (raw.get("texts_seen") or [])]
+    exp_all = "".join(expected)
+    out: list[GateResult] = []
+
+    def fail(tag, ev, fix="re-render, or `read` the real text if Vision misread it"):
+        out.append(GateResult(f"SWS-G9[{tag}]", "FAIL", ev, fix))
+
+    punct = []
+    for s in seen:
+        for c in s:
+            if c in _DASHES and c not in exp_all:
+                punct.append(f"dash in {s!r}")
+            if c in _QUOTE_MARKS and c not in exp_all:
+                punct.append(f"quote mark in {s!r}")
+        if ("..." in s or "…" in s) and "..." not in exp_all and "…" not in exp_all:
+            punct.append(f"ellipsis in {s!r}")
+    if punct:
+        fail("punct", "; ".join(sorted(set(punct))))
+    exp_digits = re.findall(r"\d+", exp_all)
+    for s in seen:
+        for dg in re.findall(r"\d+", s):
+            if dg not in exp_digits:
+                fail("digit", f"digit {dg!r} in {s!r} differs from the plan {exp_digits}")
+                break
+    exp_tokens = {t for e in expected for t in re.findall(r"[a-z0-9']+", e.lower())}
+    stray = sorted({t for s in seen for t in re.findall(r"[a-z0-9']+", s.lower())
+                    if t not in exp_tokens and not t.isdigit()})
+    if stray:
+        fail("token", f"token(s) not in the plan: {stray}")
+    E = [_norm_text(e) for e in expected]
+    S = [_norm_text(s) for s in seen]
+    missing = [expected[i] for i, e in enumerate(E) if S.count(e) == 0 and not any(e in s for s in S)]
+    twice = [expected[i] for i, e in enumerate(E)
+             if S.count(e) >= 2 or any(len(re.findall(re.escape(e), s)) >= 2 for s in S)]
+    if missing:
+        fail("missing", f"expected text not found: {missing}")
+    if twice:
+        fail("doubled", f"text drawn more than once (also inside one string): {twice}")
+    wrong = [seen[i] for i, s in enumerate(S) if s not in E]
+    if wrong:
+        fail("wording", f"seen text differs from the plan (exact wording required): {wrong}")
+    if not texts_only:
+        ff = raw.get("full_figures")
+        if plan_unit.get("full_figures") is not None and ff != plan_unit["full_figures"]:
+            fail("figures", f"full_figures {ff} != planned {plan_unit['full_figures']}", "cloned / vanished / merged figure: re-render")
+        if raw.get("crowd") and plan_unit.get("crowd") is False:
+            fail("crowd", "a crowd is drawn but the plan says there is none")
+        if raw.get("speech_bubble"):
+            fail("bubble", "speech bubble or box drawn", "re-render")
+        if raw.get("motif_bad_shape"):
+            fail("motif-shape", "ink motif drawn as cord/drip/flower/ring", "re-render with the brushstroke wording")
+        if raw.get("drawn_border"):
+            fail("border", "a drawn border/frame is on the page", "re-render")
+        marks = raw.get("motif_marks")
+        n_marks = len(marks) if isinstance(marks, list) else int(marks or 0)
+        stage = plan_unit.get("motif_stage")
+        if stage == 0 and n_marks:
+            fail("motif", f"stage 0 page shows {n_marks} motif mark(s)")
+        if isinstance(stage, int) and stage >= 1 and n_marks == 0:
+            fail("motif", f"stage {stage} page shows no motif mark")
+        if raw.get("crowd") is False and plan_unit.get("crowd") is True:
+            out.append(GateResult("SWS-G9[crowd-less]", "CONDITIONAL", "the plan wants a crowd but none was read"))
+        cb = raw.get("caption_bottom_pct")
+        if isinstance(cb, (int, float)) and cb > 75:
+            out.append(GateResult("SWS-G9[caption-low]", "CONDITIONAL",
+                                  f"caption ends at {cb}% of the height (keep it above 75%: Shorts buttons)"))
+    if not out:
+        out.append(GateResult("SWS-G9", "PASS", f"{len(expected)} baked strings: exact, once each, nothing extra"))
+    return out
+
+
+def _vision_raw(image_bytes: bytes, role: str, user_text: str, label: str) -> dict:
+    """Like _vision_audit but returns the raw JSON dict (the old audits are untouched). The metered
+    API mode is REFUSED for a Swirls short (it bills): only the in-chat agent bridge is allowed."""
+    if not config.agent_mode():
+        raise RuntimeError("metered Vision (API) mode is refused for a Swirls short: service the "
+                           "in-chat agent bridge (config.agent_mode())")
+    from pipeline.visual_render import _encode_image_for_vision
+    from pipeline import engine as text_engine
+    b64, media = _encode_image_for_vision(image_bytes)
+    from pipeline import agent_bridge
+    text = agent_bridge.call_vision(role=role, user=user_text, image_bytes=image_bytes,
+                                     media=media, model=config.MODEL, label=label)
+    return text_engine._extract_json(text)
+
+
+def expected_baked_texts(spec) -> list[str]:
+    """Every string the model is told to handwrite, for a PageSpec or a CoverSpec."""
+    if hasattr(spec, "panels"):
+        out = [f"SEQ: {spec.seq_title}", spec.frame_label] + [p.label for p in spec.panels]
+        out += list(spec.caption_lines)
+        if spec.corner_note:
+            out.append(spec.corner_note)
+        return out
+    return [spec.title, spec.subtitle]
+
+
+def _audit3_path(png: Path) -> Path:
+    return png.with_suffix(png.suffix + ".audit3.json")
+
+
+def read_still_raw(png: Path) -> dict:
+    """One Vision READ per PNG content, cached in `<png>.audit3.json` bound to the PNG sha256
+    (+ audit_version). A recorded human `read` for this hash replaces texts_seen."""
+    png_bytes = png.read_bytes()
+    h = _png_hash(png_bytes)
+    side = _audit3_path(png)
+    data = {}
+    if side.exists():
+        try:
+            data = json.loads(side.read_text(encoding="utf-8"))
+        except Exception:
+            data = {}
+    if data.get("png_sha256") != h or data.get("audit_version") != AUDIT_VERSION or "raw" not in data:
+        raw = _vision_raw(png_bytes, STILL_V3_ROLE, "Read this image.", label=f"swirls-still-v3:{png.stem}")
+        data = {"png_sha256": h, "audit_version": AUDIT_VERSION, "raw": raw}
+        side.write_text(json.dumps(data, indent=2), encoding="utf-8")
+    raw = dict(data["raw"])
+    rd = data.get("read")
+    if rd and rd.get("png_sha256") == h:
+        raw["texts_seen"] = rd["strings"]
+        raw["_read_note"] = rd["note"]
+    return raw
+
+
+def record_read(png: Path, strings: list[str], note: str) -> None:
+    """`read <id> --string ... --note ...`: the session zoomed 2x and typed what is really there;
+    the judge re-runs on that. Bound to THIS png hash (a new render voids it)."""
+    if not (note or "").strip() or not strings:
+        raise ValueError("a read needs the strings and a --note")
+    read_still_raw(png)
+    side = _audit3_path(png)
+    data = json.loads(side.read_text(encoding="utf-8"))
+    data["read"] = {"png_sha256": data["png_sha256"], "strings": list(strings), "note": note.strip()}
+    side.write_text(json.dumps(data, indent=2), encoding="utf-8")
+
+
+def audit_still_v3(png: Path, expected: list[str], plan_unit: dict | None = None) -> list[GateResult]:
+    """THE still audit for shorts (SW-V2 == SWS-G9)."""
+    return judge_still_raw(expected, read_still_raw(png), plan_unit)
+
+
+STRIP_ROLE = (
+    "You are a strict READER of a contact strip: 6 frames of a short animation clip, left to right in "
+    "time order. Do NOT judge it. Return ONLY a JSON object (optionally in a ```json fence):\n"
+    '{"frames": [{"texts_seen": ["every lettering string exactly as written"], "full_figures": <n>}], '
+    '"speech_bubble": true|false, "new_text": true|false, "ink_changed": true|false, '
+    '"still_thing_moving": true|false, "bare_skin": true|false, "mouth_changed": true|false, '
+    '"drift": true|false}\n'
+    "new_text = legible lettering that was not on the first frame. ink_changed = the blue/gold ink mark "
+    "grows, glows or moves. still_thing_moving = a figure or prop that should be still moves."
+)
+
+
+def read_strips(strips: list[Path], plan_hint: str = "") -> list[dict]:
+    """G13: one Vision READ per strip image (540 px tiles, 6 per strip). Code judges (swirls_short.judge_eyes)."""
+    return [_vision_raw(Path(s).read_bytes(), STRIP_ROLE, plan_hint or "Read this strip.",
+                        label=f"swirls-strip:{Path(s).stem}") for s in strips]
+
+
 # ================================================== V3: ASSEMBLY CHECKS ===
 
 def sw_a1_duration_parity(mp4: Path) -> GateResult:
@@ -477,6 +674,40 @@ def apply_overrides(gates: list[GateResult], episode_dir: Path) -> list[GateResu
                 f"{entry.get('reason', '(no reason given)')}",
                 g.fix,
             ))
+        else:
+            out.append(g)
+    return out
+
+
+# ---- design v3.2 section 5.6: overrides bound to gate + unit + file hash + a dated owner quote ---
+NEVER_OVERRIDABLE = ("SWS-G0", "SWS-G1k", "SWS-G1s", "SWS-G14", "SWS-G14s", "SWS-G16")
+
+
+def apply_overrides_bound(gates: list[GateResult], episode_dir: Path, unit: str | None,
+                          file_path: Path | None) -> list[GateResult]:
+    """Trim-episode overrides. `_overrides.json` = {"entries": [{gate, unit, file_sha256,
+    owner_quote, date}]}. An entry clears a FAIL only for that gate on that unit's CURRENT file (a
+    new render voids it). SWS-G0, G1k, G1s, G14, G14s, G16 can never be overridden."""
+    entries = []
+    p = Path(episode_dir) / "_overrides.json"
+    if p.exists():
+        try:
+            entries = (json.loads(p.read_text(encoding="utf-8")) or {}).get("entries", [])
+        except Exception:
+            entries = []
+        if not isinstance(entries, list):
+            entries = []
+    cur = _png_hash(Path(file_path).read_bytes()) if file_path and Path(file_path).exists() else None
+    out = []
+    for g in gates:
+        base = g.gate.split("[")[0]
+        hit = next((e for e in entries if isinstance(e, dict) and e.get("gate") in (g.gate, base)
+                    and e.get("unit") == unit and cur and e.get("file_sha256") == cur
+                    and e.get("owner_quote") and e.get("date")), None)
+        if g.verdict == "FAIL" and hit and base not in NEVER_OVERRIDABLE:
+            out.append(GateResult(g.gate, "CONDITIONAL",
+                                  f"{g.evidence} -- OVERRIDDEN for {unit} (this file only): {hit['owner_quote']} ({hit['date']})",
+                                  g.fix))
         else:
             out.append(g)
     return out

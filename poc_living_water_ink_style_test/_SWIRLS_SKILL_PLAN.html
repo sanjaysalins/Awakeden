@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Swirls Skill Plan</title>
+<style>
+:root{--bg:#faf6ee;--fg:#1d1a16;--card:#fff;--line:#d9cfbd;--acc:#1f4e8c;--bad:#b3261e;--ok:#2e7d32;--gold:#a8741a}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17150f;--fg:#f1ebdd;--card:#221f17;--line:#3b362a;--acc:#7fb0ee;--bad:#ff8a80;--ok:#81c784;--gold:#e0b050}}
+body{background:var(--bg);color:var(--fg);font:20px/1.55 Georgia,serif;margin:0;padding:16px}
+main{max-width:900px;margin:auto}
+h1{font-size:34px;margin:8px 0}h2{font-size:26px;margin:34px 0 8px;color:var(--acc)}
+.card{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:14px 18px;margin:12px 0}
+.row{display:flex;gap:12px;flex-wrap:wrap}.row>figure{flex:1 1 150px;margin:0}
+figure img{width:100%;border-radius:10px;border:2px solid var(--line);cursor:zoom-in;display:block}
+figcaption{font-size:16px;opacity:.8;margin-top:4px}
+table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
+.ok{color:var(--ok)}.bad{color:var(--bad)}.gold{color:var(--gold)}
+.pick{border-color:var(--ok);border-width:3px}
+#zoom{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);align-items:center;justify-content:center;z-index:9}
+#zoom img{max-width:96vw;max-height:96vh}
+small{opacity:.75}
+</style></head><body><main>
+
+<h1>Swirls: what we learned, and a new skill</h1>
+<p>I read all 12 episodes and the 2 pilots. Nothing was spent.</p>
+
+<h2>1. Two ways we made them</h2>
+<div class="card">
+<b>Old way</b> (eps 1, 2, 4, 5, 7, 8, 10, 11, 13)
+<div class="row">
+<figure><img src="swirls_episode_10_she_loved_much/swirls_episode_10_she_loved_much_f04_9x16.png"><figcaption>Ep 10</figcaption></figure>
+<figure><img src="swirls_episode_13_the_cross_that_wasnt_his/swirls_episode_13_the_cross_that_wasnt_his_f04_9x16.png"><figcaption>Ep 13</figcaption></figure>
+<figure><img src="swirls_episode_05_barrel_that_did_not_waste/swirls_episode_05_barrel_that_did_not_waste_f04_9x16.png"><figcaption>Ep 5</figcaption></figure>
+</div>
+<p>Storyboard page with the words drawn in. 6-9 pages. Freeze and loop fill. 720p. 62-106 s. <b>$5-30</b> each.</p>
+</div>
+<div class="card">
+<b>New way</b> (eps 6, 12, 16)
+<div class="row">
+<figure><img src="swirls_episode_06_talitha_cumi/style_poc_vector/pages/p1_plea.png"><figcaption>Ep 6</figcaption></figure>
+<figure><img src="swirls_episode_12_ye_are_not_all_clean/v3_retro/pages/p03.png"><figcaption>Ep 12</figcaption></figure>
+<figure><img src="swirls_episode_16_let_the_little_children/v3/stills/p08.png"><figcaption>Ep 16</figcaption></figure>
+</div>
+<p>Each one has its own look. No words in the pictures. A real clip on every shot. Words added on top (Remotion). 1080p. 54-81 s. Blind panels at every step. <b>$6-22</b> each.</p>
+</div>
+
+<h2>2. Problems that kept coming back</h2>
+<div class="card"><table>
+<tr><th>Problem</th><th>Fix that worked</th></tr>
+<tr><td>Faces and clothes drift</td><td>Use only 1-2 favourite stills as refs. One ref per costume.</td></tr>
+<tr><td>Clones, extra people, people vanish</td><td>Near/big plus far/small layout. Count people in every still.</td></tr>
+<tr><td>Kling adds speech bubbles</td><td>Remove the motion. Rewording does not fix it.</td></tr>
+<tr><td>Cross drawn as an X, or a log</td><td>Change the camera angle after 2 failed tries.</td></tr>
+<tr><td>Stray text drawn in (labels, dashes)</td><td>No words in stills. Words go on top.</td></tr>
+<tr><td>Freeze and backwards loops</td><td>Now banned. Each clip is longer than its slot. Trim only.</td></tr>
+<tr><td>Music silent or too loud</td><td>Make the score in 2 parts. Measure the sound, don't trust your eyes.</td></tr>
+</table></div>
+
+<h2>3. The current skill is out of date</h2>
+<div class="card">
+<p class="bad">The <code>/swirls-of-life</code> skill still teaches the old way. It uses freeze fill, Higgsfield, and words drawn in.</p>
+<p>The best recipe now sits in ep 16's notes and the Bartimaeus playbook. No skill uses it.</p>
+</div>
+
+<h2>4. My plan: a new <code>/swirls-episode</code> skill</h2>
+<div class="card pick">
+<ol>
+<li><b>Words</b>: blind writers, guardrail panel, you lock. <span class="ok">$0</span></li>
+<li><b>Voice</b>: natural speed, emotion cues, 2 takes. <span class="gold">ask $</span></li>
+<li><b>Shot plan</b>: built from the real word times, one shot per 3-6 s. <span class="ok">$0</span></li>
+<li><b>Refs first</b>: one per character and each costume. <span class="gold">ask $</span></li>
+<li><b>Pictures</b>, with a check that counts people. <span class="gold">ask $</span></li>
+<li><b>Clips</b>, Kling pro, each longer than its slot. Checks the first and last frame. <span class="gold">ask $</span></li>
+<li><b>Draft film</b>: 1.0x, hard cuts, 3 s hold at the end. Fails if a clip is short. <span class="ok">$0</span></li>
+<li><b>Music</b> in 2 parts, then <b>SFX</b>. <span class="gold">ask $</span></li>
+<li><b>Words on top</b>: Remotion. Keeps the blue-gold ink as the Swirls mark. <span class="ok">$0</span></li>
+<li><b>Film red team</b>, blind, with a Fable seat. <span class="ok">$0</span></li>
+<li><b>Packaging</b>: title, poster, publish pack, copy red team. <span class="ok">$0</span>, poster <span class="gold">ask $</span></li>
+</ol>
+<p>Plus one helper, <code>swirls_status.py</code>. It reads the episode folder and says: "you are on step 5, next do X". It also keeps HANDOVER_RESUME.md up to date.</p>
+<p>It reuses the tools we already have and adds no new engine. The old skill stays for the storyboard look.</p>
+<p><b>Cost to build: $0.</b> The plan gets the panel review before I build.</p>
+</div>
+
+<h2>5. One question</h2>
+<div class="card pick">
+<p><b>A (my pick).</b> The new way is the Swirls default. Each episode picks its own look. Blue-gold ink is the series mark, added on top.</p>
+<p><b>B.</b> Keep the old storyboard page as the default look, and only borrow the new steps.</p>
+</div>
+
+<div id="zoom" onclick="this.style.display='none'"><img id="zi" alt=""></div>
+<script>
+document.querySelectorAll('figure img').forEach(function(i){i.onclick=function(){document.getElementById('zi').src=i.src;document.getElementById('zoom').style.display='flex';};});
+</script>
+</main></body></html>

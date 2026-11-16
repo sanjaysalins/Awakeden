@@ -1,0 +1,14 @@
+{
+ "id": "women-first-witnesses",
+ "source": "F:/slk/PycharmProjects/JesusInTheBible/batches/cluster_02_resurrection/women_first_witnesses_luke245/visual/women_first_witnesses_luke245_sfx.mp4",
+ "output": null,
+ "hook_text": null,
+ "hook_skipped_reason": "Opening narration already states a surprising claim ('first report ... dismissed as nonsense by His own apostles') with a large parchment caption.",
+ "decode_cards": [],
+ "skipped_decodes": [
+  "seek ye = look for; ye = you (not placed: alignment.json covers only the scripture turns and does not match the 82s video timing, so exact spoken times unknown)"
+ ],
+ "title_question_proposal": "Why did the first witnesses of the resurrection get dismissed?",
+ "verified": false,
+ "notes": "No output made. Skipped, nothing forced."
+}

@@ -1,0 +1,318 @@
+{
+ "ep13": {
+  "film": "ep13_pace_6s.mp4",
+  "sound": "own narration per unit",
+  "logs": [],
+  "pages": [
+   {
+    "unit": "front",
+    "slot_s": 2.5,
+    "unit_words_total": 14,
+    "spoken_in_slot": "The man who would carry the cross of Jesus",
+    "spoken_in_slot_count": 9,
+    "words_cut_off_by_slot": 5,
+    "cut_off_text": "was walking the other way."
+   },
+   {
+    "unit": "f01",
+    "slot_s": 6.0,
+    "baked": {
+     "seq_title": "WITHOUT THE GATE",
+     "frame_label": "F01",
+     "panel_labels": [
+      "the soldiers",
+      "led him out",
+      "the country"
+     ],
+     "caption_lines": [
+      "led him out"
+     ],
+     "corner_note": "NOTE: passed by"
+    },
+    "unit_words_total": 25,
+    "spoken_in_slot": "Mark says the soldiers \"led him out to crucify him. And they compel one Simon a",
+    "spoken_in_slot_count": 16,
+    "words_cut_off_by_slot": 9,
+    "cut_off_text": "Cyrenian, who passed by, coming out of the country.\""
+   },
+   {
+    "unit": "f02",
+    "slot_s": 6.0,
+    "baked": {
+     "seq_title": "WITHOUT THE GATE",
+     "frame_label": "F02",
+     "panel_labels": [
+      "same road",
+      "on his back",
+      "nobody asked"
+     ],
+     "caption_lines": [
+      "Nobody asked him"
+     ],
+     "corner_note": "NOTE: same road"
+    },
+    "unit_words_total": 21,
+    "spoken_in_slot": "Jesus, out of the city. Simon, in from the country. Same road.",
+    "spoken_in_slot_count": 12,
+    "words_cut_off_by_slot": 9,
+    "cut_off_text": "They put the cross on Simon's back. Nobody asked"
+   },
+   {
+    "unit": "f03",
+    "slot_s": 6.0,
+    "baked": {
+     "seq_title": "WITHOUT THE GATE",
+     "frame_label": "F03",
+     "panel_labels": [
+      "they laid",
+      "after Jesus",
+      "turns"
+     ],
+     "caption_lines": [
+      "after Jesus"
+     ],
+     "corner_note": "NOTE: Simon turns"
+    },
+    "unit_words_total": 22,
+    "spoken_in_slot": "him. Luke says, \"on him they laid the cross, that he might bear it after Jesus.\"",
+    "spoken_in_slot_count": 16,
+    "words_cut_off_by_slot": 6,
+    "cut_off_text": "Simon turns, and walks out too."
+   },
+   {
+    "unit": "f05",
+    "slot_s": 6.0,
+    "baked": {
+     "seq_title": "WITHOUT THE GATE",
+     "frame_label": "F05",
+     "panel_labels": [
+      "blood carried in",
+      "body went out",
+      "burned"
+     ],
+     "caption_lines": [
+      "without the camp"
+     ],
+     "corner_note": "NOTE: Hebrews 13"
+    },
+    "unit_words_total": 28,
+    "spoken_in_slot": "The sin offering, an animal killed for the people's sin, had its blood carried into the sanctuary,",
+    "spoken_in_slot_count": 17,
+    "words_cut_off_by_slot": 11,
+    "cut_off_text": "God's holy tent. Its body went out, burned \"without the camp.\""
+   },
+   {
+    "unit": "f06",
+    "slot_s": 6.0,
+    "baked": {
+     "seq_title": "WITHOUT THE GATE",
+     "frame_label": "F06",
+     "panel_labels": [
+      "without the camp",
+      "without the gate",
+      "Jesus also"
+     ],
+     "caption_lines": [
+      "suffered without the gate"
+     ],
+     "corner_note": "NOTE: out there"
+    },
+    "unit_words_total": 28,
+    "spoken_in_slot": "Then it says of Jesus: \"Wherefore Jesus also, that he might sanctify the people with his",
+    "spoken_in_slot_count": 16,
+    "words_cut_off_by_slot": 12,
+    "cut_off_text": "own blood, suffered without the gate.\" Out there, where Simon is walking."
+   },
+   {
+    "unit": "f09",
+    "slot_s": 6.0,
+    "baked": {
+     "seq_title": "WITHOUT THE GATE",
+     "frame_label": "F09",
+     "panel_labels": [
+      "forced out",
+      "asked",
+      "after him"
+     ],
+     "caption_lines": [
+      "You are asked"
+     ],
+     "corner_note": "NOTE: freely this time"
+    },
+    "unit_words_total": 21,
+    "spoken_in_slot": "Simon was forced out. You are asked. Turn on your own",
+    "spoken_in_slot_count": 11,
+    "words_cut_off_by_slot": 10,
+    "cut_off_text": "road, and carry his shame after him, freely this time."
+   },
+   {
+    "unit": "back",
+    "slot_s": 7.0,
+    "unit_words_total": 24,
+    "spoken_in_slot": "Only the shame. He went out through that gate first, and the atoning, the dying, the",
+    "spoken_in_slot_count": 16,
+    "words_cut_off_by_slot": 8,
+    "cut_off_text": "finishing, that was his, with his own blood."
+   }
+  ]
+ },
+ "ep10": {
+  "film": "ep10_pace_6s.mp4",
+  "sound": "own narration per unit",
+  "logs": [],
+  "pages": [
+   {
+    "unit": "front",
+    "slot_s": 2.5,
+    "unit_words_total": 9,
+    "spoken_in_slot": "No water for his feet. No",
+    "spoken_in_slot_count": 6,
+    "words_cut_off_by_slot": 3,
+    "cut_off_text": "kiss. No oil."
+   },
+   {
+    "unit": "f01",
+    "slot_s": 6.0,
+    "baked": {
+     "seq_title": "SHE LOVED MUCH",
+     "frame_label": "F01",
+     "panel_labels": [
+      "no water",
+      "no kiss",
+      "no oil"
+     ],
+     "caption_lines": [
+      "at his own table"
+     ],
+     "corner_note": "NOTE: not invited"
+    },
+    "unit_words_total": 25,
+    "spoken_in_slot": "That's what Simon the Pharisee never gave Jesus at his own table. A woman he hadn't invited",
+    "spoken_in_slot_count": 17,
+    "words_cut_off_by_slot": 8,
+    "cut_off_text": "walked in anyway, and gave him all three."
+   },
+   {
+    "unit": "f02",
+    "slot_s": 6.0,
+    "baked": {
+     "seq_title": "SHE LOVED MUCH",
+     "frame_label": "F02",
+     "panel_labels": [
+      "in the city",
+      "alabaster",
+      "behind him"
+     ],
+     "caption_lines": [
+      "stood at his feet",
+      "behind him weeping"
+     ],
+     "corner_note": "NOTE: behind him"
+    },
+    "unit_words_total": 23,
+    "spoken_in_slot": "\"A woman in the city, which was a sinner... brought an alabaster box of ointment, and",
+    "spoken_in_slot_count": 16,
+    "words_cut_off_by_slot": 7,
+    "cut_off_text": "stood at his feet behind him weeping,"
+   },
+   {
+    "unit": "f04",
+    "slot_s": 6.0,
+    "baked": {
+     "seq_title": "SHE LOVED MUCH",
+     "frame_label": "F04",
+     "panel_labels": [
+      "a prophet",
+      "the guests",
+      "answered anyway"
+     ],
+     "caption_lines": [
+      "she is a sinner"
+     ],
+     "corner_note": "NOTE: not out loud"
+    },
+    "unit_words_total": 24,
+    "spoken_in_slot": "Simon thought it, not out loud: \"This man, if he were a prophet, would have known...",
+    "spoken_in_slot_count": 16,
+    "words_cut_off_by_slot": 8,
+    "cut_off_text": "for she is a sinner.\" Jesus answered anyway."
+   },
+   {
+    "unit": "f05",
+    "slot_s": 6.0,
+    "baked": {
+     "seq_title": "SHE LOVED MUCH",
+     "frame_label": "F05",
+     "panel_labels": [
+      "five hundred pence",
+      "fifty",
+      "forgave them both"
+     ],
+     "caption_lines": [
+      "forgave them both"
+     ],
+     "corner_note": "NOTE: that's freely"
+    },
+    "unit_words_total": 26,
+    "spoken_in_slot": "A creditor had two debtors one owed five hundred pence, one fifty. \"When they had",
+    "spoken_in_slot_count": 15,
+    "words_cut_off_by_slot": 11,
+    "cut_off_text": "nothing to pay, he frankly forgave them both\" frankly, that's freely."
+   },
+   {
+    "unit": "f08",
+    "slot_s": 6.0,
+    "baked": {
+     "seq_title": "SHE LOVED MUCH",
+     "frame_label": "F08",
+     "panel_labels": [
+      "the receipt",
+      "her face",
+      "loveth little"
+     ],
+     "caption_lines": [
+      "which are many, are forgiven"
+     ],
+     "corner_note": "NOTE: forgiven first"
+    },
+    "unit_words_total": 30,
+    "spoken_in_slot": "\"Her sins, which are many, are forgiven; for she loved much: but to whom little is",
+    "spoken_in_slot_count": 16,
+    "words_cut_off_by_slot": 14,
+    "cut_off_text": "forgiven, the same loveth little.\" Forgiven first love was the receipt, not the price."
+   },
+   {
+    "unit": "f09",
+    "slot_s": 6.0,
+    "baked": {
+     "seq_title": "SHE LOVED MUCH",
+     "frame_label": "F09",
+     "panel_labels": [
+      "not thy tears",
+      "not thy ointment",
+      "go in peace"
+     ],
+     "caption_lines": [
+      "Thy faith hath",
+      "saved thee"
+     ],
+     "corner_note": "NOTE: she left it"
+    },
+    "unit_words_total": 23,
+    "spoken_in_slot": "He turned from the parable to her: \"Thy faith hath saved thee; go in peace.\" Not thy",
+    "spoken_in_slot_count": 17,
+    "words_cut_off_by_slot": 6,
+    "cut_off_text": "tears. Not thy ointment. Thy faith."
+   },
+   {
+    "unit": "back",
+    "slot_s": 7.0,
+    "unit_words_total": 25,
+    "spoken_in_slot": "That answer holds for whoever still carries what Simon called her a sinner. She came in carrying an alabaster",
+    "spoken_in_slot_count": 19,
+    "words_cut_off_by_slot": 6,
+    "cut_off_text": "box. She left carrying his peace."
+   }
+  ]
+ }
+}

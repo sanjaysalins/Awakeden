@@ -1,0 +1,73 @@
+You are ONE independent voice on a review panel (you have not seen the other voices). Be honest and specific; do not flatter; do not give generic advice. Everything you need is in the EVIDENCE PACK below. Do not ask questions. Do not use tools. Output the review text only.
+
+EVIDENCE PACK:
+# FILM (vertical Bible short, 73 s, motion-comic: painted stills with moving camera, speech balloons, narrator voice + 2 quote voices)
+Opening card on screen (0.2-2.8 s): "WHO WROTE THE INSULTS?"
+Card at ~12 s: "DELIVER = RESCUE"
+On-screen: speech balloons show each quoted Bible line with its reference tag (e.g. MATT 27:43, PSALM 22:8, MATT 27:40, JESUS LUKE 23:34, A SOLDIER MATT 27:54).
+Visuals in order: cross at dusk with leaders pointing up; leader sneering close; old king David writing by lamp; psalm scroll by lamp; passers-by shaking heads; crowd pointing up at the cross; Jesus on the cross, calm; Jesus looking down over the crowd; darkness over the cross; crowd/people under the cross shadow.
+
+# SPOKEN SCRIPT (numbered)
+1 [narrator] Jesus, the Son of God, is dying on a cross. The leaders shout at Him. Listen.
+2 [mocker] "He trusted in God; let him deliver him now."
+3 [narrator] In plain words: he trusted God, so let God rescue him. Now go back a thousand years, to a king named David. People laugh at David too. He writes their words into a song, Psalm 22.
+4 [david] "He trusted on the LORD that he would deliver him."
+5 [narrator] Almost the same words, a thousand years apart. People passing by also shout.
+6 [mocker] "If thou be the Son of God, come down from the cross."
+7 [narrator] If you are God's Son, come down. He could have come down. Jesus had said that no one takes His life from Him. He gives His life Himself. He stayed. And on the cross, He also prayed:
+8 [narrator] "Father, forgive them; for they know not what they do."
+9 [narrator] They said, come down. He did not come down. He died there. He stayed.
+10 [narrator] A Roman soldier, watching Him die, said: "Truly this was the Son of God."
+
+# KJV TEXT SUPPLIED (for checking)
+Matt 27:39-44 (extracts): "And they that passed by reviled him, wagging their heads, And saying, ... If thou be the Son of God, come down from the cross." / "He trusted in God; let him deliver him now, if he will have him: for he said, I am the Son of God."
+Psalm 22:7-8: "All they that see me laugh me to scorn: they shoot out the lip, they shake the head, saying, He trusted on the LORD that he would deliver him: let him deliver him, seeing he delighted in him."
+Luke 23:34: "Then said Jesus, Father, forgive them; for they know not what they do."
+John 10:18: "No man taketh it from me, but I lay it down of myself."
+Matt 27:54: "Now when the centurion, and they that were with him, watching Jesus, saw the earthquake, and those things that were done, they feared greatly, saying, Truly this was the Son of God."
+
+
+YOUR LENS: THE LIFELONG BIBLE READER AND FACT CHECKER
+You know the Bible well and you must check every factual claim in the SPOKEN lines against the KJV text supplied at the end of this prompt (the film is based on Exodus 1-19 and Numbers 13-14 with Deuteronomy 1:2). Question 4 is your main job: go line by line, mark each claim RIGHT / OVERCLAIMED / UNSUPPORTED / WRONG, quote the line, cite the verse. Then answer the other questions as a Bible reader (would you send it to your church group?).
+
+KJV TEXT (the only authority; quote it):
+Exodus 10:22 — And Moses stretched forth his hand toward heaven; and there was a thick darkness in all the land of Egypt three days:
+Exodus 10:23 — They saw not one another, neither rose any from his place for three days: but all the children of Israel had light in their dwellings.
+Exodus 12:29 — And it came to pass, that at midnight the LORD smote all the firstborn in the land of Egypt, from the firstborn of Pharaoh that sat on his throne unto the firstborn of the captive that was in the dungeon; and all the firstborn of cattle.
+Exodus 12:30 — And Pharaoh rose up in the night, he, and all his servants, and all the Egyptians; and there was a great cry in Egypt; for there was not a house where there was not one dead.
+Exodus 12:37 — And the children of Israel journeyed from Rameses to Succoth, about six hundred thousand on foot that were men, beside children.
+Exodus 13:17 — And it came to pass, when Pharaoh had let the people go, that God led them not through the way of the land of the Philistines, although that was near; for God said, Lest peradventure the people repent when they see war, and they return to Egypt:
+Exodus 13:18 — But God led the people about, through the way of the wilderness of the Red sea: and the children of Israel went up harnessed out of the land of Egypt.
+Exodus 13:21 — And the LORD went before them by day in a pillar of a cloud, to lead them the way; and by night in a pillar of fire, to give them light; to go by day and night:
+Exodus 13:22 — He took not away the pillar of the cloud by day, nor the pillar of fire by night, from before the people.
+Exodus 14:21 — And Moses stretched out his hand over the sea; and the LORD caused the sea to go back by a strong east wind all that night, and made the sea dry land, and the waters were divided.
+Exodus 14:22 — And the children of Israel went into the midst of the sea upon the dry ground: and the waters were a wall unto them on their right hand, and on their left.
+Exodus 14:23 — And the Egyptians pursued, and went in after them to the midst of the sea, even all Pharaoh’s horses, his chariots, and his horsemen.
+Exodus 14:28 — And the waters returned, and covered the chariots, and the horsemen, and all the host of Pharaoh that came into the sea after them; there remained not so much as one of them.
+Exodus 19:1 — In the third month, when the children of Israel were gone forth out of the land of Egypt, the same day came they into the wilderness of Sinai.
+Numbers 13:25 — And they returned from searching of the land after forty days.
+Numbers 13:26 — And they went and came to Moses, and to Aaron, and to all the congregation of the children of Israel, unto the wilderness of Paran, to Kadesh; and brought back word unto them, and unto all the congregation, and shewed them the fruit of the land.
+Numbers 14:1 — And all the congregation lifted up their voice, and cried; and the people wept that night.
+Numbers 14:2 — And all the children of Israel murmured against Moses and against Aaron: and the whole congregation said unto them, Would God that we had died in the land of Egypt! or would God we had died in this wilderness!
+Numbers 14:3 — And wherefore hath the LORD brought us unto this land, to fall by the sword, that our wives and our children should be a prey? were it not better for us to return into Egypt?
+Numbers 14:4 — And they said one to another, Let us make a captain, and let us return into Egypt.
+Numbers 14:28 — Say unto them, As truly as I live, saith the LORD, as ye have spoken in mine ears, so will I do to you:
+Numbers 14:29 — Your carcases shall fall in this wilderness; and all that were numbered of you, according to your whole number, from twenty years old and upward, which have murmured against me,
+Numbers 14:30 — Doubtless ye shall not come into the land, concerning which I sware to make you dwell therein, save Caleb the son of Jephunneh, and Joshua the son of Nun.
+Numbers 14:31 — But your little ones, which ye said should be a prey, them will I bring in, and they shall know the land which ye have despised.
+Numbers 14:32 — But as for you, your carcases, they shall fall in this wilderness.
+Numbers 14:33 — And your children shall wander in the wilderness forty years, and bear your whoredoms, until your carcases be wasted in the wilderness.
+Numbers 14:34 — After the number of the days in which ye searched the land, even forty days, each day for a year, shall ye bear your iniquities, even forty years, and ye shall know my breach of promise.
+Numbers 14:35 — I the LORD have said, I will surely do it unto all this evil congregation, that are gathered together against me: in this wilderness they shall be consumed, and there they shall die.
+Deuteronomy 1:2 — (There are eleven days’ journey from Horeb by the way of mount Seir unto Kadeshbarnea.)
+
+
+OUTPUT FORMAT (Markdown, max ~600 words in total, exactly these headings, cite the numbered line each time):
+## 1. WHO IS THIS FOR (one named viewer; who stops, who finishes, who shares; who is NOT served)
+## 2. MAIN TAKEAWAY (one sentence a viewer could say back; which line carries it; did the film make it clear?)
+## 3. GLOBAL AUDIENCE (who / what / why in my own words; where I got lost or misled, quote the line; words that fail in translation)
+## 4. BIBLICALLY ACCURATE (claim by claim: RIGHT / OVERCLAIMED / UNSUPPORTED / WRONG, quote the line; say only what you can support)
+## 5. BEST VERSION POSSIBLE (what would the best explainer in the world do differently; the ONE highest-value change; score 0-10 against that bar)
+## CURIOSITY GAP (opens at line __, pays off at line __; score 0-10; worth the wait?)
+## THREE SMALLEST FIXES (line number + exact replacement wording)
+

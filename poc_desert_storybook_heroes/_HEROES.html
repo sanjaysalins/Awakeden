@@ -1,0 +1,32 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Desert Storybook Heroes</title>
+<style>
+body{font-family:Verdana,sans-serif;background:#f6efe4;color:#2b2218;margin:0;padding:20px;font-size:20px;line-height:1.5}
+h1{font-size:30px;margin:0 0 6px}
+.sub{color:#6b5a45;margin-bottom:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
+.card{background:#fff;border-radius:14px;padding:12px;box-shadow:0 2px 8px #0002}
+.card img{width:100%;border-radius:10px;cursor:zoom-in}
+.t{font-weight:bold;font-size:22px;margin-top:8px}
+.ok{color:#2e7d32}.fix{color:#b23c17}
+#zoom{display:none;position:fixed;inset:0;background:#000d;align-items:center;justify-content:center;cursor:zoom-out}
+#zoom img{max-height:96vh;max-width:96vw}
+</style></head><body>
+<h1>8 hero pictures in your style</h1>
+<div class="sub">Click any picture to zoom. Cost: $0.72 total (8 + 1 redo).</div>
+<div class="grid">
+<div class="card"><img src="refs/north_star.jpg"><div class="t">Your picture (the guide)</div></div>
+<div class="card"><img src="01_well.png"><div class="t">1. Woman at the well</div><div class="ok">✓ Good</div></div>
+<div class="card"><img src="02_storm.png"><div class="t">2. Calms the storm</div><div class="ok">✓ Good</div></div>
+<div class="card"><img src="03_loaves.png"><div class="t">3. Boy gives his lunch</div><div class="ok">✓ Good</div><div>Small: I can only count 4 loaves, not 5.</div></div>
+<div class="card"><img src="04_zacchaeus.png"><div class="t">4. Zacchaeus in the tree</div><div class="ok">✓ Good</div><div>Small: Zacchaeus wears a modern-looking skull cap.</div></div>
+<div class="card"><img src="05_children.png"><div class="t">5. Blesses the children</div><div class="ok">✓ Good</div><div>Only 3 children, not 5. Still reads well.</div></div>
+<div class="card"><img src="06_water.png"><div class="t">6. Walks on water</div><div class="ok">✓ Good</div></div>
+<div class="card"><img src="07_lost_sheep_v2.png"><div class="t">7. The lost sheep (redone)</div><div class="ok">✓ Fixed: he holds the staff now</div></div>
+<div class="card"><img src="08_risen.png"><div class="t">8. Risen — Mary sees Him</div><div class="ok">✓ Good. No round stone.</div></div>
+</div>
+<div id="zoom" onclick="this.style.display='none'"><img></div>
+<script>
+document.querySelectorAll('.card img').forEach(i=>i.onclick=()=>{const z=document.getElementById('zoom');z.querySelector('img').src=i.src;z.style.display='flex'});
+</script>
+</body></html>

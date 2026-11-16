@@ -111,6 +111,8 @@ TEMPLATES = {
     "hero_frac3": ("fracture",    "corner",     lambda a: _big_two(a)),
     "hero_frac4": ("fracture",    "corner",     lambda a: _quad(a)),
     "hero_band3": ("fracture",    "bottom_bar", lambda a: _rows(a, 3)),
+    # uplift T1 (2026-11-16): fill_each twin of hero_frac3 - same big-plus-two geometry, one clip per panel
+    "big_two":    ("fill_each",   "corner",     lambda a: _big_two(a)),
 }
 
 
@@ -129,9 +131,9 @@ def norm_clip(c):
     if isinstance(c, dict):
         return dict(kind=c.get("kind", "clip"), path=c["path"], motion=c.get("motion", "static"),
                     bias=tuple(c.get("bias", (0.5, 0.5))), zoom=c.get("zoom", 1.0),
-                    anchors=[tuple(a) for a in c.get("anchors", [])])
+                    anchors=[tuple(a) for a in c.get("anchors", [])], t_in=c.get("t_in", 0.0))
     path, motion = c
-    return dict(kind="clip", path=path, motion=motion, bias=(0.5, 0.5), zoom=1.0, anchors=[])
+    return dict(kind="clip", path=path, motion=motion, bias=(0.5, 0.5), zoom=1.0, anchors=[], t_in=0.0)
 
 
 # ---------------- furniture (PIL) ----------------
@@ -273,8 +275,13 @@ def _clip_len(path):
     return _DUR_CACHE[p]
 
 
-def _temporal(idx, dur, motion, clip_len, out):
-    """Produce [out] of length `dur` with NO freeze and no illegal reverse."""
+def _temporal(idx, dur, motion, clip_len, out, t_in=0.0):
+    """Produce [out] of length `dur` with NO freeze and no illegal reverse.
+    t_in (uplift T3, default 0 = unchanged): start offset in seconds into the source clip."""
+    if t_in and t_in > 0:
+        inner = _temporal(idx, dur, motion, clip_len - t_in, out)
+        return (f"[{idx}:v]trim=start={t_in:.3f},setpts=PTS-STARTPTS[ti{idx}];"
+                + inner.replace(f"[{idx}:v]", f"[ti{idx}]"))
     if dur <= clip_len + 0.05:
         return f"[{idx}:v]trim=duration={dur},setpts=PTS-STARTPTS[{out}]"
     if motion == "static":
@@ -348,7 +355,7 @@ def build_segment(out_path, tpl, clips, dur, cap_spec, work_dir, fade_st=0.5):
                 parts.append(_kenburns(idx, f"p{k}", pw, ph, dur, c["bias"]))
             else:
                 idx = add_input("clip", c["path"])
-                parts.append(_temporal(idx, dur, c["motion"], _clip_len(c["path"]), f"t{idx}"))
+                parts.append(_temporal(idx, dur, c["motion"], _clip_len(c["path"]), f"t{idx}", c.get("t_in", 0.0)))
                 parts.append(_panel_fill(f"t{idx}", f"p{k}", pw, ph, c["zoom"], *c["bias"]))
             panel_labels.append((f"p{k}", x, y))
 

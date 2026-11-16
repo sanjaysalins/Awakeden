@@ -1,0 +1,15 @@
+{
+ "id": "moses-and-the-snake-on-a-pole",
+ "source": "F:/slk/PycharmProjects/JesusInTheBible/poc_living_sketchbook/_rewrite_v4/video/bronze_serpent_v4_cc.mp4",
+ "output": "F:/slk/PycharmProjects/JesusInTheBible/poc_living_sketchbook/_rewrite_v4/video/bronze_serpent_v4_cc_v5hook.mp4",
+ "hook_text": null,
+ "hook_skipped_reason": "",
+ "decode_cards": [],
+ "skipped_decodes": [
+  "made him to be sin for us: plain, doctrine-sensitive, skipped",
+  "lifted up: explained by narrator"
+ ],
+ "title_question_proposal": "Why Did God Cure Snakebite With a Snake?",
+ "verified": true,
+ "notes": "Hook text: CURED BY / A SNAKE? (0-2.0s). Narration answers it (look at the snake and live). Duration equals source (checked ffprobe). Audio stream copied. Frames checked at each card time."
+}

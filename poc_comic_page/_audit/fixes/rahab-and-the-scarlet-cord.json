@@ -1,0 +1,16 @@
+{
+ "id": "rahab-and-the-scarlet-cord",
+ "source": "F:/slk/PycharmProjects/JesusInTheBible/poc_living_sketchbook/_rewrite_v4/video/jericho_v4_cc.mp4",
+ "output": "F:/slk/PycharmProjects/JesusInTheBible/poc_living_sketchbook/_rewrite_v4/video/jericho_v4_cc_v5hook.mp4",
+ "hook_text": null,
+ "hook_skipped_reason": "",
+ "decode_cards": [],
+ "skipped_decodes": [
+  "the wall fell down flat: plain",
+  "By faith: plain",
+  "TAKETH (removed after panel round)"
+ ],
+ "title_question_proposal": "Who Survived Jericho's Fall, and Why?",
+ "verified": true,
+ "notes": "Hook text: WHO SURVIVED / WHEN JERICHO FELL? (0-2.0s, in empty top paper). Narration answers it (Rahab and her family). Duration equals source (checked ffprobe). Audio stream copied. Frames checked at each card time. Panel round: TAKETH = TAKES removed; hook only. Re-rendered from original source; frames re-checked."
+}

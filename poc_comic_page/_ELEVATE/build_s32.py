@@ -40,6 +40,8 @@ PL = [(0.1, 3.7, "Jesus promised paradise to a criminal. Why?", None, None, Fals
 def main():
     d = T.HERE / "work" / "s32_lett"; d.mkdir(parents=True, exist_ok=True)
     shots = [dict(t0=a, t1=b, clip=c, t_in=ti, cx=cx, cy=cy, z0=z0, z1=z1) for a, b, c, ti, cx, cy, z0, z1 in SH]
+    if "clean" in sys.argv[1:]:  # word-free master for other-language subtitles (no pills, no hook card)
+        T.compose("S32_CLEAN", shots, []); return
     ov = []
     for i, (a, b, text, who, ref, j) in enumerate(PL):
         p = d / ("p%02d.png" % i); W.pill_tabs(p, text, who, ref, jesus=j); ov.append((str(p), a, b))

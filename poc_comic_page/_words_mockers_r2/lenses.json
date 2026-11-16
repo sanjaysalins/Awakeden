@@ -1,0 +1,22 @@
+{
+ "judge": [
+  "JUDGE, NO HAT",
+  "Judge all three versions for the whole worldwide audience. For EACH version give the answers to the five questions in one or two lines each (who for, main takeaway, global audience, biblically accurate, best version), a 0-10 score and a curiosity-gap score. Then RANK X/Y/Z and say what to take from the others. Quote lines by version and paragraph."
+ ],
+ "newcomer": [
+  "TOTAL NEWCOMER",
+  "You have never opened a Bible and know nothing about Jesus beyond the pack. English is your second language, on a phone. For EACH version: say who/what/why in your own words, every word or line you could not follow, 0-10. Then RANK X/Y/Z."
+ ],
+ "bible": [
+  "BIBLE FACT-CHECKER",
+  "Check EVERY claim in EACH version against the supplied KJV text: RIGHT / OVERCLAIMED / UNSUPPORTED / WRONG, quoting the line. Also check quotes are verbatim. Score each 0-10, RANK X/Y/Z."
+ ],
+ "hook": [
+  "HOOK AND RETENTION",
+  "For EACH version judge the first 5 seconds after the card, pacing, where the weakest 10 seconds are, and give odds with error bars for watching to the end. Score each 0-10 and RANK X/Y/Z."
+ ],
+ "global": [
+  "SECOND-LANGUAGE READER",
+  "For EACH version quote every word or idiom that would fail in translation or on a small screen, say who is served and who is not, anything that could offend. Score each 0-10 and RANK X/Y/Z."
+ ]
+}

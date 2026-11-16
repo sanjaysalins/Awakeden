@@ -1,0 +1,851 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Living Comic Design</title>
+<meta name="description" content="The film language for the Bible comic shorts: one signature idea, 8 motion moves, the dialogue system, a 20-second storyboard, and the episode data file. Live CSS previews on real art. No money spent.">
+<style>
+@font-face{font-family:"Bangers";src:local("Bangers"),url("fonts/Bangers.ttf") format("truetype");font-display:swap}
+@font-face{font-family:"Kalam";font-weight:400;src:local("Kalam"),url("fonts/Kalam-Regular.ttf") format("truetype");font-display:swap}
+@font-face{font-family:"Kalam";font-weight:700;src:local("Kalam Bold"),url("fonts/Kalam-Bold.ttf") format("truetype");font-display:swap}
+@font-face{font-family:"PermanentMarker";src:local("Permanent Marker"),url("fonts/PermanentMarker.ttf") format("truetype");font-display:swap}
+
+:root{
+  --paper:#F4ECDC; --paper-2:#EBE1CB; --card:#FFFFFF; --ink:#231F20; --ink-2:#4A4441;
+  --text:#231F20; --muted:#6B625C; --line:#D9CDB3; --gold:#C8A24A; --gold-2:#E9C877;
+  --red:#C8321E; --storm:#2E3A52; --ok:#2E7D4F; --warn:#B9770E; --bad:#B3261E; --blue:#2F5F9E;
+  --f-ink:#231F20; --f-paper:#F4ECDC; --f-white:#FBF8F0; --f-gold:#D4AF4F; --f-grey:#7A7368;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#15171C; --paper-2:#1F222A; --card:#262A33; --ink:#F1EADB; --ink-2:#C9C1B3;
+    --text:#F1EADB; --muted:#A79F93; --line:#3A3F4A; --gold:#D4AF4F; --gold-2:#E9C877;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#15171C; --paper-2:#1F222A; --card:#262A33; --ink:#F1EADB; --ink-2:#C9C1B3;
+  --text:#F1EADB; --muted:#A79F93; --line:#3A3F4A; --gold:#D4AF4F; --gold-2:#E9C877;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--text);font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;font-size:20px;line-height:1.5}
+h1,h2,h3{font-family:"Bangers","Impact",sans-serif;letter-spacing:.03em;font-weight:400;line-height:1.05;margin:0}
+h1{font-size:clamp(44px,8vw,84px)}
+h2{font-size:clamp(34px,5vw,56px);margin-bottom:8px}
+h3{font-size:clamp(24px,3vw,32px)}
+p{margin:.4em 0 .8em;max-width:62ch}
+a{color:var(--blue)}
+.wrap{max-width:1140px;margin:0 auto;padding:0 16px}
+header{padding:40px 0 24px;border-bottom:3px solid var(--ink)}
+.sub{font-size:clamp(20px,2.4vw,26px);color:var(--muted);max-width:70ch}
+nav.chips{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 0}
+nav.chips a{text-decoration:none;background:var(--card);border:2px solid var(--ink);color:var(--text);padding:8px 14px;border-radius:999px;font-weight:700;font-size:17px}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.btn{font:inherit;font-weight:700;background:var(--card);color:var(--text);border:2px solid var(--ink);border-radius:10px;padding:8px 14px;cursor:pointer}
+.btn.primary{background:var(--ink);color:var(--paper)}
+section{padding:44px 0 20px;border-bottom:2px solid var(--line)}
+.num{display:inline-block;font-family:"Bangers";font-size:.75em;background:var(--gold);color:#231F20;border-radius:8px;padding:0 10px;margin-right:10px;vertical-align:middle}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.grid.tight{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.cardx{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:10px}
+.cardx h3{display:flex;align-items:center;gap:10px}
+.lead{font-size:clamp(22px,2.8vw,30px);font-weight:700;line-height:1.3;max-width:40ch}
+.big{font-size:clamp(26px,3.4vw,38px);line-height:1.25;font-weight:700;max-width:30ch}
+ul{padding-left:1.2em;margin:.3em 0 .8em}
+li{margin:.25em 0}
+.pill{display:inline-block;font-size:15px;font-weight:800;letter-spacing:.04em;border-radius:999px;padding:3px 10px;color:#fff;text-transform:uppercase;white-space:nowrap}
+.pill.easy{background:var(--ok)} .pill.medium{background:var(--warn)} .pill.hard{background:var(--bad)}
+.pill.old{background:#555} .pill.new{background:var(--blue)}
+.pill.narr{background:#5B5650} .pill.man{background:var(--blue)} .pill.jesus{background:#A4812F} .pill.flag{background:var(--bad)}
+.rank{font-family:"Bangers";font-size:40px;line-height:1;color:var(--gold)}
+.note{background:var(--paper-2);border-left:6px solid var(--gold);padding:10px 14px;border-radius:8px;font-size:18px;margin:12px 0}
+.note.red{border-color:var(--red)}
+.small{font-size:16px;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:17px;background:var(--card);border:2px solid var(--ink);border-radius:12px;overflow:hidden}
+th,td{padding:10px 10px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+th{background:var(--paper-2);font-size:15px;letter-spacing:.06em;text-transform:uppercase}
+tr:last-child td{border-bottom:0}
+td.t{white-space:nowrap;font-weight:800;font-variant-numeric:tabular-nums}
+code,pre{font-family:Consolas,"Cascadia Mono",monospace}
+pre{background:var(--card);border:2px solid var(--ink);border-radius:12px;padding:14px;font-size:15px;line-height:1.45;overflow:auto;max-height:560px}
+details{background:var(--card);border:2px solid var(--ink);border-radius:12px;padding:10px 14px;margin:10px 0}
+summary{cursor:pointer;font-weight:800;font-size:19px}
+img.zoom{cursor:zoom-in}
+.art-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.art-row img{height:84px;width:auto;border:2px solid var(--ink);border-radius:8px;background:#000}
+
+/* ---------- 9:16 stages ---------- */
+.stage{position:relative;aspect-ratio:9/16;width:100%;max-width:260px;background:#0d0d0f;border:3px solid var(--f-ink);border-radius:14px;overflow:hidden;container-type:inline-size;margin:0 auto;box-shadow:0 10px 26px rgba(0,0,0,.22)}
+.stage.wide{max-width:330px}
+.stage .ly{position:absolute;inset:0}
+.stage img.fill{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block}
+.stage .flash{background:#0d0d0f;opacity:0;pointer-events:none}
+.stage .paper{background:var(--f-paper);opacity:0}
+.stage .label{position:absolute;left:0;right:0;bottom:0;padding:5cqw 4cqw;font-size:6cqw;font-weight:800;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.75));letter-spacing:.02em;pointer-events:none}
+.stage .pan{position:absolute;inset:0;transform-origin:50% 50%}
+.stage .ink{filter:grayscale(1) contrast(1.25) brightness(1.04)}
+.frame{position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 0 4cqw var(--f-paper), inset 0 0 0 5.2cqw var(--f-ink);border-radius:14px}
+
+/* film text elements (fixed colours, these are film pixels not UI) */
+.cap{position:absolute;top:6cqw;left:5cqw;max-width:78cqw;background:var(--f-paper);color:var(--f-ink);border:1.2cqw solid var(--f-ink);padding:3cqw 4cqw;font:800 6.4cqw/1.2 "Bahnschrift","Segoe UI",Arial,sans-serif;transform:rotate(-1.2deg);box-shadow:1.5cqw 1.5cqw 0 rgba(0,0,0,.35)}
+.cap.bottom{top:auto;bottom:10cqw;left:auto;right:5cqw;transform:rotate(1deg)}
+#sb-time{top:3cqw;right:3cqw;left:auto;bottom:auto;padding:1.5cqw 3cqw;background:rgba(0,0,0,.6);border-radius:2cqw;font-size:5cqw}
+.dim{position:absolute;inset:0;background:rgba(10,10,14,.5)}
+.card{position:absolute;left:7cqw;right:7cqw;top:50%;transform:translateY(-50%);background:var(--f-white);color:var(--f-ink);border:1.6cqw solid var(--f-ink);box-shadow:inset 0 0 0 1.6cqw var(--f-white),inset 0 0 0 2.8cqw var(--f-gold);padding:7cqw 5cqw;text-align:center;font-family:"Bangers",Impact,sans-serif;font-size:13cqw;line-height:1.02;letter-spacing:.02em}
+.card .sm{display:block;font-size:6.5cqw;color:#7A6A3A;letter-spacing:.12em;margin-bottom:2cqw;font-family:"Bahnschrift","Segoe UI",sans-serif;font-weight:800}
+.card.decode .old{font-size:11cqw;text-decoration:line-through;text-decoration-color:var(--red);text-decoration-thickness:1.4cqw;color:#5B5650}
+.card.decode .eq{display:block;font-size:12cqw;color:var(--f-gold);line-height:1}
+.card.decode .plain{font-size:24cqw;color:var(--f-gold);-webkit-text-stroke:.9cqw var(--f-ink);paint-order:stroke fill;line-height:1}
+.sfxw{position:absolute;font-family:"Bangers",Impact,sans-serif;font-size:19cqw;color:#fff;-webkit-text-stroke:1.1cqw var(--f-ink);paint-order:stroke fill;letter-spacing:.02em;transform:rotate(-9deg);line-height:1}
+.burst{position:absolute;width:62cqw;height:62cqw;pointer-events:none}
+svg.bal{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+svg.bal text{font-family:"Kalam",cursive;font-weight:700;fill:var(--f-ink)}
+svg.bal .th text{font-weight:400;font-style:italic;fill:#3E3934}
+svg.bal .tag{font-family:"PermanentMarker","Kalam",cursive;font-weight:400;fill:var(--f-ink)}
+
+/* pop (one-shot) */
+.pop{animation:pop .2s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes pop{0%{transform:scale(.7);opacity:0}100%{transform:scale(1);opacity:1}}
+.card.pop{animation:popcard .2s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes popcard{0%{transform:translateY(-50%) scale(1.25);opacity:0}100%{transform:translateY(-50%) scale(1);opacity:1}}
+svg.bal g.pop{transform-box:fill-box;transform-origin:50% 100%}
+
+/* drift = stand-in for the real generated clip at rest */
+.drift{animation:drift 7s ease-in-out infinite alternate}
+@keyframes drift{from{transform:scale(1) translate(0,0)}to{transform:scale(1.045) translate(-.6%,.8%)}}
+
+/* ---------- LOOP PREVIEWS (CSS only) ---------- */
+/* 1 INK WAKE */
+.pv-inkwake .skt{animation:pvi-skt 4.6s infinite}
+@keyframes pvi-skt{0%,6%{opacity:0}14%{opacity:1}100%{opacity:1}}
+.pv-inkwake .ink{clip-path:polygon(0 0,0 0,0 0);animation:pvi-ink 4.6s linear infinite}
+@keyframes pvi-ink{0%,18%{clip-path:polygon(0 0,0 0,0 0)}34%{clip-path:polygon(0 0,220% 0,0 220%)}100%{clip-path:polygon(0 0,220% 0,0 220%)}}
+.pv-inkwake .col{clip-path:polygon(0 0,0 0,0 0);animation:pvi-col 4.6s linear infinite}
+@keyframes pvi-col{0%,36%{clip-path:polygon(0 0,0 0,0 0)}54%{clip-path:polygon(0 0,220% 0,0 220%)}100%{clip-path:polygon(0 0,220% 0,0 220%)}}
+.pv-inkwake .pan{animation:pvi-alive 4.6s ease-in-out infinite}
+@keyframes pvi-alive{0%,54%{transform:scale(1)}100%{transform:scale(1.05)}}
+.pv-inkwake .paper{animation:pvi-paper 4.6s infinite}
+@keyframes pvi-paper{0%,5%{opacity:1}11%{opacity:0}95%{opacity:0}100%{opacity:1}}
+/* 2 GUTTER CUT */
+.pv-cut .a{animation:pvc-a 3s infinite}
+@keyframes pvc-a{0%,47%{opacity:1}48%,100%{opacity:0}}
+.pv-cut .b{animation:pvc-b 3s infinite}
+@keyframes pvc-b{0%,50%{opacity:0;transform:translate(2%,-1%)}51%{opacity:1;transform:translate(2%,-1%)}57%,100%{opacity:1;transform:none}}
+.pv-cut .flash{animation:pvc-f 3s infinite}
+@keyframes pvc-f{0%,47%{opacity:0}48%,50%{opacity:1}51%,97%{opacity:0}98%,100%{opacity:1}}
+/* 3 PANEL WALK */
+.pv-walk .strip{position:absolute;left:0;right:0;top:0;height:208%;animation:pvw 4.8s cubic-bezier(.65,0,.3,1) infinite}
+.pv-walk .strip .cell{position:relative;height:48.077%;overflow:hidden}
+.pv-walk .strip .gut{height:3.846%;background:#0d0d0f}
+@keyframes pvw{0%,22%{transform:translateY(0)}48%,78%{transform:translateY(-51.923%)}100%{transform:translateY(0)}}
+/* 4 BREAK-OUT */
+.pv-breakout .bo-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,#3B4A6B 0%,#1B2130 60%,#0F131C 100%)}
+.pv-breakout .bo-glow{position:absolute;left:-30%;right:-30%;top:-10%;bottom:-10%;background:radial-gradient(ellipse at 50% 45%,rgba(233,200,119,.95) 0%,rgba(233,200,119,.35) 35%,rgba(233,200,119,0) 70%);opacity:0;transform:scale(.6);animation:pvb-glow 4.4s ease-in-out infinite}
+@keyframes pvb-glow{0%,22%{opacity:0;transform:scale(.6)}40%{opacity:1;transform:scale(1.35)}74%{opacity:1;transform:scale(1.4)}90%,100%{opacity:0;transform:scale(.6)}}
+.pv-breakout .bo-pop{position:absolute;left:10%;right:10%;top:4%;bottom:4%;transform-origin:50% 85%;animation:pvb-pop 4.4s cubic-bezier(.2,1.2,.4,1) infinite;filter:drop-shadow(0 1.5cqw 1.2cqw rgba(0,0,0,.55))}
+.pv-breakout .bo-pop img{width:100%;height:100%;object-fit:contain;display:block}
+@keyframes pvb-pop{0%,30%{transform:scale(1)}46%{transform:scale(1.24) translateY(-2.5%)}78%{transform:scale(1.24) translateY(-2.5%)}92%,100%{transform:scale(1)}}
+.pv-breakout .frame{z-index:1}
+.pv-breakout .bo-pop{z-index:2}
+/* 5 ZOOM-THROUGH */
+.pv-zoom .a{transform-origin:49% 58%;animation:pvz-a 4.6s cubic-bezier(.5,0,.8,.4) infinite}
+@keyframes pvz-a{0%,16%{transform:scale(1);opacity:1}54%{transform:scale(3.4);opacity:1}62%{transform:scale(3.7);opacity:0}100%{transform:scale(3.7);opacity:0}}
+.pv-zoom .b{animation:pvz-b 4.6s ease-out infinite}
+@keyframes pvz-b{0%,50%{opacity:0;transform:scale(1.18)}62%{opacity:1;transform:scale(1.12)}92%{opacity:1;transform:scale(1)}97%{opacity:1}100%{opacity:0}}
+/* 6 CARD SLAM */
+.pv-card .dim{animation:pvk-dim 4.4s infinite}
+@keyframes pvk-dim{0%,8%{opacity:0}11%,56%{opacity:1}60%,100%{opacity:0}}
+.pv-card .c1{animation:pvk-c1 4.4s infinite}
+@keyframes pvk-c1{0%,9%{opacity:0;transform:translateY(-50%) scale(1.3)}12%{opacity:1;transform:translateY(-50%) scale(.97)}14%{transform:translateY(-50%) scale(1)}55%{opacity:1}58%,100%{opacity:0;transform:translateY(-50%) scale(1)}}
+.pv-card .c2{animation:pvk-c2 4.4s infinite}
+@keyframes pvk-c2{0%,62%{opacity:0;transform:translateY(-50%) scale(1.3)}65%{opacity:1;transform:translateY(-50%) scale(.97)}67%{transform:translateY(-50%) scale(1)}95%{opacity:1}98%,100%{opacity:0}}
+.pv-card .dim2{animation:pvk-dim2 4.4s infinite}
+@keyframes pvk-dim2{0%,61%{opacity:0}64%,95%{opacity:1}98%,100%{opacity:0}}
+/* 7 PAGE TURN */
+.pv-turn .top{transform-origin:left center;backface-visibility:hidden;animation:pvt 4.6s cubic-bezier(.55,0,.45,1) infinite;box-shadow:0 0 6cqw rgba(0,0,0,.6)}
+@keyframes pvt{0%,24%{transform:perspective(220cqw) rotateY(0)}62%{transform:perspective(220cqw) rotateY(-160deg)}97%{transform:perspective(220cqw) rotateY(-160deg)}100%{transform:perspective(220cqw) rotateY(0)}}
+.pv-turn .shade{background:linear-gradient(90deg,rgba(0,0,0,.55),transparent 40%);animation:pvt-sh 4.6s infinite}
+@keyframes pvt-sh{0%,24%{opacity:0}45%{opacity:1}62%,97%{opacity:0}100%{opacity:0}}
+/* 8 SFX HIT */
+.pv-sfx .pan{animation:pvs-shake 3.2s infinite}
+@keyframes pvs-shake{0%,40%{transform:none}41%{transform:translate(-1.6%,.6%)}43%{transform:translate(1.6%,-.6%)}45%{transform:translate(-.8%,.2%)}47%,100%{transform:none}}
+.pv-sfx .hit{animation:pvs-hit 3.2s infinite}
+@keyframes pvs-hit{0%,40%{opacity:0;transform:scale(.35)}44%{opacity:1;transform:scale(1.15)}48%{transform:scale(1)}80%{opacity:1;transform:scale(1)}87%,100%{opacity:0;transform:scale(1)}}
+/* balloon sheet loop */
+.pv-loop .textl>*{animation:pvl 4.2s infinite}
+@keyframes pvl{0%,8%{opacity:0;transform:scale(.7)}12%{opacity:1;transform:scale(1.04)}15%{transform:scale(1)}84%{opacity:1;transform:scale(1)}90%,100%{opacity:0;transform:scale(1)}}
+.pv-loop .textl>.card{animation-name:pvl-card}
+@keyframes pvl-card{0%,8%{opacity:0;transform:translateY(-50%) scale(1.25)}12%{opacity:1;transform:translateY(-50%) scale(.97)}15%{transform:translateY(-50%) scale(1)}84%{opacity:1}90%,100%{opacity:0;transform:translateY(-50%) scale(1)}}
+.pv-loop .textl>.dim{animation-name:pvl-dim}
+@keyframes pvl-dim{0%,8%{opacity:0;transform:none}12%,84%{opacity:1;transform:none}90%,100%{opacity:0;transform:none}}
+.pv-loop .textl>svg.bal{animation:none}
+.pv-loop svg.bal g.pop{transform-box:fill-box;transform-origin:50% 100%;animation:pvl 4.2s infinite}
+
+/* ---------- STORYBOARD ENGINE (one-shot) ---------- */
+#sb-stage .skt,#sb-stage .ink{opacity:0}
+#sb-stage .e-inkwake .skt{opacity:1}
+#sb-stage .e-inkwake .ink{opacity:1;clip-path:polygon(0 0,0 0,0 0);animation:iw-wipe calc(var(--d) * .55) linear forwards}
+#sb-stage .e-inkwake .col{clip-path:polygon(0 0,0 0,0 0);animation:iw-wipe calc(var(--d) * .55) linear forwards;animation-delay:calc(var(--d) * .45)}
+@keyframes iw-wipe{from{clip-path:polygon(0 0,0 0,0 0)}to{clip-path:polygon(0 0,220% 0,0 220%)}}
+#sb-stage .e-snap{animation:snap .18s ease-out}
+@keyframes snap{0%{transform:translate(2%,-1%)}100%{transform:none}}
+#sb-stage .e-zoomout{transform-origin:var(--org,50% 50%);animation:zo .7s cubic-bezier(.5,0,.8,.4) forwards}
+@keyframes zo{0%{transform:scale(1);opacity:1}80%{opacity:1}100%{transform:scale(3.6);opacity:0}}
+#sb-stage .e-zoomin{animation:zi .75s ease-out forwards}
+@keyframes zi{0%{opacity:0;transform:scale(1.18)}45%{opacity:0;transform:scale(1.14)}70%{opacity:1}100%{transform:scale(1)}}
+#sb-stage .e-walkout{animation:wo .8s cubic-bezier(.65,0,.3,1) forwards}
+@keyframes wo{0%{transform:translateY(0);opacity:1}99%{opacity:1}100%{transform:translateY(-108%);opacity:0}}
+#sb-stage .e-walkin{animation:wi .8s cubic-bezier(.65,0,.3,1) forwards}
+@keyframes wi{0%{transform:translateY(108%)}100%{transform:translateY(0)}}
+#sb-stage .flash.on{opacity:1}
+.sb-wrap{display:grid;grid-template-columns:minmax(220px,330px) 1fr;gap:22px;align-items:start}
+@media (max-width:720px){.sb-wrap{grid-template-columns:1fr}}
+.sb-side{display:flex;flex-direction:column;gap:12px}
+.sb-ctl{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.sb-prog{height:12px;background:var(--line);border-radius:6px;overflow:hidden}
+.sb-prog i{display:block;height:100%;width:0;background:var(--gold)}
+.sb-say{background:var(--card);border:2px solid var(--ink);border-radius:12px;padding:12px 14px;min-height:92px;font-size:22px;font-weight:700;line-height:1.3}
+.sb-say .pill{vertical-align:middle;margin-right:8px}
+.sb-meta{font-size:17px;color:var(--muted)}
+.sb-beat{font-family:"Bangers";font-size:30px;color:var(--gold)}
+
+/* word timing demo */
+.words{display:flex;flex-wrap:wrap;gap:6px;font-family:"Kalam";font-weight:700;font-size:26px;margin:8px 0 2px}
+.words span{padding:2px 8px;border-radius:8px;background:var(--paper-2);opacity:.45;animation:wlit 5.2s infinite;animation-delay:calc(var(--i) * .42s)}
+@keyframes wlit{0%{opacity:.45}4%{opacity:1;background:var(--gold-2);color:#231F20}40%{opacity:1;background:var(--gold-2);color:#231F20}60%,100%{opacity:.45;background:var(--paper-2);color:inherit}}
+.fontrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.fontrow .f{background:var(--card);border:2px solid var(--ink);border-radius:12px;padding:12px}
+.fontrow .f b{display:block;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.fontrow .f span{display:block;font-size:30px;line-height:1.15;margin-top:4px}
+
+/* lightbox */
+#lb{position:fixed;inset:0;background:rgba(0,0,0,.9);display:none;align-items:center;justify-content:center;z-index:50;cursor:zoom-out}
+#lb.on{display:flex}
+#lb img{max-width:96vw;max-height:94vh;border:3px solid #fff;border-radius:8px}
+
+.motion-off{display:none;background:var(--warn);color:#fff;font-weight:800;padding:8px 12px;border-radius:8px}
+@media (prefers-reduced-motion: reduce){
+  .pv-inkwake *,.pv-cut *,.pv-walk *,.pv-zoom *,.pv-breakout *,.pv-card *,.pv-turn *,.pv-sfx *,.pv-loop *,.words span,.drift{animation-play-state:paused!important}
+  .motion-off{display:inline-block}
+}
+footer{padding:30px 0 60px;color:var(--muted);font-size:16px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="topbar">
+      <div>
+        <h1>LIVING COMIC</h1>
+        <div class="sub">The film language for our Bible comic shorts. The page is drawn in front of you, and it wakes up.</div>
+      </div>
+      <div>
+        <button class="btn" id="theme">Light / Dark</button>
+        <span class="motion-off">Motion is off (your system setting). Previews are paused.</span>
+      </div>
+    </div>
+    <nav class="chips">
+      <a href="#idea">1 · The idea</a><a href="#moves">2 · The moves</a><a href="#dialogue">3 · Dialogue</a>
+      <a href="#story">4 · Storyboard</a><a href="#episode">5 · Episode file</a><a href="#risks">6 · Risks</a><a href="#pick">7 · My pick</a>
+    </nav>
+    <p class="small" style="margin-top:14px">Real art from "In No Wise Cast Out" (John 6:37). All previews are CSS on downscaled stills. No money spent. Click any still to zoom. The slow drift in a resting panel stands in for the real generated clip.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+<!-- ================= 1 THE ONE IDEA ================= -->
+<section id="idea">
+  <h2><span class="num">1</span>THE ONE IDEA</h2>
+  <div class="big">The comic is being drawn while you watch.<br>When the ink dries, the panel wakes up.<br>Every move, every word, lands on the voice.</div>
+  <p>Pencil, then ink, then colour, then alive. Fast. One big panel at a time. The reviewers' favourite thing in the old film (pencil to ink) becomes the whole language, not a one-off.</p>
+
+  <h3 style="margin-top:18px">Three candidates. Ranked.</h3>
+  <div class="grid">
+    <!-- A WET INK -->
+    <div class="cardx">
+      <h3><span class="rank">1</span> A · WET INK <span class="pill easy">easy-medium</span></h3>
+      <div class="stage pv-inkwake">
+        <div class="pan">
+          <img class="fill skt" src="img/p1b_sketch.jpg" alt="">
+          <img class="fill ink" src="img/p1b_hesitant_hand.jpg" alt="">
+          <img class="fill col" src="img/p1b_hesitant_hand.jpg" alt="">
+        </div>
+        <div class="ly paper"></div>
+        <div class="label">pencil → ink → colour → alive</div>
+      </div>
+      <p><b>What it is.</b> Each panel is drawn in under half a second, then the real clip plays. A pen-scratch sound sells it.</p>
+      <p><b>Cost.</b> $0. Pencil pass + a diagonal "ink front" over the clip's first frame (we already have <code>blue-line</code>'s wobbled front). About 1–2 build days.</p>
+      <p><b>Risk.</b> If it is slow it becomes a tic and the film drags again. Rule: 0.5s max, 0.8s only for Jesus.</p>
+    </div>
+    <!-- B BREAK THE GUTTER -->
+    <div class="cardx">
+      <h3><span class="rank">2</span> B · BREAK THE GUTTER <span class="pill medium">medium</span></h3>
+      <div class="stage pv-breakout">
+        <div class="bo-bg"></div>
+        <div class="bo-glow"></div>
+        <div class="frame"></div>
+        <div class="bo-pop"><img src="img/panel_a_cutout.png" alt=""></div>
+        <div class="label">light, then the figure, cross the border</div>
+      </div>
+      <p><b>What it is.</b> Panel borders are real. At the turn, light spills across the gutter, then the figure steps over the border.</p>
+      <p><b>Cost.</b> $0 but needs a cutout per break-out (rembg; one already exists). About 2 build days.</p>
+      <p><b>Risk.</b> A cutout from a still over a moving clip can drift. Best as ONE move at the pivot, not the whole language.</p>
+    </div>
+    <!-- C PAGE CAMERA -->
+    <div class="cardx">
+      <h3><span class="rank">3</span> C · PAGE CAMERA <span class="pill easy">easy</span></h3>
+      <div class="stage pv-walk">
+        <div class="strip">
+          <div class="cell"><img class="fill" src="img/p1a_night_door.jpg" alt=""></div>
+          <div class="gut"></div>
+          <div class="cell"><img class="fill" src="img/p1b_hesitant_hand.jpg" alt=""></div>
+        </div>
+        <div class="label">the camera walks down a real page</div>
+      </div>
+      <p><b>What it is.</b> One big printed page. The camera is the reader's eye, moving panel to panel.</p>
+      <p><b>Cost.</b> $0, one build day (crop + pan over a composed page).</p>
+      <p><b>Risk.</b> Every motion-comic channel does this. It is close to what scored 4.75/10 for "alive". Keep it as a move, not the idea.</p>
+    </div>
+  </div>
+  <div class="note"><b>Pick: A.</b> Wet Ink is the signature. B becomes one move (the pivot). C becomes one move (the walk).</div>
+
+  <details>
+    <summary>Where this agrees with the specs, and where it departs</summary>
+    <ul>
+      <li><b>Keeps</b> MOTIONCOMIC_SPEC: camera-only clips, ink held (MC-R2). Scripture gets its own look (MC-R4). "Clear a hole" before the verse (MC-R5). No SFX on sacred beats.</li>
+      <li><b>Keeps</b> COMIC DNA: fonts Bangers / Kalam / Permanent Marker. Christ dignified, one face. Dots masked off faces, now capped at 4%.</li>
+      <li><b>Keeps</b> panel_animator names: blue-line front, line-boil, impact-burst, typography-panel, ink-transition, print-grade last.</li>
+      <li><b>Departs</b> from COMIC_PAGE_PIPELINE rev 2.1 "no speech bubbles". The owner now asks for dialogue. Balloons return, with a verbatim gate and an "invented" flag.</li>
+      <li><b>Departs</b> from DNA "Christ speech never in a balloon". It IS a balloon now, but a distinct one: gold rule + verse tag. Never an ordinary balloon.</li>
+      <li><b>Departs</b> from DNA "Remotion engine". This build is ffmpeg + PIL, $0, the tools we have.</li>
+      <li><b>Departs</b> from 1–4 panels per page. One big panel at a time. A grid only as a rare page reveal.</li>
+    </ul>
+  </details>
+</section>
+
+<!-- ================= 2 THE MOVES ================= -->
+<section id="moves">
+  <h2><span class="num">2</span>THE MOVES</h2>
+  <p class="lead">Eight moves. Each reads in one second on a phone. At rest: one big panel, always a real clip.</p>
+  <div class="grid tight">
+
+    <div class="cardx">
+      <h3>1 · INK WAKE <span class="pill easy">easy-med</span></h3>
+      <div class="stage pv-inkwake">
+        <div class="pan">
+          <img class="fill skt" src="img/p2b_sketch.jpg" alt="">
+          <img class="fill ink" src="img/p2b_jesus_speaks.jpg" alt="">
+          <img class="fill col" src="img/p2b_jesus_speaks.jpg" alt="">
+        </div>
+        <div class="ly paper"></div>
+      </div>
+      <p><b>Use:</b> how most panels enter. Hook at 0.5s. Jesus at 0.8s, the only slow one.<br><b>Beat:</b> any new panel.<br><b>Build:</b> pencil pass (exists) + wobbled ink front (<code>blue-line</code>) + the clip.</p>
+    </div>
+
+    <div class="cardx">
+      <h3>2 · GUTTER CUT <span class="pill easy">easy</span></h3>
+      <div class="stage pv-cut">
+        <div class="ly a"><img class="fill" src="img/p1b_hesitant_hand.jpg" alt=""></div>
+        <div class="ly b"><img class="fill" src="img/p1a_night_door.jpg" alt=""></div>
+        <div class="ly flash"></div>
+      </div>
+      <p><b>Use:</b> the normal cut. Two black frames (the gutter) and a tiny page nudge.<br><b>Beat:</b> every 3–4s, so something new is always on screen.<br><b>Build:</b> ffmpeg concat + 2 black frames + 1 offset frame.</p>
+    </div>
+
+    <div class="cardx">
+      <h3>3 · PANEL WALK <span class="pill easy">easy</span></h3>
+      <div class="stage pv-walk">
+        <div class="strip">
+          <div class="cell"><img class="fill" src="img/p2c_the_record.jpg" alt=""></div>
+          <div class="gut"></div>
+          <div class="cell"><img class="fill" src="img/p1b_hesitant_hand.jpg" alt=""></div>
+        </div>
+      </div>
+      <p><b>Use:</b> the camera travels across a real page from one panel to the next.<br><b>Beat:</b> cause → effect ("the record" → "keeps you at the door").<br><b>Build:</b> crop-pan over a 2-panel composite (<code>grid-choreography</code> primitives).</p>
+    </div>
+
+    <div class="cardx">
+      <h3>4 · BREAK-OUT <span class="pill medium">medium</span></h3>
+      <div class="stage pv-breakout">
+        <div class="bo-bg"></div>
+        <div class="bo-glow"></div>
+        <div class="frame"></div>
+        <div class="bo-pop"><img src="img/panel_a_cutout.png" alt=""></div>
+      </div>
+      <p><b>Use:</b> once per episode. Light crosses the gutter first, then the figure breaks the border.<br><b>Beat:</b> the gospel pivot.<br><b>Build:</b> rembg cutout + layered PIL composite over a held frame.</p>
+    </div>
+
+    <div class="cardx">
+      <h3>5 · ZOOM-THROUGH <span class="pill easy">easy-med</span></h3>
+      <div class="stage pv-zoom">
+        <div class="ly b"><img class="fill" src="img/p2c_the_record.jpg" alt=""></div>
+        <div class="ly a"><img class="fill" src="img/p1a_night_door.jpg" alt=""></div>
+      </div>
+      <p><b>Use:</b> push into a detail in one panel, and it becomes the next panel.<br><b>Beat:</b> "your record" → the scroll.<br><b>Build:</b> zoompan to an anchor + 0.3s crossfade.</p>
+    </div>
+
+    <div class="cardx">
+      <h3>6 · CARD SLAM <span class="pill easy">easy</span></h3>
+      <div class="stage pv-card">
+        <img class="fill" src="img/p1b_hesitant_hand.jpg" alt="">
+        <div class="ly dim"></div>
+        <div class="card c1">AFRAID GOD WILL<br>TURN YOU AWAY?</div>
+        <div class="ly dim dim2"></div>
+        <div class="card c2 decode"><span class="sm">OLD WORD</span><span class="old">IN NO WISE</span><span class="eq">=</span><span class="plain">NEVER</span></div>
+      </div>
+      <p><b>Use:</b> the question card at 0.8s. The OLD = PLAIN decode after any hard KJV word.<br><b>Beat:</b> hook, decode, landing line.<br><b>Build:</b> <code>typography-panel</code> + a new card style. White + gold, Bangers.</p>
+    </div>
+
+    <div class="cardx">
+      <h3>7 · PAGE TURN <span class="pill medium">medium</span></h3>
+      <div class="stage pv-turn">
+        <div class="ly"><img class="fill" src="img/p4c_empty_threshold.jpg" alt=""></div>
+        <div class="ly top"><img class="fill" src="img/p4b_the_record_nailed.jpg" alt=""></div>
+        <div class="ly shade"></div>
+      </div>
+      <p><b>Use:</b> once. The whole page leaves. The next act is underneath.<br><b>Beat:</b> the act turn (fear → His words).<br><b>Build:</b> PIL perspective warp per frame. Doable, not free of effort. Could ship later.</p>
+    </div>
+
+    <div class="cardx">
+      <h3>8 · SFX HIT <span class="pill easy">easy</span></h3>
+      <div class="stage pv-sfx">
+        <div class="pan"><img class="fill" src="img/p1b_hesitant_hand.jpg" alt=""></div>
+        <div class="ly hit" style="transform-origin:62% 46%">
+          <svg class="burst" style="left:31%;top:15%" viewBox="0 0 100 100"><polygon fill="#FFF3C4" stroke="#231F20" stroke-width="2.5" points="50,2 58,30 86,14 66,40 98,50 66,60 86,86 58,70 50,98 42,70 14,86 34,60 2,50 34,40 14,14 42,30"/></svg>
+          <div class="sfxw" style="left:30%;top:33%">KNOCK</div>
+        </div>
+      </div>
+      <p><b>Use:</b> a real sound only (knock, creak, wind). Max 2 per episode. Never on Jesus or the cross.<br><b>Beat:</b> the hand on the door.<br><b>Build:</b> <code>impact-burst</code> + Bangers lettering, timed to the sound file.</p>
+    </div>
+  </div>
+  <div class="note">At rest a panel is a real Kling/Seedance clip. On top, $0 layers only: <code>line-boil</code>, a breathing lamp (<code>candle-only</code>), the ink front. No still is ever left half-drawn on screen: the pencil stage always completes.</div>
+</section>
+
+<!-- ================= 3 DIALOGUE SYSTEM ================= -->
+<section id="dialogue">
+  <h2><span class="num">3</span>DIALOGUE SYSTEM</h2>
+  <p class="lead">Five text shapes. One on screen at a time. Shape = who is speaking.</p>
+  <div class="grid tight" id="sheet"></div>
+
+  <h3 style="margin-top:26px">Rules</h3>
+  <div class="grid">
+    <div class="cardx">
+      <h3>Jesus</h3>
+      <ul>
+        <li>His own KJV words. Verbatim. Never changed.</li>
+        <li>Ivory fill. Ink rule + inner gold rule. Verse tag under the corner.</li>
+        <li>Long verse → chained balloons, in order, each ≤ 8 words.</li>
+        <li>His own voice. The narrator never reads His line.</li>
+        <li>A hard old word gets the decode card right after.</li>
+      </ul>
+    </div>
+    <div class="cardx">
+      <h3>The human</h3>
+      <ul>
+        <li>Spoken: white fill, ink rule. Thought: grey dashed cloud, italic.</li>
+        <li>Invented lines: max 2 per episode, max 6 words.</li>
+        <li>Each one is flagged <code>"invented": true</code> in the file, with a reason. Doctrine review sees the list.</li>
+        <li>An invented line may only say what the narration already says. No new claims.</li>
+      </ul>
+    </div>
+    <div class="cardx">
+      <h3>Narrator, SFX, cards</h3>
+      <ul>
+        <li>Narrator = the parchment band. Top-left. Bold plain sans.</li>
+        <li>SFX = Bangers, angled, stroked. Real sounds only.</li>
+        <li>Cards = white + gold. The hook question. The OLD = PLAIN decode. The landing.</li>
+        <li>No halftone dots over any text. Ever.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 style="margin-top:26px">How a balloon pops</h3>
+  <div class="cardx">
+    <p>The balloon pops from its tail on the <b>first spoken word</b> (from <code>alignment.json</code>). 0.18s, tiny overshoot. It stays while the words are said, then leaves 0.4s after the last word. The next text waits 0.2s.</p>
+    <div class="words">
+      <span style="--i:0">All</span><span style="--i:1">that</span><span style="--i:2">the</span><span style="--i:3">Father</span><span style="--i:4">giveth</span><span style="--i:5">me</span><span style="--i:6">shall</span><span style="--i:7">come</span><span style="--i:8">to</span><span style="--i:9">me;</span>
+    </div>
+    <div class="small">▲ balloon pops here · words light as the voice says them (optional highlight, off by default for ESL calm)</div>
+    <ul style="margin-top:10px">
+      <li><b>Max words:</b> 8 per balloon. 6 for a thought. 7 for a card line.</li>
+      <li><b>Min time on screen:</b> 1.2s + 0.25s per word.</li>
+      <li><b>Tail:</b> aims at the mouth anchor stored in the file. Speaker off-panel → tail points at the frame edge nearest them.</li>
+      <li><b>One text layer:</b> a balloon replaces the caption. Never both.</li>
+    </ul>
+  </div>
+
+  <h3 style="margin-top:26px">Fonts (checked in C:\Windows\Fonts and the repo)</h3>
+  <div class="fontrow">
+    <div class="f"><b>Balloons · Kalam Bold (repo)</b><span style="font-family:Kalam;font-weight:700">him that cometh to me</span><div class="small">Comic hand, still clear at phone size. Chosen.</div></div>
+    <div class="f"><b>Cards + SFX · Bangers (Windows + repo)</b><span style="font-family:Bangers">IN NO WISE = NEVER</span><div class="small">Big, loud, comic. Chosen.</div></div>
+    <div class="f"><b>Verse tag · Permanent Marker</b><span style="font-family:PermanentMarker">John 6:37 · KJV</span><div class="small">Small tag only. Chosen.</div></div>
+    <div class="f"><b>Narrator band · Bahnschrift Bold (Windows)</b><span style="font-family:Bahnschrift,'Segoe UI';font-weight:800">Somewhere in you is the quiet fear</span><div class="small">Plain and bold. Easy for ESL and dyslexic readers. Chosen.</div></div>
+    <div class="f"><b>Comic Sans (Windows)</b><span style="font-family:'Comic Sans MS'">What if He says no?</span><div class="small">Rejected. Reads cheap.</div></div>
+    <div class="f"><b>Ink Free (Windows)</b><span style="font-family:'Ink Free'">What if He says no?</span><div class="small">Rejected. Too thin on a phone.</div></div>
+  </div>
+
+  <h3 style="margin-top:26px">Voices, and when dialogue beats narration</h3>
+  <div class="grid">
+    <div class="cardx">
+      <h3>Cast</h3>
+      <ul>
+        <li><span class="pill narr">Narr</span> the voice we already have.</li>
+        <li><span class="pill jesus">Jesus</span> calm, low, unhurried. Never "dramatic". Speaks KJV only.</li>
+        <li><span class="pill man">Man</span> older, tired. Thoughts are near a whisper.</li>
+      </ul>
+      <p class="small">The pipeline already does per-speaker audio (<code>per_turn_synth.py</code>, <code>voices.json</code>).</p>
+    </div>
+    <div class="cardx">
+      <h3>Dialogue wins when…</h3>
+      <ul>
+        <li>The verse IS speech (Jesus said it). Always His balloon, His voice.</li>
+        <li>The narration describes a feeling "in you". One thought line can carry it instead.</li>
+        <li>A question → answer beat. The man asks, Jesus answers with the verse.</li>
+      </ul>
+      <p><b>Narration wins</b> for the explanation and the call to Jesus. Target: dialogue ≤ 30% of lines.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4 STORYBOARD ================= -->
+<section id="story">
+  <h2><span class="num">4</span>STORYBOARD · FIRST 20 SECONDS</h2>
+  <p class="lead">"In No Wise Cast Out", redone in this language. Voice at 0s. Face and hand first. No logo open.</p>
+
+  <div class="sb-wrap">
+    <div>
+      <div class="stage wide" id="sb-stage">
+        <div class="ly l-new"><div class="pan">
+          <img class="fill skt" src="img/p1b_sketch.jpg" alt="">
+          <img class="fill ink" src="img/p1b_hesitant_hand.jpg" alt="">
+          <img class="fill col" src="img/p1b_hesitant_hand.jpg" alt="">
+        </div></div>
+        <div class="ly l-old" style="opacity:0"><img class="fill" src="img/p1a_night_door.jpg" alt=""></div>
+        <div class="ly flash"></div>
+        <div class="ly textl"></div>
+        <div class="label" id="sb-time">0.0s</div>
+      </div>
+    </div>
+    <div class="sb-side">
+      <div class="sb-ctl">
+        <button class="btn primary" id="sb-play">Play</button>
+        <button class="btn" id="sb-restart">Restart</button>
+        <span class="sb-beat" id="sb-beat">Beat 1</span>
+      </div>
+      <div class="sb-prog"><i id="sb-prog"></i></div>
+      <div class="sb-say" id="sb-say"><span class="pill narr">Narr</span> …</div>
+      <div class="sb-meta" id="sb-meta">Press Play. The loop runs ~28s: the first 20s plus the verse and the decode card.</div>
+      <div class="note">Script changes vs the current film: the man's thought replaces "rehearsing whether you're allowed in" (dialogue beats narration there), and "But listen to His own words" shrinks to "His own words". Both go through the words-lock process before any recording.</div>
+    </div>
+  </div>
+
+  <h3 style="margin-top:26px">Beat table</h3>
+  <table>
+    <thead><tr><th>Time</th><th>On screen</th><th>Move</th><th>Voice</th><th>Sound</th></tr></thead>
+    <tbody>
+      <tr><td class="t">0.0–0.8</td><td>The hand on the door. Big. Drawn in half a second.</td><td>Ink Wake (0.5s)</td><td><span class="pill narr">Narr</span> Somewhere in you is the quiet fear</td><td>pen scratch · night wind</td></tr>
+      <tr><td class="t">0.8–2.6</td><td>Question card over the hand: AFRAID GOD WILL TURN YOU AWAY?</td><td>Card Slam</td><td>(narration continues)</td><td>soft card thud</td></tr>
+      <tr><td class="t">2.6–5.2</td><td>Wide night door. The man small, scroll in hand. The lamp breathes.</td><td>Gutter Cut</td><td><span class="pill narr">Narr</span> that if you actually came to God,</td><td>lamp crackle</td></tr>
+      <tr><td class="t">5.2–8.0</td><td>Push into the scroll. The record fills the frame.</td><td>Zoom-Through</td><td><span class="pill narr">Narr</span> He'd look at your record and turn you away.</td><td>paper</td></tr>
+      <tr><td class="t">8.2–10.4</td><td>Back to the hand on the door. KNOCK lettering on the knuckles.</td><td>Panel Walk + SFX Hit</td><td><span class="pill narr">Narr</span> That fear keeps you at the door,</td><td>knock on wood</td></tr>
+      <tr><td class="t">10.6–12.6</td><td>The man's face by the lamp. His thought.</td><td>Ink Wake + Thought pop</td><td><span class="pill man">Man</span> What if He says no? <span class="pill flag">invented</span></td><td>breath · lamp</td></tr>
+      <tr><td class="t">12.8–15.2</td><td>Jesus. Calm. The same face as the landing.</td><td>Ink Wake (0.8s, the slow one)</td><td><span class="pill narr">Narr</span> Jesus answers it before you can ask.</td><td>low warm tone · clear a hole</td></tr>
+      <tr><td class="t">15.2–16.2</td><td>Small card: HIS OWN WORDS · JOHN 6:37</td><td>Card Slam</td><td><span class="pill narr">Narr</span> His own words:</td><td>—</td></tr>
+      <tr><td class="t">16.2–21.0</td><td>Jesus balloon, gold rule, pops on the first word.</td><td>Balloon pop</td><td><span class="pill jesus">Jesus</span> All that the Father giveth me shall come to me;</td><td>silence under the voice</td></tr>
+      <tr><td class="t">21.3–25.6</td><td>Two chained balloons, same panel.</td><td>Balloon pop ×2</td><td><span class="pill jesus">Jesus</span> and him that cometh to me / I will in no wise cast out.</td><td>—</td></tr>
+      <tr><td class="t">25.8–28.0</td><td>Decode card: IN NO WISE = NEVER</td><td>Card Slam</td><td>(no voice, let it land)</td><td>soft bell</td></tr>
+    </tbody>
+  </table>
+  <p class="small" style="margin-top:10px">Timings come from the real caption windows in <code>_compose_piece1_pages_v4.py</code>, shifted for the new beats. Matt 11:28 ("Come unto me, all ye that labour and are heavy laden, and I will give you rest.") is a verbatim option for the landing exchange at ~55s, not the open.</p>
+  <div class="art-row">
+    <img class="zoom" src="img/p1b_hesitant_hand.jpg" alt="hand"><img class="zoom" src="img/p1a_night_door.jpg" alt="door"><img class="zoom" src="img/p2c_the_record.jpg" alt="record"><img class="zoom" src="img/p2a_rehearsing.jpg" alt="man"><img class="zoom" src="img/p2b_jesus_speaks.jpg" alt="Jesus"><img class="zoom" src="img/p5c_jesus_face_open_door.jpg" alt="open door"><img class="zoom" src="img/p6_hero_landing.jpg" alt="landing">
+  </div>
+</section>
+
+<!-- ================= 5 EPISODE FILE ================= -->
+<section id="episode">
+  <h2><span class="num">5</span>ONE FILE PER EPISODE</h2>
+  <p class="lead">Every new episode fills in <code>episode.json</code>. The build reads it. Nothing else to hand-edit.</p>
+  <div class="grid">
+    <div class="cardx">
+      <h3>Fields</h3>
+      <ul>
+        <li><b>verse</b> ref + KJV text (checked against <code>kjv_cache</code>)</li>
+        <li><b>voices</b> narrator / jesus / man → voice ids</li>
+        <li><b>panels[]</b> id, clip, still, t0, t1, <b>enter</b> move + duration, <b>exit</b> move, rest layer, light anchor, mouth anchor, sacred flag</li>
+        <li><b>text[]</b> kind (card / balloon / thought / cap / decode / sfx), speaker, text, word_t0, word_t1, panel, anchor, <b>invented</b> + why, kjv_ref</li>
+        <li><b>sound[]</b> time, cue file, gain</li>
+        <li><b>rules</b> one text layer · max 8 words · new thing every 4s · no SFX on sacred</li>
+      </ul>
+    </div>
+    <div class="cardx">
+      <h3>$0 gates the build runs</h3>
+      <ul>
+        <li>Jesus balloon text == KJV byte-for-byte, or FAIL.</li>
+        <li>Invented lines ≤ 2, all flagged, listed in the review page.</li>
+        <li>Never two text layers at once.</li>
+        <li>Something new on screen every ≤ 4s.</li>
+        <li>No SFX / no break-out on a sacred panel.</li>
+        <li>Every panel has a real clip. A still alone FAILs.</li>
+        <li>Print grade: dots ≤ 4%, faces masked.</li>
+      </ul>
+    </div>
+  </div>
+  <details>
+    <summary>Show the file (short example)</summary>
+<pre>{
+  "episode": "in_no_wise_cast_out",
+  "verse": { "ref": "John 6:37", "kjv": "All that the Father giveth me shall come to me; and him that cometh to me I will in no wise cast out." },
+  "voices": { "narrator": "narr_v2", "jesus": "jesus_calm", "man": "man_older" },
+  "panels": [
+    { "id": "p1b", "clip": "clips/p1b.mp4", "still": "stills/p1b.png", "t0": 0.0, "t1": 2.6,
+      "enter": { "move": "ink_wake", "dur": 0.5 }, "exit": "cut",
+      "rest": ["line_boil"], "light_anchor": null, "mouth_anchor": null, "sacred": false },
+    { "id": "p2a", "clip": "clips/p2a.mp4", "t0": 10.6, "t1": 12.6,
+      "enter": { "move": "ink_wake", "dur": 0.4 }, "exit": "cut", "mouth_anchor": [0.64, 0.37] },
+    { "id": "p2b", "clip": "clips/p2b.mp4", "t0": 12.8, "t1": 25.6,
+      "enter": { "move": "ink_wake", "dur": 0.8 }, "exit": "cut", "mouth_anchor": [0.54, 0.30], "sacred": true }
+  ],
+  "text": [
+    { "kind": "card", "style": "question", "lines": ["AFRAID GOD WILL", "TURN YOU AWAY?"], "t0": 0.8, "t1": 2.6 },
+    { "kind": "cap", "text": "that if you actually came to God,", "word_t0": 2.62, "word_t1": 5.0 },
+    { "kind": "sfx", "text": "KNOCK", "t": 9.1, "panel": "p1b", "anchor": [0.62, 0.46], "sound": "knock_wood_01.wav" },
+    { "kind": "thought", "speaker": "man", "text": "What if He says no?", "word_t0": 10.9, "word_t1": 12.4,
+      "panel": "p2a", "invented": true, "why": "gives the fear a voice; narration already says 'rehearsing'" },
+    { "kind": "balloon", "speaker": "jesus", "text": "All that the Father giveth me shall come to me;",
+      "kjv_ref": "John 6:37", "word_t0": 16.2, "word_t1": 21.0, "panel": "p2b", "invented": false },
+    { "kind": "decode", "old": "IN NO WISE", "plain": "NEVER", "t0": 25.8, "t1": 28.0 }
+  ],
+  "sound": [ { "t": 0.0, "cue": "pen_scratch_short.wav" }, { "t": 12.8, "cue": "warm_tone.wav", "gain": -14 } ],
+  "rules": { "one_text_layer": true, "max_balloon_words": 8, "new_thing_every_s": 4, "sfx_on_sacred": false }
+}</pre>
+  </details>
+
+  <h3 style="margin-top:20px">Build pieces, in order</h3>
+  <table>
+    <thead><tr><th>#</th><th>Piece</th><th>Status</th><th>What it does</th><th>Effort</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td><code>sketch_pass.py</code></td><td><span class="pill old">exists</span></td><td>pencil version of a still (the <code>_sketch</code> folder proves it). Make it a tool.</td><td><span class="pill easy">easy</span></td></tr>
+      <tr><td>2</td><td><code>ink_wake.py</code></td><td><span class="pill new">new</span></td><td>pencil → ink → colour front over the clip's first frame, then the clip. Reuses <code>blue-line</code>'s wobbled front.</td><td><span class="pill easy">easy-med</span></td></tr>
+      <tr><td>3</td><td><code>text_layer.py</code></td><td><span class="pill new">new</span></td><td>balloons, thoughts, caption band, cards, decode, SFX. From <code>episode.json</code> + word times. Reuses <code>typography-panel</code> band + <code>impact-burst</code>.</td><td><span class="pill medium">medium</span></td></tr>
+      <tr><td>4</td><td><code>page_camera.py</code></td><td><span class="pill new">new</span></td><td>Panel Walk + Zoom-Through + Gutter Cut. Crop/pan over a 2-panel composite. Reuses <code>grid-choreography</code> primitives.</td><td><span class="pill easy">easy</span></td></tr>
+      <tr><td>5</td><td><code>breakout.py</code></td><td><span class="pill new">new</span></td><td>light spill across the gutter + cutout pop over a held frame. rembg for cutouts.</td><td><span class="pill medium">medium</span></td></tr>
+      <tr><td>6</td><td><code>compose_episode.py</code></td><td><span class="pill new">new</span></td><td>the timeline builder. Reads <code>episode.json</code>, calls 1–5, runs the gates. Replaces <code>_compose_piece1_pages_v4.py</code>.</td><td><span class="pill medium">medium</span></td></tr>
+      <tr><td>7</td><td><code>lc_gates.py</code></td><td><span class="pill new">new</span></td><td>the $0 gates above. Fail-closed.</td><td><span class="pill easy">easy</span></td></tr>
+      <tr><td>8</td><td><code>page_turn.py</code></td><td><span class="pill new">new · optional</span></td><td>PIL perspective per frame. Ship after the rest.</td><td><span class="pill medium">medium</span></td></tr>
+      <tr><td>9</td><td><code>print_grade</code> · <code>sfx</code> · landing hold · watermark</td><td><span class="pill old">exists</span></td><td>last passes, unchanged. Print grade gets a face mask + 4% cap.</td><td><span class="pill easy">easy</span></td></tr>
+    </tbody>
+  </table>
+  <div class="note"><b>Cost.</b> Build: $0 cash, about 4 build days (Sonnet executes). Per episode after that: same clip spend as today (~$9–10 for a short on Kling/Seedance). No new paid step.</div>
+</section>
+
+<!-- ================= 6 RISKS ================= -->
+<section id="risks">
+  <h2><span class="num">6</span>THE RISKS</h2>
+  <div class="grid">
+    <div class="cardx">
+      <h3>Could look cheap</h3>
+      <ul>
+        <li>Too many reveals. The ink wake becomes a tic. Rule: 0.5s, and not on every cut.</li>
+        <li>A CSS wipe is smooth. An ffmpeg wipe can band. Use the wobbled front at 30fps, not a straight line.</li>
+        <li>The thought cloud can look childish. Keep it small, grey, dashed.</li>
+        <li>Halftone over faces. Mask faces, cap at 4%, or drop the dots.</li>
+      </ul>
+    </div>
+    <div class="cardx">
+      <h3>Hard or impossible in ffmpeg</h3>
+      <ul>
+        <li>A true 3D page turn. Needs PIL per-frame warp. Medium effort, so it ships last.</li>
+        <li>A figure really stepping across panels. The break-out here is a still cutout or light. Honest limit.</li>
+        <li>A cutout over a moving clip drifts. Break-out only on a held frame, ≤ 0.8s.</li>
+      </ul>
+    </div>
+    <div class="cardx">
+      <h3>Needs paid animation</h3>
+      <ul>
+        <li>Any acting: Jesus turning, the man stepping through the door.</li>
+        <li>Lips moving for dialogue. We do NOT do this. Balloons + voice carry it. Lip-sync on ink art reads wrong.</li>
+      </ul>
+    </div>
+    <div class="cardx">
+      <h3>Doctrine and faces</h3>
+      <ul>
+        <li>Invented lines must stay inside what the narration already says. Flagged, ≤ 2, panel-reviewed.</li>
+        <li>Jesus must be ONE man in every panel, including the landing. That is a stills problem (ref chaining), not a motion problem. Still the top risk.</li>
+        <li>A wrong word in His balloon is a FAIL, not a note.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 7 RECOMMENDATION ================= -->
+<section id="pick">
+  <h2><span class="num">7</span>MY PICK</h2>
+  <div class="big">A · WET INK as the signature.<br>Break-Out saved for the one pivot.<br>Balloons for Jesus (KJV only) and one thought for the man.</div>
+  <p>Build pieces 1–7 ($0, ~4 days), then rebuild the first 20s of "In No Wise Cast Out" as the proof. Then the blind panel again.</p>
+  <div class="note" style="font-size:24px;font-weight:800">My pick: A. Say yes?</div>
+</section>
+
+</main>
+<footer class="wrap">Living Comic design · 2026-11-07 · previews on downscaled stills in <code>img/</code>, fonts in <code>fonts/</code>. Nothing here was generated or uploaded.</footer>
+
+<div id="lb"><img alt=""></div>
+
+<script>
+(function(){
+  /* ---------- theme ---------- */
+  var root=document.documentElement, tb=document.getElementById('theme');
+  var order=['auto','light','dark'], i=0;
+  try{ var s=localStorage.getItem('lc-theme'); if(s){ i=order.indexOf(s); if(i<0)i=0; } }catch(e){}
+  function apply(){ if(order[i]==='auto') root.removeAttribute('data-theme'); else root.setAttribute('data-theme',order[i]); try{localStorage.setItem('lc-theme',order[i]);}catch(e){} tb.textContent='Theme: '+order[i]; }
+  tb.addEventListener('click',function(){ i=(i+1)%order.length; apply(); }); apply();
+
+  /* ---------- lightbox ---------- */
+  var lb=document.getElementById('lb'), lbi=lb.querySelector('img');
+  document.addEventListener('click',function(e){ var t=e.target; if(t.tagName==='IMG'&&t.classList.contains('zoom')){ lbi.src=t.getAttribute('src'); lb.classList.add('on'); } });
+  lb.addEventListener('click',function(){ lb.classList.remove('on'); lbi.removeAttribute('src'); });
+
+  /* ---------- balloon SVG (viewBox 900x1600 = 9:16) ---------- */
+  function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
+  function greedy(text,max){ var w=text.split(' '),lines=[],cur=''; w.forEach(function(x){ if((cur+' '+x).trim().length>max){ lines.push(cur.trim()); cur=x; } else cur=(cur+' '+x); }); if(cur.trim())lines.push(cur.trim()); return lines; }
+  function wrapWords(text,max){
+    var lines=greedy(text,max), last=lines[lines.length-1];
+    if(lines.length>=2 && last.indexOf(' ')<0 && last.length<=4){ // orphan word: re-balance
+      var alt=greedy(text, Math.ceil(text.length/lines.length)+2);
+      if(alt.length<=lines.length) lines=alt;
+    }
+    return lines;
+  }
+  function balloon(o){
+    // o: {kind:'jesus'|'human'|'thought', text, ax, ay (0..1), tag, boxTop (0..1 optional)}
+    var isTh=o.kind==='thought', lines=wrapWords(o.text, isTh?16:18);
+    var fs=isTh?52:58, lh=fs*1.18, padX=52, padY=44;
+    var w=Math.min(760, Math.max.apply(null,lines.map(function(l){return l.length;}))*fs*0.55+padX*2), h=lines.length*lh+padY*2;
+    var ax=o.ax*900, ay=o.ay*1600;
+    var x=Math.max(50, Math.min(900-w-50, ax-w/2));
+    var y=(o.boxTop!=null)? o.boxTop*1600 : Math.max(60, ay-h-150);
+    if(y+h>ay-60) y=Math.max(60, ay-h-120);
+    var bx=Math.max(x+90, Math.min(x+w-90, ax)), r=isTh?70:46;
+    var s='<svg class="bal" viewBox="0 0 900 1600"><g class="pop">';
+    if(isTh){
+      // trailing thought dots
+      var dots=[[0.25,30],[0.55,20],[0.8,13]];
+      dots.forEach(function(d){ var cx=bx+(ax-bx)*d[0], cy=(y+h)+(ay-(y+h))*d[0]; s+='<circle cx="'+cx+'" cy="'+cy+'" r="'+d[1]+'" fill="#F3EFE6" stroke="#6E675F" stroke-width="5" stroke-dasharray="10 7"/>'; });
+      s+='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+r+'" fill="#F3EFE6" stroke="#6E675F" stroke-width="6" stroke-dasharray="16 11"/>';
+    } else {
+      var fill=o.kind==='jesus'?'#FBF6E8':'#FFFFFF';
+      var tail='M'+(bx-46)+' '+(y+h-3)+' L'+ax+' '+ay+' L'+(bx+46)+' '+(y+h-3)+' Z';
+      s+='<path d="'+tail+'" fill="'+fill+'" stroke="#231F20" stroke-width="9" stroke-linejoin="round"/>';
+      s+='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+r+'" fill="'+fill+'" stroke="#231F20" stroke-width="9"/>';
+      s+='<path d="'+tail+'" fill="'+fill+'"/>';
+      if(o.kind==='jesus'){ s+='<rect x="'+(x+16)+'" y="'+(y+16)+'" width="'+(w-32)+'" height="'+(h-32)+'" rx="'+(r-12)+'" fill="none" stroke="#D4AF4F" stroke-width="5"/>'; }
+    }
+    s+='<g'+(isTh?' class="th"':'')+'>';
+    lines.forEach(function(l,k){ s+='<text x="'+(x+w/2)+'" y="'+(y+padY+lh*(k+0.78))+'" text-anchor="middle" font-size="'+fs+'">'+esc(l)+'</text>'; });
+    s+='</g>';
+    if(o.tag){ var tw=o.tag.length*19+40, tx=x+w-tw-20, ty=y+h+8; s+='<rect x="'+tx+'" y="'+ty+'" width="'+tw+'" height="54" rx="8" fill="#D4AF4F" stroke="#231F20" stroke-width="5"/><text class="tag" x="'+(tx+tw/2)+'" y="'+(ty+39)+'" text-anchor="middle" font-size="32">'+esc(o.tag)+'</text>'; }
+    s+='</g></svg>';
+    return s;
+  }
+  function capHTML(t,bottom){ return '<div class="cap pop'+(bottom?' bottom':'')+'">'+esc(t)+'</div>'; }
+  function cardHTML(lines,small){ return '<div class="dim"></div><div class="card pop"'+(small?' style="font-size:9cqw"':'')+'>'+lines.map(esc).join('<br>')+'</div>'; }
+  function decodeHTML(o,p){ return '<div class="dim"></div><div class="card pop decode"><span class="sm">OLD WORD</span><span class="old">'+esc(o)+'</span><span class="eq">=</span><span class="plain">'+esc(p)+'</span></div>'; }
+  function sfxHTML(word,lx,ty){ return '<div class="pop" style="position:absolute;inset:0;transform-origin:'+(lx+16)+'% '+(ty+10)+'%"><svg class="burst" style="left:'+(lx-14)+'%;top:'+(ty-16)+'%" viewBox="0 0 100 100"><polygon fill="#FFF3C4" stroke="#231F20" stroke-width="2.5" points="50,2 58,30 86,14 66,40 98,50 66,60 86,86 58,70 50,98 42,70 14,86 34,60 2,50 34,40 14,14 42,30"/></svg><div class="sfxw" style="left:'+lx+'%;top:'+ty+'%">'+esc(word)+'</div></div>'; }
+
+  /* ---------- dialogue sheet ---------- */
+  var sheet=document.getElementById('sheet');
+  var specs=[
+    {title:'JESUS · KJV only', img:'p2b_jesus_speaks', html: balloon({kind:'jesus',text:'him that cometh to me',ax:0.52,ay:0.31,tag:'JOHN 6:37 · KJV'}), note:'Ivory. Ink rule + gold rule. Verse tag. Kalam Bold. Verbatim.'},
+    {title:'HUMAN · spoken', img:'p5a_the_welcome', html: balloon({kind:'human',text:'Lord, I came.',ax:0.5,ay:0.34}), note:'White. Ink rule. Kalam Bold. <span class="pill flag">invented</span> lines are rare and flagged.'},
+    {title:'THOUGHT · inner voice', img:'p2a_rehearsing', html: balloon({kind:'thought',text:'What if He says no?',ax:0.62,ay:0.38}), note:'Grey dashed cloud. Italic. Max 6 words. Near a whisper.'},
+    {title:'NARRATOR · caption band', img:'p1a_night_door', html: capHTML('Somewhere in you is the quiet fear'), note:'Parchment band, top-left. Bold plain sans. One line at a time.'},
+    {title:'SFX · lettering', img:'p1b_hesitant_hand', html: sfxHTML('KNOCK',30,33), note:'Bangers, angled, stroked. Real sounds only. Never on sacred panels.'},
+    {title:'CARD · decode', img:'panel_a_jesus', html: decodeHTML('IN NO WISE','NEVER'), note:'White + gold. After any hard old word. The strongest thing in the old film, kept.'}
+  ];
+  specs.forEach(function(sp){
+    var d=document.createElement('div'); d.className='cardx';
+    d.innerHTML='<h3>'+sp.title+'</h3><div class="stage pv-loop"><img class="fill" src="img/'+sp.img+'.jpg" alt=""><div class="ly textl">'+sp.html+'</div></div><p class="small">'+sp.note+'</p>';
+    sheet.appendChild(d);
+  });
+
+  /* ---------- storyboard engine ---------- */
+  var IMG=function(s){ return 'img/'+s+'.jpg'; };
+  var EV=[
+    {t:0.0,  img:'p1b_hesitant_hand', skt:'p1b_sketch', enter:'inkwake', dur:0.5, beat:'Beat 1 · the hand', say:{who:'narr',line:'Somewhere in you is the quiet fear'}, sayUntil:2.6},
+    {t:0.8,  text:cardHTML(['AFRAID GOD WILL','TURN YOU AWAY?']), until:2.6},
+    {t:2.6,  img:'p1a_night_door', enter:'cut', beat:'Beat 2 · the door', say:{who:'narr',line:'that if you actually came to God,'}, sayUntil:5.1, text:capHTML('that if you actually came to God,'), until:5.1},
+    {t:5.2,  img:'p2c_the_record', enter:'zoom', org:'49% 58%', beat:'Beat 3 · the record', say:{who:'narr',line:"He'd look at your record and turn you away."}, sayUntil:8.0},
+    {t:5.7,  text:capHTML("He'd look at your record and turn you away.",true), until:8.0},
+    {t:8.2,  img:'p1b_hesitant_hand', enter:'walk', beat:'Beat 4 · back to the door', say:{who:'narr',line:'That fear keeps you at the door,'}, sayUntil:10.3},
+    {t:9.1,  text:sfxHTML('KNOCK',30,33), until:10.1},
+    {t:10.6, img:'p2a_rehearsing', skt:'p2a_sketch', enter:'inkwake', dur:0.4, beat:'Beat 5 · the man thinks', say:{who:'man',line:'What if He says no?',flag:true}, sayUntil:12.6},
+    {t:10.9, text:balloon({kind:'thought',text:'What if He says no?',ax:0.62,ay:0.38}), until:12.6},
+    {t:12.8, img:'p2b_jesus_speaks', skt:'p2b_sketch', enter:'inkwake', dur:0.8, beat:'Beat 6 · Jesus', say:{who:'narr',line:'Jesus answers it before you can ask.'}, sayUntil:15.1},
+    {t:13.7, text:capHTML('Jesus answers it before you can ask.',true), until:15.1},
+    {t:15.2, text:cardHTML(['HIS OWN WORDS','JOHN 6:37'],true), until:16.1, say:{who:'narr',line:'His own words:'}, sayUntil:16.1, beat:'Beat 7 · His words'},
+    {t:16.2, text:balloon({kind:'jesus',text:'All that the Father giveth me shall come to me;',ax:0.54,ay:0.30,tag:'JOHN 6:37 · KJV'}), until:21.0, say:{who:'jesus',line:'All that the Father giveth me shall come to me;'}, sayUntil:21.0, beat:'Beat 8 · the verse'},
+    {t:21.3, text:balloon({kind:'jesus',text:'and him that cometh to me',ax:0.54,ay:0.30,tag:'JOHN 6:37 · KJV'}), until:23.4, say:{who:'jesus',line:'and him that cometh to me'}, sayUntil:23.4},
+    {t:23.5, text:balloon({kind:'jesus',text:'I will in no wise cast out.',ax:0.54,ay:0.30,tag:'JOHN 6:37 · KJV'}), until:25.6, say:{who:'jesus',line:'I will in no wise cast out.'}, sayUntil:25.6},
+    {t:25.8, text:decodeHTML('IN NO WISE','NEVER'), until:28.0, beat:'Beat 9 · decode', say:{who:'',line:'(no voice · soft bell · let it land)'}, sayUntil:28.0}
+  ];
+  var LOOP=28.6;
+  var stage=document.getElementById('sb-stage');
+  var lNew=stage.querySelector('.l-new'), pan=lNew.querySelector('.pan');
+  var skt=lNew.querySelector('.skt'), ink=lNew.querySelector('.ink'), col=lNew.querySelector('.col');
+  var lOld=stage.querySelector('.l-old'), oldImg=lOld.querySelector('img');
+  var flash=stage.querySelector('.flash'), textl=stage.querySelector('.textl');
+  var tc=document.getElementById('sb-time'), sayEl=document.getElementById('sb-say'), beatEl=document.getElementById('sb-beat'), prog=document.getElementById('sb-prog');
+  var playBtn=document.getElementById('sb-play'), rsBtn=document.getElementById('sb-restart');
+  var playing=false, pos=0, t0=0, idx=0, textUntil=-1, sayUntil=-1, raf=null;
+  function restart(el,cls){ el.classList.remove(cls); void el.offsetWidth; el.classList.add(cls); }
+  function resetLayers(){ lNew.className='ly l-new'; lOld.className='ly l-old'; lOld.style.opacity=0; textl.innerHTML=''; textUntil=-1; }
+  function setPanel(ev){
+    var cur=col.getAttribute('src');
+    lNew.className='ly l-new'; lOld.className='ly l-old'; lOld.style.opacity=0;
+    if(ev.enter==='inkwake'){
+      skt.src=IMG(ev.skt); ink.src=IMG(ev.img); col.src=IMG(ev.img);
+      lNew.style.setProperty('--d', ev.dur+'s'); restart(lNew,'e-inkwake');
+    } else if(ev.enter==='cut'){
+      col.src=IMG(ev.img); flash.classList.add('on'); setTimeout(function(){ flash.classList.remove('on'); },70); restart(lNew,'e-snap');
+    } else if(ev.enter==='zoom'){
+      oldImg.src=cur; lOld.style.opacity=1; lOld.style.setProperty('--org', ev.org||'50% 50%'); restart(lOld,'e-zoomout');
+      col.src=IMG(ev.img); restart(lNew,'e-zoomin');
+    } else if(ev.enter==='walk'){
+      oldImg.src=cur; lOld.style.opacity=1; restart(lOld,'e-walkout');
+      col.src=IMG(ev.img); restart(lNew,'e-walkin');
+    }
+    restart(pan,'drift');
+  }
+  function fire(ev){
+    if(ev.img) setPanel(ev);
+    if(ev.text){ textl.innerHTML=ev.text; textUntil=ev.until; }
+    if(ev.say){ var w=ev.say.who; sayEl.innerHTML=(w?'<span class="pill '+w+'">'+(w==='narr'?'Narr':w==='man'?'Man':'Jesus')+'</span>':'')+ (ev.say.flag?'<span class="pill flag">invented</span> ':'') + esc(ev.say.line); sayUntil=ev.sayUntil; }
+    if(ev.beat) beatEl.textContent=ev.beat;
+  }
+  function tick(now){
+    if(!playing) return;
+    pos=(now-t0)/1000;
+    if(pos>=LOOP){ t0+=LOOP*1000; pos-=LOOP; idx=0; resetLayers(); }
+    while(idx<EV.length && EV[idx].t<=pos){ fire(EV[idx]); idx++; }
+    if(textUntil>=0 && pos>=textUntil){ textl.innerHTML=''; textUntil=-1; }
+    if(sayUntil>=0 && pos>=sayUntil+0.3){ sayEl.innerHTML='<span class="small">…</span>'; sayUntil=-1; }
+    tc.textContent=pos.toFixed(1)+'s'; prog.style.width=(pos/LOOP*100)+'%';
+    raf=requestAnimationFrame(tick);
+  }
+  function play(){ playing=true; t0=performance.now()-pos*1000; playBtn.textContent='Pause'; raf=requestAnimationFrame(tick); }
+  function pause(){ playing=false; playBtn.textContent='Play'; if(raf)cancelAnimationFrame(raf); }
+  playBtn.addEventListener('click',function(){ playing?pause():play(); });
+  rsBtn.addEventListener('click',function(){ pos=0; idx=0; resetLayers(); t0=performance.now(); if(!playing){ play(); } });
+  // preload every still the loop uses, so a cut never shows the old frame
+  EV.forEach(function(ev){ if(ev.img){ (new Image()).src=IMG(ev.img); } if(ev.skt){ (new Image()).src=IMG(ev.skt); } });
+  // prime: show beat 1 finished state so the stage is never blank
+  col.src=IMG('p1b_hesitant_hand'); restart(pan,'drift');
+  var reduce=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduce){ play(); }
+})();
+</script>
+</body>
+</html>

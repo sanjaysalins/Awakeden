@@ -1,0 +1,68 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Swirls Bake-off v2</title>
+<style>
+:root{--bg:#faf6ee;--fg:#1d1a16;--card:#fff;--line:#d9cfbd;--acc:#1f4e8c;--bad:#b3261e;--ok:#2e7d32;--gold:#a8741a}
+@media(prefers-color-scheme:dark){:root{--bg:#17150f;--fg:#f1ebdd;--card:#221f17;--line:#3b362a;--acc:#7fb0ee;--bad:#ff8a80;--ok:#81c784;--gold:#e0b050}}
+body{background:var(--bg);color:var(--fg);font:20px/1.5 Georgia,serif;margin:0;padding:16px}main{max-width:900px;margin:auto}
+h1{font-size:34px}h2{font-size:26px;color:var(--acc);margin-top:28px}.card{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:12px 18px;margin:12px 0}
+.ok{color:var(--ok)}.bad{color:var(--bad)}.gold{color:var(--gold)}table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}small{opacity:.75}
+</style></head><body><main>
+<h1>Bake-off v2 (after the panel)</h1>
+<p>5 blind seats read my first design. All 5 said it could mislead you. This is the fixed version. Still design only: nothing built, nothing spent.</p>
+
+<div class="card"><b>What was wrong</b><ul>
+<li>Each arm changed 3–4 things. A win could not be traced.</li>
+<li>"2 of 3 layers" let cheap numbers and AI seats outvote real viewers.</li>
+<li>"If control wins, stop" could lock 18 episodes on no real data.</li>
+<li>Ep 8 is the cleanest film and may not even have a long title card.</li>
+<li>"Hook spoken at once" changes nothing. The narrator already speaks at 0.1 s. The real variable is the <b>title card over the picture</b>.</li>
+</ul></div>
+
+<h2>Round 1: change ONE thing</h2>
+<div class="card">
+<p><b>Question:</b> if the picture shows at once (title ≤1.5 s, scene under the first words), do more strangers stay past 3 s?</p>
+<table>
+<tr><th>Arm</th><th>What</th></tr>
+<tr><td><b>A. Control</b></td><td>The shipped file, untouched.</td></tr>
+<tr><td><b>B. Picture-first</b></td><td>Same pages, same words, same audio, same cuts. Only the opening changes.</td></tr>
+</table>
+<p><b>Films:</b> two, side by side, never pooled. One with a <i>real</i> long title card (first check: ep 11 has 3.1 s, Jacob's Ladder about 6 s) and one easy film.</p>
+<p><b>Owner cap:</b> 2 hours per edit. Over the cap = that is the result.</p>
+</div>
+
+<h2>How it is judged</h2>
+<div class="card"><table>
+<tr><th>Layer</th><th>Role</th></tr>
+<tr><td><b>Real viewers</b></td><td class="ok"><b>Decides.</b> Strangers, on their own phone, at least half non-native English. Each person sees <b>one</b> arm cold. Count who leaves before 3 s and who reaches the end. Order and sound balanced.</td></tr>
+<tr><td><b>Blind panel</b></td><td>Veto only. If 2 or more seats cannot say who/what/why, or a Bible error, fix it first. No "would I swipe" vote.</td></tr>
+<tr><td><b>Numbers</b></td><td>Check only: did we build the arm we meant to build? Not a vote.</td></tr>
+</table>
+<p><b>Win rule (fixed before looking):</b> B wins if it beats A by at least <b>15 points</b> of viewers passing 3 s, and the uncertainty range does not include zero. Ties keep the cheaper arm. If nothing clears the bar: <b>"inconclusive, widen it"</b>. Never "stop changing the format". One story never rewrites the skill. A second story must repeat the win.</p>
+</div>
+
+<h2>The ladder (only after a win)</h2>
+<div class="card">B &rarr; quick cuts &rarr; chrome off &rarr; loop ending &rarr; fewer pages. One change per round, same method. The first-line clarity idea (plainer opening words, same pictures) is its own round and needs a re-recording, so it needs your price + yes.</div>
+
+<h2>Moved out of the bake-off</h2>
+<div class="card">These cannot be tested by a re-cut, so they become a plain checklist for every new episode: 1080x1920, fast-start, motion fallback, 45–60 s target, loop ending (needs on-platform replay data).</div>
+
+<h2>Bake-off 2: the cross shape</h2>
+<div class="card">
+<ul>
+<li><b>10–12 stills per arm</b> (not 5). Roughly $2.50 for 3 arms. <b>Quote first, your yes first.</b></li>
+<li>Same scene prompt in every arm. Same model. Count the X by a <b>person who does not know the arm</b>. Drop my pixel check: two beams look like an X to a pixel rule.</li>
+<li>Arms: control · shape ref · camera angle chosen first.</li>
+</ul></div>
+
+<h2>Still open (the seats split)</h2>
+<div class="card"><table>
+<tr><th>Question</th><th>Range</th></tr>
+<tr><td>How many viewers?</td><td>8–10 (Sonnet) · 20–30 (Codex) · 40+ (Fable) · 60+ (Claude). I lean <b>40</b>. Fewer only finds huge gaps.</td></tr>
+<tr><td>Muted or sound?</td><td>Sonnet: muted only. Grok: separate groups. Fable: muted first, sound after.</td></tr>
+<tr><td>Where do strangers come from?</td><td>Friends skew results. Paid panel costs money, so it needs a quote and your yes.</td></tr>
+<tr><td>Posting as the test</td><td>The <b>only</b> real behavior data. Ending the 30-episode hold early is your call. Panel calls the hold the biggest weakness in this whole plan.</td></tr>
+</table></div>
+
+<div class="card"><small>Limits: all seats are AI, 3 are Claude family. Confidence 5–8 out of 10. No film has been watched by a real viewer yet.</small></div>
+
+<div class="card"><b>My pick, step 0 ($0):</b> measure the title-card length on ep 8 and on every candidate, then choose the two test films. No edits, no spend.<br><b>Say yes to step 0?</b></div>
+</main></body></html>

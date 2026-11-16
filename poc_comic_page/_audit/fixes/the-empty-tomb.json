@@ -1,0 +1,21 @@
+{
+ "id": "the-empty-tomb",
+ "source": "F:/slk/PycharmProjects/JesusInTheBible/batches/cluster_02_resurrection/empty_tomb_john208/visual/empty_tomb_john208_sfx.mp4",
+ "output": "F:/slk/PycharmProjects/JesusInTheBible/batches/cluster_02_resurrection/empty_tomb_john208/visual/empty_tomb_john208_sfx_v5hook.mp4",
+ "hook_text": null,
+ "hook_skipped_reason": "Opens on caption 'Someone took the body' (stolen-body hook) already on screen.",
+ "decode_cards": [
+  {
+   "old": "SEPULCHRE",
+   "plain": "TOMB",
+   "t0": 13.0,
+   "t1": 14.5
+  }
+ ],
+ "skipped_decodes": [
+  "napkin (narrator already says face-cloth)"
+ ],
+ "title_question_proposal": "Who took the body from the empty tomb?",
+ "verified": true,
+ "notes": "Decode in sky above the red quote caption (spoken 12.98-13.44). Checked 13.7s and 15.5s."
+}

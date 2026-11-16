@@ -1,0 +1,22 @@
+﻿{
+    "id":  "could-ye-not-watch-one-hour",
+    "source":  "F:/slk/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/watch_one_hour_matt2640/visual/watch_one_hour_matt2640_sfx.mp4",
+    "output":  "F:/slk/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/watch_one_hour_matt2640/visual/watch_one_hour_matt2640_sfx_v5hook.mp4",
+    "hook_text":  "ONE HOUR. THEY SLEPT.",
+    "hook_skipped_reason":  null,
+    "decode_cards":  [
+                         {
+                             "t0":  6.8,
+                             "old":  "TARRY",
+                             "plain":  "STAY",
+                             "t1":  9.2
+                         }
+                     ],
+    "skipped_decodes":  [
+                            "cometh (not key line)",
+                            "flesh is weak (plain enough)"
+                        ],
+    "title_question_proposal":  "Could ye not watch one hour? Too weak to pray? (Matt 26:40-41)",
+    "verified":  true,
+    "notes":  "Hook 0-2.0s top (y170/320, Impact 104, white+gold 0xF2C14E, black@0.64 box); decode Impact 110/120 for 2.4s at top; burned captions sit lower so no overlap. Audio stream copied. Duration matches source within 0.001s. Frames checked at 1s, card+1s, card+3.4s. Decode timing = alignment.json word start. Note: caption box is separate burned layer, cards sit above it. Re-rendered round 3 from original source with final panel text; hook and decode frames re-checked, text fits width."
+}

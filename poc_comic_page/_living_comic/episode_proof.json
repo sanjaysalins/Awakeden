@@ -1,0 +1,127 @@
+{
+ "episode": "in_no_wise_proof",
+ "format": {
+  "w": 1080,
+  "h": 1920,
+  "fps": 30
+ },
+ "first_episode": true,
+ "audio": {
+  "file": "poc_comic_page/_piece1/_v4_hook/audio_v4.m4a",
+  "t0": 17.2,
+  "dur": 11.0
+ },
+ "panels": [
+  {
+   "id": "p2a_man",
+   "clip": "p2a.mp4",
+   "t": [
+    0.0,
+    1.4
+   ],
+   "ink_wake": true,
+   "role": "first",
+   "sketch": "p2a_sketch.png",
+   "clip_src": "poc_comic_page/_piece1/clips/p2a.mp4"
+  },
+  {
+   "id": "p2b_jesus",
+   "clip": "p2b.mp4",
+   "t": [
+    1.4,
+    8.4
+   ],
+   "ink_wake": true,
+   "role": "jesus",
+   "flip": true,
+   "sacred": true,
+   "sketch": "p2b_sketch.png",
+   "clip_src": "poc_comic_page/_piece1/clips/p2b.mp4"
+  },
+  {
+   "id": "p2a_man_hear",
+   "clip": "p2a.mp4",
+   "t": [
+    8.4,
+    11.0
+   ],
+   "ink_wake": false,
+   "role": "listener",
+   "sketch": null,
+   "clip_src": "poc_comic_page/_piece1/clips/p2a.mp4"
+  }
+ ],
+ "kjv": {
+  "John 6:37": "All that the Father giveth me shall come to me; and him that cometh to me I will in no wise cast out."
+ },
+ "balloons": [
+  {
+   "speaker": "jesus",
+   "kjv_ref": "John 6:37",
+   "text": "All that the Father giveth me",
+   "t": [
+    1.95,
+    8.4
+   ],
+   "tabs": [
+    [
+     "JESUS",
+     90
+    ],
+    [
+     "JOHN 6:37",
+     800
+    ]
+   ]
+  },
+  {
+   "speaker": "jesus",
+   "kjv_ref": "John 6:37",
+   "text": "shall come to me;",
+   "t": [
+    2.94,
+    8.4
+   ]
+  },
+  {
+   "speaker": "jesus",
+   "kjv_ref": "John 6:37",
+   "text": "and him that cometh to me",
+   "t": [
+    4.36,
+    8.4
+   ]
+  },
+  {
+   "speaker": "jesus",
+   "kjv_ref": "John 6:37",
+   "text": "I will in no wise cast out.",
+   "t": [
+    5.4,
+    8.4
+   ]
+  }
+ ],
+ "cards": [
+  {
+   "kind": "decode",
+   "lines": [
+    "IN NO WISE",
+    "= NEVER"
+   ],
+   "t": [
+    8.5,
+    11.0
+   ],
+   "decodes": [
+    "in no wise"
+   ]
+  }
+ ],
+ "decode_words": [
+  "in no wise"
+ ],
+ "sfx": [],
+ "sketch_dir": "poc_comic_page/_piece1/stills_v2/_sketch",
+ "output": "poc_comic_page/_living_comic/out/in_no_wise_proof.mp4"
+}

@@ -1,0 +1,5 @@
+OUTPUT FORMAT (Markdown, max ~600 words):
+## VERDICT (PASS / REVISE / FAIL)
+## LINE-BY-LINE (only lines that are NOT OK: number, CHANGE/CUT, exact replacement, one-clause reason)
+## BIGGEST RISK
+## WHAT IS GOOD (keep)

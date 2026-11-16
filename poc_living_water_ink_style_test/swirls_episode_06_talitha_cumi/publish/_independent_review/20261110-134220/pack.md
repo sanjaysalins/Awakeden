@@ -1,0 +1,121 @@
+# Upload copy for a 54 s Short on Mark 5:21-24, 35-43 (Jairus' daughter). Spoken words of the film:
+
+NARRATOR: A father begs Jesus: my little girl is dying. On the road, the news comes: "Thy daughter is dead: why troublest thou the Master any further?" Too late. Jesus heard it, and did not turn back.
+
+JESUS: "Be not afraid, only believe."
+
+NARRATOR: He went into the room with her father and mother, and took her by the hand.
+
+JESUS: "Talitha cumi."
+
+NARRATOR: "Damsel, I say unto thee, arise." Little girl, get up. She got up and walked. The news had said it was over. Jesus had heard it, and gone on. If you hear that it is too late, hear Him instead: "Be not afraid, only believe."
+
+# KJV
+[5:21] And when Jesus was passed over again by ship unto the other side, much people gathered unto him: and he was nigh unto the sea.
+[5:22] And, behold, there cometh one of the rulers of the synagogue, Jairus by name; and when he saw him, he fell at his feet,
+[5:23] And besought him greatly, saying, My little daughter lieth at the point of death: I pray thee, come and lay thy hands on her, that she may be healed; and she shall live.
+[5:24] And Jesus went with him; and much people followed him, and thronged him.
+[5:35] While he yet spake, there came from the ruler of the synagogue’s house certain which said, Thy daughter is dead: why troublest thou the Master any further?
+[5:36] As soon as Jesus heard the word that was spoken, he saith unto the ruler of the synagogue, Be not afraid, only believe.
+[5:37] And he suffered no man to follow him, save Peter, and James, and John the brother of James.
+[5:38] And he cometh to the house of the ruler of the synagogue, and seeth the tumult, and them that wept and wailed greatly.
+[5:39] And when he was come in, he saith unto them, Why make ye this ado, and weep? the damsel is not dead, but sleepeth.
+[5:40] And they laughed him to scorn. But when he had put them all out, he taketh the father and the mother of the damsel, and them that were with him, and entereth in where the damsel was lying.
+[5:41] And he took the damsel by the hand, and said unto her, Talitha cumi; which is, being interpreted, Damsel, I say unto thee, arise.
+[5:42] And straightway the damsel arose, and walked; for she was of the age of twelve years. And they were astonished with a great astonishment.
+[5:43] And he charged them straitly that no man should know it; and commanded that something should be given her to eat.
+
+# FILE youtube_short.md
+# youtube_short — YouTube (Short)
+
+## TITLE
+She Was Dead. Jesus Kept Walking | Jairus' Daughter Bible Story
+
+## DESCRIPTION
+Jairus' daughter in the Bible: a father begs Jesus to save his dying girl. On the road, the news comes that she is dead (Mark 5:35-43).
+
+"Thy daughter is dead: why troublest thou the Master any further?" In plain words: it is too late, do not bother Him now.
+
+Jesus heard it, and did not turn back. He said to the father, "Be not afraid, only believe."
+
+In her room He took her by the hand and said, "Talitha cumi", in her own language "Little girl, get up." "And straightway the damsel arose, and walked; for she was of the age of twelve years."
+
+Jesus did not promise that every story ends like this one. He showed who He is: the one even death obeys.
+
+Read it: Mark 5:21-24, Mark 5:35-43.
+
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+
+Follow:
+YouTube: @awakeden (https://youtube.com/@awakeden)
+
+https://awakeden.com
+
+Scripture quoted from the King James Version (KJV), public domain.
+
+#JairusDaughter #TalithaCumi #Mark5 #Jesus #Bible
+
+## TAGS
+jairus daughter, jairus daughter bible story, jesus raises jairus daughter, talitha cumi, talitha koum, mark 5, mark 5 explained, mark 5 35-43, be not afraid only believe, jesus raises the dead, bible story short
+
+## HASHTAGS
+#JairusDaughter #TalithaCumi #Mark5 #Jesus #Bible
+
+# FILE tiktok.md
+# tiktok — TikTok
+
+## CAPTION
+A father begs Jesus to save his dying girl. On the road, the news comes: she is dead, it is too late. Jesus heard it, and kept walking. "Be not afraid, only believe." Then He took her hand. Mark 5:35-43.
+
+Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+
+#JairusDaughter #TalithaCumi #Jesus #Bible #Faith
+
+## HASHTAGS
+#JairusDaughter #TalithaCumi #Jesus #Bible #Faith
+
+# FILE facebook.md
+# facebook — Facebook (Reel/Video)
+
+## TITLE
+She Was Dead. Jesus Kept Walking.
+
+## DESCRIPTION
+Mark 5: a father, Jairus, begs Jesus to save his dying little girl. On the road, the news comes: "Thy daughter is dead: why troublest thou the Master any further?"
+
+Jesus heard it, and did not turn back. "Be not afraid, only believe."
+
+He took her by the hand and said, "Talitha cumi", which means "Little girl, get up." "And straightway the damsel arose, and walked; for she was of the age of twelve years."
+
+Jesus did not promise that every story ends like this one. He showed who He is: the one even death obeys.
+
+Read it: Mark 5:21-24, Mark 5:35-43.
+
+Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+
+Follow:
+YouTube: @awakeden (https://youtube.com/@awakeden)
+
+https://awakeden.com
+
+Scripture quoted from the King James Version (KJV), public domain.
+
+#JairusDaughter #Jesus #Bible
+
+## HASHTAGS
+#JairusDaughter #Jesus #Bible
+
+# FILE instagram.md
+# instagram — Instagram (Reel)
+
+## CAPTION
+"Thy daughter is dead." Too late, they said. Jesus heard it, and kept walking: "Be not afraid, only believe." Then He took her hand and said, "Talitha cumi", which means little girl, get up. And she did. Mark 5:35-43.
+
+Send this to someone who has been told it is too late.
+
+Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+
+#JairusDaughter #TalithaCumi #Jesus #Bible #Faith #KJV #Hope
+
+## HASHTAGS
+#JairusDaughter #TalithaCumi #Jesus #Bible #Faith #KJV #Hope

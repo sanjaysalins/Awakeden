@@ -1,0 +1,604 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: plan
+
+LENS — judge this PLAN on (be specific, cite the exact step/claim):
+- Feasibility against the real codebase / tools (does it assume things that exist?).
+- Hidden risks, false assumptions, single points of failure.
+- Over-engineering / premature building before the idea is proven.
+- Missing steps, edge cases, or verification gaps.
+- Reuse: does it duplicate tools that already exist instead of reusing them?
+- Cost / spend and whether it's justified.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block (on the VERDICT line write exactly ONE word —
+PASS or REVISE or FAIL — never the list of options):
+
+VERDICT: <PASS or REVISE or FAIL>
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# Swirls of Life SHORT — pipeline + skill (DESIGN v3.2, binding)
+
+Written 2026-11-15 by the Fable design seat. Design only: no production code, no paid call, no commit.
+v3.2 replaces v3.1 in place (same file name). Stands alone.
+
+```
+REPO   = F:\slk\PycharmProjects\JesusInTheBible
+POC    = F:\slk\PycharmProjects\JesusInTheBible\poc_living_water_ink_style_test
+SKILL  = F:\slk\PycharmProjects\JesusInTheBible\.claude\skills\swirls-of-life
+BRIDGE = F:\slk\PycharmProjects\JesusInTheBible\.agent_bridge
+RUN    = .venv\Scripts\python.exe poc_living_water_ink_style_test\swirls_episode.py "<episode_dir>"
+```
+
+Companion files (same folder): `SKILL_v3.md`, `PILOT_BRIEF_isaiah40.md`, `OWNER_SUMMARY.md`, `_redteam\TRIAGE.md`.
+
+**Lane rule:** the builder writes only inside `POC\` and `REPO\openart\` (plus the runtime folders its code creates under `BRIDGE\`). Out-of-lane work is listed in section 13.
+
+**Honesty rule:** this document is a **target**. Nothing is "done" until the test named beside it passes. Section 6 is the one status table.
+
+---
+
+## Changelog
+
+### v3.1 -> v3.2 (red team, 4 blind seats: `POC\_swirls_short_design\_redteam\` fable.md, spend.md, quality.md, codex.md)
+Every BLOCKER / MAJOR is answered in `_redteam\TRIAGE.md`. The main changes:
+
+| # | Change |
+|---|---|
+| 1 | **The owner sees the cap.** Every price question reads "about X, **at most Y** — yes?". `approve --cap` must equal Y. Caps are sized `(quote + planned rerolls) x 1.10`, so they fit their own plan |
+| 2 | **4 money asks, 7 owner pages** (was 6 and 8): voice · pictures · clips · music. Pictures and clips each have a hard look-stop after the first item |
+| 3 | **Bridge protocol rebuilt:** separate `gen_requests_guarded\` folder; atomic claim; `not_after` + client heartbeat; claim-or-cancel; `creation_id` written the moment generation starts; download to staging; `fetch` instead of paying again |
+| 4 | **Receipt read back from OpenArt** (`openart_creation_show`), saved as a dump. Typed numbers and typed `sent_params` are not receipts. No record = UNRESOLVED |
+| 5 | **One open row per episode**, any step, under a file lock; open rows count at 110% |
+| 6 | **ElevenLabs inside a boundary:** fixed commands (`RUN voice`, `RUN align`, `RUN score`), price from character count, `_turns\` auto-deleted when the text hash changes, a $0 local check that the audio really says the words, history receipt if the API gives one (unverified) |
+| 7 | **Unlogged paid alignment removed:** `assemble` uses cache-only SRT; `build_srt.build()` refuses a marked folder; metered Vision mode refused |
+| 8 | **KJV gate rewritten in lane:** no `...` / `…`, whole-word continuous runs, case-sensitive. (`kjv_strict.verify_span` passes "I am ... the Christ" for John 1:20 — verified by the coordinator.) |
+| 9 | **Still audit made strict:** dash / quote marks / wrong digit / any extra token / doubled text / any wording difference = FAIL. A text FAIL is cleared only by a recorded human read bound to the file |
+| 10 | **Moving hold rebuilt:** absolute floor against a frozen control, three 1 s windows, every window must pass, measured on the final file. Back clip ordered slot + 2 s **in code** |
+| 11 | **Stale-clip holes closed:** `animate` refuses a stale mp4; G14 runs over `MANIFEST.units[*].src`; stills need receipts too; an assembly receipt carries the hash chain through SFX to `FINAL_VIDEO.txt` |
+| 12 | **Overrides narrowed:** bound to gate + unit + file hash + a dated owner quote. Scripture, word sequence, provenance and the spend guard can never be overridden |
+| 13 | **Voice:** character lines at stability 0.3, two takes, emotion cues; narrator 0.65 |
+| 14 | **`page_plan.json` schema fixed and validated** (the code read different field names, so three gates passed silently) |
+| 15 | Cover edge scan wired as FAIL on covers; motif presence judged on the render; baked text re-read on the clip; 1080x1920 gate; score gate on the mix; film panel pass mark |
+| 16 | **Pilot brief:** John 1:20 is an unprompted denial (not "three guesses"); Isaiah's and John's KJV words differ (never "the same words"); attribution fixed; must-say truths added; back cover must read as Jesus; motif moved off the river; no pointing on f04 |
+| 17 | Word budget: pauses counted only before a voiced quote (what the synth really adds); at most 5 voiced quotes; one voiced answer on f02 |
+| 18 | A clear **over-build deferred** list (section 9.4) |
+
+### v3 -> v3.1 (plan panel + Fable seat)
+Real receipt; guard from the payload; token-sequence equality; word budget; T12 rewritten; one status matrix; moving hold as FAIL; G13 hard flags; reroll limit from the log; `ok` gates bound to hashes; scale-and-crop; pilot cuts.
+
+---
+
+## 0. What is locked, and what was checked
+
+**Owner picks (2026-11-15):** 45 s, 8 units (front cover + 6 pages + back cover) · woodcut title cover 2-3 s, voice from frame 0 · pilot Isaiah 40:3 -> John 1:23 · no corner NOTE.
+
+| Fact | How | Result |
+|---|---|---|
+| Kling 3 Omni price | `openart_model_cost`, `pro`, sound off | 35 cr per whole second, linear (105 at 3 s, 245 at 7 s, 350 at 10 s). Sound ON = 40 cr/s and is the form default |
+| Legal Kling lengths | `openart_model_form_get` | integer 3-15 |
+| Still price | nano-banana-pro, image2image, 2K, 9:16 | 40 cr |
+| Balance | same call | 7,885 cr, shared with other sessions |
+| `kjv_strict.verify_span` | red team + coordinator ran it | accepts `"I am ... the Christ"` for John 1:20, and matches inside words. Not safe alone |
+| Paid call in `assemble` | coordinator read `swirls_episode.py:370` | `build_srt.build()` -> `align(force=True)` on ElevenLabs: unlogged, and overwrites the timing alignment |
+| Still text judge | quality seat ran `judge_still_texts` | `_norm_text` strips punctuation: a dash or quote marks PASS; near misses are WARN and WARN is treated as pass |
+| Output size | `swirls_assemble.py:68` | default 720x1280, no resolution gate |
+| `page_plan.json` | quality seat | design fields `full_figures / subjects / north_star`; code reads `heads / recurring / turn` -> three gates vacuous |
+| Back clip length | `swirls_short.py:122` | ordered slot + 0.5 only |
+| `per_turn_synth.py` | read | one global `--stability`; turns cached by file name; `--pre-quote-pause` adds silence before quotes only |
+| Builder's tests | ran | 139 checks pass on the builder's old shapes. They do not test this design |
+
+**Not verified (probes, section 5.6):** R1 what an OpenArt creation record shows; R2 ElevenLabs alignment permission; R3 ElevenLabs history as a receipt.
+
+---
+
+## 1. Format and timing math (45 s)
+
+8 units: `front, f01..f06, back`. One picture + one clip each.
+
+```
+film  = voice + 3.0 s hold      target 45.0   PASS 42.0-48.0   FAIL outside 40.0-50.0
+voice                           target 42.0   PASS 39.0-45.0   FAIL outside 37.0-47.0
+words = 80-88 in total          pace 2.2 words per second
+estimate = words / 2.2 + 0.4 x (voiced character quotes)       must be 38.0-42.0 s
+voiced character quotes: 5 at most in the film
+```
+
+The pause is counted **only before a voiced quote**, because that is all the synth adds (`--pre-quote-pause 0.4`; post-quote pause is 0). With 4-5 quotes, 80-88 words gives 38.0-42.0 s.
+
+| Unit | Spoken line | Estimated slot (SWS-G1e, before voice money) | Measured slot (SWS-G3) | Clip to order |
+|---|---|---|---|---|
+| front | hook, 4-5 words | words / 2.2 + 0.3: 3.0 s or less | PASS 2.0-3.0; WARN to 3.5; FAIL under 1.8 or over 3.5 | `max(3, ceil(slot + 0.5))` |
+| f01-f06 | 11-14 words (10 or 15 = WARN); at most 1 voiced quote each | words / 2.2 + 0.4 per quote: 4.5-7.5 s | PASS 5.0-7.0; WARN 4.5-5.0, 7.0-7.5; FAIL outside | `ceil(slot + 0.5)` |
+| back | last line, 10 words or fewer, then the hold | words / 2.2 + 3.0: 9.0 s or less | PASS 6.0-8.5; WARN to 9.0; FAIL over | **`min(15, ceil(slot + 2.0))`** |
+
+- Slot of unit k = its first word's start to the next unit's first word's start. Front starts at 0.0. Back ends at `duration(narration.mp3) + 3.0`. First word by 0.40 s.
+- Delivered clip at least slot + 0.10 s. **No fill, ever:** no freeze, boomerang, ping-pong, speed change, zoom, crop into a panel, or insert. 1.0x, hard cuts, tail trimmed.
+- **Frame-exact cuts**, 30 fps, counted from the film start: `B(k) = round(end_s(k) x 30)`; unit k has `B(k) - B(k-1)` frames; encoded with `-frames:v N` and `fps=30` stated.
+- **Size:** a trim episode must declare `w=1080, h=1920` (the 720 default is refused). Kling's 1072x1928 is `scale=1080:-2` then centred `crop=1080:1920`. Never a stretch.
+- **Order:** the unit order must be identical in `MANIFEST.units`, `units.json`, `unit_timing.json` and `page_plan.json` (SWS-G8t).
+
+---
+
+## 2. Page text rules
+
+| String | Rule |
+|---|---|
+| `SEQ: <TITLE>` | 2-3 words; the cover title; the same on all 6 pages |
+| `F01` .. `F06` | frame number |
+| 3 panel labels | 1-2 words each (one may be 3); 6 words or fewer in total; **each label is found in this unit's spoken line**, in spoken order; all different |
+| ONE caption | 2-5 words, 28 characters or fewer, one line; **a continuous run of this unit's spoken words**; the biggest writing on the page |
+| corner NOTE | gone |
+
+- Labels + caption = 11 words or fewer. No string twice; a label may not equal or sit inside the caption.
+- Letters, spaces, apostrophe, comma, full stop, `?`, `!`. Colon only in `SEQ:`. No dash, ellipsis, quote marks, digits.
+- **Phone safe zone:** caption above 75% of frame height and left of the right-hand 15% (the Shorts buttons and title cover the rest).
+- Cover: title 2-3 words carrying the hook's key word; subtitle = one Scripture reference.
+
+**Proof:** `_qc\phone_<id>.jpg` at 390 px; the one-page hold on owner page 3; the animatic on page 4; and the **draft film on page 6** (clips soften lettering, so the film is the final reading check).
+
+---
+
+## 3. The 12 steps (0-11)
+
+**Prerequisites:** attended run (a live session services `BRIDGE\gen_requests_guarded\` under `POC\SWIRLS_SHORT_SERVICER.md`; Vision through the in-chat bridge — the runner **refuses** a trim episode when the metered API mode is on); `SWIRLS_GEN_PROVIDER=openart` (the runner and the four render functions refuse anything else for a marked folder); build phases as in section 9.
+
+| # | Step | Paid? | Owner page |
+|---|---|---|---|
+| 0 | Folder + marker | $0 | - |
+| 1 | Words + title | $0 | **Page 1:** pick the words. Then: "voice, about $0.60, at most $1.20 — yes?" |
+| 2 | Voice (2 takes of character lines) + alignment | **ask 1** | **Page 2:** pick take A or B by ear. Then: "pictures, about 400 cr, at most 840 cr — yes?" |
+| 3 | Timing + page plan + lints | $0 | - |
+| 4 | North-star page + refs | inside ask 2 | **Page 3 (phone, early go / no-go):** the first page held for its real slot with the voice. "Carry on?" (look only) |
+| 5 | Other stills + animatic | inside ask 2 | **Page 4 (phone, go / no-go):** 8 pictures, contact sheet, animatic. Then: "clips, about 1,925 cr, at most 3,120 cr — yes?" |
+| 6 | Clips: 2 test clips, then the other 6 one by one | **ask 3** | **Page 5:** the 2 test clips, the back cover played through. "Carry on?" (look only) |
+| 7 | Draft film | $0 | **Page 6 (phone):** approve the cut. Then: "music, about $1.00, at most $1.50 — yes?" |
+| 8 | Score | **ask 4** | - |
+| 9 | SFX + SRT + final file | $0 | - |
+| 10 | Film guardrail panel | $0 | **Page 7 (phone):** the finished film (music and sounds by ear) + panel result |
+| 11 | Poster + packaging + publish | own ask | Only when the owner asks to post. Outside the pilot |
+
+**Rules for every price question**
+- It always shows two numbers: "about X, **at most Y**". The numbers come from `RUN quote <step>` (never typed from memory).
+- The look and the price are **two separate answers**. "I like it" is never a spend order.
+- Pictures and clips each cover several renders under one yes, with a **hard stop after the first item** (pages 3 and 5): nothing more is bought until that look is recorded.
+- Anything above Y, a 4th render of one unit, or any spend after the step's closing gate needs a new ask.
+- Every owner page lists the open WARNs (`_qc\open_warns.json`) in plain words.
+
+### Step 0 — Folder ($0)
+`POC\swirls_episode_NN_slug\` with `HANDOVER_RESUME.md`, `words\`, `_DESIGN_BRIEF.md` (line 1 = `John 1:19-29 (Isaiah 40:3 fulfilled; ...)`), and the marker `.swirls_short` holding a random `episode_id`. `RUN status`. The runner refuses every paid command for a trim episode with no marker.
+
+### Step 1 — Words and title ($0)
+- Blind writers (Fable + 4, from scratch, KJV pack attached) -> judge table -> 2-3 candidates -> blind guardrail panel (5 guardrail questions + global-audience test) -> fix by convergence -> re-test once. Each writer also hands back a 2-3 word title and one poster idea (no separate title round).
+- Templates: pinned copies in `POC\_short_templates\` with `SOURCE.md` (source path, date, sha256).
+- `REPO\independent_review.py "<episode>\narration.md" --type narration` on the recommended candidate.
+- Files: `narration.md` (spoken words only; `#` lines are comments), `narration-tagged.md` (voices; an emotion cue on every character line), `voices.json`, `units.json`, `kjv_spans.json` (`{ref, speaker, text}` per quote), `_packaging\packaging.json`.
+- `RUN words`:
+
+| Gate | Checks | Level |
+|---|---|---|
+| SWS-G1 shape | 8 units; hook 4-5; pages 11-14 (WARN 10 or 15); last line 10 or fewer; total 80-88; 5 voiced quotes at most, 1 per page at most | FAIL |
+| SWS-G1e estimate | film 38.0-42.0 s; each unit's estimated slot in range | FAIL |
+| SWS-G1s sequence | identical ordered normalised token list in `units.json` (joined), `narration.md` (comments stripped), and the `narration-tagged.md` transcript (`pipeline.assembly_align.transcript`) | FAIL, **never overridable** |
+| **SWS-G1k KJV (in-lane wrapper)** | For every span in `kjv_spans.json`: (1) **reject** any `...` or `…`; (2) split the span and the verse text (`pipeline.kjv_strict.verse_texts(ref)`, translator notes stripped) into whole words; the span must be **one continuous whole-word run** inside the verse (or across consecutive verses of the ref) — no skipped word, no match inside a word; (3) **case-sensitive** ("LORD" is not "Lord"); (4) interior punctuation must match (also run `verify_span`; both must pass); (5) the span appears word for word in the narration; (6) every character line in `narration-tagged.md` is covered by a span. | FAIL, **never overridable** |
+| SWS-G1v speaker | each unit's `speaker` is derived from `narration-tagged.md` (not typed) and each character line carries an emotion cue | FAIL |
+| SWS-G1g | `REPO\narration_gate.py` | FAIL |
+
+- Page 1. `RUN ok words --note "<owner's words, date>"` (hashes of the three text files).
+
+### Step 2 — Voice + alignment (ask 1)
+- `RUN quote voice` prints the price from the **characters to be rendered**: narrator turns x 2 passes + character turns x 2 takes, at the invoice rate, plus alignment. `RUN approve voice --cap <Y> --unit usd --note "..."`.
+- **`RUN voice`** (the runner builds the command; no free-form command is accepted):
+  1. If `_turns\.text_sha256` differs from the current `narration-tagged.md` hash, **delete `_turns\`** and write the new hash. (No prose rule to remember.)
+  2. Pass 1 at `--stability 0.3`: all turns. Character files are kept as **take A**.
+  3. Narrator files removed; pass 2 at `--stability 0.65`: narrator re-rendered, characters reused.
+  4. Character files moved aside; pass 3 at `--stability 0.3`: **take B**.
+  5. Two full `narration_takeA.mp3` / `narration_takeB.mp3` are built ($0, cached turns). Every pass: `per_turn_synth.py "<episode>" --target 45 --natural --pre-quote-pause 0.4`, never `--force`.
+  The wasted narrator pass at 0.3 is a few cents; a per-speaker stability flag in `per_turn_synth.py` would remove it (coordinator task).
+- Page 2: the owner picks a take. `RUN ok voice_ear --take A|B --note "..."` builds the final `narration.mp3` from that take ($0) and stores its hash.
+- **`RUN align`** — once per `narration.mp3` hash (a second run for the same hash is refused). ElevenLabs forced alignment -> `narration.alignment.json` + `narration.alignment.meta.json` `{audio_sha256, backend, word_count}`. No whisper fallback for timing.
+- **SWS-G2w "the audio says the words" ($0, local):** forced alignment only echoes the transcript, so it cannot notice stale audio. `RUN align` also runs the local whisper transcriber on `narration.mp3` and compares it to `units.json` unit by unit. Any unit with more than 25% of its words unmatched, or the film over 10%, = FAIL (listen, then re-synth that turn). KJV words lower whisper's score a little; the thresholds are set in test T10b.
+- **SWS-G2 (FAIL):** tempo 1.0; first word by 0.40 s; voice 39.0-45.0 s.
+- Close the row: from the ElevenLabs history if probe R3 works; else `RUN confirm <rid> --amount <usd> --note "..."`.
+
+### Step 3 — Timing, page plan, lints ($0)
+- `RUN timing` -> `unit_timing.json` (`clip_duration`, `frames`; the back rule is in code). Refuses on a missing / stale / non-ElevenLabs alignment meta. Runs SWS-G1s with the alignment words as a fourth list.
+- Sonnet writes `episode.py` (`mode="trim"`, `w=1080, h=1920`, `corner_note=""`, `clip_duration` from `unit_timing.json`, fence off, bubble clause off; each `Unit.src` = the canonical clip path) and **`page_plan.json` — one schema, validated on load, any missing field = FAIL:**
+
+```
+{ "north_star": "f04",
+  "units": { "<tag>": { "full_figures": int, "crowd": bool, "motion_carrier": str,
+                         "motif_stage": 0-3, "subjects": [names in refs.json] } } }
+```
+  `speaker` is not typed here; it comes from G1v. The turn page is `north_star`.
+- `RUN plan`; then a 3-seat blind check of `episode.py` + `page_plan.json` (Fable + 2, KJV attached) for Bible facts and animation risk.
+
+| Gate | Checks | Level |
+|---|---|---|
+| SWS-G3 timing | measured slots; total; `clip_duration` integer 3-15, back = `ceil(slot + 2.0)`, equal in spec and `unit_timing.json`; manifest declares 1080x1920 | FAIL |
+| SWS-G4 baked text | section 2, including caption = a run of the unit's spoken words and labels found in them | FAIL |
+| SWS-G5 still prose | no ALL-CAPS word, digits, "check / confirm / ensure / verify / make sure", "Stage N", banned motif noun | FAIL |
+| SWS-G5a clip prose | no motif / ink / blue / gold / stain word; no speech verb (say, speak, talk, whisper, shout, call, cry, answer, reply, preach, proclaim, announce, exclaim, pray, murmur, sing, lips, mouth, voice, and their forms); 2 negatives at most | FAIL |
+| SWS-G6 dosage | 0, 0, 1, 1, 2, 2, 3, 3 | FAIL |
+| SWS-G7a refs declared | every subject on 2+ units is in `refs\refs.json` | FAIL |
+| SWS-G8 motion carrier | speaker (derived) is the only thing that could move: FAIL on the north-star page; FAIL if more than one; else WARN | FAIL / WARN |
+| SWS-G8t order and tags | same 8 tags in the same order in all four files | FAIL |
+
+`still` refuses unless `plan` passed on the current `episode.py` + `page_plan.json` hashes.
+
+### Step 4 — North-star page and refs (inside ask 2)
+- `RUN quote pictures`; `RUN approve pictures --cap <Y> --unit cr --balance <live> --note "..."`.
+- `RUN still <north_star>`. Only this one render is allowed until page 3 is answered.
+- **Page 3, on a phone:** `RUN hold <north_star>` ($0) makes the one page held for its real slot under its real voice line. This is the **first go / no-go on the 6 s page**. `RUN ok northstar_look --note "..."`.
+- Crop refs by hand into `refs\` + `refs\refs.json` (name, file, sha256). A subject not on that page: `RUN still ref:<name>` (3 at most).
+- **SWS-G7b / G7c (FAIL):** every declared ref file exists; and each still's request payload carries the ref hashes for that unit's `subjects` (so a declared ref is really sent).
+
+### Step 5 — Other stills + animatic (inside ask 2)
+- `RUN still <id>` x 7. `RUN verify`.
+- **SWS-G9 — the one still audit.** One Vision READ per PNG: `texts_seen` (raw strings, exactly as written), `full_figures`, `crowd`, `speech_bubble`, `motif_marks` (count, colour, where), `motif_bad_shape`, `drawn_border`, `caption_bottom_pct`. Sidecar `{png_sha256, audit_version, raw}`. **Code judges on the raw strings:**
+
+| Finding | Level |
+|---|---|
+| a dash, quote mark or ellipsis in any seen text | FAIL |
+| a digit that differs from the plan (frame number, verse) | FAIL |
+| any seen token that is not in the plan, even 1-3 letters (`MCU`, `POV`) | FAIL |
+| an expected string missing, or present twice (including twice inside one seen string) | FAIL |
+| **any wording difference** from the expected string after lower-casing and trimming spaces ("Lamp" for "Lamb", "I am" for "I am not") | FAIL |
+| `full_figures` differs; `crowd` true when the plan says false; speech bubble; motif bad shape; drawn border | FAIL |
+| motif: stage 0 with any mark; stage 1-3 with none | FAIL |
+| `crowd` false when planned true; caption below 75% | WARN |
+
+  A **text** FAIL may be a Vision misread. It is cleared only by `RUN read <id> --string "<what is really there>" --note "..."`: the session zooms 2x, types what it reads, and the judge re-runs on that. The record is bound to the PNG hash and shown on the owner page.
+- **SWS-G10 edge scan** (pixel scan of the four edges, already on disk): **FAIL on covers, WARN on pages.** Thresholds set on the shipped ep2 / ep5 / ep7 / ep8 covers (bad) vs ep10 / ep13 (good) in test T9.
+- **SWS-G14s:** every still and ref PNG must equal the `output_sha256` of a confirmed spend row. A file copied in from anywhere else is refused by `verify`, `animate` and `assemble`. **No hand fixes in the pilot** — reroll.
+- **Human check, always:** Read every PNG; zoom 2x on every baked string; props at full frame; count each named character; read `_qc\phone_<id>.jpg`.
+- `RUN animatic` ($0) -> `<name>_animatic.mp4` (stills at their real slots, the real voice, a "STILLS TEST" mark) and `_qc\contact_sheet.jpg` (the 8 stills side by side, for costume and face drift). A one-read Vision comparison of each page against the north-star crops is a WARN.
+- **Page 4, on a phone.** Go: `RUN ok stills_animatic --note "..."` (8 PNG hashes + timing hash). This **closes** the pictures step: its leftover cap is dead.
+
+### Step 6 — Clips (ask 3)
+- `RUN quote clips`; `RUN approve clips --cap <Y> --unit cr --balance <live> --note "..."`.
+- **6a — two test clips: the north-star page, then the back cover.** Only these two may be bought until page 5 is answered. `RUN animate <id>` -> `RUN clipqc <id>`.
+- **Page 5:** both clips; the session and the owner **play the back cover to its end**. `RUN ok clip_test_look --note "..."`.
+- **6b — the other six, one at a time:** `animate` -> `clipqc` -> the session reads every strip image and **plays every clip in which a character's line is heard** (a strip cannot show lips moving). A FAIL stops the batch.
+- `animate` refuses unless: G3 green; the still passed G9 and G14s on the current PNG; the look gate is recorded and its hashes still match; the reroll count allows it; and **if an mp4 already exists it must be fresh** (its receipt's `input_sha256` = the current PNG). A stale mp4 is renamed `.SUPERSEDED_<date>` by the runner before a new render; it is never "skipped as done".
+- **Reroll rule:** counted per (kind, unit) from the spend log. First render + 2 rerolls. A 4th needs a unit grant (section 5.4) and a changed lever.
+
+| Gate | Checks | Level |
+|---|---|---|
+| SWS-G11 tech | decodes; at least slot + 0.10 s; at least 1072 x 1900; fps recorded (not 30 = WARN) | FAIL |
+| SWS-G14 provenance | for **each `MANIFEST.units[*].src`**: it is the canonical path, its sha256 = the confirmed row's `output_sha256`, and that row's `input_sha256` = the current still | FAIL, never overridable |
+| SWS-G13 eyes | Vision reads frames at 2 per second of the used span, **each at 540 px wide or more, in strips of 6**, true first and last frame included. **Hard flags = FAIL:** speech bubble; new legible text; **a planned baked string missing or changed** on the first, middle or last frame (same judge as G9); full-figure count change; `ink_changed` (motif grows, glows, moves); a figure or prop the plan says is still, moving; bare-skin doubt on a figure. Soft (WARN): mouth looks different between frames; drift | FAIL with a bound override / WARN |
+| **SWS-G15h moving hold** | see below | FAIL |
+| SWS-G12 still stretch | the G15h floor applied to every other clip's used span | WARN (FAIL on the north-star page) |
+
+**SWS-G15h — the moving hold (back clip at step 6, and again on the final file).**
+1. **Frozen control:** take the last used frame, hold it 3 s, encode it through the same chain. Measure its mean frame difference (frames 0.5 s apart) = the noise floor `N`.
+2. Split the 3.0 s hold into **three 1 s windows**. Measure each the same way.
+3. **Every window must be at least `k x N`.** `k = 3` to start; test T8 sets it on real back covers vs their frozen copies. One window under = FAIL (so motion that stops halfway fails, and a clip frozen from frame 0 fails).
+4. Measured on the clip (step 6), the draft (step 7) and the **final file** (step 9).
+5. Honest limits: a slow camera drift counts as motion; `k` is a guess until T8. Until T8 passes, the played-through look on page 5 is required and recorded.
+
+### Step 7 — Draft film ($0)
+- `RUN assemble --draft` -> `<name>_draft.mp4` and **`assembly_receipt.json`** `{output_sha256, unit src hashes, narration.mp3 hash, unit_timing hash}`.
+- **SWS-G15 (FAIL):** all `trim`; every cut at `B(k)` within one frame; total frames within one of `round(total x 30)`; picture = sound within one frame; **output is 1080x1920 at 30 fps**; scale-and-crop chain; no `-shortest`; first word by 0.40 s; G14 over the manifest; G15h.
+- **Page 6, on a phone** (also the reading check for baked text in motion). `RUN ok draft_cut --note "..."` stores the **draft's `assembly_receipt` hash**. This closes the clips step.
+
+### Step 8 — Score (ask 4)
+- `RUN quote score`; `RUN approve score --cap <Y> --unit usd --note "..."`.
+- The episode's own `generate_score_piano.py` is a copy of ep16's, **changed to take its inputs from the episode** (the cut path and length from `assembly_receipt.json`, turning points from `unit_timing.json`; ep16's hard-coded `EP16_REMOTION_v1.mp4` removed) and starting with a marker check: it exits unless called by `RUN score` (an environment token set by the runner). Felt-piano wording kept. Two parts, split at the north-star page. Never `composition_plan`.
+- `RUN score` (fixed command) then `RUN assemble --score piano`.
+- **SWS-G17 score gate, on the result:** score length at least `total`; no 1 s window of the score below the floor from 0 to `total` (catches a dead start, a dead join and a dead hold); music audible in the last 3 s of the **mix**; no clipping. FAIL. Music 10-16 dB under the voice in speech = WARN (measured, shown on page 7).
+
+### Step 9 — SFX, SRT, final file ($0)
+- The episode's own `build_sfx.py` is a copy of ep13's with its cue list rewritten for this film and its input read from `assembly_receipt.json` (no hard-coded file name). Library sounds only.
+- **SRT cache-only:** `build_srt.build_from_cache(folder)`. `build_srt.build()` **refuses a marked folder**, and the `assemble` hook calls only the cache path. No alignment can be bought here.
+- **SWS-G16 chain:** `final_receipt.json` records input sha (= the scored assembly's output sha) and output sha; `FINAL_VIDEO.txt` must name a file with that output sha. Then `REPO\check_landing_hold.py`, SWS-G15 (one-frame tolerance) and G15h on the final file.
+
+### Step 10 — Film guardrail panel ($0)
+Blind, film only, Fable seat + panel: the 5 guardrail questions, who / what / why, curiosity gap 0-10. Fix by convergence; fresh seats; 2 rounds at most.
+**Pass mark:** every seat gets who, what and why right; no Bible-accuracy complaint is left open; median curiosity score 7 or more. If not met after round 2 the page says **NOT PASSED** with the "still weak" list and two options (fix a named thing, or shelve). Page 7. `RUN ok film_final --note "..."`. **The pilot ends here.**
+
+### Step 11 — Poster, packaging, publish (outside the pilot)
+Movie-poster process; its renders go through the guarded bridge with `out_path` inside the episode's `poster\` folder; own ask with "about X, at most Y". Card -> `F:\slk\PycharmProjects\MeekAndMighty\_pipeline\check_packaging.js` -> `/publish` -> blind copy red team -> strict GREEN -> `release_check.py` (its handling of a `POC\` episode is unverified).
+
+---
+
+## 4. Page design rules
+
+1. Three panels set up, the hero pays off. Panels show things, not faces.
+2. Panel motion is light only. At most one panel has real motion.
+3. The hero has one human action by one figure in the first half, then small living motion to the last frame.
+4. The figure whose line is being spoken holds still, mouth closed. The motion goes to the named `motion_carrier`.
+5. 3 full figures at most. A crowd is far, small, hatched, and declared in the plan.
+6. Caption above 75% height, left of the right 15%.
+7. **The back cover must read as Jesus at a glance:** larger in frame, facing or three-quarter, in the series-ref clothing. It carries the last line and the hold as ONE clip with motion written to run to the last second.
+8. **The motif never sits on a thing of its own colour** (no blue stroke on water or sky). Put it on dry ground, stone, cloth or paper, or lead with gold.
+
+**Motif:** stage by unit as SWS-G6. In stills: "a brushstroke of blue ink" + one direction + thin, matte, dry-edged. Never: thread, cord, ribbon, drip, drop, bloom, flower, petal, ring, loop, pool, puddle, glow, sparkle. In clips: never named, and `ink_changed` is a hard flag.
+
+---
+
+## 5. Spend guard SWS-G0
+
+**What it is, honestly.** It stops mistakes: a request with no recorded yes, over the cap the owner saw, with wrong settings, twice, late, or by a second session. It does **not** prove the owner said yes: the session types `approve`. The fix for that lives outside this lane (section 13, item 1). A direct call to the OpenArt generate tools goes around every guard; it is banned by rule and looked for afterwards by `RUN reconcile`.
+
+### 5.1 Request protocol (`POC\test_the_cross\openart_bridge.py`)
+
+Folders under `BRIDGE\`: `gen_requests_guarded\` (new; only a session that has read `POC\SWIRLS_SHORT_SERVICER.md` watches it — an old-protocol servicer never sees these requests), `gen_claimed\`, `gen_staging\`, `gen_receipts\`, `gen_responses\`, `gen_requests_guarded\cancelled\`.
+
+1. `submit(payload)`: if `out_path` is under a `.swirls_short` marker -> guarded. No guard context -> raise, nothing written. `guard.before()` (5.3) -> the request file is written to `gen_requests_guarded\` with: `rid` (uuid4), `episode_id`, `not_after` (now + timeout), `heartbeat` path, the priced fields, the sha256 of every ref and start image, `servicer_rules`.
+2. While waiting, the client touches its heartbeat file every 10 s.
+3. **Stop for any reason** — timeout, error, Ctrl-C (`finally:` / `BaseException`): the client tries to **rename** the request into `cancelled\`.
+   - Rename wins = the request was never claimed. Row `CANCELLED_UNCLAIMED` (the only state that can be voided).
+   - Rename fails = a servicer already claimed it. Row `LATE_PENDING`. It can **not** be voided and no new request for that unit is allowed. It is settled by `RUN fetch <rid>`.
+4. **Start-up sweep:** every `RUN` paid command first looks for this episode's requests whose heartbeat is older than 60 s (a killed client) and applies rule 3 to them.
+5. Paid commands are started in the background by rule (the Bash tool kills a foreground command at 10 minutes).
+6. A request outside a marked folder behaves exactly as today.
+
+### 5.2 Servicer rules (`POC\SWIRLS_SHORT_SERVICER.md`, new)
+
+0. **Claim first:** `os.replace(gen_requests_guarded\<id>.request.json, gen_claimed\<id>.<session>.json)`. If the rename fails, someone else has it: skip. Never call a generate tool without a claim.
+1. Refuse if `not_after` has passed or the heartbeat is older than 60 s: move the claim to `cancelled\` and write an error reply.
+2. Send exactly the request's parameters; clips with `generateSound: false`.
+3. **The moment the generate tool returns, write `gen_claimed\<id>.submitted.json` with `creation_id`** — before waiting for the render.
+4. When complete, download to **`gen_staging\<id>.<ext>`**, never to `out_path`.
+5. **Receipt:** call `openart_creation_show(creation_id)` and save its raw result to `gen_receipts\<rid>.json`. Copy `sent_params` and `credits_spent` **from that record**. Never type them from the call, a quote, or a balance difference. A field the record does not show is written as `null`.
+6. Reply (success or error) always carries `creation_id` when one exists.
+
+### 5.3 The guard (`POC\swirls_short.py`)
+
+- An **exclusive lock file** (`O_CREAT|O_EXCL`) is held across check + append. `rid = uuid4`.
+- **Price from the payload** (mode, model, resolution, aspect, sound, duration must match a known row, else refuse):
+
+| Payload | Price |
+|---|---|
+| `anim`, `kling-3-omni`, image2video, `pro`, sound off, integer 3-15 s | 35 x duration |
+| `still`, `nano-banana-pro`, image2image or text2image, 2K, 9:16 | 40 |
+| any other | the `--price` on the grant; else refuse |
+
+- `before()` refuses unless: a grant covers this step (and unit); `out_path` is under this episode; provider is OpenArt; the needed look gate is recorded with matching hashes; the step is not closed; the reroll count allows it; **no open row exists in the episode, any step**; `spent + open rows x 1.10 + this price x 1.10` is within the cap.
+- `after()` confirms only if: the reply names a `creation_id`; `gen_receipts\<rid>.json` exists; `sent_params` **from the record** equal the priced fields; `credits_spent` from the record is a number and at most 1.10 x price. Then the staged file is moved to `out_path` and its `output_sha256` stored. Otherwise the row is `UNRESOLVED` and the file stays in staging.
+- **Open rows** (`requested`, `UNRESOLVED`, `LATE_PENDING`, `CANCELLED_UNCLAIMED`) block every paid command and count at 1.10 x price.
+- Settling an open row:
+  - `RUN fetch <rid>` — reads `submitted.json`, re-reads the creation record, moves the staged file (or re-downloads it, $0). No new charge.
+  - `RUN confirm <rid> --receipt <dump file> ...` — OpenArt rows need a `creation_id` and a saved record dump. **A typed amount alone is refused.** If the real figure is above the row price, the step locks until a new grant.
+  - `RUN confirm <rid> --void --list-dump <file>` — only for `CANCELLED_UNCLAIMED`, and only with a saved `openart_creation_list` dump covering the request's time window that shows no creation for it.
+  - If OpenArt's record cannot settle it, the row stays open and the owner decides.
+- If confirmed spend passes a cap, the step locks.
+
+### 5.4 Grants and gates (`<episode>\approvals.json`, append-only)
+
+- `RUN quote <step>` writes `_quotes\<step>.json` `{about, at_most, items, planned_rerolls, timing_sha256}`. `at_most = ceil((quote + planned rerolls) x 1.10)`.
+- `RUN approve <step> --cap <Y> --unit cr|usd [--balance N] --note "<owner's words, date>"` appends a **grant** `{grant_id, step, unit_id|null, cap, renders_allowed, quote_sha256, note}`. Refused unless: `--cap` equals the quote's `at_most`; the note contains that number and a date; the note is not the same text as any `ok` note; (cr) balance is at least the cap.
+- A unit grant (`--unit-id f03 --renders 1 --cap N`) **adds** renders and cap for that unit only. It never re-opens the step for other units.
+- A grant dies when its quote's `timing_sha256` no longer matches, or when the step's closing gate is recorded.
+- `RUN ok <gate> --note "..."` records a look with the hashes of what was looked at. Changed files void the gate.
+
+| Step | Opens after | First-item hard stop | Closed by |
+|---|---|---|---|
+| `voice` | `words` | - | `voice_ear` |
+| `pictures` | `voice_ear` | `northstar_look` | `stills_animatic` |
+| `clips` | `stills_animatic` | `clip_test_look` (after the 2 test clips) | `draft_cut` |
+| `score` | `draft_cut` | - | `film_final` |
+| `poster` | `film_final` | - | - |
+
+### 5.5 ElevenLabs boundary
+
+- Only three fixed commands spend: `RUN voice`, `RUN align`, `RUN score`. The runner builds the command line; there is no free-form `paid`.
+- **Price before dispatch:** voice = characters in the turns that will actually be rendered (cached turns cost 0) x the invoice rate; alignment = a small fixed line; score = seconds x rate. The rates are constants typed from the owner's invoice and **marked unverified** until the first receipt.
+- One open row per command; `align` runs once per audio hash.
+- `build_srt.build()` refuses a marked folder. The episode's score script refuses to run outside `RUN score`.
+- Honest limit: someone can still run `per_turn_synth.py` by hand. That script is out of lane (section 13).
+
+### 5.6 Probes (phase B, $0) and overrides
+
+| Probe | Question | If no |
+|---|---|---|
+| R1 | Does `openart_creation_show` return the charged credits and the sent settings (sound, duration, resolution), for a completed **and** a failed creation? | Rows cannot auto-confirm. Each stays `UNRESOLVED` until the session saves the record dump and the owner accepts the tariff figure. Said plainly on the owner page |
+| R2 | Can this ElevenLabs key use forced alignment? (ep13's timing file says it did.) | Stop; the owner decides. No silent whisper timing |
+| R3 | Does `GET /v1/history` list recent items with character counts for this key? | Voice / score rows are closed by a typed `confirm` (stated limit) |
+
+**`RUN reconcile`** ($0, detective): the session saves an `openart_creation_list` dump for the episode's time window; the command flags any creation not in `spend_log.jsonl` whose prompt hash matches an episode prompt. Run before every `approve` and in `status`.
+
+**Overrides** (`_overrides.json`): each entry = `{gate, unit, file_sha256, owner_quote, date}`. It applies to that file only; a new render voids it. **Never overridable:** SWS-G0, G1k, G1s, G14, G14s, G16.
+
+---
+
+## 6. Status matrix
+
+**DESIGNED** (only here) · **ON DISK, OLD SHAPE** (builder's code, does not match) · **ON DISK** · **PASSING** (named test passes; only the builder sets this).
+
+| Item | Today | Test |
+|---|---|---|
+| Trim mode, `ShortClipError`, no `-shortest`, draft `apad` | ON DISK | T1, T2 |
+| Frame-exact cuts; scale-and-crop; 1080x1920 gate; `fps=30` | DESIGNED (disk: `-t slot`, stretch, 720 default) | T1 |
+| Back clip slot + 2 s | DESIGNED (disk: + 0.5) | T3b |
+| `build_timing` | ON DISK | T3, T3b |
+| Words gates G1 / G1e / G1v | ON DISK, OLD SHAPE | T4 |
+| Sequence gate G1s; order gate G8t | DESIGNED (disk: counts) | T5b |
+| KJV wrapper G1k | DESIGNED | T5 |
+| `RUN voice` (takes, `_turns` hash), G2w | DESIGNED | T10b |
+| `align` + meta; cache-only SRT; `build()` refusal; assemble hook | DESIGNED (disk: paid call at `swirls_episode.py:370`) | T10 |
+| Baked-text lint G4 | ON DISK, OLD SHAPE | T4 |
+| G5a verb list; G5, G6 | ON DISK (list short) | T4 |
+| `page_plan.json` schema + validation | ON DISK, OLD SHAPE (`heads / recurring / turn`) | T4b |
+| Still audit G9 strict judge; `read` | ON DISK, OLD SHAPE (strips punctuation, fuzzy WARN) | T7 |
+| Edge scan G10 wired | ON DISK, not called | T9 |
+| Bridge protocol (claim, cancel, staging, heartbeat) | DESIGNED | T6 |
+| Guard (lock, one open row, grants, quotes, receipts, fetch) | ON DISK, OLD SHAPE | T6 |
+| Provider / marker / metered-Vision refusals | DESIGNED (disk: provider check lives in `_guarded_render`, which is removed) | T6 |
+| ElevenLabs boundary | DESIGNED | T6b |
+| G14 / G14s provenance; fresh-mp4 rule | ON DISK, OLD SHAPE (skip-if-exists; hash re-read at QC) | T7 |
+| G13 Vision read, strips at 540 px | DESIGNED (disk: 5 frames at 216 px, human only) | T7b |
+| G15h moving hold | DESIGNED (disk: `freezedetect` WARN) | T8 |
+| Overrides bound to unit + hash | ON DISK, OLD SHAPE (per gate name) | T7c |
+| `hold`, `animatic`, contact sheet | DESIGNED | T12 |
+| Assembly / final receipts G16 | DESIGNED | T12 |
+| Score gate G17; parameterised score / SFX copies | DESIGNED | T14 |
+| `reconcile` | DESIGNED | T6 |
+| `status`, open-WARN list | ON DISK (no WARN list) | T12 |
+
+---
+
+## 7. Where each review was answered
+
+- **Red team on v3.1 (68 BLOCKER / MAJOR items):** `POC\_swirls_short_design\_redteam\TRIAGE.md`.
+- **Plan panel on v3:** receipt, payload guard, sequence equality, word budget, T12, status matrix, hold FAIL, G13 flags, reroll count, hash-bound gates, scale-and-crop, KJV reuse — all carried into this version (several tightened again above).
+- **Plan panel on v2:** animatic before clips, one still audit, scored-trim test, alignment gate, real prices, legal Kling lengths, phone review, quorum rules, publish anchor.
+
+**Standing rejections**
+
+| Point | Why |
+|---|---|
+| Move the bridge + guard into `REPO\pipeline\` (gemini, v3) | Lane rule. Coordinator task |
+| Drop the mock dry run (gemini, v3) | Three seats asked for a fuller one |
+| Put the go / no-go before the guard is built by buying one page first (fable red team, R5 in part) | No money moves before the guard exists. The go / no-go moved as early as it can: the first paid picture (page 3) |
+| Drop the receipt read-back and the fake-servicer tests to save build time (fable red team, cut list) | The spend seat and codex found double-pay paths that only these catch |
+| `--natural` unverifiable (cursor, v2) | It exists (`per_turn_synth.py:172`) |
+
+---
+
+## 8. Cost (45 s pilot)
+
+OpenArt $0.002 per credit. About 55 clip-seconds.
+
+| Ask | About | At most (what the owner is asked) | What "at most" covers |
+|---|---|---|---|
+| 1 Voice | $0.60 | $1.20 | narrator twice, character lines 2 takes, alignment, one re-take. **Rate unverified; from `RUN quote voice`** |
+| 2 Pictures | 400 cr = $0.80 | 840 cr = $1.68 | 8 stills + up to 3 ref renders + 8 rerolls, x 1.10 |
+| 3 Clips | 1,925 cr = $3.85 | 3,120 cr = $6.24 | 8 clips + 1 back-cover reroll + 2 page rerolls, x 1.10 |
+| 4 Music | $1.00 | $1.50 | two parts + one part again. **Rate unverified** |
+| **Pilot** | **about $6.25** | **at most $10.62** | |
+
+**Time:** about 8 still reads and 8 clip reads by the session, clips played through, four or five panels at up to 10 minutes a seat, seven owner pages. A working session, not a background job.
+
+---
+
+## 9. Build plan
+
+### 9.1 Code on disk — keep or redo
+
+| File | KEEP | REDO / ADD |
+|---|---|---|
+| `POC\swirls_assemble.py` | trim mode, no-`-shortest` mux, draft path | cumulative `-frames:v`; scale-and-crop; refuse 720 default for trim; write `assembly_receipt.json` |
+| `POC\test_the_cross\swirls_page.py` | optional corner note | the two render functions refuse a non-OpenArt provider for a marked `out_path`; ref hashes in the payload |
+| `POC\swirls_cover.py` | all | the same provider refusal in its two render functions (4 lines each) |
+| `POC\swirls_verify.py` | `_vision_raw`, `expected_baked_texts`, sidecar idea | new read fields; **judge on raw strings** (section 3 step 5); `audit_version`; overrides keyed on gate + unit + hash |
+| `POC\swirls_short.py` | `build_timing` (+ back rule, `frames`), lints, `clip_tech`, `edge_scan`, `status` | constants; G1e / G1s / G1k / G1v / G8t; G4 run checks; plan schema validation; guard rebuilt (5.3, 5.4); `quote`; G14 / G14s; strips; G13 judge; G15h; G17; `hold`, `animatic`, `reconcile` |
+| `POC\swirls_episode.py` | trim branches | delete `_bridge_credits`, `_guarded_render`; **replace the `build_srt.build()` hook with `build_from_cache`**; commands `words, quote, ok, voice, align, score, hold, animatic, read, fetch, reconcile, confirm`; refusals (no marker, metered Vision, provider); stale-mp4 rule |
+| `POC\test_the_cross\openart_bridge.py` | untouched | protocol 5.1 |
+| `POC\build_srt.py` | untouched | `build_from_cache`; `build()` refuses a marked folder |
+| `POC\SWIRLS_SHORT_SERVICER.md` | - | new |
+| `POC\_validate_swirls_short.py` | checks that still fit | the tests below |
+
+### 9.2 Order (the pilot's words can start after phase A)
+
+- **A — words, timing, trim.** A1 validator baseline at git HEAD in a temp worktree vs the working tree (green at HEAD but red here = fix it; red at HEAD = report). Then G1 family, G4, plan schema (T4, T4b, T5, T5b); trim (T1, T2); timing (T3, T3b).
+- **B — money.** Probes R1-R3. Bridge protocol + guard + grants + ElevenLabs boundary (T6, T6b). SRT / align (T10, T10b). Provenance + strict audit + overrides (T7, T7c). Edge scan (T9).
+- **C — dry run.** `hold`, `animatic`, receipts, runner wiring. **T12.** -> the pilot may spend: steps 2-5.
+- **D — clip checks** (before step 6): G13 (T7b), G15h (T8), parameterised score / SFX + G17 (T14).
+
+v3.2 goes back through the plan panel + a Fable seat before phase B.
+
+### 9.3 Acceptance tests (all $0)
+
+| ID | Pass means |
+|---|---|
+| T1 | Fractional slots on synthetic 1072x1928 clips: cuts within 1 frame of `B(k)`; output exactly 1080x1920 at 30 fps; a circle stays a circle; a 720 manifest is refused; short clip raises |
+| T2 | Scored trim through `mix_tail` + draft: hold moving against a frozen control; picture = sound within 1 frame; a legacy `freeze` manifest produces the same ffmpeg argument lists as before |
+| T3 / T3b | ep13's timing reproduced (11 units); the 8-unit golden fixture (`fixtures\golden_8unit\`) reproduced incl. back = `ceil(slot + 2.0)` |
+| T4 | FAIL on: "MEDIUM TWO-SHOT", dash caption, doubled labels, label = caption, two-line caption, quote marks, a corner note, 12 reading words, 6-word hook, 94 words, 6 voiced quotes, 2 quotes on one page, a caption that is not a run of that unit's words, a label not spoken on its page |
+| T4b | The design's example `page_plan.json` loads; removing any field FAILs; **the G7a and G8 FAIL cases fire** on it; swapped unit order FAILs G8t |
+| T5 | KJV: PASS the John 1:23 10-word run and "Prepare ye the way of the LORD"; **FAIL `"I am ... the Christ"`, `"I am … that prophet"`, `"am not the Chr"`, `"Prepare ye the way of the Lord"` (case), a run that skips a word**; no network |
+| T5b | FAIL when two words swap between units; when the tagged file differs by one word; comments ignored |
+| T6 | Fake servicer threads on real files. **Two servicers, one request -> exactly one generate call.** Refusals with nothing written: no guard, no grant, cap != quote, note without the cap number, note equal to an `ok` note, missing or void look gate, closed step, 4th render of a unit, unknown price row, sound on, non-OpenArt provider, no marker on a trim episode, `out_path` outside the episode, any open row, two `before()` calls racing (one wins). **The four cap sums from section 8 fit their own planned rerolls.** Timeout before claim -> `CANCELLED_UNCLAIMED`, voidable only with a list dump. Timeout after claim -> `LATE_PENDING`, not voidable, `fetch` settles it with no second generate call. Killed client (no `finally`) -> swept by heartbeat. Past `not_after` -> servicer refuses. Error reply with a `creation_id` -> `fetch`, not a new render. Reply with typed `sent_params` and no record dump -> `UNRESOLVED`. Record shows sound on -> `UNRESOLVED`. A unit grant adds one render for that unit only. `reconcile` flags a creation that is not in the log |
+| T6b | `RUN voice` deletes `_turns\` when the text hash changed and not otherwise; quote = characters of uncached turns; `align` twice on one hash is refused; `build_srt.build()` on a marked folder raises; the score script exits when run directly; metered Vision mode refused |
+| T7 | Strict judge: FAIL on `I am — the voice`, `"I am the voice"`, `MCU`, `F05` for `F04`, `JOHN 1:28` for `1:23`, `Lamp` for `Lamb`, `I am` for `I am not`, a caption twice in one string; `read` clears a text FAIL for that hash only. Motif: stage 0 with a mark FAILs; stage 2 with none FAILs. Provenance: replace PNG -> `animate` supersedes the old mp4 and `assemble` refuses the stale one; a `Unit.src` pointing at another file FAILs; a PNG with no receipt FAILs |
+| T7b | G13: bubble, changed caption on the last frame, `ink_changed` each FAIL; soft flag WARN; strips are 540 px tiles, 6 per image |
+| T7c | An override for f02's file does not clear f03, nor f02 after a reroll; an override on G1k / G14 is ignored |
+| T8 | G15h on real ep10 / ep13 / ep16 back covers vs: a frozen copy, a copy frozen from frame 0, a copy whose motion stops 1.5 s into the hold. A `k` that passes the real ones and fails all three copies; if none exists, say so in section 12 and keep the played-through look |
+| T9 | Edge scan separates ep2 / ep5 / ep7 / ep8 covers from ep10 / ep13; else stays WARN and says so |
+| T10 | `timing` refuses on no meta, wrong hash, whisper backend; `build_from_cache` never calls `align`; **`assemble --score` with `requests.post` patched to raise still succeeds** |
+| T10b | G2w: a synthetic mp3 whose one turn says other words FAILs; the real ep13 audio against its own words passes (sets the thresholds) |
+| T11 | `_swirls_anchor_ref` returns `John 1:19-29` |
+| T12 | Dry run, real `cmd_*`, real bridge files, mocks underneath (servicer, creation record, Vision, synth, aligner, whisper, score). Order: `words -> ok words -> quote/approve voice -> voice -> ok voice_ear -> align -> timing -> plan -> quote/approve pictures -> still (north star) -> hold -> ok northstar_look -> still x7 -> verify -> animatic -> ok stills_animatic -> quote/approve clips -> animate x2 + clipqc -> ok clip_test_look -> (animate + clipqc) x6 -> assemble --draft -> ok draft_cut -> quote/approve score -> score -> assemble --score -> SFX copy -> cache SRT -> FINAL_VIDEO -> status`. Pass: all succeed; `status` says step 10 next; logged spend = quote; receipts chain to `FINAL_VIDEO.txt`; each out-of-order paid step is refused (second still before `northstar_look`, third clip before `clip_test_look`, any spend after a closing gate). **Plumbing and order only — nothing about film quality** |
+| T14 | The pilot's copied score script in `--dry-run` reads its inputs from `assembly_receipt.json` and names no other episode's file; the copied SFX script runs on the T12 synthetic episode; G17 FAILs a score with a 5 s dead start and one shorter than `total` |
+
+### 9.4 Over-build deferred (not needed to ship one pilot)
+
+| Deferred | Until | Why it can wait |
+|---|---|---|
+| Shared `swirls_score.py` / `swirls_sfx.py` | after the pilot | parameterised per-episode copies + T14 |
+| `adopt` (hand-fixed stills) | after the pilot | pilot rule: reroll |
+| Mouth-region pixel check | after the pilot | the session plays every speaking clip |
+| Cross-page costume check as a FAIL | after the pilot | contact sheet + WARN read on page 4 |
+| `hard_props` shape check (cross as X) | before any cross episode | no hard prop in this pilot |
+| Silence check at each cut; 2-frame lead | after the pilot | owner eye on the draft |
+| Masked-region motion (paper excluded) for G15h | after T8 shows whether it is needed | frozen-control floor first |
+| Music-under-voice ratio as FAIL | after the pilot | measured, shown, WARN |
+| Hash chain in the spend log; hashes printed on owner pages | episode 2 | the log is small and read by a person |
+| Owner-page builder, scaffold script, `page_plan_view` | episode 2 | copy ep16's pages once |
+| SWS-G1c closing-shape lint | episode 2 | brief + panel |
+| Poster bake-off, publish pack | when posting | not part of the proof |
+| 30 s and 60 s sizes | after one clean 45 s | - |
+| Owner-only approval that the session cannot type | coordinator (section 13) | out of lane |
+
+---
+
+## 10. Panel rules
+
+Every panel has a blind Fable seat. Text panels: Fable + Claude + codex + cursor + grok + gemini; quorum Fable + 3. Image panels: Fable + Claude + codex (+ cursor); quorum Fable + 2; Gemini out; Grok never counted on. 600 s per seat; one retry alone at 900 s; then one "substitute" Claude seat; then stop and tell the owner. Fix by convergence (2+ seats, or any Bible point).
+
+---
+
+## 11. Known defects -> designed prevention
+
+| Defect | Prevention |
+|---|---|
+| Speech bubbles in clips | speaker derived + still (G1v, G8); verb list (G5a); G13 bubble FAIL; speaking clips played |
+| Cover border | `drawn_border` + pixel edge scan FAIL on covers |
+| Character / costume drift | refs declared, present and **sent** (G7a-c); contact sheet |
+| Motif wrong, missing, or animated | G5 nouns; `motif_marks` vs stage; `ink_changed`; rule 8 |
+| Baked text wrong, doubled, punctuated, or melting in the clip | G4; strict G9; G13 re-read |
+| Unreadable page / caption under the Shorts UI | 11-word load; 75% rule; pages 3, 4, 6 on a phone |
+| Clones, vanished or merged figures | `full_figures`; undeclared crowd FAIL |
+| Fill | trim only |
+| Dead landing hold | G15h (floor, 3 windows, final file); back clip + 2 s; tested second |
+| Score dead air | G17 on the score and the mix |
+| Fixed PNG, old MP4 | fresh-mp4 rule; G14 over the manifest; G16 chain |
+| Wrong word under a cut; stale audio | G1s; `_turns` hash; G2w |
+| Spliced or altered Scripture | G1k wrapper, never overridable |
+| Robotic character voice | 0.3, two takes, cues |
+| 720p or stretched output | 1080x1920 gate; scale-and-crop |
+| Spend without the owner's number; double or late pay; made-up receipts | section 5 |
+
+## 12. Where the evidence is thin
+
+- 6 s per page, and a 2-3 s cover under a spoken hook: tested first on page 3, then 4, then 6. Real seed viewers are the only proof.
+- A back clip that keeps moving for 10-11 s: unproven; `k` is a guess until T8.
+- Probes R1, R2, R3 are not run. If R1 fails, OpenArt rows need a person each time.
+- ElevenLabs rates are typed from the invoice; `per_turn_synth.py` can still be run by hand.
+- **The guard cannot prove the owner's yes** and cannot see a direct MCP call (only `reconcile` afterwards).
+- Vision misreads handwriting; the strict judge will raise false text FAILs that need a `read`.
+- G2w thresholds are a guess until T10b.
+- Sampled frames miss defects shorter than half a second.
+- The pilot story is talk-heavy.
+
+---
+
+## 13. Coordinator tasks (out of lane)
+
+1. **Owner-only approval.** Make `swirls_episode.py ... approve` always raise a permission prompt (a settings `ask` rule), so the owner's own click is the yes. Today the session can type it.
+2. **Fix `REPO\pipeline\kjv_strict.py`:** `verify_span` accepts ellipsis splices that drop words ("I am ... the Christ") and matches inside words. Other pipelines use it.
+3. **`REPO\AGENT_BRIDGE.md`:** point guarded requests at `POC\SWIRLS_SHORT_SERVICER.md`; remove "quote or balance difference" as a receipt; add the claim step for the old folder too.
+4. **`PythonProject1\jesus\narration\per_turn_synth.py`:** per-speaker stability; a marker check so it cannot be run by hand on a marked folder; cache turns by text hash, not file name.
+5. **Install `SKILL_v3.md`** over the old skill only after phases A-C pass; until then the installed skill still teaches freeze fill and Higgsfield.
+6. Later: move the bridge and guard out of `POC\test_the_cross\` into a shared place.
+7. Decide on any validator that A1 shows red at git HEAD.
+8. Before the first post: check `release_check.py` on a `POC\` episode.
+----- ARTIFACT END -----

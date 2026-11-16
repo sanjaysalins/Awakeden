@@ -1,0 +1,13 @@
+PASS G1 duration - video 38.000 s (1140 frames) audio 38.000 s 1080,1920,30/1
+PASS G2 audio identical - shipped MD5=dc03d5c2394dbfccddd36c96eb595d61 | comic MD5=dc03d5c2394dbfccddd36c96eb595d61
+PASS G3a stillness vs shipped (f674-796) - mean abs diff 1.79 (max 2.01), limit 2.0, over 123 frames
+PASS G5 variety - sequence: panel_slam > panel_slam > panel_slam > panel_slam > panel_dive > whip_pan > panel_slam > panel_dive > slam_cut > panel_slam > speed_zoom > ink_slash_split > halftone_dissolve > panel_slam > page_flip_up > panel_slam > border_fall > punch_cut > iris > page_flip_up > halftone_dissolve | repeats-in-a-row [] | >2 uses {}
+PASS G8 word sync (never early) - 14 word-tied frames checked; early: none
+PASS G9 anchor (mocker mouth, 5 frames) - max error 0.01 px vs hand-keyed shipped-film points (keys are by-eye, about +/-15 px)
+PASS G10 page coverage - 705 of 1140 frames (62%) on pages with 2+ panels; limit 60%
+PASS G11 panel variety (no duplicate clip on a page) - 9 multi-panel pages (pgA,pgB,pgC,pgD,pgE,pgF,jesus,pgG,pgH); duplicates: none
+PASS G3b stillness: no overlay f674-796 - max mark pixels 0
+PASS G4 answer_light_profile clean f796-891 - max mark pixels 0 (comic transitions only into/out of it: punch_cut in, iris out with no ring)
+PASS G6 pill zone free (pill_edge excluded = it IS the pill's edge) - max mark pixels in x70-1010,y974-1250 while a pill shows: 0 (frame 1058)
+PASS G7 no-draw masks (Jesus faces / close-ups) - masks 7, violations none
+ALL PASS

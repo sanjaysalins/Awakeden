@@ -1,0 +1,8 @@
+drawtext=fontfile='C\:/Windows/Fonts/impact.ttf':text='AFRAID GOD WILL':fontsize=104:fontcolor=white:box=1:boxcolor=black@0.62:boxborderw=22:x=(w-text_w)/2:y=1380:enable='between(t,0,2.0)',
+drawtext=fontfile='C\:/Windows/Fonts/impact.ttf':text='TURN YOU AWAY?':fontsize=104:fontcolor=0xF2C14E:box=1:boxcolor=black@0.62:boxborderw=22:x=(w-text_w)/2:y=1530:enable='between(t,0,2.0)',
+drawtext=fontfile='C\:/Windows/Fonts/arialbd.ttf':text='JOHN 6\:37':fontsize=46:fontcolor=0xF2C14E:box=1:boxcolor=black@0.66:boxborderw=14:x=(w-text_w)/2:y=1560:enable='between(t,18.7,23.7)',
+drawtext=fontfile='C\:/Windows/Fonts/impact.ttf':text='IN NO WISE':fontsize=110:fontcolor=white:box=1:boxcolor=black@0.66:boxborderw=20:x=(w-text_w)/2:y=1290:enable='between(t,25.7,28.0)',
+drawtext=fontfile='C\:/Windows/Fonts/impact.ttf':text='= NEVER':fontsize=130:fontcolor=0xF2C14E:box=1:boxcolor=black@0.66:boxborderw=20:x=(w-text_w)/2:y=1440:enable='between(t,25.7,28.0)',
+drawtext=fontfile='C\:/Windows/Fonts/impact.ttf':text='SO COME.':fontsize=150:fontcolor=0xF2C14E:box=1:boxcolor=black@0.66:boxborderw=24:x=(w-text_w)/2:y=1450:enable='between(t,44.9,46.3)',
+drawtext=fontfile='C\:/Windows/Fonts/impact.ttf':text='HE WILL NEVER TURN AWAY':fontsize=84:fontcolor=white:box=1:boxcolor=black@0.62:boxborderw=18:x=(w-text_w)/2:y=1640:enable='gte(t,57.6)',
+drawtext=fontfile='C\:/Windows/Fonts/impact.ttf':text='THE ONE WHO COMES':fontsize=84:fontcolor=0xF2C14E:box=1:boxcolor=black@0.62:boxborderw=18:x=(w-text_w)/2:y=1760:enable='gte(t,57.6)'

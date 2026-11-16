@@ -1,0 +1,21 @@
+{
+ "id": "bronze-serpent-01-look-and-live",
+ "source": "F:/slk/PycharmProjects/JesusInTheBible/poc_living_sketchbook/look_and_live/LOOKANDLIVE_living_sketchbook_cc_scored_sfx.mp4",
+ "output": "F:/slk/PycharmProjects/JesusInTheBible/poc_living_sketchbook/look_and_live/LOOKANDLIVE_living_sketchbook_cc_scored_sfx_v5hook.mp4",
+ "hook_text": null,
+ "hook_skipped_reason": "Burned-in title card already shows from ~0.6s (LOOK AND LIVE.) so hook skipped.",
+ "decode_cards": [
+  {
+   "old": "BEHELD",
+   "plain": "LOOKED AT",
+   "t0": 29.388,
+   "t1": 31.088
+  }
+ ],
+ "skipped_decodes": [
+  "LOOKETH (removed after panel round)"
+ ],
+ "title_question_proposal": "Why Did God Say Just Look at a Snake?",
+ "verified": true,
+ "notes": "Cards mid-frame, clear of bottom caption. Duration equals source (checked ffprobe). Audio stream copied. Frames checked at each card time. Panel round: LOOKETH = LOOKS removed. Re-rendered from original source; frames re-checked."
+}

@@ -15,6 +15,18 @@ Usage:
   .venv\\Scripts\\python.exe poc_living_water_ink_style_test\\swirls_episode.py <episode_dir> verify
   .venv\\Scripts\\python.exe poc_living_water_ink_style_test\\swirls_episode.py <episode_dir> assemble [--score NAME]
 
+SWIRLS SHORT (all-`trim` episodes; design v3.2: _swirls_short_design\\SWIRLS_SHORT_PIPELINE_DESIGN_v3.md).
+The commands live in swirls_short_run.py, the spend guard in swirls_guard.py:
+  ... <episode_dir> init                          folder + .swirls_short marker (random episode_id)
+  ... <episode_dir> words | ok <gate> --note ...  word gates G1/G1e/G1s/G1k/G1v/G1g ; record an owner look
+  ... <episode_dir> quote <step>                  "about X, at most Y" (voice|pictures|clips|score)
+  ... <episode_dir> approve <step> --cap Y --unit cr|usd [--balance N] [--unit-id TAG --renders N] --note "..."
+  ... <episode_dir> voice | align | score         the ONLY three paid ElevenLabs commands (fixed, whitelisted)
+  ... <episode_dir> timing | plan                 unit_timing.json (frames) ; every plan gate
+  ... <episode_dir> still <id> [--reroll] | hold <id> | verify | read <id> --string ... | animatic
+  ... <episode_dir> animate <id> | clipqc [id]    guarded clip render ; G11/G14/G12/G13/G15h
+  ... <episode_dir> assemble --draft | --score piano | finalize
+  ... <episode_dir> fetch <rid> | confirm <rid> ... | reconcile --dump F | status
 <id> is a page id ("f01") or a cover side ("front"/"back"). Human QC steps
 (eyeball at 1:1, ref crops, contact sheets, real playback) are unchanged --
 this adds deterministic floors under them, it does not replace them.
@@ -23,7 +35,9 @@ from __future__ import annotations
 
 import argparse
 import importlib.util
+import json
 import sys
+import time
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -36,6 +50,18 @@ from swirls_cover import render_cover_animation, render_cover_still  # noqa: E40
 from swirls_page import render_animation, render_still  # noqa: E402
 import build_srt  # noqa: E402
 import swirls_upload_tracker  # noqa: E402
+import swirls_short as ss  # noqa: E402
+import swirls_short_run as run  # noqa: E402
+
+
+def _is_trim(ep) -> bool:
+    return sa.is_trim_episode(ep.MANIFEST)
+
+
+def _id_png(ep, id_: str) -> Path:
+    if id_ in ep.PAGES:
+        return ep.MANIFEST.episode_dir / f"{ep.MANIFEST.episode_dir.name}_{id_}_9x16.png"
+    return ep.MANIFEST.episode_dir / f"{id_}_cover.png"
 
 
 def _load_episode(episode_dir: Path):
@@ -72,6 +98,8 @@ def _report(gates: list, episode_dir: Path) -> bool:
 
 
 def cmd_plan(ep) -> bool:
+    if _is_trim(ep):
+        return run.cmd_plan(ep)
     plan = sa.plan_units(ep.MANIFEST)
     print(f"{'tag':8} {'mode':10} {'words':>6} {'slot':>8} {'native':>8}")
     for p in plan:
@@ -90,11 +118,12 @@ def cmd_plan(ep) -> bool:
     gates.append(sv.sw_l5_word_count_parity(
         unit_words, sv.narration_word_count(ep.MANIFEST.episode_dir)))
 
+
     print("\n-- gates --")
     return _report(gates, ep.MANIFEST.episode_dir)
 
 
-def cmd_still(ep, id_: str) -> bool:
+def cmd_still(ep, id_: str, reroll: bool = False) -> bool:
     """ENFORCED 2026-08-23 (independent-review catch, codex): the original
     version called render_still()/render_cover_still() directly with no
     pre-spend lint pass at all -- SW-L1 (cover lighting) could FAIL and a
@@ -103,6 +132,8 @@ def cmd_still(ep, id_: str) -> bool:
     and refuses to spend on a FAIL (refs-exist was already a hard stop
     inside render_still/render_cover_still; this adds the cover-lighting/
     text-lock checks that weren't enforced anywhere before assemble time)."""
+    if _is_trim(ep):
+        return run.cmd_still(ep, id_, reroll)
     if id_ in ep.PAGES:
         page = ep.PAGES[id_]
         gate = sv.sw_l4_refs_exist([page])
@@ -123,6 +154,8 @@ def cmd_still(ep, id_: str) -> bool:
 
 
 def cmd_animate(ep, id_: str) -> bool:
+    if _is_trim(ep):
+        return run.cmd_animate(ep, id_)
     plan = sa.plan_units(ep.MANIFEST)
     freeze_gates = sv.apply_overrides(
         sv.sw_f1_freeze_budget(plan, _model_tier_map(ep), _clip_duration_map(ep)),
@@ -155,6 +188,8 @@ def _still_path(ep, id_: str) -> Path:
 
 def cmd_verify(ep) -> bool:
     ok = True
+    if _is_trim(ep):
+        return run.cmd_verify(ep)
     for pid, page in ep.PAGES.items():
         png = _still_path(ep, pid)
         if not png.exists():
@@ -176,13 +211,22 @@ def cmd_verify(ep) -> bool:
     return ok
 
 
-def cmd_assemble(ep, score_name: str) -> bool:
+def _unit_clip(ep, id_: str) -> Path:
+    return _id_png(ep, id_).with_suffix(".mp4")
+
+
+def cmd_assemble(ep, score_name: str | None, draft: bool = False) -> bool:
     """ENFORCED 2026-08-23 (independent-review catch, codex): the original
     version called sa.assemble() immediately and only evaluated A1-A4
     afterward -- a still with a FAILing or missing V2 audit never blocked
     assembly at all, contradicting the plan's own "a failing/missing audit
     blocks assemble" claim. Now runs V2 (via cmd_verify's logic) FIRST and
     refuses to spend the ffmpeg encode time on unaudited/failing stills."""
+    if _is_trim(ep):
+        return run.cmd_assemble(ep, score_name, draft)
+    if draft:
+        print("FAILED: --draft is only for a trim (Swirls short) episode")
+        return False
     all_ids = list(ep.PAGES) + list(ep.COVERS)
     missing_or_failing = []
     for id_ in all_ids:
@@ -202,7 +246,11 @@ def cmd_assemble(ep, score_name: str) -> bool:
     if not _report([v2_gate], ep.MANIFEST.episode_dir):
         return False
 
-    result = sa.assemble(ep.MANIFEST, score_name)
+    try:
+        result = sa.assemble(ep.MANIFEST, score_name)
+    except (sa.ShortClipError, ValueError) as e:
+        print(f"FAILED: {e}")
+        return False
     gates = [sv.sw_a1_duration_parity(result["out"])]
     gates += sv.sw_a2_unit_duration(result["units"])
     gates.append(sv.sw_a3_total_duration(result["final_duration"], result["narration_len"],
@@ -213,7 +261,9 @@ def cmd_assemble(ep, score_name: str) -> bool:
         # cut exists, so the timestamped .srt and the tracker board should
         # exist too -- no separate manual step to remember per episode.
         try:
-            build_srt.build(ep.MANIFEST.episode_dir)
+            # CACHE-ONLY (design v3.2): the old build() re-aligned with ElevenLabs on every assemble --
+            # a paid, unlogged call that also overwrote the timing alignment.
+            build_srt.build_from_cache(ep.MANIFEST.episode_dir)
         except Exception as e:
             print(f"[warn] .srt build failed (non-fatal, assemble itself still succeeded): {e}")
         try:
@@ -223,26 +273,86 @@ def cmd_assemble(ep, score_name: str) -> bool:
     return ok
 
 
+def cmd_clipqc(ep, id_) -> bool:
+    return run.cmd_clipqc(ep, id_)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("episode_dir", type=Path)
-    parser.add_argument("command", choices=["plan", "still", "animate", "verify", "assemble"])
+    parser.add_argument("command", choices=[
+        "plan", "still", "animate", "verify", "assemble", "timing", "approve", "confirm", "clipqc", "status",
+        "init", "words", "quote", "ok", "voice", "align", "score", "hold", "animatic", "read", "fetch",
+        "reconcile", "finalize"])
     parser.add_argument("id", nargs="?", default=None)
     parser.add_argument("--score", default="original")
+    parser.add_argument("--draft", action="store_true")
+    parser.add_argument("--reroll", action="store_true")
+    parser.add_argument("--unit", default=None, help="approve: currency cr|usd")
+    parser.add_argument("--unit-id", default=None, help="approve: a unit grant for this tag")
+    parser.add_argument("--renders", type=int, default=None)
+    parser.add_argument("--price", type=float, default=None)
+    parser.add_argument("--cap", type=float, default=None)
+    parser.add_argument("--balance", type=float, default=None)
+    parser.add_argument("--amount", type=float, default=None)
+    parser.add_argument("--note", default=None)
+    parser.add_argument("--take", default=None)
+    parser.add_argument("--string", action="append", default=None)
+    parser.add_argument("--receipt", default=None)
+    parser.add_argument("--void", action="store_true")
+    parser.add_argument("--list-dump", default=None)
+    parser.add_argument("--dump", default=None)
     args = parser.parse_args()
 
-    ep = _load_episode(args.episode_dir.resolve())
+    d = args.episode_dir.resolve()
+    simple = {
+        "init": lambda: run.cmd_init(d),
+        "words": lambda: run.cmd_words(d),
+        "quote": lambda: run.cmd_quote(d, args.id),
+        "approve": lambda: run.cmd_approve(d, args.id, args.cap, args.unit, args.balance, args.note,
+                                           args.unit_id, args.renders, args.price),
+        "ok": lambda: run.cmd_ok(d, args.id, args.note or "", args.take),
+        "voice": lambda: run.cmd_voice(d),
+        "align": lambda: run.cmd_align(d),
+        "score": lambda: run.cmd_score(d),
+        "fetch": lambda: run.cmd_fetch(d, args.id),
+        "confirm": lambda: run.cmd_confirm(d, args.id, args.amount, args.note, args.receipt, args.void, args.list_dump),
+        "status": lambda: run.cmd_status(d),
+    }
+    if args.command in simple:
+        sys.exit(0 if simple[args.command]() else 1)
+    if args.command == "timing":
+        words = size = None
+        if (d / "episode.py").exists():
+            ep = _load_episode(d)
+            words = {u.tag: u.words for u in ep.MANIFEST.units}
+            size = (ep.MANIFEST.w, ep.MANIFEST.h)
+        sys.exit(0 if run.cmd_timing(d, words, size) else 1)
 
-    if args.command == "plan":
+    ep = _load_episode(d)
+
+    if args.command == "clipqc":
+        ok = cmd_clipqc(ep, args.id)
+    elif args.command == "plan":
         ok = cmd_plan(ep)
     elif args.command == "still":
-        ok = cmd_still(ep, args.id)
+        ok = cmd_still(ep, args.id, args.reroll)
     elif args.command == "animate":
         ok = cmd_animate(ep, args.id)
     elif args.command == "verify":
         ok = cmd_verify(ep)
+    elif args.command == "hold":
+        ok = run.cmd_hold(ep, args.id)
+    elif args.command == "animatic":
+        ok = run.cmd_animatic(ep)
+    elif args.command == "read":
+        ok = run.cmd_read(ep, args.id, args.string or [], args.note or "")
+    elif args.command == "reconcile":
+        ok = run.cmd_reconcile(d, Path(args.dump), ep)
+    elif args.command == "finalize":
+        ok = run.cmd_finalize(ep)
     else:
-        ok = cmd_assemble(ep, args.score)
+        ok = cmd_assemble(ep, args.score, args.draft)
 
     sys.exit(0 if ok else 1)
 

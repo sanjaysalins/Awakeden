@@ -48,11 +48,42 @@ def group_words(words):
     return cards
 
 
+def _marked(folder: Path) -> bool:
+    """True if `folder` (or a parent) holds a `.swirls_short` marker (a guarded Swirls short)."""
+    p = Path(folder).resolve()
+    return any((q / ".swirls_short").is_file() for q in [p, *p.parents])
+
+
 def build(folder: Path) -> Path:
+    """LEGACY: re-aligns with ElevenLabs (force=True) -- a PAID, unlogged call that also overwrites
+    the timing alignment. REFUSED for a marked Swirls short folder (use build_from_cache)."""
     folder = Path(folder)
-    out = folder / f"{folder.name}.srt"
+    if _marked(folder):
+        raise RuntimeError("build_srt.build() would call ElevenLabs alignment (paid, unlogged) and is "
+                           "refused for a .swirls_short folder: use build_from_cache()")
     words = align(folder, force=True)
     print(f"[align] {folder.name}: {len(words)} words")
+    return _write_srt(folder, words)
+
+
+def build_from_cache(folder: Path) -> Path:
+    """$0: the .srt from the CACHED narration.alignment.json only. Never calls `align`; raises if
+    there is no cache."""
+    import json
+    from pipeline.assembly_align import _parse_words
+    folder = Path(folder)
+    cache = folder / "narration.alignment.json"
+    if not cache.exists():
+        raise FileNotFoundError(f"no cached alignment at {cache}: nothing to build the .srt from "
+                                "(this function never aligns)")
+    words = _parse_words(json.loads(cache.read_text(encoding="utf-8")))
+    if not words:
+        raise ValueError("cached alignment has no usable words")
+    return _write_srt(folder, words)
+
+
+def _write_srt(folder: Path, words) -> Path:
+    out = folder / f"{folder.name}.srt"
     cards = group_words(words)
     lines = []
     for i, card in enumerate(cards, start=1):

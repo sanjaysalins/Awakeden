@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Elevate Swirls</title>
+<style>
+:root{--bg:#faf6ee;--fg:#1d1a16;--card:#fff;--line:#d9cfbd;--acc:#1f4e8c;--bad:#b3261e;--ok:#2e7d32;--gold:#a8741a}
+@media(prefers-color-scheme:dark){:root{--bg:#17150f;--fg:#f1ebdd;--card:#221f17;--line:#3b362a;--acc:#7fb0ee;--bad:#ff8a80;--ok:#81c784;--gold:#e0b050}}
+body{background:var(--bg);color:var(--fg);font:20px/1.5 Georgia,serif;margin:0;padding:16px}
+main{max-width:860px;margin:auto}
+h1{font-size:34px;margin:8px 0}h2{font-size:26px;margin:32px 0 8px;color:var(--acc)}
+.card{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:14px 18px;margin:12px 0}
+.big{font-size:44px;font-weight:bold;line-height:1}
+.row{display:flex;gap:12px;flex-wrap:wrap}.row>div{flex:1 1 180px}
+.bad{color:var(--bad)}.ok{color:var(--ok)}.gold{color:var(--gold)}
+table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left}
+.bar{height:16px;background:var(--bad);border-radius:8px}
+small{opacity:.75}
+</style></head><body><main>
+
+<h1>Elevate Swirls</h1>
+<p>My read of what holds the series back, and the fixes in order. Based on files, ledger and notes. <b>I have not re-watched the films for this page.</b></p>
+
+<div class="card"><b>The short answer</b><br>
+Quality is not the problem. <b>Rework and blind spots are.</b>
+We re-draw the same defects again and again, and nobody outside has seen one episode.</div>
+
+<h2>1. Rework is the biggest cost</h2>
+<div class="card">
+<p>Rejected files kept in each episode folder (<code>SUPERSEDED</code>):</p>
+<table>
+<tr><td>Ep 13 Cross That Wasn't His</td><td><div class="bar" style="width:100%"></div></td><td><b class="bad">70</b></td></tr>
+<tr><td>Ep 11 Where Are the Nine</td><td><div class="bar" style="width:23%"></div></td><td><b>16</b></td></tr>
+<tr><td>Ep 12 Ye Are Not All Clean</td><td><div class="bar" style="width:6%"></div></td><td>4</td></tr>
+<tr><td>Ep 7 / Ep 10</td><td><div class="bar" style="width:4%"></div></td><td>2 / 1</td></tr>
+<tr><td>Ep 1, 2, 4, 5, 8, pilots</td><td></td><td class="ok">0</td></tr>
+</table>
+<p><small>Zero may just mean the old ones were not kept. Treat it as a hint.</small></p>
+<p><b>Ep 13 repeats one defect:</b> the cross draws as an X (saltire) on at least 6 of 9 pages. Also stray digits, garbled captions, figures that vanish in the clip, and panels that wrap.
+Each is found <i>after</i> paying for the render.</p>
+<p>Money (ledger, rough, names are split): ep 13 about $19, ep 8 about $24, ep 11 about $14, ep 5 about $10, ep 4 about $5.</p>
+</div>
+
+<h2>2. Gates were put off. The wait is over.</h2>
+<div class="card">
+<p>The pipeline doc says: <i>"build real gates once 4-5 episodes have shipped clean."</i> We have 12 finished. The defect list is long enough to turn into checks.</p>
+<p>Today <code>swirls_verify.py</code> has cover-lighting, text-lock, refs-exist, word-count and freeze-budget checks, plus a Vision audit. The Vision audit is "no auto-retry, a human looks".
+That is why the cross went wrong 6 times.</p>
+</div>
+
+<h2>3. Nobody outside has seen it</h2>
+<div class="card">
+<p><span class="big bad">0</span> Swirls episodes posted. 12 finished. All held until 30.</p>
+<p>So we guess at the hook, the cover hold (Jacob's Ladder opens on a ~10 s still), the CTA, and the thumbnail. No retention data at all. This is the largest unknown.</p>
+</div>
+
+<h2>4. Smaller drags</h2>
+<div class="card">
+<ul>
+<li><b>Same ending shape</b> in the first 4 episodes ("Ready to / Will you / Come and see"). Fixed in later words, not checked by a gate.</li>
+<li><b>Bridge needs a live session.</b> OpenArt has no API, so a build is never unattended and one stall blocks everything.</li>
+<li><b>Motion is judged by eye or by 3 frames.</b> Pixel-diff and first/last-frame checks are known, but not automatic.</li>
+<li><b>Score and SFX</b> were fixed by hand each time (dead air, duck). The two-part score and the felt-piano direction are already proven, so they can become defaults.</li>
+<li><b>Open bugs:</b> ep 12 "cuts off", pilot 02 has no <code>episode.py</code>, Jacob's Ladder thumbnail shows the title twice.</li>
+</ul>
+</div>
+
+<h2>5. The plan</h2>
+<div class="card">
+<table>
+<tr><th>#</th><th>Fix</th><th>Cost</th></tr>
+<tr><td>1</td><td><b>Defect-to-check.</b> Turn the repeat defects (X-cross, stray digits, garbled caption, vanishing figure, panel wrap, doubled title) into automatic pre-flight and post-render checks, so a bad frame never reaches the clip stage.</td><td class="ok">$0</td></tr>
+<tr><td>2</td><td><b>Shape refs for hard props.</b> The cross, a bier, a ladder: draw one approved side-on ref first, chain it into every page. Use a camera-angle change after 2 failed word fixes.</td><td class="ok">$0 to set up</td></tr>
+<tr><td>3</td><td><b>Cheap draft pass.</b> Render a page on the cheap model first, check composition, then pay for the final.</td><td class="gold">saves money</td></tr>
+<tr><td>4</td><td><b>Motion check built in.</b> Pixel-diff, first and last frame, on every clip. Fail = $0 push-in, no re-prompt.</td><td class="ok">$0</td></tr>
+<tr><td>5</td><td><b>Words gate on every episode.</b> Blind panel with a Fable seat, plus an ending-shape check against the shipped list.</td><td class="ok">CLI use only</td></tr>
+<tr><td>6</td><td><b>Real-world test.</b> Post 2 or 3 finished episodes, watch the first 48 hours, then judge hook and cover. This is <i>your</i> call because it ends the 30-episode hold early.</td><td class="gold">your decision</td></tr>
+<tr><td>7</td><td><b>Make the bridge batchable.</b> Queue a whole episode's requests, service them in one pass.</td><td class="ok">$0</td></tr>
+</table>
+</div>
+
+<h2>6. What I am not sure of</h2>
+<div class="card">
+<ul>
+<li>Whether the <i>story</i> and <i>look</i> are better than other Bible channels. Only viewers can say.</li>
+<li>Whether "0 rejects" on old episodes is real.</li>
+<li>Ledger totals are rough. Rows use many names.</li>
+</ul>
+</div>
+
+<div class="card"><b>My pick:</b> do 1, 2, 4 first ($0). Then run a blind panel (Fable seat plus the AI panel) on this plan before we build. Say yes to the panel?</div>
+
+</main></body></html>

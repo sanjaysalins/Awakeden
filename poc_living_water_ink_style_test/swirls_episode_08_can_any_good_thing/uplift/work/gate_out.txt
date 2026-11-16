@@ -1,0 +1,15 @@
+PASS G-AUDIO audio bit-identical :: shipped MD5=2db1f1d3e9cea547526febf4fb36be82 / new MD5=2db1f1d3e9cea547526febf4fb36be82
+PASS G-FRAMES 1921 frames 1080x1920 :: 1080,1920,1921; dur 64.033s vs shipped 64.033s
+PASS G-SLOT every clip >= slot+0.05 s, trim only (no tpad/reverse/setpts/zoompan in cut_uplift.py) :: S01 4.00/3.60; S02 5.04/3.60; S03 5.04/4.97; S04 8.04/7.13; S05 3.04/1.90; S06 10.04/9.10; S07 3.04/2.40; S08 9.04/7.00; S09 5.04/4.97; S10 9.04/7.33; S11 5.04/4.00; S12 5.04/4.20; S13 4.00/3.83
+PASS G-MOTION new clips: zoom 1.000+-0.010, not frozen, baked text first==last :: f03_8s: zoom 1.000 meandiff 2.21 title 4.10 caption 1.84 blue-motif px 288->336 used 172f ok | f03b_3s: zoom 1.001 meandiff 1.39 title 0.71 caption 0.80 blue-motif px 0->0 used 47f ok | f04_10s: zoom 1.000 meandiff 0.96 title 3.98 caption 4.31 blue-motif px 10636->9327 used 219f ok | f05a_3s: zoom 1.000 meandiff 1.26 title 2.77 caption 2.14 blue-motif px 2704->3160 used 59f ok | f05b_5s: zoom 1.000 meandiff 1.09 title 2.65 caption 3.04 blue-motif px 1088->1164 used 120f ok | f07_5s: zoom 1.000 meandiff 0.35 title 1.60 caption 1.08 blue-motif px 10815->11077 used 102f ok
+PASS G-KEEPOUT no stroke on baked text / faces / blue motif (real frames, <3% px) :: M1: 618px, motif/text overlap 0.0% (dark-ink 0.0%) ok | M2: 3957px, motif/text overlap 0.0% (dark-ink 0.0%) ok | M3: 14924px, motif/text overlap 0.0% (dark-ink 0.0%) ok | M4: 2691px, motif/text overlap 0.1% (dark-ink 4.2% crossing leaf art, allowed) ok | M5: 655px, motif/text overlap 0.0% (dark-ink 0.0%) ok | M6: 1626px, motif/text overlap 0.0% (dark-ink 0.0%) ok | M7: 4688px, motif/text overlap 0.0% (dark-ink 0.0%) ok | M8: 1535px, motif/text overlap 0.0% (dark-ink 5.1% crossing leaf art, allowed) ok
+   M1 "good"@9.28 start f276 (-2f) ok
+   M2 "no"@17.88 start f534 (-2f) ok
+   M3 "Before"@22.38 start f669 (-2f) ok
+   M4 "I saw thee"@26.9 start f805 (-2f) ok
+   M5 "fell."@32.12 start f962 (-2f) ok
+   M6 "Son"@35.64 start f1067 (-2f) ok
+   M7 "ascending descending"@49.0 start f1468 (-2f) ok
+   M8 "your"@59.16 start f1773 (-2f) ok
+   spacing>=90f ok count 8<=8; first 276f>=30; last mark ends f1801 <= 1831 (last 3 s quiet); covers S01 0-108 / S13 1806+ untouched
+PASS G-MARKS word-tied, spacing, count, quiet zones :: 8 marks; all within -3..0 f of the word

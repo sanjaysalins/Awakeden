@@ -1,0 +1,49 @@
+# EVIDENCE PACK: a vertical short film (YouTube Shorts / Reels), 54 seconds
+
+**What it is:** a narrated short for a channel that finds Jesus across the whole Bible, for a worldwide audience. Bold flat-colour cartoon pictures (orange, teal, cream), gently animated. A narrator voice and a separate voice for Jesus's own words. Soft piano music, quiet street sounds. English only.
+**Title the viewer sees:** They Said It Was Too Late. Jesus Kept Walking.
+**Your job:** judge the finished film as a viewer would experience it. Below is every spoken line with its time, and what is on screen while it is spoken. Words in a "TEXT BOX" are typed on screen in a see-through rounded box; a small coloured label on the box says who speaks; a small gold label gives the Bible verse.
+
+## LINE 1 (0.0 s)
+**SPOKEN (narrator):** A father begs Jesus: my little girl is dying.
+- on screen 0.0-5.5 s: A sunny village street. A man kneels, hands pressed together, looking up at Jesus (white robe, blue mantle), who bends towards him. Onlookers behind.
+- TEXT BOX from the first frame: label "A father begs Jesus" / "My little girl / is dying."
+
+## LINE 2 (5.4 s)
+**SPOKEN (narrator):** On the road, the news comes: "Thy daughter is dead: why troublest thou the Master any further?"
+- on screen 5.5-13.6 s: The street, crowded. The father clutches his chest, mouth open in shock; a man grips his shoulder; Jesus stands just behind, watching.
+- TEXT BOX 7.9-11.9 s: label "The messenger" / "Thy daughter / is dead" / gold label "Mark 5:35".
+
+## LINE 3 (12.3 s)
+**SPOKEN (narrator):** Too late. Jesus heard it, and did not turn back.
+- on screen 12.4 s: a dark box "Too late." drops in, large, low on the screen. It stays as the picture changes at 13.6 s to: Jesus walking forward down a dusty village road at sunset, the father beside him, followers behind.
+- 15.0 s (on "did not turn back"): one orange brush stroke crosses out "Too late." and keeps going off the right edge of the screen. The box dims, shrinks and fades by 17 s.
+
+## LINE 4 (17.5 s)
+**SPOKEN (Jesus):** "Be not afraid, only believe."
+- on screen: the same road, Jesus walking.
+- TEXT BOX 17.6-20.4 s, top of screen: label "Jesus" / "Be not afraid, / only believe." / gold label "Mark 5:36".
+
+## LINE 5 (19.9 s)
+**SPOKEN (narrator):** He went into the room with her father and mother, and took her by the hand.
+- on screen 20.2-25.3 s: a dim room lit by small oil lamps. A girl lies still on a mat, eyes closed. Jesus kneels and holds her hand. The mother and father stand behind, hands pressed to their faces. No text.
+
+## LINE 6 (25.4 s)
+**SPOKEN (Jesus):** "Talitha cumi."
+- on screen 25.3-32.3 s: the same room, closer. Jesus kneels holding her hand; her eyes are now open and she begins to rise.
+- TEXT BOX 25.3-32.3 s, top: label "Jesus" / "Talitha cumi." / gold label "Mark 5:41".
+
+## LINE 7 (27.0 s)
+**SPOKEN (narrator):** "Damsel, I say unto thee, arise." Little girl, get up. She got up and walked.
+- on screen 32.3-37.6 s: the girl (about 12) walks barefoot across the mat; the mother and father stare, amazed, hands raised; Jesus stands behind, smiling.
+- TEXT BOX 32.3-34.7 s: "Little girl, get up." Then TEXT BOX 34.9-37.5 s: "She got up / and walked."
+
+## LINE 8 (37.4 s)
+**SPOKEN (narrator):** The news had said it was over. Jesus had heard it, and gone on.
+- on screen 37.6-43.1 s: the mother and father kneel and hug their daughter, all three crying and smiling; she holds a small bowl of food. No text.
+
+## LINE 9 (41.9 s)
+**SPOKEN (narrator):** If you hear that it is too late, hear Him instead: "Be not afraid, only believe."
+- on screen 43.1-53.9 s: outdoors, golden light. Jesus has his hand on the father's shoulder; the father has tears on his face; Jesus smiles at him.
+- 44.3 s: a small dark box "Too late." appears. 45.4 s (on "hear Him instead"): the orange stroke crosses it out again and runs off the edge; the box slides up, shrinks and fades.
+- 48.2 s to the end: big TEXT BOX: label "Jesus" / "Be not afraid, / only believe." / gold label "Mark 5:36". The voice ends at 50.8 s; the words and picture hold silently for 3 more seconds, then the screen fades to deep teal. No end card.

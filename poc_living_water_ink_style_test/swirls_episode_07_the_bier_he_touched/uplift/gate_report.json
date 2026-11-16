@@ -1,0 +1,34 @@
+{
+ "G-AUDIO audio bit-identical": {
+  "pass": true,
+  "evidence": "shipped MD5=666bd070532f0f8cb3924a69cc58625a / new MD5=666bd070532f0f8cb3924a69cc58625a"
+ },
+ "G-FRAMES 2157 frames 1080x1920": {
+  "pass": true,
+  "evidence": "1080,1920,2157; dur 71.900s vs shipped 71.900s"
+ },
+ "G-SLOT every clip >= slot+0.05 s, trim only (no tpad/reverse/setpts/zoompan in cut_uplift.py)": {
+  "pass": true,
+  "evidence": "S01 8.04/7.70; S02 6.04/5.30; S03 5.04/4.00; S04 3.04/2.70; S05 7.04/5.80; S06 5.04/4.50; S07 5.04/4.00; S08 7.04/6.20; S09 5.04/4.40; S10 6.04/5.97; S11 6.04/5.93; S12 5.04/4.80; S13 5.04/4.70; S14 7.04/5.90"
+ },
+ "G-MOTION new clips: zoom 1.000+-0.010, not frozen, baked text first==last": {
+  "pass": true,
+  "evidence": "f01b_5s: zoom 1.000 meandiff 1.80 title 2.01 caption 2.30 blue-motif px 360->280 used 97f ok | f02a_3s: zoom 1.001 meandiff 2.58 title 2.69 caption 1.54 blue-motif px 0->0 used 66f ok | f03a_5s: zoom 1.000 meandiff 1.45 title 2.47 caption 2.05 blue-motif px 328->572 used 109f ok | f03_5s: zoom 0.998 meandiff 0.87 title 2.26 caption 1.66 blue-motif px 32->76 used 97f ok | f03b_7s: zoom 1.000 meandiff 0.97 title 2.16 caption 1.40 blue-motif px 420->596 used 150f ok | f04_5s: zoom 1.000 meandiff 0.96 title 2.13 caption 1.21 blue-motif px 4604->3980 used 107f ok | f06b_5s: zoom 1.001 meandiff 1.85 title 3.39 caption 1.31 blue-motif px 0->0 used 116f ok | f06c_5s: zoom 1.000 meandiff 3.17 title 2.61 caption 1.57 blue-motif px 1724->2360 used 114f ok | back_7s: zoom 1.000 meandiff 0.34 title 1.01 caption 2.05 blue-motif px 187980->158888 used 143f ok"
+ },
+ "G-KEEPOUT no stroke on baked text / faces / blue motif (real frames, <3% px)": {
+  "pass": true,
+  "evidence": "M1: 595px, motif/text overlap 0.0% (dark-ink 0.2% crossing leaf art, allowed) ok | M2: 2282px, motif/text overlap 0.0% (dark-ink 10.3% crossing leaf art, allowed) ok | M3: 629px, motif/text overlap 0.0% (dark-ink 0.0%) ok | M4: 2654px, motif/text overlap 1.1% (dark-ink 1.1%) ok | M5: 3173px, motif/text overlap 0.0% (dark-ink 0.0%) ok"
+ },
+ "_marks_detail": [
+  "M1 \"distance.\"@13.9 start f415 (-2f) ok",
+  "M2 \"toward\"@18.06 start f540 (-2f) ok",
+  "M3 \"still.\"@32.44 start f971 (-2f) ok",
+  "M4 \"Arise.\"@43.9 start f1315 (-2f) ok",
+  "M5 \"Death\"@51.6 start f1546 (-2f) ok",
+  "spacing>=90f ok count 5<=8; first 415f>=30; last mark ends f1690 <= 2067 (last 3 s quiet); both covers untouched"
+ ],
+ "G-MARKS word-tied, spacing, count, quiet zones": {
+  "pass": true,
+  "evidence": "5 marks; all within -3..0 f of the word"
+ }
+}

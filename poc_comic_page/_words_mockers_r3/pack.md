@@ -1,0 +1,37 @@
+# FILM-ONLY PACK (what the viewer hears and sees)
+Format: a 60-65 second vertical (9:16) Bible short for YouTube Shorts / TikTok, narrated, comic-style pictures; the quoted Bible lines also appear in speech balloons; first on-screen card (first 2.6 seconds): WHO WROTE THE MOCKERY?
+Title shown on upload: The Mockers' Words (Psalm 22:7-8)
+One extra on-screen card: DELIVER = RESCUE (during the first Psalm quote).
+Voices: [narrator], [david] (David's Psalm words), [mocker] (the crowd's Matthew taunts). Bible quotes are KJV; references are in brackets.
+
+## EVERYTHING THE VIEWER HEARS (numbered lines)
+1. [narrator] People at the cross shout at Jesus, the Son of God. Listen.
+2. [mocker] "He trusted in God; let him deliver him now" [Matthew 27:43]
+3. [narrator] Deliver means rescue. Now, a thousand years earlier, a king named David. People laugh at him too, and he writes down what they say.
+4. [david] "He trusted on the LORD that he would deliver him" [Psalm 22:8]
+5. [narrator] Almost the same words, a thousand years apart. People passing by shout one more thing.
+6. [mocker] "If thou be the Son of God, come down from the cross" [Matthew 27:40]
+7. [narrator] If you are God's Son, come down. He could have. Jesus had said that no one takes His life from Him. He gives it Himself. So He stayed. And He prayed for them.
+8. [narrator] "Father, forgive them; for they know not what they do." [Luke 23:34]
+9. [narrator] Near its end, David's song says people from every nation will turn to God.
+10. [david] "shall remember and turn unto the LORD" [Psalm 22:27]
+11. [narrator] You can turn to the One who stayed.
+
+## KJV TEXT SUPPLIED FOR CHECKING (authority)
+Psalms 22:6 But I {am} a worm, and no man; a reproach of men, and despised of the people.
+Psalms 22:7 All they that see me laugh me to scorn: they shoot out the lip, they shake the head, {saying}, {shoot...: Heb. open}
+Psalms 22:8 He trusted on the LORD {that} he would deliver him: let him deliver him, seeing he delighted in him. {He trusted...: Heb. He rolled himself on} {seeing...: or, if he delight in}
+Psalms 22:9 But thou {art} he that took me out of the womb: thou didst make me hope {when I was} upon my mother's breasts. {didst...: or, kept me in safety}
+Psalms 22:27 All the ends of the world shall remember and turn unto the LORD: and all the kindreds of the nations shall worship before thee.
+Psalms 22:28 For the kingdom {is} the LORD'S: and he {is} the governor among the nations.
+Matthew 27:39 And they that passed by reviled him, wagging their heads,
+Matthew 27:40 And saying, Thou that destroyest the temple, and buildest {it} in three days, save thyself. If thou be the Son of God, come down from the cross.
+Matthew 27:41 Likewise also the chief priests mocking {him}, with the scribes and elders, said,
+Matthew 27:42 He saved others; himself he cannot save. If he be the King of Israel, let him now come down from the cross, and we will believe him.
+Matthew 27:43 He trusted in God; let him deliver him now, if he will have him: for he said, I am the Son of God.
+Matthew 27:44 The thieves also, which were crucified with him, cast the same in his teeth.
+Matthew 26:53 But how then shall the scriptures be fulfilled, that thus it must be?
+John 10:17 Therefore doth my Father love me, because I lay down my life, that I might take it again.
+John 10:18 No man taketh it from me, but I lay it down of myself. I have power to lay it down, and I have power to take it again. This commandment have I received of my Father.
+Luke 23:34 Then said Jesus, Father, forgive them; for they know not what they do. And they parted his raiment, and cast lots.
+

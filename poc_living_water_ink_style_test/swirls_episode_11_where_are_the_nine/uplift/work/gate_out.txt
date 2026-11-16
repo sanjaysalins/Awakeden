@@ -1,0 +1,12 @@
+PASS G-AUDIO audio bit-identical :: shipped MD5=5ea10c3ad7f753e0575c9645ec2cc158 / new MD5=5ea10c3ad7f753e0575c9645ec2cc158
+PASS G-FRAMES 2507 frames 1080x1920 :: 1080,1920,2507; dur 83.567s vs shipped 83.567s
+PASS G-SLOT every clip >= slot+0.05 s, trim only (no tpad/reverse/setpts/zoompan in cut_uplift.py) :: S01 4.04/3.13; S02 6.04/5.97; S03 4.04/3.50; S04 6.04/5.93; S05 6.04/5.97; S06 4.04/2.10; S07 4.04/3.10; S08 6.04/5.97; S09 7.04/6.03; S10 6.04/5.50; S11 4.04/3.40; S12 5.04/4.60; S13 7.04/6.90; S14 5.04/4.50; S15 8.04/7.90; S16 4.04/3.20; S17 6.04/5.87
+FAIL G-MOTION new clips: zoom 1.000+-0.010, not frozen, baked text first==last, motif px +-20% :: F01B: zoom 1.000 meandiff 0.31 title 1.99 caption 1.73 blue-motif px 36->40 used 85f ok | F03: zoom 1.000 meandiff 2.73 title 2.92 caption 1.94 blue-motif px 0->0 used 144f ok | F04B: zoom 0.999 meandiff 0.87 title 2.15 caption 0.70 blue-motif px 0->32 used 75f CHECK | F05: zoom 0.999 meandiff 2.45 title 1.69 caption 1.10 blue-motif px 1164->1272 used 144f ok | F06: zoom 1.000 meandiff 1.05 title 7.88 caption 5.72 blue-motif px 5948->7020 used 146f CHECK | F07: zoom 1.000 meandiff 0.32 title 1.98 caption 0.72 blue-motif px 168->424 used 133f CHECK | F07B: zoom 1.000 meandiff 0.27 title 2.00 caption 1.17 blue-motif px 0->0 used 83f ok | F09B: zoom 0.999 meandiff 3.01 title 2.50 caption 1.83 blue-motif px 396->24 used 109f CHECK | F10: zoom 1.001 meandiff 1.06 title 3.08 caption 1.97 blue-motif px 5052->6412 used 191f CHECK | F10B: zoom 1.000 meandiff 0.73 title 3.60 caption 2.57 blue-motif px 9620->7516 used 78f CHECK
+PASS G-KEEPOUT no stroke on baked text / faces / blue motif (real frames) :: M1: 1687px, ink/motif overlap 0.0% (limit 3%) ok | M2: 8579px, ink/motif overlap 0.0% (limit 3%) ok | M3: 8119px, ink/motif overlap 0.0% (limit 3%) ok | M4: 1109px, ink/motif overlap 0.0% (limit 8%) ok | M5: 817px, ink/motif overlap 0.0% (limit 8%) ok
+   M1 "distance,"@11.62 start f347 (-2f) gone by f373 (shot ends f378) ok
+   M2 "Nine"@29.94 start f896 (-2f) gone by f1065 (shot ends f1070) ok
+   M3 "nine?"@49.5 start f1483 (-2f) gone by f1513 (shot ends f1518) ok
+   M4 "stranger."@54.7 start f1639 (-2f) gone by f1651 (shot ends f1656) ok
+   M5 "faith."@72.34 start f2168 (-2f) gone by f2230 (shot ends f2235) ok
+   spacing>=90f ok; count 5<=8; first 347f>=30; last mark gone by f2230; covers + last 3 s untouched ok
+PASS G-MARKS word-tied, spacing, count, quiet zones :: 5 marks; all within -3..0 f of the word, none inside the last 5 f of a shot

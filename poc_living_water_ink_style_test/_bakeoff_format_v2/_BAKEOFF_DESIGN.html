@@ -1,0 +1,87 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Swirls Bake-off Design</title>
+<style>
+:root{--bg:#faf6ee;--fg:#1d1a16;--card:#fff;--line:#d9cfbd;--acc:#1f4e8c;--bad:#b3261e;--ok:#2e7d32;--gold:#a8741a}
+@media(prefers-color-scheme:dark){:root{--bg:#17150f;--fg:#f1ebdd;--card:#221f17;--line:#3b362a;--acc:#7fb0ee;--bad:#ff8a80;--ok:#81c784;--gold:#e0b050}}
+body{background:var(--bg);color:var(--fg);font:20px/1.5 Georgia,serif;margin:0;padding:16px}main{max-width:900px;margin:auto}
+h1{font-size:34px}h2{font-size:26px;color:var(--acc);margin-top:28px}.card{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:12px 18px;margin:12px 0}
+.ok{color:var(--ok)}.bad{color:var(--bad)}.gold{color:var(--gold)}table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}small{opacity:.75}
+</style></head><body><main>
+<h1>Better new episodes + a bake-off to prove it</h1>
+<p>Design only. Nothing built, nothing spent, no current episode touched.</p>
+
+<h2>1. What makes a new episode better</h2>
+<div class="card"><table>
+<tr><th>Lever</th><th>New rule (to test)</th></tr>
+<tr><td><b>First 2 s</b></td><td>Open on the picture, hook already spoken. Title card ≤1.5 s, or title moves to the end.</td></tr>
+<tr><td><b>Length</b></td><td>Decide a real target (45–60 s). Today they run 56–106 s.</td></tr>
+<tr><td><b>Pages</b></td><td>5–6 pages, not 9. Cut a page if the big picture does not carry a beat alone.</td></tr>
+<tr><td><b>Rhythm</b></td><td>The 3 small panels become quick cuts, so something changes every ~3 s.</td></tr>
+<tr><td><b>Phone test</b></td><td>Cover the page chrome: does the big picture still tell the beat?</td></tr>
+<tr><td><b>Muted test</b></td><td>Story must be understood with sound off (Reels and Facebook autoplay muted).</td></tr>
+<tr><td><b>Landing</b></td><td>Last frame rhymes with the first (loop). New ending shape. Mechanical check against shipped endings.</td></tr>
+<tr><td><b>Quality</b></td><td>1080x1920. Fast-start wrap. Motion fallback = re-render, not push-in, on hook and landing.</td></tr>
+<tr><td><b>Fewer rejects</b></td><td>Hard-prop check at design time. One approved shape ref, tested on 1 page. Reject log with reason codes.</td></tr>
+</table></div>
+
+<h2>2. A great bake-off: the rules</h2>
+<div class="card"><ol>
+<li><b>One story, same words.</b> Hold the narration, voice, score and art constant. Only the <i>format</i> changes.</li>
+<li><b>Write the scoring before looking.</b> Metrics and the win rule are fixed first.</li>
+<li><b>Three layers, not one.</b> Numbers + blind panel + real viewers. A win needs 2 of 3.</li>
+<li><b>Paired, not pooled.</b> Compare arms of the <i>same</i> story. Never compare different stories.</li>
+<li><b>Error bars.</b> AI viewers are simulated. Real viewers are few. Say "likely", never "proved".</li>
+<li><b>Cost and your time count.</b> A winner that doubles your hours is not a winner.</li>
+</ol></div>
+
+<h2>3. Bake-off 1: the FORMAT <span class="ok">(about $0)</span></h2>
+<div class="card">
+<p><b>Story:</b> Ep 8 "Can Any Good Thing" (64 s, 0 rejects, no open bug). Re-cut from its <i>existing</i> stills and clips. No new generation. Copies go in a new folder; the shipped file is untouched.</p>
+<table>
+<tr><th>Arm</th><th>What changes</th></tr>
+<tr><td><b>A. Control</b></td><td>Today's format as shipped.</td></tr>
+<tr><td><b>B. Hook-first</b></td><td>Title ≤1.5 s, hook spoken at once, 6 pages.</td></tr>
+<tr><td><b>C. Rhythm</b></td><td>B + the 3 small panels used as cuts, change every ~3 s.</td></tr>
+<tr><td><b>D. Big-picture</b></td><td>No page chrome on interior beats. Big illustration full screen. Chrome only on the cover and ending. Loop ending.</td></tr>
+</table>
+<p><small>Honest limit: the 3 small panels are low-res crops, so C may look soft. D crops from clips made as whole pages. If a crop looks bad, that is itself a result.</small></p>
+</div>
+
+<h2>4. How each arm is judged</h2>
+<div class="card"><table>
+<tr><th>Layer</th><th>What</th><th>Cost</th></tr>
+<tr><td><b>1. Numbers</b></td><td>Time to first picture change · cover hold · seconds per cut · runtime · resolution · ending-shape match · my own build hours.</td><td class="ok">$0</td></tr>
+<tr><td><b>2. Blind panel</b></td><td>Fable seat + Claude, Codex, Grok, Sonnet, film-only, shuffled labels. Score: who/what/why (yes/no), "would I swipe at 3 s?", hook 0–10, muted-understood (yes/no), "does the end pay off?"</td><td class="ok">CLI use</td></tr>
+<tr><td><b>3. Real viewers</b></td><td>20–30 people on phones, each sees 2 arms in random order, muted once and with sound once. Pick one, note where they would swipe. Then, your call: post the winner and the control on different days, same hour, read 48 h numbers (swipe-away 0–3 s, % viewed, replays).</td><td class="gold">your time</td></tr>
+</table></div>
+
+<h2>5. Win rule (fixed now)</h2>
+<div class="card">
+<ul>
+<li>An arm wins if it beats Control in <b>2 of 3 layers</b>, and <b>no one</b> loses who/what/why.</li>
+<li>Ties go to the cheaper and faster arm to build.</li>
+<li>If Control wins, we stop changing the format and say so.</li>
+<li>If seats disagree, we report the split. No averaging it away.</li>
+</ul></div>
+
+<h2>6. Bake-off 2: stop the rejects <span class="gold">(needs a price + your yes)</span></h2>
+<div class="card">
+<p>Question: does a shape ref stop the X-cross?</p>
+<table>
+<tr><th>Arm</th><th>What</th></tr>
+<tr><td><b>Control</b></td><td>Current prompt, 5 cross stills.</td></tr>
+<tr><td><b>Shape ref</b></td><td>1 approved side-on ref chained, 5 cross stills.</td></tr>
+<tr><td><b>Angle first</b></td><td>Camera angle chosen before the first render, 5 stills.</td></tr>
+</table>
+<p>Count the X rate by eye <i>and</i> pixel check. Cost: about 15 stills, roughly $1.20 at about 40 credits each. Quote it first. Only after your own yes.</p>
+</div>
+
+<h2>7. Order</h2>
+<div class="card"><ol>
+<li>Blind panel on <i>this design</i> first (house rule). CLI only.</li>
+<li>Bake-off 1 ($0). Panel layer, then viewers.</li>
+<li>Bake-off 2 only with a quote and your yes.</li>
+<li>Write the winning rules into the Swirls skill for every new episode.</li>
+</ol></div>
+
+<div class="card"><b>My pick:</b> run the blind panel on this design first. It can fix a weak arm or a bad metric before we build anything.<br><b>Say yes?</b></div>
+</main></body></html>

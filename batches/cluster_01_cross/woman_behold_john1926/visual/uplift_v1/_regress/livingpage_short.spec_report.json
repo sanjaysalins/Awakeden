@@ -1,0 +1,435 @@
+{
+ "dod": {
+  "median_beat_s": 4.17,
+  "max_beat_s": 6.63,
+  "held_gt6s": [
+   6.63,
+   6.37
+  ],
+  "slams": 10,
+  "kling_or_punch_or_slam_pct": 100,
+  "tier1_pct": 8,
+  "reuse_violations": [],
+  "tier3_or_flagged_beats": [
+   10,
+   12
+  ],
+  "standard_3b": {
+   "stills_over_2_uses": {},
+   "stills_fullbleed_twice": {},
+   "fullbleed_beat_pct": 54,
+   "slop_caption_beats": []
+  },
+  "ramps": 1,
+  "whips": 2,
+  "flash_inserts": 2,
+  "fx_beats": 12,
+  "cut_ticks": false,
+  "beats": 13
+ },
+ "clips_build": true,
+ "beats": [
+  {
+   "beat": 1,
+   "t": [
+    0.0,
+    4.18
+   ],
+   "dur": 4.166667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "simeon_baby_temple"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 2,
+   "t": [
+    4.18,
+    7.84
+   ],
+   "dur": 3.666667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "mary_infant_shadow"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 3,
+   "t": [
+    7.84,
+    13.06
+   ],
+   "dur": 5.233333,
+   "tpl": "hero_band3",
+   "slams": 2,
+   "slugs": [
+    "golgotha_hill_wide"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 4,
+   "t": [
+    13.06,
+    15.75
+   ],
+   "dur": 2.666667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "mary_at_cross"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 5,
+   "t": [
+    15.75,
+    22.09
+   ],
+   "dur": 6.366667,
+   "tpl": "hero_frac3",
+   "slams": 2,
+   "slugs": [
+    "mary_and_john"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 6,
+   "t": [
+    22.09,
+    28.75
+   ],
+   "dur": 6.633333,
+   "tpl": "hero_band3",
+   "slams": 2,
+   "slugs": [
+    "face_on_cross"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 7,
+   "t": [
+    28.75,
+    31.87
+   ],
+   "dur": 3.133333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "us_under_cross_shadow"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 8,
+   "t": [
+    31.87,
+    36.22
+   ],
+   "dur": 4.366667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "nail_through_hand"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 9,
+   "t": [
+    36.22,
+    39.94
+   ],
+   "dur": 3.7,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "john_leads_home"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 10,
+   "t": [
+    39.94,
+    43.6
+   ],
+   "dur": 3.666667,
+   "tpl": "stack_h",
+   "slams": 1,
+   "slugs": [
+    "simeon_baby_temple",
+    "mary_infant_shadow"
+   ],
+   "sources": [
+    "kling",
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 3,
+    "style": "scrim",
+    "flag": true
+   }
+  },
+  {
+   "beat": 11,
+   "t": [
+    43.6,
+    49.22
+   ],
+   "dur": 5.633333,
+   "tpl": "hero_band3",
+   "slams": 2,
+   "slugs": [
+    "jesus_looks_down"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 12,
+   "t": [
+    49.22,
+    53.16
+   ],
+   "dur": 3.933333,
+   "tpl": "stack_h",
+   "slams": 1,
+   "slugs": [
+    "mary_at_cross",
+    "golgotha_hill_wide"
+   ],
+   "sources": [
+    "kling",
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 3,
+    "style": "scrim",
+    "flag": true
+   }
+  },
+  {
+   "beat": 13,
+   "t": [
+    53.16,
+    59.06
+   ],
+   "dur": 5.9,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "risen_mercy_hand"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  }
+ ],
+ "speed": [
+  {
+   "beat": 1,
+   "panel": 0,
+   "slug": "simeon_baby_temple",
+   "slot_s": 4.167,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 2,
+   "panel": 0,
+   "slug": "mary_infant_shadow",
+   "slot_s": 3.667,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 4,
+   "panel": 0,
+   "slug": "mary_at_cross",
+   "slot_s": 2.667,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 7,
+   "panel": 0,
+   "slug": "us_under_cross_shadow",
+   "slot_s": 3.133,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 8,
+   "panel": 0,
+   "slug": "nail_through_hand",
+   "slot_s": 4.367,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 9,
+   "panel": 0,
+   "slug": "john_leads_home",
+   "slot_s": 3.7,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 10,
+   "panel": 0,
+   "slug": "simeon_baby_temple",
+   "slot_s": 3.667,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 10,
+   "panel": 1,
+   "slug": "mary_infant_shadow",
+   "slot_s": 3.667,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 12,
+   "panel": 0,
+   "slug": "mary_at_cross",
+   "slot_s": 3.933,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 12,
+   "panel": 1,
+   "slug": "golgotha_hill_wide",
+   "slot_s": 3.933,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 13,
+   "panel": 0,
+   "slug": "risen_mercy_hand",
+   "slot_s": 5.9,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.17,
+   "boomerang": false
+  }
+ ]
+}

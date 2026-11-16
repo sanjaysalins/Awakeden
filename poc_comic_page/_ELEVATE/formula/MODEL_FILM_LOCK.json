@@ -1,0 +1,10 @@
+{
+ "locked": "2026-11-15",
+ "by": "owner ('yes' to: lock v3 as the model film)",
+ "film": "F:/slk/PycharmProjects/JesusInTheBible/poc_comic_page/_ELEVATE/arms/TP_S32_COMIC_v3.mp4",
+ "sha256": "89a36451c6daf7059a8b5d655cc6b4ac173e4b718e00984f9ff3f3cf2d9c5ba8",
+ "episode_json": "poc_comic_page/_ELEVATE/formula/build/thief_episode_v3.json",
+ "builder": "poc_comic_page/_ELEVATE/formula/build/build_thief_v3.py",
+ "gates": "poc_comic_page/_ELEVATE/formula/build/gates_out_v3.txt (G1-G11 ALL PASS)",
+ "note": "Model film for the comic-pages formula. Test copy; the uploaded film is not replaced."
+}

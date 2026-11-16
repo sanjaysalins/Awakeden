@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Formula Red Team</title>
+<style>
+body{background:#f7f3ea;color:#1d1a16;font:20px/1.5 Verdana,sans-serif;margin:0;padding:16px}
+main{max-width:980px;margin:auto}
+h1{font-size:34px;margin:8px 0}
+h2{font-size:26px;margin:34px 0 10px;border-bottom:3px solid #c9a24a}
+.card{background:#fff;border-radius:12px;padding:14px 18px;margin:10px 0;box-shadow:0 1px 4px #0002}
+.bad{border-left:8px solid #c62828}.good{border-left:8px solid #2e7d32}
+.seats{display:flex;flex-wrap:wrap;gap:8px}
+.seat{border-radius:8px;padding:6px 12px;font-weight:bold;color:#fff}
+.rev{background:#e65100}.fail{background:#c62828}
+table{border-collapse:collapse;width:100%}td{padding:7px 8px;border-bottom:1px solid #ddd;vertical-align:top}
+td.n{font-weight:bold;white-space:nowrap;width:80px}
+.big{font-size:26px;font-weight:bold}
+img{width:100%;border-radius:10px}
+</style></head><body><main>
+
+<h1>Red team: the Thief formula plan</h1>
+<div class="seats">
+<span class="seat rev">Fable: REVISE</span><span class="seat rev">Claude: REVISE</span>
+<span class="seat rev">Cursor: REVISE</span><span class="seat rev">Codex: REVISE</span>
+<span class="seat rev">Grok: REVISE</span><span class="seat fail">Gemini: FAIL</span>
+</div>
+<p class="big">Verdict: good idea, wrong order. Fix the plan first.</p>
+
+<h2>What they agree on</h2>
+<div class="card"><table>
+<tr><td class="n">5 of 6</td><td><b>Read the numbers first.</b> Was it the look, or just a famous story? Compare with Barabbas and Mockers before copying anything.</td></tr>
+<tr><td class="n">5 of 6</td><td><b>Pick how languages ship</b> before building. One video + subtitles? Or one video per language?</td></tr>
+<tr><td class="n">6 of 6</td><td><b>Don't lock "someday vs today".</b> That twist belongs to this one story. Copy it and every film sounds the same. Each film needs its own fresh true detail (the Barabbas lesson).</td></tr>
+<tr><td class="n">5 of 6</td><td><b>Fewer doodles: 1-2, not 3-5.</b> You once said doodles felt "forced" (Mary &amp; Martha). Drop the calendar (wrong era, needs reading). Never draw on Jesus' face. The ring has to move with the shot.</td></tr>
+<tr><td class="n">3 of 6</td><td><b>Cost was too low.</b> This film cost $0 only because it reused old clips. A new story needs new clips. Real price comes from the shot count.</td></tr>
+<tr><td class="n">4 of 6</td><td><b>Missing:</b> sound (score, effects), titles and thumbnails per language, a native speaker to check each language.</td></tr>
+</table></div>
+
+<h2>My mistakes (I checked these myself)</h2>
+<div class="card bad"><ul>
+<li>I said ~85 words. It is <b>74</b>.</li>
+<li>I said the English pill sits at the bottom. It sits <b>mid-screen</b>, over faces.</li>
+<li>The hook ends at <b>3.7 s</b>. My own "under 3 s" rule would fail the film you love.</li>
+<li>The English subtitle file is weak: <b>8 of 17 lines</b> show for less than 1.2 s (e.g. "Him." on its own).</li>
+</ul></div>
+
+<h2>Good news</h2>
+<div class="card good">
+<p>The English words are already a <b>separate layer</b> in the build. A clean, word-free copy of the Thief film costs <b>$0</b>. No design work is needed for that part.</p>
+</div>
+
+<h2>The fixed plan</h2>
+<div class="card"><table>
+<tr><td class="n">0</td><td><b>You:</b> send YouTube Studio numbers for Thief, Barabbas, Mockers (% watched, "stayed to watch", shares). Screenshots are fine.</td></tr>
+<tr><td class="n">1 · $0</td><td>Make a word-free copy of the Thief film. Fix the subtitle file. Add <b>one</b> Spanish subtitle file from the free 1909 Bible, checked by a Spanish speaker.</td></tr>
+<tr><td class="n">2 · $0</td><td>Fable designs <b>1-2</b> doodles for it. You see a mock first.</td></tr>
+<tr><td class="n">3</td><td>Real viewers test it: old film vs new. Read the numbers.</td></tr>
+<tr><td class="n">4 · $0</td><td>Write the formula from what won. <b>Fixed:</b> length, look, voices, 3 s hold. <b>Changes every time:</b> the hook shape, the twist, the doodle.</td></tr>
+<tr><td class="n">5 · price first</td><td>One new story, end to end. Full price quoted before any spend.</td></tr>
+</table></div>
+
+<p class="big">Next step is yours: can you send me the YouTube Studio numbers for Thief, Barabbas and Mockers?</p>
+<p style="font-size:15px;color:#666">Seat files: poc_comic_page\_ELEVATE\formula\_independent_review\ (2 runs + fable_redteam.md).</p>
+</main></body></html>

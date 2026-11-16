@@ -147,13 +147,18 @@ def compose_page(out, dur, panels, work):
     for k, pn in enumerate(panels):
         x, y, w, h = pn["rect"]
         clen = ce._clip_len(pn["path"])
-        parts.append(ce._temporal(k, dur, pn["motion"], clen, f"t{k}"))
+        at = pn.get("at", 0.0)
+        lazy = bool(pn.get("lazy")) and at > 0.01   # uplift: the clip starts playing when the panel ARRIVES
+        if lazy:
+            parts.append(ce._temporal(k, round(dur - at, 6), pn["motion"], clen, f"tl{k}", pn.get("t_in", 0.0)))
+            parts.append(f"[tl{k}]tpad=start_duration={at}:start_mode=clone[t{k}]")
+        else:
+            parts.append(ce._temporal(k, dur, pn["motion"], clen, f"t{k}", pn.get("t_in", 0.0)))
         if pn.get("anchors"):                       # fracture: crop this split at its anchor
             z, bx, by = pn["anchors"]
             parts.append(ce._panel_fill(f"t{k}", f"p{k}", w, h, z, bx, by))
         else:
             parts.append(ce._panel_fill(f"t{k}", f"p{k}", w, h, pn["zoom"], *pn["bias"]))
-        at = pn.get("at", 0.0)
         brd, M = wobble_border(pn["rect"], f"p{k}")
         bi = len(feed) + 1 + k                      # borders appended after bg
         parts.append(f"[{bi}:v]format=rgba[b{k}]")
@@ -529,6 +534,10 @@ def main():
         from pipeline import panel_variety as _pv
         if _pv.check(POOL, spec) != 0:
             _sys.exit(4)
+    for b in spec["beats"]:            # uplift T2: a beat may hold "parts" (mid-beat cuts). Old specs never do.
+        if "parts" in b:
+            b["clips"] = [c for pt in b["parts"] for c in pt["clips"]]
+            b["tpl"] = "parts"
     motion = spec.get("motion", "classic")
     assert motion in MOTION_PROFILES, f"unknown motion profile {motion!r} (pick: {sorted(MOTION_PROFILES)})"
     set_motion_profile(motion)
@@ -560,33 +569,37 @@ def main():
             return base.dyncam_clip(slug, cam) if not a.lint else live, "dyncam", cam, "pushin"
         return base.dyncam_clip(slug, "arc") if not a.lint else live, "dyncam", "arc", "pushin"
 
-    reused_segs = []
-    for i, b in enumerate(spec["beats"], 1):
-        tpl = b["tpl"]
-        f0, f1 = round(b["t"][0] * 30), round(b["t"][1] * 30)
-        dur = round((f1 - f0) / 30.0, 6)
-        t0 = b["t"][0]
-        rects = ce.panels_for(tpl); mode = ce.template_mode(tpl)
-        seg = WORK / f"seg_{i:02d}.mp4"
-        panels_info, slams, moving = [], [], []
-        skip_build = a.lint or (only and i not in only and seg.exists())
-        if skip_build and not a.lint:
-            reused_segs.append(i)
+    SPEEDLOG = []
 
+    def _speed(i, slug, k, vis_dur, clip, t_in, motion):
+        """uplift U4: record slot / clip / speed factor for every panel (read-only; no behaviour change)."""
+        clen = ce._clip_len(clip) - (t_in or 0.0)
+        stretched = vis_dur > clen + 0.05
+        fac = round(vis_dur / clen, 3) if stretched else 1.0
+        SPEEDLOG.append({"beat": i, "panel": k, "slug": slug, "slot_s": round(vis_dur, 3),
+                         "clip_s": round(clen, 3), "t_in": t_in or 0.0, "factor": fac,
+                         "boomerang": bool(stretched and motion == "static")})
+
+    def build_panels(i, b, tpl, t0, dur, seg, skip_build):
+        """Per-beat (or per-part, uplift T2) panel build. Body moved verbatim from the beat loop."""
+        rects = ce.panels_for(tpl); mode = ce.template_mode(tpl)
+        panels_info, slams, moving = [], [], []
         if mode == "single":                        # full-bleed hero: the locked engine path
             cdef = b["clips"][0]
             clip, src, cam, motion = source(cdef)
             anc = pf.load_anchor(POOL, cdef["slug"]) or pf.default_anchor()
             sol = pf.solve_crop((rects[0][2], rects[0][3]), PAGE, anc, motion)
             z = round(sol["zoom"] * cdef.get("zoom", 1.0), 3)
+            bias = tuple(cdef.get("bias", sol["bias"]))          # uplift: optional explicit crop bias
             if not skip_build:
                 ce.build_segment(seg, tpl, [{"kind": "clip", "path": str(clip), "motion": motion,
-                                             "bias": list(sol["bias"]), "zoom": z}], dur, None, WORK)
+                                             "bias": list(bias), "zoom": z, "t_in": cdef.get("t_in", 0.0)}], dur, None, WORK)
             msc = cl.SRC_SCALE["kling" if src == "kling" else f"dyncam_{cam}"]
-            panels_info.append(cl.panel_boxes(rects[0], PAGE, anc, sol["bias"], z, motion_scale=msc))
+            panels_info.append(cl.panel_boxes(rects[0], PAGE, anc, bias, z, motion_scale=msc))
             moving.append(src)
+            _speed(i, cdef["slug"], 0, dur, clip, cdef.get("t_in", 0.0), motion)
             base._reuse_check(crop_seen, reuse_all, cdef["slug"], i,
-                              (1.8, tuple(round(v, 1) for v in sol["bias"]), round(z, 1), motion))
+                              (1.8, tuple(round(v, 1) for v in bias), round(z, 1), motion))
         elif mode == "fracture":
             cdef = b["clips"][0]
             clip, src, cam, motion = source(cdef)
@@ -622,19 +635,62 @@ def main():
                 if not sol["fit"] and max(sol["lost"]) > 0.10:
                     fitwarn.append(f"  beat {i:>2} {tpl:10} panel {k} {cdef['slug']:24} {sol['reason']}")
                 at_rel = max(0.0, round(cdef.get("at", t0) - t0, 3))
-                panels.append({"path": str(clip), "motion": motion, "bias": sol["bias"],
+                bias = tuple(cdef.get("bias", sol["bias"]))      # uplift: optional explicit crop bias
+                lazy = bool(cdef.get("lazy")) and at_rel > 0.01
+                panels.append({"path": str(clip), "motion": motion, "bias": bias,
                                "zoom": z, "rect": r, "at": at_rel,
-                               "slide": cdef.get("slide", "left"), "flash": cdef.get("flash", True)})
+                               "slide": cdef.get("slide", "left"), "flash": cdef.get("flash", True),
+                               "t_in": cdef.get("t_in", 0.0), "lazy": lazy})
                 msc = cl.SRC_SCALE["kling" if src == "kling" else f"dyncam_{cam}"]
-                panels_info.append(cl.panel_boxes(r, PAGE, anc, sol["bias"], z, motion_scale=msc))
+                panels_info.append(cl.panel_boxes(r, PAGE, anc, bias, z, motion_scale=msc))
                 moving.append(src)
+                _speed(i, cdef["slug"], k, round(dur - at_rel, 6) if lazy else dur, clip,
+                       cdef.get("t_in", 0.0), motion)
                 if at_rel > 0.01:
                     slams.append((at_rel, cdef.get("sfx", "impact_low_boom") if cdef.get("flash", True) else None))
                 base._reuse_check(crop_seen, reuse_all, cdef["slug"], i,
-                                  (round(r[2] / r[3], 1), tuple(round(v, 1) for v in sol["bias"]),
+                                  (round(r[2] / r[3], 1), tuple(round(v, 1) for v in bias),
                                    round(z, 1), motion))
             if not skip_build:
                 compose_page(seg, dur, panels, WORK)
+
+        return panels_info, slams, moving, rects, mode
+
+    reused_segs = []
+    for i, b in enumerate(spec["beats"], 1):
+        tpl = b["tpl"]
+        f0, f1 = round(b["t"][0] * 30), round(b["t"][1] * 30)
+        dur = round((f1 - f0) / 30.0, 6)
+        t0 = b["t"][0]
+        seg = WORK / f"seg_{i:02d}.mp4"
+        skip_build = a.lint or (only and i not in only and seg.exists())
+        if skip_build and not a.lint:
+            reused_segs.append(i)
+        if "parts" in b:                            # uplift T2: mid-beat cuts, joined BEFORE caption/fx/exact frames
+            panels_info, slams, moving, pieces = [], [], [], []
+            fa, rects, mode = f0, [], "parts"
+            for n, pt in enumerate(b["parts"]):
+                fb = round(pt["until"] * 30) if n < len(b["parts"]) - 1 else f1
+                pdur = round((fb - fa) / 30.0, 6)
+                pt0 = t0 if n == 0 else fa / 30.0
+                pseg = WORK / f"seg_{i:02d}_p{n + 1}.mp4"
+                pi, sl, mv, prects, pmode = build_panels(i, pt, pt["tpl"], pt0, pdur, pseg, skip_build)
+                if not skip_build:
+                    pfx = pt.get("fx", b.get("fx"))
+                    if pfx:
+                        apply_fx(pseg, pdur, pfx, None if pmode == "single" else prects)
+                    base.exact_frames(pseg, pdur)
+                panels_info += pi; moving += mv
+                slams += [(round(s0 + (pt0 - t0), 3), nm) for s0, nm in sl]
+                pieces.append(pseg); fa = fb
+            if not skip_build:
+                pl = WORK / f"_parts_{i:02d}.txt"
+                pl.write_text("".join(f"file '{q.as_posix()}'\n" for q in pieces), encoding="utf-8")
+                run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(pl),
+                     "-c:v", "libx264", "-crf", "16", "-preset", "veryfast", "-pix_fmt", "yuv420p", "-r", "30", str(seg)],
+                    f"join parts {seg.name}")
+        else:
+            panels_info, slams, moving, rects, mode = build_panels(i, b, tpl, t0, dur, seg, skip_build)
 
         bb = b.get("border_break")
         if b.get("ramp"):
@@ -671,7 +727,7 @@ def main():
             src = e["sfx"] if "sfx" in e else TICK
             sfx_events.append((e["at"], src, e.get("gain", -13), 0.25, 0.08))
         fxd = b.get("fx")
-        if fxd and not skip_build:
+        if fxd and not skip_build and "parts" not in b:
             apply_fx(seg, dur, fxd, None if mode == "single" else rects)
         cp = b.get("cap")
         if (spec.get("cut_ticks") and not a.no_ticks and i > 1 and not bb
@@ -709,10 +765,11 @@ def main():
     from collections import Counter
     cnt, fb, slop = Counter(), Counter(), []
     for idx, b in enumerate(spec["beats"], 1):
-        for c in b["clips"]:
-            cnt[c["slug"]] += 1
-            if b["tpl"] == "full":
-                fb[c["slug"]] += 1
+        for utpl, uclips in ([(pt["tpl"], pt["clips"]) for pt in b["parts"]] if "parts" in b else [(b["tpl"], b["clips"])]):
+            for c in uclips:
+                cnt[c["slug"]] += 1
+                if utpl == "full":
+                    fb[c["slug"]] += 1
         cp = b.get("cap")
         if cp and cp["type"] == "caption" and any(
                 t in cp["text"] for t in (" - ", "...", "—", "–", "â€")):
@@ -742,6 +799,12 @@ def main():
         print(f"[animated-gate] NOTE: --only reused {len(reused_segs)} existing seg(s) "
               f"{reused_segs} — the gate scores the CURRENT clips dir, not the pixels "
               f"inside reused segs (a seg rendered before its clip landed stays dyncam)")
+    if SPEEDLOG:
+        worst = max((r["factor"] for r in SPEEDLOG), default=1.0)
+        print(f"\n[speed] {len(SPEEDLOG)} panel slots, worst factor {worst}x"
+              + "".join(f"\n  beat {r['beat']:>2} p{r['panel']} {r['slug']:24} slot {r['slot_s']:5.2f}s clip {r['clip_s']:5.2f}s"
+                        f" x{r['factor']}{' BOOMERANG' if r['boomerang'] else ''}"
+                        for r in SPEEDLOG if r['factor'] > 1.0 or r['boomerang']))
     if a.lint:                        # DoD prints BEFORE the gate can exit — a failing
         print(f"\nLINT DoD: {json.dumps(dod, indent=1)}")   # lint must never swallow the
     if not a.skip_animated_gate:      # diagnostics needed to repair the piece (red-team
@@ -787,7 +850,7 @@ def main():
         out.write_bytes(muxed.read_bytes())
 
     (POOL / (Path(a.spec).stem + "_report.json")).write_text(
-        json.dumps({"dod": dod, "clips_build": bool(a.clips), "beats": report},
+        json.dumps({"dod": dod, "clips_build": bool(a.clips), "beats": report, "speed": SPEEDLOG},
                    indent=1), encoding="utf-8")
     print(f"\nDoD: {json.dumps(dod)}")
     print(f"\nDONE -> {out}\n  file:///{str(out).replace(chr(92), '/')}")

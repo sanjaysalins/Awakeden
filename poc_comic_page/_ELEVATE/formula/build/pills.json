@@ -1,0 +1,142 @@
+[
+ {
+  "png": "pills/p00.png",
+  "f0": 3,
+  "f1": 111,
+  "box": [
+   70,
+   1000,
+   940,
+   184
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "Jesus promised paradise to a criminal. Why?"
+ },
+ {
+  "png": "pills/p01.png",
+  "f0": 114,
+  "f1": 207,
+  "box": [
+   70,
+   1000,
+   940,
+   184
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "Two criminals were dying on crosses beside Him."
+ },
+ {
+  "png": "pills/p02.png",
+  "f0": 208,
+  "f1": 327,
+  "box": [
+   70,
+   1000,
+   940,
+   184
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "If thou be Christ, save thyself and us."
+ },
+ {
+  "png": "pills/p03.png",
+  "f0": 327,
+  "f1": 447,
+  "box": [
+   70,
+   1000,
+   940,
+   184
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "One wanted off the cross. The other asked for very little."
+ },
+ {
+  "png": "pills/p04.png",
+  "f0": 448,
+  "f1": 561,
+  "box": [
+   70,
+   1000,
+   940,
+   184
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "Lord, remember me when thou comest into thy kingdom."
+ },
+ {
+  "png": "pills/p05.png",
+  "f0": 561,
+  "f1": 672,
+  "box": [
+   70,
+   1000,
+   940,
+   184
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "He asked to be remembered. Someday."
+ },
+ {
+  "png": "pills/p06.png",
+  "f0": 674,
+  "f1": 795,
+  "box": [
+   70,
+   1000,
+   940,
+   184
+  ],
+  "radius": 46,
+  "jesus": true,
+  "text": "To day shalt thou be with me in paradise."
+ },
+ {
+  "png": "pills/p07.png",
+  "f0": 796,
+  "f1": 879,
+  "box": [
+   70,
+   1000,
+   940,
+   122
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "Not someday. Today."
+ },
+ {
+  "png": "pills/p08.png",
+  "f0": 882,
+  "f1": 957,
+  "box": [
+   70,
+   1000,
+   940,
+   122
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "Not just remembered. With Him."
+ },
+ {
+  "png": "pills/p09.png",
+  "f0": 960,
+  "f1": 1059,
+  "box": [
+   70,
+   1000,
+   940,
+   184
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "You can ask Him to remember you too."
+ }
+]

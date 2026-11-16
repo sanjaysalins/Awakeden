@@ -21,3 +21,10 @@ All 3 seats agreed: keep the hook card "WHO WAS LOOKING FOR WHOM?"; quote only L
 - Next teaser: Next: another person the crowd pushed aside, and what Jesus did when He stopped. (no verse claimed)
 - Weak (seats): 85 s long for a Short, 40-55 s may sag (3/3); fast ending, Jericho -> cross in one line (3/3); "Son of man" named but not explained (Fable); "called a sinner" could sound like the narrator judging (Opus); "sycomore" vs fig art, keep public text "a tree" (Fable, Opus); 1 s silence may read as a glitch (Sonnet); search terms unverified (3/3). Simulated writers, not real viewers.
 - Odds (Opus, guess): 50%+ watch-through 25-45%; unknown until the 48-hour read.
+
+## UPDATE 2026-11-13 (owner: old title had no curiosity gap)
+Title round 2 (packaging/title_r2/): 5 blind writers (Fable, Codex, Grok, Gemini, Claude) -> 4 blind judges (Fable, Claude, Gemini, Codex).
+- NEW title (YouTube): Why Did Jesus Pick Him?   (Facebook: + "(Luke 19)")
+- NEW thumb words: ME? (by Zacchaeus) / YES. YOU. (by Jesus). Poster line, not a quote: no quote marks.
+- Scores (tap, newcomer): P1 8.8 · P2 7.5 · P3 6.5 · old 3.8. P1 picked by 3 of 4 judges. Owner: "your pick".
+- Risk: "pick" could read as earned; the film's "Jesus came to him first" answers it. AI judges, not real viewers.

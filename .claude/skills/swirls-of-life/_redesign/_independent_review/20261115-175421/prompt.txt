@@ -1,0 +1,606 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: plan
+
+LENS — judge this PLAN on (be specific, cite the exact step/claim):
+- Feasibility against the real codebase / tools (does it assume things that exist?).
+- Hidden risks, false assumptions, single points of failure.
+- Over-engineering / premature building before the idea is proven.
+- Missing steps, edge cases, or verification gaps.
+- Reuse: does it duplicate tools that already exist instead of reusing them?
+- Cost / spend and whether it's justified.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block (on the VERDICT line write exactly ONE word —
+PASS or REVISE or FAIL — never the list of options):
+
+VERDICT: <PASS or REVISE or FAIL>
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# Swirls of Life SHORT — repeatable pipeline + skill (DESIGN, phase 1)
+
+Written 2026-11-15. Design only. No code written, no file edited, nothing paid.
+Evidence: `F:\slk\PycharmProjects\JesusInTheBible\.claude\skills\swirls-of-life\_analysis\EPISODE_ANALYSIS_2026-11-15.md`,
+the current skill docs, the shared code in `F:\slk\PycharmProjects\JesusInTheBible\poc_living_water_ink_style_test\`,
+the Bartimaeus playbook, the ep16 handover, the memory files, and live read-only OpenArt
+calls (`openart_model_list`, `openart_model_form_get`, `openart_model_cost`) made today.
+
+Code root used below: `POC = F:\slk\PycharmProjects\JesusInTheBible\poc_living_water_ink_style_test`.
+Skill root: `SKILL = F:\slk\PycharmProjects\JesusInTheBible\.claude\skills\swirls-of-life`.
+
+Before this is built it must go through the plan gate
+(`independent_review.py "<this file>" --type plan`, plus a blind Fable seat). It is a new pipeline.
+
+---
+
+## 0. Facts checked today (OpenArt, live, $0)
+
+| Thing | Real value | Source |
+|---|---|---|
+| Kling 3 Omni image2video duration | any INTEGER 3-15 s | form schema |
+| Kling 3 Omni resolution | `std` (720p) / `pro` (1080p) / `4k` | form schema |
+| Kling 3 Omni price, sound off | pro = 35 cr/s (5 s = 175, 10 s = 350). std = 25 cr/s | cost quotes |
+| Kling 3 Omni prompt limit | 2,500 characters | form schema |
+| Kling 3 Omni end frame | optional `endFrame` exists (not used in v1) | form schema |
+| PixVerse V6 image2video | 1-15 s, up to 1080p, 30 cr/s at 1080p | form + quote |
+| nano-banana-pro image2image | 2K 9:16 = 40 cr, up to 14 refs | form + quote |
+| Account balance | about 8,000 cr (other sessions also spend from it) | cost call |
+
+Two things differ from the task brief and the old docs:
+- **A `veo3-1` model is now listed on OpenArt** (120 cr at its default config). It is NOT in our
+  bridge and NOT tested on this style. v1 does not use it. It is a bake-off candidate only.
+- `nano-banana-2-1` (25 cr) claims better in-image text than nano-banana-pro. Untested here.
+  v1 stays on nano-banana-pro (9 episodes of evidence). Bake-off candidate only.
+
+**A page slot always fits in one clip:** the longest slot this design allows is 9 s; Kling goes to 15 s.
+
+PixVerse V6 is ruled out for pages: 4 of 4 grid-page tests failed (it reads a page as a shot
+list and cuts or zooms into a panel; memory `feedback_pixverse_v6_prompting.md`). Seedance 2 is
+300-400 cr per clip, too dear. **One animator in v1: Kling 3 Omni, pro, sound off.**
+
+---
+
+## 1. Format spec
+
+### 1.1 The three sizes
+
+A "unit" is one picture with one clip: front cover, each interior page, back cover.
+Speech pace on this series, natural speed with quote pauses, is about 2.2 words per second
+(ep10 = 2.3, ep16 = 2.2). Word budgets below are a starting guide. **The real gate is the
+measured `narration.mp3` length, never the word count.**
+
+| Target | Voice (max) | Words (guide) | Interior pages | Front slot | Page slot (each) | Back slot (last line + 3.0 s hold) | Clips rendered (s) |
+|---|---|---|---|---|---|---|---|
+| **30 s** | 27.0 s | 55-62 | **4** | 2.0-3.0 s | ~5.3 s | ~6.5 s | 3 + 4x6 + 7 = 34 |
+| **45 s** (default) | 42.0 s | 88-98 | **6** | 2.0-3.0 s | ~5.9 s | ~7.0 s | 3 + 6x7 + 8 = 53 |
+| **60 s** | 56.0 s | 118-128 | **8** | 2.0-3.0 s | ~6.2 s | ~7.5 s | 3 + 8x7 + 8 = 67 |
+
+Hard limits (gates in section 2):
+- Total film = voice + 3.0 s hold. Must be 30.0-59.5 s (59.5 keeps it a Short everywhere).
+- Front slot 1.8-3.5 s. Interior slot 4.0-8.0 s (warn outside 4.5-7.5). Back slot <= 9.0 s.
+- `clip_duration = max(3, ceil(slot + 0.5))`. Every clip is longer than its slot. Trim the tail only.
+- Old episodes ran 10-13 s per page. That is why they needed freeze fill. This format is
+  about twice as fast per page, on purpose.
+
+### 1.2 Front cover inside the first 2 seconds
+
+Old covers were a silent 4-10 s title card. New rule:
+- **The voice starts at 0.0 s.** First spoken word starts by 0.40 s. The cover is under the hook.
+- The first line (the hook) is 8 words or fewer. The front slot is exactly that line, 2-3 s.
+  Then a hard cut to F01 on the next word start.
+- The cover is still a woodcut cover with a baked title. It is a real moving clip from frame 0
+  (one living motion: cloth, a stride, smoke). Not a still card.
+- **The baked title IS the thumbnail text.** Title and thumbnail are one curiosity unit, so the
+  title is chosen by the blind title round in step 1, BEFORE the cover is drawn. 2-4 words.
+  Subtitle = the real Scripture range the film covers.
+- Honest note: no real viewer has tested this. The elevate panel's "picture first, no title"
+  arm B exists but has no viewer data either. See open question 2.
+
+### 1.3 Back cover and the landing hold
+
+- The back cover carries the last spoken line and then the 3.0 s hold. It is ONE moving clip
+  that runs through the hold. The hold is never a frozen frame.
+- Baked closing words = the film's own last earned phrase (2-5 words). Subtitle = the NT verse.
+- Suggested, not forced: the back cover shows the front cover's place, changed (ep10's empty
+  room at dawn). That gives the loop a reason. The ending shape must differ from the last
+  three episodes (ledger in step 1).
+
+### 1.4 How the 3 small panels and the hero scene work in motion
+
+**Decision: NO panel inserts. No punch-in, no crop, no zoom into a panel, ever.**
+A punch-in on a panel is exactly the "zoom in cut" the owner hates, and it would be cut from
+a 300-pixel area. Each page plays as ONE locked-off full-page clip.
+
+So the panels must earn their place by design, not by the camera:
+1. **Panels are the set-up, the hero scene is the pay-off.** The three panel labels are three
+   words the narrator actually says on that page, in spoken order (ep10 F01: "no water / no
+   kiss / no oil" is the gold example). The eye goes 1, 2, 3, then down to the hero.
+2. **Panels show things, not faces:** an object, a place, hands, a silhouette. No named
+   character's face in a panel. (Tiny faces morph in clips and drift from refs.)
+3. **Panel motion is light only** (light warms, haze drifts, a flame wavers). At most ONE panel
+   per page may have real content motion, and never a panel holding a "loaded" object (a door,
+   a jar, a stone).
+4. **The hero scene always has real motion.** One human thing by one figure, done in the first
+   half of the clip, then small living motion (breath, cloth, flame) to the end. Never fully
+   still, so a trimmed tail never reads as a freeze.
+5. **A figure whose line is being spoken does not move and has a closed mouth in the still.**
+   The motion goes to the other figure, a prop, or the air. This is the only fix that ever
+   stopped Kling's speech bubbles (ep4, 5, 7, 8). It is a real tension with "heroes always
+   animated"; this rule resolves it: the scene moves, the speaker holds.
+
+Layout on a phone (thin evidence, flagged): Shorts and TikTok cover the bottom ~15% with their
+own text. The caption line must sit directly under the hero scene with blank paper below it.
+The still audit warns if the caption sits lower than 85% of the frame height.
+
+### 1.5 Baked text budget per page (short strings only)
+
+| String | Rule |
+|---|---|
+| Title `SEQ: ...` | same on every page, 2-4 words, letters only |
+| Frame number | `F01`..`F08`, the ONLY digits allowed on a page besides panel numbers 1 2 3 |
+| 3 panel labels | 1-3 words each, all different, each one a spoken word of that page |
+| Caption | ONE line only, 2-5 words. (Two-line captions failed 3 of 3 on Kling.) |
+| Corner note | optional, `NOTE: ` + 1-3 words |
+| Cover title / subtitle | 2-4 words / Scripture reference |
+
+Allowed characters in any baked string: letters, spaces, apostrophe, comma, full stop, `?`, `!`,
+and the colon in `SEQ:` / `NOTE:` and Scripture references. **No dash of any kind, no ellipsis,
+no quote marks, no digits** (except frame numbers and Scripture references on covers).
+
+### 1.6 Motif dosage map (blue and gold ink)
+
+Stages: 0 none, 1 first trace, 2 present, 3 woven through. Front cover = 0. Back cover = 3.
+
+| Pages | F01 | F02 | F03 | F04 | F05 | F06 | F07 | F08 |
+|---|---|---|---|---|---|---|---|---|
+| 4 | 0 | 1 | 2 | 3 | | | | |
+| 6 | 0 | 1 | 1 | 2 | 2 | 3 | | |
+| 8 | 0 | 0 | 1 | 1 | 2 | 2 | 3 | 3 |
+
+Rules: never goes down; starts at 0; ends at 3; every stage 1-3 appears; the first stage 2 or 3
+page is the gospel turn (the score splits there). This fixes "the swirls were missing in the
+middle pages" (ep2). An author may shift a step by one page with a written reason.
+
+Motif wording (stills): written inside the scene sentence, as "a brushstroke of blue ink" +
+ONE direction + flat properties (thin, matte, dry-edged, the width of a pen line). Never the
+words thread, cord, ribbon, drip, drop, bloom, flower, petal, ring, loop, pool, puddle, glow,
+sparkle. Never "Stage 2 dosage:" as a label (a label with a digit can be drawn). Evidence is
+thin: this wording worked on one page so far. The pilot episode is the real test.
+
+**In clips the motif is never mentioned at all.** Not "stays still", not "never spreads".
+Naming it invites change (memory `feedback_kling_negative_clauses_backfire.md`,
+`feedback_ink_motif_animation_unsafe.md`). A pixel gate checks it did not grow (SWS-G12).
+
+Dead-ink motifs (Stain, Fray) are OFF in the v1 template. They need a separate design pass.
+
+---
+
+## 2. The pipeline, step by step
+
+One runner drives everything: `POC\swirls_episode.py <episode_dir> <command>`.
+`<name>` below = the episode folder name, e.g. `swirls_episode_17_this_day`.
+Every owner page is a short HTML file in the episode folder. Never opened by the agent; the
+agent gives the full `file:///` link.
+
+**Spend guard (SWS-G0, applies to every paid command):** a paid command refuses to run unless
+`episode_state.json` holds an approval for that step with a credit cap, written by
+`swirls_episode.py <dir> approve <step> --cap <credits> --note "<owner's words, date>"`.
+The runner adds up credits from bridge responses and stops at the cap. A words lock or praise
+never writes an approval. Each spend also gets a row in `data\spend_ledger.jsonl`.
+
+Reroll rule for all paid steps: at most 2 rerolls per item inside the cap. Change ONE thing
+per reroll. After 2 fails: stop, change the lever (camera angle, remove the motion, shorten the
+clip), and show the owner. Never a third wording.
+
+| # | Step | Paid? | Owner gate |
+|---|---|---|---|
+| 0 | New episode folder | $0 | - |
+| 1 | Words + title + packaging card | $0 | pick (locks words only) |
+| 2 | Voice | ~$0.25-0.45 | yes to price, then approve by ear |
+| 3 | Timing + page plan | $0 | - (shown on the pictures quote page) |
+| 4 | Refs + north-star page | part of step 5 cap | approve north star |
+| 5 | Stills | ~$0.65-1.05 | yes to price, then approve stills |
+| 6 | Clips | ~$2.40-4.70 | yes to price |
+| 7 | Draft film (assembly) | $0 | approve the cut |
+| 8 | Score | ~$0.70-1.30 | yes to price, then approve by ear |
+| 9 | SFX | $0 | - |
+| 10 | SRT + final file | $0 | - |
+| 11 | Film red team | $0 | one page |
+| 12 | Packaging + publish pack | $0 | final pick, posting is the owner's call |
+
+4 paid asks per episode: voice, pictures, clips, music.
+
+### Step 0 — New episode ($0)
+- Tool: NEW `POC\swirls_new_episode.py --number 17 --slug this_day --seconds 45 --passage "Luke 23:39-43"`.
+- Out: `POC\<name>\` copied from `POC\_episode_template\`: `HANDOVER_RESUME.md`,
+  `episode_state.json`, `episode.py` (skeleton with the right page count and dosage map filled
+  in), `words\BRIEF.md`, `PAGE_PLAN.md`, `score_plan.json`, `sfx_plan.json`.
+- Gate: none.
+
+### Step 1 — Words, title, packaging card ($0)
+- In: passage, target seconds, `SKILL\ENDINGS_LEDGER.md` (every shipped closing line).
+- Process (house rule, words before money): `words\KJV.txt` fetched -> 4-5 blind writers
+  (Fable, Sonnet, Codex, Gemini, Grok), each from scratch -> `words\JUDGE_TABLE.md` ->
+  2-3 candidates -> blind guardrail panel (5 questions + global-audience test, film-words only,
+  Fable seat) -> fix what 2+ seats raise or any Bible point -> re-test once -> owner page.
+  Reuse `F:\slk\PycharmProjects\ArkAIology\episode-pipeline\guardrail_panel_template\` and
+  `F:\slk\PycharmProjects\MeekAndMighty\_pipeline\narration_clarity_template\`.
+- The brief gives writers the shape: N+2 short lines, one line per unit. Line 1 = hook,
+  8 words or fewer. Middle lines 9-18 words. Last line 10 words or fewer and it lands on Jesus
+  with a word earned from the passage's own KJV. Character lines are KJV word for word. Old
+  words get a plain gloss.
+- Same round, blind: 6 title + thumbnail pairs per seat -> judge -> 2-3 for the owner. The
+  winning title becomes the front-cover baked title.
+- Out: `words\LOCKED_WORDS.md`, `narration.md`, `narration-tagged.md` (emotion cue on every
+  character line), `voices.json`, `units.json` (unit tag -> its exact text),
+  `_packaging\NN_slug\packaging.json` (draft card: curiosity gap, search class from real
+  autocomplete, title, Scripture range, first-3-seconds stake, share line).
+- Gates:
+  - **SWS-G1 words shape:** unit count = pages + 2; hook <= 8 words; unit word counts in range;
+    total words in the target's range (warn only); `narration_gate.py` passes (no stock closer,
+    earned landing); closing line does not start with "Ready to / Will you / Come and / Just
+    ask" and is not the same shape as the last 3 ledger entries; KJV quotes verbatim
+    (`narration_pipeline.py verify`).
+- Owner: `_PICK_WORDS.html` — the candidates, scores before/after, the 4 questions answered
+  (who for, take-away, curiosity gap, global audience), title pairs, a "still weak" list, one
+  recommended pick. **A pick locks words and title only.**
+
+### Step 2 — Voice (paid, ~$0.25-0.45)
+- Tool: existing `PythonProject1\jesus\per_turn_synth.py --natural --pre-quote-pause 0.4
+  --stability 0.65`; character lines on eleven_v3 with cues at stability 0.3, 2 takes each.
+  Delete `_turns\` first if any word changed.
+- Out: `narration.mp3`, `narration.alignment.json`, `narration.meta.json`, `_turns\`.
+- Gates:
+  - **SWS-G2 voice:** length <= target - 3.0 s and total >= 30 s; tempo factor exactly 1.0;
+    first word starts <= 0.40 s; last 0.3 s fades (no end click); character-line loudness within
+    2 dB of the narrator; a whisper pass finds no cue word spoken aloud.
+  - Too long? Cut words and go back to step 1's lock page. Never speed the voice up.
+- Owner: quote page first. Then `_LISTEN_VOICE.html` (player + take A/B per character line).
+
+### Step 3 — Timing and page plan ($0)
+- Tool: NEW `swirls_episode.py <dir> timing` (module `POC\swirls_timing.py`).
+  Reads `units.json` + `narration.alignment.json`. Unit k runs from its first word's start to
+  the next unit's first word's start. Front starts at 0.0. Back ends at voice end + 3.0 s.
+- Out: `unit_timing.json` (same schema ep13 already uses, plus `clip_duration` per unit) and
+  a printed quote (sum of clip seconds x 35 cr).
+- Then Sonnet writes `PAGE_PLAN.md` (max ~40 lines per page; the old 1,100-line briefs are
+  banned) and fills `episode.py`. Per page: the spoken line, slot, 3 labels + panel things,
+  hero scene (who, where, framing in plain words), the one motion, caption, motif stage,
+  subjects, figure count. One blind check panel on `PAGE_PLAN.md` ($0, Fable seat + 2 CLI
+  seats, KJV attached): Bible facts, period details, animation fragility.
+- Gates (all run by `swirls_episode.py <dir> plan`, all $0, all before any spend):
+  - **SWS-G3 timing:** slot ranges from 1.1; total 30.0-59.5 s; every `clip_duration` >= slot + 0.5.
+  - **SWS-G4 baked-text lint:** section 1.5 rules, checked on every handwrite string.
+  - **SWS-G5 prompt lint (stills):** in authored prose: no ALL-CAPS words, no film jargon as a
+    label ("TWO-SHOT", "CLOSE-UP"); framing in plain lower-case words; no digits (spell numbers
+    out); no verification verbs (check, confirm, ensure, verify, make sure); no "Stage N" label;
+    banned motif nouns; warn on similes ("like a", "-shaped"); any one-figure-only mark has
+    its "no other figure wears this" clause; any prop built from "no X" rules also has a
+    positive identity sentence.
+  - **SWS-G5a prompt lint (clips):** 70-130 words; no motif, ink, blue, gold or stain words; no
+    speech verbs (says, speaks, calls, whispers, cries out); no more than 2 negatives; one
+    motion per panel; the unit's speaking figure is not given a motion.
+  - **SWS-G6 dosage:** the map in 1.6.
+  - **SWS-G7 refs:** every subject on 2+ units has a ref; a face ref if any page frames it
+    close; one ref per costume state; files exist (after step 4); warn above 4 refs on a page
+    (OpenArt can drop the third ref on two-person shots).
+  - **SWS-G8 panel grammar:** each label is a word from that page's line (warn); no cast name
+    in a panel (warn); hero scene has 3 or fewer drawn-in-full figures, crowds are "small, far,
+    unfinished hatched figures" (warn).
+
+### Step 4 — Refs and the north-star page (inside the step 5 cap)
+- Why: the old way cropped refs from whatever rendered first, so page 1 had no refs.
+- Process: render ONE page first — the turn page (first stage 2/3 page), with the most
+  recurring subjects — using the series `SKILL\references\jesus_ref.png` only. Owner approves it
+  as the north star. Then `swirls_episode.py <dir> refs` crops tight refs from it using
+  `refs\refs.json` (subject, box, state): face + full figure for each character, each key
+  prop, the place. A recurring subject not on the north-star page gets one single-subject
+  ref-sheet render (40 cr). Hard props (a cross, a boat) get a shape ref here, checked at full
+  frame. Crops only — a whole scene used as a ref takes over the picture (ep16).
+- Out: `refs\north_star.png`, `refs\<subject>[_face|_<state>].png`, `refs\refs.json`.
+- Gate: SWS-G7 re-run. Owner: `_NORTH_STAR.html` (one big picture + the ref crops).
+
+### Step 5 — Stills (paid, ~320-520 cr)
+- Tool: existing `swirls_episode.py <dir> still <id>` -> `swirls_page.render_still` /
+  `swirls_cover.render_cover_still` -> OpenArt bridge, nano-banana-pro, 2K, 9:16, 40 cr each.
+  A live Claude session must service the bridge.
+- Out: `<name>_fNN_9x16.png`, `front_cover.png`, `back_cover.png`, each with `.audit.json`.
+- Gates:
+  - **SWS-G9 still audit** (one Vision call per still through the agent bridge, bound to the
+    PNG's sha256): the auditor returns every piece of text it can read; CODE compares that
+    list to the allowed strings (extra, missing, misspelt, doubled = FAIL). Also: 3 panels +
+    1 hero; panel style; head count = `figure_count`, no twins; motif matches its stage and
+    is not a cord/drip/flower/ring; no speech bubble; no border on covers; caption above 85%
+    height (warn); marks only on the right figure.
+  - **SWS-G10 cover edge scan** ($0 pixel scan of all four edges for a drawn rule or blank
+    band). If a border sits within the outer 6%: auto-crop inside it and rescale (the 2K
+    source leaves room for 1080x1920). This trims a still before animation; it is not a fill.
+    The cover prompt asks for the title "well inside the frame" so a crop never cuts it.
+  - Human check: Read every PNG, zoom 2x on every baked string and on hard props at full frame.
+- Owner: `_STILLS.html` (all units in order, click to zoom, the spoken line under each).
+
+### Step 6 — Clips (paid, ~1,190-2,345 cr)
+- Tool: existing `swirls_episode.py <dir> animate <id>` -> Kling 3 Omni, image2video, `pro`,
+  sound off, `duration = clip_duration` from `unit_timing.json`.
+- Out: `<name>_fNN_9x16.mp4`, `front_cover.mp4`, `back_cover.mp4`, each with `.clipqc.json`
+  and a contact sheet `_qc\<id>_strip.jpg`.
+- Gates (NEW `swirls_episode.py <dir> clipqc [id]`, module `POC\swirls_clipqc.py`):
+  - **SWS-G11 tech:** length >= slot + 0.1 s; height >= 1,900 px; decodes clean.
+  - **SWS-G12 pixels** (measured only inside the part of the clip the film will use):
+    first frame matches the still (no reframe); panel borders do not shift (no zoom or pan);
+    every text box is unchanged first vs middle vs last (catches fading or doubled titles
+    and captions); blue-ink mask area grows <= 15%; hero area keeps moving in the last second
+    (not a dead hold); true first and true last used frame compared (catches late invented
+    motion).
+  - **SWS-G13 eyes** (one Vision call on the 5-frame strip): no speech bubble or new text;
+    same head count; nobody enters, leaves, merges or passes through anyone; modest.
+  - **SWS-G14 freshness:** `.clipqc.json` stores the still's sha256. If the still changed, the
+    clip is stale and assembly refuses it (ep7's "fixed PNG, old MP4").
+  - Thresholds for G12 are calibrated at $0 before first use on the labelled bad clips already
+    on disk (`*.mp4.SUPERSEDED_cast_vanished`, `..._title_lettering_vanished`,
+    `..._simon_walked_off_right_edge` in ep13, and others) against the shipped good ones.
+- Owner: no separate gate. They see the clips in the draft film.
+
+### Step 7 — Draft film ($0)
+- Tool: `swirls_episode.py <dir> assemble --draft` (existing `swirls_assemble.py`, new trim mode).
+- Out: `<name>_draft.mp4` (picture + voice, no music), 1080x1920, 30 fps.
+- Gates:
+  - **SWS-G15 trim-only:** every unit `mode="trim"`; played at 1.0x from frame 0; hard cuts on
+    word starts; each held piece = its slot within one frame; the build FAILS loudly if any
+    clip is shorter than its slot; total = voice + 3.0 s; picture and sound the same length
+    (`check_landing_hold.py`); first word <= 0.40 s; fast-start on.
+- Owner: `_FILM_V1.html` (the film, plus a row of unit thumbnails with times). "Approve the cut?"
+
+### Step 8 — Score (paid, ~$0.70-1.30)
+- Tool: NEW shared `swirls_episode.py <dir> score` (module `POC\swirls_score.py`, lifted from
+  ep13's `generate_score_piano.py`). Reads `score_plan.json`: `split_unit` (the turn page),
+  `part1_prompt`, `part2_prompt`. Prompts are the felt-piano identity copied near word for
+  word from ep10/ep13 with only the timed turning points changed (never a rewrite).
+  Timings come from `unit_timing.json`. Two parts, joined with a 0.4 s crossfade; part 2
+  opens already resolved. Never `composition_plan` / music_v2.
+- Out: `score_part1_raw.mp3`, `score_part2_raw.mp3`, `score_piano.mp3`, then
+  `swirls_episode.py <dir> assemble --score piano` -> `<name>_scored.mp4`.
+- Gates:
+  - **SWS-G16 score:** each part audible in its first 10 s (`check_no_dead_intro`); a
+    1-second sweep of the whole track finds no dead window before the final fade; length = total.
+  - **SWS-G17 mix (measured, not by eye):** under speech the music sits 10-16 dB below the
+    voice; it rises in the hold; no clipping. The duck is tuned for THIS track.
+- Bend (see section 8): for a 30 s film each half would be ~13 s. Use one generation when a
+  half would be under 15 s; keep the dead-air sweep either way.
+- Owner: quote first. Then `_LISTEN_SCORE.html`.
+
+### Step 9 — SFX ($0)
+- Tool: NEW shared `swirls_episode.py <dir> sfx` (module `POC\swirls_sfx.py`, wraps
+  `sfx_pilots\sfxlib`). Reads `sfx_plan.json`: layers keyed to unit tags, times resolved from
+  `unit_timing.json` (no hand-typed seconds). Library sounds only. Sparse is fine.
+- Out: `<name>_final.mp4`. Gate: SWS-G15 parity re-run + `sfxlib.measure` per unit.
+
+### Step 10 — SRT and final file ($0)
+- Tool: `swirls_episode.py <dir> finish` -> existing `build_srt.py` (+ merge any cue under
+  1.0 s), write `FINAL_VIDEO.txt`, fast-start re-wrap, sha256 into `LOCKED.json`, refresh
+  `swirls_upload_tracker.py`. No burned captions on this series.
+- Out: `<name>.srt`, `FINAL_VIDEO.txt`, `LOCKED.json`.
+- Gate: **SWS-G18 SRT:** no cue under 1.0 s; 42 characters or fewer per cue; cue text = the
+  locked words; KJV lines quoted the same way every time.
+
+### Step 11 — Film red team ($0)
+- Tool: NEW `swirls_episode.py <dir> redteam-pack` builds a film-only blind pack in
+  `red_team_film_r1\` (per unit: the picture, its baked words, the spoken line, the time) and
+  leak-checks it. Seats: Fable (judge), Sonnet (newcomer, English as a second language), CLI
+  seats for Bible (with KJV), hook / first 2 seconds, global words. Same 5 guardrail questions
+  in every seat + who/what/why + curiosity gap opens and pays off (0-10).
+- Fix what 2+ seats raise or any Bible point. Fresh seats re-test. Stop after 2 rounds.
+- Gate: **SWS-G19:** tabulated from the seat files; 0 open convergent or accuracy points.
+- Owner: `_FILM_REDTEAM.html` — scores before/after, "still weak" list. Simulated viewers are
+  not real viewers: the page says so and recommends real seed viewers.
+
+### Step 12 — Packaging and publish pack ($0)
+- Finish the card -> `check_packaging.js` until `PACKAGING-READY` -> `cli_publish.py`
+  (reads `FINAL_VIDEO.txt`; Swirls is already supported) -> blind copy red team -> `--index
+  --strict` GREEN -> `release_check.py`. Thumbnail = `front_cover.png`.
+- Gate: **SWS-G20:** PACKAGING-READY, publish GREEN strict, NO-AI-WORDING, Scripture range on
+  every platform, closing line added to `SKILL\ENDINGS_LEDGER.md`.
+- Owner: `_UPLOAD_READY.html` with one recommended pick. Posting stays the owner's call.
+
+---
+
+## 3. Defect-prevention table
+
+Ranked as in the analysis. "Up front" = stops it before money. "Catch" = finds it right after.
+
+| # | Recurring defect | Up front (prompt rule / design choice) | Catch (gate) |
+|---|---|---|---|
+| 1 | Kling draws speech bubbles | The speaking figure never moves, mouth closed in the still (1.4 rule 5). One caption line only, under the scene, never near a head. Clip prompt has no speech verbs and does not name bubbles. | SWS-G5a, G13 |
+| 2 | Border or caption strip on covers | Title kept well inside the frame. Stop chasing it with wording: auto-crop inside the border. | SWS-G10 pixel scan, G9 |
+| 3 | Character, costume, object drift | North-star page first; tight crop refs for every recurring subject, face ref for close pages, one per costume state; panels hold things not faces. | SWS-G7, G9 |
+| 4 | Motif drawn as cord, drip, flower, ring | Motif inside the scene sentence as a brushstroke + one direction + flat properties; banned-noun list; no "Stage N" label; dosage map. Motif never named in a clip prompt. | SWS-G5, G6, G9, G12 (mask growth) |
+| 5 | Baked-text errors: shot label drawn, doubled labels, stray digits, dashes, caption fades, check-text drawn | Framing in plain lower-case words (no "MEDIUM TWO-SHOT"). No digits or dashes in prose or strings. Labels all different. No verification verbs in any prompt. Strings short. | SWS-G4, G5, G9 (code compares the text list), G12 (text boxes static) |
+| 6 | Clones, extra, vanishing, merging figures | 3 or fewer full figures; near/large + far/small depth; crowds unfinished and far; `figure_count` declared. | SWS-G8, G9, G13 |
+| 7 | Hard prop shapes (cross as X or log) | Shape ref made in step 4; positive identity sentence; after 2 failed wordings change the camera angle. | SWS-G5, human full-frame check, reroll rule |
+| 8 | Fill and timing: freezes, backward play, drift, duplicate `-vf` | Page count and clip lengths come from real word times. Trim-only mode. Fill code cannot run in this mode. | SWS-G3, G11, G15 (build fails on a short clip) |
+| 9 | Score dead air, too loud, borrowed duck | Two-part score split at the turn; identity prompt copied, not rewritten; duck tuned per track. | SWS-G16 sweep, G17 measured |
+| 10 | Fixed PNG did not change the film | Clip QC file is bound to the still's hash. | SWS-G14 |
+| 11 | Invented motion or immodest reading in a clip | One named motion, done early, then living hold; short clips (7-8 s, not 10+); if a still reads badly in motion, redraw the still. | SWS-G12 (true first/last frame), G13 |
+| + | Slow open (4-10 s title card) | Voice at 0.0 s; cover slot 2-3 s; cover is a moving clip. | SWS-G2, G3, G15 |
+| + | Tired "will you come" ending | Earned landing word; endings ledger; blind writers. | SWS-G1 |
+| + | 720p, no fast-start | Kling `pro`; manifest 1080x1920; fast-start in `finish`. | SWS-G11, G15 |
+| + | Spend without a yes | Approvals with caps in `episode_state.json`. | SWS-G0 |
+| + | Voice too fast | `--natural` only; cut words instead. | SWS-G2 |
+| + | Robotic dialogue | Cue on every character line, stability 0.3, 2 takes. | step 2 listen page |
+
+---
+
+## 4. Code plan
+
+Rule: reuse the shared engine. New behaviour is opt-in, so every shipped episode still builds
+byte-for-byte the same. The three existing `_validate_swirls_*.py` scripts must still pass.
+
+### 4.1 Existing files that change
+
+| File | Change |
+|---|---|
+| `POC\swirls_assemble.py` | `Unit.mode` gains `"trim"`. New `make_trim()` (play from 0, cut at slot, raise `ShortClipError` if clip < slot). `EpisodeManifest` gains `fill_policy: "legacy" | "trim_only" = "legacy"`; in `trim_only` any other mode is an error and `unit_timing.json` is required (no word-count guess). `assemble()` gains `score_name=None` -> draft output (voice only, audio padded with `apad=whole_dur`), plus a short tail fade on the voice. `w`/`h` defaults stay 720x1280; the template sets 1080x1920. Freeze/boomerang code stays for old episodes only. |
+| `POC\test_the_cross\swirls_page.py` | `PageSpec` gains optional `motif_stage`, `subjects`, `figure_count`, `speaker` and `anim_style: "legacy" | "short_v2" = "legacy"`. `short_v2` builds the short clip prompt: locked-off camera, one continuous shot of the whole page, lettering and borders as drawn, one clause per panel, then the hero motion. No fence, no bubble clause, no motif words. The locked still constants are NOT edited. Stale comments on `model_tier` / `clip_duration` corrected (OpenArt Kling: any integer 3-15). |
+| `POC\swirls_cover.py` | `CoverSpec` gains `motif_stage` and `anim_style` the same way. Title-inside-the-frame sentence added only under `short_v2`. Stale "veo3_1_lite; legal values 4, 6, 8" comment corrected. |
+| `POC\swirls_verify.py` | Add the SWS gates as new functions (G1-G10, G15-G18). Add `audit_page_still_v2` / `audit_cover_still_v2` that ask for `texts_seen` + `head_count` and let code decide. Old SW-* gates untouched. |
+| `POC\swirls_episode.py` | New commands: `status`, `approve`, `timing`, `refs`, `clipqc`, `score`, `sfx`, `finish`, `redteam-pack`, `page <kind>`; `assemble --draft`. `still` / `animate` / `score` check SWS-G0 first. `plan` runs the SWS lints when the manifest says `trim_only`. Every command ends by calling `status`. |
+| `POC\build_srt.py` | Merge any cue shorter than 1.0 s into its neighbour. |
+| `F:\slk\PycharmProjects\JesusInTheBible\AGENT_BRIDGE.md` | Doc only: response gains `job_id`; servicer appends to the episode's `_jobs.jsonl`. |
+
+### 4.2 New files
+
+| File | Purpose | CLI |
+|---|---|---|
+| `POC\swirls_new_episode.py` | Scaffold a folder from the template; fills page count, dosage map, target seconds. | `swirls_new_episode.py --number N --slug s --seconds 30|45|60 --passage "..."` |
+| `POC\_episode_template\` | `episode.py` skeleton, `HANDOVER_RESUME.md`, `episode_state.json`, `words\BRIEF.md`, `PAGE_PLAN.md`, `score_plan.json`, `sfx_plan.json`. | - |
+| `POC\swirls_timing.py` | Alignment + `units.json` -> `unit_timing.json`, clip durations, credit quote. | via `swirls_episode.py <dir> timing` |
+| `POC\swirls_state.py` | Step detection from files on disk; approvals and caps; rewrites the status block in `HANDOVER_RESUME.md`; writes `_STATUS.html`. | via `status` / `approve` |
+| `POC\swirls_clipqc.py` | SWS-G11-G14: frame pulls, text-box diff, motif mask, motion floor, 5-frame strip, one Vision call. Has a `calibrate` mode run over old good and SUPERSEDED clips. | via `clipqc [id]` |
+| `POC\swirls_score.py` | Shared two-part felt-piano generator + dead-air sweep + mix measure. Replaces per-episode copies of `generate_score_piano.py`. | via `score` |
+| `POC\swirls_sfx.py` | Shared SFX build from `sfx_plan.json` over `sfxlib`. Replaces per-episode `build_sfx.py`. | via `sfx` |
+| `POC\swirls_pages.py` | One builder for every owner page (large type, big pictures, click to zoom, one question at the end, full `file:///` link printed, never opened). | via `page <kind>` |
+| `POC\_validate_swirls_short.py` | $0 regression: trim mode on synthetic ffmpeg clips (incl. a too-short clip that must fail), lints against real past failures ("MEDIUM TWO-SHOT", doubled ep5 labels, a dash caption), timing math, status detection. | run before any lock |
+| `SKILL\ENDINGS_LEDGER.md` | Every shipped closing line, for SWS-G1. | - |
+
+### 4.3 The `status` command
+
+`swirls_episode.py <dir> status` prints, for example:
+
+```
+STEP 6 of 12 - Clips.  4 of 8 clips done, 3 pass QC, f03 FAIL SWS-G13 (extra figure).
+SPENT 1,420 of 2,100 cr approved for clips.
+NEXT: reroll f03 once (remove the servant's motion), then: swirls_episode.py <dir> animate f05
+OWNER: nothing to ask right now.
+```
+
+- The step is worked out from files on disk plus `episode_state.json` (approvals cannot be
+  seen on disk, so they are recorded).
+- It rewrites the block between `<!-- STATUS:BEGIN -->` and `<!-- STATUS:END -->` at the top
+  of `HANDOVER_RESUME.md` and writes `_STATUS.html`. Notes below the block are kept.
+- When the next action is an owner question it prints the exact one-line question and the
+  page link.
+
+### 4.4 Untouched
+`openart_bridge.py`, `swirls_upload_tracker.py`, `pipeline\*` (incl. `score_mix.py`),
+`per_turn_synth.py`, `narration_pipeline.py`, `sfxlib`, `cli_publish.py`, all shipped episode
+folders, all `_validate_swirls_*.py`, the main 4-stage engine.
+
+### 4.5 Build order (each step has its own check)
+1. Trim mode + `_validate_swirls_short.py` (old validators still pass).
+2. `swirls_timing.py` — check against ep13's existing `unit_timing.json`.
+3. Lints — must flag the real past failures and pass a clean template page.
+4. `swirls_clipqc.py` — calibrate on old good/bad clips at $0.
+5. State, status, approvals, pages, scaffold.
+6. Score and SFX shared modules (dry-run against ep13's plan, no generation).
+7. Pilot episode at 45 s. Only after it ships clean does the skill doc get locked.
+
+---
+
+## 5. Skill plan
+
+**Recommendation: rework `swirls-of-life` in place. Do not create a second skill.**
+One name the owner already uses; two skills with the same trigger words would compete. The
+`references\` folder and north-star docs stay where every old episode expects them.
+
+New description (front matter): "Run the Swirls of Life SHORT pipeline: a 30-60 s storyboard-page
+film (woodcut covers, 3-panel + hero pages, blue/gold ink motif), words to publish pack, gated,
+one paid ask per step."
+
+`SKILL.md` outline (target under 200 lines):
+1. What this makes (the format in 6 lines + the three sizes table).
+2. Rules that always apply (spend guard, blind panels with a Fable seat, owner pages, never
+   auto-open, no fill, motif never moves, no AI wording, no media to git).
+3. Start or resume: `swirls_new_episode.py`, then always `swirls_episode.py <dir> status`.
+4. The 12 steps: one short block each (command, files out, gates, owner page).
+5. Page design rules (section 1.4-1.6 of this doc, short form).
+6. Reroll rule and the "change the lever" list.
+7. Where the detail lives: `SWIRLS_SHORT_PIPELINE.md` (this design, promoted),
+   `NORTH_STAR_PROMPT.md`, `NORTH_STAR_COVER_PROMPT.md`, `SCORE_DESIGN_EARLY.md`.
+
+Stale text to remove or mark SUPERSEDED (mark with a dated banner, do not delete history):
+
+| File | Stale part |
+|---|---|
+| `SKILL.md` | Step 0 "Focal Tour gap-fill plan"; every `hf generate create` call and the CLI table; "~2 credits/still"; "Higgsfield 503"; "prototype, not production proof"; the trance score paragraph (felt piano is the identity now); "long-form may skip real motion". Whole file is rewritten. |
+| `PRODUCTION_PIPELINE.md` | `model_tier` veo/kling tiering; "do NOT build gates yet"; freeze-hold budget gate SW-F1 as the fill answer; Focal Tour long-form section. Banner: superseded by the short pipeline doc. |
+| `NORTH_STAR_PROMPT.md` | HF render call; "Stage N dosage:" wording; `{CAMERA_DISTANCE}` in capitals; the whole "Animation-tier lessons" fill history (Lamplight, Live Ink Hold, Halo Tour); two-line caption advice. Keep: template, slot rules, hybrid panels, positive-identity check. |
+| `NORTH_STAR_ANIMATION_PROMPT.md` | "veo-first default" tiering; LAW 2 ink motion clauses (stage 2/3 "threads drift"); halo "swirls rotate"; MOTION/FREEZE lanes; the bubble clause as a fix. Keep: LAW 0 (still + clip are one design), blocking, NO_MOUTH, blink arc, the short positive template. |
+| `NORTH_STAR_COVER_PROMPT.md` | veo3_1_lite cover clips, `--duration 4`, HF calls; wording-only border fix. Add: cover slot 2-3 s, title inside the frame, border auto-crop. |
+| `SCORE_STYLE_BANK.md` | Trance / groove bank as the default. Banner: felt piano is the identity; bank kept as history. |
+| `SCORE_DESIGN_EARLY.md` | Section 6.7 `composition_plan` (already marked historical). Rest stays. |
+
+---
+
+## 6. Cost model
+
+OpenArt at $0.002 per credit. Stills 40 cr (nano-banana-pro 2K). Clips 35 cr/s (Kling 3 Omni
+pro, sound off). "Extra" = 2-3 ref sheets. "Buffer" = 30% still redos + 25% clip redos (old
+episodes needed 3-6 fix rounds; the gates should cut that, unproven until the pilot).
+Music is an estimate (~$0.02 per generated second from ep16's bill); voice from ep12/ep16
+(~$0.21 for 72 s). Re-derive both from the real invoice.
+
+| | 30 s (4 pages) | 45 s (6 pages) | 60 s (8 pages) |
+|---|---|---|---|
+| Stills (units + extra) | 8 x 40 = 320 cr | 10 x 40 = 400 cr | 13 x 40 = 520 cr |
+| Clips | 34 s = 1,190 cr | 53 s = 1,855 cr | 67 s = 2,345 cr |
+| **OpenArt base** | **1,510 cr = $3.02** | **2,255 cr = $4.51** | **2,865 cr = $5.73** |
+| Buffer | ~395 cr = $0.79 | ~585 cr = $1.17 | ~740 cr = $1.48 |
+| Voice (ElevenLabs) | ~$0.25 | ~$0.35 | ~$0.45 |
+| Music (ElevenLabs) | ~$0.70 | ~$1.00 | ~$1.30 |
+| SFX, SRT, panels, packaging | $0 | $0 | $0 |
+| **Total, clean run** | **~$4.00** | **~$5.90** | **~$7.50** |
+| **Total, with buffer** | **~$4.80** | **~$7.00** | **~$9.00** |
+
+Compare: old episodes $5-30 for 62-106 s at 720p. Clips are ~80% of the bill, and their cost
+is fixed by seconds, so a shorter film is the only real saving. Dropping to `std` saves 29% but
+gives 720p, which breaks the 1080p rule — not offered.
+Account today: about 8,000 cr, enough for roughly two 60 s episodes or three 45 s ones.
+
+---
+
+## 7. Where the evidence is thin (honest list)
+
+- The front-cover design (title card under a spoken hook, 2-3 s) has no viewer data. Neither
+  does the title-free alternative.
+- The brushstroke motif wording worked on one page. The banned-noun list is a best guess.
+- Dropping the bubble clause and never naming the motif in clips follows the "remove it, do
+  not negate it" finding, but a full episode has not been run that way.
+- A 5-6 s storyboard page may be too dense to read on a phone. Nobody has measured it.
+- SWS-G12 thresholds do not exist yet; they come from the calibration run.
+- The Vision text read is not perfect on handwriting; the human 2x zoom check stays.
+- Kling `pro` output size on OpenArt is assumed to be ~1080x1920 (ep16 clips); SWS-G11 checks it.
+- Cost buffer percentages are guesses.
+
+One pilot episode proves or breaks these. One story never rewrites the skill: lock the skill
+doc only after the pilot, and adjust again after a second episode repeats the result.
+
+---
+
+## 8. Owner rules I would bend, and why
+
+1. **Two-part score for a 30 s film.** The rule fixed a ~109 s generation going silent. At 30 s
+   each half is ~13 s, and a join that short is more risk than help. Proposal: one generation
+   when a half would be under 15 s, with the same dead-air sweep. 45 s and 60 s stay two-part.
+2. **"No crop."** The ban is on crop-zoom to fill time. SWS-G10 crops a cover STILL once, before
+   it is animated, to remove a border that wording never fixed. I read that as allowed.
+3. **Hero always animated vs. the bubble fix.** Kept both by moving the motion off the speaker.
+   If a page has only one figure and that figure is speaking, the motion is cloth, light and
+   air on that figure's surroundings; the owner may find that too quiet. Flag it on the page plan.
+
+Nothing else bends.
+
+---
+
+## 9. Open questions for the owner (3)
+
+1. **Default length.** My pick: **45 s, 6 pages** (~$6-7). 60 s only when the story needs it.
+2. **Front cover.** My pick: **keep the woodcut title cover, but 2-3 s with the voice from the
+   first frame.** The other choice is a title-free picture-first cover. No viewer data on either.
+3. **First run.** My pick: **build the code, then one pilot episode at 45 s with a ~$9 cap**,
+   and lock the skill only after you have watched it. Which story?
+----- ARTIFACT END -----

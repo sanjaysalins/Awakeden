@@ -1,0 +1,48 @@
+# FILM: "Jesus and the woman at the well" (John 4) - 88 s vertical gospel short, worldwide audience
+LOOK: bold POP-HALFTONE comic art. Black-and-white halftone figures on loud orange/red/teal/yellow burst rays,
+with bold full-frame motion graphics (comic panel slams, Ben-Day dot wipes, speed lines, kinetic type).
+Colour story: the burst-ray sky DRAINS to dry paper on "thirst again" (23 s), then FLOODS TEAL on "shall never thirst"
+(~30-37 s, the showpiece: a teal living-water geyser floods the whole frame). Teal then follows her to town.
+CALM BEATS (graphics quiet): "I that speak unto thee am he" (49-52 s), her quiet tears (52-55 s, then 1 s pause),
+and the empty tomb landing (81.5 s to end, incl. 3.0 s hold after the last word, film ends 87.87 s).
+Voices: one warm narrator, Jesus (gentle, low), the woman (emotional takes). Voice is final; music must sit UNDER it.
+Story arc: thirst/question -> a barrier (Jew vs Samaritan) -> living water offered -> her life known -> "I am he" ->
+joy, she runs to town -> many come: "the Saviour of the world" -> she left her jar, found better water -> He died and rose.
+Score tool: ElevenLabs Music free-text prompt (music_v1). Known facts: long single generations can render dead air,
+so a score is made in TWO parts joined at a split second; each prompt can use "around N seconds in" cues.
+Never use composition_plan. Budget ~2 generations (~90 s total).
+
+TIMED NARRATION (film seconds):
+  0.00-  0.92  She came for water.
+  1.50-  2.80  She left without her jar.
+  3.80-  4.22  Why?
+  4.48-  7.08  About noon, a Samaritan woman comes to a well.
+  8.08- 11.02  Jesus, a Jew, sits there, tired.
+ 11.70- 12.90  Give me to drink.
+ 14.36- 16.98  How is it that thou, being a Jew,
+ 17.50- 18.80  askest drink of me?
+ 18.98- 20.68  Jews and Samaritans kept apart.
+ 21.64- 22.60  He asks anyway.
+ 23.28- 26.56  Whosoever drinketh of this water shall thirst again.
+ 26.76- 29.76  Then he offers her a different water, a gift from God.
+ 30.66- 32.62  Drink it, and you shall never thirst.
+ 33.38- 35.02  Life from God inside you.
+ 35.46- 37.34  A spring that never runs dry.
+ 37.58- 39.40  Then he tells her the truth about her life.
+ 40.26- 40.90  Five husbands,
+ 41.60- 44.40  and the man she has now is not her husband.
+ 44.66- 47.14  She says the Christ, the one God promised,
+ 47.72- 48.24  will come.
+ 49.00- 51.82  I that speak unto thee, am he.
+ 52.34- 53.82  He is the Christ.
+ 54.66- 57.30  She leaves her jar and goes back to town.
+ 57.98- 58.30  Come,
+ 59.08- 60.06  see a man,
+ 60.58- 66.38  which told me all things that ever I did is not this, the Christ.
+ 66.80- 67.32  Many come,
+ 67.88- 68.38  hear him,
+ 69.02- 70.98  and call him the savior of the world.
+ 71.26- 72.04  The jar stayed.
+ 73.32- 76.26  She came for water and found better water.
+ 77.26- 81.34  Jesus, who knew her whole story and offered her life.
+ 81.54- 84.74  Later, he died for our sins and rose the third day.

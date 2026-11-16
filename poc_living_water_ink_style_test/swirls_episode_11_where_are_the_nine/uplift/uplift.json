@@ -1,0 +1,125 @@
+{
+ "fps": 30,
+ "total_frames": 2507,
+ "shots": [
+  {
+   "id": "S01",
+   "page": "front",
+   "f0": 0,
+   "f1": 94,
+   "src": "front_cover.mp4"
+  },
+  {
+   "id": "S02",
+   "page": "F01",
+   "f0": 94,
+   "f1": 273,
+   "src": "swirls_episode_11_where_are_the_nine_f01_9x16.mp4"
+  },
+  {
+   "id": "S03",
+   "page": "F01B",
+   "f0": 273,
+   "f1": 378,
+   "src": "uplift/clips/f01b.mp4"
+  },
+  {
+   "id": "S04",
+   "page": "F02",
+   "f0": 378,
+   "f1": 556,
+   "src": "swirls_episode_11_where_are_the_nine_f02_9x16.mp4"
+  },
+  {
+   "id": "S05",
+   "page": "F03",
+   "f0": 556,
+   "f1": 735,
+   "src": "uplift/clips/f03.mp4"
+  },
+  {
+   "id": "S06",
+   "page": "F04",
+   "f0": 735,
+   "f1": 798,
+   "src": "swirls_episode_11_where_are_the_nine_f04_9x16.mp4"
+  },
+  {
+   "id": "S07",
+   "page": "F04B",
+   "f0": 798,
+   "f1": 891,
+   "src": "uplift/clips/f04b.mp4"
+  },
+  {
+   "id": "S08",
+   "page": "F05",
+   "f0": 891,
+   "f1": 1070,
+   "src": "uplift/clips/f05.mp4"
+  },
+  {
+   "id": "S09",
+   "page": "F06",
+   "f0": 1070,
+   "f1": 1251,
+   "src": "uplift/clips/f06.mp4"
+  },
+  {
+   "id": "S10",
+   "page": "F07",
+   "f0": 1251,
+   "f1": 1416,
+   "src": "uplift/clips/f07.mp4"
+  },
+  {
+   "id": "S11",
+   "page": "F07B",
+   "f0": 1416,
+   "f1": 1518,
+   "src": "uplift/clips/f07b.mp4"
+  },
+  {
+   "id": "S12",
+   "page": "F08",
+   "f0": 1518,
+   "f1": 1656,
+   "src": "swirls_episode_11_where_are_the_nine_f08_9x16.mp4"
+  },
+  {
+   "id": "S13",
+   "page": "F09",
+   "f0": 1656,
+   "f1": 1863,
+   "src": "swirls_episode_11_where_are_the_nine_f09_9x16.mp4"
+  },
+  {
+   "id": "S14",
+   "page": "F09B",
+   "f0": 1863,
+   "f1": 1998,
+   "src": "uplift/clips/f09b.mp4"
+  },
+  {
+   "id": "S15",
+   "page": "F10",
+   "f0": 1998,
+   "f1": 2235,
+   "src": "uplift/clips/f10.mp4"
+  },
+  {
+   "id": "S16",
+   "page": "F10B",
+   "f0": 2235,
+   "f1": 2331,
+   "src": "uplift/clips/f10b.mp4"
+  },
+  {
+   "id": "S17",
+   "page": "back",
+   "f0": 2331,
+   "f1": 2507,
+   "src": "back_cover.mp4"
+  }
+ ]
+}

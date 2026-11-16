@@ -1,3 +1,21 @@
+# 2026-11-10 late: blind final check (panel_final_v3/RESULT.html) Fable 7.5, Bible 7, hook 7, newcomer 6 (old film 4.5-5.5).
+Voice v2b re-record ($0.22): 'I do not know Him', 'He would die on a cross, for them', 'Later that night'. Free fixes: question-form hook box,
+'Know ye' over Jesus's face (13:12 He is seated). Final: swirls_episode_12_ye_are_not_all_clean_v3_final_sfx.mp4 (81.33 s, 0 freezes,
+3.0 s hold, owner score stretched 2%). Pinned in FINAL_VIDEO.txt. Next: packaging + upload pack.
+
+# Episode 12 - FILM v3 LOCKED 2026-11-10 (owner: "lock new and do the remotion now")
+Base cut: v3_retro/EP12_RETRO_PREVIEW.mp4 (79.7 s) = words v2 voice (pause after Jesus line, Jesus -7 dB, tail fade)
++ 11 retro-style Kling clips (v3_retro/clips, style from owner's Pinterest ref) + owner's score
+score_arpeggiated_ostinato.mp3 from its start (-10 dB, ducked), film ends with the score. Built by v3_retro/build_v3.py.
+Next: Remotion text layer (free), then SFX, packaging, red team before upload.
+
+# Episode 12 - WORDS v2 LOCKED 2026-11-10 (owner: "yes")
+New narration.md = Y2 from the blind 6-writer round (words_v2_blind/, pick page _PICK_NEW_WORDS.html; Fable spine, 4/4 blind readers picked it, 8/8/8/8 then 7.5/8; Bible check 0 wrong).
+Old locked words kept as narration.v1_locked_20260909.md; old voices as voices.v1_20260909.json (new adds the Jesus voice for 13:12).
+narration_gate.py: PASS (WARN: corpus-stale 'he' closer).
+A lock is WORDS ONLY. Recording (~$0.20) and new pictures/clips (~$5-6) each need their own quoted price + yes.
+Before re-synth: delete _turns/ (per_turn_synth caches by filename).
+
 # Episode 12 — "Ye Are Not All Clean" (John 13:1-30, Judas) — status 2026-09-09
 
 ## Where this stands

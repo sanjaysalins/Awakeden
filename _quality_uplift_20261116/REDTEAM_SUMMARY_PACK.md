@@ -1,0 +1,9 @@
+# Red-team: owner summary on "fresh insight + more motion" (2026-11-16)
+
+The owner (dyslexic, wants short plain pages) asked two questions about 17 finished, unposted YouTube Shorts (9 "graphic comic", 8 "Swirls of Life"):
+(a) how to raise quality with more animation, motion graphics and doodles;
+(b) "does this not sound and look like a lot we have already seen and done... surely you can think of purely bible insights we have never considered before... validated by other AI panels too".
+
+Two reviewer reports (comic_report.md, swirls_report.md) were condensed into the owner page. Its text is in SUMMARY_TEXT.md (same folder). The AI-panel check of 10 insights is in _independent_review/ (latest stamp) in this folder.
+
+Your job: find REAL defects in the owner page. Examples: a claim that is false or not supported by the reports, panel or the actual files/videos; an insight mislabeled (USE vs careful vs drop) compared with what the panel said; something important in the reports left out; wrong numbers or costs; a "mistake to fix" that is not really a mistake; a recommendation ("My pick") that is unsafe, unclear, or breaks the owner's house rules (CLAUDE.md: words-before-money gate, no freeze/boomerang fill, hero shots must be real clips, doctrine checked both ways, global audience); wording a dyslexic owner would misread. Verify against the repo yourself where you can (videos: pull frames with ffmpeg into %TEMP%). File/line + why + fix. No praise. End with VERDICT: PASS | REVISE | FAIL.

@@ -1,0 +1,17 @@
+﻿{
+    "id":  "ps22-06-ends-of-the-earth",
+    "source":  "F:/slk/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/ends_of_earth_ps2227/visual/ends_of_earth_ps2227_sfx.mp4",
+    "output":  null,
+    "hook_text":  null,
+    "hook_proposed":  "Can one man\u0027s cry reach everyone?",
+    "hook_skipped_reason":  "Opening 2s show only the narration\u0027s own burned-in caption (a statement, no question). A hook card would be a SECOND text layer over the continuous burned-in caption box (lower left, y~1230-1570 of 1920), breaking \u0027one text layer at a time\u0027. Not forced. If owner accepts a 2.0s top-band card (y~200-450, above the faces/crosses), proposed text: \u0027Can one man\u0027s cry reach everyone?\u0027.",
+    "decode_cards":  [
+
+                     ],
+    "skipped_decodes":  [
+                            "\u0027kindreds\u0027 (= families/peoples) about 17-20s: narrator repeats \u0027all the kindreds of the earth\u0027 at 49s; burned caption covers the spot"
+                        ],
+    "title_question_proposal":  "One Man Dying Alone, Every Nation Turning: Psalm 22",
+    "verified":  false,
+    "notes":  "Style check: SAME style as the rest of the channel (Gold Seam inked comic, AWAKEDEN logo top-left, cream comic caption box lower-left, inset panel lower-right). Captions are burned in from ~0.1s to the end with only sub-second gaps, so no clean slot exists for hook or decode cards. No output file written. Source is 1080x1920 30fps, audio length matches."
+}

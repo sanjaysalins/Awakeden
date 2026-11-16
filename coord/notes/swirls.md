@@ -1,0 +1,12 @@
+- 2026-11-08 21:18  2026-11-08 night: elevate-Swirls analysis + 2 blind panels + audit of 12 films + bake-off v2 designed. Arm B (picture-first opening) BUILT for ep8 + ep10 in poc_living_water_ink_style_test/_bakeoff_format_v2/B1/. Spend ~332 cr est (~$0.66), 4 est rows added to data/spend_ledger.jsonl (lane swirls). Shipped files untouched. Full handover + RESUME entry text: poc_living_water_ink_style_test/_bakeoff_format_v2/HANDOVER_2026-11-08.md. Next: owner yes on $0 viewer-test kit; bake-off 2 (cross shape) needs quote + yes.
+- 2026-11-09 09:04  Talitha Cumi (ep06 folder swirls_episode_06_talitha_cumi): WORDS LOCKED 2026-11-09, $0 spent. Doctrine 5-CLI panel pending. Needs board entry talitha_cumi.
+- 2026-11-09 10:10  Talitha Cumi words FINAL-LOCKED 2026-11-09 (doctrine reread PASS 8/8). $0 spent. Next needs quoted price for recording.
+- 2026-11-09 11:14  Talitha Cumi recorded 2026-11-09 (1 pass, ~$0.25, ledgered). narration.mp3 = 115.5s natural; long vs 100s ceiling - owner to decide trim. Not ear-reviewed.
+- 2026-11-09 15:03  talitha_cumi SHORT E4 chosen+recorded 42.4s (short_e4/). full 97s kept. images not started.
+- 2026-11-09 15:54  talitha_cumi SHORT F1 recorded 40.3s (short_f1/), supersedes E4. panel+blind rounds done.
+- 2026-11-09 16:51  talitha_cumi SHORT G3 words chosen by owner (End 2, Jesus last word); not recorded yet, needs price+yes. F1 (short_f1, 40.3s) is the recorded fallback.
+- 2026-11-09 16:59  talitha_cumi SHORT G3 recorded 52.1s (short_g3/). owner picked End 2.
+- 2026-11-09 17:01  talitha_cumi SHORT LOCKED = G3 (short_g3, 52.1s). words+audio locked by owner. panel on final text not run. images not started.
+- 2026-11-09 20:18  talitha_cumi short_g5 recorded 50.8s (est 0.127 USD); candidate vs locked G3; awaiting owner ear-review
+- 2026-11-09 21:30  talitha_cumi 2026-11-09 night: G5 short recorded (50.8s), vector-style POC built (refs/pages/clips/preview in style_poc_vector, ~3.62 USD openart). Locked still G3 until owner picks. Resume: see RESUME.md top. BOARD.json still lacks talitha_cumi.
+- 2026-11-15 23:49  2026-11-15: Swirls Short pipeline built ($0). Coordinator tasks listed in swirls_episode_17_voice_in_the_wilderness/HANDOVER_RESUME.md section 4 (kjv_strict ellipsis bug, AGENT_BRIDGE, per_turn_synth, approve ask-rule, install SKILL_v3).

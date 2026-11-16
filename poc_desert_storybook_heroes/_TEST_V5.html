@@ -1,0 +1,18 @@
+<!doctype html><html><head><meta charset="utf-8"><title>GPT Image Test</title>
+<style>body{font-family:Verdana,sans-serif;background:#f6efe4;color:#2b2218;padding:20px;font-size:20px}
+.row{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:28px}.c{flex:1;min-width:220px;background:#fff;padding:10px;border-radius:12px}
+.c img{width:100%;border-radius:8px;cursor:zoom-in}b{font-size:22px}
+#z{display:none;position:fixed;inset:0;background:#000d;align-items:center;justify-content:center}#z img{max-height:96vh;max-width:96vw}</style></head><body>
+<h1>New model (GPT Image 2) — much closer</h1>
+<div class="row">
+<div class="c"><img src="refs/pin/look.jpg"><b>Your look</b></div>
+<div class="c"><img src="v5_gpt/01_well.png"><b>Well — GPT</b><br>Scratchy paint, dot eyes, slim.</div>
+<div class="c"><img src="v5_gpt/02_storm.png"><b>Storm — GPT</b><br>Tall, thin, small head. Best yet.</div>
+</div>
+<div class="row">
+<div class="c"><img src="v4/01_well.png"><b>Well — old model</b></div>
+<div class="c"><img src="v4/02_storm.png"><b>Storm — old model</b></div>
+</div>
+<div id="z" onclick="this.style.display='none'"><img></div>
+<script>document.querySelectorAll('.c img').forEach(i=>i.onclick=()=>{z.querySelector('img').src=i.src;z.style.display='flex'})</script>
+</body></html>

@@ -1,0 +1,337 @@
+{
+ "episode": "the_mockers_ps22_7_y4",
+ "status": "Y4 words + recording + clips wired; composing",
+ "format": {
+  "w": 1080,
+  "h": 1920,
+  "fps": 30
+ },
+ "first_episode": false,
+ "audio": {
+  "file": "batches/cluster_01_cross/mockers_words_ps227/audio_y4/narration.mp3",
+  "t0": 0.0,
+  "dur": 74.3,
+  "note": "Y4 recording, 71.26s natural speed, real turn timings. Add >=3.0s landing hold (INV-26) at assembly."
+ },
+ "panels": [
+  {
+   "id": "m01_cross_dying",
+   "t": [
+    0.0,
+    7.0
+   ],
+   "beat": "Jesus ... dying on a cross. The leaders shout",
+   "still_prompt": "the cross at dusk, level camera, Jesus calm, leaders' hands pointing up from below",
+   "clip_tier": "kling",
+   "status": "clip wired",
+   "ink_wake": true,
+   "role": "first",
+   "sacred": true,
+   "clip_src": "batches/cluster_01_cross/mockers_words_ps227/visual/clips/golgotha_hill_wide.mp4"
+  },
+  {
+   "id": "m02_leader_shouts",
+   "t": [
+    7.0,
+    11.3
+   ],
+   "beat": "[mocker] Matt 27:43",
+   "still_prompt": "single leader close, mouth open, pointing up, level eye height",
+   "clip_tier": "kling",
+   "status": "clip wired",
+   "ink_wake": false,
+   "role": "listener",
+   "clip_src": "batches/cluster_01_cross/mockers_words_ps227/visual/clips/rulers_sneering.mp4"
+  },
+  {
+   "id": "m03_back_to_david",
+   "t": [
+    11.3,
+    18.3
+   ],
+   "beat": "a thousand years back, a king named David",
+   "still_prompt": "aged King David writing by lamp, harp on wall",
+   "clip_tier": "seedance",
+   "status": "clip wired",
+   "ink_wake": false,
+   "role": "listener",
+   "clip_src": "batches/cluster_01_cross/mockers_words_ps227/visual/clips/david_writing_psalm.mp4"
+  },
+  {
+   "id": "m04_psalm_scroll",
+   "t": [
+    18.3,
+    29.9
+   ],
+   "beat": "he writes their words into a song, Psalm 22 / [david] Ps 22:8",
+   "still_prompt": "open psalm scroll by clay lamp, close",
+   "clip_tier": "seedance",
+   "status": "clip wired",
+   "ink_wake": false,
+   "role": "listener",
+   "clip_src": "batches/cluster_01_cross/mockers_words_ps227/visual/clips/psalm_scroll_night.mp4"
+  },
+  {
+   "id": "m05_passersby",
+   "t": [
+    29.9,
+    36.1
+   ],
+   "beat": "Almost the same words ... people passing by shout",
+   "still_prompt": "three passers-by on the road below the cross, heads mid-shake (Witness Edge)",
+   "clip_tier": "kling",
+   "status": "clip wired",
+   "ink_wake": false,
+   "role": "listener",
+   "clip_src": "batches/cluster_01_cross/mockers_words_ps227/visual/_dyncam_work/wagging_heads_close_arc.mp4"
+  },
+  {
+   "id": "m06_come_down",
+   "t": [
+    36.1,
+    39.9
+   ],
+   "beat": "[mocker] Matt 27:40",
+   "still_prompt": "crowd from below, hands pointing up, cross above",
+   "clip_tier": "kling",
+   "status": "clip wired",
+   "ink_wake": false,
+   "role": "listener",
+   "clip_src": "batches/cluster_01_cross/mockers_words_ps227/visual/clips/crowd_mocking.mp4"
+  },
+  {
+   "id": "m07_he_stayed",
+   "t": [
+    39.9,
+    55.1
+   ],
+   "beat": "He could have come down ... He stayed",
+   "still_prompt": "Jesus on the cross close, calm, nailed hand in frame, no glow",
+   "clip_tier": "seedance",
+   "status": "clip wired",
+   "ink_wake": false,
+   "role": "listener",
+   "sacred": true,
+   "clip_src": "batches/cluster_01_cross/mockers_words_ps227/visual/clips/face_on_cross.mp4"
+  },
+  {
+   "id": "m08_forgive",
+   "t": [
+    55.1,
+    58.5
+   ],
+   "beat": "Father, forgive them (Luke 23:34)",
+   "still_prompt": "Jesus face calm, looking out over the crowd, no glow",
+   "clip_tier": "seedance",
+   "status": "clip wired",
+   "ink_wake": false,
+   "role": "jesus",
+   "sacred": true,
+   "clip_src": "batches/cluster_01_cross/mockers_words_ps227/visual/clips/jesus_looks_down.mp4"
+  },
+  {
+   "id": "m09_song_nations",
+   "t": [
+    58.5,
+    67.1
+   ],
+   "beat": "Later in that song, people from every nation turn to God",
+   "still_prompt": "many figures from every direction walking toward a hill at dawn",
+   "clip_tier": "kling",
+   "status": "clip wired",
+   "ink_wake": false,
+   "role": "listener",
+   "clip_src": "batches/cluster_01_cross/mockers_words_ps227/visual/clips/look_up_faces.mp4"
+  },
+  {
+   "id": "m10_landing",
+   "t": [
+    67.1,
+    74.3
+   ],
+   "beat": "Jesus stayed for the people who mocked Him. You can turn to Him too.",
+   "still_prompt": "cross at dawn, Jesus calm, one human figure turning toward Him (landing: locked face, no glow)",
+   "clip_tier": "seedance",
+   "status": "clip wired",
+   "ink_wake": false,
+   "role": "listener",
+   "sacred": true,
+   "clip_src": "batches/cluster_01_cross/mockers_words_ps227/visual/clips/us_under_cross_shadow.mp4"
+  }
+ ],
+ "kjv": {
+  "Luke 23:34": "Father, forgive them; for they know not what they do."
+ },
+ "balloons": [
+  {
+   "speaker": "mocker",
+   "kjv_ref": "Matthew 27:43",
+   "text": "He trusted in God;",
+   "t": [
+    7.0,
+    11.3
+   ],
+   "tabs": [
+    [
+     "A MOCKER",
+     90
+    ],
+    [
+     "MATT 27:43",
+     790
+    ]
+   ]
+  },
+  {
+   "speaker": "mocker",
+   "kjv_ref": "Matthew 27:43",
+   "text": "let him deliver him now",
+   "t": [
+    8.0,
+    11.3
+   ]
+  },
+  {
+   "speaker": "david",
+   "kjv_ref": "Psalm 22:8",
+   "text": "He trusted on the LORD",
+   "t": [
+    26.6,
+    29.9
+   ],
+   "tabs": [
+    [
+     "DAVID",
+     90
+    ],
+    [
+     "PSALM 22:8",
+     790
+    ]
+   ]
+  },
+  {
+   "speaker": "david",
+   "kjv_ref": "Psalm 22:8",
+   "text": "that he would deliver him",
+   "t": [
+    27.4,
+    29.9
+   ]
+  },
+  {
+   "speaker": "mocker",
+   "kjv_ref": "Matthew 27:40",
+   "text": "If thou be the Son",
+   "t": [
+    36.1,
+    39.9
+   ],
+   "tabs": [
+    [
+     "A MOCKER",
+     90
+    ],
+    [
+     "MATT 27:40",
+     790
+    ]
+   ]
+  },
+  {
+   "speaker": "mocker",
+   "kjv_ref": "Matthew 27:40",
+   "text": "of God, come down from",
+   "t": [
+    36.7,
+    39.9
+   ]
+  },
+  {
+   "speaker": "mocker",
+   "kjv_ref": "Matthew 27:40",
+   "text": "the cross",
+   "t": [
+    37.3,
+    39.9
+   ]
+  },
+  {
+   "speaker": "jesus",
+   "kjv_ref": "Luke 23:34",
+   "text": "Father, forgive them;",
+   "t": [
+    55.1,
+    58.4
+   ],
+   "tabs": [
+    [
+     "JESUS",
+     90
+    ],
+    [
+     "LUKE 23:34",
+     790
+    ]
+   ]
+  },
+  {
+   "speaker": "jesus",
+   "kjv_ref": "Luke 23:34",
+   "text": "for they know not what",
+   "t": [
+    55.6,
+    58.4
+   ]
+  },
+  {
+   "speaker": "jesus",
+   "kjv_ref": "Luke 23:34",
+   "text": "they do.",
+   "t": [
+    56.1,
+    58.4
+   ]
+  }
+ ],
+ "cards": [
+  {
+   "kind": "hook",
+   "lines": [
+    "WHO WROTE",
+    "THE INSULTS?"
+   ],
+   "t": [
+    0.2,
+    2.8
+   ],
+   "decodes": []
+  },
+  {
+   "kind": "decode",
+   "lines": [
+    "DELIVER",
+    "= RESCUE"
+   ],
+   "t": [
+    11.7,
+    14.3
+   ],
+   "decodes": [
+    "deliver"
+   ]
+  }
+ ],
+ "decode_words": [
+  "deliver"
+ ],
+ "sfx": [],
+ "sketch_dir": "poc_comic_page/_piece1/stills_v2/_sketch",
+ "output": "poc_comic_page/_living_comic/out/the_mockers_y4.mp4",
+ "cost_estimate": {
+  "stills": "~10 unique stills, about $3-4 (re-quote from the real invoice)",
+  "clips": "~4 Kling about $1.13 + ~6 Seedance about $0.72 = about $9; reuse-first check could cut this",
+  "voice": "DONE about $0.50 spent 2026-11-07",
+  "total": "about $13-14. ESTIMATE ONLY. Each paid step needs its own yes + quoted price."
+ }
+}

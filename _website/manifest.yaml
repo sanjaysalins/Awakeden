@@ -699,11 +699,11 @@ items:
   series_id: words-from-cross
   cluster: cluster-01-cross
   cluster_order: 1
-  public_status: studio_complete
+  public_status: live
   featured: false
   preview_approved: true
   preview_source: assets/study/read/father-forgive-them/beat_01.jpg
-  youtube_id: null
+  youtube_id: HygYbxeUuAM
   read_source: ../batches/cluster_01_cross/father_forgive_them
   read_spec: visual/livingpage_short.spec.json
   read_video: visual/father_forgive_them_scored.mp4
@@ -752,11 +752,11 @@ items:
   ref: Luke 23:39-43
   series_id: words-from-cross
   cluster: null
-  public_status: studio_complete
+  public_status: live
   featured: false
   preview_approved: false
   preview_source: null
-  youtube_id: null
+  youtube_id: WDZS5VvbGrs
   public_hook: Jesus promised paradise to a criminal. Why?
   public_blurb: A 38-second short cut of Today in Paradise. One asked to be remembered;
     Jesus answered with today and with Him.
@@ -846,15 +846,30 @@ items:
   ref: John 4:4-42
   series_id: people-who-encountered-jesus
   cluster: null
+  public_status: live
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: fOMCN0wLFWU
+  public_hook: She came to a well for water. She went home without her jar.
+  public_blurb: A 91-second short on John 4. Jesus knew her whole story, and stayed.
+    She left her jar and told the town.
+  source: ../batches/cluster_04_encounters/woman_at_well_short
+- slug: on-his-way-to-die-jesus-stopped
+  kind: short
+  title: On His Way to Die, Jesus Stopped
+  ref: Mark 10:46-52
+  series_id: people-who-encountered-jesus
+  cluster: null
   public_status: studio_complete
   featured: false
   preview_approved: false
   preview_source: null
   youtube_id: null
-  public_hook: She came to a well for water. She went home without her jar.
-  public_blurb: A 91-second short on John 4. Jesus knew her whole story, and stayed.
-    She left her jar and told the town.
-  source: ../batches/cluster_04_encounters/woman_at_well_short
+  public_hook: Many told a blind beggar to be quiet. Jesus was on His way to die.
+  public_blurb: A 79-second short on Mark 10. Blind Bartimaeus shouted louder, and
+    Jesus stood still for one man.
+  source: ../batches/cluster_04_encounters/bartimaeus_short
 - slug: woman-behold-thy-son
   kind: short
   title: Woman, Behold Thy Son
@@ -914,11 +929,11 @@ items:
   series_id: questions-jesus-asked
   cluster: cluster-01-cross
   cluster_order: 7
-  public_status: studio_complete
+  public_status: live
   featured: false
   preview_approved: true
   preview_source: assets/study/read/could-ye-not-watch-one-hour/beat_01.jpg
-  youtube_id: null
+  youtube_id: GrrFU2MGrFM
   read_source: ../batches/cluster_01_cross/watch_one_hour_matt2640
   public_hook: Jesus asked three fishermen for one thing. They failed inside an hour.
   public_blurb: Matthew 26:36-46. Gethsemane, the cup, the sleeping disciples, and

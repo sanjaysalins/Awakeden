@@ -116,3 +116,6 @@ data/.sha_cache.json
 _concat_all.txt
 _concat_list.txt
 _ep_concat.txt
+
+# Remotion headless Chrome download (177 MB exe) - never commit
+.remotion/

@@ -1,0 +1,21 @@
+﻿{
+    "id":  "ps22-03-forsaken-cry",
+    "source":  "F:/slk/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/forsaken_cry_ps221/visual/forsaken_cry_ps221_sfx.mp4",
+    "output":  "F:/slk/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/forsaken_cry_ps221/visual/forsaken_cry_ps221_sfx_v5hook.mp4",
+    "hook_text":  "WHY DID JESUS CRY THIS?",
+    "hook_skipped_reason":  null,
+    "decode_cards":  [
+                         {
+                             "t0":  21.4,
+                             "old":  "FORSAKEN",
+                             "plain":  "ABANDONED",
+                             "t1":  23.8
+                         }
+                     ],
+    "skipped_decodes":  [
+                            "hast thou (plain enough)"
+                        ],
+    "title_question_proposal":  "Ever feel God left you? Why hast thou forsaken me (Psalm 22:1 / Matt 27:46)",
+    "verified":  true,
+    "notes":  "Hook 0-2.0s top (y170/320, Impact 104, white+gold 0xF2C14E, black@0.64 box); decode Impact 110/120 for 2.4s at top; burned captions sit lower so no overlap. Audio stream copied. Duration matches source within 0.001s. Frames checked at 1s, card+1s, card+3.4s. Decode timing = alignment.json word start. Note: caption box is separate burned layer, cards sit above it. Re-rendered 2026-11-07 from original source with panel-revised hook text; hook frame at 1s re-checked, decode cards unchanged. Re-rendered round 3 from original source with final panel text; hook and decode frames re-checked, text fits width."
+}

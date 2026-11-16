@@ -1,0 +1,22 @@
+{
+ "judge": [
+  "JUDGE, NO HAT",
+  "Judge this film for the whole worldwide audience at once: newcomer, Bible reader, scroller, second-language reader. Answer the five questions honestly and name the ONE change that helps the most people."
+ ],
+ "newcomer": [
+  "THE TOTAL NEWCOMER",
+  "You have never opened a Bible and know nothing about Psalms, Matthew, the cross or Jesus beyond what this film says. English is your second language; you are on a phone. Use ONLY the pack. For question 4 say you cannot judge accuracy and list what you were TOLD that you could not follow. Report what you understood, guessed, and every question you are left with."
+ ],
+ "bible": [
+  "BIBLE READER AND FACT CHECKER",
+  "You know the Bible well. Check every factual claim in the SPOKEN lines against the KJV text at the end of the pack. Question 4 is your main job: line by line, mark RIGHT / OVERCLAIMED / UNSUPPORTED / WRONG, quote the line, cite the verse. Pay special attention to: 'nearly line for line', 'unwilling witnesses', 'He could have come down', 'showed He was the Son', the Psalm 22:27 landing."
+ ],
+ "hook": [
+  "HOOK AND RETENTION ANALYST",
+  "Judge the first 3 seconds, the curiosity gap (where it opens, where it pays off), the pacing of a 78-second short, and what share would watch to the end. Give odds with error bars. Name the weakest 10 seconds."
+ ],
+ "global": [
+  "GLOBAL AND SECOND-LANGUAGE READER",
+  "You read English as a second language. Mark every word, idiom or phrase that would fail in translation or on a small screen (quote it). Say who is served and who is not worldwide, and whether anything could offend or confuse another culture."
+ ]
+}

@@ -1,4 +1,4 @@
-# AWAKEDEN RELEASE CALENDAR — the named, dated schedule (v1, 2026-07-08)
+# SALT AND LIGHT KINGDOM RELEASE CALENDAR — the named, dated schedule (v1, 2026-07-08)
 
 > Operationalizes `v2/AWAKEDEN_RELEASE_PLAN.md` (panel-reviewed 2026-07-03: mission,
 > 3 shorts/wk Mon/Wed/Fri + monthly long, YouTube-first, quality law). That doc says
@@ -13,7 +13,7 @@
 > and fulfilled word by word. Season 2: He is risen. It's one continuous thread —
 > every video ends at Jesus."**
 
-Public one-liner (unchanged): *Awakeden — finding Jesus in the whole Bible, one panel at a time.*
+Public one-liner (unchanged): *Salt and Light Kingdom — finding Jesus in the whole Bible, one panel at a time.*
 
 ## The season map (the whole catalogue as ONE story)
 

@@ -1,0 +1,20 @@
+{
+ "piece": "woman_at_well_short",
+ "locked": "2026-11-14",
+ "locked_by": "owner ('lock it', 2026-11-14) on v3 film; title + movie-poster thumb 'go with your pick' 2026-11-14",
+ "final_video": "visual/woman_at_well_final.mp4",
+ "final_sha256": "d3fb8f53ab3d3635a801709064201aec6f04b5fb25adac842d95170ddca97aa5",
+ "source": "poc_pop_halftone/woman_at_well/WOMAN_AT_WELL_SCORED_v3.mp4 (same bytes); FILM_LOCK.md; motion _remotion/src/WomanWellV3.tsx",
+ "words": "poc_pop_halftone/woman_at_well/words/FINAL_WORDS_v2.md",
+ "audio": "audio/narration.mp3, 3 voices (narrator/jesus/woman); film 91.05 s; oud/claps/handpan score (2 parts)",
+ "visual": "pop-halftone stills (Nano Banana Pro) -> Kling pro clips, trim-only 1.0x; Remotion 'living water' motion layer",
+ "spend_usd": 13.69,
+ "packaging": "packaging/PACKAGING_LOCK.md (title_r1 + poster_r1 blind rounds)",
+ "not_done": [
+  "upload (30-episode hold)",
+  "seed viewers",
+  "commit (text only, NO media)",
+  "search terms unverified against real autocomplete"
+ ],
+ "note": "Any change to the film or words needs the owner's say-so and a new sha."
+}

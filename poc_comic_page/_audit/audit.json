@@ -1,0 +1,578 @@
+[
+ {
+  "id": "could-ye-not-watch-one-hour",
+  "title": "Could Ye Not Watch One Hour could-ye-not-watch-one-hour \u00b7 cluster-01-c",
+  "video": "F:/slk/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/watch_one_hour_matt2640/visual/watch_one_hour_matt2640_sfx.mp4",
+  "vdur": 59.0,
+  "adur": 59.001995,
+  "voice_start": 0.0,
+  "tail_silence": 0.0,
+  "rgb": [
+   105,
+   98,
+   90
+  ],
+  "g_excess": -0.1,
+  "still_windows_4s": 0,
+  "median_motion": 10.43,
+  "longest_still_s": 0.0
+ },
+ {
+  "id": "father-forgive-them",
+  "title": "Father, Forgive Them father-forgive-them \u00b7 cluster-01-cross to post: y",
+  "video": "F:/slk/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/father_forgive_them/visual/father_forgive_them_sfx.mp4",
+  "vdur": 60.133008,
+  "adur": 60.116009,
+  "voice_start": 0.0,
+  "tail_silence": 0.0,
+  "rgb": [
+   124,
+   103,
+   81
+  ],
+  "g_excess": 0.2,
+  "still_windows_4s": 0,
+  "median_motion": 6.85,
+  "longest_still_s": 2.5
+ },
+ {
+  "id": "today-in-paradise",
+  "title": "Today in Paradise today-in-paradise \u00b7 cluster-01-cross to post: youtub",
+  "video": "F:/slk/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/today_paradise_luke2343_sfx.mp4",
+  "vdur": 59.066667,
+  "adur": 59.070998,
+  "voice_start": 0.0,
+  "tail_silence": 0.0,
+  "rgb": [
+   131,
+   114,
+   99
+  ],
+  "g_excess": -1.5,
+  "still_windows_4s": 0,
+  "median_motion": 10.93,
+  "longest_still_s": 0.5
+ },
+ {
+  "id": "woman-behold-thy-son",
+  "title": "Woman, Behold Thy Son woman-behold-thy-son \u00b7 cluster-01-cross to post:",
+  "video": "F:/slk/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/woman_behold_john1926/visual/woman_behold_john1926_sfx.mp4",
+  "vdur": 59.066016,
+  "adur": 59.070998,
+  "voice_start": 0.0,
+  "tail_silence": 0.0,
+  "rgb": [
+   151,
+   134,
+   119
+  ],
+  "g_excess": -0.4,
+  "still_windows_4s": 0,
+  "median_motion": 9.89,
+  "longest_still_s": 0.0
+ },
+ {
+  "id": "ps22-03-forsaken-cry",
+  "title": "The Forsaken Cry ps22-03-forsaken-cry \u00b7 psalm-22 to post: youtube, tik",
+  "video": "F:/slk/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/forsaken_cry_ps221/visual/forsaken_cry_ps221_sfx.mp4",
+  "vdur": 58.166667,
+  "adur": 58.189002,
+  "voice_start": 0.0,
+  "tail_silence": 0.0,
+  "rgb": [
+   133,
+   108,
+   82
+  ],
+  "g_excess": 0.6,
+  "still_windows_4s": 0,
+  "median_motion": 13.5,
+  "longest_still_s": 0.0
+ },
+ {
+  "id": "ps22-08-i-thirst",
+  "title": "I Thirst ps22-08-i-thirst \u00b7 psalm-22 to post: youtube, tiktok, faceboo",
+  "video": "F:/slk/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/i_thirst_john1928/visual/i_thirst_john1928_sfx.mp4",
+  "vdur": 55.733333,
+  "adur": 55.750998,
+  "voice_start": 0.0,
+  "tail_silence": 0.0,
+  "rgb": [
+   128,
+   110,
+   91
+  ],
+  "g_excess": 0.5,
+  "still_windows_4s": 0,
+  "median_motion": 11.95,
+  "longest_still_s": 0.0
+ },
+ {
+  "id": "it-is-finished",
+  "title": "It Is Finished it-is-finished \u00b7 cluster-01-cross to post: youtube, tik",
+  "video": "F:/slk/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/it_is_finished_john1930/visual/it_is_finished_john1930_sfx.mp4",
+  "vdur": 59.066667,
+  "adur": 59.095011,
+  "voice_start": 0.0,
+  "tail_silence": 0.0,
+  "rgb": [
+   136,
+   114,
+   88
+  ],
+  "g_excess": 2.0,
+  "still_windows_4s": 0,
+  "median_motion": 11.49,
+  "longest_still_s": 0.0
+ },
+ {
+  "id": "father-into-thy-hands",
+  "title": "Father, Into Thy Hands father-into-thy-hands \u00b7 cluster-01-cross to pos",
+  "video": "F:/slk/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/into_thy_hands_luke2346/visual/into_thy_hands_luke2346_sfx.mp4",
+  "vdur": 59.033008,
+  "adur": 59.048005,
+  "voice_start": 0.0,
+  "tail_silence": 0.0,
+  "rgb": [
+   128,
+   101,
+   76
+  ],
+  "g_excess": -1.5,
+  "still_windows_4s": 0,
+  "median_motion": 8.81,
+  "longest_still_s": 0.0
+ },
+ {
+  "id": "isaiah-53-suffering-servant",
+  "title": "LONG Isaiah 53: The Suffering Servant isaiah-53-suffering-servant to p",
+  "video": "F:/slk/PycharmProjects/JesusInTheBible/longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9_inked/LivingPage_Isaiah53_16x9_scored_sfx.mp4",
+  "vdur": 408.266016,
+  "adur": 408.299002,
+  "voice_start": 0.0,
+  "tail_silence": 0.0,
+  "rgb": [
+   151,
+   129,
+   105
+  ],
+  "g_excess": 1.2,
+  "still_windows_4s": 0,
+  "median_motion": 6.54,
+  "longest_still_s": 3.0
+ },
+ {
+  "id": "sign-of-jonah",
+  "title": "The Sign of Jonah sign-of-jonah \u00b7 cluster-02-resurrection to post: you",
+  "video": "F:/slk/PycharmProjects/JesusInTheBible/batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/sign_of_jonah_matt1240_sfx.mp4",
+  "vdur": 69.4,
+  "adur": 69.52,
+  "voice_start": 0.0,
+  "tail_silence": 0.0,
+  "rgb": [
+   109,
+   103,
+   90
+  ],
+  "g_excess": 3.5,
+  "still_windows_4s": 0,
+  "median_motion": 12.2,
+  "longest_still_s": 0.0
+ },
+ {
+  "id": "the-empty-tomb",
+  "title": "The Empty Tomb the-empty-tomb \u00b7 cluster-02-resurrection to post: youtu",
+  "video": "F:/slk/PycharmProjects/JesusInTheBible/batches/cluster_02_resurrection/empty_tomb_john208/visual/empty_tomb_john208_sfx.mp4",
+  "vdur": 79.033333,
+  "adur": 79.087007,
+  "voice_start": 0.0,
+  "tail_silence": 0.0,
+  "rgb": [
+   125,
+   110,
+   94
+  ],
+  "g_excess": 0.1,
+  "still_windows_4s": 0,
+  "median_motion": 16.6,
+  "longest_still_s": 1.5
+ },
+ {
+  "id": "women-first-witnesses",
+  "title": "Women as First Witnesses women-first-witnesses \u00b7 cluster-02-resurrecti",
+  "video": "F:/slk/PycharmProjects/JesusInTheBible/batches/cluster_02_resurrection/women_first_witnesses_luke245/visual/women_first_witnesses_luke245_sfx.mp4",
+  "vdur": 82.033333,
+  "adur": 82.059002,
+  "voice_start": 0.0,
+  "tail_silence": 0.0,
+  "rgb": [
+   153,
+   131,
+   104
+  ],
+  "g_excess": 2.3,
+  "still_windows_4s": 0,
+  "median_motion": 11.74,
+  "longest_still_s": 0.0
+ },
+ {
+  "id": "seed-of-woman-01-first-gospel-in-the-curse",
+  "title": "The First Gospel in the Curse seed-of-woman-01-first-gospel-in-the-cur",
+  "video": "F:/slk/PycharmProjects/JesusInTheBible/batches/cluster_03_ink_shorts/seed-of-woman-01-first-gospel-in-the-curse/../../../poc_living_sketchbook/first_gospel_in_the_curse/FIRSTGOSPELINTHECURSE_living_sketchbook_cc_scored_sfx.mp4",
+  "vdur": 69.0,
+  "adur": 69.0,
+  "voice_start": 0.0,
+  "tail_silence": 0.0,
+  "rgb": [
+   169,
+   153,
+   133
+  ],
+  "g_excess": 2.3,
+  "still_windows_4s": 0,
+  "median_motion": 3.93,
+  "longest_still_s": 1.5
+ },
+ {
+  "id": "seed-of-woman-02-her-seed",
+  "title": "Her Seed seed-of-woman-02-her-seed \u00b7 seed-of-the-woman to post: youtub",
+  "video": "F:/slk/PycharmProjects/JesusInTheBible/batches/cluster_03_ink_shorts/seed-of-woman-02-her-seed/../../../poc_living_sketchbook/her_seed/HERSEED_living_sketchbook_cc_scored_sfx.mp4",
+  "vdur": 62.0,
+  "adur": 62.0,
+  "voice_start": 0.0,
+  "tail_silence": 0.0,
+  "rgb": [
+   181,
+   164,
+   142
+  ],
+  "g_excess": 2.7,
+  "still_windows_4s": 0,
+  "median_motion": 3.32,
+  "longest_still_s": 1.5
+ },
+ {
+  "id": "seed-of-woman-03-heel-vs-head",
+  "title": "Heel vs Head seed-of-woman-03-heel-vs-head \u00b7 seed-of-the-woman to post",
+  "video": "F:/slk/PycharmProjects/JesusInTheBible/batches/cluster_03_ink_shorts/seed-of-woman-03-heel-vs-head/../../../poc_living_sketchbook/heel_vs_head/HEELVSHEAD_living_sketchbook_cc_scored_sfx.mp4",
+  "vdur": 65.0,
+  "adur": 65.0,
+  "voice_start": 0.0,
+  "tail_silence": 0.0,
+  "rgb": [
+   181,
+   167,
+   146
+  ],
+  "g_excess": 3.3,
+  "still_windows_4s": 2,
+  "median_motion": 2.62,
+  "longest_still_s": 4.5
+ },
+ {
+  "id": "seed-of-woman-04-serpent-crusher-promised",
+  "title": "The Serpent-Crusher, Promised seed-of-woman-04-serpent-crusher-promise",
+  "video": "F:/slk/PycharmProjects/JesusInTheBible/batches/cluster_03_ink_shorts/seed-of-woman-04-serpent-crusher-promised/../../../poc_living_sketchbook/serpent_crusher_promised/SERPENTCRUSHERPROMISED_living_sketchbook_cc_scored_sfx.mp4",
+  "vdur": 62.0,
+  "adur": 62.0,
+  "voice_start": 0.0,
+  "tail_silence": 0.0,
+  "rgb": [
+   179,
+   162,
+   138
+  ],
+  "g_excess": 3.3,
+  "still_windows_4s": 0,
+  "median_motion": 2.25,
+  "longest_still_s": 3.5
+ },
+ {
+  "id": "bronze-serpent-02-the-thing-that-killed-them",
+  "title": "The Thing That Killed Them, Lifted Up bronze-serpent-02-the-thing-that",
+  "video": "F:/slk/PycharmProjects/JesusInTheBible/batches/cluster_03_ink_shorts/bronze-serpent-02-the-thing-that-killed-them/../../../poc_living_sketchbook/god_hung_up_a_snake/GODHUNGUPASNAKE_living_sketchbook_cc_scored_sfx.mp4",
+  "vdur": 62.0,
+  "adur": 62.0,
+  "voice_start": 0.0,
+  "tail_silence": 0.0,
+  "rgb": [
+   158,
+   146,
+   127
+  ],
+  "g_excess": 3.2,
+  "still_windows_4s": 0,
+  "median_motion": 4.26,
+  "longest_still_s": 1.0
+ },
+ {
+  "id": "bronze-serpent-03-son-of-man-lifted-up",
+  "title": "Even So Must the Son of Man Be Lifted Up bronze-serpent-03-son-of-man-",
+  "video": "F:/slk/PycharmProjects/JesusInTheBible/batches/cluster_03_ink_shorts/bronze-serpent-03-son-of-man-lifted-up/../../../poc_living_sketchbook/son_of_man_lifted_up/SONOFMANLIFTEDUP_living_sketchbook_cc_scored_sfx.mp4",
+  "vdur": 58.0,
+  "adur": 58.0,
+  "voice_start": 0.0,
+  "tail_silence": 0.0,
+  "rgb": [
+   168,
+   155,
+   136
+  ],
+  "g_excess": 2.7,
+  "still_windows_4s": 0,
+  "median_motion": 4.4,
+  "longest_still_s": 2.0
+ },
+ {
+  "id": "rahab-and-the-scarlet-cord",
+  "title": "Why One Red Cord Survived the Fall of Jericho rahab-and-the-scarlet-co",
+  "video": "F:/slk/PycharmProjects/JesusInTheBible/batches/cluster_03_ink_shorts/rahab-and-the-scarlet-cord/../../../poc_living_sketchbook/_rewrite_v4/video/jericho_v4_cc.mp4",
+  "vdur": 56.833008,
+  "adur": 56.841995,
+  "voice_start": 0.0,
+  "tail_silence": 0.0,
+  "rgb": [
+   200,
+   186,
+   166
+  ],
+  "g_excess": 3.5,
+  "still_windows_4s": 0,
+  "median_motion": 4.12,
+  "longest_still_s": 1.5
+ },
+ {
+  "id": "aaron-and-the-two-goats",
+  "title": "One Goat Died. One Was Sent Away. Why Two? aaron-and-the-two-goats to",
+  "video": "F:/slk/PycharmProjects/JesusInTheBible/batches/cluster_03_ink_shorts/aaron-and-the-two-goats/../../../poc_living_sketchbook/_rewrite_v4/video/two_goats_v4_cc.mp4",
+  "vdur": 54.033008,
+  "adur": 54.056009,
+  "voice_start": 0.0,
+  "tail_silence": 0.0,
+  "rgb": [
+   179,
+   164,
+   146
+  ],
+  "g_excess": 1.8,
+  "still_windows_4s": 0,
+  "median_motion": 3.51,
+  "longest_still_s": 1.5
+ },
+ {
+  "id": "moses-and-the-snake-on-a-pole",
+  "title": "God Answered Snakebite With a Snake on a Pole moses-and-the-snake-on-a",
+  "video": "F:/slk/PycharmProjects/JesusInTheBible/batches/cluster_03_ink_shorts/moses-and-the-snake-on-a-pole/../../../poc_living_sketchbook/_rewrite_v4/video/bronze_serpent_v4_cc.mp4",
+  "vdur": 59.6,
+  "adur": 59.581995,
+  "voice_start": 0.0,
+  "tail_silence": 0.0,
+  "rgb": [
+   196,
+   177,
+   153
+  ],
+  "g_excess": 2.5,
+  "still_windows_4s": 0,
+  "median_motion": 5.15,
+  "longest_still_s": 1.5
+ },
+ {
+  "id": "ps22-02-mockers-words",
+  "title": "The Mockers&#x27; Words ps22-02-mockers-words \u00b7 psalm-22 to post: yout",
+  "video": "F:/slk/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/mockers_words_ps227/visual/mockers_words_ps227_sfx.mp4",
+  "vdur": 77.966667,
+  "adur": 78.019002,
+  "voice_start": 0.0,
+  "tail_silence": 0.0,
+  "rgb": [
+   134,
+   115,
+   99
+  ],
+  "g_excess": -1.0,
+  "still_windows_4s": 0,
+  "median_motion": 7.94,
+  "longest_still_s": 0.5
+ },
+ {
+  "id": "ps22-04-declared-to-brethren",
+  "title": "Declared to the Brethren ps22-04-declared-to-brethren \u00b7 psalm-22 to po",
+  "video": "F:/slk/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/declared_brethren_ps2222/visual/declared_brethren_ps2222_sfx.mp4",
+  "vdur": 58.933008,
+  "adur": 58.955011,
+  "voice_start": 0.0,
+  "tail_silence": 0.0,
+  "rgb": [
+   150,
+   123,
+   90
+  ],
+  "g_excess": 3.0,
+  "still_windows_4s": 0,
+  "median_motion": 7.6,
+  "longest_still_s": 0.5
+ },
+ {
+  "id": "ps22-05-he-hath-done-this",
+  "title": "He Hath Done This ps22-05-he-hath-done-this \u00b7 psalm-22 to post: youtub",
+  "video": "F:/slk/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/he_hath_done_this_ps2231/visual/he_hath_done_this_ps2231_sfx.mp4",
+  "vdur": 42.666667,
+  "adur": 42.700998,
+  "voice_start": 0.0,
+  "tail_silence": 0.0,
+  "rgb": [
+   132,
+   103,
+   77
+  ],
+  "g_excess": -1.0,
+  "still_windows_4s": 0,
+  "median_motion": 6.9,
+  "longest_still_s": 0.0
+ },
+ {
+  "id": "ps22-06-ends-of-the-earth",
+  "title": "The Ends of the Earth ps22-06-ends-of-the-earth \u00b7 psalm-22 to post: yo",
+  "video": "F:/slk/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/ends_of_earth_ps2227/visual/ends_of_earth_ps2227_sfx.mp4",
+  "vdur": 67.5,
+  "adur": 67.5,
+  "voice_start": 0.0,
+  "tail_silence": 0.0,
+  "rgb": [
+   149,
+   123,
+   94
+  ],
+  "g_excess": 1.5,
+  "still_windows_4s": 0,
+  "median_motion": 6.83,
+  "longest_still_s": 0.5
+ },
+ {
+  "id": "ps22-07-body-foretold",
+  "title": "The Body Foretold ps22-07-body-foretold \u00b7 psalm-22 to post: youtube, t",
+  "video": "F:/slk/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/body_foretold_ps2214/visual/body_foretold_ps2214_sfx.mp4",
+  "vdur": 66.933333,
+  "adur": 66.942993,
+  "voice_start": 0.0,
+  "tail_silence": 0.0,
+  "rgb": [
+   138,
+   121,
+   105
+  ],
+  "g_excess": -1.2,
+  "still_windows_4s": 0,
+  "median_motion": 7.33,
+  "longest_still_s": 0.5
+ },
+ {
+  "id": "bronze-serpent",
+  "title": "LONG The Bronze Serpent bronze-serpent \u00b7 bronze-serpent to post: youtu",
+  "video": "F:/slk/PycharmProjects/JesusInTheBible/longform/04_The_Bronze_Serpent/v1/../../../poc_living_sketchbook/bronze_serpent_long/BRONZESERPENT_LONG_living_sketchbook_cc.mp4",
+  "vdur": 594.933333,
+  "adur": 594.964218,
+  "voice_start": 0.492676,
+  "tail_silence": 0.0,
+  "rgb": [
+   196,
+   180,
+   159
+  ],
+  "g_excess": 2.8,
+  "still_windows_4s": 34,
+  "median_motion": 3.07,
+  "longest_still_s": 10.5
+ },
+ {
+  "id": "bronze-serpent-01-look-and-live",
+  "title": "Look and Live bronze-serpent-01-look-and-live \u00b7 bronze-serpent to post",
+  "video": "F:/slk/PycharmProjects/JesusInTheBible/batches/cluster_03_ink_shorts/bronze-serpent-01-look-and-live/../../../poc_living_sketchbook/look_and_live/LOOKANDLIVE_living_sketchbook_cc_scored_sfx.mp4",
+  "vdur": 61.9,
+  "adur": 61.9,
+  "voice_start": 0.0,
+  "tail_silence": 0.0,
+  "rgb": [
+   179,
+   162,
+   134
+  ],
+  "g_excess": 4.9,
+  "still_windows_4s": 0,
+  "median_motion": 3.04,
+  "longest_still_s": 2.5
+ },
+ {
+  "id": "day-of-atonement",
+  "title": "LONG Day of Atonement / Scapegoat day-of-atonement \u00b7 day-of-atonement",
+  "video": "F:/slk/PycharmProjects/JesusInTheBible/longform/06_Day_Of_Atonement/v1/../../../poc_living_sketchbook/day_of_atonement/DAYOFATONEMENT_LONG_living_sketchbook_cc.mp4",
+  "vdur": 593.5,
+  "adur": 593.550227,
+  "voice_start": 0.0,
+  "tail_silence": 0.0,
+  "rgb": [
+   172,
+   157,
+   139
+  ],
+  "g_excess": 1.8,
+  "still_windows_4s": 86,
+  "median_motion": 2.08,
+  "longest_still_s": 12.5
+ },
+ {
+  "id": "psalm-22-from-the-cross",
+  "title": "LONG Psalm 22: The Song From the Cross psalm-22-from-the-cross \u00b7 psalm",
+  "video": "F:/slk/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/LivingPage_Psalm22_16x9_scored_sfx.mp4",
+  "vdur": 421.2,
+  "adur": 421.232993,
+  "voice_start": 0.0,
+  "tail_silence": 0.0,
+  "rgb": [
+   148,
+   130,
+   109
+  ],
+  "g_excess": 1.3,
+  "still_windows_4s": 0,
+  "median_motion": 9.61,
+  "longest_still_s": 2.5
+ },
+ {
+  "id": "seed-of-the-woman",
+  "title": "LONG The Seed of the Woman seed-of-the-woman \u00b7 seed-of-the-woman to po",
+  "video": "F:/slk/PycharmProjects/JesusInTheBible/longform/05_The_Seed_Of_The_Woman/v1/../../../poc_living_sketchbook/seed_of_the_woman/SEEDOFTHEWOMAN_LONG_WITH_TRAILER.mp4",
+  "vdur": 533.266667,
+  "adur": 533.258005,
+  "voice_start": 0.0,
+  "tail_silence": 0.0,
+  "rgb": [
+   166,
+   153,
+   135
+  ],
+  "g_excess": 2.4,
+  "still_windows_4s": 107,
+  "median_motion": 1.28,
+  "longest_still_s": 19.0
+ },
+ {
+  "id": "he-was-asleep-in-the-storm",
+  "title": "He Was Asleep in the Storm he-was-asleep-in-the-storm to post: youtube",
+  "video": "F:/slk/PycharmProjects/JesusInTheBible/batches/cluster_03_ink_shorts/he-was-asleep-in-the-storm/../../../poc_living_sketchbook/storm/STORM_living_sketchbook_cc.mp4",
+  "vdur": 63.0,
+  "adur": 63.019002,
+  "voice_start": 0.0,
+  "tail_silence": 0.0,
+  "rgb": [
+   176,
+   163,
+   144
+  ],
+  "g_excess": 3.2,
+  "still_windows_4s": 0,
+  "median_motion": 11.01,
+  "longest_still_s": 0.0
+ }
+]

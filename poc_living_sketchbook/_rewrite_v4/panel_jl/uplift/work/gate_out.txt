@@ -1,0 +1,14 @@
+PASS G-AUDIO audio bit-identical :: shipped MD5=1fdac746d525485b98a792870075bdbd / new MD5=1fdac746d525485b98a792870075bdbd
+PASS G-FRAMES 1695 frames 1080x1920 = shipped :: 1080,1920,1695; shipped frames 1695; dur 56.500s vs shipped 56.500s
+PASS G-SLOT every clip >= slot+0.05 s, trim only (no tpad/reverse/setpts-speed/zoompan/loop) :: S01 4.00/3.47; S02 4.00/3.93; S03 5.04/4.97; S04 9.04/8.23; S05 10.04/9.07; S06 5.04/2.63; S07 5.04/4.97; S08 7.04/6.43; S09 9.04/6.50; S10 7.04/6.30
+FAIL G-MOTION new clips: zoom 1.000+-0.010, not frozen, baked text first==last :: S04 F03: zoom 1.000 meandiff 1.49 top 3.32 bottom 3.15 blue px 0->8 used 199f CHECK | S05 F04: zoom 1.000 meandiff 0.78 top 3.12 bottom 2.88 blue px 1904->2004 used 219f ok | S08 F07 Jesus: zoom 1.000 meandiff 1.18 top 1.49 bottom 1.91 blue px 32->4 used 155f CHECK | S10 new back cover: zoom 1.003 meandiff 0.39 top 18.85 bottom 2.03 blue px 13172->9952 used 152f CHECK
+PASS G-MARKS word-tied, spacing, count, quiet zones :: 5 marks; within -3..0 f of the word
+PASS G-KEEPOUT no stroke on baked text / faces / blue motif (real frames, <3% px) :: M1: 3028px, text/face/motif overlap 0.1% (dark 0.1% blue 0.0%) ok | M2: 10091px, text/face/motif overlap 2.6% (dark 2.6% blue 0.0%) ok | M3: 1896px, text/face/motif overlap 0.0% (dark 0.0% blue 0.0%) ok | M4: 6120px, text/face/motif overlap 1.9% (dark 1.9% blue 0.0%) ok | M5: 4665px, text/face/motif overlap 0.0% (dark 0.0% blue 0.0%) ok
+   M1 "ran."@5.94 start f176 (-2f) ok
+   M2 "ladder"@14.96 start f447 (-2f) ok
+   M3 "leave"@23.93 start f716 (-2f) ok
+   M4 "knew"@34.69 start f1039 (-2f) ok
+   M5 "ascending"@47.18 start f1413 (-2f) ok
+   spacing>=90f ok; count 5<=8; first 176f>=30; last mark ends f1497 <= 1605; covers untouched
+   marks gone >=5f before shot end: ok
+ok

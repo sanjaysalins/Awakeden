@@ -26,6 +26,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE / "test_the_cross"))
 from swirls_page import (  # noqa: E402
     GEN_PROVIDER, ANIM_RESOLUTION, HF_CLI, Ref, _IMG_URL_RE, _VID_URL_RE, _refs_clause, _run_hf,
+    _refuse_non_openart,
 )
 import openart_bridge  # noqa: E402
 
@@ -174,6 +175,7 @@ def assemble_cover_animation_prompt(spec: CoverSpec) -> str:
 
 def render_cover_still(spec: CoverSpec, out_png: Path, provider: str | None = None) -> bool:
     provider = provider or GEN_PROVIDER
+    _refuse_non_openart(provider, out_png)
     if out_png.exists():
         print(f"  [skip] {out_png.name} already exists")
         return True
@@ -230,6 +232,7 @@ def _render_cover_still_openart(spec: CoverSpec, out_png: Path) -> bool:
 
 def render_cover_animation(spec: CoverSpec, png: Path, out_mp4: Path, provider: str | None = None) -> bool:
     provider = provider or GEN_PROVIDER
+    _refuse_non_openart(provider, out_mp4)
     if out_mp4.exists():
         print(f"  [skip] {out_mp4.name} already exists")
         return True

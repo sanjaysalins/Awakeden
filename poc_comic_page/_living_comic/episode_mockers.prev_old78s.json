@@ -1,0 +1,385 @@
+{
+ "episode": "the_mockers_ps22_7",
+ "status": "PANEL MAP ONLY - no stills, no clips, no spend",
+ "format": {
+  "w": 1080,
+  "h": 1920,
+  "fps": 30
+ },
+ "first_episode": false,
+ "audio": {
+  "file": "batches/cluster_01_cross/mockers_words_ps227/audio/narration.mp3",
+  "t0": 0.0,
+  "dur": 78.0,
+  "note": "locked narration, 78.0s. Add >=3.0s landing hold (INV-26) at assembly; pad audio+video together."
+ },
+ "panels": [
+  {
+   "id": "m01_crowd_script",
+   "t": [
+    0.0,
+    4.4
+   ],
+   "beat": "The crowd ... was reading from a script",
+   "still_prompt": "dark crowd silhouette mass, three faces lit, one holds a blank scroll (Witness Edge, foreground silhouette)",
+   "clip_tier": "kling",
+   "status": "TODO still + clip",
+   "ink_wake": true,
+   "role": "first"
+  },
+  {
+   "id": "m02_david_writes",
+   "t": [
+    4.4,
+    10.1
+   ],
+   "beat": "A thousand years before, Psalm 22 ...",
+   "still_prompt": "aged King David writing by lamp, harp on wall",
+   "clip_tier": "seedance",
+   "status": "TODO still + clip",
+   "ink_wake": false,
+   "role": "listener"
+  },
+  {
+   "id": "m03_psalm_scroll",
+   "t": [
+    10.1,
+    16.9
+   ],
+   "beat": "David's words: they shake the head ...",
+   "still_prompt": "open psalm scroll by clay lamp, close",
+   "clip_tier": "seedance",
+   "status": "TODO still + clip",
+   "ink_wake": false,
+   "role": "listener"
+  },
+  {
+   "id": "m04_wagging_heads",
+   "t": [
+    16.9,
+    19.7
+   ],
+   "beat": "At the cross ... passers-by wagging their heads",
+   "still_prompt": "three passers-by on the road below the cross, heads mid-shake (Witness Edge)",
+   "clip_tier": "kling",
+   "status": "TODO still + clip",
+   "ink_wake": false,
+   "role": "listener"
+  },
+  {
+   "id": "m05_rulers_sneer",
+   "t": [
+    19.7,
+    23.8
+   ],
+   "beat": "the rulers sneering nearly line for line",
+   "still_prompt": "chief priests and scribes apart, faces twisted in scorn",
+   "clip_tier": "kling",
+   "status": "TODO still + clip",
+   "ink_wake": false,
+   "role": "listener"
+  },
+  {
+   "id": "m06_mocker_speaks",
+   "t": [
+    23.8,
+    32.4
+   ],
+   "beat": "He trusted in God ... I am the Son of God (Matt 27:43)",
+   "still_prompt": "single mocker close, mouth open, pointing up, level eye height",
+   "clip_tier": "kling",
+   "status": "TODO still + clip",
+   "ink_wake": false,
+   "role": "listener"
+  },
+  {
+   "id": "m07_crowd_reciting",
+   "t": [
+    32.4,
+    36.4
+   ],
+   "beat": "They thought they were inventing the cruelty",
+   "still_prompt": "same crowd from behind, silhouettes, cross small in the distance",
+   "clip_tier": "seedance",
+   "status": "TODO still + clip",
+   "ink_wake": false,
+   "role": "listener"
+  },
+  {
+   "id": "m08_scroll_glows",
+   "t": [
+    36.4,
+    39.7
+   ],
+   "beat": "They were reciting prophecy - unwilling witnesses",
+   "still_prompt": "psalm scroll again, one line catches lamplight (lamp = gold)",
+   "clip_tier": "seedance",
+   "status": "TODO still + clip",
+   "ink_wake": false,
+   "role": "listener"
+  },
+  {
+   "id": "m09_cross_taunt",
+   "t": [
+    39.7,
+    47.2
+   ],
+   "beat": "save thyself ... come down from the cross (Matt 27:40)",
+   "still_prompt": "the cross at dusk, level camera, Jesus calm, mockers' hands pointing up from below",
+   "clip_tier": "kling",
+   "status": "TODO still + clip",
+   "ink_wake": true,
+   "role": "jesus",
+   "sacred": true
+  },
+  {
+   "id": "m10_stays",
+   "t": [
+    47.2,
+    55.6
+   ],
+   "beat": "But He could have come down ... staying on it",
+   "still_prompt": "Jesus on the cross close, calm, nailed hand in frame, no glow",
+   "clip_tier": "seedance",
+   "status": "TODO still + clip",
+   "ink_wake": false,
+   "role": "listener",
+   "sacred": true
+  },
+  {
+   "id": "m11_song_whole",
+   "t": [
+    55.6,
+    62.3
+   ],
+   "beat": "The man they mocked is the One the whole song was about",
+   "still_prompt": "psalm scroll lit, cross shadow falls across it",
+   "clip_tier": "seedance",
+   "status": "TODO still + clip",
+   "ink_wake": false,
+   "role": "listener"
+  },
+  {
+   "id": "m12_scorners",
+   "t": [
+    62.3,
+    68.5
+   ],
+   "beat": "He stayed under scorn - theirs, and ours",
+   "still_prompt": "crowd from behind, cross above them, one face turning",
+   "clip_tier": "seedance",
+   "status": "TODO still + clip",
+   "ink_wake": false,
+   "role": "listener",
+   "sacred": true
+  },
+  {
+   "id": "m13_ends_of_world",
+   "t": [
+    68.5,
+    75.0
+   ],
+   "beat": "the song ends with the ends of the world turning to Him",
+   "still_prompt": "many figures from every direction walking toward a hill at dawn",
+   "clip_tier": "kling",
+   "status": "TODO still + clip",
+   "ink_wake": false,
+   "role": "listener"
+  },
+  {
+   "id": "m14_landing",
+   "t": [
+    75.0,
+    78.0
+   ],
+   "beat": "Turn, and come to the One who would not come down",
+   "still_prompt": "cross at dawn, Jesus calm, one human figure turning toward Him (landing: locked face, no glow)",
+   "clip_tier": "seedance",
+   "status": "TODO still + clip",
+   "ink_wake": false,
+   "role": "listener",
+   "sacred": true
+  }
+ ],
+ "kjv": {},
+ "balloons": [
+  {
+   "speaker": "david",
+   "kjv_ref": "Psalm 22:7-8",
+   "text": "they shake the head, saying,",
+   "t": [
+    10.1,
+    16.9
+   ],
+   "tabs": [
+    [
+     "DAVID",
+     90
+    ],
+    [
+     "PSALM 22:7-8",
+     760
+    ]
+   ]
+  },
+  {
+   "speaker": "david",
+   "kjv_ref": "Psalm 22:7-8",
+   "text": "He trusted on the LORD",
+   "t": [
+    11.4,
+    16.9
+   ]
+  },
+  {
+   "speaker": "david",
+   "kjv_ref": "Psalm 22:7-8",
+   "text": "that he would deliver him:",
+   "t": [
+    13.0,
+    16.9
+   ]
+  },
+  {
+   "speaker": "david",
+   "kjv_ref": "Psalm 22:7-8",
+   "text": "let him deliver him...",
+   "t": [
+    14.6,
+    16.9
+   ]
+  },
+  {
+   "speaker": "mocker",
+   "kjv_ref": "Matthew 27:43",
+   "text": "He trusted in God;",
+   "t": [
+    23.8,
+    32.4
+   ],
+   "tabs": [
+    [
+     "A MOCKER",
+     90
+    ],
+    [
+     "MATT 27:43",
+     790
+    ]
+   ]
+  },
+  {
+   "speaker": "mocker",
+   "kjv_ref": "Matthew 27:43",
+   "text": "let him deliver him now,",
+   "t": [
+    25.2,
+    32.4
+   ]
+  },
+  {
+   "speaker": "mocker",
+   "kjv_ref": "Matthew 27:43",
+   "text": "if he will have him:",
+   "t": [
+    27.2,
+    32.4
+   ]
+  },
+  {
+   "speaker": "mocker",
+   "kjv_ref": "Matthew 27:43",
+   "text": "for he said,",
+   "t": [
+    28.8,
+    32.4
+   ]
+  },
+  {
+   "speaker": "mocker",
+   "kjv_ref": "Matthew 27:43",
+   "text": "I am the Son of God.",
+   "t": [
+    29.6,
+    32.4
+   ]
+  },
+  {
+   "speaker": "mocker",
+   "kjv_ref": "Matthew 27:40",
+   "text": "save thyself.",
+   "t": [
+    41.0,
+    47.2
+   ],
+   "tabs": [
+    [
+     "A MOCKER",
+     90
+    ],
+    [
+     "MATT 27:40",
+     790
+    ]
+   ]
+  },
+  {
+   "speaker": "mocker",
+   "kjv_ref": "Matthew 27:40",
+   "text": "If thou be the Son of God,",
+   "t": [
+    43.3,
+    47.2
+   ]
+  },
+  {
+   "speaker": "mocker",
+   "kjv_ref": "Matthew 27:40",
+   "text": "come down from the cross.",
+   "t": [
+    44.6,
+    47.2
+   ]
+  }
+ ],
+ "cards": [
+  {
+   "kind": "hook",
+   "lines": [
+    "WHO SCRIPTED",
+    "THE MOCKERY?"
+   ],
+   "t": [
+    0.2,
+    2.8
+   ],
+   "decodes": []
+  },
+  {
+   "kind": "decode",
+   "lines": [
+    "DELIVER",
+    "= RESCUE"
+   ],
+   "t": [
+    17.0,
+    19.2
+   ],
+   "decodes": [
+    "deliver"
+   ]
+  }
+ ],
+ "decode_words": [
+  "deliver"
+ ],
+ "sfx": [],
+ "sketch_dir": "poc_comic_page/_piece1/stills_v2/_sketch",
+ "output": "poc_comic_page/_living_comic/out/the_mockers.mp4",
+ "cost_estimate": {
+  "stills": "~12 unique stills, about $4-5 (rate to be re-quoted from the real invoice)",
+  "clips": "4-5 Kling (action/crowd) about $1.13 each + 8-9 Seedance about $0.72 each = about $10-11; reuse-first check of existing mockers clips could cut this",
+  "voice": "$0 (locked audio exists)",
+  "total": "about $15, inside the ~$22 reserved. ESTIMATE ONLY. Each paid step needs its own yes + quoted price."
+ }
+}

@@ -1,0 +1,518 @@
+{
+ "_doc": "UPLIFT v1 PILOT of WOMAN BEHOLD THY SON (John 19:25-27 + Luke 2:35) 9:16 SHORT - living page. 13 beats / 59.06s. Simeon hook with ramp+takeover, 5 Scripture bars (Simeon 2:35a / John 19:25a / 19:26a+b / 19:27a+b), heartbeat 22.1-28.75 STOPS when Jesus speaks, border-break on 'Woman, behold thy son!', Simeon/Mary bookend stack, punch grammar + ticks. | Beat edges, captions, audio events unchanged. New: parts (mid-beat cuts), t_in, lazy, explicit bias.",
+ "audio": "../../audio/narration.mp3",
+ "total": 59.06,
+ "cut_ticks": false,
+ "heartbeat": {
+  "from": 22.1,
+  "to": 28.75,
+  "gain": -9,
+  "bpm": 64
+ },
+ "beats": [
+  {
+   "t": [
+    0.0,
+    4.18
+   ],
+   "tpl": "full",
+   "punch": true,
+   "ramp": true,
+   "sfx": [
+    [
+     "impact_low_boom",
+     0.1,
+     -12
+    ]
+   ],
+   "clips": [
+    {
+     "slug": "simeon_baby_temple",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "One dark sentence",
+    "kw": "ONE DARK SENTENCE"
+   }
+  },
+  {
+   "t": [
+    4.18,
+    7.84
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "mary_infant_shadow_arc",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "Yea, a sword shall pierce through thy own soul also",
+    "speaker": "SIMEON",
+    "ref": "LUKE 2:35a"
+   },
+   "fx": {
+    "temp": 7000
+   }
+  },
+  {
+   "t": [
+    7.84,
+    13.06
+   ],
+   "tpl": "stack_h",
+   "whip": true,
+   "clips": [
+    {
+     "slug": "mary_infant_shadow",
+     "motion": "pushin",
+     "zoom": 1.4,
+     "bias": [
+      0.5,
+      0.0
+     ]
+    },
+    {
+     "slug": "golgotha_hill_wide",
+     "motion": "pushin",
+     "zoom": 1.4,
+     "bias": [
+      0.5,
+      0.78
+     ],
+     "at": 8.54,
+     "slide": "up",
+     "flash": false,
+     "lazy": true
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Thirty years later, the sword lands",
+    "kw": "THE SWORD"
+   },
+   "fx": {
+    "temp": 7200
+   }
+  },
+  {
+   "t": [
+    13.06,
+    15.75
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "mary_at_cross",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "Now there stood by the cross of Jesus his mother",
+    "speaker": "JOHN",
+    "ref": "19:25a"
+   },
+   "fx": {
+    "temp": 7400
+   }
+  },
+  {
+   "t": [
+    15.75,
+    22.09
+   ],
+   "punch": true,
+   "inserts": [
+    {
+     "at": 19.8,
+     "slug": "nail_through_hand",
+     "frames": 4
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "He sees her wound",
+    "kw": "HER WOUND"
+   },
+   "fx": {
+    "temp": 7600
+   },
+   "parts": [
+    {
+     "until": 18.67,
+     "tpl": "full",
+     "clips": [
+      {
+       "slug": "golgotha_hill_wide",
+       "motion": "pushin",
+       "zoom": 1.15,
+       "bias": [
+        0.5,
+        0.6
+       ],
+       "t_in": 2.0
+      }
+     ]
+    },
+    {
+     "tpl": "stack_h",
+     "clips": [
+      {
+       "slug": "jesus_looks_down",
+       "motion": "pushin",
+       "bias": [
+        0.5,
+        0.43
+       ]
+      },
+      {
+       "slug": "mary_at_cross",
+       "motion": "pushin",
+       "zoom": 1.6,
+       "bias": [
+        0.0,
+        0.62
+       ],
+       "at": 19.73,
+       "slide": "up",
+       "flash": false,
+       "lazy": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "t": [
+    22.09,
+    28.75
+   ],
+   "sfx": [
+    [
+     "air_hollow_desolate",
+     22.15,
+     -17
+    ]
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "When Jesus therefore saw his mother, and the disciple standing by, whom he loved, he saith unto his mother",
+    "speaker": "JOHN",
+    "ref": "19:26a"
+   },
+   "fx": {
+    "temp": 7700
+   },
+   "parts": [
+    {
+     "until": 24.25,
+     "tpl": "full",
+     "clips": [
+      {
+       "slug": "mary_and_john",
+       "motion": "pushin"
+      }
+     ]
+    },
+    {
+     "tpl": "full",
+     "clips": [
+      {
+       "slug": "john_watching",
+       "motion": "pushin",
+       "zoom": 1.25,
+       "bias": [
+        0.6,
+        0.35
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "t": [
+    28.75,
+    31.87
+   ],
+   "tpl": "stack_h",
+   "border_break": {
+    "at": 28.8
+   },
+   "clips": [
+    {
+     "slug": "mary_and_john",
+     "motion": "pushin",
+     "zoom": 1.0,
+     "bias": [
+      0.3,
+      0.72
+     ],
+     "t_in": 1.9
+    },
+    {
+     "slug": "jesus_looks_down",
+     "motion": "pushin",
+     "bias": [
+      0.5,
+      0.65
+     ],
+     "t_in": 1.9
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "Woman, behold thy son!",
+    "speaker": "JESUS",
+    "ref": "JOHN 19:26b"
+   },
+   "fx": {
+    "temp": 7900
+   }
+  },
+  {
+   "t": [
+    31.87,
+    36.22
+   ],
+   "tpl": "stack_h",
+   "cap_at": 2.0,
+   "clips": [
+    {
+     "slug": "john_watching",
+     "motion": "pushin",
+     "zoom": 1.5,
+     "bias": [
+      0.7,
+      0.3
+     ],
+     "t_in": 0.6
+    },
+    {
+     "slug": "mary_at_cross",
+     "motion": "pushin",
+     "zoom": 1.7,
+     "bias": [
+      0.0,
+      0.62
+     ],
+     "t_in": 0.4,
+     "at": 33.87,
+     "slide": "up",
+     "flash": false,
+     "lazy": true
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "Behold thy mother!",
+    "speaker": "JESUS",
+    "ref": "JOHN 19:27a"
+   },
+   "fx": {
+    "temp": 7500
+   }
+  },
+  {
+   "t": [
+    36.22,
+    39.94
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "john_leads_home",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "And from that hour that disciple took her unto his own home",
+    "speaker": "JOHN",
+    "ref": "19:27b"
+   },
+   "fx": {
+    "temp": 6400
+   }
+  },
+  {
+   "t": [
+    39.94,
+    43.6
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "mary_and_john",
+     "motion": "pushin",
+     "zoom": 2.0,
+     "bias": [
+      0.35,
+      1.0
+     ],
+     "t_in": 1.4
+    },
+    {
+     "slug": "john_watching",
+     "motion": "pushin",
+     "zoom": 1.6,
+     "bias": [
+      0.9,
+      0.3
+     ],
+     "t_in": 2.5,
+     "at": 41.5,
+     "slide": "right",
+     "flash": true,
+     "lazy": true
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "A son. A home",
+    "kw": "A HOME"
+   },
+   "fx": {
+    "temp": 6000
+   }
+  },
+  {
+   "t": [
+    43.6,
+    49.22
+   ],
+   "punch": true,
+   "inserts": [
+    {
+     "at": 47.0,
+     "slug": "golgotha_hill_wide",
+     "frames": 4
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "That is who is dying there",
+    "kw": "DYING"
+   },
+   "fx": {
+    "temp": 7000
+   },
+   "parts": [
+    {
+     "until": 47.58,
+     "tpl": "full",
+     "clips": [
+      {
+       "slug": "face_on_cross",
+       "motion": "pushin"
+      }
+     ]
+    },
+    {
+     "tpl": "full",
+     "clips": [
+      {
+       "slug": "nail_through_hand",
+       "motion": "pushin"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "t": [
+    49.22,
+    53.16
+   ],
+   "tpl": "stack_h",
+   "whip": true,
+   "clips": [
+    {
+     "slug": "us_under_cross_shadow",
+     "motion": "pushin",
+     "zoom": 1.0,
+     "bias": [
+      0.5,
+      0.45
+     ]
+    },
+    {
+     "slug": "golgotha_hill_wide",
+     "motion": "pushin",
+     "zoom": 1.0,
+     "bias": [
+      0.5,
+      0.1
+     ],
+     "t_in": 3.0,
+     "at": 51.7,
+     "slide": "up",
+     "flash": true,
+     "lazy": true
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "He sees it from the cross",
+    "kw": "HE SEES"
+   },
+   "fx": {
+    "temp": 6400
+   }
+  },
+  {
+   "t": [
+    53.16,
+    59.06
+   ],
+   "sfx": [
+    [
+     "dawn_morning_warm",
+     53.2,
+     -15
+    ]
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Let him behold you, and bind what the sword tore",
+    "kw": "BEHOLD YOU"
+   },
+   "fx": {
+    "temp": 4900
+   },
+   "parts": [
+    {
+     "until": 55.18,
+     "tpl": "full",
+     "fx": {
+      "temp": 5200
+     },
+     "clips": [
+      {
+       "slug": "mourners_only_son",
+       "motion": "pushin"
+      }
+     ]
+    },
+    {
+     "tpl": "full",
+     "fx": {
+      "temp": 4900
+     },
+     "clips": [
+      {
+       "slug": "risen_mercy_hand",
+       "motion": "pushin"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "motion": "smooth"
+}

@@ -1,0 +1,28 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Pop Halftone Fix</title>
+<style>body{font-family:Verdana,sans-serif;background:#1b1712;color:#f5f0d0;margin:24px;font-size:20px}
+h1{font-size:30px}h2{font-size:24px;margin-top:28px}.row{display:flex;gap:18px;flex-wrap:wrap}
+.c{background:#2a241c;padding:12px;border-radius:10px}.c b{display:block;font-size:22px;margin-bottom:6px}
+img{cursor:zoom-in;border-radius:6px;display:block}.v{width:280px}.w{width:460px}.ok{color:#9be29b}.bad{color:#ff8a7a}
+img.z{position:fixed;inset:0;margin:auto;width:auto;max-width:96vw;max-height:96vh;z-index:9;cursor:zoom-out;box-shadow:0 0 0 100vmax #000c}</style></head><body>
+<h1>Woman at the well · consistency fix</h1>
+<h2>1 · Reference sheets (one design each)</h2>
+<div class="row">
+<div class="c"><b>Jesus</b><img class="w" src="woman_at_well/refs/ref_jesus.png"></div>
+<div class="c"><b>The woman + her jar</b><img class="w" src="woman_at_well/refs/ref_woman.png"></div>
+<div class="c"><b>Jacob's well + Mount Gerizim</b><img class="w" src="woman_at_well/refs/ref_well.png"></div>
+<div class="c"><b>Town of Sychar</b><img class="w" src="woman_at_well/refs/ref_town.png"></div>
+</div>
+<h2>2 · Before → after</h2>
+<div class="row">
+<div class="c"><b>1 · Before</b><img class="v" src="woman_at_well/stills/v1/t1.png"></div><div class="c"><b>1 · After</b><img class="v" src="woman_at_well/stills/t1.png"></div>
+<div class="c"><b>2 · Before</b><img class="v" src="woman_at_well/stills/v1/t2.png"></div><div class="c"><b>2 · After</b><img class="v" src="woman_at_well/stills/t2.png"></div>
+</div><div class="row" style="margin-top:18px">
+<div class="c"><b>3 · Before</b><img class="v" src="woman_at_well/stills/v1/t3.png"></div><div class="c"><b>3 · After</b><img class="v" src="woman_at_well/stills/t3.png"></div>
+<div class="c"><b>4 · Before</b><img class="v" src="woman_at_well/stills/v1/t4.png"></div><div class="c"><b>4 · After</b><img class="v" src="woman_at_well/stills/t4.png"></div>
+</div>
+<h2>Check</h2>
+<p class="ok">✔ Same well in all 4 (stone only, no crank).<br>✔ Mount Gerizim in every outdoor shot.<br>✔ Plain village, no castle.<br>✔ Same woman, same plain shawl.</p>
+<p class="ok">✔ Picture 4: the jar is back, big, by the well.<br>✔ Pictures 1 + 2: buttons painted out by hand ($0). Bottom strip on 2 cropped off.</p>
+<p>Spent so far: about $1.20. Old versions kept in stills/v1 and stills/v2.</p>
+<script>document.querySelectorAll('img').forEach(i=>i.onclick=()=>i.classList.toggle('z'))</script>
+</body></html>

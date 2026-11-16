@@ -14,7 +14,14 @@ CLIP_PLAN done: 4 redraws + 14 clips (209.25 cr), all logged. FILM BUILT 2026-11
 Owner: film "good", asked to push motion. Fable design _work/MOTION_DESIGN_FABLE.md; Remotion _remotion/src/ZaccPreview.tsx (20 s preview: hook + reversal + landing) -> _ZACCHAEUS_MOTION.html (before/after). $0.
 Owner: motion look "sloppy" -> dropped. Picked A + consistency fix (owner yes ~$2.20, logged $2.31): one fig tree (s01c, s14d), one room (s09b), clips c01 c09 c13 redone, two-pass loudness. FILM REBUILT: 85.2 s, -14.3 LUFS, peak -1.4.
 PUBLISH-READY 2026-11-11: owner "lock it". Piece batches/cluster_04_encounters/zacchaeus_short (slug zacchaeus-who-was-looking): LOCKED.json sha 6997b049..., packaging (3 blind cards merged), pack GREEN, thumbs from clean stills (publish/make_thumbs.py), red team 6/7/7.5 REVISE -> fixes applied, release_check GREEN, tracker rebuilt. Spend total $15.10 (ledger).
-NEXT = owner uploads + sends links: upload_tracker.py --set zacchaeus-who-was-looking <platform> <url>. Commit TEXT ONLY when asked.
+NEXT = owner uploads + sends links: upload_tracker.py --set zacchaeus-who-was-looking <platform> <url>.
+COMMITTED + PUSHED 2026-11-11: 291fa6b (111 text files, no media). Root.tsx/ZaccPreview.tsx left out on purpose.
+
+## RESUME HERE (2026-11-12)
+1. Ask the owner for the upload links (YouTube, TikTok, Facebook, Instagram). Log each with upload_tracker.py --set, then release_check.py + build_upload_tracker.py.
+2. Remind: turn on each platform's AI label.
+3. Optional, $0: fresh blind seats re-test the red-team fixes; check search terms vs real autocomplete.
+4. Nothing paid is pending. Any new spend needs a quoted price + its own yes.
 
 ## Where we stopped (old)
 The owner was shown the 4 test stills and asked: "Lock the words + redraw t3 (~$0.10)?"

@@ -1,0 +1,17 @@
+﻿{
+    "id":  "ps22-04-declared-to-brethren",
+    "source":  "F:/slk/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/declared_brethren_ps2222/visual/declared_brethren_ps2222_sfx.mp4",
+    "output":  null,
+    "hook_text":  null,
+    "hook_proposed":  "Where does Psalm 22 really end?",
+    "hook_skipped_reason":  "Opening 2s show only the narration\u0027s own burned-in caption (a statement, no question). A hook card would be a SECOND text layer over the continuous burned-in caption box (lower left, y~1230-1570 of 1920), breaking \u0027one text layer at a time\u0027. Not forced. If owner accepts a 2.0s top-band card (y~200-450, above the faces/crosses), proposed text: \u0027Where does Psalm 22 really end?\u0027.",
+    "decode_cards":  [
+
+                     ],
+    "skipped_decodes":  [
+                            "\u0027brethren\u0027: narrator already says \u0027brothers. Family.\u0027 at 44-46s; a card would add a second text layer over burned captions"
+                        ],
+    "title_question_proposal":  "Where Does Psalm 22 Really End? (Most Stop at the Cross)",
+    "verified":  false,
+    "notes":  "Style check: SAME style as the rest of the channel (Gold Seam inked comic, AWAKEDEN logo top-left, cream comic caption box lower-left, inset panel lower-right). Captions are burned in from ~0.1s to the end with only sub-second gaps, so no clean slot exists for hook or decode cards. No output file written. Source is 1080x1920 30fps, audio length matches."
+}

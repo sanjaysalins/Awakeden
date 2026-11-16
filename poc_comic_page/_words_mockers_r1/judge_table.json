@@ -1,0 +1,93 @@
+[
+ {
+  "seat": "claude_faith",
+  "words": 181,
+  "secs_at_2_75wps": 65.8,
+  "quotes": 6,
+  "refs": [
+   "Psalm 22:8",
+   "Matthew 27:43",
+   "Matthew 27:40",
+   "John 10:18",
+   "Luke 23:34",
+   "Psalm 22:27"
+  ],
+  "non_verbatim": [],
+  "avoid_words_used": [],
+  "names_david": true,
+  "says_who_jesus": true,
+  "answers_who_wrote": true,
+  "ends": "**"
+ },
+ {
+  "seat": "codex_hook",
+  "words": 179,
+  "secs_at_2_75wps": 65.1,
+  "quotes": 2,
+  "refs": [
+   "Psalms 22:8",
+   "Matthew 27:43"
+  ],
+  "non_verbatim": [],
+  "avoid_words_used": [],
+  "names_david": true,
+  "says_who_jesus": true,
+  "answers_who_wrote": true,
+  "ends": " The crowd called for him to come down. He stayed, with forgiveness on his lips. Wherever you are hearing this, you can turn to the One who stayed."
+ },
+ {
+  "seat": "fable_free",
+  "words": 190,
+  "secs_at_2_75wps": 69.1,
+  "quotes": 4,
+  "refs": [
+   "Psalm 22:8",
+   "Matthew 27:43",
+   "Matthew 27:42",
+   "Psalm 22:27"
+  ],
+  "non_verbatim": [],
+  "avoid_words_used": [],
+  "names_david": true,
+  "says_who_jesus": false,
+  "answers_who_wrote": true,
+  "ends": " People from every nation, turning to the LORD. You can turn to the One who stayed."
+ },
+ {
+  "seat": "grok_plain",
+  "words": 194,
+  "secs_at_2_75wps": 70.5,
+  "quotes": 0,
+  "refs": [
+   "Psalms 22:8",
+   "Matthew 27:43",
+   "Matthew 27:40"
+  ],
+  "non_verbatim": [],
+  "avoid_words_used": [],
+  "names_david": true,
+  "says_who_jesus": true,
+  "answers_who_wrote": true,
+  "ends": "You can turn to the one who stayed."
+ },
+ {
+  "seat": "sonnet_story",
+  "words": 178,
+  "secs_at_2_75wps": 64.7,
+  "quotes": 6,
+  "refs": [
+   "Psalms 22:8",
+   "Matthew 27:43",
+   "Matthew 27:40",
+   "John 10:18",
+   "Luke 23:34",
+   "Psalms 22:27"
+  ],
+  "non_verbatim": [],
+  "avoid_words_used": [],
+  "names_david": true,
+  "says_who_jesus": true,
+  "answers_who_wrote": true,
+  "ends": " They turn to the One who would not come down. He stayed for them. He stayed for you. Turn to Jesus, if you wish."
+ }
+]

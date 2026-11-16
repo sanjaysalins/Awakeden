@@ -207,9 +207,12 @@ def _caption_prose(caption_lines: tuple[str, ...], corner_note: str) -> str:
     else:
         cap_intro = "a caption beneath the main scene on two stacked lines"
         cap_lines = ", ".join(f'handwrite: "{line}"' for line in caption_lines)
+    # Swirls Short (2026-11-15, pace test): the corner note is OPTIONAL -- empty = no note
+    # clause at all. A non-empty note renders byte-identically to before.
+    note = f', and a corner note, handwrite: "{corner_note}"' if corner_note else ""
     return (
         f"Small handwritten production notes integrated naturally on the page: {cap_intro}, "
-        f'{cap_lines}, and a corner note, handwrite: "{corner_note}". '
+        f'{cap_lines}{note}. '
     )
 
 
@@ -339,8 +342,17 @@ def _run_hf(cmd: list[str], out_path: Path, url_re: re.Pattern, timeout: int) ->
     return True
 
 
+def _refuse_non_openart(provider: str, out_path: Path) -> None:
+    """Swirls SHORT guard (design v3.2 s3): under a `.swirls_short` marker only OpenArt (through the
+    guarded bridge) may render. A Higgsfield run would spend with no guard at all."""
+    if provider != "openart" and openart_bridge.find_marker(out_path) is not None:
+        raise RuntimeError(f"REFUSED: provider {provider!r} is not allowed for a marked Swirls short "
+                           f"({Path(out_path).name}); only OpenArt through the guarded bridge")
+
+
 def render_still(spec: PageSpec, out_png: Path, provider: str | None = None) -> bool:
     provider = provider or GEN_PROVIDER
+    _refuse_non_openart(provider, out_png)
     if out_png.exists():
         print(f"  [skip] {out_png.name} already exists")
         return True
@@ -397,6 +409,7 @@ def _render_still_openart(spec: PageSpec, out_png: Path) -> bool:
 
 def render_animation(spec: PageSpec, png: Path, out_mp4: Path, provider: str | None = None) -> bool:
     provider = provider or GEN_PROVIDER
+    _refuse_non_openart(provider, out_mp4)
     if out_mp4.exists():
         print(f"  [skip] {out_mp4.name} already exists")
         return True

@@ -1,0 +1,31 @@
+# Panel check: 10 candidate "fresh insight" lines for 60-second KJV Bible shorts
+
+Series rule: every piece reads the whole Bible through Jesus and lands on Him. Freshness = faithful depth: surprising about the TEXT, never about the truth. No contrarian or speculative readings. Global audience, plain words.
+
+For EACH insight below, judge independently:
+1. TEXT: are the verses quoted exactly (KJV) and do they really say what the claim needs? Any missing context that breaks it?
+2. SOUND: orthodox and not a stretch? Is it a real textual link, a fair echo, or an over-reach? Say which.
+3. FRESH: rough % of regular churchgoers who have heard this point before.
+4. VERDICT: USE / USE WITH CARE (say the exact wording limit) / REJECT.
+End with your top 3 and VERDICT: PASS (if most are usable) | REVISE | FAIL.
+
+---
+1. Joanna (Women as First Witnesses, Luke 24). Luke 8:3 "Joanna the wife of Chuza Herod's steward". Luke 23:8-9 Herod "hoped to have seen some miracle done by him... but he answered him nothing." Luke 24:10 "It was Mary Magdalene, and Joanna, ... which told these things unto the apostles." Claim: Herod demanded a sign and got silence; a woman from his own household got the empty tomb.
+
+2. Jonah was from Galilee (Sign of Jonah, Matt 12:40). 2 Kings 14:25 "Jonah, the son of Amittai, the prophet, which was of Gathhepher" (Gath-hepher, Zebulun: Joshua 19:13). John 7:52 "Search, and look: for out of Galilee ariseth no prophet." Matt 12:41 "a greater than Jonas is here." Claim: the leaders said no prophet comes from Galilee, but Jonah did, and Jesus pointed to Jonah.
+
+3. "Remember me" and Joseph's prisoners (Today in Paradise, Luke 23:43). Gen 40:14 "But think on me when it shall be well with thee"; 40:20-22 on the third day one prisoner restored, one hanged; 40:23 "Yet did not the chief butler remember Joseph, but forgat him." Luke 23:42-43 "Lord, remember me when thou comest into thy kingdom... To day shalt thou be with me in paradise." Claim: an echo (not a stated prophecy): two condemned men beside an innocent man, one asks to be remembered; the butler forgot Joseph, Jesus did not forget the thief.
+
+4. First and last words in Luke are "Father" (Father, Into Thy Hands). Luke 2:49 "wist ye not that I must be about my Father's business?" Luke 23:46 "Father, into thy hands I commend my spirit." Claim: Jesus' first recorded words and his last words in Luke both begin with the Father.
+
+5. "My God" becomes "your God" (The Forsaken Cry, Ps 22:1). Ps 22:22 "I will declare thy name unto my brethren"; Heb 2:12 applies it to Christ; John 20:17 "I ascend unto my Father, and your Father; and to my God, and your God." Claim: the Psalm that opens "My God, my God" turns to "my brethren", and after rising Jesus calls them brethren and says "my God, and your God".
+
+6. Lazarus still wore his napkin (The Empty Tomb, John 20:8). John 11:44 "his face was bound about with a napkin. Jesus saith unto them, Loose him"; John 20:7 "the napkin, that was about his head... wrapped together in a place by itself." Claim: Lazarus came out still bound and needed others to loose him; Jesus left his grave clothes behind, folded.
+
+7. Three "finished" works, and God moves in (It Is Finished, John 19:30). Gen 2:1 "Thus the heavens and the earth were finished"; Exod 40:33-34 "So Moses finished the work. Then a cloud covered the tent... and the glory of the LORD filled the tabernacle"; Matt 27:51 "the veil of the temple was rent in twain from the top to the bottom." Claim: each time a work is "finished", God's presence opens to his people.
+
+8. Jesus told the Samaritan leper's story in advance (Where Are the Nine, Luke 17). Luke 4:27 "none of them was cleansed, saving Naaman the Syrian"; Luke 17:18 "save this stranger"; 2 Kings 5:15 Naaman "returned to the man of God... now I know that there is no God in all the earth, but in Israel." Claim: in Nazareth Jesus said the one leper healed was a foreigner; in Luke 17 the one who returns is a foreigner, like Naaman who returned.
+
+9. Peter copied Jesus but had to pray (Little Girl, Get Up, Mark 5). Mark 5:37 only Peter, James, John went in; Mark 5:41 "Talitha cumi"; Acts 9:40 "Peter put them all forth, and kneeled down, and prayed; and turning him to the body said, Tabitha, arise." Claim: Peter repeats what he watched, almost word for word, but kneels and prays first; Jesus just spoke.
+
+10. Luke echoes Elijah (The Bier He Touched, Luke 7). 1 Kings 17:21 Elijah "stretched himself upon the child three times, and cried unto the LORD"; 17:23 "delivered him unto his mother"; Luke 7:14-15 "Young man, I say unto thee, Arise... And he delivered him to his mother." Claim: same ending line as Elijah, but Elijah pleaded three times and Jesus simply commanded.

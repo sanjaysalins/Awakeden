@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Comic moves - Paradise short</title>
+<style>
+  :root { --ink:#14100C; --bone:#F3E9D2; --paper:#FAF0D6; --gold:#E8A81C; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:Verdana, Arial, sans-serif; font-size:20px; line-height:1.5;
+         background-image:radial-gradient(rgba(20,16,12,.10) 1.5px, transparent 1.6px); background-size:14px 14px; }
+  main { max-width:860px; margin:0 auto; padding:24px 16px 80px; }
+  h1 { font-size:34px; margin:0 0 6px; letter-spacing:.5px; }
+  .sub { margin:0 0 28px; }
+  .move { display:flex; flex-wrap:wrap; gap:24px; align-items:center; margin:0 0 44px; padding:18px; background:#fff8e6; border:5px solid var(--ink); box-shadow:10px 10px 0 var(--ink); }
+  .say { flex:1 1 240px; min-width:220px; }
+  .num { display:inline-block; background:var(--ink); color:var(--bone); font-size:40px; font-weight:bold; width:64px; height:64px; line-height:64px; text-align:center; transform:rotate(-4deg); }
+  .say h2 { font-size:30px; margin:12px 0 4px; }
+  .time { display:inline-block; background:var(--gold); border:3px solid var(--ink); padding:2px 10px; font-weight:bold; font-size:18px; }
+  .say p { margin:12px 0 0; }
+  .say .word { font-style:italic; }
+  /* phone frame: 1080x1920 stage shown at 0.36 */
+  .phone { flex:0 0 auto; width:389px; height:691px; overflow:hidden; position:relative; border:5px solid var(--ink); background:#000; }
+  .stage { width:1080px; height:1920px; transform:scale(.36); transform-origin:0 0; position:absolute; left:0; top:0; overflow:hidden; }
+  .stage > *, .lay { position:absolute; left:0; top:0; }
+  .full { width:1080px; height:1920px; background-size:1080px 1920px; background-repeat:no-repeat; }
+  svg.lay { width:1080px; height:1920px; overflow:visible; }
+  .pill { position:absolute; left:70px; top:1000px; width:940px; height:184px; border-radius:46px; background:rgba(225,225,228,.62); border:4px solid rgba(20,16,12,.67);
+          font:italic 52px "Kalam","Comic Sans MS","Segoe Print",cursive; text-align:center; padding:26px 40px 0; line-height:62px; color:var(--ink); }
+  .pill.one { height:122px; }
+  @media (max-width:440px) { .phone { width:324px; height:576px; } .stage { transform:scale(.30); } }
+  @media (prefers-reduced-motion: reduce) { * { animation-play-state:paused !important; } }
+
+  /* ---------- 1 HOOK: page slam + dive (3.75 s) ---------- */
+  #m1 .page { width:1080px; height:1920px; background:var(--paper); background-image:radial-gradient(rgba(20,16,12,.13) 2.2px, transparent 2.4px); background-size:20px 20px; animation:m1shake 3.75s linear infinite; }
+  #m1 .pn { position:absolute; border:9px solid var(--ink); box-shadow:12px 12px 0 var(--ink); background-repeat:no-repeat; overflow:hidden; }
+  #m1 .pj { left:60px; top:470px; width:960px; height:470px; background-image:url(f1_jesus.jpg); background-size:972px 1728px; background-position:-15px -783px; animation:m1j 3.75s linear infinite; }
+  #m1 .pm { left:555px; top:1290px; width:465px; height:350px; background-image:url(f3_mocker.jpg); background-size:540px 960px; background-position:-31px -320px; animation:m1m 3.75s linear infinite; }
+  #m1 .pt { left:60px; top:1290px; width:465px; height:350px; background-image:url(f1_thief.jpg); background-size:540px 960px; background-position:-17px -354px; animation:m1t 3.75s cubic-bezier(.3,.8,.2,1) infinite; z-index:3; }
+  #m1 .hook { position:absolute; left:90px; top:200px; width:900px; text-align:center; font:900 118px/1.1 Impact, "Arial Black", sans-serif; color:#FFEEBE; -webkit-text-stroke:9px #281604; paint-order:stroke fill; animation:m1h 3.75s steps(1) infinite; z-index:4; }
+  #m1 .pill { z-index:5; }
+  @keyframes m1j { 0%,1.5% {opacity:0; transform:rotate(-1deg) scale(1.3);} 1.6% {opacity:1; transform:rotate(-1deg) scale(1.3);} 4.8% {transform:rotate(-1deg) scale(.97);} 6.9%,100% {opacity:1; transform:rotate(-1deg) scale(1);} }
+  @keyframes m1m { 0%,47.1% {opacity:0; transform:rotate(2deg) scale(1.35);} 47.2% {opacity:1; transform:rotate(2deg) scale(1.35);} 50.4% {transform:rotate(2deg) scale(.97);} 52%,100% {opacity:1; transform:rotate(2deg) scale(1);} }
+  @keyframes m1t {
+    0%,49.2% {opacity:0; transform:rotate(-2deg) scale(1.35); left:60px; top:1290px; width:465px; height:350px; background-size:540px 960px; background-position:-17px -354px; border-width:9px;}
+    49.3% {opacity:1; transform:rotate(-2deg) scale(1.35);}
+    52.5% {transform:rotate(-2deg) scale(.97);}
+    54.1%,62.7% {opacity:1; transform:rotate(-2deg) scale(1); left:60px; top:1290px; width:465px; height:350px; background-size:540px 960px; background-position:-17px -354px; border-width:9px;}
+    73.3%,100% {opacity:1; transform:rotate(0deg) scale(1); left:0; top:0; width:1080px; height:1920px; background-size:1080px 1920px; background-position:0 0; border-width:0;}
+  }
+  @keyframes m1shake { 0%,1.5% {transform:translate(0,0);} 2.4% {transform:translate(8px,-6px);} 3.6% {transform:translate(-5px,4px);} 5%,49.2% {transform:translate(0,0);} 50.5% {transform:translate(-9px,7px);} 51.7% {transform:translate(6px,-5px);} 53%,100% {transform:translate(0,0);} }
+  @keyframes m1h { 0% {opacity:1;} 58.7%,100% {opacity:0;} }
+
+  /* ---------- 2 MOCKER: jagged (3.92 s) ---------- */
+  #m2 .full { background-image:url(f2_mocker.jpg); animation:m2jolt 3.92s linear infinite; }
+  #m2 .shout { animation:m2pop 3.92s linear infinite; }
+  #m2 .va { animation:tog .2s steps(1) infinite; } #m2 .vb { animation:tog .2s steps(1) -.1s infinite; }
+  @keyframes tog { 0% {opacity:1;} 50%,100% {opacity:0;} }
+  @keyframes m2pop {
+    0%,20.1% {opacity:0; transform:scale(.4);} 20.2% {opacity:1; transform:scale(.4);} 21.9% {transform:scale(1.08);} 23.6%,27% {opacity:1; transform:scale(1);} 27.1%,46.3% {opacity:0; transform:scale(.4);}
+    46.4% {opacity:1; transform:scale(.4);} 48.1% {transform:scale(1.08);} 49.8%,53.2% {opacity:1; transform:scale(1);} 53.3%,54% {opacity:0; transform:scale(.5);}
+    54.1% {opacity:1; transform:scale(.5);} 55.8% {transform:scale(1.25);} 57.5%,60.9% {opacity:1; transform:scale(1.15);} 61%,89.2% {opacity:0; transform:scale(.4);}
+    89.3% {opacity:1; transform:scale(.4);} 91% {transform:scale(1.08);} 92.7%,96.1% {opacity:1; transform:scale(1);} 96.2%,100% {opacity:0; transform:scale(.4);}
+  }
+  @keyframes m2jolt { 0%,46.3% {transform:translate(0,0);} 47.2% {transform:translate(-8px,5px);} 48.9% {transform:translate(6px,-4px);} 50.6%,100% {transform:translate(0,0);} }
+
+  /* ---------- 3 SPLIT: diagonal gutter (4.07 s) ---------- */
+  #m3 .stage { background:var(--paper); }
+  #m3 .mk { background-image:url(f3_mocker.jpg); animation:m3mk 4.07s cubic-bezier(.2,.9,.2,1) infinite; }
+  #m3 .pt { background-image:url(f3_thief.jpg); background-size:1296px 2304px; animation:m3pt 4.07s cubic-bezier(.2,.9,.2,1) infinite; }
+  #m3 .gut { animation:m3gut 4.07s cubic-bezier(.2,.9,.2,1) infinite; }
+  #m3 .slash { stroke-dasharray:2000; animation:m3slash 4.07s linear infinite; }
+  @keyframes m3mk {
+    0%,42.6% {clip-path:polygon(0 0,1080px 0,1080px 1920px,0 1920px); background-size:1080px 1920px; background-position:0 0; filter:none;}
+    46.7%,64.9% {clip-path:polygon(0 0,747px 0,307px 1920px,0 1920px); background-size:1080px 1920px; background-position:-247px 0; filter:none;}
+    71.5%,100% {clip-path:polygon(0 0,597px 0,157px 1920px,0 1920px); background-size:1080px 1920px; background-position:-322px 0; filter:brightness(.55) saturate(.35);}
+  }
+  @keyframes m3pt {
+    0%,42.6% {clip-path:polygon(773px 0,773px 0,333px 1920px,333px 1920px); background-position:326px -175px; filter:none;}
+    46.7%,64.9% {clip-path:polygon(773px 0,1080px 0,1080px 1920px,333px 1920px); background-position:270px -175px; filter:none;}
+    71.5%,100% {clip-path:polygon(623px 0,1080px 0,1080px 1920px,183px 1920px); background-position:195px -175px; filter:brightness(1.08);}
+  }
+  @keyframes m3gut { 0%,44.9% {opacity:0; transform:translateX(0);} 45%,64.9% {opacity:1; transform:translateX(0);} 71.5%,100% {opacity:1; transform:translateX(-150px);} }
+  @keyframes m3slash { 0%,42.5% {stroke-dashoffset:2000; opacity:1;} 45.5% {stroke-dashoffset:0; opacity:1;} 47.5%,100% {stroke-dashoffset:0; opacity:0;} }
+
+  /* ---------- 4 ASK: halftone hush (3.76 s) ---------- */
+  #m4 .full { background-image:url(f4_asks.jpg); }
+  #m4 .dots { animation:m4in 3.76s ease-out infinite; }
+  #m4 .top { animation:m4top 3.76s ease-in infinite; }
+  @keyframes m4in { 0%,3.7% {opacity:0;} 21.5%,100% {opacity:.72;} }
+  @keyframes m4top { 0%,86% {opacity:1;} 100% {opacity:0;} }
+
+  /* ---------- 5 STILL ---------- */
+  #m5 .full { background-image:url(f5_jesus.jpg); }
+
+  /* ---------- 6 TODAY: ink bleed + rays (2.87 s) ---------- */
+  #m6 .full { background-image:url(f6_dark.jpg); }
+  #m6 .grow { animation:m6grow 2.87s cubic-bezier(.5,0,.9,.6) infinite; }
+  #m6 .rays { animation:m6rays 2.87s linear infinite; }
+  #m6 .va { animation:tog .2s steps(1) infinite; } #m6 .vb { animation:tog .2s steps(1) -.1s infinite; }
+  @keyframes m6grow { 0%,40.8% {transform:scale(0);} 56.1%,100% {transform:scale(22);} }
+  @keyframes m6rays { 0%,56% {opacity:0; transform:scale(1.3);} 56.1% {opacity:1; transform:scale(1.3);} 58.4% {transform:scale(.98);} 59.6%,72.8% {opacity:1; transform:scale(1);} 82.6%,100% {opacity:0; transform:scale(1.6);} }
+</style>
+</head>
+<body>
+<main>
+  <h1>6 comic moves</h1>
+  <p class="sub">Jesus Promised Paradise to a Criminal. 38 s. Real frames. Moves loop at real speed. Nothing new to read. Sound is not touched.</p>
+
+  <!-- 1 -->
+  <section class="move" id="m1">
+    <div class="phone"><div class="stage">
+      <div class="page">
+        <div class="pn pj"></div><div class="pn pm"></div><div class="pn pt"></div>
+      </div>
+      <div class="hook">PARADISE FOR A CRIMINAL?</div>
+      <div class="pill">Jesus promised paradise to a criminal. Why?</div>
+    </div></div>
+    <div class="say"><span class="num">1</span><h2>Page slam, then dive</h2><span class="time">0.0 - 3.75 s</span>
+      <p>Three panels hit the page. The camera dives into the thief.</p>
+      <p class="word">"Jesus" ... "a criminal" ... "Why?"</p></div>
+  </section>
+
+  <!-- 2 -->
+  <section class="move" id="m2">
+    <div class="phone"><div class="stage">
+      <div class="full"></div>
+      <svg class="lay" viewBox="0 0 1080 1920">
+        <g id="spikes"></g>
+        <g transform="translate(512,680)"><g class="shout" id="shout"></g></g>
+      </svg>
+    </div></div>
+    <div class="say"><span class="num">2</span><h2>The shout</h2><span class="time">6.95 - 10.87 s</span>
+      <p>Spiky edge on his words. Shout marks burst from his mouth.</p>
+      <p class="word">"Christ" ... "save" ... "thyself" ... "us"</p></div>
+  </section>
+
+  <!-- 3 -->
+  <section class="move" id="m3">
+    <div class="phone"><div class="stage">
+      <div class="full mk"></div>
+      <div class="full pt"></div>
+      <svg class="lay" viewBox="0 0 1080 1920">
+        <g class="gut">
+          <line x1="747" y1="-10" x2="307" y2="1930" stroke="#14100C" stroke-width="9"/>
+          <line x1="773" y1="-10" x2="333" y2="1930" stroke="#14100C" stroke-width="9"/>
+          <circle cx="690" cy="330" r="9" fill="#14100C"/><circle cx="800" cy="210" r="6" fill="#14100C"/><circle cx="430" cy="1500" r="8" fill="#14100C"/><circle cx="560" cy="930" r="5" fill="#14100C"/>
+        </g>
+        <line class="slash" x1="762" y1="-20" x2="318" y2="1940" stroke="#14100C" stroke-width="84" stroke-linecap="round"/>
+      </svg>
+      <div class="pill">One wanted off the cross. The other asked for very little.</div>
+    </div></div>
+    <div class="say"><span class="num">3</span><h2>The ink split</h2><span class="time">10.87 - 14.94 s</span>
+      <p>One slash of ink. Two men, two panels. The one who asked gets more room.</p>
+      <p class="word">"One" ... "The other asked"</p></div>
+  </section>
+
+  <!-- 4 -->
+  <section class="move" id="m4">
+    <div class="phone"><div class="stage">
+      <div class="full"></div>
+      <svg class="lay" viewBox="0 0 1080 1920"><g class="dots" fill="#14100C"><g id="dotsRest"></g><g class="top" id="dotsTop"></g></g></svg>
+    </div></div>
+    <div class="say"><span class="num">4</span><h2>The hush</h2><span class="time">14.94 - 18.70 s</span>
+      <p>Soft ink dots close in. No slam. No shake. It goes quiet.</p>
+      <p class="word">"Lord, remember me"</p></div>
+  </section>
+
+  <!-- 5 -->
+  <section class="move" id="m5">
+    <div class="phone"><div class="stage"><div class="full"></div></div></div>
+    <div class="say"><span class="num">5</span><h2>Jesus speaks. Nothing moves.</h2><span class="time">22.45 - 26.53 s</span>
+      <p>No border. No lines. No dots. The film as it is today.</p>
+      <p>The quiet is the move.</p></div>
+  </section>
+
+  <!-- 6 -->
+  <section class="move" id="m6">
+    <div class="phone"><div class="stage">
+      <div class="full"></div>
+      <svg class="lay" viewBox="0 0 1080 1920">
+        <defs>
+          <filter id="rough" filterUnits="userSpaceOnUse" x="-1500" y="-1500" width="4080" height="4920">
+            <feTurbulence type="fractalNoise" baseFrequency="0.011" numOctaves="3" seed="7"/>
+            <feDisplacementMap in="SourceGraphic" scale="190" xChannelSelector="R" yChannelSelector="G"/>
+          </filter>
+          <mask id="mIn" maskUnits="userSpaceOnUse" x="0" y="0" width="1080" height="1920"><g filter="url(#rough)"><g transform="translate(778,230)"><circle class="grow" r="100" fill="#fff"/></g></g></mask>
+          <mask id="mRim" maskUnits="userSpaceOnUse" x="0" y="0" width="1080" height="1920"><g filter="url(#rough)"><g transform="translate(778,230)"><circle class="grow" r="109" fill="#fff"/></g></g></mask>
+          <clipPath id="above"><rect x="0" y="0" width="1080" height="940"/></clipPath>
+        </defs>
+        <rect width="1080" height="1920" fill="#14100C" mask="url(#mRim)"/>
+        <image href="f6_dawn.jpg" width="1080" height="1920" preserveAspectRatio="none" mask="url(#mIn)"/>
+        <g clip-path="url(#above)"><g transform="translate(606,740)"><g class="rays" id="rays" fill="#14100C"></g></g></g>
+      </svg>
+      <div class="pill one">Not someday. Today.</div>
+    </div></div>
+    <div class="say"><span class="num">6</span><h2>Today</h2><span class="time">26.53 - 29.40 s</span>
+      <p>Light eats the dark ink. Sun lines burst on the garden. Never on His face.</p>
+      <p class="word">"Not someday." ... "Today."</p></div>
+  </section>
+
+  <p><b>After this:</b> no more moves. The last 3 s stay still.</p>
+  <p><b>My pick:</b> build all 6. Cost $0. Say yes?</p>
+</main>
+
+<script>
+(function () {
+  var NS = "http://www.w3.org/2000/svg";
+  function rng(seed) { var s = seed; return function () { s = (s * 1664525 + 1013904223) % 4294967296; return s / 4294967296; }; }
+  function el(parent, name, attrs) { var e = document.createElementNS(NS, name); for (var k in attrs) e.setAttribute(k, attrs[k]); parent.appendChild(e); return e; }
+
+  // 2a. spiky balloon edge round the pill (70,1000)-(1010,1184). Skips the two tabs.
+  function spikes(seed) {
+    var r = rng(seed), p = [], x, y, step = 47;
+    function topY(x) { return (x < 285 || x > 775) ? 960 : 993; }
+    for (x = 64; x < 1016; x += step) { p.push([x, topY(x)]); p.push([x + step / 2, topY(x + step / 2) - 26 - r() * 34]); }
+    for (y = 994; y < 1190; y += step) { p.push([1016, y]); p.push([1016 + 26 + r() * 34, y + step / 2]); }
+    for (x = 1016; x > 64; x -= step) { p.push([x, 1190]); p.push([x - step / 2, 1190 + 26 + r() * 34]); }
+    for (y = 1190; y > 994; y -= step) { p.push([64, y]); p.push([64 - 26 - r() * 34, y - step / 2]); }
+    return p.map(function (q) { return q[0].toFixed(0) + "," + q[1].toFixed(0); }).join(" ");
+  }
+  var sp = document.getElementById("spikes");
+  [["va", 3], ["vb", 9]].forEach(function (v) {
+    var g = el(sp, "g", { "class": v[0], fill: "none", "stroke-linejoin": "miter" });
+    el(g, "polygon", { points: spikes(v[1]), stroke: "#F3E9D2", "stroke-width": 18 });
+    el(g, "polygon", { points: spikes(v[1]), stroke: "#14100C", "stroke-width": 8 });
+  });
+
+  // 2b. shout wedges from the mouth, fan up and right (away from the pill and from Jesus)
+  var sh = document.getElementById("shout"), r2 = rng(5);
+  [-72, -58, -44, -30, -17, -4].forEach(function (deg, i) {
+    var a = deg * Math.PI / 180, r0 = 84, r1 = (i % 2 ? 210 : 300) + r2() * 30, w = 0.085;
+    var pts = [[r0 * Math.cos(a), r0 * Math.sin(a)], [r1 * Math.cos(a - w), r1 * Math.sin(a - w)], [r1 * Math.cos(a + w), r1 * Math.sin(a + w)]];
+    el(sh, "polygon", { points: pts.map(function (q) { return q[0].toFixed(0) + "," + q[1].toFixed(0); }).join(" "), fill: "#F3E9D2", stroke: "#14100C", "stroke-width": 6, "stroke-linejoin": "round" });
+  });
+
+  // 4. halftone dots: zero near the head, bigger toward the corners. None on the pill.
+  var rest = document.getElementById("dotsRest"), top = document.getElementById("dotsTop"), row = 0, x, y;
+  for (y = 0; y <= 1920; y += 15, row++) {
+    for (x = (row % 2) * 15; x <= 1080; x += 30) {
+      if (x > 50 && x < 1030 && y > 955 && y < 1205) continue;
+      var d = Math.sqrt(Math.pow((x - 600) / 470, 2) + Math.pow((y - 1240) / 560, 2));
+      var rad = Math.min(10.5, (d - 1) * 9);
+      if (rad < 1.2) continue;
+      el(y < 700 ? top : rest, "circle", { cx: x, cy: y, r: rad.toFixed(1) });
+    }
+  }
+
+  // 6. sun-ray wedges round the sun. 250 px clear ring keeps them off the small figure. None point down.
+  var ry = document.getElementById("rays");
+  [["va", 11], ["vb", 23]].forEach(function (v) {
+    var g = el(ry, "g", { "class": v[0] }), r = rng(v[1]), n = 17, i;
+    for (i = 0; i < n; i++) {
+      var deg = 158 + (224 * i) / (n - 1) + (r() - .5) * 6, a = deg * Math.PI / 180;
+      var r0 = 250 + r() * 40, r1 = (i % 2 ? 600 : 900) + r() * 60, w = (9 + r() * 6) / r1;
+      var pts = [[r0 * Math.cos(a), r0 * Math.sin(a)], [r1 * Math.cos(a - w), r1 * Math.sin(a - w)], [r1 * Math.cos(a + w), r1 * Math.sin(a + w)]];
+      el(g, "polygon", { points: pts.map(function (q) { return q[0].toFixed(0) + "," + q[1].toFixed(0); }).join(" ") });
+    }
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+{
+ "_readme": "Single board. Lanes edit ONLY via coord.py. Never hand-edit.",
+ "lanes": {
+  "swirls": {
+   "name": "Swirls of Life (storyboard-page, OpenArt)",
+   "owns": [
+    "poc_living_water_ink_style_test/",
+    "openart/"
+   ],
+   "provider": "openart",
+   "note_file": "coord/notes/swirls.md"
+  },
+  "comic": {
+   "name": "Living Comic / graphic novel (HF, ink comic composer)",
+   "owns": [
+    "poc_comic_page/",
+    "poc_living_sketchbook/",
+    "batches/"
+   ],
+   "provider": "higgsfield",
+   "note_file": "coord/notes/comic.md"
+  }
+ },
+ "coordinator_only": [
+  "RESUME.md",
+  "STATE.md",
+  "CLAUDE.md",
+  "_UPLOAD_TRACKER.html",
+  "data/release_ledger.json",
+  "pipeline/",
+  "cli_publish.py",
+  "release_check.py",
+  "build_upload_tracker.py",
+  "_website/",
+  "sound_library/",
+  "_brand/",
+  "coord/BOARD.json",
+  ".claude/"
+ ],
+ "append_only_shared": [
+  "data/spend_ledger.jsonl"
+ ],
+ "pieces": {
+  "mockers": {
+   "lane": "comic",
+   "stage": "ready",
+   "owner": null,
+   "updated": "2026-11-08 19:39",
+   "final": "batches/cluster_01_cross/mockers_words_ps227/visual/mockers_words_ps227_y7_sfx.mp4",
+   "msg": "pack GREEN, waiting for owner upload"
+  },
+  "today_paradise_short32": {
+   "lane": "comic",
+   "stage": "ready",
+   "owner": null,
+   "updated": "2026-11-09 14:33"
+  },
+  "swirls_short_pipeline": {
+   "lane": "swirls",
+   "stage": "idea",
+   "owner": "e0e91fd5",
+   "updated": "2026-11-15 23:49",
+   "msg": "pipeline built+tested; pilot ep17 words at G (not locked); see ep17 HANDOVER_RESUME.md"
+  }
+ }
+}

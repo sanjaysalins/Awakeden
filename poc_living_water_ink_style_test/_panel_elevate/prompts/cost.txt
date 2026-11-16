@@ -1,0 +1,39 @@
+You are ONE independent, HOSTILE voice on a review panel (you have not seen the other voices). Assume the draft is flawed and PROVE it; do not flatter; do not give generic advice. Everything you need is in the EVIDENCE PACK below. Do not ask questions. Do not use tools. Output the review text only.
+
+EVIDENCE PACK:
+# EVIDENCE PACK: how to make "Swirls of Life" a significantly better pipeline AND better episodes
+
+## What Swirls is
+60-second YouTube Shorts / Reels. Bible scene told as a hand-drawn ink-and-watercolor "animation development art" storyboard page: baked title, frame number, 3 small sketch panels, one large illustration, handwritten KJV caption fragments. A blue-and-gold "ink swirl" motif tracks the gospel turn. Every piece lands on Jesus (KJV verbatim, grace-anchored, no fear framing). Audience is global incl. non-native English speakers. Owner is a solo creator.
+Per episode: ~9 pages (cover + ~7 interior + back cover), each page = AI still (nano-banana-pro via OpenArt; some calm pages on Seedream 4.5) then AI animation (Kling 3 for action/crowd, Seedance/veo for calm holds), ElevenLabs narration (multi-voice), felt-piano score, SFX, assembled to ~60s. Stills use chained reference images for recurring subjects. OpenArt has NO API: a live Claude Code session must service a file bridge, so builds are never unattended.
+
+## Measured facts (from the repo)
+- 12 pieces finished (10 episodes + 2 pilots). ZERO posted anywhere. Owner holds ALL posting until 30 episodes exist. So there is no retention / click / comment data on any Swirls piece.
+- Rejected renders kept per episode folder (files named SUPERSEDED): ep13 "Cross That Wasn't His" = 70; ep11 = 16; ep12 = 4; ep7 = 2; ep10 = 1; ep1,2,4,5,8 and pilots = 0 (older ones may simply not have kept rejects).
+- Ep13's recurring defects: the cross draws as a symmetric X (saltire) on >=6 of 9 pages (survived 3 wording fixes; a camera-angle change fixed it on one page); stray digits/numerals; garbled panel captions; figures vanishing during animation; panels wrapping around; background crowd defects; title lettering vanishing in a clip.
+- Approx real spend per episode from the ledger (rows are split under many names, rough): ep13 ~$19, ep8 ~$24, ep11 ~$14, ep5 ~$10, ep4 ~$5, ep7 ~$16, ep10 ~$8.5.
+- Existing automatic checks (swirls_verify.py): cover-lighting contrast, cover text-lock, panel style consistency, refs exist, narration word-count parity, freeze-hold budget, and a per-image Claude Vision content audit that is deliberately NOT auto-retried (a human looks). The pipeline doc (2026-08-21) said: "do NOT build full deterministic gates yet; revisit once 4-5 full episodes have shipped clean."
+- Known process lessons already learned: animation pixel-diff/first-last-frame checks catch invented motion; negative "never X" prompt clauses can backfire; prop built only from negatives drifts to generic; score dead-air fixed by a 2-part generation; felt-piano score loved by owner; ink motif must stay static (animating it hallucinates glows); first 4 episodes all ended on the same tired CTA shape ("Ready to / Will you / Come and see"); Jacob's Ladder opens on a ~10 s still cover hold; Jacob's Ladder thumbnail shows its title twice; ep12 has an unresolved "video cuts off" playback report; one pilot has no episode.py.
+- Narration process already used (owner calls it gold standard): blind multi-writer drafts, judge table, global-audience blind test, 5-CLI panel.
+
+## Draft proposal to assess (do not assume it is right)
+1. Turn the repeat defects (X-cross, stray digits, garbled captions, vanishing figures, panel wrap, doubled title) into automatic pre-flight and post-render checks.
+2. Approved side-on "shape refs" for hard props (cross, bier, ladder), chained into every page; switch camera angle after 2 failed wording fixes.
+3. Cheap draft pass on a cheaper image model for composition before paying for the final.
+4. Built-in motion check (pixel-diff, first/last frame) on every clip; failing clip falls back to a $0 push-in.
+5. Words gate on every episode (blind panel with Fable + an ending-shape check vs shipped endings).
+6. Post 2-3 finished episodes early to get real 48h retention data (ends the 30-episode hold early; owner decision).
+7. Make the OpenArt bridge batchable (queue a whole episode, service in one pass).
+
+
+YOUR LENS: COST / AUTOMATION
+You are a cost and throughput analyst for a solo creator with a bridge-limited, never-unattended generator. Judge which fixes pay back, what to cut, what is over-engineering.
+
+OUTPUT FORMAT (plain, short sentences, no preamble):
+A. YOUR OWN TOP 5 moves to make Swirls significantly better (pipeline and episodes), ranked, written BEFORE you look at the draft proposal. One line each + why.
+B. Grade each of the 7 draft items: KEEP / CHANGE / DROP + one line.
+C. WHAT THE DRAFT MISSED (biggest blind spot).
+D. WRONG CLAIMS: anything in the pack or proposal that seems wrong or unsupported.
+E. Single recommended first move this week and what it would cost.
+F. Confidence 0-10 and what evidence would change your mind.
+
