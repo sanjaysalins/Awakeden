@@ -393,11 +393,11 @@ POST_ORDER = [
     ("rahab-and-the-scarlet-cord", "Season 3 - Ink shorts (v3)"),
     ("aaron-and-the-two-goats", "Season 3 - Ink shorts (v3)"),
     ("moses-and-the-snake-on-a-pole", "Season 3 - Ink shorts (v3)"),
-    ("ps22-02-mockers-words", "SPARE BANK - style-check first"),
-    ("ps22-04-declared-to-brethren", "SPARE BANK - style-check first"),
-    ("ps22-05-he-hath-done-this", "SPARE BANK - style-check first"),
-    ("ps22-06-ends-of-the-earth", "SPARE BANK - style-check first"),
-    ("ps22-07-body-foretold", "SPARE BANK - style-check first"),
+    ("ps22-02-mockers-words", "Psalm 22 - y7 look OK by owner 2026-11-19"),
+    ("ps22-04-declared-to-brethren", "Psalm 22 - style checked 2026-11-19"),
+    ("ps22-05-he-hath-done-this", "Psalm 22 - style checked 2026-11-19"),
+    ("ps22-06-ends-of-the-earth", "Psalm 22 - style checked 2026-11-19"),
+    ("ps22-07-body-foretold", "Psalm 22 - spear fix v3 2026-11-19"),
 ]
 # 30-episode hold LIFTED by the owner 2026-11-16 ("if they are ready, we should
 # start looking at posting them already"). Ready Swirls episodes join Next up.

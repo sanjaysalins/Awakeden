@@ -1,5 +1,6 @@
 {
-  "video": "body_foretold_ps2214_sfx.mp4",
-  "final_sha": "927917a91f1940fb93fba3ef76e26604aacdc10a018183a90e6f9e9d011db35e",
-  "t": 54.0
+  "video": "body_foretold_ps2214_sfx_v3fix.mp4",
+  "final_sha": "c1ddcaf14a2c69f9d25fa48d491310054f93ace9699ee6af2bc6bccfe1571c72",
+  "t": 54.0,
+  "note": "restamped 2026-11-19: v3fix only changed 15.3-18.3s and 56.2-59.9s; frame t=54 PSNR 52dB identical"
 }

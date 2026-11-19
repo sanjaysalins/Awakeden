@@ -89,6 +89,8 @@ def discover() -> list[tuple[str, str, Path | None]]:
     for folder in sorted(HERE.glob("swirls_*")):
         if not (folder / "episode.py").is_file():
             continue
+        if folder.name in {s for _t, s, _f in LEGACY}:  # pilot: episode.py is a title-only shim (no MANIFEST); LEGACY lists it
+            continue
         try:
             mod = _load_episode_module(folder)
             title = getattr(mod, "FRONT_COVER", None)
