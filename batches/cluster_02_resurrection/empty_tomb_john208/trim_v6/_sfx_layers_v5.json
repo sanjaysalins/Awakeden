@@ -1,0 +1,101 @@
+[
+ {
+  "label": "wind",
+  "slug": "wind_desert_bleak",
+  "kind": "loop",
+  "start": 0.0,
+  "length": 16.2,
+  "tgt": -40.0,
+  "filt": "",
+  "fin": 1.5,
+  "fout": 1.5
+ },
+ {
+  "label": "maryrun",
+  "slug": "footsteps_dirt_approach",
+  "kind": "oneshot",
+  "start": 9.5,
+  "length": 1.8,
+  "tgt": -34.0,
+  "filt": "",
+  "fin": 0.0,
+  "fout": 0.6
+ },
+ {
+  "label": "theyran",
+  "slug": "footsteps_stone",
+  "kind": "oneshot",
+  "start": 16.2,
+  "length": 2.4,
+  "tgt": -33.0,
+  "filt": "",
+  "fin": 0.0,
+  "fout": 0.8
+ },
+ {
+  "label": "hollow1",
+  "slug": "air_hollow_desolate",
+  "kind": "loop",
+  "start": 18.7,
+  "length": 12.2,
+  "tgt": -38.0,
+  "filt": "lowpass=f=3000",
+  "fin": 1.2,
+  "fout": 1.0
+ },
+ {
+  "label": "johnin",
+  "slug": "footsteps_stone",
+  "kind": "oneshot",
+  "start": 30.9,
+  "length": 1.6,
+  "tgt": -38.0,
+  "filt": "",
+  "fin": 0.0,
+  "fout": 0.6
+ },
+ {
+  "label": "hollow2",
+  "slug": "air_hollow_desolate",
+  "kind": "loop",
+  "start": 33.2,
+  "length": 11.2,
+  "tgt": -40.0,
+  "filt": "lowpass=f=3000",
+  "fin": 1.5,
+  "fout": 2.0
+ },
+ {
+  "label": "dawn1",
+  "slug": "dawn_morning_warm",
+  "kind": "loop",
+  "start": 44.4,
+  "length": 8.8,
+  "tgt": -38.0,
+  "filt": "lowpass=f=3400",
+  "fin": 2.5,
+  "fout": 2.0
+ },
+ {
+  "label": "lamp",
+  "slug": "fire_crackling",
+  "kind": "loop",
+  "start": 53.2,
+  "length": 8.2,
+  "tgt": -42.0,
+  "filt": "lowpass=f=2800",
+  "fin": 1.5,
+  "fout": 1.5
+ },
+ {
+  "label": "dawn2",
+  "slug": "dawn_morning_warm",
+  "kind": "loop",
+  "start": 61.4,
+  "length": 19.2,
+  "tgt": -36.0,
+  "filt": "lowpass=f=3400",
+  "fin": 3.0,
+  "fout": 1.5
+ }
+]

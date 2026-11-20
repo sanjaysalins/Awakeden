@@ -1,12 +1,12 @@
 {
- "_doc": "WOMEN AS FIRST WITNESSES (Luke 24:5-6) 9:16 SHORT - living page. 18 beats / 82.04s. Hook: the risen report dismissed as nonsense by the apostles (idle tales). Apologetic middle: a woman's word carried no legal weight, so no forger would open here; Luke names them (Mary Magdalene, Joanna), the witnesses who never left - watched Him die (afar), saw the burial, back at dawn. Angels reveal (heartbeat hush on 'He is not here, but is risen'), the remembered Galilee promise, crucified-and-risen. Landing: the promise kept, first to the overlooked, border-break on 'the risen Christ is seeking you'. Luke-scoped throughout.",
+ "_doc": "v6 TRIM + RESYNC (2026-11-20, owner pick F, cut-only; beats re-timed to the voice): WOMEN AS FIRST WITNESSES (Luke 24:5-6) 9:16 SHORT - living page. 18 beats / 82.04s. Hook: the risen report dismissed as nonsense by the apostles (idle tales). Apologetic middle: a woman's word carried no legal weight, so no forger would open here; Luke names them (Mary Magdalene, Joanna), the witnesses who never left - watched Him die (afar), saw the burial, back at dawn. Angels reveal (heartbeat hush on 'He is not here, but is risen'), the remembered Galilee promise, crucified-and-risen. Landing: the promise kept, first to the overlooked, border-break on 'the risen Christ is seeking you'. Luke-scoped throughout.",
  "motion": "smooth",
  "audio": "../audio/narration.mp3",
- "total": 82.04,
+ "total": 63.46,
  "cut_ticks": false,
  "heartbeat": {
-  "from": 43.27,
-  "to": 49.0,
+  "from": 28.876,
+  "to": 33.857,
   "gain": -9,
   "bpm": 60
  },
@@ -14,7 +14,7 @@
   {
    "t": [
     0.0,
-    5.29
+    5.741
    ],
    "tpl": "hero_frac4",
    "sfx": [
@@ -76,8 +76,8 @@
   },
   {
    "t": [
-    5.29,
-    9.77
+    5.741,
+    9.862
    ],
    "tpl": "hero_frac3",
    "clips": [
@@ -109,9 +109,9 @@
     ]
    ],
    "panel_at": [
-    5.29,
-    5.59,
-    5.89
+    5.741,
+    6.041,
+    6.341
    ],
    "panel_slide": [
     "left",
@@ -125,8 +125,8 @@
   },
   {
    "t": [
-    9.77,
-    13.4
+    9.862,
+    16.164
    ],
    "tpl": "hero_frac3",
    "clips": [
@@ -158,9 +158,9 @@
     ]
    ],
    "panel_at": [
-    9.77,
-    10.07,
-    10.37
+    9.862,
+    10.162,
+    10.462
    ],
    "panel_slide": [
     "left",
@@ -174,8 +174,8 @@
   },
   {
    "t": [
-    13.4,
-    17.5
+    16.164,
+    19.234
    ],
    "tpl": "stack_h",
    "clips": [
@@ -202,77 +202,8 @@
   },
   {
    "t": [
-    17.5,
-    21.5
-   ],
-   "tpl": "hero_band3",
-   "clips": [
-    {
-     "slug": "women_tell_news",
-     "motion": "pushin"
-    }
-   ],
-   "cap": {
-    "type": "caption",
-    "text": "Luke gains nothing by recording it, unless it is simply what happened",
-    "kw": "UNLESS IT HAPPENED"
-   },
-   "anchors": [
-    [
-     1.3,
-     0.4,
-     0.32
-    ],
-    [
-     1.3,
-     0.4,
-     0.52
-    ],
-    [
-     1.3,
-     0.5,
-     0.8
-    ]
-   ],
-   "panel_at": [
-    17.5,
-    17.78,
-    18.06
-   ],
-   "panel_slide": [
-    "up",
-    "left",
-    "down"
-   ],
-   "flash": true
-  },
-  {
-   "t": [
-    21.5,
-    26.5
-   ],
-   "tpl": "full",
-   "clips": [
-    {
-     "slug": "galilee_promise",
-     "motion": "pushin"
-    }
-   ],
-   "cap": {
-    "type": "caption",
-    "text": "Luke named these women long before, Mary Magdalene, and Joanna",
-    "kw": "HE NAMED THEM"
-   },
-   "takeover": {
-    "panel": 0,
-    "start": 21.8,
-    "zoom": 1.1
-   }
-  },
-  {
-   "t": [
-    26.5,
-    29.2
+    19.234,
+    21.114
    ],
    "tpl": "hero_band3",
    "clips": [
@@ -304,9 +235,9 @@
     ]
    ],
    "panel_at": [
-    26.5,
-    26.78,
-    27.06
+    19.234,
+    19.514,
+    19.794
    ],
    "panel_slide": [
     "up",
@@ -320,8 +251,8 @@
   },
   {
    "t": [
-    29.2,
-    32.2
+    21.114,
+    23.495
    ],
    "tpl": "hero_frac3",
    "clips": [
@@ -353,9 +284,9 @@
     ]
    ],
    "panel_at": [
-    29.2,
-    29.5,
-    29.8
+    21.114,
+    21.414,
+    21.714
    ],
    "panel_slide": [
     "left",
@@ -369,8 +300,8 @@
   },
   {
    "t": [
-    32.2,
-    38.4
+    23.495,
+    26.015
    ],
    "tpl": "full",
    "clips": [
@@ -386,7 +317,7 @@
    },
    "takeover": {
     "panel": 0,
-    "start": 32.5,
+    "start": 23.795,
     "zoom": 1.1
    },
    "fx": {
@@ -395,8 +326,8 @@
   },
   {
    "t": [
-    38.4,
-    43.27
+    26.015,
+    28.876
    ],
    "tpl": "full",
    "clips": [
@@ -417,8 +348,8 @@
   },
   {
    "t": [
-    43.27,
-    49.0
+    28.876,
+    33.857
    ],
    "tpl": "full",
    "clips": [
@@ -440,8 +371,8 @@
   },
   {
    "t": [
-    49.0,
-    54.0
+    33.857,
+    36.898
    ],
    "tpl": "full",
    "clips": [
@@ -458,7 +389,7 @@
    },
    "takeover": {
     "panel": 0,
-    "start": 49.4,
+    "start": 34.257,
     "zoom": 1.1
    },
    "fx": {
@@ -467,13 +398,13 @@
   },
   {
    "t": [
-    54.0,
-    59.11
+    36.898,
+    44.32
    ],
    "tpl": "full",
    "clips": [
     {
-     "slug": "risen_prophecy",
+     "slug": "women_remember",
      "motion": "pushin"
     }
    ],
@@ -485,14 +416,14 @@
    },
    "takeover": {
     "panel": 0,
-    "start": 54.3,
+    "start": 37.198,
     "zoom": 1.1
    }
   },
   {
    "t": [
-    59.11,
-    63.6
+    44.32,
+    47.72
    ],
    "tpl": "full",
    "clips": [
@@ -508,7 +439,7 @@
    },
    "takeover": {
     "panel": 0,
-    "start": 59.41,
+    "start": 44.62,
     "zoom": 1.08
    },
    "fx": {
@@ -517,34 +448,8 @@
   },
   {
    "t": [
-    63.6,
-    68.0
-   ],
-   "tpl": "full",
-   "clips": [
-    {
-     "slug": "graveclothes_linen",
-     "motion": "pushin"
-    }
-   ],
-   "cap": {
-    "type": "caption",
-    "text": "The promise had been kept, and they were the first to know",
-    "kw": "THE FIRST TO KNOW"
-   },
-   "takeover": {
-    "panel": 0,
-    "start": 63.9,
-    "zoom": 1.1
-   },
-   "fx": {
-    "temp": 5400
-   }
-  },
-  {
-   "t": [
-    68.0,
-    73.0
+    47.72,
+    53.222
    ],
    "tpl": "hero_frac3",
    "clips": [
@@ -576,9 +481,9 @@
     ]
    ],
    "panel_at": [
-    68.0,
-    68.3,
-    68.6
+    47.72,
+    48.02,
+    48.32
    ],
    "panel_slide": [
     "left",
@@ -592,8 +497,8 @@
   },
   {
    "t": [
-    73.0,
-    77.5
+    53.222,
+    55.962
    ],
    "tpl": "full",
    "clips": [
@@ -604,12 +509,12 @@
    ],
    "cap": {
     "type": "caption",
-    "text": "He still sends His word to the overlooked. No standing in any court is required.",
+    "text": "He still sends His word to the overlooked.",
     "kw": "TO THE OVERLOOKED"
    },
    "takeover": {
     "panel": 0,
-    "start": 73.3,
+    "start": 53.522,
     "zoom": 1.1
    },
    "fx": {
@@ -618,23 +523,23 @@
   },
   {
    "t": [
-    77.5,
-    82.04
+    55.962,
+    63.46
    ],
    "tpl": "full",
    "punch": true,
    "border_break": {
-    "at": 78.2
+    "at": 56.662
    },
    "takeover": {
     "panel": 0,
-    "start": 78.0,
+    "start": 56.462,
     "zoom": 1.26
    },
    "sfx": [
     [
      "dawn_morning_warm",
-     77.6,
+     56.062,
      -13
     ]
    ],

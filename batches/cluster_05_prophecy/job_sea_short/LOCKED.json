@@ -1,0 +1,18 @@
+{
+ "piece": "job_sea_short",
+ "locked": "2026-11-19",
+ "locked_by": "owner ('lock it', 2026-11-19) on pack + poster B 'MAN ON THE SEA' (kept as poster art; text says Job did not name Jesus)",
+ "final_video": "visual/job_sea_final.mp4",
+ "final_sha256": "5f534558fbb24ff4dee4cc8274535b4538dac37048824bc19a62911d538b1652",
+ "source": "threads/t13_job_sea/edit/build/t13_final.mp4 (same bytes); owner OK 2026-11-18",
+ "words": "threads/t13_job_sea/words/WORDS_LOCK_2026-11-18.md (AMENDED 3); narration.md here = the spoken script",
+ "title": "Jesus Walks on Water. Job Said Only God Does. (blind title round, 6 of 6 judges)",
+ "packaging": "packaging/THUMB_FINAL_9x16.jpg = threads/t13_job_sea/packaging/poster_final/POSTER_FINAL_B.jpg; card threads/t13_job_sea/_packaging/23_job_sea/packaging.json (PACKAGING-READY)",
+ "red_team": "publish/_redteam_r1 (Fable, Claude, Codex) + publish/_redteam_r2 (Fable, Sonnet, Claude, Codex); Grok out of credit both rounds; no Bible error; fixes in apply_r1_fixes.py / apply_r2_fixes.py; gate GREEN strict 2026-11-19",
+ "not_done": [
+  "release date + rights lines (owner)",
+  "upload (hold)",
+  "seed viewers",
+  "commit (text only, NO media)"
+ ]
+}

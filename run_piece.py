@@ -698,7 +698,8 @@ def score_cmd(piece_dir: Path, pj: dict) -> list[str]:
         f"[1:a]atrim=0:{sc['dark_trim_end']},{score_mix.AFMT}[d];"
         f"[2:a]atrim={sc['grace_trim'][0]}:{sc['grace_trim'][1]},{score_mix.AFMT}[g];"
         f"[d][g]acrossfade=d={sc['crossfade']}:c1=exp:c2=exp[mch];"
-        f"[mch]atrim=0:{total},afade=t=in:st=0:d=1.5,afade=t=out:st={total - 1.5:.2f}:d=1.5,volume=-13dB,"
+        f"[mch]atrim=0:{total},afade=t=in:st=0:d=1.5,"
+        f"afade=t=out:st={total - float(sc.get('fade_out', 1.5)):.2f}:d={float(sc.get('fade_out', 1.5))},volume=-13dB,"
         + dips +
         f"volume=volume={cta_vol}:enable='between(t,{cta_start},{total})'[mus];"
         + score_mix.mix_tail(total, sc["tpad"])

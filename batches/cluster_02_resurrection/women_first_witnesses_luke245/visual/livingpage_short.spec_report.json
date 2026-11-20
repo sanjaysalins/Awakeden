@@ -1,18 +1,19 @@
 {
  "dod": {
-  "median_beat_s": 4.52,
-  "max_beat_s": 6.2,
+  "median_beat_s": 3.4,
+  "max_beat_s": 7.5,
   "held_gt6s": [
-   6.2
+   7.5,
+   7.43,
+   6.3
   ],
-  "slams": 16,
-  "kling_or_punch_or_slam_pct": 89,
-  "tier1_pct": 11,
+  "slams": 13,
+  "kling_or_punch_or_slam_pct": 93,
+  "tier1_pct": 13,
   "reuse_violations": [
    "women_plead_closer: beats 3->4 (gap 1 < 8)",
-   "women_tell_news: beats 2->5 (gap 3 < 8)",
-   "women_bowed: beats 10->11 (gap 1 < 8)",
-   "risen_christ_seeking: beats 17->18 (gap 1 < 8)"
+   "women_bowed: beats 8->9 (gap 1 < 8)",
+   "risen_christ_seeking: beats 14->15 (gap 1 < 8)"
   ],
   "tier3_or_flagged_beats": [
    4
@@ -23,24 +24,25 @@
     "women_bowed": 2,
     "risen_christ_seeking": 2
    },
-   "fullbleed_beat_pct": 56,
+   "fullbleed_beat_pct": 53,
    "slop_caption_beats": []
   },
   "ramps": 0,
   "whips": 0,
   "flash_inserts": 0,
-  "fx_beats": 15,
+  "fx_beats": 14,
   "cut_ticks": false,
-  "beats": 18
+  "beats": 15
  },
+ "clips_build": true,
  "beats": [
   {
    "beat": 1,
    "t": [
     0.0,
-    5.29
+    5.741
    ],
-   "dur": 5.3,
+   "dur": 5.733333,
    "tpl": "hero_frac4",
    "slams": 3,
    "slugs": [
@@ -59,10 +61,10 @@
   {
    "beat": 2,
    "t": [
-    5.29,
-    9.77
+    5.741,
+    9.862
    ],
-   "dur": 4.466667,
+   "dur": 4.133333,
    "tpl": "hero_frac3",
    "slams": 2,
    "slugs": [
@@ -81,10 +83,10 @@
   {
    "beat": 3,
    "t": [
-    9.77,
-    13.4
+    9.862,
+    16.164
    ],
-   "dur": 3.633333,
+   "dur": 6.3,
    "tpl": "hero_frac3",
    "slams": 2,
    "slugs": [
@@ -103,12 +105,12 @@
   {
    "beat": 4,
    "t": [
-    13.4,
-    17.5
+    16.164,
+    19.234
    ],
-   "dur": 4.1,
+   "dur": 3.066667,
    "tpl": "stack_h",
-   "slams": 1,
+   "slams": 0,
    "slugs": [
     "women_plead_closer",
     "apostles_doubt_closer"
@@ -127,54 +129,10 @@
   {
    "beat": 5,
    "t": [
-    17.5,
-    21.5
+    19.234,
+    21.114
    ],
-   "dur": 4.0,
-   "tpl": "hero_band3",
-   "slams": 2,
-   "slugs": [
-    "women_tell_news"
-   ],
-   "sources": [
-    "dyncam"
-   ],
-   "punch": false,
-   "cap": {
-    "tier": 2,
-    "style": "scrim",
-    "flag": false
-   }
-  },
-  {
-   "beat": 6,
-   "t": [
-    21.5,
-    26.5
-   ],
-   "dur": 5.0,
-   "tpl": "full",
-   "slams": 0,
-   "slugs": [
-    "galilee_promise"
-   ],
-   "sources": [
-    "kling"
-   ],
-   "punch": false,
-   "cap": {
-    "tier": 2,
-    "style": "scrim",
-    "flag": false
-   }
-  },
-  {
-   "beat": 7,
-   "t": [
-    26.5,
-    29.2
-   ],
-   "dur": 2.7,
+   "dur": 1.866667,
    "tpl": "hero_band3",
    "slams": 2,
    "slugs": [
@@ -191,12 +149,12 @@
    }
   },
   {
-   "beat": 8,
+   "beat": 6,
    "t": [
-    29.2,
-    32.2
+    21.114,
+    23.495
    ],
-   "dur": 3.0,
+   "dur": 2.4,
    "tpl": "hero_frac3",
    "slams": 2,
    "slugs": [
@@ -213,12 +171,12 @@
    }
   },
   {
-   "beat": 9,
+   "beat": 7,
    "t": [
-    32.2,
-    38.4
+    23.495,
+    26.015
    ],
-   "dur": 6.2,
+   "dur": 2.5,
    "tpl": "full",
    "slams": 0,
    "slugs": [
@@ -235,12 +193,12 @@
    }
   },
   {
-   "beat": 10,
+   "beat": 8,
    "t": [
-    38.4,
-    43.27
+    26.015,
+    28.876
    ],
-   "dur": 4.866667,
+   "dur": 2.866667,
    "tpl": "full",
    "slams": 0,
    "slugs": [
@@ -257,12 +215,12 @@
    }
   },
   {
-   "beat": 11,
+   "beat": 9,
    "t": [
-    43.27,
-    49.0
+    28.876,
+    33.857
    ],
-   "dur": 5.733333,
+   "dur": 5.0,
    "tpl": "full",
    "slams": 0,
    "slugs": [
@@ -279,12 +237,12 @@
    }
   },
   {
-   "beat": 12,
+   "beat": 10,
    "t": [
-    49.0,
-    54.0
+    33.857,
+    36.898
    ],
-   "dur": 5.0,
+   "dur": 3.033333,
    "tpl": "full",
    "slams": 0,
    "slugs": [
@@ -301,16 +259,16 @@
    }
   },
   {
-   "beat": 13,
+   "beat": 11,
    "t": [
-    54.0,
-    59.11
+    36.898,
+    44.32
    ],
-   "dur": 5.1,
+   "dur": 7.433333,
    "tpl": "full",
    "slams": 0,
    "slugs": [
-    "risen_prophecy"
+    "women_remember"
    ],
    "sources": [
     "kling"
@@ -323,12 +281,12 @@
    }
   },
   {
-   "beat": 14,
+   "beat": 12,
    "t": [
-    59.11,
-    63.6
+    44.32,
+    47.72
    ],
-   "dur": 4.5,
+   "dur": 3.4,
    "tpl": "full",
    "slams": 0,
    "slugs": [
@@ -345,34 +303,12 @@
    }
   },
   {
-   "beat": 15,
+   "beat": 13,
    "t": [
-    63.6,
-    68.0
+    47.72,
+    53.222
    ],
-   "dur": 4.4,
-   "tpl": "full",
-   "slams": 0,
-   "slugs": [
-    "graveclothes_linen"
-   ],
-   "sources": [
-    "dyncam"
-   ],
-   "punch": false,
-   "cap": {
-    "tier": 2,
-    "style": "scrim",
-    "flag": false
-   }
-  },
-  {
-   "beat": 16,
-   "t": [
-    68.0,
-    73.0
-   ],
-   "dur": 5.0,
+   "dur": 5.5,
    "tpl": "hero_frac3",
    "slams": 2,
    "slugs": [
@@ -389,12 +325,12 @@
    }
   },
   {
-   "beat": 17,
+   "beat": 14,
    "t": [
-    73.0,
-    77.5
+    53.222,
+    55.962
    ],
-   "dur": 4.5,
+   "dur": 2.733333,
    "tpl": "full",
    "slams": 0,
    "slugs": [
@@ -411,12 +347,12 @@
    }
   },
   {
-   "beat": 18,
+   "beat": 15,
    "t": [
-    77.5,
-    82.04
+    55.962,
+    63.46
    ],
-   "dur": 4.533333,
+   "dur": 7.5,
    "tpl": "full",
    "slams": 0,
    "slugs": [
@@ -431,6 +367,108 @@
     "style": "scrim",
     "flag": false
    }
+  }
+ ],
+ "speed": [
+  {
+   "beat": 4,
+   "panel": 0,
+   "slug": "women_plead_closer",
+   "slot_s": 3.067,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 4,
+   "panel": 1,
+   "slug": "apostles_doubt_closer",
+   "slot_s": 3.067,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 7,
+   "panel": 0,
+   "slug": "women_tiny_dawn",
+   "slot_s": 2.5,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 8,
+   "panel": 0,
+   "slug": "women_bowed",
+   "slot_s": 2.867,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 9,
+   "panel": 0,
+   "slug": "women_bowed",
+   "slot_s": 5.0,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 10,
+   "panel": 0,
+   "slug": "galilee_listen_closer",
+   "slot_s": 3.033,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 11,
+   "panel": 0,
+   "slug": "women_remember",
+   "slot_s": 7.433,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.474,
+   "boomerang": false
+  },
+  {
+   "beat": 12,
+   "panel": 0,
+   "slug": "magdalene_face_cu",
+   "slot_s": 3.4,
+   "clip_s": 5.0,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 14,
+   "panel": 0,
+   "slug": "risen_christ_seeking",
+   "slot_s": 2.733,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 15,
+   "panel": 0,
+   "slug": "risen_christ_seeking",
+   "slot_s": 7.5,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.488,
+   "boomerang": false
   }
  ]
 }

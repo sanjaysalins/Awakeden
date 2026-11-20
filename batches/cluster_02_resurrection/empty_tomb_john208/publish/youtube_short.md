@@ -4,7 +4,7 @@
 What Thief Wraps the Face-Cloth? The Empty Tomb
 
 ## DESCRIPTION
-Someone took the body. That was Mary's first thought at the empty tomb. But when Peter and John ran to see, the tomb was not ransacked, the linen lay where the body had been, and the cloth that had covered his head was wrapped together in a place by itself. What thief does that? John saw the linen and believed his Lord was risen, before he ever saw Jesus alive.
+Someone took the body. That was Mary's first thought at the empty tomb. But when Peter and John ran to see, the linen lay where the body had been, and the cloth that had covered his head was wrapped together in a place by itself. What thief does that? John saw the linen and believed, before he ever saw Jesus alive.
 
 "Jesus saith unto him, Thomas, because thou hast seen me, thou hast believed: blessed are they that have not seen, and yet have believed." (John 20:29, KJV)
 

@@ -1,0 +1,49 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Doctrine Flag Rule</title>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf7ee;--ink:#1f1f1f;--soft:#5b5b5b;--card:#fff;--line:#e3dccb;--red:#c0392b;--grn:#1e7b45;--grnbg:#e6f4ea;--bar:#c0392b}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b1a17;--ink:#f1eee6;--soft:#b9b4a8;--card:#26241f;--line:#3a372f;--red:#ff8a80;--grn:#7bd39a;--grnbg:#1d3326;--bar:#ff8a80}}
+:root[data-theme="dark"]{--bg:#1b1a17;--ink:#f1eee6;--soft:#b9b4a8;--card:#26241f;--line:#3a372f;--red:#ff8a80;--grn:#7bd39a;--grnbg:#1d3326;--bar:#ff8a80}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:20px/1.6 "Atkinson Hyperlegible",Verdana,sans-serif;letter-spacing:.02em;margin:0 auto;padding:20px 16px 60px;max-width:860px}
+h1{font-size:32px;margin:0 0 6px}h2{font-size:26px;margin:36px 0 10px}
+.big{font-size:27px;font-weight:700}.soft{color:var(--soft)}
+.box{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:14px 18px;margin:0 0 12px}
+.row{display:grid;grid-template-columns:90px 1fr 56px;gap:10px;align-items:center;margin:6px 0}
+.track{background:var(--line);border-radius:8px;height:26px;overflow:hidden}.fill{background:var(--bar);height:100%}
+.opt{border-left:10px solid var(--line)}.pick{border-left-color:var(--grn);background:var(--grnbg)}
+</style></head><body>
+<h1>The doctrine flag rule</h1>
+<p class="soft">19 Nov 2026 · Lab test done · 14 idea hunts so far</p>
+
+<div class="box"><span class="big">Lab test: 0 of 4 passed.</span><br>
+Rare exact repeats did no better: every card got a doctrine flag. The real cause looks like the rule below.</div>
+
+<h2>How often each judge flags doctrine</h2>
+<p>Share of cards each AI judge flagged, out of about 90 cards:</p>
+<div class="box">
+<div class="row"><b>Grok</b><div class="track"><div class="fill" style="width:85%"></div></div><b>85%</b></div>
+<div class="row"><b>Fable</b><div class="track"><div class="fill" style="width:66%"></div></div><b>66%</b></div>
+<div class="row"><b>Claude</b><div class="track"><div class="fill" style="width:62%"></div></div><b>62%</b></div>
+<div class="row"><b>Codex</b><div class="track"><div class="fill" style="width:51%"></div></div><b>51%</b></div>
+<div class="row"><b>Sonnet</b><div class="track"><div class="fill" style="width:47%"></div></div><b>47%</b></div>
+<div class="row"><b>Gemini</b><div class="track"><div class="fill" style="width:15%"></div></div><b>15%</b></div>
+</div>
+<p>Today <b>one flag from any judge</b> kills a card. With 5 judges flagging this often, almost no card can get through.</p>
+<p>Many flags are real (an overclaim, the wrong speaker). Many are small wording notes (for example "glory", where the Bible says "praise"). The rule treats them the same.</p>
+
+<h2>The choice</h2>
+<div class="box opt pick"><b>A. Split the flag in two — my pick</b><br>
+Each judge must say which kind it is:<br>
+<b>Doctrine error</b> (the card says something the Bible does not) → the card <b>fails</b>, as today.<br>
+<b>Wording note</b> (a word, a tone, a phrase to fix) → the card can pass, and the note <b>must be fixed</b> when the script is written.<br>
+Doctrine is still checked both ways, and still fails closed.</div>
+<div class="box opt"><b>B. Keep the rule as it is</b><br>
+The safest, but very few ideas will ever pass.</div>
+<div class="box opt"><b>C. Fail only if 2 or more judges flag it</b><br>
+Simple, but one judge's real doctrine error could slip through. I don't recommend it.</div>
+
+<p>Before A goes live: the AI panel + Fable review it blind, and I re-score past cards to show what would have passed.</p>
+<p class="big">My pick: A. Say yes?</p>
+</body></html>

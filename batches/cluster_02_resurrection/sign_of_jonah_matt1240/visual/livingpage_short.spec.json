@@ -1,19 +1,13 @@
 {
- "_doc": "THE SIGN OF JONAH (Jonah 1-2 + Matt 12:40) 9:16 SHORT - living page. 20 beats / 69.52s. Jonah's deep mirrored with Christ's tomb: storm hook with ramp+takeover, heartbeat under 'three days buried alive', sacred stillness on the Matt 12:40 bar (two-part: belly -> heart of the earth), guilty-down/innocent-down substitution, stack on 'grave no more held Him', border-break punch on HE ROSE (stone_rolled_dawn), mercy-into-the-deep CTA, risen Christ close.",
+ "_doc": "v6 TRIM B + RESYNC (2026-11-20, cut-only; beats re-timed to the voice): THE SIGN OF JONAH (Jonah 1-2 + Matt 12:40) 9:16 SHORT - living page. 20 beats / 69.52s. Jonah's deep mirrored with Christ's tomb: storm hook with ramp+takeover, heartbeat under 'three days buried alive', sacred stillness on the Matt 12:40 bar (two-part: belly -> heart of the earth), guilty-down/innocent-down substitution, stack on 'grave no more held Him', border-break punch on HE ROSE (stone_rolled_dawn), mercy-into-the-deep CTA, risen Christ close.",
  "audio": "../audio/narration.mp3",
- "total": 69.52,
+ "total": 63.9,
  "cut_ticks": false,
- "heartbeat": {
-  "from": 21.4,
-  "to": 25.4,
-  "gain": -9,
-  "bpm": 60
- },
  "beats": [
   {
    "t": [
     0.0,
-    2.24
+    2.821
    ],
    "tpl": "hero_frac3",
    "punch": true,
@@ -67,15 +61,15 @@
   },
   {
    "t": [
-    2.24,
-    5.26
+    2.821,
+    7.423
    ],
    "tpl": "full",
    "punch": true,
    "sfx": [
     [
      "impact_low_boom",
-     2.3,
+     2.881,
      -14
     ]
    ],
@@ -96,8 +90,8 @@
   },
   {
    "t": [
-    5.26,
-    8.64
+    7.423,
+    10.784
    ],
    "tpl": "hero_frac3",
    "clips": [
@@ -132,9 +126,9 @@
     ]
    ],
    "panel_at": [
-    5.26,
-    5.56,
-    5.86
+    7.423,
+    7.723,
+    8.023
    ],
    "panel_slide": [
     "left",
@@ -145,8 +139,8 @@
   },
   {
    "t": [
-    8.64,
-    11.96
+    10.784,
+    13.325
    ],
    "tpl": "hero_frac3",
    "clips": [
@@ -178,9 +172,9 @@
     ]
    ],
    "panel_at": [
-    8.64,
-    8.99,
-    9.34
+    10.784,
+    11.134,
+    11.484
    ],
    "panel_slide": [
     "left",
@@ -194,8 +188,8 @@
   },
   {
    "t": [
-    11.96,
-    14.59
+    13.325,
+    16.146
    ],
    "tpl": "hero_band3",
    "clips": [
@@ -227,9 +221,9 @@
     ]
    ],
    "panel_at": [
-    11.96,
-    12.24,
-    12.52
+    13.325,
+    13.605,
+    13.885
    ],
    "panel_slide": [
     "up",
@@ -243,8 +237,8 @@
   },
   {
    "t": [
-    14.59,
-    18.47
+    16.146,
+    19.767
    ],
    "tpl": "hero_frac3",
    "whip": true,
@@ -277,9 +271,9 @@
     ]
    ],
    "panel_at": [
-    14.59,
-    14.94,
-    15.29
+    16.146,
+    16.496,
+    16.846
    ],
    "panel_slide": [
     "left",
@@ -293,85 +287,8 @@
   },
   {
    "t": [
-    18.47,
-    21.35
-   ],
-   "tpl": "full",
-   "clips": [
-    {
-     "slug": "jonah_sinking_down",
-     "motion": "pushin"
-    }
-   ],
-   "cap": {
-    "type": "caption",
-    "text": "To spare them, I went over the rail",
-    "kw": "OVERBOARD"
-   },
-   "fx": {
-    "temp": 7700
-   }
-  },
-  {
-   "t": [
-    21.35,
-    25.51
-   ],
-   "tpl": "hero_band3",
-   "sfx": [
-    [
-     "air_hollow_desolate",
-     21.45,
-     -18
-    ]
-   ],
-   "clips": [
-    {
-     "slug": "jonah_in_the_deep",
-     "motion": "pushin"
-    }
-   ],
-   "cap": {
-    "type": "caption",
-    "text": "Three days buried alive in the fish",
-    "kw": "THREE DAYS"
-   },
-   "anchors": [
-    [
-     1.0,
-     0.5,
-     0.35
-    ],
-    [
-     1.4,
-     0.5,
-     0.55
-    ],
-    [
-     1.6,
-     0.5,
-     0.75
-    ]
-   ],
-   "panel_at": [
-    21.35,
-    21.7,
-    22.05
-   ],
-   "panel_slide": [
-    "up",
-    "left",
-    "down"
-   ],
-   "flash": true,
-   "fx": {
-    "temp": 7900
-   }
-  },
-  {
-   "t": [
-    25.51,
-    30.93
+    19.767,
+    26.289
    ],
    "tpl": "full",
    "whip": true,
@@ -392,8 +309,8 @@
   },
   {
    "t": [
-    30.93,
-    36.09
+    26.289,
+    30.351
    ],
    "tpl": "full",
    "clips": [
@@ -414,8 +331,8 @@
   },
   {
    "t": [
-    36.09,
-    40.83
+    30.351,
+    36.493
    ],
    "tpl": "full",
    "clips": [
@@ -436,8 +353,8 @@
   },
   {
    "t": [
-    40.83,
-    44.4
+    36.493,
+    39.534
    ],
    "tpl": "hero_frac3",
    "clips": [
@@ -448,7 +365,7 @@
    ],
    "cap": {
     "type": "caption",
-    "text": "I went down guilty. The storm was mine.",
+    "text": "I went down guilty",
     "kw": "GUILTY"
    },
    "anchors": [
@@ -469,9 +386,9 @@
     ]
    ],
    "panel_at": [
-    40.83,
-    41.13,
-    41.43
+    36.493,
+    36.793,
+    37.093
    ],
    "panel_slide": [
     "up",
@@ -485,8 +402,8 @@
   },
   {
    "t": [
-    44.4,
-    49.5
+    39.534,
+    44.015
    ],
    "tpl": "full",
    "clips": [
@@ -506,8 +423,8 @@
   },
   {
    "t": [
-    49.5,
-    53.38
+    44.015,
+    47.457
    ],
    "tpl": "stack_h",
    "whip": true,
@@ -538,18 +455,18 @@
   },
   {
    "t": [
-    53.38,
-    54.6
+    47.457,
+    48.857
    ],
    "tpl": "full",
    "punch": true,
    "border_break": {
-    "at": 53.45
+    "at": 47.527
    },
    "sfx": [
     [
      "dawn_morning_warm",
-     53.45,
+     47.527,
      -13
     ]
    ],
@@ -570,8 +487,8 @@
   },
   {
    "t": [
-    54.6,
-    57.0
+    48.857,
+    51.258
    ],
    "tpl": "full",
    "clips": [
@@ -591,8 +508,8 @@
   },
   {
    "t": [
-    57.0,
-    61.4
+    51.258,
+    53.779
    ],
    "tpl": "full",
    "punch": true,
@@ -604,7 +521,7 @@
    ],
    "cap": {
     "type": "caption",
-    "text": "That is how far His mercy reaches. It cost Him the grave.",
+    "text": "That is how far His mercy reaches.",
     "kw": "THAT FAR"
    },
    "fx": {
@@ -613,8 +530,8 @@
   },
   {
    "t": [
-    61.4,
-    63.6
+    53.779,
+    55.36
    ],
    "tpl": "full",
    "whip": true,
@@ -635,8 +552,8 @@
   },
   {
    "t": [
-    63.6,
-    66.7
+    55.36,
+    58.861
    ],
    "tpl": "full",
    "clips": [
@@ -656,8 +573,8 @@
   },
   {
    "t": [
-    66.7,
-    69.52
+    58.861,
+    63.9
    ],
    "tpl": "full",
    "clips": [

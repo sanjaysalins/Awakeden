@@ -1,0 +1,90 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Film Lanes Board</title>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf7ee;--ink:#1f1f1f;--soft:#5b5b5b;--card:#ffffff;--line:#e3dccb;
+--you:#c0392b;--youbg:#fdecea;--hub:#9a6a00;--hubbg:#fff4d6;--go:#1e7b45;--gobg:#e6f4ea;
+--l1:#2f5fa7;--l2:#8a4fb0;--l3:#c2621b;--l4:#4f7f6a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b1a17;--ink:#f1eee6;--soft:#b9b4a8;--card:#26241f;--line:#3a372f;
+--you:#ff8a80;--youbg:#3a1f1d;--hub:#f2c14e;--hubbg:#3a3019;--go:#7bd39a;--gobg:#1d3326;--l1:#7aa7ef;--l2:#c79be6;--l3:#f0a060;--l4:#8cc4ab}}
+:root[data-theme="dark"]{--bg:#1b1a17;--ink:#f1eee6;--soft:#b9b4a8;--card:#26241f;--line:#3a372f;
+--you:#ff8a80;--youbg:#3a1f1d;--hub:#f2c14e;--hubbg:#3a3019;--go:#7bd39a;--gobg:#1d3326;--l1:#7aa7ef;--l2:#c79be6;--l3:#f0a060;--l4:#8cc4ab}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:20px/1.6 "Atkinson Hyperlegible",Verdana,sans-serif;letter-spacing:.02em;
+margin:0 auto;padding:20px 16px 60px;max-width:1150px}
+h1{font-size:34px;margin:0 0 4px}h2{font-size:27px;margin:44px 0 12px}h3{font-size:24px;margin:0 0 4px}
+.sub{color:var(--soft);margin:0 0 20px}
+.box{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:16px 20px}
+.youbox{border-color:var(--you);background:var(--youbg)}
+.needs li{margin:0 0 12px}.calm{margin:0;color:var(--go);font-weight:700}
+.path{font-size:16px;color:var(--soft);word-break:break-all}
+.lane{background:var(--card);border:2px solid var(--line);border-left:12px solid var(--c);border-radius:14px;padding:16px 18px;margin:0 0 22px}
+.l1{--c:var(--l1)}.l2{--c:var(--l2)}.l3{--c:var(--l3)}.l4{--c:var(--l4)}
+.badge{background:var(--c);color:var(--bg);border-radius:8px;padding:0 10px;margin-right:6px}
+.what{margin:0 0 12px}.rule{color:var(--soft)}
+.track{display:grid;gap:8px}.t6{grid-template-columns:repeat(6,1fr)}.t3{grid-template-columns:repeat(3,1fr)}
+.step{border:2px dashed var(--line);border-radius:10px;padding:8px;min-height:90px}
+.step.has{border:2px solid var(--c)}
+.sh{font-weight:700;font-size:17px;line-height:1.3}
+.num{display:inline-block;width:26px;height:26px;border-radius:50%;background:var(--c);color:var(--bg);text-align:center;line-height:26px;margin-right:6px;font-size:15px}
+.money{display:block;font-weight:400;font-size:15px;color:var(--hub)}
+.chip{margin-top:8px;border-radius:8px;padding:6px 8px;font-size:17px;line-height:1.35}
+.chip b{display:block}.tag{display:inline-block;font-weight:700;font-size:15px;margin-top:2px}
+.nxt{display:block;font-size:15px;color:var(--soft);margin-top:2px}
+.chip.you{background:var(--youbg);border:2px solid var(--you)}.chip.you .tag{color:var(--you)}
+.chip.hub{background:var(--hubbg);border:2px solid var(--hub)}.chip.hub .tag{color:var(--hub)}
+.chip.go{background:var(--gobg);border:2px solid var(--go)}.chip.go .tag{color:var(--go)}
+.up{margin-top:12px}.up ol{margin:4px 0 0;padding-left:28px}.ref{color:var(--soft);font-size:16px}
+.shelf{margin:8px 0 0;color:var(--soft);font-size:17px}
+.how{counter-reset:s;list-style:none;padding:0;margin:0}
+.how li{position:relative;padding:12px 12px 12px 62px;margin:0 0 10px;background:var(--card);border:2px solid var(--line);border-radius:12px}
+.how li::before{counter-increment:s;content:counter(s);position:absolute;left:14px;top:12px;width:34px;height:34px;border-radius:50%;
+background:var(--ink);color:var(--bg);text-align:center;line-height:34px;font-weight:700}
+.who{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.who div{background:var(--card);border:2px solid var(--line);border-radius:12px;padding:12px}
+.key span{display:inline-block;border-radius:8px;padding:0 10px;margin:4px 8px 4px 0;font-weight:700}
+@media (max-width:820px){.t6,.t3{grid-template-columns:1fr}.step{min-height:0}.step:not(.has){opacity:.6}.who{grid-template-columns:1fr}body{font-size:19px}}
+</style></head><body>
+<h1>Our 4 film lanes</h1>
+<p class="sub">Updated 19 Nov 2026. Four lanes run side by side. Each film moves left to right.</p>
+
+<h2>1. Needs you</h2>
+<div class="box youbox"><ol class="needs"><li><b>Judas kissed Him, Jesus called him Friend</b><br>T07-C is the first card to clear every truth check and every bar but FRESH 6 = README &#x27;classic&#x27; band, max 1 in 4 films<br><span class="path">F:\slk\PycharmProjects\JesusInTheBible\threads\t07_familiar_friend</span></li><li><b>Can One Man Heal and Forgive?</b><br>post when ready<br><span class="path">F:\slk\PycharmProjects\JesusInTheBible\threads\t12_his_glory</span></li><li><b>He Did Not Pass By</b><br>release date + rights lines<br><span class="path">F:\slk\PycharmProjects\JesusInTheBible\threads\t13_job_sea</span></li><li><b>Detail first - do machine-found exact KJV repeats pass the gate more…</b><br>SOUND rule question, see _roadmap/pipelines/_SOUND_CHECK.html<br><span class="path">F:\slk\PycharmProjects\JesusInTheBible\poc_detail_first</span></li><li><b>Gate check - would the hunt gate pass films the owner already made an…</b><br>owner<br><span class="path">F:\slk\PycharmProjects\JesusInTheBible\poc_gate_calibration</span></li></ol></div>
+
+<h2>2. Where each film is</h2>
+<p class="key"><span style="background:var(--gobg);color:var(--go)">Working</span><span style="background:var(--hubbg);color:var(--hub)">Waiting on the hub</span><span style="background:var(--youbg);color:var(--you)">Needs you</span></p>
+<section class="lane l1">
+<h3><span class="badge">P1</span> The Thread</h3>
+<p class="what">Old Testament promise -&gt; kept by Jesus. <span class="rule">Only when the New Testament itself quotes it or says &quot;fulfilled&quot;.</span></p>
+<div class="track t6"><div class="step"><div class="sh"><span class="num">1</span>Find a fresh idea</div></div><div class="step has"><div class="sh"><span class="num">2</span>You pick</div><div class="chip you"><b>Judas kissed Him, Jesus called him Friend</b><span class="tag">Needs you</span><span class="nxt">Next: NO PASS. Closest card C</span></div></div><div class="step"><div class="sh"><span class="num">3</span>Words</div></div><div class="step"><div class="sh"><span class="num">4</span>Make the film<span class="money">$ asks you first</span></div></div><div class="step"><div class="sh"><span class="num">5</span>Final checks</div></div><div class="step has"><div class="sh"><span class="num">6</span>Ready to post</div><div class="chip you"><b>Can One Man Heal and Forgive?</b><span class="tag">Needs you</span><span class="nxt">Next: film FINAL locked 2026-11-17</span></div><div class="chip you"><b>He Did Not Pass By</b><span class="tag">Needs you</span><span class="nxt">Next: final pack locked 2026-11-19</span></div></div></div>
+<div class="up"><b>Up next:</b><ol><li>(after t07: owner picks from YouTube topic ideas)</li></ol></div><p class="shelf"><b>Parked (tried, did not pass yet):</b> Son of David · Galilee · Psalm 118 - the stone the builders refu… · What question could no one answer? · Why did Peter point at a grave? · What did Jesus send back to John in pri… · Can a condemned man set others free? · Bruised reed - &quot;judgment unto truth&quot; · My tongue - &quot;my glory rejoiceth&quot; · Why did Jesus have to go to Egypt?</p></section><section class="lane l2">
+<h3><span class="badge">P2</span> The Encounter</h3>
+<p class="what">Something Jesus did, seen through the whole Bible. <span class="rule">Starts from a moment in Jesus&#x27; life.</span></p>
+<div class="track t6"><div class="step"><div class="sh"><span class="num">1</span>Find a fresh idea</div></div><div class="step"><div class="sh"><span class="num">2</span>You pick</div></div><div class="step"><div class="sh"><span class="num">3</span>Words</div></div><div class="step"><div class="sh"><span class="num">4</span>Make the film<span class="money">$ asks you first</span></div></div><div class="step"><div class="sh"><span class="num">5</span>Final checks</div></div><div class="step"><div class="sh"><span class="num">6</span>Ready to post</div></div></div>
+<div class="up"><b>Up next:</b><ol><li>What did she grab? <span class="ref">Numbers 15 -&gt; Luke 8</span></li></ol></div><p class="shelf"><b>Parked (tried, did not pass yet):</b> What had Jesus done to earn it? · Depart from me · How did a blind man see more each time? · What did Jesus do before Peter failed? · Go Home · What did Jesus see that no one counted?</p><p class="shelf"><b>Done:</b> It Is I</p></section><section class="lane l3">
+<h3><span class="badge">P3</span> The Day</h3>
+<p class="what">A real-life struggle today, with the Bible&#x27;s view. <span class="rule">Starts from the viewer&#x27;s life. Extra safety checks.</span></p>
+<div class="track t6"><div class="step"><div class="sh"><span class="num">1</span>Find a fresh idea</div></div><div class="step"><div class="sh"><span class="num">2</span>You pick</div></div><div class="step"><div class="sh"><span class="num">3</span>Words</div></div><div class="step"><div class="sh"><span class="num">4</span>Make the film<span class="money">$ asks you first</span></div></div><div class="step"><div class="sh"><span class="num">5</span>Final checks</div></div><div class="step"><div class="sh"><span class="num">6</span>Ready to post</div></div></div>
+<div class="up"><b>Up next:</b><ol><li>(picked by the P3 lane from life issues: worry, envy, waiting, anger, failure)</li></ol></div><p class="shelf"><b>Parked (tried, did not pass yet):</b> What about him? · Does anyone see me? · No time to eat · Afraid of what is coming</p><p class="shelf"><b>Done:</b> Prove the P3 gate</p></section><section class="lane l4">
+<h3><span class="badge">P4</span> The Lab</h3>
+<p class="what">Tests and new tools. <span class="rule">Small experiments. You decide: use it, park it, or drop it.</span></p>
+<div class="track t3"><div class="step"><div class="sh"><span class="num">1</span>Question</div></div><div class="step"><div class="sh"><span class="num">2</span>Testing</div></div><div class="step has"><div class="sh"><span class="num">3</span>You pick</div><div class="chip you"><b>Detail first - do machine-found exact KJV repea…</b><span class="tag">Needs you</span><span class="nxt">Next: answer: detail-first 0/4</span></div></div></div>
+<div class="up"><b>Up next:</b><ol><li>(free - ask for a test)</li></ol></div><p class="shelf"><b>Parked (tried, did not pass yet):</b> One word changed - do NT-quotes-OT-with…</p><p class="shelf"><b>Dropped:</b> Dub test</p></section>
+
+<h2>3. How we work</h2>
+<ol class="how">
+<li><b>A lane takes the next idea</b> from its "Up next" list. Free.</li>
+<li><b>The AI panel tests the idea, blind.</b> Fable + Claude + Codex + Gemini (+ Grok when it has credit). Is it fresh? Is it true? Does it land on Jesus? <br>About 1 in 3 ideas fail here. That is normal. It costs nothing.</li>
+<li><b>A passing idea comes to you.</b> You pick it, or not.</li>
+<li><b>Words are written and checked</b> by the panel. Everything on screen is also spoken, so dubbing works.</li>
+<li><b>Making the film costs money.</b> I show you the price first. Nothing is spent until you say yes.</li>
+<li><b>Final checks, then it is ready.</b> Title, poster and captions are checked. You post it.</li>
+</ol>
+
+<h2>4. Who does what</h2>
+<div class="who">
+<div><b>You</b><br>Pick ideas. Say yes to spend. Post films.</div>
+<div><b>The lanes (P1-P4)</b><br>Each does its own work, in its own folder. At most 1 film being made and 1 idea being tested per lane.</div>
+<div><b>The hub (me)</b><br>Keeps the shared files. Runs the AI panel queue and the paid queue, one at a time. Keeps this board up to date.</div>
+</div>
+</body></html>

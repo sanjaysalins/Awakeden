@@ -1,21 +1,22 @@
 {
  "dod": {
-  "median_beat_s": 3.35,
-  "max_beat_s": 5.43,
-  "held_gt6s": [],
-  "slams": 15,
+  "median_beat_s": 3.42,
+  "max_beat_s": 6.53,
+  "held_gt6s": [
+   6.53,
+   6.13
+  ],
+  "slams": 14,
   "kling_or_punch_or_slam_pct": 100,
-  "tier1_pct": 10,
+  "tier1_pct": 11,
   "reuse_violations": [
    "storm_ship_waves: beats 3->5 (gap 2 < 8)",
-   "jonah_in_the_deep: beats 8->10 (gap 2 < 8)",
-   "jonah_sinking_down: beats 7->12 (gap 5 < 8)",
-   "stone_rolled_dawn: beats 14->15 (gap 1 < 8)",
-   "mercy_hand_into_deep: beats 16->17 (gap 1 < 8)",
-   "risen_christ_wounds: beats 19->20 (gap 1 < 8)"
+   "stone_rolled_dawn: beats 12->13 (gap 1 < 8)",
+   "mercy_hand_into_deep: beats 14->15 (gap 1 < 8)",
+   "risen_christ_wounds: beats 17->18 (gap 1 < 8)"
   ],
   "tier3_or_flagged_beats": [
-   14
+   12
   ],
   "standard_3b": {
    "stills_over_2_uses": {},
@@ -23,24 +24,25 @@
     "mercy_hand_into_deep": 2,
     "risen_christ_wounds": 2
    },
-   "fullbleed_beat_pct": 60,
+   "fullbleed_beat_pct": 61,
    "slop_caption_beats": []
   },
   "ramps": 0,
   "whips": 4,
   "flash_inserts": 0,
-  "fx_beats": 19,
+  "fx_beats": 17,
   "cut_ticks": false,
-  "beats": 20
+  "beats": 18
  },
+ "clips_build": true,
  "beats": [
   {
    "beat": 1,
    "t": [
     0.0,
-    2.24
+    2.821
    ],
-   "dur": 2.233333,
+   "dur": 2.833333,
    "tpl": "hero_frac3",
    "slams": 2,
    "slugs": [
@@ -59,10 +61,10 @@
   {
    "beat": 2,
    "t": [
-    2.24,
-    5.26
+    2.821,
+    7.423
    ],
-   "dur": 3.033333,
+   "dur": 4.6,
    "tpl": "full",
    "slams": 0,
    "slugs": [
@@ -81,8 +83,8 @@
   {
    "beat": 3,
    "t": [
-    5.26,
-    8.64
+    7.423,
+    10.784
    ],
    "dur": 3.366667,
    "tpl": "hero_frac3",
@@ -103,10 +105,10 @@
   {
    "beat": 4,
    "t": [
-    8.64,
-    11.96
+    10.784,
+    13.325
    ],
-   "dur": 3.333333,
+   "dur": 2.533333,
    "tpl": "hero_frac3",
    "slams": 2,
    "slugs": [
@@ -125,10 +127,10 @@
   {
    "beat": 5,
    "t": [
-    11.96,
-    14.59
+    13.325,
+    16.146
    ],
-   "dur": 2.633333,
+   "dur": 2.8,
    "tpl": "hero_band3",
    "slams": 2,
    "slugs": [
@@ -147,10 +149,10 @@
   {
    "beat": 6,
    "t": [
-    14.59,
-    18.47
+    16.146,
+    19.767
    ],
-   "dur": 3.866667,
+   "dur": 3.633333,
    "tpl": "hero_frac3",
    "slams": 2,
    "slugs": [
@@ -169,54 +171,10 @@
   {
    "beat": 7,
    "t": [
-    18.47,
-    21.35
+    19.767,
+    26.289
    ],
-   "dur": 2.866667,
-   "tpl": "full",
-   "slams": 0,
-   "slugs": [
-    "jonah_sinking_down"
-   ],
-   "sources": [
-    "kling"
-   ],
-   "punch": false,
-   "cap": {
-    "tier": 2,
-    "style": "scrim",
-    "flag": false
-   }
-  },
-  {
-   "beat": 8,
-   "t": [
-    21.35,
-    25.51
-   ],
-   "dur": 4.166667,
-   "tpl": "hero_band3",
-   "slams": 2,
-   "slugs": [
-    "jonah_in_the_deep"
-   ],
-   "sources": [
-    "kling"
-   ],
-   "punch": false,
-   "cap": {
-    "tier": 2,
-    "style": "scrim",
-    "flag": false
-   }
-  },
-  {
-   "beat": 9,
-   "t": [
-    25.51,
-    30.93
-   ],
-   "dur": 5.433333,
+   "dur": 6.533333,
    "tpl": "full",
    "slams": 0,
    "slugs": [
@@ -233,12 +191,12 @@
    }
   },
   {
-   "beat": 10,
+   "beat": 8,
    "t": [
-    30.93,
-    36.09
+    26.289,
+    30.351
    ],
-   "dur": 5.166667,
+   "dur": 4.066667,
    "tpl": "full",
    "slams": 0,
    "slugs": [
@@ -255,12 +213,12 @@
    }
   },
   {
-   "beat": 11,
+   "beat": 9,
    "t": [
-    36.09,
-    40.83
+    30.351,
+    36.493
    ],
-   "dur": 4.733333,
+   "dur": 6.133333,
    "tpl": "full",
    "slams": 0,
    "slugs": [
@@ -277,12 +235,12 @@
    }
   },
   {
-   "beat": 12,
+   "beat": 10,
    "t": [
-    40.83,
-    44.4
+    36.493,
+    39.534
    ],
-   "dur": 3.566667,
+   "dur": 3.033333,
    "tpl": "hero_frac3",
    "slams": 2,
    "slugs": [
@@ -299,12 +257,12 @@
    }
   },
   {
-   "beat": 13,
+   "beat": 11,
    "t": [
-    44.4,
-    49.5
+    39.534,
+    44.015
    ],
-   "dur": 5.1,
+   "dur": 4.466667,
    "tpl": "full",
    "slams": 0,
    "slugs": [
@@ -321,14 +279,14 @@
    }
   },
   {
-   "beat": 14,
+   "beat": 12,
    "t": [
-    49.5,
-    53.38
+    44.015,
+    47.457
    ],
-   "dur": 3.866667,
+   "dur": 3.466667,
    "tpl": "stack_h",
-   "slams": 1,
+   "slams": 2,
    "slugs": [
     "stone_rolled_dawn",
     "jonah_on_shore"
@@ -345,12 +303,12 @@
    }
   },
   {
-   "beat": 15,
+   "beat": 13,
    "t": [
-    53.38,
-    54.6
+    47.457,
+    48.857
    ],
-   "dur": 1.233333,
+   "dur": 1.4,
    "tpl": "full",
    "slams": 0,
    "slugs": [
@@ -367,10 +325,10 @@
    }
   },
   {
-   "beat": 16,
+   "beat": 14,
    "t": [
-    54.6,
-    57.0
+    48.857,
+    51.258
    ],
    "dur": 2.4,
    "tpl": "full",
@@ -389,12 +347,12 @@
    }
   },
   {
-   "beat": 17,
+   "beat": 15,
    "t": [
-    57.0,
-    61.4
+    51.258,
+    53.779
    ],
-   "dur": 4.4,
+   "dur": 2.5,
    "tpl": "full",
    "slams": 0,
    "slugs": [
@@ -411,12 +369,12 @@
    }
   },
   {
-   "beat": 18,
+   "beat": 16,
    "t": [
-    61.4,
-    63.6
+    53.779,
+    55.36
    ],
-   "dur": 2.2,
+   "dur": 1.6,
    "tpl": "full",
    "slams": 0,
    "slugs": [
@@ -433,12 +391,12 @@
    }
   },
   {
-   "beat": 19,
+   "beat": 17,
    "t": [
-    63.6,
-    66.7
+    55.36,
+    58.861
    ],
-   "dur": 3.1,
+   "dur": 3.5,
    "tpl": "full",
    "slams": 0,
    "slugs": [
@@ -455,12 +413,12 @@
    }
   },
   {
-   "beat": 20,
+   "beat": 18,
    "t": [
-    66.7,
-    69.52
+    58.861,
+    63.9
    ],
-   "dur": 2.833333,
+   "dur": 5.033333,
    "tpl": "full",
    "slams": 0,
    "slugs": [
@@ -475,6 +433,138 @@
     "style": "scrim",
     "flag": false
    }
+  }
+ ],
+ "speed": [
+  {
+   "beat": 2,
+   "panel": 0,
+   "slug": "great_fish_rising",
+   "slot_s": 4.6,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 7,
+   "panel": 0,
+   "slug": "jesus_and_scribes",
+   "slot_s": 6.533,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.296,
+   "boomerang": false
+  },
+  {
+   "beat": 8,
+   "panel": 0,
+   "slug": "jonah_in_the_deep",
+   "slot_s": 4.067,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 9,
+   "panel": 0,
+   "slug": "three_days_dark_tomb",
+   "slot_s": 6.133,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.217,
+   "boomerang": false
+  },
+  {
+   "beat": 11,
+   "panel": 0,
+   "slug": "body_laid_in_tomb",
+   "slot_s": 4.467,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 12,
+   "panel": 0,
+   "slug": "stone_rolled_dawn",
+   "slot_s": 3.467,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 12,
+   "panel": 1,
+   "slug": "jonah_on_shore",
+   "slot_s": 3.467,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 13,
+   "panel": 0,
+   "slug": "stone_rolled_dawn",
+   "slot_s": 1.4,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 14,
+   "panel": 0,
+   "slug": "mercy_hand_into_deep",
+   "slot_s": 2.4,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 15,
+   "panel": 0,
+   "slug": "mercy_hand_into_deep",
+   "slot_s": 2.5,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 16,
+   "panel": 0,
+   "slug": "man_rising_from_water",
+   "slot_s": 1.6,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 17,
+   "panel": 0,
+   "slug": "risen_christ_wounds",
+   "slot_s": 3.5,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 18,
+   "panel": 0,
+   "slug": "risen_christ_wounds",
+   "slot_s": 5.033,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
   }
  ]
 }

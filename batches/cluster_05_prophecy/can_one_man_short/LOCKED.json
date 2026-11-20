@@ -1,0 +1,13 @@
+{
+ "piece": "can_one_man_short",
+ "locked": "2026-11-17",
+ "locked_by": "owner ('yes lock it', 2026-11-17) on film T12_comic_v3_final.mp4; title + poster are the owner picks of 2026-11-17",
+ "final_video": "visual/can_one_man_final.mp4",
+ "final_sha256": "c88b71ae03ce552e454931d891e566597c97de210795e9e6e589630ed6854cad",
+ "source": "threads/t12_his_glory/film/comic_v1/T12_comic_v3_final.mp4 (same bytes); lock note threads/t12_his_glory/film/FILM_LOCK_2026-11-17.md",
+ "words": "threads/t12_his_glory/words/WORDS_LOCK_2026-11-17.md (line 3 now 'Jesus repeats it. What they would miss:'; closing narrator line added); narration.md here = the spoken script",
+ "audio": "audio/narration.mp3 = threads/t12_his_glory/audio/NARRATION_v4_FIX.mp3; word times visual/can_one_man_final.words.json = faster_whisper small.en on the voice track (identical to the film audio, offset 0), words corrected to narration.md",
+ "visual": "threads/t12_his_glory (Isaiah 6:9-10 -> Mark 4:11-12 -> Matthew 13:15 -> Mark 2:1-12; Luke 4:18 backs 'heals your heart' in the copy only)",
+ "packaging": "packaging/THUMB_FINAL_9x16.jpg (= locked poster, ONLY GOD / CAN FORGIVE); card threads/t12_his_glory/_packaging/22_can_one_man/packaging.json",
+ "not_done": ["upload (hold)", "seed viewers", "commit (text only, NO media)"]
+}

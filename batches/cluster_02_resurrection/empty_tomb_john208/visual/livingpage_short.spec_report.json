@@ -1,48 +1,46 @@
 {
  "dod": {
-  "median_beat_s": 4.17,
-  "max_beat_s": 6.07,
+  "median_beat_s": 3.83,
+  "max_beat_s": 6.77,
   "held_gt6s": [
+   6.77,
    6.07
   ],
-  "slams": 18,
+  "slams": 16,
   "kling_or_punch_or_slam_pct": 100,
-  "tier1_pct": 10,
+  "tier1_pct": 12,
   "reuse_violations": [
    "mary_runs_predawn: beats 3->4 (gap 1 < 8)",
    "napkin_wrapped_apart: beats 7->8 (gap 1 < 8)",
-   "linen_left_lying: beats 6->11 (gap 5 < 8)",
-   "john_believes_inside: beats 9->12 (gap 3 < 8)",
-   "jesus_shows_thomas: beats 15->16 (gap 1 < 8)",
-   "risen_christ_wounds: beats 13->17 (gap 4 < 8)",
-   "risen_christ_seeking: beats 19->20 (gap 1 < 8)"
+   "john_believes_inside: beats 9->10 (gap 1 < 8)",
+   "jesus_shows_thomas: beats 13->14 (gap 1 < 8)",
+   "risen_christ_wounds: beats 11->15 (gap 4 < 8)"
   ],
   "tier3_or_flagged_beats": [
-   15
+   13
   ],
   "standard_3b": {
    "stills_over_2_uses": {},
-   "stills_fullbleed_twice": {
-    "risen_christ_seeking": 2
-   },
-   "fullbleed_beat_pct": 55,
+   "stills_fullbleed_twice": {},
+   "fullbleed_beat_pct": 53,
    "slop_caption_beats": []
   },
   "ramps": 1,
   "whips": 3,
   "flash_inserts": 0,
-  "fx_beats": 20,
+  "fx_beats": 17,
   "cut_ticks": false,
-  "beats": 20
+  "beats": 17
  },
+ "clips_build": true,
  "beats": [
   {
    "beat": 1,
    "t": [
     0.0,
-    4.58
+    4.491
    ],
-   "dur": 4.566667,
+   "dur": 4.5,
    "tpl": "full",
    "slams": 0,
    "slugs": [
@@ -61,10 +59,10 @@
   {
    "beat": 2,
    "t": [
-    4.58,
-    9.5
+    4.491,
+    6.791
    ],
-   "dur": 4.933333,
+   "dur": 2.3,
    "tpl": "full",
    "slams": 0,
    "slugs": [
@@ -75,16 +73,16 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
-    "style": "scrim",
+    "tier": 1,
+    "style": "box",
     "flag": false
    }
   },
   {
    "beat": 3,
    "t": [
-    9.5,
-    11.26
+    6.791,
+    8.551
    ],
    "dur": 1.766667,
    "tpl": "hero_band3",
@@ -105,8 +103,8 @@
   {
    "beat": 4,
    "t": [
-    11.26,
-    16.16
+    8.551,
+    13.451
    ],
    "dur": 4.9,
    "tpl": "full",
@@ -127,8 +125,8 @@
   {
    "beat": 5,
    "t": [
-    16.16,
-    18.74
+    13.451,
+    16.031
    ],
    "dur": 2.566667,
    "tpl": "hero_frac3",
@@ -149,8 +147,8 @@
   {
    "beat": 6,
    "t": [
-    18.74,
-    21.86
+    16.031,
+    19.151
    ],
    "dur": 3.133333,
    "tpl": "hero_frac3",
@@ -171,8 +169,8 @@
   {
    "beat": 7,
    "t": [
-    21.86,
-    26.04
+    19.151,
+    23.331
    ],
    "dur": 4.166667,
    "tpl": "full",
@@ -193,8 +191,8 @@
   {
    "beat": 8,
    "t": [
-    26.04,
-    30.93
+    23.331,
+    28.221
    ],
    "dur": 4.9,
    "tpl": "hero_frac3",
@@ -215,10 +213,10 @@
   {
    "beat": 9,
    "t": [
-    30.93,
-    33.24
+    28.221,
+    29.986
    ],
-   "dur": 2.3,
+   "dur": 1.766667,
    "tpl": "hero_frac3",
    "slams": 2,
    "slugs": [
@@ -237,54 +235,10 @@
   {
    "beat": 10,
    "t": [
-    33.24,
-    36.16
+    29.986,
+    32.73
    ],
-   "dur": 2.933333,
-   "tpl": "hero_band3",
-   "slams": 2,
-   "slugs": [
-    "stone_rolled_dawn"
-   ],
-   "sources": [
-    "kling"
-   ],
-   "punch": false,
-   "cap": {
-    "tier": 1,
-    "style": "box",
-    "flag": false
-   }
-  },
-  {
-   "beat": 11,
-   "t": [
-    36.16,
-    40.03
-   ],
-   "dur": 3.866667,
-   "tpl": "full",
-   "slams": 0,
-   "slugs": [
-    "linen_left_lying"
-   ],
-   "sources": [
-    "kling"
-   ],
-   "punch": false,
-   "cap": {
-    "tier": 2,
-    "style": "scrim",
-    "flag": false
-   }
-  },
-  {
-   "beat": 12,
-   "t": [
-    40.03,
-    44.43
-   ],
-   "dur": 4.4,
+   "dur": 2.733333,
    "tpl": "full",
    "slams": 0,
    "slugs": [
@@ -301,10 +255,10 @@
    }
   },
   {
-   "beat": 13,
+   "beat": 11,
    "t": [
-    44.43,
-    47.73
+    32.73,
+    36.03
    ],
    "dur": 3.3,
    "tpl": "hero_band3",
@@ -323,12 +277,12 @@
    }
   },
   {
-   "beat": 14,
+   "beat": 12,
    "t": [
-    47.73,
-    53.15
+    36.03,
+    39.86
    ],
-   "dur": 5.4,
+   "dur": 3.833333,
    "tpl": "hero_band3",
    "slams": 2,
    "slugs": [
@@ -345,12 +299,12 @@
    }
   },
   {
-   "beat": 15,
+   "beat": 13,
    "t": [
-    53.15,
-    55.69
+    39.86,
+    42.4
    ],
-   "dur": 2.566667,
+   "dur": 2.533333,
    "tpl": "hero_frac3",
    "slams": 2,
    "slugs": [
@@ -367,10 +321,10 @@
    }
   },
   {
-   "beat": 16,
+   "beat": 14,
    "t": [
-    55.69,
-    61.43
+    42.4,
+    48.14
    ],
    "dur": 5.733333,
    "tpl": "full",
@@ -389,10 +343,10 @@
    }
   },
   {
-   "beat": 17,
+   "beat": 15,
    "t": [
-    61.43,
-    67.49
+    48.14,
+    54.2
    ],
    "dur": 6.066667,
    "tpl": "full",
@@ -411,12 +365,12 @@
    }
   },
   {
-   "beat": 18,
+   "beat": 16,
    "t": [
-    67.49,
-    72.97
+    54.2,
+    58.05
    ],
-   "dur": 5.466667,
+   "dur": 3.866667,
    "tpl": "full",
    "slams": 0,
    "slugs": [
@@ -433,12 +387,12 @@
    }
   },
   {
-   "beat": 19,
+   "beat": 17,
    "t": [
-    72.97,
-    77.15
+    58.05,
+    64.82
    ],
-   "dur": 4.166667,
+   "dur": 6.766667,
    "tpl": "full",
    "slams": 0,
    "slugs": [
@@ -453,28 +407,98 @@
     "style": "scrim",
     "flag": false
    }
+  }
+ ],
+ "speed": [
+  {
+   "beat": 1,
+   "panel": 0,
+   "slug": "stone_rolled_dawn",
+   "slot_s": 4.5,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
   },
   {
-   "beat": 20,
-   "t": [
-    77.15,
-    79.07
-   ],
-   "dur": 1.933333,
-   "tpl": "full",
-   "slams": 0,
-   "slugs": [
-    "risen_christ_seeking"
-   ],
-   "sources": [
-    "kling"
-   ],
-   "punch": false,
-   "cap": {
-    "tier": 2,
-    "style": "scrim",
-    "flag": false
-   }
+   "beat": 2,
+   "panel": 0,
+   "slug": "stone_taken_away_dark",
+   "slot_s": 2.3,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 4,
+   "panel": 0,
+   "slug": "mary_runs_predawn",
+   "slot_s": 4.9,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 7,
+   "panel": 0,
+   "slug": "napkin_wrapped_apart",
+   "slot_s": 4.167,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 10,
+   "panel": 0,
+   "slug": "john_believes_inside",
+   "slot_s": 2.733,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 14,
+   "panel": 0,
+   "slug": "jesus_shows_thomas",
+   "slot_s": 5.733,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.137,
+   "boomerang": false
+  },
+  {
+   "beat": 15,
+   "panel": 0,
+   "slug": "risen_christ_wounds",
+   "slot_s": 6.067,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.203,
+   "boomerang": false
+  },
+  {
+   "beat": 16,
+   "panel": 0,
+   "slug": "tomb_doorway_dawn",
+   "slot_s": 3.867,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 17,
+   "panel": 0,
+   "slug": "risen_christ_seeking",
+   "slot_s": 6.767,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.342,
+   "boomerang": false
   }
  ]
 }
