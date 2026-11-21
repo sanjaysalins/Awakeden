@@ -1,0 +1,3 @@
+ANGLE A | PASS | Mark directly applies Zechariah’s shepherd-and-scattered-sheep line to that night; Luke’s cock warning is a separate account.
+ANGLE B | PASS | Both settings explain what Peter remembered, but the shared wording is an echo, not a link the text claims.
+ANGLE C | PASS | Jesus explicitly says Isaiah’s “reckoned among the transgressors” line must be accomplished in him; Luke 22:32 is not said to fulfill the verse’s closing phrase.

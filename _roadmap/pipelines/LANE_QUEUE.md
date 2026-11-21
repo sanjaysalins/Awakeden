@@ -3,8 +3,6 @@
 # One line per item: LANE | short plain question | Bible refs
 # Order = the order we try them. Remove a line when it starts (it then has a STATE.md).
 
-P1 | Nicodemus: by night to Jesus, then at the cross with myrrh (owner yes 2026-11-20; "in daylight" is NOT in the text) | John 3:1-2, John 7:50-51, John 19:39
-P1 | Peter: "the Lord turned, and looked upon Peter" (owner yes 2026-11-20, after Nicodemus; say "looked upon") | Luke 22:54-62
 
 P2 | What did she grab? | Numbers 15 -> Luke 8
 

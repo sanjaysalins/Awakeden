@@ -1,0 +1,12 @@
+- Joseph of Arimathaea, once a secret disciple, came forward openly to care for Jesus’ body (John 19:38).
+- Nicodemus, who had first come to Jesus by night, now publicly helped bury him (John 19:39; cf. John 3:1–2).
+- A costly gift can express love and devotion to Christ (John 19:39).
+- Jesus truly died and was buried; his body was wrapped and laid in a tomb (John 19:40–42).
+- The burial preparations fulfilled the Jewish custom of honoring the dead (John 19:40).
+- God can bring faith and courage to people who once hesitated or feared others (John 19:38–39; cf. John 7:50–52).
+- Jesus was buried in a new tomb in a garden near the place of crucifixion (John 19:41–42).
+- Cross-ref: Isaiah foretold that the suffering servant would be with the rich in his death (Isaiah 53:9).
+- Cross-ref: Joseph of Arimathaea asked Pilate for Jesus’ body and laid it in his own tomb (Matthew 27:57–60).
+- Cross-ref: Nicodemus had earlier come to Jesus by night and heard of the need to be born again (John 3:1–21).
+- Cross-ref: Nicodemus had defended hearing Jesus before judging him (John 7:50–52).
+- Cross-ref: The women saw where Jesus was laid and prepared spices for his burial (Luke 23:50–56).

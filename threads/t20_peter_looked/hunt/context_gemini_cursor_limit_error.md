@@ -1,0 +1,2 @@
+(no output; exit 1; stderr: ActionRequiredError: You've hit your usage limit Switch to a different model or set a Spend Limit to continue with Gemini. Your usage limits will reset when your monthly cycle ends on 12/17/2026.
+)
