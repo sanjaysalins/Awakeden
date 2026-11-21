@@ -64,3 +64,13 @@
 - Global CLAUDE.md still says "honest AI disclosure once" — conflicts with the no-AI rule (owner to decide).
 - Comic rollout to 8 more films ($0 plan) and insight-line narration changes not started (words gate first).
 - pytest: 9 old failures in test_run_piece (KeyError 'stills'), not from this work.
+
+## Update 2026-11-21
+- All 5 films, Bier redo and JL score were already LOCKED (11-17/18). Release check GREEN.
+- ep02 Ashes fix2 BUILT, waits for owner lock: `F:\slk\PycharmProjects\JesusInTheBible\poc_living_water_ink_style_test\swirls_episode_02_ashes_that_made_clean\uplift\fix2\ep02_uplift_fix2_final.mp4`
+  (MD5 05b7ea948d14a29a1bf9f2e891756f84, audio MD5 = shipped). Review: `...\uplift\fix2\review\_FIX2_REVIEW.html`.
+  4 stills redrawn to a new cream-tunic ref (`refs\unclean_man_ref_cream.png`), 5 clips + 1 F02C redo. Spent 1,455 cr = $2.91 (cap $7).
+  To lock: pin FINAL_VIDEO.txt -> uplift/fix2/ep02_uplift_fix2_final.mp4, then the lock steps above.
+- 2026-11-21 later: owner picked score "A. Felt piano" (existing score_epic.mp3, $0). LOCKED + pinned:
+  `uplift/ep02_uplift_fix2_piano.mp4` (MD5 148960644f6c720563a113831ad8b8fb). Pack GREEN, release_check GREEN.
+  Text committed (ep02 files only). data/spend_ledger.jsonl + _media_rules/paid_jobs_log.csv rows added but not committed (shared with other sessions).
