@@ -74,3 +74,7 @@
 - 2026-11-21 later: owner picked score "A. Felt piano" (existing score_epic.mp3, $0). LOCKED + pinned:
   `uplift/ep02_uplift_fix2_piano.mp4` (MD5 148960644f6c720563a113831ad8b8fb). Pack GREEN, release_check GREEN.
   Text committed (ep02 files only). data/spend_ledger.jsonl + _media_rules/paid_jobs_log.csv rows added but not committed (shared with other sessions).
+- 2026-11-21: C:\Users\sanjay\JesusInTheBible_overflow deleted (3.5 GB, owner yes). Locked films on F: matched by MD5 first; nothing referenced it.
+- 2026-11-21: Women First Witnesses captions item CLOSED. v6 pack captions already cover the full 63 s film; fixed one join ("dead the risen" -> 2 sentences), saved publish\captions_locked.srt. Posted video = old 82 s cut, owner said keep it, nothing to do.
+- 2026-11-21: ep12 "cuts off" blocker is STALE. It was the Sept v1/v2 film; ep12 was rebuilt as v3 retro (11-10, LOCKED, upload-ready). v3 final checked: video 81.33 s = audio 81.32 s, decode clean, end fades smoothly to silence. Already POSTED 2026-11-16 (https://youtube.com/shorts/cddE5Y2r4ZE, Swirls ledger).
+- 2026-11-21: AI-disclosure conflict CLOSED (owner yes). Global CLAUDE.md packaging line now says NO AI wording in public text; platform AI-label switch stays ON. Backup: C:\Users\sanjay\.claude\CLAUDE.md.bak_20261121.
