@@ -1,5 +1,5 @@
 {
- "_doc": "v6 TRIM B + RESYNC (2026-11-20, cut-only; beats re-timed to the voice): THE SIGN OF JONAH (Jonah 1-2 + Matt 12:40) 9:16 SHORT - living page. 20 beats / 69.52s. Jonah's deep mirrored with Christ's tomb: storm hook with ramp+takeover, heartbeat under 'three days buried alive', sacred stillness on the Matt 12:40 bar (two-part: belly -> heart of the earth), guilty-down/innocent-down substitution, stack on 'grave no more held Him', border-break punch on HE ROSE (stone_rolled_dawn), mercy-into-the-deep CTA, risen Christ close.",
+ "_doc": "LINE FIX 2026-11-21 (S03+S04 re-recorded: false motive line replaced, Jonah 1:2-3). v6 TRIM B + RESYNC (2026-11-20, cut-only; beats re-timed to the voice): THE SIGN OF JONAH (Jonah 1-2 + Matt 12:40) 9:16 SHORT - living page. 20 beats / 69.52s. Jonah's deep mirrored with Christ's tomb: storm hook with ramp+takeover, heartbeat under 'three days buried alive', sacred stillness on the Matt 12:40 bar (two-part: belly -> heart of the earth), guilty-down/innocent-down substitution, stack on 'grave no more held Him', border-break punch on HE ROSE (stone_rolled_dawn), mercy-into-the-deep CTA, risen Christ close.",
  "audio": "../audio/narration.mp3",
  "total": 63.9,
  "cut_ticks": false,
@@ -140,7 +140,7 @@
   {
    "t": [
     10.784,
-    13.325
+    13.5
    ],
    "tpl": "hero_frac3",
    "clips": [
@@ -151,8 +151,8 @@
    ],
    "cap": {
     "type": "caption",
-    "text": "He sent me to Nineveh, the city I hated",
-    "kw": "THE CITY I HATED"
+    "text": "He sent me to Nineveh, that great city",
+    "kw": "THAT GREAT CITY"
    },
    "anchors": [
     [
@@ -188,7 +188,7 @@
   },
   {
    "t": [
-    13.325,
+    13.5,
     16.146
    ],
    "tpl": "hero_band3",
@@ -200,8 +200,8 @@
    ],
    "cap": {
     "type": "caption",
-    "text": "I'd sooner drown than see her spared",
-    "kw": "SOONER DROWN"
+    "text": "but I fled toward Tarshish",
+    "kw": "I FLED"
    },
    "anchors": [
     [
@@ -221,9 +221,9 @@
     ]
    ],
    "panel_at": [
-    13.325,
-    13.605,
-    13.885
+    13.5,
+    13.78,
+    14.06
    ],
    "panel_slide": [
     "up",

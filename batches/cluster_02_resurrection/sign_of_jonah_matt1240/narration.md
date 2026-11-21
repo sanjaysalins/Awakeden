@@ -7,7 +7,7 @@
 I told the sailors to throw me into the sea — and a great fish swallowed me whole, and buried me alive in the dark.
 
 ## Beat 2 — The strange thing
-I ran from God because His mercy was too wide. He sent me to Nineveh, the city I hated — I'd sooner drown than see her spared. The storm came for my sake; the lot fell on me. To spare the sailors, I had them throw me overboard. Three days buried alive in the fish.
+I ran from God because His mercy was too wide. He sent me to Nineveh, that great city, but I fled toward Tarshish. The storm came for my sake; the lot fell on me. To spare the sailors, I had them throw me overboard. Three days buried alive in the fish.
 
 ## Beat 3 — The turn
 Then, long after I was dust, scribes demanded a sign — Jesus gave them only my name:

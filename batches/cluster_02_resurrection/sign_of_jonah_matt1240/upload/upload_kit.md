@@ -45,7 +45,7 @@ VERDICT: PASS
 
 ## Title options (chosen first)
 
-1. **Asked for a Miracle, Jesus Gave Them a Drowned Prophet** ⟵ CHOSEN  
+1. **They Asked Jesus for a Sign. He Gave Them Jonah.** ⟵ CHOSEN  
    _angle: the strange sign: only Jonah's name_
 2. **Buried Alive for Three Days - Then Jesus Used My Story**  
    _angle: first-person witness hook_
@@ -58,7 +58,7 @@ VERDICT: PASS
 
 **TITLE** (copy):
 ```
-Asked for a Miracle, Jesus Gave Them a Drowned Prophet
+They Asked Jesus for a Sign. He Gave Them Jonah.
 ```
 _54 characters_
 
@@ -66,7 +66,7 @@ _54 characters_
 ```
 The sign of Jonah (Matthew 12:40), told by the man who lived it.
 
-I told the sailors to throw me into the sea, and a great fish swallowed me whole and buried me alive in the dark. I ran from God because his mercy was too wide: he sent me to Nineveh, the city I hated. The storm came for my sake. Three days buried alive in the fish.
+I told the sailors to throw me into the sea, and a great fish swallowed me whole and buried me alive in the dark. I ran from God because his mercy was too wide: he sent me to Nineveh, that great city, but I fled toward Tarshish. The storm came for my sake. Three days buried alive in the fish.
 
 Long after I was dust, scribes demanded a sign, and Jesus gave them only my name: "For as Jonas was three days and three nights in the whale's belly; so shall the Son of man be three days and three nights in the heart of the earth" (Matthew 12:40, KJV).
 
@@ -134,7 +134,7 @@ sign of jonah explained, matthew 12 40, jonah and the whale true meaning, jonah 
 
 **DESCRIPTION / CAPTION** (copy):
 ```
-They asked Jesus for a miracle. He gave them a drowned prophet. I went down guilty - he went down innocent, bearing what was ours. The grave no more held him than the deep held me. HE ROSE. Come up out of the deep, and live.
+They asked Jesus for a sign. He gave them Jonah. I went down guilty - he went down innocent, bearing what was ours. The grave no more held him than the deep held me. HE ROSE. Come up out of the deep, and live.
 
 Find Jesus in the whole Bible - one story at a time. Subscribe to Salt and Light Kingdom. ✝
 ```
@@ -180,7 +180,7 @@ _704 characters_
 
 **DESCRIPTION / CAPTION** (copy):
 ```
-They demanded a miracle. Jesus gave them a drowned prophet. (Matthew 12:40)
+They asked Jesus for a sign. He gave them Jonah. (Matthew 12:40)
 
 Jonah went down guilty; the storm was his. Christ went down innocent, bearing ours. Three days in the dark. Then the grave lost its grip.
 

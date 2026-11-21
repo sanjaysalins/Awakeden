@@ -1,7 +1,7 @@
 # instagram — Instagram (Reel)
 
 ## CAPTION
-They demanded a miracle. Jesus gave them a drowned prophet. (Matthew 12:40)
+They asked Jesus for a sign. He gave them Jonah. (Matthew 12:40)
 
 Jonah went down guilty; the storm was his. Christ went down innocent, bearing ours. Three days in the dark. Then the grave lost its grip.
 

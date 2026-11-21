@@ -42,7 +42,19 @@ Public one-liner (unchanged): *Salt and Light Kingdom — finding Jesus in the w
   distills. Longs: Bronze Serpent + Seed of the Woman.
 - **Month 4 (Shadows):** Exodus distills; longs EW08/EW04 films (build) or held EW01.
 - December = hold Season 6 (Nativity) for its month.
-- **2026-12-01: "Why Was Jesus Born in Bethlehem?"** (prophecy Ep 01, `batches/cluster_05_prophecy/bethlehem_short`, film v6 sha f1ac7b19). Owner Christmas exception to the posting hold, set 2026-11-16 ("keep, 1 Dec"). Pack GREEN + PACKAGING-READY, red-teamed r1-r4. Poster kept as is (owner, 2026-11-16). YouTube first; follow `UPLOAD_CHECKLIST.md` (write the exact time + time zone at its top before scheduling).
+- **SUPERSEDED 2026-11-21 (owner): 1 Dec is now Immanuel; Bethlehem = Christmas playlist only.** Was: **2026-12-01: "Why Was Jesus Born in Bethlehem?"** (prophecy Ep 01, `batches/cluster_05_prophecy/bethlehem_short`, film v6 sha f1ac7b19). Owner Christmas exception to the posting hold, set 2026-11-16 ("keep, 1 Dec"). Pack GREEN + PACKAGING-READY, red-teamed r1-r4. Poster kept as is (owner, 2026-11-16). YouTube first; follow `UPLOAD_CHECKLIST.md` (write the exact time + time zone at its top before scheduling).
+
+## NEXT POSTS — playbook order (2026-11-21, owner "go"; REVISED after blind top-8 truth check)
+Source: `_roadmap/_YT_PLAYBOOK.html`, `_roadmap/fix_panel_2026-11-21/`, `_roadmap/top8_panel_2026-11-21/`. 3 a week, Tue/Thu/Sat. Owner can move any date.
+Only shorts with NO Bible-accuracy flag from 3+ blind seats are dated.
+- Tue 2026-11-24: Martha Asked Jesus If He Cared. He Said Her Name Twice. - post as is
+- Thu 2026-11-26: She Was Dead. Jesus Went Anyway (Swirls ep06) - post as is
+- Sat 2026-11-28: The Second Fire -> NEW TITLE "He Failed Jesus Three Times. Jesus Made Him Breakfast." ($0 pack edit first). "fire of coals" = only John 18:18 + 21:9 in KJV (checked).
+- Tue 2026-12-01: Why Is Jesus Called Immanuel? (replaces Bethlehem; Bethlehem = Christmas playlist only)
+- Thu 2026-12-03: They Asked Jesus for a Sign. He Gave Them Jonah. (sign-of-jonah) - owner re-slotted 2026-11-21 after both fixes (title + line re-record); pack strict GREEN
+- From 2026-12-05: only after line re-records (first/last line) -> Simeon, Nazareth, Ten healed, Rahab, Empty tomb, Snake, Father-into-thy-hands, Two Thieves, Seed 01.
+- PULLED (Bible-accuracy error in the locked middle, needs a bigger fix): Widow/Nain (Swirls ep07: "Everyone kept their distance" vs Luke 7:12 "much people of the city was with her"), Storm (added feelings), Simon of Cyrene ("carry His shame" ask).
+- Not in the main feed push: the 6 Psalm 22 shorts, Seed 02-04, It Is Finished, Lifted Up, Can One Man, Swirls ep02 -> playlists only.
 
 ## SEASON 1 — THE CROSS (weekly detail, original 3/wk draft below for reference)
 
