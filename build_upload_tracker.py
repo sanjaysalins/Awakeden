@@ -399,11 +399,33 @@ POST_ORDER = [
     ("ps22-06-ends-of-the-earth", "Psalm 22 - style checked 2026-11-19"),
     ("ps22-07-body-foretold", "Psalm 22 - spear fix v3 2026-11-19"),
 ]
+# PARKED by the owner 2026-11-21 (film scan: boomerang/fill or slop, need new clips) -> held, never in Next up.
+PARKED_2026_11_21 = ['seed-of-woman-01-first-gospel-in-the-curse', 'seed-of-woman-02-her-seed', 'seed-of-woman-03-heel-vs-head', 'seed-of-woman-04-serpent-crusher-promised', 'bronze-serpent-02-the-thing-that-killed-them', 'bronze-serpent-03-son-of-man-lifted-up', 'ps22-02-mockers-words', 'isaiah-53-suffering-servant']
+POST_ORDER = [(s, "SPARE BANK - parked 2026-11-21 (needs new clips)") if s in PARKED_2026_11_21 else (s, l) for s, l in POST_ORDER]
+POST_ORDER += [(s, "SPARE BANK - parked 2026-11-21 (needs new clips)") for s in PARKED_2026_11_21 + ["bronze-serpent", "day-of-atonement", "bronze-serpent-01-look-and-live"] if s not in dict(POST_ORDER)]
+# ONE dated posting sequence (RELEASE_CALENDAR.md "NEXT POSTS", owner 2026-11-21). Main slugs or Swirls folder names.
+DATED_POSTS = [
+    ("Tue 24 Nov", "mary-and-martha-did-he-care"),
+    ("Thu 26 Nov", "swirls_episode_06_talitha_cumi"),
+    ("Sat 28 Nov", "second-fire-he-fed-him-first"),
+    ("Tue 1 Dec", "why-is-jesus-called-immanuel"),
+    ("Thu 3 Dec", "sign-of-jonah"),
+    ("Sat 5 Dec", "swirls_episode_07_the_bier_he_touched"),
+    ("Tue 8 Dec", "jesus-stopped-reading-mid-sentence"),
+    ("Thu 10 Dec", "today-in-paradise"),
+    ("Sat 12 Dec", "swirls_episode_11_where_are_the_nine"),
+    ("Tue 15 Dec", "rahab-and-the-scarlet-cord"),
+    ("Thu 17 Dec", "he-was-asleep-in-the-storm"),
+    ("Sat 19 Dec", "swirls_episode_13_the_cross_that_wasnt_his"),
+    ("Tue 22 Dec", "woman-behold-thy-son"),
+    ("Sat 26 Dec", "moses-and-the-snake-on-a-pole"),
+]
+
 # 30-episode hold LIFTED by the owner 2026-11-16 ("if they are ready, we should
 # start looking at posting them already"). Ready Swirls episodes join Next up.
 SWIRLS_HOLD = False
 # Finished but NOT postable yet (shown in their own small section, never in Next up).
-SWIRLS_BLOCKED = {"swirls_episode_12_ye_are_not_all_clean": "BLOCKED: 'cuts off' playback bug still open"}
+SWIRLS_BLOCKED = {}  # ep12 posted 2026-11-18 (cddE5Y2r4ZE); block removed
 
 
 def main() -> int:
@@ -479,6 +501,21 @@ def main() -> int:
         + group_head("Swirls of Life", len(groups["swirls"]), GROUP_HOW["swirls"]) + (numbered(groups["swirls"]) or "<div class=sub>none</div>")
         + group_head("Graphic comic", len(groups["comic"]), GROUP_HOW["comic"]) + (numbered(groups["comic"]) or "<div class=sub>none</div>")
         + group_head("Other styles", len(groups["other"]), GROUP_HOW["other"]) + (numbered(groups["other"]) or "<div class=sub>none</div>"))
+    by_slug = {s.slug: s for s in states}
+    sw_led = swirls_ledger
+    rows = []
+    for i, (when, key) in enumerate(DATED_POSTS, 1):
+        s = by_slug.get(key)
+        if s is not None:
+            title, pack, done = s.title, (s.source_dir / "publish" / "PUBLISH_INDEX.html" if s.source_dir else None), bool(s.ledger)
+        else:
+            title, pack, done = key.replace("swirls_episode_", "Swirls ").replace("_", " "), SWIRLS_DIR / key / "publish" / "PUBLISH_INDEX.html", bool(sw_led.get(key))
+        link = f"<a href='{pack.resolve().as_uri()}'>📦 pack</a>" if pack and pack.exists() else "no pack"
+        rows.append(f"<tr class={'done' if done else ''}><td><b>#{i}</b></td><td>{esc(when)}</td><td>{'✓ posted' if done else ''} {esc(title)}</td><td>{link}</td></tr>")
+    dated_html = ("<h1 class=big2>Post next: one order, with dates</h1>"
+                  "<div class=sub>From RELEASE_CALENDAR.md. Post #1 first. The URL box for each is in its card below.</div>"
+                  "<div class=card><table>" + "".join(rows) + "</table></div>")
+    cards_todo = dated_html + cards_todo
     inv_html, inv_counts = finished_inventory(states, q_slugs)
     n_queue, n_posted = len(todo_sorted) + n_swirls_todo, len(posted) + n_swirls_done
     n_inv = inv_counts["blocked"] + inv_counts["hold"]
