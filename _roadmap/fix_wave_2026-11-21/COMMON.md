@@ -1,0 +1,10 @@
+# Common rules for every fix-wave agent (owner-approved 2026-11-21)
+Repo F:\slk\PycharmProjects\JesusInTheBible. Read CLAUDE.md first and obey it.
+- Owner rules: NO freeze / boomerang / ping-pong / reverse / zoom fill; each clip >= its slot, trim only. Landing hold >= 3.0 s after the last spoken word with audio = video length; score end = smooth ~2.5 s fade, silent on the last frame. Nothing on screen that is not spoken (burned captions = voice; no unspoken "X = Y" gloss cards or hook text).
+- Scan report per film (what is wrong): F:\slk\PycharmProjects\JesusInTheBible\_roadmap\film_scan_2026-11-21\<slug>.md
+- Proven $0 methods from today (copy, don't reinvent): ending hold via the film's own engine re-rendering the last beat at real clip length + score tail via run_piece.score_cmd = batches\cluster_01_cross\today_paradise_luke2343\visual\_linefix2_*.py + audio\_linefix2\ ; beat rebuild with stock livingpage engine + per-word caption wrapper = batches\cluster_01_cross\into_thy_hands_luke2346\visual\_linefix1_*; trim-only re-time that FAILS if clip < slot = poc_living_sketchbook\_rewrite_v4\_linefix1\retime_linefix2.py.
+- Work on the CURRENT pinned final (path in the film's FINAL_VIDEO.txt; several were re-cut today). New outputs get a new suffix (_holdfix1 / _cardfix1 / _trimfix1 etc). Never overwrite or delete. Do NOT change FINAL_VIDEO.txt (the owner pins after a look).
+- $0 only unless your brief says paid. No ElevenLabs, no image/video generation unless stated.
+- Never open files/browsers. Never commit. Machine is busy: keep ffmpeg to -threads 3.
+- Verify each film: audio = video length, landing hold >= 3.0 s (last word from alignment/words json, re-timed), last-5 s RMS smooth + silent last frame, Read frames over every changed region, on-screen words = spoken. Write a words json sidecar <new_stem>.words.json for captions.
+- Deliver per film: new final path + duration, what changed, every check pass/fail with numbers; one review page _<SUFFIX>_REVIEW.html in the film's folder (old vs new, big simple words). Reply with a short table. If a fix cannot be done honestly, say so - no hacks.

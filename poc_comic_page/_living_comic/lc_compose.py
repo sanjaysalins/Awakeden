@@ -54,6 +54,10 @@ def main(path):
     for k, p in enumerate(ep["panels"]):
         d_ = p["t"][1] - p["t"][0]; src = ROOT / p["clip_src"]
         if dur(src) < d_:  # ping-pong the settled tail instead of freezing
+            import sys as _s, pathlib as _p
+            _s.path.insert(0, str(next(q for q in _p.Path(__file__).resolve().parents if (q / "fill_guard.py").exists())))
+            import fill_guard  # fail-closed: ping-pong fill forbidden (owner rule 2026-11-21)
+            fill_guard.require_clip_covers_slot('panel %d (%s)' % (k, p['clip_src']), dur(src), d_, what='ping-pong fill')
             tail, rev, head = W / ("t%d.mp4" % k), W / ("r%d.mp4" % k), W / ("h%d.mp4" % k); L = dur(src)
             run(["ffmpeg", "-y", "-v", "error", "-ss", "%.3f" % (L - 1.5), "-i", str(src), "-an", "-c:v", "libx264", "-crf", "14", "-r", "30", str(tail)])
             run(["ffmpeg", "-y", "-v", "error", "-i", str(tail), "-vf", "reverse", "-an", "-c:v", "libx264", "-crf", "14", "-r", "30", str(rev)])

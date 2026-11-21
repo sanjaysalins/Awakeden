@@ -1,0 +1,9 @@
+{
+  "image": "jonah_cast_overboard.png",
+  "verdict": "PASS",
+  "flags": [
+    "vision-audited vs v3: sailors LOWER Jonah by his arms (Jonah 1:15 cast, never a jump), grieving crew (1:13-14 reluctance), cargo bales (1:5 wares), raging storm, period ship"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

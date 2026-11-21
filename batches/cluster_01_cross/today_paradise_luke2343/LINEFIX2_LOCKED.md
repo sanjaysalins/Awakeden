@@ -1,0 +1,2 @@
+# 2026-11-21 linefix2 (owner: "yes", option A)
+Final: visual/today_paradise_luke2343_sfx_v5hook_linefix2.mp4 (59.0 s). New first line "Two guilty men were dying beside Jesus, with no time left to fix anything." (removes "same nails / opposite eternities" overclaims); landing hold 3.16 s + fade added; VERILY gloss removed; captions = spoken. Title -> "He Asked for Someday. Jesus Gave Him Today." OPEN: crown-on-the-thief wide shot (15.7-23.6 s) + confession blob need a paid re-render later. Old pin: FINAL_VIDEO.txt.prev_pre_linefix2.

@@ -74,6 +74,11 @@ def extract_clip_frames(work: Path) -> dict:
 
 
 def _ppindex(li: int, n: int) -> int:
+    if li >= n:  # fail-closed: looping/ping-pong fill is forbidden (owner rule 2026-11-21)
+        import sys as _s, pathlib as _p
+        _s.path.insert(0, str(next(q for q in _p.Path(__file__).resolve().parents if (q / "fill_guard.py").exists())))
+        import fill_guard
+        fill_guard.require_fill_opt_in(f"ping-pong loop: clip has {n} frames, slot reaches frame {li + 1}")
     cyc = 2 * n - 2 if n > 1 else 1
     j = li % cyc
     if j >= n:

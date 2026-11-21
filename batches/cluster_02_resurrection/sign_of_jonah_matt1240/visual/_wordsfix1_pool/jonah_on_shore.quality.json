@@ -1,0 +1,15 @@
+{
+  "slug": "jonah_on_shore",
+  "hash": "dc85cb4696daaaf2",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
+  },
+  "notes": "vs v3 cards: vomited onto DRY LAND (Jonah 2:10), soaked, seaweed still on him, alive and stunned at dawn. Clean.",
+  "reviewer": "in-chat-agent"
+}

@@ -1,16 +1,16 @@
 # youtube_short — YouTube (Short)
 
 ## TITLE
-The Man Who Carried Jesus' Cross Was Walking the Other Way
+Forced to Carry a Cross He Never Chose
 
 ## DESCRIPTION
 Hebrews 13 says Jesus "suffered without the gate." But the first man to walk outside that gate carrying a cross wasn't Jesus.
 
 Mark says the soldiers "compel one Simon a Cyrenian, who passed by, coming out of the country." The cross meant for Jesus went onto Simon's own shoulders. Nobody asked him.
 
-Then Hebrews turns the same invitation toward us: "Let us go forth therefore unto him without the camp, bearing his reproach."
+Hebrews says: "Let us go forth therefore unto him without the camp, bearing his reproach." Reproach means shame.
 
-Simon carried it forced. We're only asked to carry the shame, freely this time. The atoning was His alone, with His own blood.
+Simon was forced out there. You are invited. If shame has put you outside, Jesus is already there. The dying, the finishing, was His alone. You only come to Him.
 
 Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 

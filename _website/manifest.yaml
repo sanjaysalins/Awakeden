@@ -193,11 +193,11 @@ items:
   series_id: jesus-in-ot
   cluster: psalm-22
   cluster_order: 8
-  public_status: studio_complete
+  public_status: live
   featured: false
   preview_approved: true
   preview_source: assets/study/read/ps22-08-i-thirst/beat_01.jpg
-  youtube_id: null
+  youtube_id: WweSJEeSpWM
   read_source: ../batches/cluster_01_cross/i_thirst_john1928
   public_hook: Two words from the cross. David wrote the thirst a thousand years before.
   public_blurb: 'My tongue cleaveth to my jaws. The psalm''s thirst, fulfilled in
@@ -422,7 +422,7 @@ items:
     Caesar's white temple gleaming above. And Jesus picks THIS rock to ask the question.
 - slug: he-was-asleep-in-the-storm
   kind: short
-  title: He Was Asleep in the Storm
+  title: Your Boat Is Sinking and Jesus Is Asleep
   ref: Matthew 8:26
   series_id: miracles-of-jesus
   cluster: null
@@ -731,7 +731,7 @@ items:
   source: ../batches/cluster_01_cross/thirty_pieces_zech11
 - slug: today-in-paradise
   kind: short
-  title: Today in Paradise
+  title: He Asked for Someday. Jesus Gave Him Today.
   ref: Luke 23:43
   series_id: words-from-cross
   cluster: cluster-01-cross
@@ -825,7 +825,7 @@ items:
   source: ../batches/cluster_04_encounters/mary_martha_short
 - slug: second-fire-he-fed-him-first
   kind: short
-  title: The Second Fire
+  title: He Failed Jesus Three Times. Jesus Made Him Breakfast.
   ref: John 21:1-17
   series_id: people-who-encountered-jesus
   cluster: null
@@ -861,18 +861,61 @@ items:
   ref: Mark 10:46-52
   series_id: people-who-encountered-jesus
   cluster: null
+  public_status: live
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: sYhwV7eQQmM
+  public_hook: Many told a blind beggar to be quiet. Jesus was on His way to die.
+  public_blurb: A 79-second short on Mark 10. Blind Bartimaeus shouted louder, and
+    Jesus stood still for one man.
+  source: ../batches/cluster_04_encounters/bartimaeus_short
+- slug: why-was-jesus-born-in-bethlehem
+  kind: short
+  title: Why Was Jesus Born in Bethlehem?
+  ref: Micah 5:2
+  series_id: jesus-in-ot
+  cluster: null
   public_status: studio_complete
   featured: false
   preview_approved: false
   preview_source: null
   youtube_id: null
-  public_hook: Many told a blind beggar to be quiet. Jesus was on His way to die.
-  public_blurb: A 79-second short on Mark 10. Blind Bartimaeus shouted louder, and
-    Jesus stood still for one man.
-  source: ../batches/cluster_04_encounters/bartimaeus_short
+  public_hook: Micah named a small town 700 years early. Bethlehem was His birthplace,
+    not His beginning.
+  public_blurb: Prophecy Ep 01. Micah 5:2 meets Matthew 2 and Luke 2.
+  source: ../batches/cluster_05_prophecy/bethlehem_short
+- slug: why-is-jesus-called-immanuel
+  kind: short
+  title: Why Is Jesus Called Immanuel?
+  ref: Isaiah 7:14
+  series_id: jesus-in-ot
+  cluster: null
+  public_status: studio_complete
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: A frightened king told God no. God answered anyway.
+  public_blurb: Prophecy Ep 02. Isaiah 7:14 meets Matthew 1:18-25.
+  source: ../batches/cluster_05_prophecy/immanuel_short
+- slug: jesus-stopped-reading-mid-sentence
+  kind: short
+  title: Jesus Stopped Reading Mid-Sentence
+  ref: Isaiah 61:1-2
+  series_id: jesus-in-ot
+  cluster: null
+  public_status: studio_complete
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: In Nazareth, Jesus left part of Isaiah's sentence unread.
+  public_blurb: Prophecy Ep 03. Isaiah 61:1-2 meets Luke 4:16-30.
+  source: ../batches/cluster_05_prophecy/nazareth_short
 - slug: woman-behold-thy-son
   kind: short
-  title: Woman, Behold Thy Son
+  title: Dying, He Still Saw His Mother's Pain
   ref: John 19:26
   series_id: words-from-cross
   cluster: cluster-01-cross
@@ -907,7 +950,7 @@ items:
   source: ../batches/cluster_01_cross/it_is_finished_john1930
 - slug: father-into-thy-hands
   kind: short
-  title: Father, Into Thy Hands
+  title: Afraid to Die? Listen to the Last Thing Jesus Prayed
   ref: Luke 23:46
   series_id: words-from-cross
   cluster: cluster-01-cross
@@ -1078,7 +1121,7 @@ items:
   source: ../longform/EW08_Passover/v1
 - slug: sign-of-jonah
   kind: short
-  title: The Sign of Jonah
+  title: I Ran From God's Mercy. Jesus Made My Story His Sign.
   ref: Matthew 12:40 + Jonah 1-2
   series_id: jesus-in-ot
   cluster: cluster-02-resurrection
@@ -1096,7 +1139,7 @@ items:
   source: ../batches/cluster_02_resurrection/sign_of_jonah_matt1240
 - slug: the-empty-tomb
   kind: short
-  title: The Empty Tomb
+  title: Never Seen Jesus? He Already Called You Blessed
   ref: John 20:8
   series_id: he-is-risen
   cluster: cluster-02-resurrection
@@ -1120,12 +1163,12 @@ items:
   series_id: he-is-risen
   cluster: cluster-02-resurrection
   cluster_order: 3
-  public_status: studio_complete
+  public_status: live
   featured: false
   featured_order: null
   preview_approved: true
   preview_source: ../batches/cluster_02_resurrection/women_first_witnesses_luke245/visual/women_bowed.png
-  youtube_id: null
+  youtube_id: srOm0Sv5QTw
   public_hook: The first report that Jesus was risen was dismissed as nonsense, by
     His own apostles.
   public_blurb: Luke 24. The first news came from women whose word carried almost
@@ -1446,7 +1489,7 @@ items:
     10:11-12. Narration not yet written.'
 - slug: rahab-and-the-scarlet-cord
   kind: short
-  title: Why One Red Cord Survived the Fall of Jericho
+  title: Her Name Was Shameful. Her Family Was the One Saved.
   ref: Joshua 2:18
   series_id: jesus-in-ot
   cluster: null
@@ -1465,11 +1508,11 @@ items:
   ref: Leviticus 16:8
   series_id: jesus-in-ot
   cluster: null
-  public_status: studio_complete
+  public_status: live
   featured: false
   preview_approved: false
   preview_source: null
-  youtube_id: null
+  youtube_id: BkQddsBMGfk
   public_hook: One goat died. One was sent away. Why two?
   public_blurb: Two goats on the Day of Atonement, and the one picture they make together.
   source: ../batches/cluster_03_ink_shorts/aaron-and-the-two-goats

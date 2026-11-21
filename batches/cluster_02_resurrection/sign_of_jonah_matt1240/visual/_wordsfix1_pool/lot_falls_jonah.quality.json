@@ -1,0 +1,15 @@
+{
+  "slug": "lot_falls_jonah",
+  "hash": "9e0f041d00a94fa6",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
+  },
+  "notes": "vs v3 cards: lots as plain unmarked pebbles (constrained OK), storm raging, Jonah stands apart robed (woken after 1:5-6, timing fine). Clean.",
+  "reviewer": "in-chat-agent"
+}

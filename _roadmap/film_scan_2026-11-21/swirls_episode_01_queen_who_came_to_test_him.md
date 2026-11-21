@@ -1,0 +1,9 @@
+SLUG: swirls_episode_01_queen_who_came_to_test_him
+STATUS: POSTED
+VERDICT: FIX
+FILLS: ~12.4-20.7 s - f02 - REVERSE (native 5.04 s boomerang to 10.08 s, cut at 8.33 s, so ~3.3 s plays backward) | ~20.7-29.0 s - f03 - REVERSE (same, ~3.3 s backward) | ~4.3-12.4 s - f01 - FREEZE of last frame +3.0 s under a halo-tour light (native 5.04 -> slot 8.03) | ~29.0-37.4 s - f04 - FREEZE +3.3 s under lamplight sweep (native 5.04 -> 8.37) | ~51.5-63.4 s - f07 - FREEZE + ping-pong of last 2 s, +2.9 s (native 9.04 -> 11.93) | front +0.33 s zoom-hold (trivial) | back cover 4.0 s trimmed to 2.2 s (ok, trim)
+SLOP: none seen at 1 fps (cast consistent; no extra people; hands ok) - low
+TEXT: baked panel labels never spoken: "nothing hid", "gold and spices", "the cargo", "the far city", "her level gaze", "the same eyes", "the ascent", "the king's table", "all her desire", "one look back", "the fading track", "no throne", "no palace", "his eyes", "NOTE: she doubted / spoken plainly / doubt falls / homeward / the claim / just ask" (decorative page notes; core captions "hard questions", "a true report", "the half was not told me", "queen of the south", "a greater than Solomon is here", "your hardest question" ARE spoken) - low. Front/back covers ("THE QUEEN WHO CAME TO TEST HIM 1 KINGS 10:1-13", "YOUR HARDEST QUESTION MATTHEW 12:42") fine.
+END: hold=5.0 (voice ends ~65.0 of 69.97 per narration.alignment.json) silent_end=yes (-73.6 dB last 0.25 s)
+FIX_IDEA: Re-cut trim-only (owner rule) with 5 new longer clips for f01, f02, f03, f04, f07 (slots 8.0/8.3/8.3/8.4/11.9 s, so 10-12 s Kling clips) - PAID, roughly 5 clips (about $3-4 at OpenArt); no honest $0 fix (reverse and freeze are the target).
+NOTE: voice times from the alignment file; whisper re-transcription of the film was not run (CPU was saturated). Fill slots taken from episode.py units + _assembly held lengths.

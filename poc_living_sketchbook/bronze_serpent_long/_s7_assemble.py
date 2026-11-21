@@ -36,6 +36,10 @@ import json
 import subprocess
 import sys
 from pathlib import Path
+import sys as _sys
+from pathlib import Path as _Path
+_sys.path.insert(0, str(next(_q for _q in _Path(__file__).resolve().parents if (_q / "fill_guard.py").exists())))
+import fill_guard  # fail-closed fill (owner rule 2026-11-21)
 
 HERE = Path(__file__).resolve().parent
 CLIPS = HERE / "clips"
@@ -95,6 +99,12 @@ def build_segment(row: dict, seg_path: Path):
     dur = row["dur"]
     mode = row["mode"]
     clip = CLIPS / f"{name}.mp4"
+
+    # FAIL-CLOSED (owner rule 2026-11-21): fill modes need ALLOW_FILL_OWNER_OK=1 (locked-film re-render only).
+    if mode == "once_hold":
+        fill_guard.require_clip_covers_slot(name, row["clip_dur"], dur, what="freeze (tpad clone) hold")
+    elif mode in ("static_still", "pingpong", "slow_pingpong", "fwd_tail_bounce", "fwd_drift"):
+        fill_guard.require_fill_opt_in(f"{name}: mode '{mode}' fills a {dur:.2f}s slot by loop/hold/Ken Burns")
 
     if mode == "static_still":
         still = STILLS / f"{name}.png"

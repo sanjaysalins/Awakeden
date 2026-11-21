@@ -4,10 +4,10 @@
   "format": "short",
   "series": "Jesus in the Old Testament",
   "anchor_ref": "Psalm 22:22",
-  "video": "F:\\slk\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\declared_brethren_ps2222\\visual\\declared_brethren_ps2222_sfx.mp4",
+  "video": "F:\\slk\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\declared_brethren_ps2222\\visual\\declared_brethren_ps2222_sfx_holdfix1.mp4",
   "words_json": "F:\\slk\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\declared_brethren_ps2222\\audio\\alignment.json",
-  "final_sha": "455b6d0a78b2368b57d2f6037ae0237c3b08547cd0f617208d68e474e8076c55",
+  "final_sha": "6661261c0a83be92844a5d0f970b8cfdaf2036043addad9c63500769ee4de0bf",
   "thumbnail": "F:\\slk\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\declared_brethren_ps2222\\publish\\thumbs\\thumb_16x9.jpg",
-  "captions_source": "aligned",
-  "copy_final_sha": "455b6d0a78b2368b57d2f6037ae0237c3b08547cd0f617208d68e474e8076c55"
+  "captions_source": "locked",
+  "copy_final_sha": "6661261c0a83be92844a5d0f970b8cfdaf2036043addad9c63500769ee4de0bf"
 }

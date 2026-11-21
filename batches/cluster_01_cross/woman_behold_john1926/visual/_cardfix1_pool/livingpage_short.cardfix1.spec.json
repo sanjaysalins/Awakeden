@@ -1,0 +1,89 @@
+{
+ "_doc": "cardfix1: beats 7-8 of fix1 spec only, to re-render without the BEHOLD gloss card",
+ "audio": "../../audio/narration.mp3",
+ "total": 7.47,
+ "cut_ticks": false,
+ "beats": [
+  {
+   "t": [
+    28.75,
+    31.87
+   ],
+   "tpl": "stack_h",
+   "border_break": {
+    "at": 28.8
+   },
+   "clips": [
+    {
+     "slug": "mary_and_john",
+     "motion": "pushin",
+     "zoom": 1.0,
+     "bias": [
+      0.3,
+      0.72
+     ],
+     "t_in": 1.9
+    },
+    {
+     "slug": "jesus_looks_down",
+     "motion": "pushin",
+     "bias": [
+      0.5,
+      0.65
+     ],
+     "t_in": 1.9
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "Woman, behold thy son!",
+    "speaker": "JESUS",
+    "ref": "JOHN 19:26b",
+    "box_y": 720
+   },
+   "fx": {
+    "temp": 7900
+   }
+  },
+  {
+   "t": [
+    31.87,
+    36.22
+   ],
+   "tpl": "stack_h",
+   "cap_at": 2.0,
+   "clips": [
+    {
+     "slug": "mary_and_john",
+     "motion": "pushin",
+     "zoom": 2.2,
+     "bias": [
+      0.1,
+      0.5
+     ],
+     "t_in": 0.4
+    },
+    {
+     "slug": "mary_at_cross",
+     "motion": "pushin",
+     "zoom": 1.7,
+     "bias": [
+      0.0,
+      0.62
+     ],
+     "t_in": 0.4
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "Behold thy mother!",
+    "speaker": "JESUS",
+    "ref": "JOHN 19:27a"
+   },
+   "fx": {
+    "temp": 7500
+   }
+  }
+ ],
+ "motion": "smooth"
+}

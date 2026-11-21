@@ -1,0 +1,570 @@
+{
+ "dod": {
+  "median_beat_s": 3.3,
+  "max_beat_s": 6.67,
+  "held_gt6s": [
+   6.67,
+   6.17
+  ],
+  "slams": 14,
+  "kling_or_punch_or_slam_pct": 100,
+  "tier1_pct": 17,
+  "reuse_violations": [
+   "nineveh_distant_walls: beats 4->5 (gap 1 < 8)",
+   "stone_rolled_dawn: beats 12->13 (gap 1 < 8)",
+   "mercy_hand_into_deep: beats 14->15 (gap 1 < 8)",
+   "three_days_dark_tomb: beats 9->16 (gap 7 < 8)"
+  ],
+  "tier3_or_flagged_beats": [
+   12
+  ],
+  "standard_3b": {
+   "stills_over_2_uses": {},
+   "stills_fullbleed_twice": {
+    "three_days_dark_tomb": 2,
+    "mercy_hand_into_deep": 2
+   },
+   "fullbleed_beat_pct": 61,
+   "slop_caption_beats": []
+  },
+  "ramps": 0,
+  "whips": 4,
+  "flash_inserts": 0,
+  "fx_beats": 17,
+  "cut_ticks": false,
+  "beats": 18
+ },
+ "clips_build": true,
+ "beats": [
+  {
+   "beat": 1,
+   "t": [
+    0.0,
+    2.821
+   ],
+   "dur": 2.833333,
+   "tpl": "hero_frac3",
+   "slams": 2,
+   "slugs": [
+    "jonah_cast_overboard"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 2,
+   "t": [
+    2.821,
+    7.423
+   ],
+   "dur": 4.6,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "great_fish_rising"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 3,
+   "t": [
+    7.423,
+    10.784
+   ],
+   "dur": 3.366667,
+   "tpl": "hero_frac3",
+   "slams": 2,
+   "slugs": [
+    "storm_ship_waves"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 4,
+   "t": [
+    10.784,
+    13.824
+   ],
+   "dur": 3.033333,
+   "tpl": "hero_frac3",
+   "slams": 2,
+   "slugs": [
+    "nineveh_distant_walls"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 5,
+   "t": [
+    13.824,
+    17.065
+   ],
+   "dur": 3.233333,
+   "tpl": "hero_band3",
+   "slams": 2,
+   "slugs": [
+    "nineveh_distant_walls"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 6,
+   "t": [
+    17.065,
+    20.726
+   ],
+   "dur": 3.666667,
+   "tpl": "hero_frac3",
+   "slams": 2,
+   "slugs": [
+    "lot_falls_jonah"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 7,
+   "t": [
+    20.726,
+    27.387
+   ],
+   "dur": 6.666667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "jesus_and_scribes"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 8,
+   "t": [
+    27.387,
+    31.449
+   ],
+   "dur": 4.033333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "jonah_in_the_deep"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 9,
+   "t": [
+    31.449,
+    37.591
+   ],
+   "dur": 6.166667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "three_days_dark_tomb"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 10,
+   "t": [
+    37.591,
+    40.632
+   ],
+   "dur": 3.033333,
+   "tpl": "hero_frac3",
+   "slams": 2,
+   "slugs": [
+    "jonah_sinking_down"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 11,
+   "t": [
+    40.632,
+    45.113
+   ],
+   "dur": 4.466667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "body_laid_in_tomb"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 12,
+   "t": [
+    45.113,
+    48.555
+   ],
+   "dur": 3.466667,
+   "tpl": "stack_h",
+   "slams": 2,
+   "slugs": [
+    "stone_rolled_dawn",
+    "jonah_on_shore"
+   ],
+   "sources": [
+    "kling",
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 3,
+    "style": "scrim",
+    "flag": true
+   }
+  },
+  {
+   "beat": 13,
+   "t": [
+    48.555,
+    49.955
+   ],
+   "dur": 1.4,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "stone_rolled_dawn"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 14,
+   "t": [
+    49.955,
+    52.356
+   ],
+   "dur": 2.4,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "mercy_hand_into_deep"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 15,
+   "t": [
+    52.356,
+    54.897
+   ],
+   "dur": 2.533333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "mercy_hand_into_deep"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 16,
+   "t": [
+    54.897,
+    56.938
+   ],
+   "dur": 2.033333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "three_days_dark_tomb"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 17,
+   "t": [
+    56.938,
+    59.699
+   ],
+   "dur": 2.766667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "man_rising_from_water"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 18,
+   "t": [
+    59.699,
+    63.9
+   ],
+   "dur": 4.2,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "risen_christ_wounds"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  }
+ ],
+ "speed": [
+  {
+   "beat": 2,
+   "panel": 0,
+   "slug": "great_fish_rising",
+   "slot_s": 4.6,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 7,
+   "panel": 0,
+   "slug": "jesus_and_scribes",
+   "slot_s": 6.667,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.322,
+   "boomerang": false
+  },
+  {
+   "beat": 8,
+   "panel": 0,
+   "slug": "jonah_in_the_deep",
+   "slot_s": 4.033,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 9,
+   "panel": 0,
+   "slug": "three_days_dark_tomb",
+   "slot_s": 6.167,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.223,
+   "boomerang": false
+  },
+  {
+   "beat": 11,
+   "panel": 0,
+   "slug": "body_laid_in_tomb",
+   "slot_s": 4.467,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 12,
+   "panel": 0,
+   "slug": "stone_rolled_dawn",
+   "slot_s": 3.467,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 12,
+   "panel": 1,
+   "slug": "jonah_on_shore",
+   "slot_s": 3.467,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 13,
+   "panel": 0,
+   "slug": "stone_rolled_dawn",
+   "slot_s": 1.4,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 14,
+   "panel": 0,
+   "slug": "mercy_hand_into_deep",
+   "slot_s": 2.4,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 15,
+   "panel": 0,
+   "slug": "mercy_hand_into_deep",
+   "slot_s": 2.533,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 16,
+   "panel": 0,
+   "slug": "three_days_dark_tomb",
+   "slot_s": 2.033,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 17,
+   "panel": 0,
+   "slug": "man_rising_from_water",
+   "slot_s": 2.767,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 18,
+   "panel": 0,
+   "slug": "risen_christ_wounds",
+   "slot_s": 4.2,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  }
+ ]
+}

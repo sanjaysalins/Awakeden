@@ -21,6 +21,10 @@ from __future__ import annotations
 import subprocess
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
+import sys as _sys
+from pathlib import Path as _Path
+_sys.path.insert(0, str(next(_q for _q in _Path(__file__).resolve().parents if (_q / "fill_guard.py").exists())))
+import fill_guard  # fail-closed fill (owner rule 2026-11-21)
 
 PAGE_W, PAGE_H, FPS = 1080, 1920, 30
 M, G, BORDER = 30, 22, 10
@@ -284,13 +288,16 @@ def _temporal(idx, dur, motion, clip_len, out, t_in=0.0):
                 + inner.replace(f"[{idx}:v]", f"[ti{idx}]"))
     if dur <= clip_len + 0.05:
         return f"[{idx}:v]trim=duration={dur},setpts=PTS-STARTPTS[{out}]"
+    # FAIL-CLOSED (owner rule 2026-11-21): boomerang / slow-mo stretch > 1.15x = fill. Opt-in only.
     if motion == "static":
+        fill_guard.require_clip_covers_slot(out, clip_len, dur, what="boomerang fill")
         if 2 * clip_len >= dur:
             return (f"[{idx}:v]split[a{idx}][b{idx}];[b{idx}]reverse[rv{idx}];"
                     f"[a{idx}][rv{idx}]concat=n=2,trim=duration={dur},setpts=PTS-STARTPTS[{out}]")
         f = dur / (2 * clip_len)
         return (f"[{idx}:v]split[a{idx}][b{idx}];[b{idx}]reverse[rv{idx}];"
                 f"[a{idx}][rv{idx}]concat=n=2,setpts={f:.4f}*PTS,trim=duration={dur},setpts=PTS-STARTPTS[{out}]")
+    fill_guard.require_stretch_ok(out, clip_len, dur)
     f = dur / clip_len   # directional/talk: slow forward, no reverse, no freeze
     return f"[{idx}:v]setpts={f:.4f}*PTS,trim=duration={dur},setpts=PTS-STARTPTS[{out}]"
 
@@ -351,6 +358,7 @@ def build_segment(out_path, tpl, clips, dur, cap_spec, work_dir, fade_st=0.5):
             c = clips[k % len(clips)]
             pw, ph = (PAGE_W, PAGE_H) if bleed else (w, h)
             if c["kind"] == "kenburns":
+                fill_guard.forbid_still_kenburns(f"{out_path.stem} panel {k}")
                 idx = add_input("img", c["path"])
                 parts.append(_kenburns(idx, f"p{k}", pw, ph, dur, c["bias"]))
             else:

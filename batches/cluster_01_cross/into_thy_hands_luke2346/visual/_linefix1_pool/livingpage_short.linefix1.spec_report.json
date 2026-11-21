@@ -1,0 +1,50 @@
+{
+ "dod": {
+  "median_beat_s": 4.17,
+  "max_beat_s": 4.17,
+  "held_gt6s": [],
+  "slams": 2,
+  "kling_or_punch_or_slam_pct": 100,
+  "tier1_pct": 0,
+  "reuse_violations": [],
+  "tier3_or_flagged_beats": [],
+  "standard_3b": {
+   "stills_over_2_uses": {},
+   "stills_fullbleed_twice": {},
+   "fullbleed_beat_pct": 0,
+   "slop_caption_beats": []
+  },
+  "ramps": 0,
+  "whips": 0,
+  "flash_inserts": 0,
+  "fx_beats": 0,
+  "cut_ticks": false,
+  "beats": 1
+ },
+ "clips_build": true,
+ "beats": [
+  {
+   "beat": 1,
+   "t": [
+    0.0,
+    4.16
+   ],
+   "dur": 4.166667,
+   "tpl": "hero_band3",
+   "slams": 2,
+   "slugs": [
+    "golgotha_hill_wide"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  }
+ ],
+ "speed": []
+}

@@ -1,18 +1,18 @@
 # youtube_short — YouTube (Short)
 
 ## TITLE
-A Warning at Jesus' Birth Came True at the Cross
+Dying, He Still Saw His Mother's Pain
 
 ## DESCRIPTION
 At the cross (John 19:26), a thirty-year-old sentence finally lands.
 
 When Mary carried her baby into the temple, old Simeon told her one dark thing: a sword shall pierce through thy own soul also. Now she stands close enough to watch her son die. The sword has landed.
 
-And Jesus looks down, sees her wound, and turns to bind it: "When Jesus therefore saw his mother, and the disciple standing by, whom he loved, he saith unto his mother, Woman, behold thy son!" (John 19:26, KJV). Then to the disciple: behold thy mother. And from that hour, John took her into his own home.
+And Jesus looks down and sees her: "When Jesus therefore saw his mother, and the disciple standing by, whom he loved, he saith unto his mother, Woman, behold thy son!" (John 19:26, KJV). Then to the disciple: behold thy mother. And from that hour, John took her into his own home.
 
 While judgment fell on him, he cared for someone else. That is who is dying there.
 
-Your wound is not invisible to him either. Stand where Mary stood. The Son who saw her will behold you, and bind what the sword tore.
+He was dying, and He made sure His mother did not go home alone.
 
 Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 

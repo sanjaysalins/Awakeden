@@ -1,0 +1,15 @@
+{
+  "slug": "storm_ship_waves",
+  "hash": "d8338c7a86d5abf6",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
+  },
+  "notes": "vs v3 cards: raging storm before the casting (Jonah 1:4,15), period wooden ship w/ square sail, crew aboard. Clean.",
+  "reviewer": "in-chat-agent"
+}

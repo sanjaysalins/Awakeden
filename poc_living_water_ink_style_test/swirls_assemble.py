@@ -25,6 +25,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from pipeline import score_mix  # noqa: E402
+import fill_guard  # noqa: E402  fail-closed fill (owner rule 2026-11-21)
 
 
 @dataclass
@@ -129,6 +130,8 @@ def make_freeze(src: Path, out: Path, slot: float, cdur: float, work: Path, tag:
     if extension <= 0:
         encode(["-i", str(src)], out, manifest)
         return
+    # FAIL-CLOSED (owner rule 2026-11-21): a freeze extension is fill. Opt-in: ALLOW_FILL_OWNER_OK=1.
+    fill_guard.require_clip_covers_slot(tag, cdur, slot, what="freeze (tpad clone) fill")
     # BUG FIX (2026-08-29, user: "several freeze frames across the clips, we must fix
     # that"): a plain tpad clone extends with a dead, motionless duplicated frame -- no
     # reversal artifact (unlike boomerang on continuous motion, see
@@ -195,6 +198,8 @@ def make_freeze_tail_loop(src: Path, out: Path, slot: float, cdur: float, work: 
     if extension <= 0:
         encode(["-i", str(src)], out, manifest)
         return
+    # FAIL-CLOSED (owner rule 2026-11-21): ping-ponging the tail is fill. Opt-in: ALLOW_FILL_OWNER_OK=1.
+    fill_guard.require_clip_covers_slot(tag, cdur, slot, what="tail ping-pong fill")
     tail_seconds = min(tail_seconds, cdur)
     tail_start = max(cdur - tail_seconds, 0)
     tail = work / f"{tag}__tail.mp4"
@@ -248,6 +253,8 @@ def make_boomerang(src: Path, out: Path, slot: float, cdur: float, work: Path, t
     if slot <= cdur:
         encode(["-i", str(src), "-t", f"{slot:.3f}"], out, manifest)
         return
+    # FAIL-CLOSED (owner rule 2026-11-21): boomerang is fill. Opt-in: ALLOW_FILL_OWNER_OK=1.
+    fill_guard.require_clip_covers_slot(tag, cdur, slot, what="boomerang fill")
     # BUG FIX (2026-08-22, same independent-rediscovery history as above): the
     # concat DEMUXER (-f concat, a text file list) combined with an output "-t"
     # trim silently truncates at whole-segment boundaries only, regardless of

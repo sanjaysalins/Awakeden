@@ -1,0 +1,105 @@
+{
+ "audio": "../../audio/_linefix2/silence70.wav",
+ "total": 36.37,
+ "cut_ticks": false,
+ "motion": "smooth",
+ "beats": [
+  {
+   "t": [
+    26.77,
+    32.01
+   ],
+   "tpl": "hero_frac3",
+   "punch": true,
+   "inserts": [
+    {
+     "at": 28.9,
+     "slug": "mocker_thief_face",
+     "frames": 4
+    }
+   ],
+   "clips": [
+    {
+     "slug": "confession_face_hands",
+     "motion": "static",
+     "cam": "arc"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "A confession. A verdict: innocent. Then one request.",
+    "kw": "INNOCENT",
+    "word_t": [
+     0,
+     0.075,
+     1.375,
+     1.455,
+     2.395,
+     3.836,
+     4.096,
+     4.236
+    ]
+   },
+   "anchors": [
+    [
+     1.0,
+     0.5,
+     0.5
+    ],
+    [
+     1.7,
+     0.5,
+     0.35
+    ],
+    [
+     1.8,
+     0.5,
+     0.65
+    ]
+   ],
+   "panel_at": [
+    26.77,
+    27.17,
+    27.57
+   ],
+   "panel_slide": [
+    "left",
+    "right",
+    "up"
+   ],
+   "flash": true,
+   "fx": {
+    "temp": 7000
+   }
+  },
+  {
+   "t": [
+    32.01,
+    36.37
+   ],
+   "tpl": "full",
+   "sfx": [
+    [
+     "wind_desert_bleak",
+     32.05,
+     -18
+    ]
+   ],
+   "clips": [
+    {
+     "slug": "kingdom_light_clouds",
+     "motion": "static"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "Lord, remember me when thou comest into thy kingdom",
+    "speaker": "THE THIEF",
+    "ref": "LUKE 23:42b"
+   },
+   "fx": {
+    "temp": 6000
+   }
+  }
+ ]
+}

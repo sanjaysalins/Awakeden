@@ -140,13 +140,118 @@ def check_longform_holds() -> list[str]:
     return warns
 
 
+# ---- words-json hold gate (owner rule 2026-11-21) -------------------------------------------
+# A NEW film must keep running >= 3.0 s after its LAST SPOKEN WORD, and end silent. The last word
+# comes from the film's own sidecar `<stem>.words.json` ([{"w","start","end"}, ...] or {"words":[...]}).
+# Files listed in data/landing_hold_shipped.json (grandfathered, already posted/locked) only WARN.
+SHIPPED_LIST = ROOT / "data" / "landing_hold_shipped.json"
+HOLD_TOL = 0.05
+SILENT_DB = -45.0       # mean volume of the last 0.25 s must be at or below this (fade to silence)
+
+
+def words_path(mp4: Path) -> Path:
+    return mp4.with_name(mp4.stem + ".words.json")
+
+
+def last_word_end(words_json: Path) -> float | None:
+    try:
+        d = json.loads(words_json.read_text(encoding="utf-8"))
+    except Exception:
+        return None
+    if isinstance(d, dict):
+        d = d.get("words") or d.get("segments") or []
+    ends = []
+    for w in d if isinstance(d, list) else []:
+        if isinstance(w, dict):
+            e = w.get("end", w.get("end_s"))
+            if isinstance(e, (int, float)):
+                ends.append(float(e))
+    return max(ends) if ends else None
+
+
+def load_shipped() -> set[str]:
+    try:
+        return set(json.loads(SHIPPED_LIST.read_text(encoding="utf-8")))
+    except Exception:
+        return set()
+
+
+def tail_mean_db(mp4: Path, seconds: float = 0.25) -> float | None:
+    p = subprocess.run(["ffmpeg", "-v", "info", "-sseof", f"-{seconds}", "-i", str(mp4), "-vn",
+                        "-af", "volumedetect", "-f", "null", "-"], capture_output=True, text=True)
+    for line in p.stderr.splitlines():
+        if "mean_volume:" in line:
+            try:
+                return float(line.split("mean_volume:")[1].split("dB")[0])
+            except ValueError:
+                return None
+    return None
+
+
+def hold_after_last_word(film_len: float, last_end: float) -> float:
+    return film_len - last_end
+
+
+def check_hold(mp4: Path, words_json: Path | None = None, check_silence: bool = True) -> tuple[bool, str]:
+    """True = pass. Reads the film's words json; FAIL if the last word ends < 3.0 s before the
+    film's end (or the last 0.25 s is not silent). A missing words json is a SKIP, not a pass of
+    the standard (use --require-words to make it a FAIL)."""
+    wj = words_json or words_path(mp4)
+    if not wj.exists():
+        return True, "SKIP (no words json)"
+    le = last_word_end(wj)
+    if le is None:
+        return False, f"FAIL  unreadable words json {wj.name}"
+    v, a = _durations(mp4)
+    ends = [x for x in (v, a) if x is not None]
+    if not ends:
+        return True, "SKIP (no streams)"
+    film = min(ends)
+    hold = hold_after_last_word(film, le)
+    msgs, ok = [f"hold={hold:.2f}s (last word {le:.2f}s, film {film:.2f}s)"], True
+    if hold < HOLD_STANDARD - HOLD_TOL:
+        ok = False
+        msgs.append(f"< {HOLD_STANDARD}s standard")
+    if check_silence and a is not None:
+        db = tail_mean_db(mp4)
+        if db is not None and db > SILENT_DB:
+            ok = False
+            msgs.append(f"last 0.25s not silent ({db:.1f} dB > {SILENT_DB} dB; need a ~2.5 s end fade)")
+    return ok, ("ok    " if ok else "FAIL  ") + "; ".join(msgs)
+
+
+def check_all_holds() -> tuple[int, list[str]]:
+    """Scan finished mp4s that have a words json. Returns (n_fail, lines). Shipped -> WARN only."""
+    shipped = load_shipped()
+    fails, lines = 0, []
+    for mp4 in find_finished_mp4s():
+        if not words_path(mp4).exists():
+            continue
+        ok, msg = check_hold(mp4)
+        if ok:
+            continue
+        if mp4.name in shipped:
+            lines.append(f"  WARN (shipped) {msg}  {mp4.relative_to(ROOT)}")
+        else:
+            fails += 1
+            lines.append(f"  {msg}  {mp4.relative_to(ROOT)}")
+    return fails, lines
+
+
 def main(argv=None) -> int:
     argv = argv if argv is not None else sys.argv[1:]
     if argv:
         mp4 = Path(argv[0])
         ok, msg = check_parity(mp4)
         print(f"{mp4.name}: {msg}")
-        return 0 if ok else 1
+        wj = words_path(mp4)
+        if "--require-words" in argv and not wj.exists():
+            print(f"{mp4.name}: FAIL  no words json {wj.name} (--require-words)")
+            return 1
+        hok, hmsg = check_hold(mp4)
+        shipped = mp4.name in load_shipped()
+        print(f"{mp4.name}: {hmsg}{'  [shipped: WARN only]' if (shipped and not hok) else ''}")
+        return 0 if (ok and (hok or shipped)) else 1
 
     print("=== INV-26 landing-hold gate ===\n")
     print("-- audio/video duration parity (FAIL-closed) --")
@@ -165,6 +270,14 @@ def main(argv=None) -> int:
             print(w)
     else:
         print("  (none below standard)")
+
+    print("\n-- last word -> end >= 3.0s and silent end (words json; shipped = WARN only) --")
+    hfails, hlines = check_all_holds()
+    for ln in hlines:
+        print(ln)
+    if not hlines:
+        print("  (all films with a words json pass)")
+    fails += hfails
 
     print(f"\n{len(find_finished_mp4s())} files checked, {fails} FAIL, {len(warns)} hold WARN")
     return 1 if fails else 0

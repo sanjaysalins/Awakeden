@@ -1,0 +1,25 @@
+{
+ "audio": "silence70.wav",
+ "total": 62.1,
+ "cut_ticks": false,
+ "motion": "smooth",
+ "beats": [
+  {
+   "t": [
+    59.0333,
+    62.1
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "first_day_morning",
+     "motion": "pushin",
+     "t_in": 1.78
+    }
+   ],
+   "fx": {
+    "temp": 5600
+   }
+  }
+ ]
+}

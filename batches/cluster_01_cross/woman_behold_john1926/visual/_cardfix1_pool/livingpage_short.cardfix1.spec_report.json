@@ -1,0 +1,119 @@
+{
+ "dod": {
+  "median_beat_s": 3.75,
+  "max_beat_s": 4.37,
+  "held_gt6s": [],
+  "slams": 0,
+  "kling_or_punch_or_slam_pct": 100,
+  "tier1_pct": 50,
+  "reuse_violations": [
+   "mary_and_john: beats 1->2 (gap 1 < 8)"
+  ],
+  "tier3_or_flagged_beats": [],
+  "standard_3b": {
+   "stills_over_2_uses": {},
+   "stills_fullbleed_twice": {},
+   "fullbleed_beat_pct": 0,
+   "slop_caption_beats": []
+  },
+  "ramps": 0,
+  "whips": 0,
+  "flash_inserts": 0,
+  "fx_beats": 2,
+  "cut_ticks": false,
+  "beats": 2
+ },
+ "clips_build": true,
+ "beats": [
+  {
+   "beat": 1,
+   "t": [
+    28.75,
+    31.87
+   ],
+   "dur": 3.133333,
+   "tpl": "stack_h",
+   "slams": 0,
+   "slugs": [
+    "mary_and_john",
+    "jesus_looks_down"
+   ],
+   "sources": [
+    "kling",
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 2,
+   "t": [
+    31.87,
+    36.22
+   ],
+   "dur": 4.366667,
+   "tpl": "stack_h",
+   "slams": 0,
+   "slugs": [
+    "mary_and_john",
+    "mary_at_cross"
+   ],
+   "sources": [
+    "kling",
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "plaque",
+    "flag": false
+   }
+  }
+ ],
+ "speed": [
+  {
+   "beat": 1,
+   "panel": 0,
+   "slug": "mary_and_john",
+   "slot_s": 3.133,
+   "clip_s": 3.142,
+   "t_in": 1.9,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 1,
+   "panel": 1,
+   "slug": "jesus_looks_down",
+   "slot_s": 3.133,
+   "clip_s": 3.142,
+   "t_in": 1.9,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 2,
+   "panel": 0,
+   "slug": "mary_and_john",
+   "slot_s": 4.367,
+   "clip_s": 4.642,
+   "t_in": 0.4,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 2,
+   "panel": 1,
+   "slug": "mary_at_cross",
+   "slot_s": 4.367,
+   "clip_s": 4.642,
+   "t_in": 0.4,
+   "factor": 1.0,
+   "boomerang": false
+  }
+ ]
+}

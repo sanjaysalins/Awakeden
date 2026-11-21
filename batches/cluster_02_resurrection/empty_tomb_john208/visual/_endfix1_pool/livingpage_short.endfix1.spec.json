@@ -1,0 +1,11 @@
+{"_doc":"ENDFIX1 tail of THE EMPTY TOMB (John 20). Two beats, absolute times (54.2 = frame 1626 = the keyframe where the old closing 'You were not at the tomb' beat began). New spoken line 'You were not there. He spoke about you anyway, and called you blessed.' (word-timed caption via cap.word_t, from whisperx alignment of the take) then the existing risen-Christ landing hold. Reuses existing stills/clips only.",
+ "audio":"_voice_a.mp3","total":7.2,"cut_ticks":false,"motion":"smooth",
+ "beats":[
+  {"t":[54.2,55.7],"tpl":"full","clips":[{"slug":"tomb_doorway_dawn","motion":"pushin"}],
+   "cap":{"type":"caption","text":"You were not there.","kw":"NOT THERE","word_t":[0.04,0.161,0.322,0.483]},
+   "fx":{"temp":5400}},
+  {"t":[55.7,61.4],"tpl":"full","punch":false,"clips":[{"slug":"risen_christ_seeking","motion":"pushin"}],
+   "cap":{"type":"caption","text":"He spoke about you anyway, and called you blessed.","kw":"BLESSED",
+     "word_t":[0.07,0.21,0.452,0.673,0.834,1.519,1.639,1.881,2.022]},
+   "fx":{"temp":5000}}
+ ]}

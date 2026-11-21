@@ -10,7 +10,7 @@ The sign of Jonah (Matthew 12:40): a prophet who ran from mercy, three days buri
 
 Jonah went down guilty. Christ went down innocent, bearing what was ours. And he rose.
 
-However far you think you have fallen, that is how far his mercy reaches. Come up out of the deep, and live.
+However far you think you have fallen, that is how far his mercy reaches. The One who went down into your dark and rose again is Jesus. He can bring you up.
 
 Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 

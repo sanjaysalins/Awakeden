@@ -5,7 +5,7 @@ Simon of Cyrene wasn't heading toward Jesus. He was compelled, mid-stride, force
 
 "Wherefore Jesus also, that he might sanctify the people with his own blood, suffered without the gate." (Hebrews 13:12)
 
-Hebrews turns it toward you: "Let us go forth therefore unto him without the camp, bearing his reproach." Only the shame is yours to carry, freely this time.
+"Let us go forth therefore unto him without the camp, bearing his reproach." (Hebrews 13:13) You are invited. If shame has put you outside, Jesus is already there. You only come to Him.
 
 Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 

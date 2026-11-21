@@ -1,7 +1,7 @@
 # instagram — Instagram (Reel)
 
 ## CAPTION
-Same nails. Same hill. Same distance from the Savior. Opposite eternities.
+Two guilty men were dying beside Jesus, with no time left to fix anything.
 
 One thief taunted. One asked: remember me. Jesus answered: with me. Today. Paradise. (Luke 23:43)
 

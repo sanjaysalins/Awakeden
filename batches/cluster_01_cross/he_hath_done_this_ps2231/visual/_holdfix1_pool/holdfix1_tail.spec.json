@@ -1,0 +1,70 @@
+{
+ "audio": "silence70.wav",
+ "total": 45.666667,
+ "cut_ticks": false,
+ "motion": "smooth",
+ "beats": [
+  {
+   "t": [
+    36.45,
+    40.633333
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "father_lamp_doorway",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Nothing, only Someone to come home to",
+    "kw": "COME HOME"
+   },
+   "fx": {
+    "temp": 5600
+   }
+  },
+  {
+   "t": [
+    40.633333,
+    45.666667
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "risen_mercy_hand",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "the One who said it is done",
+    "kw": "IT IS DONE",
+    "word_t": [
+     0.0,
+     0.143,
+     0.303,
+     0.503,
+     1.504,
+     1.644,
+     1.764
+    ]
+   },
+   "fx": {
+    "temp": 4900
+   },
+   "punch": true,
+   "border_break": {
+    "at": 40.883
+   },
+   "sfx": [
+    [
+     "dawn_morning_warm",
+     40.783,
+     -13
+    ]
+   ]
+  }
+ ]
+}

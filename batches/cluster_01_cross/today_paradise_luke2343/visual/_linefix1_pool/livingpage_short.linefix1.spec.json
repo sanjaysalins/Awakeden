@@ -1,0 +1,112 @@
+{
+ "_doc": "linefix1: new line + corrected 'Both guilty...' caption (old said 'Both spoke to him' - not spoken). Beats 0+3 only, 8.9 s.",
+ "audio": "../../audio/_linefix1/head_narr_new.wav",
+ "total": 8.9,
+ "cut_ticks": false,
+ "motion": "smooth",
+ "beats": [
+  {
+   "t": [
+    0.0,
+    4.7
+   ],
+   "tpl": "hero_band3",
+   "punch": true,
+   "ramp": true,
+   "sfx": [
+    [
+     "impact_low_boom",
+     0.1,
+     -12
+    ]
+   ],
+   "clips": [
+    {
+     "slug": "golgotha_hill_wide",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Two guilty men were dying beside Jesus, with no time left to fix anything",
+    "kw": "NO TIME LEFT",
+    "word_t": [
+     0.33,
+     0.592,
+     0.974,
+     1.195,
+     1.396,
+     1.677,
+     2.059,
+     2.662,
+     2.904,
+     3.105,
+     3.346,
+     3.788,
+     3.949,
+     4.21
+    ]
+   },
+   "anchors": [
+    [
+     1.0,
+     0.5,
+     0.2
+    ],
+    [
+     1.25,
+     0.5,
+     0.5
+    ],
+    [
+     1.35,
+     0.5,
+     0.8
+    ]
+   ],
+   "panel_at": [
+    0.0,
+    0.25,
+    0.5
+   ],
+   "panel_slide": [
+    "up",
+    "left",
+    "down"
+   ],
+   "flash": true
+  },
+  {
+   "t": [
+    4.7,
+    8.9
+   ],
+   "tpl": "full",
+   "punch": true,
+   "clips": [
+    {
+     "slug": "mocker_thief_face",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Both guilty. Both just as close. Both spoke.",
+    "kw": "BOTH",
+    "word_t": [
+     0.008,
+     0.268,
+     1.169,
+     1.469,
+     1.709,
+     1.809,
+     2.889,
+     3.309
+    ]
+   },
+   "fx": {
+    "temp": 7600
+   }
+  }
+ ]
+}

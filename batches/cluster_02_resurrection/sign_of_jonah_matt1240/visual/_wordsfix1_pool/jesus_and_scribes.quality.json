@@ -1,0 +1,15 @@
+{
+  "slug": "jesus_and_scribes",
+  "hash": "f4121352b38f94d8",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
+  },
+  "notes": "vs v3 cards: scribes+Pharisees DEMAND the sign (Matt 12:38), Jesus calm, pre-passion, unwounded, anchor face, colonnaded temple court OK. Clean.",
+  "reviewer": "in-chat-agent"
+}

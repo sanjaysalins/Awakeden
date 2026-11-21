@@ -1,0 +1,2 @@
+# LOCKED 2026-11-21: linefix1 (owner: "sounds good")
+Final: visual/into_thy_hands_luke2346_sfx_v5hook_linefix1.mp4 (59.05 s). New first line "If you are afraid to die, listen to the last thing Jesus said." Hook card -> IF YOU ARE AFRAID / TO DIE. Title -> "Afraid to Die? Listen to the Last Thing Jesus Prayed" (bedtime-prayer claim is Talmud-era, not proven 1st c.; copy softened). Voice ~$0.03 logged. Old pin: FINAL_VIDEO.txt.prev_pre_linefix1.

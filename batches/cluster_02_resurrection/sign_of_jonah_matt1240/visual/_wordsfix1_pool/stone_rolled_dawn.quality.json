@@ -1,0 +1,15 @@
+{
+  "slug": "stone_rolled_dawn",
+  "hash": "a03bd6cca92d43b0",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
+  },
+  "notes": "REUSED the user-approved empty_tomb exterior (/usr/bin/bash): canon tomb world, disc aside outside, dark low opening, dawn garden. Replaced the poisoned-ref interior (stone inside chamber + napkin on floor). 5 fresh attempts at an interior version all violated cards - exterior beat is the faithful fit.",
+  "reviewer": "in-chat-agent"
+}

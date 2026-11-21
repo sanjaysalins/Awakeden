@@ -1,10 +1,10 @@
 # youtube_short — YouTube (Short)
 
 ## TITLE
-Jesus Died Praying a Child's Bedtime Prayer
+Afraid to Die? Listen to the Last Thing Jesus Prayed
 
 ## DESCRIPTION
-A dying man's last words (Luke 23:46). And they were a child's prayer.
+If you are afraid to die, listen to the last thing Jesus said (Luke 23:46).
 
 Jewish tradition made Psalm 31:5 an evening prayer, words a child could learn for the dark: into thine hand I commit my spirit: thou hast redeemed me, O LORD God of truth.
 

@@ -1,0 +1,70 @@
+{
+ "audio": "silence70.wav",
+ "total": 62.1,
+ "cut_ticks": false,
+ "motion": "smooth",
+ "beats": [
+  {
+   "t": [
+    54.4667,
+    57.1
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "man_lifting_face_dawn",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "He bowed his head so you could lift yours",
+    "kw": "LIFT YOURS",
+    "word_t": [
+     0.066,
+     0.186,
+     0.406,
+     0.526,
+     1.026,
+     1.146,
+     1.266,
+     1.406,
+     1.606
+    ]
+   },
+   "fx": {
+    "temp": 5200
+   }
+  },
+  {
+   "t": [
+    57.1,
+    62.1
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "cross_at_dawn",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The work is finished. Enter his rest",
+    "kw": "ENTER HIS REST",
+    "word_t": [
+     0.0,
+     0.12,
+     0.24,
+     0.36,
+     1.214,
+     1.514,
+     1.674
+    ]
+   },
+   "fx": {
+    "temp": 4900
+   }
+  }
+ ]
+}

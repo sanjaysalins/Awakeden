@@ -1,0 +1,67 @@
+{
+ "audio": "../../audio/_linefix2/silence70.wav",
+ "total": 46.35,
+ "cut_ticks": false,
+ "motion": "smooth",
+ "beats": [
+  {
+   "t": [
+    36.37,
+    42.81
+   ],
+   "tpl": "full",
+   "border_break": {
+    "at": 36.45
+   },
+   "clips": [
+    {
+     "slug": "jesus_turns_to_thief",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "Verily I say unto thee, To day shalt thou be with me in paradise",
+    "speaker": "JESUS",
+    "ref": "LUKE 23:43b"
+   },
+   "fx": {
+    "temp": 5800
+   }
+  },
+  {
+   "t": [
+    42.81,
+    46.35
+   ],
+   "tpl": "full",
+   "whip": true,
+   "clips": [
+    {
+     "slug": "risen_mercy_hand",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "He asked for someday. Jesus gave him that same afternoon.",
+    "kw": "SAME AFTERNOON",
+    "word_t": [
+     0.0,
+     0.158,
+     0.378,
+     0.518,
+     1.838,
+     2.138,
+     2.338,
+     2.598,
+     2.778,
+     2.998
+    ]
+   },
+   "fx": {
+    "temp": 5400
+   }
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "audio": "silence.wav",
+ "total": 70.6,
+ "cut_ticks": false,
+ "motion": "smooth",
+ "beats": [
+  {
+   "t": [
+    63.05,
+    68.1
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "risen_christ_wounds",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "the Lord it promised still has room for you to turn to Him",
+    "kw": "ROOM FOR YOU",
+    "word_t": [
+     0.072,
+     0.232,
+     0.572,
+     0.692,
+     1.733,
+     2.073,
+     2.293,
+     2.573,
+     2.753,
+     3.513,
+     3.673,
+     3.973,
+     4.113
+    ]
+   },
+   "fx": {
+    "temp": 5000,
+    "rays": {
+     "at": [
+      0.5,
+      0.12
+     ],
+     "strength": 0.5
+    }
+   },
+   "punch": true,
+   "border_break": {
+    "at": 63.3
+   },
+   "sfx": [
+    [
+     "dawn_morning_warm",
+     63.2,
+     -13
+    ]
+   ]
+  },
+  {
+   "t": [
+    68.1,
+    70.6
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "stone_rolled_dawn",
+     "motion": "pushin",
+     "t_in": 2.5
+    }
+   ],
+   "fx": {
+    "temp": 5000
+   }
+  }
+ ]
+}

@@ -26,6 +26,10 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFilter
 
 import build_dyncomic_16x9 as base
+import sys as _sys
+from pathlib import Path as _Path
+_sys.path.insert(0, str(next(_q for _q in _Path(__file__).resolve().parents if (_q / "fill_guard.py").exists())))
+import fill_guard  # fail-closed fill (owner rule 2026-11-21)
 import caption_layout as cl
 import panel_fit as pf
 
@@ -565,6 +569,8 @@ def main():
         live = clips_dir / f"{slug}.mp4"
         if a.clips and live.exists() and live.stat().st_size > 0:
             return live, "kling", None, cdef.get("motion", "pushin")
+        if a.clips and not a.lint:   # real render: a Ken Burns push on a still is forbidden (owner rule 2026-11-21)
+            fill_guard.forbid_still_kenburns(slug)
         if cam:
             return base.dyncam_clip(slug, cam) if not a.lint else live, "dyncam", cam, "pushin"
         return base.dyncam_clip(slug, "arc") if not a.lint else live, "dyncam", "arc", "pushin"

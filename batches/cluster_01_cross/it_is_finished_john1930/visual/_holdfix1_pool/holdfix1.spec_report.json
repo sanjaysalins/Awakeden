@@ -1,0 +1,93 @@
+{
+ "dod": {
+  "median_beat_s": 3.82,
+  "max_beat_s": 5.0,
+  "held_gt6s": [],
+  "slams": 0,
+  "kling_or_punch_or_slam_pct": 100,
+  "tier1_pct": 0,
+  "reuse_violations": [],
+  "tier3_or_flagged_beats": [],
+  "standard_3b": {
+   "stills_over_2_uses": {},
+   "stills_fullbleed_twice": {},
+   "fullbleed_beat_pct": 100,
+   "slop_caption_beats": []
+  },
+  "ramps": 0,
+  "whips": 0,
+  "flash_inserts": 0,
+  "fx_beats": 2,
+  "cut_ticks": false,
+  "beats": 2
+ },
+ "clips_build": true,
+ "beats": [
+  {
+   "beat": 1,
+   "t": [
+    54.4667,
+    57.1
+   ],
+   "dur": 2.633333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "man_lifting_face_dawn"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 2,
+   "t": [
+    57.1,
+    62.1
+   ],
+   "dur": 5.0,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "cross_at_dawn"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  }
+ ],
+ "speed": [
+  {
+   "beat": 1,
+   "panel": 0,
+   "slug": "man_lifting_face_dawn",
+   "slot_s": 2.633,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  },
+  {
+   "beat": 2,
+   "panel": 0,
+   "slug": "cross_at_dawn",
+   "slot_s": 5.0,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  }
+ ]
+}

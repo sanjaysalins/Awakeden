@@ -1,7 +1,7 @@
 # youtube_short — YouTube (Short)
 
 ## TITLE
-The Second Fire
+He Failed Jesus Three Times. Jesus Made Him Breakfast.
 
 ## DESCRIPTION
 Bible story: three times, Peter said he was not one of Jesus' followers. After Jesus rose, a second fire was waiting on the beach. (John 18, John 21)

@@ -1,0 +1,47 @@
+{
+ "blocks": [
+  {
+   "name": "n1",
+   "take": "n1_b",
+   "text": "He sent me to Nineveh, and I fled. I knew He is gracious, and would spare her.",
+   "speech_start": 10.78,
+   "speech_len": 5.14,
+   "gain": 0.824
+  },
+  {
+   "name": "n2",
+   "take": "n2_b",
+   "text": "Then, centuries later, scribes demanded a sign \u2014 Jesus gave them only my name:",
+   "speech_start": 20.687,
+   "speech_len": 6.12,
+   "gain": 1.034
+  },
+  {
+   "name": "n3",
+   "take": "n3_b",
+   "text": "The One who went down into your dark and rose again is Jesus. He can bring you up.",
+   "speech_start": 54.877,
+   "speech_len": 5.86,
+   "gain": 0.97
+  }
+ ],
+ "old_map": [
+  [
+   0.0,
+   10.3715,
+   0.0
+  ],
+  [
+   15.573,
+   19.366999999999997,
+   16.49297052154195
+  ],
+  [
+   25.999000000000002,
+   53.409000000000006,
+   27.096961451247164
+  ]
+ ],
+ "total": 63.9,
+ "last_speech_end": 60.697
+}

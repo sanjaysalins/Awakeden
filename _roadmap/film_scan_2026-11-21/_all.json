@@ -1,0 +1,552 @@
+[
+ {
+  "slug": "aaron-and-the-two-goats",
+  "status": "POSTED",
+  "verdict": "FIX",
+  "fills": "4.3-10.1 - g06_yearsasked (clip 4.04s in 5.8s slot, 1.44x) - ping-pong; motion reverses at 8.3s",
+  "slop": "none major; temple curtain tear and red thread consistent",
+  "text": "0-2.5 - hook card \"WHY TWO GOATS?\" - appears before it is spoken (\"Why two?\" at 2.9s) - minor timing mismatch",
+  "end": "hold=2.97 (last word 51.06s, video stream 54.03s; audio 54.06s) silent_end=yes",
+  "fix": "Worth fixing if re-posted: g02 (9.2s on a 4s clip, reverses at 14.1s and 18.2s) and g06 (1.44x); trim-only re-cut $0, or 2 new clips (paid); pad the tail ~0.1s ($0)."
+ },
+ {
+  "slug": "barabbas-son-of-the-father",
+  "status": "POSTED",
+  "verdict": "FIX",
+  "fills": "base_A8 in poc_comic_page/_ELEVATE/build_barabbas.py: 0-3.5 a1 grid slowed 1.254x; 6.6-10.8 f2 slowed 1.05x; 10.8-12.1 a2 grid slowed 2.0x then FROZEN 0.89 s (to ~14.5); 15.5-20.7 d1 slowed 1.30x; 28.7-32.0 a3 tail slowed 1.43x; 32.0-41.2 f3b cross walk slowed 1.30x + 1.3 s freeze (clone) into the hold. Owner rule is no slow-mo over 1.15x and no freeze.",
+  "slop": "11-21 - Jesus drawn inside a big orange/blue flame aura in the crowd scenes (invented effect, not scripture; used as a device) - med; 29-33 - freed Barabbas with chains flying apart is stylised - low; cross walk at end carries a full cross upright - low.",
+  "text": "pills match the voice (\"Listen: Bar-ABBA.\", \"Jesus called God Abba. It means Father.\" chip MARK 14:36 ok). Hook \"IN ARAMAIC, BARABBAS = SON OF THE FATHER\" is spoken in full - ok. Nothing unspoken found.",
+  "end": "hold=3.2 silent_end=no (-36 dB in last 0.5 s, soft score tail, not a click)",
+  "fix": "Mostly $0 - re-time the 2.0x/1.43x/1.3x grid clips to 1.15x or less by cutting shorter and drop the freeze holds; if clips run short, 2-3 new 5 s Kling clips (paid)."
+ },
+ {
+  "slug": "bronze-serpent-01-look-and-live",
+  "status": "READY",
+  "verdict": "FIX",
+  "fills": "20.5-26.2 - s07_look_and_live_acting (clip 5.04s in 5.8s slot, 1.15x) - ping-pong; motion reverses at 25.5s",
+  "slop": "none seen at 1fps (serpent on pole, torn-paper collage, crouching figure all consistent); final Jesus-on-cross landing is tunic-clothed (reverent) - low",
+  "text": "0-4 - hook card \"LOOK AND LIVE.\" - not spoken (narrator: \"You'd think the cure for a snakebite...\")",
+  "end": "hold=3.05 (last word 58.85s, film 61.90s) silent_end=yes",
+  "fix": "Trim s09, s12a, s12b to clip length and re-cut slots ($0) or 3 new 4s clips (paid); move the Numbers 21:9 card to ~28s ($0)."
+ },
+ {
+  "slug": "bronze-serpent-03-son-of-man-lifted-up",
+  "status": "READY",
+  "verdict": "FIX",
+  "fills": "4.0-9.2 - s02_close_faces (clip 4.04s in 5.2s slot, 1.29x) - ping-pong; motion reverses at 8.1s",
+  "slop": "35.8-41.7 and 53.3-58 - Jesus on the cross wears a full tunic with rope belt and stands on a foot block (reads reverent, not historically typical) - low",
+  "text": "0-4 - hook card \"EVEN SO MUST THE SON OF MAN BE LIFTED UP.\" - not spoken until 24.8s",
+  "end": "hold=3.11 (last word 54.89s, film 58.00s) silent_end=yes",
+  "fix": "Move/replace the early John 3:14 card ($0) and trim-not-stretch s05/s03/s02 (re-cut $0, or ~3 new clips, paid)."
+ },
+ {
+  "slug": "bronze-serpent",
+  "status": "READY",
+  "verdict": "FIX",
+  "fills": "poc_living_sketchbook/bronze_serpent_long/_s7_assemble.py still uses forward+REVERSE bounce. Reverse confirmed by mirror test at 4.04 s (mirror diff 1.5 vs 10.5 forward). _spread_windows.json: 40 pingpong, 5 slow_pingpong, 4 fwd_tail_bounce = 49 of 68 spreads; ~231 s of 592 s (39%) is fill. Slow_pingpong = bounce AND slow-mo. Worst:",
+  "slop": "Low-med. Jesus on the cross is drawn in a plain white tunic with feet on a block (not Roman-historical; consistent through the film, so style not error). Moses/serpent/pole consistent across shots; no extra people or hand errors seen at sheet scale. Nothing at PULL level.",
+  "text": "NONE. Burned captions are the forced-aligned voice words (alignment file) - match the voice by construction. No unspoken cards.",
+  "end": "hold=5.84 silent_end=no (last word 589.12 s, film 594.96 s; music sits at -26 dB until ~3.5 s from the end then falls only ~25 dB in ~1.5 s; last 0.25 s = -50.8 dB, not near-silent; fade is shorter than the 2.5 s owner template)",
+  "fix": "$0 first: re-run the end score fade as a slow 2.5 s fade; for the fills, adopt the Day of Atonement fwd_drift recipe is a half-fix (still zoom on last frame) - honest fix = about 25-30 new 8-10 s clips for the long spreads (paid, needs quote) or shorten/merge the 8 spreads over 10 s of fill."
+ },
+ {
+  "slug": "can_one_man_short",
+  "status": "READY",
+  "verdict": "MINOR",
+  "fills": "NONE found. Frame-diff freeze test clean for all bands.",
+  "slop": "38-45 - man carrying a bed shows as a large woven basket/jar, not a mat - low | crowd faces in Isaiah/Matthew street scenes are repeated types but no morphing - low",
+  "text": "\"Can One Man Heal and Forgive?\" end card is a title; spoken is \"Can one man give both?\" at the start - low | pills \"healed\"/\"forgiven\" are spoken words, ok",
+  "end": "hold=3.14 (last word 66.52 per words.json, film 69.66) silent_end=yes (RMS 36)",
+  "fix": "Nothing required. $0"
+ },
+ {
+  "slug": "could-ye-not-watch-one-hour",
+  "status": "POSTED",
+  "verdict": "FIX",
+  "fills": "NONE found (16 beats all kling sources, no dyncam). Two beats re-use clips (14: disciples_sleeping + gethsemane; 15: jesus_praying_close + cup_moonlight) - repeat only. Beat 5 held 6.07 s on one clip.",
+  "slop": "all frames - brand watermark \"AWAKEDEN\" top-left (retired brand) - high for policy; 33-37 - Jesus kneeling in a stone alcove with a lamp (not a garden) - low; cup is a modern stemmed goblet (not 1st-century) - low/med; Peter drawn old white-bearded - low.",
+  "text": "0-4 - hook card \"ONE HOUR. THEY SLEPT.\" - not spoken (voice: \"They failed inside an hour\"); 6-9 - gloss card \"TARRY = STAY\" - \"= stay\" never spoken; last caption \"NOW NO HOUR OF YOURS IS WATCHED ALONE\" still on screen as the film cuts. Other pills match.",
+  "end": "hold=0.06 (last word \"alone.\" ends 58.95, film ends 59.0) silent_end=no (-23 dB in the last 0.25 s: hard cut while score still plays). FAILS the 3.0 s landing-hold rule.",
+  "fix": "Mostly $0 - pad audio with a 3 s tail + 2.5 s score fade and extend the last beat 3 s (last clip us_under_cross_shadow needs 3 s spare, else 1 new 5 s clip, paid); also re-export without the AWAKEDEN mark and drop \"= STAY\"."
+ },
+ {
+  "slug": "day-of-atonement",
+  "status": "READY",
+  "verdict": "FIX",
+  "fills": "day_of_atonement/_s6_assemble.py removed pingpong (2026-08-05, after owner \"backwards walking\"), now fwd_drift: clip plays once forward then a $0 camera push/arc over its LAST FRAME for the rest of the slot. No reverse. But 53 of 76 spreads, ~207 s of 591 s (35%) is push-on-a-still. That breaks the later owner rule (no freeze/zoom fill, each clip >= its slot). Longest:",
+  "slop": "Low-med. 255 s: bronze altar drawn with a sea/ocean horizon (wilderness tabernacle) - setting error. 393 s: crucified Jesus in a tunic, arms laid over the beam, face in shadow - weak pose (low). ~63 s: bodies of Nadab/Abihu carried out wrapped like mummies (Egyptian look, low). Aaron narrates and quotes Hebrews/Isaiah (voice device, not slop).",
+  "text": "NONE spoken-mismatch. Burned captions = forced-aligned voice (alignment file); verse cards (Lev 16 lots, confession, \"BLOOD\", \"BOLDNESS\", Heb 10:19) echo spoken lines.",
+  "end": "hold=5.54 silent_end=no (last word 588.01 s, film 593.55 s; music ~-25 dB until ~3.5 s from the end, drops to -47.5 dB in the last 0.25 s; fade ~1.5 s, not the 2.5 s owner template)",
+  "fix": "$0: re-do the end fade as a slow 2.5 s fade and paint-out/replace the sea backdrop on s37_split_two_things (one still); for the fills, paid: about 17 new longer clips for the spreads with 5+ s of last-frame push, or shorten/merge those spreads to their clip length."
+ },
+ {
+  "slug": "father-forgive-them",
+  "status": "POSTED",
+  "verdict": "FIX",
+  "fills": "Ken Burns (dyncam push on a still, no real clip) in 8 of 16 beats (livingpage_short.spec_report.json): 3.4-7.0 robe still; 7.0-10.3 and 10.3-12.5 father_forgive_them_face (same still twice, 2.2 s full-bleed); 22.1-24.2 psalm22 scroll + robe; 36.2-39.8 willing_offering; 39.8-42.8 risen_interceding_christ; 42.8-48.5 willing_offering (5.7 s push, same still re-used from 36.2); 48.5-51.9 risen_interceding_christ again. No reverse/boomerang/slow-mo found. Spec itself flags 5 reuse violations (same still within <8 beats).",
+  "slop": "0-3 - nail-through-hand shot has a wristband/cuff on the hand (possible anachronism) - low; 7-12 - crowd faces are near-identical angry men (AI sameness) - low; otherwise consistent.",
+  "text": "0-3.4 - hook card \"HE PRAYED FOR HIS KILLERS\" - not spoken (voice says \"Nails through his hands\"); 24-30 - gloss card \"RAIMENT = CLOTHES\" - \"= clothes\" never spoken (raiment is, 24.3); top-left brand watermark \"AWAKEDEN\" on every frame - retired brand (owner 2026-11-16 moved to Salt and Light Kingdom). Captions otherwise match the voice.",
+  "end": "hold=3.2 silent_end=yes (-49 dB last 0.25 s)",
+  "fix": "$0 - re-render with the AWAKEDEN watermark removed and drop/trim the gloss card; swapping the 8 dyncam beats for real clips = about 8 new Kling clips (paid), only if owner wants zero Ken Burns."
+ },
+ {
+  "slug": "father-into-thy-hands",
+  "status": "READY",
+  "verdict": "FIX",
+  "fills": "9.3-14.6 psalm_scroll_night and 29.4-33.1 father_lamp_doorway are dyncam (camera push on a still = Ken Burns) - low/med | no boomerang/slowmo recorded (old spec has no speed table). Frame-diff freeze test clean.",
+  "slop": "37-38 - nail-through-hand shows a wrist band/cuff - low | rest consistent (father with lamp, sleeping child, hands)",
+  "text": "gloss cards \"REDEEMED = BOUGHT BACK\" (~14-16 s) and \"COMMEND = ENTRUST\" (~24-33 s): the \"= ...\" words are never spoken - med | hook \"IF YOU ARE AFRAID TO DIE\" is spoken, ok",
+  "end": "hold=0.10 (last word 58.95 per words.json, film 59.05) silent_end=NO (tail RMS ~3000, loud to the last frame) - abrupt end",
+  "fix": "Add >=3.0 s landing hold with score fade-out to silence, $0 (tpad last frame + audio pad/afade). Gloss cards: cut or speak them, $0"
+ },
+ {
+  "slug": "he-was-asleep-in-the-storm",
+  "status": "READY",
+  "verdict": "FIX",
+  "fills": "(v6 base -> cc -> v5hook; same ping-pong loop helper as the others)",
+  "slop": "9.5-10.5 - brand watermark \"AWAKEDEN\" (white/red wordmark, top-left) flashes on the dark candle-grade frame between s04 and s05; this brand was retired 2026-11-16 (now Salt and Light Kingdom) - med",
+  "text": "0-2.1 - hook card \"WHY IS HE ASLEEP IN THE STORM?\" - not spoken (narrator says \"Waves breaking over the rail.\")",
+  "end": "hold=3.62 (last word 59.40s, film 63.02s) silent_end=yes (-60 dB, smooth fade)",
+  "fix": "Cut the AWAKEDEN flash frames and drop the unspoken margin notes = $0; fix the two ~1.9x ping-pongs (s05, s11) by trim-only re-cut ($0) or 2 new 4s clips (paid)."
+ },
+ {
+  "slug": "isaiah-53-suffering-servant",
+  "status": "READY",
+  "verdict": "FIX",
+  "fills": "Engine = comic_engine._temporal (static clip shorter than slot = boomerang forward+REVERSE; directional = slow-mo). Reverse confirmed by pixel mirror test at 14.1 s (mirror diff 3.4 vs 22 forward). 12 beats / 30 panels are boomerang (slot 4.3-7.1 s, clip 4-5 s, so each plays forward then backward):",
+  "slop": "NONE visible at 3 s sampling. Style is consistent comic look, no extra/missing people seen, no anachronisms (Roman helmet/spear/nails are right for the period). Low: 3 shots re-used 3x (risen_christ_seeking at the close - documented as designed).",
+  "text": "NONE. All 95 beat captions are condensed paraphrases of the spoken narration (checked against narration.spoken.txt); red-letter lines are the spoken KJV quotes. Note: captions are shortened, not verbatim.",
+  "end": "hold=3.28 silent_end=yes (last word 405.02 s, film 408.30 s; audio fades smoothly to -82 dB over the last ~3.5 s; A/V durations match)",
+  "fix": "Replace the boomerang panels with the existing forward clips trimmed to slot (or a fresh 8 s render for the 12 beats), $0 for trims where clip >= slot else about 12 new clips (the 3-panel beats could share one new clip); cheapest honest $0 option = shorten those 12 beats to the clip length (4-5 s) and absorb the 1-2 s per beat into neighbours."
+ },
+ {
+  "slug": "it-is-finished",
+  "status": "READY",
+  "verdict": "FIX",
+  "fills": "Old July engine; spec_report has no speed table. 3.4-7.0 s seventh_day_light = dyncam (camera push on a still = Ken Burns) - low/med | rest kling. Frame-diff freeze test clean.",
+  "slop": "37-38 and 15-17 - nail-through-hand close-ups show a wrist band/cuff (anachronism) - low | otherwise consistent",
+  "text": "0-3 s - hook card \"WHAT WAS FINISHED?\" not spoken (voice says \"The first time the Bible says finished...\") - low/med | ~39 s - gloss \"GAVE UP THE GHOST = DIED\": \"= DIED\" not spoken - med",
+  "end": "hold=0.15 (last word 58.94, film 59.10) silent_end=NO (tail RMS 1674, audio is loud to the final frame) - abrupt end",
+  "fix": "Add >=3.0 s landing hold: video last frame + audio pad/fade (score tail), $0 (ffmpeg tpad + apad/afade, ~2.5 s fade per owner rule). Drop the \"= DIED\" gloss, $0 re-cut"
+ },
+ {
+  "slug": "jesus-stopped-reading-mid-sentence",
+  "status": "READY",
+  "verdict": "MINOR",
+  "fills": "47.2-51.0 - bottom/cross panel is almost frozen for ~3.8 s while narrator says \"He stayed. He died and rose\" - held cross still / possible clip shorter than slot (freeze-like; may be intended sacred stillness) | no reverse/boomerang found in build (Remotion, trim only)",
+  "slop": "40-47 - the cross scene: Jesus on cross in loincloth, hands and anatomy fine - low | 19-20 s - lower panel static 1.3 s - low",
+  "text": "caption pills match the voice (checked against transcript); \"LUKE 4:21\", \"LEADER / LUKE 23:35\" tags are citations, ok",
+  "end": "hold=3.25 (last word 57.85 per words.json, film 61.07) silent_end=yes (RMS 82)",
+  "fix": "Optional: give the 47-51 cross panel a real motion clip. Otherwise leave. $0 to leave, 1 clip (~$1.1) to fix"
+ },
+ {
+  "slug": "jesus-wept-the-sentence",
+  "status": "POSTED",
+  "verdict": "MINOR",
+  "fills": "poc_paper_flat/jesus_wept/build_film.py slows any clip shorter than its slot (setpts*sp, no freeze): s10 (48.6-54.05, leaders room) 1.37x; s13 (61.5-69, final walk to camera) 1.25x; s02 (6.25-13.6) 1.23x; s04 (18.1-25.3) and s05 (25.3-32.5) 1.20x; s06 (32.5-39.3) 1.14x; s03 1.13x. No reverse/boomerang/Ken Burns.",
+  "slop": "8-14 - tomb crowd shot, people tiny/blurry - low; 36 - one frame with no pill (fade) - low. No anachronisms, Mary/Martha consistent.",
+  "text": "pills match the voice. Hook card \"IF YOU HAD BEEN HERE...\" is the quoted sentence, spoken - ok.",
+  "end": "hold=3.13 silent_end=yes (-43 dB)",
+  "fix": "$0 - cap slow-mo at 1.15x by shortening those slots / moving cuts (s10 and s13 need 1-2 s more clip: 2 new clips, paid, only if owner wants it)."
+ },
+ {
+  "slug": "job_sea_short",
+  "status": "READY",
+  "verdict": "MINOR",
+  "fills": "NONE found. Frame-diff: only 26.9-28.2 s a face-strip panel on black is static for 1.3 s (a designed cut-in card, not a clip fill). Remotion/Swirls-style \"keyframe\" clips, no reverse seen.",
+  "slop": "22-24 - full halftone dark panel with no picture for ~1-2 s (transition card) - low | 57-67 - final boat scene: Jesus + Peter-like man + others in the boat, halo consistent; slow drift, no morph seen - low",
+  "text": "end card \"He Did Not Pass By\" (65-67 s) is a title, never spoken as that sentence (spoken: \"Instead of passing by...\") - low | tags \"JOB 9\", \"MARK 6:48\", \"1 TIMOTHY 2:5\" are citations, ok",
+  "end": "hold=3.28 (last word 64.02 per words.json, film 67.30) silent_end=yes (RMS 99)",
+  "fix": "Nothing required. $0"
+ },
+ {
+  "slug": "mary-and-martha-did-he-care",
+  "status": "READY",
+  "verdict": "MINOR",
+  "fills": "NONE (_remotion/src/MaryMarthaV4.tsx: all 15 clips are at least as long as their slots; no playbackRate/loop; s14/s15 huddle scene is a near-still but a real clip).",
+  "slop": "about 52 - bloom transition makes a brief double-exposure of Jesus + Martha + Mary faces - low; Mary is orange-haired, Martha black-haired (consistent, stylised) - ok.",
+  "text": "0-6 - on-screen \"Does anyone care?\" appears at 0 s but is spoken at 3.3 s (and \"You do everything for everyone\" at 0.2 s is not shown) - low mismatch.",
+  "end": "hold=3.09 silent_end=yes (-62 dB). Note: film is quiet overall (mean -21.7 dB vs about -14 dB in the Zacchaeus/Wept/Barabbas films) - check loudness before upload.",
+  "fix": "$0 - retime the \"Does anyone care?\" card to 3.3 s and lift loudness to about -14 LUFS."
+ },
+ {
+  "slug": "moses-and-the-snake-on-a-pole",
+  "status": "READY",
+  "verdict": "FIX",
+  "fills": "0.0-5.1 - s01_wide (clip 4.04s in 5.1s slot, 1.26x) - ping-pong; motion reverses at 4.0s",
+  "slop": "26-28 - Moses close-up: the clip morphs and he ends up wearing a modern blue collar/jersey with yellow piping (looks like a sports shirt; the 24-25s frames have no such shirt) - med (anachronism / clothing morph)",
+  "text": "0-2 - hook card \"CURED BY A SNAKE?\" - spoken at ~2-3.5s (\"God's cure? A snake.\") - minor timing mismatch",
+  "end": "hold=3.02 (last word 56.58s, film 59.60s) silent_end=yes (-56 dB at the end)",
+  "fix": "Trim the s07 Moses clip so the blue-jersey frames are cut ($0 if the first 2.5s are clean, else 1 new clip, paid); fix s11/s09/s01 reversals by trim-only ($0)."
+ },
+ {
+  "slug": "on-his-way-to-die-jesus-stopped",
+  "status": "POSTED",
+  "verdict": "CLEAN",
+  "fills": "NONE (17 clips, poc_desert_storybook_heroes/bartimaeus/film/assemble_v2.py trim-only, every clip at least as long as its SHOT_PLAN slot; Remotion layer at 1.0x).",
+  "slop": "0-3 - Bartimaeus hands/fingers checked at full size, correct; elongated stylised limbs and big heads are the style; crowd overlaps/double exposures only inside torn-paper transitions - low.",
+  "text": "all on-screen words are spoken (Jericho, Jerusalem, \"Son of David means God's promised King\", \"He stopped for one man\", \"At once he could see\", \"He rose to life\", \"Jesus stood still for one man. Mark 10:46-52\").",
+  "end": "hold=4.41 silent_end=yes (-46 dB). Film is a bit quiet (mean -20.7 dB).",
+  "fix": "none needed; optional loudness lift ($0)."
+ },
+ {
+  "slug": "ps22-01-crucifixion-foretold",
+  "status": "POSTED",
+  "verdict": "FIX",
+  "fills": "0-6.5 seamless_robe_lots slowmo 1.29x; 24.8-31.5 crowd_mocking slowmo 1.33x; 41.2-48.4 lots_cup_close slowmo 1.43x; 48.4-56.1 us_under_cross_shadow slowmo 1.53x; (31.5-37.1 soldiers_gambling 1.11x and 63.3-68.9 two panels 1.11x are ok); kenburns on stills with no clip: 6.5-9.9 psalm_scroll_night, 9.9-16.2 david_writing_psalm, 37.1-41.2 john_watching, 56.1-58.1 two stills. Source = livingpage spec + comic_engine _temporal (slowmo forward; no reverse found)",
+  "slop": "whole film - AWAKEDEN logo top-left (brand retired 2026-11-16) - med; ~19-21 city wall with red pitched-tile roofs (European, not 1st-c Jerusalem) - low; right thief on 3-cross shots wears a head band that reads like thorns - low",
+  "text": "NONE (all captions are karaoke of spoken words; Ps 22:18 and John 19:24b bars are spoken quotes)",
+  "end": "hold=0.08 silent_end=no (last 0.25s rms 0.019 vs film avg 0.083; ends on the voice)",
+  "fix": "$0 - remove AWAKEDEN logo, extend last beat (risen_mercy_hand clip has ~1.4s spare) + score fade for 3s hold; the 4 slowmo beats need a 2nd clip each (4 new clips, paid) or shorter slots."
+ },
+ {
+  "slug": "ps22-02-mockers-words",
+  "status": "READY",
+  "verdict": "FIX",
+  "fills": "built by poc_comic_page/_living_comic/lc_compose.py, which PING-PONGS (forward, then reversed 1.5s tail, repeated) any clip shorter than its panel. Panels from episode_mockers.json (Y7): 0-8.2 golgotha_hill_wide clip 5.0s - reverse; 12.5-19.5 david_writing_psalm clip 4.0 vs 7.0 - reverse; 19.5-31.2 psalm_scroll_night clip 4.0 vs 11.7 - reverse (worst); 31.2-40.5 wagging_heads_close_v4 5.0 vs 9.3 - reverse; 44.4-56.3 face_on_cross 5.0 vs 11.9 - reverse (worst); 59.7-66.9 ninth_hour_darkness 5.0 vs 7.2 - reverse; 66.9-76.4 us_under_cross_shadow 5.0 vs 9.5 - reverse. 7 of 10 panels. (Found from the build code and clip lengths; not seen frame by frame.)",
+  "slop": "0-3 right thief has a head band that reads like a crown of thorns - low; city with red pitched-tile roofs under the cross - low",
+  "text": "0-3 hook card \"WHOSE WORDS ARE THESE?\" not spoken (narrator says \"Listen.\") - mismatch; 12-19 gloss \"DELIVER = RESCUE\" - \"rescue\" is spoken (\"let God rescue him\") so ok; quote cards Matt 27:43, Ps 22:8, Luke 23:34, Matt 27:54 are spoken",
+  "end": "hold=~3.0 (voice ends ~73.4, film 76.4) silent_end=yes (last 0.25s rms 0.0006)",
+  "fix": "Paid ~5 new clips (the 11.7s and 11.9s panels need 2 each) or $0 shorten those panels to clip length (changes timing against the voice, so a new cut)."
+ },
+ {
+  "slug": "ps22-03-forsaken-cry",
+  "status": "READY",
+  "verdict": "FIX",
+  "fills": "34.5-40.6 face_on_cross slowmo 1.21x; 40.6-47.9 risen_mercy_hand slowmo 1.46x; (9.8-15.1 golgotha 1.04x ok); kenburns on stills: 4.9-9.8 david_writing_psalm, 17.8-22.6 psalm_scroll_night. Spec-based; no reverse found.",
+  "slop": "~27-31 nail-in-hand shot with foreshortened stretched arm, nail in palm - low; city with red pitched roofs ~14-19 - low; thief head band - low",
+  "text": "0-2 hook \"WHY DID JESUS CRY THIS?\" not spoken; ~19-22 gloss \"FORSAKEN = ABANDONED\" - the word \"abandoned\" is never spoken (mismatch); karaoke captions otherwise match",
+  "end": "hold=0.11 silent_end=no (last 0.25s rms 0.013)",
+  "fix": "$0 - drop the two cards or speak them, add 3s landing hold from spare clip tail; 2 slowmo beats -> 2 new clips (paid) if wanted."
+ },
+ {
+  "slug": "ps22-04-declared-to-brethren",
+  "status": "READY",
+  "verdict": "FIX",
+  "fills": "no slowmo above 1.15x and no reverse found in spec; kenburns on stills: 7.4-10.6 psalm_scroll_night (panel), 10.6-16.0 david_writing_psalm, 21.9-25.6 psalm_scroll_night (panel)",
+  "slop": "~24-27 congregation hall with a hanging pendant lamp on a chain under arches - low (reads a bit modern); risen Christ shots fine",
+  "text": "NONE (captions match speech; Ps 22:22 and Heb 2:11 are spoken quotes)",
+  "end": "hold=0.08 silent_end=no (last 0.25s rms 0.041)",
+  "fix": "$0 - add 3s landing hold (risen_mercy_hand tail) + 2.5s score fade; small Ken Burns scroll panels can stay."
+ },
+ {
+  "slug": "ps22-05-he-hath-done-this",
+  "status": "READY",
+  "verdict": "FIX",
+  "fills": "no slowmo or reverse found in spec; kenburns on stills: 0-3.6 david_writing_psalm panel, 3.6-7.9 psalm_scroll_night panel, 7.9-11.4 david_writing_psalm, 15.4-18.6 psalm_scroll_night (about 14 s of 43 s)",
+  "slop": "~20-24 vinegar sponge shot, soldier arm half visible - low; nothing high",
+  "text": "NONE",
+  "end": "hold=0.06 silent_end=no (last 0.25s rms 0.069, loudest end of the set)",
+  "fix": "$0 - 3s landing hold + 2.5s fade; optionally animate the two scroll/David stills (2 new clips, paid)."
+ },
+ {
+  "slug": "ps22-06-ends-of-the-earth",
+  "status": "READY",
+  "verdict": "FIX",
+  "fills": "slowmo only 1.06x and 1.09x (ok); kenburns on stills: 4.2-7.5 psalm_scroll_night, 11.7-21.4 nations_turning_wide (9.7 s on one still across two beats), 24.7-28.8 psalm_scroll_night panel, 39.4-42.9 kindreds_worship panel, 48.1-52.2 kindreds_worship",
+  "slop": "~35-38 stepped ziggurat with a flame on top for \"nation after nation\" - low (odd, not Bible-specific)",
+  "text": "NONE",
+  "end": "hold=0.12 silent_end=no (last 0.25s rms 0.060)",
+  "fix": "Paid 2 clips (nations_turning_wide, kindreds_worship) would remove ~16 s of Ken Burns; $0 for the 3s landing hold."
+ },
+ {
+  "slug": "ps22-07-body-foretold",
+  "status": "READY",
+  "verdict": "FIX",
+  "fills": "slowmo 1.04x only (ok); kenburns on stills: 0-3.5 and 3.5-7.6 david_writing_psalm, 7.6-10.1 psalm_scroll_night, 10.1-15.3 psalm_scroll_night panel, 18.2-24.6 and 24.6-31.2 body_suspended_wide (13 s on one still)",
+  "slop": "~12-14 three crosses where both thieves are gold/orange and sculpted, style break - med; ~15-30 silhouette cross shots with a spiky thorn ring drawn on the cross beam, reads like a floating crown - med; ~13 city with red pitched roofs - low",
+  "text": "NONE (Ps 22:14 and 22:17 quotes are spoken)",
+  "end": "hold=0.10 silent_end=no (last 0.25s rms 0.062)",
+  "fix": "Paid 2 clips for body_suspended_wide + 1 for david_writing_psalm remove the long Ken Burns; consider re-doing the silhouette still (1 still); $0 landing hold."
+ },
+ {
+  "slug": "ps22-08-i-thirst",
+  "status": "POSTED",
+  "verdict": "FIX",
+  "fills": "15.2-22.4 potsherd_dry_clay slowmo 1.43x; 26.4-32.6 bowed_head_finished slowmo 1.22x; 36.7-44.0 jesus_praying_close slowmo 1.45x; kenburns on stills: 8.6-13.0 david_writing_psalm, 22.4-26.4 psalm_scroll_night",
+  "slop": "~25-27 nail-in-hand foreshortened arm - low; vinegar sponge shot, soldier arm cropped - low; Gethsemane picture used under \"psalm paints the thirst\" - not wrong, low",
+  "text": "0-5 hook \"WHY DID JESUS SAY I THIRST?\" not spoken; ~17-20 glosses \"POTSHERD = PIECE OF BROKEN POT\" and \"CLEAVETH = STICKS TO\" - meaning is not spoken at that time (spoken after as \"dried clay, a tongue stuck fast\") - mismatch",
+  "end": "hold=0.17 silent_end=no (last 0.25s rms 0.025)",
+  "fix": "$0 - drop or speak the gloss/hook cards, add 3s hold; 3 slowmo beats -> 3 new clips (paid) or trim the slots."
+ },
+ {
+  "slug": "psalm-22-from-the-cross",
+  "status": "READY",
+  "verdict": "MINOR",
+  "fills": "Same engine as Isaiah. NO boomerang/reverse (every Kling clip here is tagged pushin/pullback = forward slow-mo). Slow-mo stretches (clip shorter than slot):",
+  "slop": "Low only. Mostly-empty cream pages for 15.5 s total while panels wait for their word (runs: 258.0 s 2.5 s, 323.5 s 2.5 s, 269.5 s 2.0 s, 274.5 s 2.0 s, 264.0 s 1.5 s, plus five 1.0 s) - reads as dead air. No morphing, wrong anatomy, or anachronism seen (Pharos lighthouse = correct for Septuagint scene).",
+  "text": "NONE spoken-mismatch. Captions are condensed paraphrases of the voice (checked against narration.spoken.txt). Cosmetic: de-slop left lowercase after a period in several captions (\"One word, pierced. a genuine dispute\", \"A soldier. a king. died of old age\", \"Back to the cross. why that cry matters\").",
+  "end": "hold=3.05 silent_end=yes (last word 418.18 s, film 421.23 s, so right at the 3.0 s limit; last 0.25 s = -61 dB, smooth fade over ~2.5 s; A/V durations match)",
+  "fix": "Post as is; optional $0 polish: fix the lowercase-after-period captions and bring the first panel in earlier on the 8 blank-page beats (258-276 s, 323 s); only the 6 stretches over 1.15x need new clips (paid, 6 clips) if the owner wants zero slow-mo."
+ },
+ {
+  "slug": "second-fire-he-fed-him-first",
+  "status": "READY",
+  "verdict": "CLEAN",
+  "fills": "NONE (17 clips at 1.0x, every slot shorter than its clip, _remotion/src/SecondFireV1.tsx).",
+  "slop": "none notable; flat folk-print look consistent, 7 men in the boat, rooster scene fine.",
+  "text": "no pills/captions burned in; nothing unspoken seen.",
+  "end": "hold=3.21 silent_end=yes (-40 dB last 0.25 s). Score swells to -14 dB near 85 s then fades over about 2 s (house rule asks about 2.5 s) - small.",
+  "fix": "none needed; optionally lengthen the end fade to 2.5 s ($0)."
+ },
+ {
+  "slug": "seed-of-the-woman",
+  "status": "READY",
+  "verdict": "MINOR",
+  "fills": "seed_of_the_woman/_s6_assemble.py uses fwd_drift (clip plays once forward at native speed, then a $0 camera push/arc over its LAST FRAME; never reversed). 26 of 71 spreads; ~65 s of 500 s (13%) is that push-on-last-frame. No reverse, no slow-mo found. Largest:",
+  "slop": "Low. Apple shown (bitten red apple at ~45 s; Genesis says only \"fruit\" - common tradition, not stated in the text). Jesus on the cross drawn in a plain tunic. No extra/missing people seen. Verse overlays over busy forest at ~42-51 s (Gen 3:8 card) are dark text on dark foliage and hard to read.",
+  "text": "NONE spoken-mismatch. Cards checked against the voice alignment: \"The Players\" card (Rev 12:9, 1 John 3:8, Rom 16:20), \"Just a snake story?\" margin note, Gen 3:15 / \"Genesis 3:15 vs Matthew-Revelation\" card are all spoken. Trailer lines (first 30 s) not transcribed (speech model unavailable on this machine); judged by eye only.",
+  "end": "hold=3.12 silent_end=yes (last word 500.45 s on the cc timeline = film end 503.57 s + trailer offset; last 0.25 s = -62 dB, smooth ~3 s fade; A/V durations match)",
+  "fix": "$0: darken/back-plate the Gen 3:8 verse card for legibility; optional paid: replace the 2 longest drifts (s28, s69) with new clips (2 clips)."
+ },
+ {
+  "slug": "seed-of-woman-02-her-seed",
+  "status": "READY",
+  "verdict": "FIX",
+  "fills": "0.0-8.1 - s01_eden_coming_apart (clip 4.04s in 8.1s slot, 2.00x) - ping-pong; motion reverses at 4.0s",
+  "slop": "0-13 - Adam bare-chested and Eve in a leaf top/skirt with bare midriff and legs (Eden, spotlight shot) - low-med (modesty)",
+  "text": "0-3.7 - hook card \"HER SEED.\" - not spoken (narrator: \"You've heard it as Plan B...\")",
+  "end": "hold=3.12 (last word 58.88s, film 62.00s) silent_end=yes",
+  "fix": "All 8 slots are stretched; trim-only re-cut is $0 but leaves ~35s of film too short, so honest fix = about 6-8 extra 4-5s clips (paid) or a shorter cut."
+ },
+ {
+  "slug": "seed-of-woman-03-heel-vs-head",
+  "status": "READY",
+  "verdict": "FIX",
+  "fills": "3.8-11.1 - s02_bruise_vs_crush_split (clip 4.00s in 7.3s slot, 1.83x) - kenburns push then pull-back (reversed); motion reverses at 7.8s",
+  "slop": "25-36 - serpent with a skull showing through its crushed head, blue/red scales (graphic but on-theme) - low",
+  "text": "0-3.8 - hook cards \"HEEL VS. HEAD.\" and \"WHOSE HEAD? WHOSE HEEL?\" - not spoken (narrator: \"You've heard Genesis 3:15 means Jesus beats the devil.\")",
+  "end": "hold=3.29 (last word 61.71s, film 65.00s) silent_end=yes",
+  "fix": "Biggest fill problem in the group: ~6 more 4-5s clips needed to cover 65s honestly (paid), or shorten the film to what the 7 clips can carry."
+ },
+ {
+  "slug": "seed-of-woman-04-serpent-crusher-promised",
+  "status": "READY",
+  "verdict": "FIX",
+  "fills": "0.0-5.7 - s01_recap_curse (clip 5.04s in 5.7s slot, 1.14x) - ping-pong; motion reverses at 5.0s",
+  "slop": "39.3-49.8 - night watchman: hooded figure has a small spike/antenna on the hood and odd tally-mark bricks - low",
+  "text": "0-3.8 - hook cards \"THE SERPENT-CRUSHER PROMISED.\" and \"A CRUSHER WAS PROMISED\" - not spoken (narrator: \"You've heard this before a curse in a garden...\")",
+  "end": "hold=3.14 (last word 58.86s, film 62.00s) silent_end=NO (music sits at about -33 dB then drops to silence in the last ~0.17s: an abrupt cut, no fade)",
+  "fix": "Add a ~2.5s fade-out to the audio end ($0, ffmpeg); re-cut s05/s06/s07 (2.1-2.6x) to trim-only ($0) or add ~3 clips (paid)."
+ },
+ {
+  "slug": "sign-of-jonah",
+  "status": "READY",
+  "verdict": "FIX",
+  "fills": "19.8-26.3 jesus_and_scribes slowmo 1.30x | 30.4-36.5 three_days_dark_tomb slowmo 1.22x (from livingpage spec_report; no boomerang) | frame-diff: 45.9-47.4 whole frame frozen",
+  "slop": "44.0-47.4 - BLANK cream page (no picture in any panel) with only the caption \"THE GRAVE NO MORE HELD HIM THAN THE DEEP HELD ME\" for ~3.4 s - missing art, looks broken - high | 33-39 - burial scene body wrapped like an Egyptian mummy - low",
+  "text": "\"JONAS = JONAH\" gloss card (~30 s), \"= JONAH\" not spoken - med | opening hook \"ONE SIGN ONLY. WHICH ONE?\" at 0-2 s not spoken as such - low",
+  "end": "hold=3.18 (last word 60.70 by whisper, film 63.88) silent_end=yes (RMS 59 at the end)",
+  "fix": "Put a real picture under the 44-47 line (reuse empty-tomb or fish still with a kling clip, 1 new clip ~$1.1) or shorten that slot; replace the two slowmo slots with other existing clips/trim. Gloss card cut, $0"
+ },
+ {
+  "slug": "swirls_episode_01_queen_who_came_to_test_him",
+  "status": "POSTED",
+  "verdict": "FIX",
+  "fills": "~12.4-20.7 s - f02 - REVERSE (native 5.04 s boomerang to 10.08 s, cut at 8.33 s, so ~3.3 s plays backward) | ~20.7-29.0 s - f03 - REVERSE (same, ~3.3 s backward) | ~4.3-12.4 s - f01 - FREEZE of last frame +3.0 s under a halo-tour light (native 5.04 -> slot 8.03) | ~29.0-37.4 s - f04 - FREEZE +3.3 s under lamplight sweep (native 5.04 -> 8.37) | ~51.5-63.4 s - f07 - FREEZE + ping-pong of last 2 s, +2.9 s (native 9.04 -> 11.93) | front +0.33 s zoom-hold (trivial) | back cover 4.0 s trimmed to 2.2 s (ok, trim)",
+  "slop": "none seen at 1 fps (cast consistent; no extra people; hands ok) - low",
+  "text": "baked panel labels never spoken: \"nothing hid\", \"gold and spices\", \"the cargo\", \"the far city\", \"her level gaze\", \"the same eyes\", \"the ascent\", \"the king's table\", \"all her desire\", \"one look back\", \"the fading track\", \"no throne\", \"no palace\", \"his eyes\", \"NOTE: she doubted / spoken plainly / doubt falls / homeward / the claim / just ask\" (decorative page notes; core captions \"hard questions\", \"a true report\", \"the half was not told me\", \"queen of the south\", \"a greater than Solomon is here\", \"your hardest question\" ARE spoken) - low. Front/back covers (\"THE QUEEN WHO CAME TO TEST HIM 1 KINGS 10:1-13\", \"YOUR HARDEST QUESTION MATTHEW 12:42\") fine.",
+  "end": "hold=5.0 (voice ends ~65.0 of 69.97 per narration.alignment.json) silent_end=yes (-73.6 dB last 0.25 s)",
+  "fix": "Re-cut trim-only (owner rule) with 5 new longer clips for f01, f02, f03, f04, f07 (slots 8.0/8.3/8.3/8.4/11.9 s, so 10-12 s Kling clips) - PAID, roughly 5 clips (about $3-4 at OpenArt); no honest $0 fix (reverse and freeze are the target)."
+ },
+ {
+  "slug": "swirls_episode_02_ashes_that_made_clean",
+  "status": "READY",
+  "verdict": "MINOR",
+  "fills": "NONE (uplift cut is trim-only 1.0x; gate G-SLOT passes \"no tpad/reverse/setpts/zoompan\"; contact sheet shows forward motion only)",
+  "slop": "~48-52 s - F05 Jesus' reaching sleeve/hand clasp slightly soft, no anatomy fault - low | ~22-28 s - F02C near-empty wide page (man tiny in blank sand) reads thin, not a defect - low",
+  "text": "baked panel labels not spoken: \"marked\", \"apart\", \"dust\", \"rubbing\", \"still there\", \"outside the camp\", \"seven stones\", \"waiting\", \"the grave\", \"worn path\", \"out of reach\", \"hyssop/the water/rinsed\" (partly), \"outside the wall\", \"the hill\", \"the reach/the mark/not unclean\", \"NOTE: the cost of the cure\", \"NOTE: on the seventh day\" - low (decorative). Spoken and matching: \"the law calls him unclean\", \"cannot cleanse himself\", \"unclean seven days\", \"on the third day\", \"a stain water alone can't reach\", \"the blood of Christ\", \"He touched what makes us unclean\". Back cover \"READY TO BE MADE CLEAN? HEBREWS 9:14\" = last line, ok.",
+  "end": "hold=3.03 (voice ends 58.9 of 61.93) silent_end=yes (-92.6 dB)",
+  "fix": "none needed."
+ },
+ {
+  "slug": "swirls_episode_04_naaman_in_the_jordan",
+  "status": "POSTED",
+  "verdict": "FIX",
+  "fills": "~0-7.5 s - front cover - FREEZE +3.4 s (native 4.04 -> 7.47; cover visibly cycles/pops) | ~7.5-13.2 s - f01 - freeze/tail ping-pong 1.0 s, +0.7 s | ~18.5-28.5 s - f03 - tail ping-pong 1.5 s, +0.9 s | ~28.5-41.6 s - f04 - FREEZE + ping-pong of last 1.8 s, +4.1 s (native 9.04 -> 13.17) | ~45.9-58.4 s - f06 - FREEZE (zoom-push hold) +4.4 s (native 8.04 -> 12.43) | ~58.4-69.0 s - back cover - BOOMERANG +2.6 s (native 8.04 -> 10.67, last 2.6 s plays backward) | f02 boomerang +0.3 s (trivial)",
+  "slop": "~8-13 s and ~46-58 s - Naaman wears a Roman-style crested galea + segmented/pteruges kit (ninth-century-BC Syrian general; a Roman helmet reads as an anachronism, also in the F01 panel and the back cover) - med | ~19-28 s - F03 stride page, cloak and legs vary between frames (clip drift) - low",
+  "text": "baked words not spoken: \"a little maid\", \"the prophet's land\", \"his rank\", \"the shut door\", \"the river country\", \"NOTE: rank cannot cure / too plain for him / a servant again / his own hometown\", \"the brow\", \"many lepers\", \"what he left\", \"downstream\" (decorative). Spoken and matching: \"a great general and a leper\", \"wash in the Jordan\", \"seven times\", \"Abana and Pharpar...\", \"Wash, and be clean\", \"some great thing\", \"new skin like a child's\", \"saving Naaman the Syrian\". Covers \"ONE OLD STORY 2 KINGS 5\" / \"STILL WORTH LOSING LUKE 4:27\" ok.",
+  "end": "hold=3.01 (voice ends 68.96 of 71.97) silent_end=yes (-67 dB)",
+  "fix": "Re-cut trim-only with ~4 new longer clips (front, f04, f06, back; slots 7.5/13.2/12.4/10.7 s) - PAID, about 4-5 clips (about $3); the helmet fix needs re-drawn stills (also paid) - or accept as minor."
+ },
+ {
+  "slug": "swirls_episode_05_barrel_that_did_not_waste",
+  "status": "POSTED",
+  "verdict": "FIX",
+  "fills": "~39.1-50.8 s - f05 - FREEZE (zoom-push hold) +3.7 s (native 8.04 -> 11.73) | ~57.6-68.1 s - back cover - FREEZE +2.5 s (native 8.04 -> 10.5; includes the 3 s hold) | ~4.0-10.8 s - f01 - freeze/ping-pong tail 1.0 s, +1.8 s | ~50.8-57.6 s - f06 - FREEZE +1.8 s | ~19.9-30.1 s - f03 - tail ping-pong 1.5 s, +1.2 s",
+  "slop": "~0-4 s - front cover woman changes pose/shape across the 4 s (bends, cloak flips) - low | no other faults seen",
+  "text": "baked words not spoken: \"the dry brook\", \"two sticks\", \"by the sea\", \"a little oil\", \"two empty bowls\", \"a stranger fed\", \"the cruse\", \"her city\", \"many widows\", \"the syrian\", \"no rain\", \"three full bowls\", \"her face, after\", \"NOTE: a stranger asks / the funeral fire / before the miracle / she gave first / named centuries later / asked her anyway\" (decorative). Spoken and matching: \"nothing to spare\", \"we may eat it, and die\", \"Fear not\", \"the barrel of meal\" \"wasted not\", \"save unto Sarepta, a city of Sidon\", \"nothing left to give\", \"HE NEEDS IT OPEN\". Cover reads \"AN HANDFUL OF MEAL\" (KJV wording, may look like a typo to viewers) - low.",
+  "end": "hold=3.01 (voice ends 65.46 of 68.47) silent_end=yes (-59.9 dB, borderline)",
+  "fix": "Re-cut trim-only with ~4 longer clips (f05, back, f01, f06; slots 11.7/10.5/6.8/6.8 s) - PAID, about 4 clips (about $3); no honest $0 fix."
+ },
+ {
+  "slug": "swirls_episode_06_talitha_cumi",
+  "status": "READY",
+  "verdict": "MINOR",
+  "fills": "NONE found (bold vector style, real clips, hard cuts per the 2026-11-16 uplift report; contact sheet shows forward motion only). Not checked against a build script (Remotion project, not in this folder).",
+  "slop": "~0-12 s - Jairus/Jesus faces and Jesus' hair/robe change shot to shot, bald hunched messenger is a caricature - med-low | ~20-34 s - one room angle held ~12 s, girl lies still (weak, not a defect) - low | ~38-44 s - family hug, girl holds a bowl, faces slightly doll-like - low | ~44-54 s - Jairus and Jesus look like different men from the first scenes - low",
+  "text": "burned pills match the voice per the SRT: \"A father begs Jesus / My little girl is dying\", \"Thy daughter is dead / Why bother the Teacher now? (Mark 5:35)\", \"Too late.\", \"Be not afraid, only believe. (5:36)\", \"Talitha cumi / Little girl, get up. (5:41)\", \"She got up and walked\". No unspoken words found. Note: narration.md in the folder is the old 97 s text; the film uses the ~51 s short_g5 words.",
+  "end": "hold=3.2 (last caption ends 50.67 of 53.9; SRT based, voice not re-timed) silent_end=near (-48 dB last 0.25 s, not fully silent)",
+  "fix": "Optional $0: fade audio to silence over the last 0.25 s. Face drift fix would be paid (re-render 2-3 shots), not needed."
+ },
+ {
+  "slug": "swirls_episode_08_can_any_good_thing",
+  "status": "POSTED",
+  "verdict": "MINOR",
+  "fills": "NONE (uplift cut is trim-only, gate G-SLOT passes; sheet shows forward motion only)",
+  "slop": "~48-50 s - F06 page: a tiny extra figure appears bottom-left of the ladder-light scene (stray invented person) - low-med | ~43-47 s - F03 Nathanael/Jesus cloak lining changes colour mid-clip - low | ~53-58 s - page labelled \"SEQ: THE LADDER\" (Jacob) while the rest say \"SEQ: CAN ANY GOOD THING\" - low",
+  "text": "baked words not spoken: \"SEQ: THE LADDER / the dreamer / first rung / under stars / reached to heaven / NOTE: first thread\" (Jacob ladder page; only \"Jacob's ladder\" is spoken), \"Philip's news\", \"ripening figs\", \"the sneer\", \"the open hand\", \"unseen prayer\", \"from beneath\", \"present time\", \"the doubt\", \"before him\", \"your place\", \"already seen\" - low (decorative). Spoken and matching: \"the Messiah, Jesus, of Nazareth\", \"any good thing\", \"in whom is no guile\", \"Whence knowest thou me?\", \"under the fig tree\", \"It fell.\", \"the Son of God\", \"greater things than these\", \"standing open\", \"come and see\". Back cover \"ASCENDING AND DESCENDING JOHN 1:51\" ok.",
+  "end": "hold=3.1 (voice ends 60.92 of 64.03) silent_end=yes (-58 dB, near silent)",
+  "fix": "Optional, paid: re-do the Jacob ladder page with this episode's own \"SEQ: CAN ANY GOOD THING\" header (1 still + 1 clip, about $1); otherwise ship."
+ },
+ {
+  "slug": "swirls_episode_10_she_loved_much",
+  "status": "POSTED",
+  "verdict": "MINOR",
+  "fills": "NONE (cut_v4.py: 14 shots, 1.0x, hard cuts, trim only, no reverse/freeze/zoom; sheet agrees)",
+  "slop": "none seen (cast consistent; hands and faces ok; no anachronisms) - low",
+  "text": "back cover \"SHE LEFT CARRYING HIS PEACE / 1 JOHN 4:19\" - these words (and the 1 John reference) are never spoken; voice ends \"She came in weeping. She left in peace. Who is this?\" - low-med. Other baked labels not spoken (decorative): \"a dinner / a thought / a question\", \"his feet / the flask / tears\", \"a prophet / the guests / answered anyway\", \"he heard / Simon / answered\", \"a whisper / a look / silence\", \"her face / his words / the door\". Spoken and matching: \"two silent questions\", \"behind him, weeping\", \"tears, then her hair\", \"she is a sinner\", \"forgiven\", \"the sign, not the price\", \"who is this?\", \"only God knows the heart\", \"he did both\", \"go in peace\", \"Thy faith\".",
+  "end": "hold=3.0 (voice 74.21 of 77.23, per FILM_LOCKED.md) silent_end=yes (-99.6 dB)",
+  "fix": "$0 option: leave as is. Or re-title the back cover with a spoken line (paid voice, about $0.1). Fine to post as is."
+ },
+ {
+  "slug": "swirls_episode_11_where_are_the_nine",
+  "status": "READY",
+  "verdict": "FIX",
+  "fills": "NONE (uplift cut is trim-only, gate G-SLOT passes; contact sheet shows forward motion only)",
+  "slop": "~20-24 s F02 and ~47-52 s F06 - lepers' cloaks / Jesus' cloak lining change colour during the clip (drift) - low | ~30-35 s F05 - thin ink line runs diagonally from the man (intended motif, reads as a stray line) - low",
+  "text": "~75-77 s - baked caption \"didn't end with the nine\" (page F10B) is NOT spoken: the linefix2 voice now says \"Nine went on clean. One came back whole: at His feet, not on the road\" (74.6-79.7 s) - med. Other baked words not spoken (decorative): \"NOTE: as required / no difference yet / not in frames\", \"the priests / they obeyed / his word\", \"covered lip / rent garment\", \"stopped / look / the road\", \"kept going / loud voice / the village\", \"the rise / dust / no one\", \"away / turned / back\", \"afar off / the wall / the road\". Spoken and matching: \"Only one of them came back\", \"at a distance\", \"Jesus, Master, have mercy on us\", \"Go shew yourselves unto the priests\", \"as they went they were cleansed\", \"giving him thanks\", \"where are the nine?\", \"save this stranger\", \"thy faith hath made thee whole\", \"Luke calls it thanks. Jesus calls it faith.\", back cover \"AT HIS FEET, NOT ON THE ROAD EPHESIANS 2:8\".",
+  "end": "hold=3.03 (voice ends 80.54 of 83.57) silent_end=yes (-82.8 dB)",
+  "fix": "Cheapest: re-make the F10B page caption to \"one came back whole\" (1 still + 1 clip, about $1, PAID), or $0: cover the caption with a Remotion strip / cut F10B shorter so the caption is not on screen."
+ },
+ {
+  "slug": "swirls_episode_12_ye_are_not_all_clean",
+  "status": "POSTED",
+  "verdict": "MINOR",
+  "fills": "NONE (NOTES.md says \"0 freezes\", retro Kling clips play forward; sheet agrees). Build script v3_retro/build_v3.py was not opened.",
+  "slop": "~37-39 s and ~60-80 s - Jesus' forearms show thin red lines (read as scars or scratches, odd before the crucifixion) - low | ~20-60 s - Jesus' face changes between shots (cartoonish close-ups, very large eyes) - low | ~52-61 s - door and table scene held ~9 s with no person (Judas gone), calm, not a defect - low",
+  "text": "burned pills match the voice: \"If people really knew me, would they leave?\", \"So what does He do with friends like that?\", \"Judas\", \"Peter\", \"Know ye what I have done to you? (John 13:12)\", \"He loved them unto the end. (13:1)\", \"and it was night. (13:30)\", \"Jesus knows. All of it.\", \"The one who knew the worst was not the one who left.\", \"He was the one holding the towel.\" No unspoken words found.",
+  "end": "hold=3.69 (voice ends 77.64 of 81.33, whisper alignment) silent_end=yes (-85.8 dB)",
+  "fix": "none needed; optional re-draw of the arm marks (paid, 1 clip)."
+ },
+ {
+  "slug": "swirls_episode_13_the_cross_that_wasnt_his",
+  "status": "READY",
+  "verdict": "MINOR",
+  "fills": "NONE (uplift cut is trim-only, gate G-SLOT passes; sheet shows forward motion only)",
+  "slop": "~30-34 s F04 - blue motif flower in the gateway drifts, harmless - low | ~66-70 s F06/F06B - blue motif wisp crosses Simon's face and the gate (owner accepted) - low | ~56-62 s F05B - bull carried on poles reads odd (owner accepted \"the bull still stands\") - low",
+  "text": "baked words well matched to the voice (\"led him out\", \"passed by\", \"Nobody asked him\", \"after Jesus\", \"through the gate\", \"outside is without\", \"without the camp\", \"suffered without the gate\", \"out there\", \"Let us go forth\", \"Reproach is shame.\", \"as Simon carried the wood\", \"You are asked\", \"freely this time\", \"Only the shame\", \"THROUGH THAT GATE FIRST HEBREWS 13:13\"). Unspoken decorative panel labels only: \"the soldiers\", \"the country\", \"empty hands\", \"same road\", \"seized\", \"blood carried in\", \"body went out\", \"burned\", \"the camp\", \"the fire\", \"the wall\", \"the rise\".",
+  "end": "hold=2.97 (voice ends 103.36 of 106.33) silent_end=yes (-68.9 dB) - 0.03 s under the 3.0 s rule",
+  "fix": "$0: extend the last frame/silence by 0.1 s (re-mux), or accept; no new clips needed."
+ },
+ {
+  "slug": "swirls_episode_16_let_the_little_children",
+  "status": "POSTED",
+  "verdict": "MINOR",
+  "fills": "NONE (build_v3.py: 17 shots, each clip longer than its slot, 1.0x, hard cuts, fails if a clip is short; sheet agrees)",
+  "slop": "~71 s - a semi-transparent blue rectangle sits across Jesus' chest while the \"not now\" pill morphs into the last pill (caption transition glitch) - low-med | no anatomy, extra-limb or anachronism faults seen",
+  "text": "Remotion pills match the voice: \"Pushed away?\", \"not now\", \"a touch\", \"Angry.\", \"Let the children come to Me. (Jesus, Mark 10:14)\" (plain-English pill over the spoken KJV \"Suffer the little children...\", deliberate), \"like a little child\", \"His arms.\", \"Look at who Jesus picked up.\" Typewriter partials (\"a touc\", \"His ar\") are animation, not errors.",
+  "end": "hold=3.1 (voice ends 72.6 of 75.7) silent_end=yes (-60.9 dB, near silent)",
+  "fix": "$0: re-render the Remotion pill transition at ~71 s so the blue rectangle does not overlay Jesus. Optional."
+ },
+ {
+  "slug": "the-empty-tomb",
+  "status": "READY",
+  "verdict": "FIX",
+  "fills": "42.4-48.1 jesus_shows_thomas slowmo 1.14x (ok) | 48.1-54.2 risen_christ_wounds slowmo 1.20x | 55.7-61.4 risen_christ_seeking (endfix tail) slowmo 1.13x (ok). No boomerang/freeze. Head 0-54.2 is stream copy of v6trim.",
+  "slop": "24-28 - two stacked Jesus portraits plus torso strip are the same face, ok | 30-34 - tomb interior, John kneeling is a second figure in similar poses across panels - low | stigmata hand on Jesus at the end is consistent - low",
+  "text": "gloss cards \"SEPULCHRE = TOMB\" (~12-14 s) and \"NAPKIN = HEAD CLOTH\" (~26-28 s): the \"= ...\" words are not spoken - med",
+  "end": "hold=3.30 (last word 58.12 per words.json, film 61.42) silent_end=yes (RMS 53)",
+  "fix": "Cut or voice the 2 gloss cards ($0); optionally replace the 1.2x slowmo slot with a trimmed other clip ($0) - only one slot is above 1.15x"
+ },
+ {
+  "slug": "thirty-pieces-of-silver",
+  "status": "POSTED",
+  "verdict": "FIX",
+  "fills": "12.5-18.3 nail_through_hand slowmo 1.15x (borderline); no reverse found; kenburns on stills with no clip: 2.6-5.2 coin_on_scroll, 5.2-9.6 zechariah_night_scroll, 9.6-12.5 weighing_scales_silver, 18.3-20.9 prophet_scroll, 20.9-23.6 zechariah_casting, 34.4-38.8 coin_on_scroll panel, 38.8-41.6 silver_and_blood, 41.6-45.7 two stills, 54.8-56.8 zechariah_casting (about 26 s, nearly half the film)",
+  "slop": "whole film AWAKEDEN logo top-left (brand retired) - med; nothing else odd",
+  "text": "NONE (Zech 11:12b, 11:13, Matt 27:5 quote bars are spoken)",
+  "end": "hold=0.14 silent_end=no (last 0.25s rms 0.072)",
+  "fix": "Paid ~4 clips (scales, scroll, silver_and_blood, zechariah_casting) to animate the Ken Burns stills; $0 for logo removal + 3s hold."
+ },
+ {
+  "slug": "today-in-paradise-38s",
+  "status": "POSTED",
+  "verdict": "MINOR",
+  "fills": "Every one of 14 shots has a digital zoom push (z0 to z1 = 1.0-1.7x, build_s32.py SH list) on a real clip, so the whole film is \"zoom\"; strongest crops: 0-1.9 and 10.9-12.6 (1.3-1.7x, soft). Clips re-used at different offsets: penitent_thief_face (1.9-3.8 and 12.6-14.9), jesus_turns_to_thief (0-1.9 and 22.4-26.5). No reverse/boomerang/freeze (no tpad/loop in script).",
+  "slop": "3.8-5.1 - two_thieves_wide: thieves tinted orange/yellow vs rest of shot (style break) - low; 6.9-10.9 - mocker fist/blood and second thief tiny/unclear - low; otherwise consistent, thieves have loincloths, no crown-of-thorns mix-up seen.",
+  "text": "0-2.2 - hook card \"PARADISE FOR A CRIMINAL?\" - not spoken word for word (voice: \"Jesus promised paradise to a criminal. Why?\") - ok. Pills match the voice; verse chips (LUKE 23:39/42/43) correct.",
+  "end": "hold=3.34 silent_end=yes (-47 dB)",
+  "fix": "$0 - none needed; optional: cap zoom at 1.2x. Replacing zoom shots with fresh clips would be paid, not worth it."
+ },
+ {
+  "slug": "why-did-she-leave-her-jar",
+  "status": "POSTED",
+  "verdict": "CLEAN",
+  "fills": "NONE (poc_pop_halftone/woman_at_well/build_film_v3.py asserts clip >= slot, trim-only 1.0x, hard cuts).",
+  "slop": "none notable; woman, Jesus and villagers consistent, jar count right. Solid yellow/orange/teal flashes are deliberate transition frames.",
+  "text": "bubbles match the voice (\"GIVE ME TO DRINK.\", \"SHALL NEVER THIRST\" at about 32 s, \"I THAT SPEAK UNTO THEE AM\", \"COME, SEE A MAN\", \"THE SAVIOUR OF THE WORLD\"). Nothing unspoken.",
+  "end": "hold=3.03 silent_end=yes (-72 dB)",
+  "fix": "none needed."
+ },
+ {
+  "slug": "why-is-jesus-called-immanuel",
+  "status": "READY",
+  "verdict": "MINOR",
+  "fills": "NONE found. Remotion build, clips at 1.0x by brief (\"each clip >= its slot, trim only\"); frame-diff freeze test clean (no frozen panel >1.2 s).",
+  "slop": "whole film - none seen on the 1 fps sheet. Angel (Matt 1:20) glowing white, Joseph sleeping, Ahaz crowd all consistent; no extra limbs seen - low",
+  "text": "3 s \"NO.\" card matches \"told God no\"; \"FEAR NOT\", \"JESUS\", \"HE SAVES\", \"GOD WITH US\" all spoken. End card \"GOD WITH US / MATTHEW 1:23\" is a title, not spoken verbatim (spoken \"I am with you always... God's answer\") - low",
+  "end": "hold=3.20 (last word 62.24, film 65.44 per words.json) silent_end=yes (tail RMS ~87, about -51 dBFS)",
+  "fix": "None needed. $0"
+ },
+ {
+  "slug": "why-was-jesus-born-in-bethlehem",
+  "status": "READY",
+  "verdict": "MINOR",
+  "fills": "NONE found. Remotion build (BethlehemV9.tsx) is \"1.0x, trim only\" by design; no playbackRate/loop/reverse in code. Frame-diff freeze test: only 38.2-42.4 s the Galilee map infographic is static (designed graphic, not a clip fill).",
+  "slop": "38-42 - Galilee/Jerusalem map panels are flat shapes with a \"?\" pop, static for ~4 s - low | 55-59 - end card Jesus with flame/cyan halo, style-consistent - low",
+  "text": "56.5-59.4 - end card \"PROMISED. / CAME TRUE.\" and \"Jesus, the King, was born\" tab at 19-22 s: end-card words not spoken (last spoken line is \"He came to us\") - low | \"KING HEROD\", \"MICAH 5:2\" tags are labels, ok",
+  "end": "hold=3.02 (last word 56.40 per words.json, film 59.42; whisper wrongly hallucinated a tail line) silent_end=yes (tail RMS 2.9)",
+  "fix": "Nothing needed. Optional: none. $0"
+ },
+ {
+  "slug": "woman-behold-thy-son",
+  "status": "READY",
+  "verdict": "MINOR",
+  "fills": "NONE. Head = uplift spec (23 slots, max slowmo 1.04x, no boomerang); tail (49.2-56.5 s) endfix spec 1.0x. Frame-diff freeze test clean.",
+  "slop": "48-49 - nail-through-hand close-up: the hand shows a metal band/bracelet on the wrist (looks like a watch/cuff, not 1st century) - low/med | 11-14 - cross shots show only 2 thieves badly cropped; ok",
+  "text": "0-3 s - hook card \"DYING, HE STILL SAW HIS MOTHER.\" is not spoken at that time (voice says \"An old man in the temple...\") - med | ~30 s - gloss card \"BEHOLD = HERE IS\": \"= HERE IS\" never spoken - med",
+  "end": "hold=3.67 (last word 52.80, film 56.47) silent_end=near (tail RMS 293, about -41 dBFS; faded, not a hard cut)",
+  "fix": "Remove or voice the gloss card and the hook-card text, repaint/paint-out the wrist band on the nail still; $0 for text, 1 still redo (~$0.2) + reanimate 1 clip for the band"
+ },
+ {
+  "slug": "women-first-witnesses",
+  "status": "POSTED",
+  "verdict": "FIX",
+  "fills": "36.9-44.3 women_remember slowmo 1.47x | 56.0-63.5 risen_christ_seeking slowmo 1.49x (the closing Jesus shot, ~7.5 s stretched from a 5.04 s clip). Also camera pushes on stills (dyncam): 5.7-9.9 women_tell_news, 21.1-23.5 women_behold_burial, 44.3-47.7 magdalene_face_cu - Ken Burns on stills. No reverse/boomerang recorded.",
+  "slop": "0-9 - apostles scene: raised-hand man, ok - low | 12-20 - three women faces repeat across panels (same 3 types), no morph - low | 44-48 - magdalene extreme close-up face, slightly plastic - low",
+  "text": "gloss card \"IDLE TALES = NONSENSE\" (~9-12 s): \"= NONSENSE\" not spoken as a gloss (word \"nonsense\" is spoken earlier) - med | caption pills otherwise follow the voice",
+  "end": "hold=3.06 (last word 60.40 from audio/alignment.json, film 63.46) silent_end=yes (RMS 83)",
+  "fix": "Replace the two 1.5x slowmo slots with other existing trimmed clips or add 2 new Kling clips (~$2.3); swap the 3 Ken-Burns stills for clips (3 clips ~$3.4); cut the gloss card ($0). Posted film: only worth re-uploading if owner minds the slow final shot"
+ },
+ {
+  "slug": "zacchaeus-who-was-looking",
+  "status": "POSTED",
+  "verdict": "MINOR",
+  "fills": "NONE (poc_scratchy_ink/zacchaeus/build_film.py aborts if slot > clip; trim-only; the 1 s pause is inside c07 which is long enough).",
+  "slop": "29-31 - Zacchaeus mid-air jump with scarf flying, slightly odd pose - low; 62-70 - 8 s on a talking Jesus close-up, lip motion slightly AI - low; dinner scene Jesus reclining Roman style - low. No extra/missing people.",
+  "text": "0-3 - hook card \"WHO WAS LOOKING FOR WHOM?\" - not spoken (voice opens \"A man climbed a tree...\") but it is the question the film answers - fine. All pills match the voice.",
+  "end": "hold=3.07 silent_end=yes (-42 dB)",
+  "fix": "none needed ($0)."
+ },
+ {
+  "slug": "zechariah-12-10-pierced",
+  "status": "POSTED",
+  "verdict": "FIX",
+  "fills": "12.1-18.5 face_on_cross slowmo 1.27x; 6.2-12.1 nail_through_hand panel 1.16x; (38.1-43.8 grace_poured_sky 1.14x ok); kenburns on stills: 2.9-6.2 zechariah_night_scroll, 6.2-12.1 prophet_scroll, 36.0-38.1 two stills (about 10 s)",
+  "slop": "whole film AWAKEDEN logo top-left (brand retired) - med; spear tip left in the chest ~29-33 (gory) - low; red pitched roofs - low",
+  "text": "NONE (\"LOOK UPON ME\" and the Zech 12:10 / John 19:37 quotes are spoken)",
+  "end": "hold=0.09 silent_end=no (last 0.25s rms 0.055)",
+  "fix": "$0 - re-export without the AWAKEDEN logo and with a 3s hold; face_on_cross 1.27x -> 1 new clip (paid) or leave."
+ }
+]

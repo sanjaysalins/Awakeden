@@ -1,0 +1,10 @@
+{"_doc":"ENDFIX1 tail of WOMAN BEHOLD THY SON. Two beats only (absolute times, 49.2333 = frame 1477). New spoken line 'He was dying, and He made sure His mother did not go home alone.' (word-timed caption via cap.word_t) then the risen-hand landing hold. Reuses existing stills/clips only.",
+ "audio":"../../audio/_endfix1/15_narrator_a__atempo.mp3","total":7.2334,"cut_ticks":false,"motion":"smooth",
+ "beats":[
+  {"t":[49.2333,53.3],"cap":{"type":"caption","text":"He was dying, and He made sure His mother did not go home alone","kw":"DYING ALONE",
+     "word_t":[0.4367,0.6167,0.7367,1.6567,1.7167,1.8367,1.9767,2.1567,2.2967,2.5167,2.6967,2.8767,3.0367,3.2367]},
+   "fx":{"temp":6400},
+   "parts":[{"until":50.9,"tpl":"full","clips":[{"slug":"jesus_looks_down","motion":"pushin"}]},
+            {"tpl":"full","fx":{"temp":5600},"clips":[{"slug":"john_leads_home","motion":"pushin"}]}]},
+  {"t":[53.3,56.4667],"tpl":"full","clips":[{"slug":"risen_mercy_hand","motion":"pushin"}],"fx":{"temp":4900}}
+ ]}

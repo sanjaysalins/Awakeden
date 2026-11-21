@@ -1,0 +1,9 @@
+{
+  "image": "jonah_sinking_down.png",
+  "verdict": "PASS",
+  "flags": [
+    "adversarial-reviewer corner signature squiggle clone-stamped out ( PIL patch); rest unchanged from PASS"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

@@ -1,7 +1,7 @@
 # facebook — Facebook (Reel/Video)
 
 ## TITLE
-Ten Were Healed. Only One Turned Back.
+Nine Were Healed and Kept Walking. One Turned Back.
 
 ## DESCRIPTION
 Luke 17: ten men with leprosy cried out to Jesus for mercy. He told them to go show themselves to the priests, and they were cleansed on the way there, before they could see any change.

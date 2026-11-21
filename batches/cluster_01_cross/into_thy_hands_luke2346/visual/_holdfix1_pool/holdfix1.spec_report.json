@@ -1,0 +1,57 @@
+{
+ "dod": {
+  "median_beat_s": 3.07,
+  "max_beat_s": 3.07,
+  "held_gt6s": [],
+  "slams": 0,
+  "kling_or_punch_or_slam_pct": 100,
+  "tier1_pct": 0,
+  "reuse_violations": [],
+  "tier3_or_flagged_beats": [],
+  "standard_3b": {
+   "stills_over_2_uses": {},
+   "stills_fullbleed_twice": {},
+   "fullbleed_beat_pct": 100,
+   "slop_caption_beats": []
+  },
+  "ramps": 0,
+  "whips": 0,
+  "flash_inserts": 0,
+  "fx_beats": 1,
+  "cut_ticks": false,
+  "beats": 1
+ },
+ "clips_build": true,
+ "beats": [
+  {
+   "beat": 1,
+   "t": [
+    59.0333,
+    62.1
+   ],
+   "dur": 3.066667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "first_day_morning"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": null
+  }
+ ],
+ "speed": [
+  {
+   "beat": 1,
+   "panel": 0,
+   "slug": "first_day_morning",
+   "slot_s": 3.067,
+   "clip_s": 3.262,
+   "t_in": 1.78,
+   "factor": 1.0,
+   "boomerang": false
+  }
+ ]
+}

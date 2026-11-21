@@ -52,8 +52,22 @@ Only shorts with NO Bible-accuracy flag from 3+ blind seats are dated.
 - Sat 2026-11-28: The Second Fire -> NEW TITLE "He Failed Jesus Three Times. Jesus Made Him Breakfast." ($0 pack edit first). "fire of coals" = only John 18:18 + 21:9 in KJV (checked).
 - Tue 2026-12-01: Why Is Jesus Called Immanuel? (replaces Bethlehem; Bethlehem = Christmas playlist only)
 - Thu 2026-12-03: They Asked Jesus for a Sign. He Gave Them Jonah. (sign-of-jonah) - owner re-slotted 2026-11-21 after both fixes (title + line re-record); pack strict GREEN
-- From 2026-12-05: only after line re-records (first/last line) -> Simeon, Nazareth, Ten healed, Rahab, Empty tomb, Snake, Father-into-thy-hands, Two Thieves, Seed 01.
-- PULLED (Bible-accuracy error in the locked middle, needs a bigger fix): Widow/Nain (Swirls ep07: "Everyone kept their distance" vs Luke 7:12 "much people of the city was with her"), Storm (added feelings), Simon of Cyrene ("carry His shame" ask).
+- (Jonah 3 Dec now carries the later locked W1 words + title "I Ran From God's Mercy. Jesus Made My Story His Sign." - wordsfix1 pinned 2026-11-21)
+- Sat 2026-12-05: A Widow Was Burying Her Only Son. Jesus Stopped the Funeral. (Swirls 7) - stops for one
+- Tue 2026-12-08: Jesus Stopped Reading Mid-Sentence (Nazareth) - prophecy
+- Thu 2026-12-10: He Asked for Someday. Jesus Gave Him Today. (Two Thieves) - exchange
+- Sat 2026-12-12: Nine Were Healed and Kept Walking. One Turned Back. (Swirls 11) - stops for one
+- Tue 2026-12-15: Her Name Was Shameful. Her Family Was the One Saved. (Rahab) - exchange
+- Thu 2026-12-17: Your Boat Is Sinking and Jesus Is Asleep (Storm) - fear / relief
+- Sat 2026-12-19: Forced to Carry a Cross He Never Chose (Simon, Swirls 13) - exchange
+- Tue 2026-12-22: Dying, He Still Saw His Mother's Pain (Simeon) - Christmas tie-in (Luke 2)
+- Sat 2026-12-26: God Answered Snakebite With a Snake on a Pole (Moses) - exchange
+- Held for Lent/Easter 2027 (Easter = 28 Mar): Never Seen Jesus? He Already Called You Blessed (Empty tomb), Afraid to Die? Listen to the Last Thing Jesus Prayed (Father), It Is Finished, Psalm 22 parts 3-7 (playlist).
+- PARKED (owner 2026-11-21, scan summary 'yes to all'): Her Seed (seed-02), Heel vs Head (seed-03), Psalm 22 part 2 mockers (ps22-02), long-forms Isaiah 53 / Bronze Serpent / Day of Atonement - heavy boomerang/fill, need many new clips. Posted flawed films left live (no re-upload). See _roadmap/film_scan_2026-11-21/_SCAN_SUMMARY.html
+- PARKED (owner 2026-11-21, 'yes'): God Spoke a Promise Before Adam and Eve's Sentence (seed-of-woman-01) - 7 boomerang fills, modesty (Adam bare-chested, Eve leaf top), slop; linefix1 built not pinned (poc_living_sketchbook/first_gospel_in_the_curse/_linefix1). ~8 new clips (~$5-6) if revived.
+- PARKED (owner 2026-11-21, 'your pick'): God Hung Up a Snake (bronze-serpent-02) - 4 boomerang fills, slop (gold serpent + invented rays, sky streaks, hand morph, pasted cross), unspoken verse/gloss cards; linefix1 opening built but not pinned (poc_living_sketchbook/god_hung_up_a_snake/_linefix1). Needs ~5 new clips (~$3-4) if revived.
+- FIXED + PINNED 2026-11-21 (ready to date, owner picks order): Widow/Nain (Swirls 7), Simon (Swirls 13, 'Forced to Carry a Cross He Never Chose'), Ten healed (Swirls 11), Jonah ('I Ran From God's Mercy...'), Storm ('Your Boat Is Sinking and Jesus Is Asleep'), Simeon, Empty tomb, Nazareth, Rahab, Two Thieves, Moses snake, Father. Scan: _roadmap/film_scan_2026-11-21/_SCAN_SUMMARY.html
+- (was) - PULLED (Bible-accuracy error in the locked middle, needs a bigger fix): Widow/Nain (Swirls ep07: "Everyone kept their distance" vs Luke 7:12 "much people of the city was with her"), Storm (added feelings), Simon of Cyrene ("carry His shame" ask).
 - Not in the main feed push: the 6 Psalm 22 shorts, Seed 02-04, It Is Finished, Lifted Up, Can One Man, Swirls ep02 -> playlists only.
 
 ## SEASON 1 — THE CROSS (weekly detail, original 3/wk draft below for reference)

@@ -1,0 +1,15 @@
+{
+  "slug": "great_fish_rising",
+  "hash": "d1647ec49c58b94b",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": false
+  },
+  "notes": "USER CALL: vast dark fish about to swallow Jonah (1:17) - but prominent shark TEETH + yellow eye lean monster-ish vs the constrained no-cartoon-teeth card. Keep the drama or re-roll softer?",
+  "reviewer": "in-chat-agent"
+}

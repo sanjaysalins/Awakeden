@@ -8,9 +8,9 @@ Hebrews 13 ties an ordinary man's forced errand straight to the gospel: "Wherefo
 
 That man was Simon of Cyrene. He wasn't walking toward Jesus. Mark says the soldiers "compel" him, coming in from the country, and put the cross on his shoulders. Nobody asked him.
 
-Hebrews then turns the same invitation toward us: "Let us go forth therefore unto him without the camp, bearing his reproach."
+Hebrews says: "Let us go forth therefore unto him without the camp, bearing his reproach." Reproach means shame.
 
-Simon carried it forced. We're only asked to carry the shame, freely this time. The atoning was His alone.
+Simon was forced out there. You are invited. If shame has put you outside, Jesus is already there. The dying, the finishing, was His alone. You only come to Him.
 
 Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 

@@ -1,0 +1,66 @@
+{
+ "audio": "silence.wav",
+ "total": 62.433333,
+ "cut_ticks": false,
+ "motion": "smooth",
+ "beats": [
+  {
+   "t": [
+    55.9,
+    60.933333
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "risen_mercy_hand",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "He is calling you into that family",
+    "kw": "CALLING YOU",
+    "word_t": [
+     0.314,
+     0.474,
+     0.614,
+     0.995,
+     1.935,
+     2.215,
+     2.535
+    ]
+   },
+   "fx": {
+    "temp": 4900
+   },
+   "punch": true,
+   "border_break": {
+    "at": 56.15
+   },
+   "sfx": [
+    [
+     "dawn_morning_warm",
+     56.05,
+     -13
+    ]
+   ]
+  },
+  {
+   "t": [
+    60.933333,
+    62.433333
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "cross_at_dawn",
+     "motion": "pushin",
+     "t_in": 3.54
+    }
+   ],
+   "fx": {
+    "temp": 5000
+   }
+  }
+ ]
+}

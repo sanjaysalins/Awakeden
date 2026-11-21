@@ -5,7 +5,7 @@ An old man held a baby and told the mother one dark sentence: a sword shall pier
 
 Thirty years later, at the cross, the sword landed. And the dying Son saw her wound and gave her a son and a home. (John 19:26)
 
-Your wound is not invisible to him. Stand where Mary stood.
+He was dying, and He made sure His mother did not go home alone.
 
 Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 

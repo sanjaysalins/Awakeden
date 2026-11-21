@@ -27,6 +27,10 @@ import subprocess
 import sys
 import time
 from pathlib import Path
+import sys as _sys
+from pathlib import Path as _Path
+_sys.path.insert(0, str(next(_q for _q in _Path(__file__).resolve().parents if (_q / "fill_guard.py").exists())))
+import fill_guard  # fail-closed fill (owner rule 2026-11-21)
 
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
@@ -144,6 +148,7 @@ def build_clip_hold(dest, duration, clip_path, play_dur=None):
               "-vf", f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H}",
               "-an", "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", "-r", str(FPS), str(dest)])
     else:
+        fill_guard.require_clip_covers_slot(str(dest), play, duration, what="freeze (tpad clone) hold")
         hold = duration - play
         _run(["ffmpeg", "-y", "-v", "error", "-i", str(clip_path), "-t", f"{play:.3f}",
               "-vf", f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},"

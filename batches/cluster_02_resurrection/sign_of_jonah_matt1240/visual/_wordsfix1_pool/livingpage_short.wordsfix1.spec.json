@@ -1,0 +1,662 @@
+{
+ "_doc": "WORDS FIX 1 2026-11-21 (owner-locked W1 Jonah words: Nineveh/fled+gracious line, 'centuries later', new ending). LINE FIX 2026-11-21 (S03+S04 re-recorded: false motive line replaced, Jonah 1:2-3). v6 TRIM B + RESYNC (2026-11-20, cut-only; beats re-timed to the voice): THE SIGN OF JONAH (Jonah 1-2 + Matt 12:40) 9:16 SHORT - living page. 20 beats / 69.52s. Jonah's deep mirrored with Christ's tomb: storm hook with ramp+takeover, heartbeat under 'three days buried alive', sacred stillness on the Matt 12:40 bar (two-part: belly -> heart of the earth), guilty-down/innocent-down substitution, stack on 'grave no more held Him', border-break punch on HE ROSE (stone_rolled_dawn), mercy-into-the-deep CTA, risen Christ close.",
+ "audio": "F:\\slk\\PycharmProjects\\JesusInTheBible\\batches\\cluster_02_resurrection\\sign_of_jonah_matt1240\\_wordsfix1\\narration_wordsfix1.mp3",
+ "total": 63.9,
+ "cut_ticks": false,
+ "beats": [
+  {
+   "t": [
+    0.0,
+    2.821
+   ],
+   "tpl": "hero_frac3",
+   "punch": true,
+   "ramp": true,
+   "sfx": [
+    [
+     "impact_low_boom",
+     0.1,
+     -12
+    ]
+   ],
+   "clips": [
+    {
+     "slug": "jonah_cast_overboard",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "I told them to throw me into the sea",
+    "kw": "THROW ME IN"
+   },
+   "anchors": [
+    [
+     1.0,
+     0.5,
+     0.4
+    ],
+    [
+     1.5,
+     0.5,
+     0.3
+    ],
+    [
+     1.6,
+     0.5,
+     0.65
+    ]
+   ],
+   "panel_at": [
+    0.0,
+    0.25,
+    0.5
+   ],
+   "panel_slide": [
+    "left",
+    "up",
+    "down"
+   ],
+   "flash": true
+  },
+  {
+   "t": [
+    2.821,
+    7.423
+   ],
+   "tpl": "full",
+   "punch": true,
+   "sfx": [
+    [
+     "impact_low_boom",
+     2.881,
+     -14
+    ]
+   ],
+   "clips": [
+    {
+     "slug": "great_fish_rising",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "A great fish swallowed me whole",
+    "kw": "SWALLOWED WHOLE"
+   },
+   "fx": {
+    "temp": 7000
+   }
+  },
+  {
+   "t": [
+    7.423,
+    10.784
+   ],
+   "tpl": "hero_frac3",
+   "clips": [
+    {
+     "slug": "storm_ship_waves",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "I ran from God. His mercy was too wide.",
+    "kw": "TOO WIDE"
+   },
+   "fx": {
+    "temp": 7400
+   },
+   "anchors": [
+    [
+     1.0,
+     0.5,
+     0.4
+    ],
+    [
+     1.5,
+     0.35,
+     0.55
+    ],
+    [
+     1.6,
+     0.65,
+     0.3
+    ]
+   ],
+   "panel_at": [
+    7.423,
+    7.723,
+    8.023
+   ],
+   "panel_slide": [
+    "left",
+    "up",
+    "right"
+   ],
+   "flash": true
+  },
+  {
+   "t": [
+    10.784,
+    13.824
+   ],
+   "tpl": "hero_frac3",
+   "clips": [
+    {
+     "slug": "nineveh_distant_walls",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "He sent me to Nineveh, and I fled.",
+    "kw": "AND I FLED",
+    "word_t": [
+     0.0,
+     0.139,
+     0.379,
+     0.54,
+     0.72,
+     1.42,
+     1.58,
+     1.76
+    ]
+   },
+   "anchors": [
+    [
+     1.0,
+     0.5,
+     0.45
+    ],
+    [
+     1.4,
+     0.5,
+     0.3
+    ],
+    [
+     1.7,
+     0.5,
+     0.6
+    ]
+   ],
+   "panel_at": [
+    10.784,
+    11.134,
+    11.484
+   ],
+   "panel_slide": [
+    "left",
+    "up",
+    "right"
+   ],
+   "flash": true,
+   "fx": {
+    "temp": 7100
+   }
+  },
+  {
+   "t": [
+    13.824,
+    17.065
+   ],
+   "tpl": "hero_band3",
+   "clips": [
+    {
+     "slug": "nineveh_distant_walls",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "I knew He is gracious, and would spare her.",
+    "kw": "WOULD SPARE HER",
+    "word_t": [
+     0.0,
+     0.14,
+     0.42,
+     0.581,
+     0.681,
+     1.321,
+     1.441,
+     1.621,
+     1.981
+    ]
+   },
+   "anchors": [
+    [
+     1.2,
+     0.3,
+     0.6
+    ],
+    [
+     1.6,
+     0.5,
+     0.3
+    ],
+    [
+     1.8,
+     0.68,
+     0.62
+    ]
+   ],
+   "panel_at": [
+    13.824,
+    14.104,
+    14.384
+   ],
+   "panel_slide": [
+    "up",
+    "left",
+    "down"
+   ],
+   "flash": true,
+   "fx": {
+    "temp": 7600
+   }
+  },
+  {
+   "t": [
+    17.065,
+    20.726
+   ],
+   "tpl": "hero_frac3",
+   "whip": true,
+   "clips": [
+    {
+     "slug": "lot_falls_jonah",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The storm came for my sake. The lot fell on me.",
+    "kw": "THE LOT FELL"
+   },
+   "anchors": [
+    [
+     1.6,
+     0.3,
+     0.4
+    ],
+    [
+     1.5,
+     0.75,
+     0.5
+    ],
+    [
+     1.7,
+     0.32,
+     0.78
+    ]
+   ],
+   "panel_at": [
+    17.065,
+    17.415,
+    17.765
+   ],
+   "panel_slide": [
+    "left",
+    "right",
+    "down"
+   ],
+   "flash": true,
+   "fx": {
+    "temp": 7300
+   }
+  },
+  {
+   "t": [
+    20.726,
+    27.387
+   ],
+   "tpl": "full",
+   "whip": true,
+   "clips": [
+    {
+     "slug": "jesus_and_scribes",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Scribes demanded a sign. Jesus gave them only my name.",
+    "kw": "MY NAME",
+    "word_t": [
+     1.701,
+     2.221,
+     2.701,
+     2.801,
+     3.982,
+     4.402,
+     4.642,
+     4.982,
+     5.542,
+     5.782
+    ]
+   },
+   "fx": {
+    "temp": 6800
+   }
+  },
+  {
+   "t": [
+    27.387,
+    31.449
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "jonah_in_the_deep",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "For as Jonas was three days and three nights in the whale's belly;",
+    "speaker": "JESUS",
+    "ref": "MATTHEW 12:40"
+   },
+   "fx": {
+    "temp": 7500
+   }
+  },
+  {
+   "t": [
+    31.449,
+    37.591
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "three_days_dark_tomb",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "so shall the Son of man be three days and three nights in the heart of the earth.",
+    "speaker": "JESUS",
+    "ref": "MATTHEW 12:40"
+   },
+   "fx": {
+    "temp": 7600
+   }
+  },
+  {
+   "t": [
+    37.591,
+    40.632
+   ],
+   "tpl": "hero_frac3",
+   "clips": [
+    {
+     "slug": "jonah_sinking_down",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "I went down guilty",
+    "kw": "GUILTY"
+   },
+   "anchors": [
+    [
+     1.2,
+     0.5,
+     0.3
+    ],
+    [
+     1.5,
+     0.5,
+     0.5
+    ],
+    [
+     1.7,
+     0.5,
+     0.7
+    ]
+   ],
+   "panel_at": [
+    37.591,
+    37.891,
+    38.191
+   ],
+   "panel_slide": [
+    "up",
+    "left",
+    "down"
+   ],
+   "flash": true,
+   "fx": {
+    "temp": 7800
+   }
+  },
+  {
+   "t": [
+    40.632,
+    45.113
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "body_laid_in_tomb",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "He went down innocent. He gave Himself.",
+    "kw": "INNOCENT"
+   },
+   "fx": {
+    "temp": 6800
+   }
+  },
+  {
+   "t": [
+    45.113,
+    48.555
+   ],
+   "tpl": "stack_h",
+   "whip": true,
+   "clips": [
+    {
+     "slug": "stone_rolled_dawn",
+     "motion": "pushin",
+     "zoom": 1.22,
+     "at": 50.598,
+     "slide": "left"
+    },
+    {
+     "slug": "jonah_on_shore",
+     "motion": "pushin",
+     "zoom": 1.22,
+     "at": 52.398,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The grave no more held Him than the deep held me",
+    "kw": "COULD NOT HOLD HIM"
+   },
+   "fx": {
+    "temp": 6200
+   }
+  },
+  {
+   "t": [
+    48.555,
+    49.955
+   ],
+   "tpl": "full",
+   "punch": true,
+   "border_break": {
+    "at": 48.625
+   },
+   "sfx": [
+    [
+     "dawn_morning_warm",
+     48.625,
+     -13
+    ]
+   ],
+   "clips": [
+    {
+     "slug": "stone_rolled_dawn",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "HE ROSE",
+    "kw": "HE ROSE"
+   },
+   "fx": {
+    "temp": 5800
+   }
+  },
+  {
+   "t": [
+    49.955,
+    52.356
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "mercy_hand_into_deep",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Sure you've fallen too far?",
+    "kw": "TOO FAR?"
+   },
+   "fx": {
+    "temp": 6400
+   }
+  },
+  {
+   "t": [
+    52.356,
+    54.897
+   ],
+   "tpl": "full",
+   "punch": true,
+   "clips": [
+    {
+     "slug": "mercy_hand_into_deep",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "That is how far His mercy reaches.",
+    "kw": "THAT FAR"
+   },
+   "fx": {
+    "temp": 5600
+   }
+  },
+  {
+   "t": [
+    54.897,
+    56.938
+   ],
+   "tpl": "full",
+   "whip": true,
+   "clips": [
+    {
+     "slug": "three_days_dark_tomb",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The One who went down into your dark",
+    "kw": "YOUR DARK",
+    "word_t": [
+     0.0,
+     0.2,
+     0.44,
+     0.58,
+     0.84,
+     1.161,
+     1.381,
+     1.601
+    ]
+   },
+   "fx": {
+    "temp": 5800
+   }
+  },
+  {
+   "t": [
+    56.938,
+    59.699
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "man_rising_from_water",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "and rose again is Jesus.",
+    "kw": "JESUS",
+    "word_t": [
+     0.0,
+     0.12,
+     0.42,
+     1.3,
+     1.46
+    ]
+   },
+   "fx": {
+    "temp": 5600
+   }
+  },
+  {
+   "t": [
+    59.699,
+    63.9
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "risen_christ_wounds",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "He can bring you up.",
+    "kw": "BRING YOU UP",
+    "word_t": [
+     0.0,
+     0.28,
+     0.5,
+     0.74,
+     1.0
+    ]
+   },
+   "fx": {
+    "temp": 4900,
+    "rays": {
+     "at": [
+      0.5,
+      0.25
+     ],
+     "strength": 0.5,
+     "opacity": 0.5
+    }
+   }
+  }
+ ],
+ "motion": "smooth"
+}

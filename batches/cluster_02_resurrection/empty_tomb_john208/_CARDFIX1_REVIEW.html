@@ -1,0 +1,26 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>The Empty Tomb - card fix</title><style>body{font:22px/1.35 Arial,sans-serif;background:#1b1712;color:#f3ead8;margin:0;padding:18px;max-width:1500px}
+h1{font-size:34px;margin:0 0 4px}h2{color:#f2c14e;margin:26px 0 4px;font-size:26px}p{margin:4px 0 8px}
+.row{display:flex;gap:14px;flex-wrap:wrap;margin:8px 0}.c{flex:0 0 auto}.c img{height:420px;border:4px solid #555;cursor:zoom-in;display:block}
+.c.n img{border-color:#4caf50}.c.o img{border-color:#c0504d}.tag{font-weight:bold;margin:2px 0}.o .tag{color:#ff8a80}.n .tag{color:#9be29b}
+table{border-collapse:collapse;margin-top:8px}td{border:1px solid #555;padding:6px 12px;font-size:20px}.ok{color:#9be29b;font-weight:bold}.bad{color:#ff8a80;font-weight:bold}
+img.z{position:fixed;inset:0;margin:auto;height:96vh!important;width:auto;z-index:9;cursor:zoom-out;background:#000}</style>
+<h1>The Empty Tomb - card fix</h1><p>Two unspoken gloss cards removed. Nothing else moved.</p><p>Red = before. Green = after. Click a picture to zoom. $0 spent.</p>
+<h2>11 s - &#x27;SEPULCHRE = TOMB&#x27; gone</h2><p>The narrator says sepulchre. He never says &#x27;equals tomb&#x27;. Card removed.</p><div class=row>
+<div class='c o'><div class=tag>before </div><img src='visual/_cardfix1_work/old_11.png'></div>
+<div class='c n'><div class=tag>after </div><img src='visual/_cardfix1_work/new_11.png'></div>
+</div>
+<h2>20 s - &#x27;NAPKIN = HEAD CLOTH&#x27; gone</h2><p>Same. Card removed.</p><div class=row>
+<div class='c o'><div class=tag>before </div><img src='visual/_cardfix1_work/old_20.5.png'></div>
+<div class='c n'><div class=tag>after </div><img src='visual/_cardfix1_work/new_20.5.png'></div>
+</div>
+<h2>Checks</h2><table>
+<tr><td>New film</td><td class=ok>PASS  visual/empty_tomb_john208_sfx_v6trim_endfix1_cardfix1.mp4  61.40 s</td></tr>
+<tr><td>Audio = video length</td><td class=ok>PASS  video 61.399 s / audio 61.400 s</td></tr>
+<tr><td>Audio untouched</td><td class=ok>PASS  audio stream copied from the pinned film (same bytes)</td></tr>
+<tr><td>Landing hold &gt;= 3.0 s</td><td class=ok>PASS  last word 58.12 s, film 61.40 s = 3.28 s</td></tr>
+<tr><td>Last 5 s smooth, silent last frame</td><td class=ok>PASS  RMS falls -33 to -61 dBFS in steps of 2-8 dB; last 0.1 s = -71 dBFS (same as before)</td></tr>
+<tr><td>Only 2 beats changed</td><td class=ok>PASS  frames differ from the pinned film only at 10.3-11.77 s and 19.4-21.3 s (103 frames); everything else stream-copied</td></tr>
+<tr><td>New frames = engine output</td><td class=ok>PASS  new pixels match the film&#x27;s own cardless engine render (mean diff 0.14/255)</td></tr>
+<tr><td>Words on screen are spoken</td><td class=ok>PASS  card words gone; captions + Mary quote unchanged</td></tr>
+</table><p>Pinned file is NOT changed. FINAL_VIDEO.txt NOT changed.</p>
+<script>document.querySelectorAll('.c img').forEach(i=>i.onclick=()=>i.classList.toggle('z'))</script>

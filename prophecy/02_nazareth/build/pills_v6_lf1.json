@@ -1,0 +1,32 @@
+[
+ {
+  "png": "pills_v6_lf1/p00.png",
+  "f0": 3,
+  "f1": 46,
+  "box": [
+   70,
+   1000,
+   940,
+   122
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "Afraid God is angry with you?",
+  "lines": 1
+ },
+ {
+  "png": "pills_v6_lf1/p01.png",
+  "f0": 64,
+  "f1": 110,
+  "box": [
+   70,
+   1000,
+   940,
+   184
+  ],
+  "radius": 46,
+  "jesus": false,
+  "text": "Watch where Jesus stopped reading.",
+  "lines": 2
+ }
+]

@@ -1,0 +1,39 @@
+{
+ "audio": "../../audio/_linefix2/silence70.wav",
+ "total": 62.12,
+ "cut_ticks": false,
+ "motion": "smooth",
+ "beats": [
+  {
+   "t": [
+    57.09,
+    62.12
+   ],
+   "tpl": "full",
+   "sfx": [
+    [
+     "dawn_morning_warm",
+     57.1,
+     -15
+    ]
+   ],
+   "clips": [
+    {
+     "slug": "paradise_dawn",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Paradise",
+    "kw": "PARADISE",
+    "word_t": [
+     1.441
+    ]
+   },
+   "fx": {
+    "temp": 4900
+   }
+  }
+ ]
+}

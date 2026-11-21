@@ -1,0 +1,15 @@
+{
+  "slug": "jonah_in_the_deep",
+  "hash": "99f00ae3a1310b59",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
+  },
+  "notes": "vs v3 cards: ALIVE and PRAYING inside the fish's belly (Jonah 2:1), rib vault reads as the living creature, restrained not horror. Clean.",
+  "reviewer": "in-chat-agent"
+}

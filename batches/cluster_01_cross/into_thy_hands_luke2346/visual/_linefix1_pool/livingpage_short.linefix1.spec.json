@@ -1,0 +1,79 @@
+{
+ "_doc": "linefix1: beat 0 only. New first sentence (take a, atempo 1.2252, +0.50 s), insert flash removed (it was synced to \"a child's prayer\"), word-timed caption.",
+ "audio": "../../audio/_linefix1/head_narr_new.wav",
+ "total": 4.16,
+ "cut_ticks": false,
+ "motion": "smooth",
+ "beats": [
+  {
+   "t": [
+    0.0,
+    4.16
+   ],
+   "tpl": "hero_band3",
+   "punch": true,
+   "ramp": true,
+   "sfx": [
+    [
+     "impact_low_boom",
+     0.1,
+     -12
+    ]
+   ],
+   "clips": [
+    {
+     "slug": "golgotha_hill_wide",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "If you are afraid to die, listen to the last thing Jesus said",
+    "kw": "AFRAID TO DIE",
+    "word_t": [
+     0.62,
+     0.721,
+     0.901,
+     1.042,
+     1.323,
+     1.423,
+     2.246,
+     2.587,
+     2.688,
+     2.808,
+     3.129,
+     3.39,
+     3.711
+    ]
+   },
+   "anchors": [
+    [
+     1.0,
+     0.5,
+     0.2
+    ],
+    [
+     1.25,
+     0.5,
+     0.5
+    ],
+    [
+     1.35,
+     0.5,
+     0.8
+    ]
+   ],
+   "panel_at": [
+    0.0,
+    0.3,
+    0.6
+   ],
+   "panel_slide": [
+    "up",
+    "left",
+    "down"
+   ],
+   "flash": true
+  }
+ ]
+}

@@ -12,6 +12,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _episode import resolve  # noqa: E402
+import sys as _sys
+from pathlib import Path as _Path
+_sys.path.insert(0, str(next(_q for _q in _Path(__file__).resolve().parents if (_q / "fill_guard.py").exists())))
+import fill_guard  # fail-closed fill (owner rule 2026-11-21)
 
 ep = resolve(sys.argv)
 OUT = ep.out
@@ -104,6 +108,7 @@ for i, s in enumerate(scenes):
         A = WORK / f"a_{s['id']:02d}.mp4"
         scaled(clip, A)
         cdur = dur(A)
+        fill_guard.require_stretch_ok(f"scene {s['id']:02d}", cdur, D)  # >1.15x slow-mo = fill
         factor = max(1.0, D / cdur)
         run(["ffmpeg","-y","-i",str(A),"-vf",f"setpts={factor:.4f}*PTS,fps={FPS}",
              "-t",f"{D:.3f}","-an",*ENC,str(scene_mp4)])
@@ -124,6 +129,7 @@ for i, s in enumerate(scenes):
         if fdur >= D - 0.05:
             run(["ffmpeg","-y","-i",str(fwd),"-t",f"{D:.3f}","-an",*ENC,str(scene_mp4)])
         else:
+            fill_guard.require_clip_covers_slot(f"scene {s['id']:02d}", fdur, D, what="freeze (tpad clone) fill")
             # tiny shortfall: clone the last frame for the remainder (sub-second)
             run(["ffmpeg","-y","-i",str(fwd),
                  "-vf",f"tpad=stop_mode=clone:stop_duration={D-fdur+0.1:.3f}",
@@ -140,6 +146,7 @@ for i, s in enumerate(scenes):
             run(["ffmpeg","-y","-i",str(A),"-t",f"{D:.3f}","-an",*ENC,str(scene_mp4)])
             label = "trim"
         else:
+            fill_guard.require_clip_covers_slot(f"scene {s['id']:02d}", cdur, D, what="boomerang fill")
             factor = max(1.0, (D / 2.0) / cdur)   # slow each half to ~D/2; never speed up
             Aslow = A
             if factor > 1.001:

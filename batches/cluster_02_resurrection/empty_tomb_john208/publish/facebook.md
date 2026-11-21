@@ -8,7 +8,7 @@ When Peter and John ran to the empty tomb, no angel spoke and no risen Lord stoo
 
 "Jesus saith unto him, Thomas, because thou hast seen me, thou hast believed: blessed are they that have not seen, and yet have believed." (John 20:29, KJV)
 
-You were not at the tomb. Jesus was speaking about you. Believe what John believed, the Lord is risen.
+You were not there. He spoke about you anyway, and called you blessed.
 
 Find Jesus in the whole Bible, one story at a time. Follow Salt and Light Kingdom. ✝
 

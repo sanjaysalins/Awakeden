@@ -1,18 +1,18 @@
 # youtube_short — YouTube (Short)
 
 ## TITLE
-They Asked Jesus for a Sign. He Gave Them Jonah.
+I Ran From God's Mercy. Jesus Made My Story His Sign.
 
 ## DESCRIPTION
 The sign of Jonah (Matthew 12:40), told by the man who lived it.
 
-I told the sailors to throw me into the sea, and a great fish swallowed me whole and buried me alive in the dark. I ran from God because his mercy was too wide: he sent me to Nineveh, that great city, but I fled toward Tarshish. The storm came for my sake. Three days buried alive in the fish.
+I told the sailors to throw me into the sea, and a great fish swallowed me whole and buried me alive in the dark. I ran from God because his mercy was too wide: he sent me to Nineveh, and I fled. I knew He is gracious, and would spare her. The storm came for my sake. Three days buried alive in the fish.
 
-Long after I was dust, scribes demanded a sign, and Jesus gave them only my name: "For as Jonas was three days and three nights in the whale's belly; so shall the Son of man be three days and three nights in the heart of the earth" (Matthew 12:40, KJV).
+Centuries later, scribes demanded a sign, and Jesus gave them only my name: "For as Jonas was three days and three nights in the whale's belly; so shall the Son of man be three days and three nights in the heart of the earth" (Matthew 12:40, KJV).
 
 I went down guilty; the storm was mine. He went down innocent, bearing what was ours. And the grave no more held him than the deep held me. He rose.
 
-You who are sure you have fallen too far: that is how far his mercy reaches. It cost him the grave. Stop running, and turn. Come up out of the deep, and live.
+You who are sure you have fallen too far: that is how far his mercy reaches. The One who went down into your dark and rose again is Jesus. He can bring you up.
 
 Find Jesus in the whole Bible, one story at a time. Subscribe to Salt and Light Kingdom. ✝
 

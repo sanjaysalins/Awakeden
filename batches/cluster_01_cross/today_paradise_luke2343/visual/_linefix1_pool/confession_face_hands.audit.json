@@ -1,0 +1,9 @@
+{
+  "image": "confession_face_hands.png",
+  "verdict": "PASS",
+  "flags": [
+    "REDO 2026-07-07: thief attachment changed rope->pierced WOUND (dark ragged pierced wound + dark red blood at wrists/feet) per user; described as WOUND not nail-hardware because seedream renders close-up nails as decorative spikes/caltrops in the inked style. Eye-verified clean, no hallucinated hardware."
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

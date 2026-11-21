@@ -1,0 +1,31 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Woman, Behold Thy Son - card fix</title><style>body{font:22px/1.35 Arial,sans-serif;background:#1b1712;color:#f3ead8;margin:0;padding:18px;max-width:1500px}
+h1{font-size:34px;margin:0 0 4px}h2{color:#f2c14e;margin:26px 0 4px;font-size:26px}p{margin:4px 0 8px}
+.row{display:flex;gap:14px;flex-wrap:wrap;margin:8px 0}.c{flex:0 0 auto}.c img{height:420px;border:4px solid #555;cursor:zoom-in;display:block}
+.c.n img{border-color:#4caf50}.c.o img{border-color:#c0504d}.tag{font-weight:bold;margin:2px 0}.o .tag{color:#ff8a80}.n .tag{color:#9be29b}
+table{border-collapse:collapse;margin-top:8px}td{border:1px solid #555;padding:6px 12px;font-size:20px}.ok{color:#9be29b;font-weight:bold}.bad{color:#ff8a80;font-weight:bold}
+img.z{position:fixed;inset:0;margin:auto;height:96vh!important;width:auto;z-index:9;cursor:zoom-out;background:#000}</style>
+<h1>Woman, Behold Thy Son - card fix</h1><p>Hook card now spoken. Gloss card removed.</p><p>Red = before. Green = after. Click a picture to zoom. $0 spent.</p>
+<h2>0 to 2 s - hook card now says what the voice says</h2><p>Before: &#x27;DYING, HE STILL SAW HIS MOTHER.&#x27; The voice at that moment says &#x27;An old man in the temple held a baby&#x27;. After: &#x27;AN OLD MAN&#x27; (voice 0.12 s) then &#x27;HELD A BABY&#x27; (voice 1.16 s). Same look, same place. Card ends at 2.4 s.</p><div class=row>
+<div class='c o'><div class=tag>before 0.6 s</div><img src='visual/_cardfix1_work/old_0.6.png'></div>
+<div class='c o'><div class=tag>before 1.6 s</div><img src='visual/_cardfix1_work/old_1.6.png'></div>
+<div class='c n'><div class=tag>after 0.6 s</div><img src='visual/_cardfix1_work/new_0.6.png'></div>
+<div class='c n'><div class=tag>after 1.6 s</div><img src='visual/_cardfix1_work/new_1.6.png'></div>
+</div>
+<h2>30 to 32 s - &#x27;BEHOLD = HERE IS&#x27; removed</h2><p>Voice says &#x27;Woman, behold thy son&#x27;. It never says &#x27;here is&#x27;. Card removed. Quote box stays where fix 1 put it (on Mary and John, not on Jesus&#x27; face).</p><div class=row>
+<div class='c o'><div class=tag>before 30.5 s</div><img src='visual/_cardfix1_work/old_30.5.png'></div>
+<div class='c o'><div class=tag>before 31.5 s</div><img src='visual/_cardfix1_work/old_31.5.png'></div>
+<div class='c n'><div class=tag>after 30.5 s</div><img src='visual/_cardfix1_work/new_30.5.png'></div>
+<div class='c n'><div class=tag>after 31.5 s</div><img src='visual/_cardfix1_work/new_31.5.png'></div>
+</div>
+<h2>Checks</h2><table>
+<tr><td>New film</td><td class=ok>PASS  visual/woman_behold_john1926_uplift_endfix1_cardfix1.mp4  56.47 s (same length)</td></tr>
+<tr><td>Audio = video length</td><td class=ok>PASS  video 56.466 s / audio 56.466 s</td></tr>
+<tr><td>Audio untouched</td><td class=ok>PASS  audio stream copied from the pinned film</td></tr>
+<tr><td>Landing hold &gt;= 3.0 s</td><td class=ok>PASS  last word 52.80 s, film 56.47 s = 3.67 s</td></tr>
+<tr><td>Last 5 s smooth</td><td class=ok>PASS  RMS -20 to -41 dBFS, largest step 4.6 dB (audio unchanged)</td></tr>
+<tr><td>Silent last frame</td><td class=bad>NOTE  last 0.1 s = -50 dBFS (quiet, not digital silence). Same as the pinned film; audio not touched in this job</td></tr>
+<tr><td>Only the 2 card windows changed</td><td class=ok>PASS  frames differ from the pinned film only at 0-2.4 s and 29.83-32.2 s; every other frame within 0.4/255; full decode clean</td></tr>
+<tr><td>Rebuilt beats = stock engine</td><td class=ok>PASS  beats 7-8 of the fix1 spec, stock engine. Result matches the pinned film outside the card (mean diff 0.6/255)</td></tr>
+<tr><td>Words on screen are spoken</td><td class=ok>PASS  AN OLD MAN / HELD A BABY are spoken at 0.12 s / 1.16 s</td></tr>
+</table><p>Pinned file is NOT changed. FINAL_VIDEO.txt NOT changed. The engine does not read the fix1 spec&#x27;s box_y key, so the wrapper visual/_cardfix1_build_engine.py applies it (one seam, same as the endfix1 wrapper). Not asked, but noticed: the burned caption &#x27;ONE&#x27; shows at 0.6 s; the voice says &#x27;one&#x27; at 2.56 s.</p>
+<script>document.querySelectorAll('.c img').forEach(i=>i.onclick=()=>i.classList.toggle('z'))</script>

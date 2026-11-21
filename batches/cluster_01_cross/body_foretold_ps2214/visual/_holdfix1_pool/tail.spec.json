@@ -1,0 +1,65 @@
+{
+ "audio": "silence.wav",
+ "total": 70.133333,
+ "cut_ticks": false,
+ "motion": "smooth",
+ "beats": [
+  {
+   "t": [
+    63.6,
+    68.633333
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "risen_mercy_hand",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "He was crushed in your place",
+    "kw": "IN YOUR PLACE",
+    "word_t": [
+     1.319,
+     1.439,
+     1.639,
+     2.499,
+     2.619,
+     2.92
+    ]
+   },
+   "fx": {
+    "temp": 4900
+   },
+   "punch": true,
+   "border_break": {
+    "at": 63.85
+   },
+   "sfx": [
+    [
+     "dawn_morning_warm",
+     63.75,
+     -13
+    ]
+   ]
+  },
+  {
+   "t": [
+    68.633333,
+    70.133333
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "cross_at_dawn",
+     "motion": "pushin",
+     "t_in": 3.54
+    }
+   ],
+   "fx": {
+    "temp": 5000
+   }
+  }
+ ]
+}

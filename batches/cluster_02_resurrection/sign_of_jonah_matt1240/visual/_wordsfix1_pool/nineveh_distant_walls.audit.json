@@ -1,0 +1,10 @@
+{
+  "image": "nineveh_distant_walls.png",
+  "verdict": "PASS",
+  "flags": [
+    "vision-audited vs v3: rectangular Assyrian gateways (no pointed/ogee arches), ziggurat, relief-carved gate towers, dusk lamps",
+    "no Islamic-era or Greco-Roman forms"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

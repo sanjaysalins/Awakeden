@@ -1,0 +1,15 @@
+{
+  "slug": "nineveh_distant_walls",
+  "hash": "6d79814e2e255023",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
+  },
+  "notes": "REBUILD v2 vs cards: rectangular Assyrian gateways + relief-carved towers + ziggurat (Jonah 1:2 great city). Fixed: pointed Islamic-era arches (~1500 years anachronistic).",
+  "reviewer": "in-chat-agent"
+}

@@ -1,0 +1,71 @@
+{
+ "_doc": "linefix1 NULL test: old beat 0 alone, old audio",
+ "audio": "../../audio/narration.mp3",
+ "total": 4.16,
+ "cut_ticks": false,
+ "motion": "smooth",
+ "beats": [
+  {
+   "t": [
+    0.0,
+    4.16
+   ],
+   "tpl": "hero_band3",
+   "punch": true,
+   "ramp": true,
+   "sfx": [
+    [
+     "impact_low_boom",
+     0.1,
+     -12
+    ]
+   ],
+   "inserts": [
+    {
+     "at": 3.36,
+     "slug": "child_sleeping_lamp",
+     "frames": 4
+    }
+   ],
+   "clips": [
+    {
+     "slug": "golgotha_hill_wide",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "A dying man's last words",
+    "kw": "A CHILD'S PRAYER"
+   },
+   "anchors": [
+    [
+     1.0,
+     0.5,
+     0.2
+    ],
+    [
+     1.25,
+     0.5,
+     0.5
+    ],
+    [
+     1.35,
+     0.5,
+     0.8
+    ]
+   ],
+   "panel_at": [
+    0.0,
+    0.3,
+    0.6
+   ],
+   "panel_slide": [
+    "up",
+    "left",
+    "down"
+   ],
+   "flash": true
+  }
+ ]
+}

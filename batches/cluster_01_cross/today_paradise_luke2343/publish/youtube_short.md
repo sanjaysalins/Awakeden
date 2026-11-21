@@ -1,10 +1,10 @@
 # youtube_short — YouTube (Short)
 
 ## TITLE
-Two Thieves. Same Cross. Opposite Eternities.
+He Asked for Someday. Jesus Gave Him Today.
 
 ## DESCRIPTION
-Two criminals died beside Jesus that afternoon (Luke 23:43). Same nails. Same hill. Same distance from the Savior. Opposite eternities.
+Two guilty men were dying beside Jesus, with no time left to fix anything (Luke 23:39-43).
 
 Both were guilty. Both spoke. One taunted: if thou be Christ, save thyself and us. The other confessed: we receive the due reward of our deeds, but this man hath done nothing amiss. Then one request: Lord, remember me when thou comest into thy kingdom.
 

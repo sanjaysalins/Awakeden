@@ -1,7 +1,7 @@
 # instagram — Instagram (Reel)
 
 ## CAPTION
-A dying man's last words. And they were a child's bedtime prayer. (Luke 23:46)
+If you are afraid to die, listen to the last thing Jesus said. (Luke 23:46)
 
 With one word added: Father.
 

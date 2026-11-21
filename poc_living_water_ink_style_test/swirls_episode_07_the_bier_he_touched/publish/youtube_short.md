@@ -6,11 +6,11 @@ A Widow Was Burying Her Only Son. Jesus Stopped the Funeral.
 ## DESCRIPTION
 Luke 7: a widow was walking behind her only son's body, carried out to be buried. He was all she had left.
 
-Touching a dead man made you ceremonially unclean under the law. Everyone kept their distance, that was survival, not cruelty.
+Under the law, touching a dead man made you unclean. And a great crowd from the city walked with her (Luke 7:12).
 
 Jesus walked toward her instead of away. "And when the Lord saw her, he had compassion on her, and said unto her, Weep not."
 
-Then he touched what no one else would touch. "And he came and touched the bier: and they that bare him stood still." "Young man, I say unto thee, Arise."
+"And he came and touched the bier: and they that bare him stood still." "Young man, I say unto thee, Arise."
 
 "And he that was dead sat up, and began to speak. And he delivered him to his mother."
 

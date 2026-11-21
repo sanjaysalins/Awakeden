@@ -4,7 +4,7 @@
 A Widow Was Burying Her Only Son. Jesus Stopped the Funeral.
 
 ## DESCRIPTION
-Luke 7: a widow was walking behind her only son's body, carried out to be buried. He was all she had left. Under the law, touching a dead man made you unclean, so everyone kept their distance.
+Luke 7: a widow was walking behind her only son's body, carried out to be buried. He was all she had left. Under the law, touching a dead man made you unclean.
 
 Jesus walked toward her instead. "And when the Lord saw her, he had compassion on her, and said unto her, Weep not."
 

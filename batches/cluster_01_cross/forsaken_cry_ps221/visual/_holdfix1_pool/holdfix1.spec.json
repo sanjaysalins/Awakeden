@@ -1,0 +1,98 @@
+{
+ "audio": "silence70.wav",
+ "total": 61.1667,
+ "cut_ticks": false,
+ "motion": "smooth",
+ "beats": [
+  {
+   "t": [
+    51.7,
+    56.1667
+   ],
+   "tpl": "hero_frac3",
+   "clips": [
+    {
+     "slug": "father_lamp_doorway",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "However far you have run, the way home is open",
+    "kw": "THE WAY HOME",
+    "word_t": [
+     0.562,
+     0.982,
+     1.202,
+     1.35,
+     1.502,
+     2.303,
+     2.463,
+     2.703,
+     3.003,
+     3.203
+    ]
+   },
+   "anchors": [
+    [
+     1.0,
+     0.5,
+     0.5
+    ],
+    [
+     2.0,
+     0.47,
+     0.42
+    ],
+    [
+     2.2,
+     0.56,
+     0.56
+    ]
+   ],
+   "panel_at": [
+    51.7,
+    52.05,
+    52.4
+   ],
+   "panel_slide": [
+    "left",
+    "right",
+    "up"
+   ],
+   "flash": true,
+   "fx": {
+    "temp": 5200
+   }
+  },
+  {
+   "t": [
+    56.1667,
+    61.1667
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "cross_at_dawn",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "He opened it from the dark",
+    "kw": "FROM THE DARK",
+    "word_t": [
+     0.237,
+     0.577,
+     0.897,
+     1.277,
+     1.457,
+     1.577
+    ]
+   },
+   "fx": {
+    "temp": 4900
+   }
+  }
+ ]
+}

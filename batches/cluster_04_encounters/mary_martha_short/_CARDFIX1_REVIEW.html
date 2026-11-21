@@ -1,0 +1,30 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Mary and Martha - card + loudness</title><style>body{font:22px/1.35 Arial,sans-serif;background:#1b1712;color:#f3ead8;margin:0;padding:18px;max-width:1500px}
+h1{font-size:34px;margin:0 0 4px}h2{color:#f2c14e;margin:26px 0 4px;font-size:26px}p{margin:4px 0 8px}
+.row{display:flex;gap:14px;flex-wrap:wrap;margin:8px 0}.c{flex:0 0 auto}.c img{height:420px;border:4px solid #555;cursor:zoom-in;display:block}
+.c.n img{border-color:#4caf50}.c.o img{border-color:#c0504d}.tag{font-weight:bold;margin:2px 0}.o .tag{color:#ff8a80}.n .tag{color:#9be29b}
+table{border-collapse:collapse;margin-top:8px}td{border:1px solid #555;padding:6px 12px;font-size:20px}.ok{color:#9be29b;font-weight:bold}.bad{color:#ff8a80;font-weight:bold}
+img.z{position:fixed;inset:0;margin:auto;height:96vh!important;width:auto;z-index:9;cursor:zoom-out;background:#000}</style>
+<h1>Mary and Martha - card + loudness</h1><p>Card re-timed to the voice. Film is louder. Same 73 s.</p><p>Red = before. Green = after. Click a picture to zoom. $0 spent.</p>
+<h2>0 to 3 s - the card waits for its word</h2><p>Before: &#x27;Does anyone even care?&#x27; sat on screen from 0 s. The voice says it at 3.3 s. After: nothing at 1 s and 3.0 s.</p><div class=row>
+<div class='c o'><div class=tag>before 1.0 s</div><img src='visual/_cardfix1_work/old_1.0.png'></div>
+<div class='c o'><div class=tag>before 3.0 s</div><img src='visual/_cardfix1_work/old_3.0.png'></div>
+<div class='c n'><div class=tag>after 1.0 s</div><img src='visual/_cardfix1_work/new_1.0.png'></div>
+<div class='c n'><div class=tag>after 3.0 s</div><img src='visual/_cardfix1_work/new_3.0.png'></div>
+</div>
+<h2>3.6 s and 4.5 s - it writes in as she says it</h2><p>&#x27;Does&#x27; at 3.28 s, &#x27;care?&#x27; ends 4.42 s. The words wipe on with the voice (same hand-written look).</p><div class=row>
+<div class='c o'><div class=tag>before 3.6 s</div><img src='visual/_cardfix1_work/old_3.6.png'></div>
+<div class='c o'><div class=tag>before 4.5 s</div><img src='visual/_cardfix1_work/old_4.5.png'></div>
+<div class='c n'><div class=tag>after 3.6 s</div><img src='visual/_cardfix1_work/new_3.6.png'></div>
+<div class='c n'><div class=tag>after 4.5 s</div><img src='visual/_cardfix1_work/new_4.5.png'></div>
+</div>
+<h2>Checks</h2><table>
+<tr><td>New film</td><td class=ok>PASS  visual/mary_martha_final_cardfix2.mp4  72.97 s (same length, nothing trimmed)</td></tr>
+<tr><td>Audio = video length</td><td class=ok>PASS  video 72.967 s / audio 72.980 s (same 0.013 s as the pinned film)</td></tr>
+<tr><td>Loudness</td><td class=ok>PASS  -14.1 LUFS integrated (was -18.2), true peak -1.8 dBFS (limit -1.0)</td></tr>
+<tr><td>Mix balance</td><td class=ok>PASS  one gain step +4.3 dB, loudness range 8.4 to 8.0 LU (only a few peaks touched by a -1.9 dBFS limiter)</td></tr>
+<tr><td>Landing hold &gt;= 3.0 s</td><td class=ok>PASS  last word 69.89 s, film 72.97 s = 3.07 s (as before)</td></tr>
+<tr><td>Last 5 s smooth, silent last frame</td><td class=ok>PASS  slow fade -45 to -60 dBFS; last 0.1 s = -64 dBFS</td></tr>
+<tr><td>Nothing else in the picture changed</td><td class=ok>PASS  frames 0-178 re-rendered; frames 179 on stream-copied (identical keyframes, no timestamp gaps, full decode clean)</td></tr>
+<tr><td>Card words spoken</td><td class=ok>PASS  card = Does anyone even care? = exactly the voice (cardfix2)</td></tr>
+</table><p>Pinned file is NOT changed. FINAL_VIDEO.txt NOT changed. Not noticed: voice says &#x27;You do everything for everyone&#x27; at 0.2 s and nothing is shown for it (left as is).</p>
+<script>document.querySelectorAll('.c img').forEach(i=>i.onclick=()=>i.classList.toggle('z'))</script>

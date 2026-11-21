@@ -45,7 +45,7 @@
   "waiver": "n/a"
  },
  "youtube": {
-  "title": "The Second Fire",
+  "title": "He Failed Jesus Three Times. Jesus Made Him Breakfast.",
   "title_alt": "The Second Fire: After Peter Said No Three Times",
   "line1": "Bible story: three times, Peter said he was not one of Jesus' followers. After Jesus rose, a second fire was waiting on the beach. (John 18, John 21)",
   "line2": "John 18:15-27 (in part) and John 21:1-17 (KJV). Quoted: John 18:17, 18:18, 18:25, 21:7, 21:9, 21:12, 21:15-17.",
@@ -69,7 +69,8 @@
    "feed my sheep",
    "Jesus breakfast on the beach",
    "KJV"
-  ]
+  ],
+  "title_prev": "The Second Fire"
  },
  "shareable_fact": "In the King James Bible, the words \"a fire of coals\" appear only twice: John 18:18, the night Peter said no, and John 21:9, the morning on the beach.",
  "pinned_comment": "Which line stays with you most: \"Come and dine\" or \"Feed my sheep\"? Read it: John 21:1-17.",
@@ -89,8 +90,8 @@
   "violence_words_in_narration": 0
  },
  "overrides": {
-  "R03": "Owner-locked movie-style title 'The Second Fire'; the word Bible is in line 1 and the tags, and a long Bible tail would bury the film name.",
-  "R04": "Class B hook-first; the film name leads (owner likes short movie-like titles), Peter sits in tags, line 1 and the pinned comment."
+  "R03": "Owner OK 2026-11-21: title changed from the locked 'The Second Fire' to a human-dilemma title (YouTube Studio feedback; blind fix panel 4/4 + top-8 panel). Bible is in line 1 and tags. Poster keeps THE SECOND FIRE as the film name.",
+  "R04": "Class A dilemma-first title (Peter's failure + grace); Peter/Jesus named in the title itself."
  },
  "panels": {
   "discoverability": {

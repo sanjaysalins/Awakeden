@@ -4,6 +4,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 from pipeline.score_mix import AFMT, SIDECHAIN
+import fill_guard  # fail-closed fill (owner rule 2026-11-21)
 SK = Path(__file__).resolve().parents[1]; H = Path(__file__).resolve().parent
 OUTD = H / "video"; OUTD.mkdir(exist_ok=True)
 HOLD = 3.0; W, HT, FPS = 1080, 1920, 30
@@ -27,11 +28,13 @@ def build(name):
         d = round(t1-t0, 3); seg = tmp/f"s{i:02d}.mp4"
         clip = SK/folder/"clips"/f"{shot}.mp4"; still = SK/folder/"stills"/f"{shot}.png"
         if clip.exists():
+            fill_guard.require_clip_covers_slot(f"{name}:{shot}", dur(clip), d, what="boomerang/loop fill")
             bm = tmp/f"bm_{shot}.mp4"
             if not bm.exists():
                 run(["ffmpeg","-y","-v","error","-i",str(clip),"-vf",vf+",split[a][b];[b]reverse[r];[a][r]concat=n=2:v=1:a=0","-an","-c:v","libx264","-crf","17",str(bm)])
             run(["ffmpeg","-y","-v","error","-stream_loop","-1","-i",str(bm),"-t",str(d),"-an","-c:v","libx264","-crf","17","-r",str(FPS),str(seg)])
         else:
+            fill_guard.forbid_still_kenburns(f"{name}:{shot}")
             n = int(d*FPS)
             run(["ffmpeg","-y","-v","error","-loop","1","-i",str(still),"-t",str(d),"-vf",f"scale={W*2}:{HT*2}:force_original_aspect_ratio=increase,zoompan=z='1.0+0.05*on/{n}':d={n}:s={W}x{HT}:fps={FPS},format=yuv420p","-an","-c:v","libx264","-crf","17",str(seg)])
         segs.append(seg)

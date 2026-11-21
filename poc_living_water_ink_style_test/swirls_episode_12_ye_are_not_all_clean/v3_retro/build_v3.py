@@ -10,6 +10,10 @@ Low priority, 3 threads (gentle mode).
 """
 import subprocess, sys, json
 from pathlib import Path
+import sys as _sys
+from pathlib import Path as _Path
+_sys.path.insert(0, str(next(_q for _q in _Path(__file__).resolve().parents if (_q / "fill_guard.py").exists())))
+import fill_guard  # fail-closed fill (owner rule 2026-11-21)
 
 HERE = Path(__file__).resolve().parent
 EP = HERE.parent
@@ -80,6 +84,7 @@ def build_segment(i, clip, start, end, cin=0.0):
         fc = f"[0:v]trim=0:{D:.3f},setpts=PTS-STARTPTS,{norm}[v]"
         info = "1.00x"
     else:
+        fill_guard.require_stretch_ok(f"seg{i:02d} {clip}", L, D)  # >1.15x slow-mo / ping-pong = fill
         f = min(MAX_SLOW, D / L)
         rem = D - L * f
         if rem <= 0.02:

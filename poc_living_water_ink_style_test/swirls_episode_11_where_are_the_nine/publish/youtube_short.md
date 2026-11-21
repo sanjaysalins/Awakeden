@@ -1,7 +1,7 @@
 # youtube_short — YouTube (Short)
 
 ## TITLE
-Ten Were Healed. Only One Came Back.
+Nine Were Healed and Kept Walking. One Turned Back.
 
 ## DESCRIPTION
 Luke 17: ten men with leprosy cried out to Jesus. All ten were cleansed on the road, before they even reached the priests. Only one turned back to thank him, and he was a Samaritan.

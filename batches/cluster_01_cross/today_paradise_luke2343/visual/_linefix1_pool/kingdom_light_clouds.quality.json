@@ -1,0 +1,14 @@
+{
+  "slug": "kingdom_light_clouds",
+  "hash": "c17f72202246a838",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true
+  },
+  "notes": "light shaft through storm, clean",
+  "reviewer": "in-chat-agent"
+}

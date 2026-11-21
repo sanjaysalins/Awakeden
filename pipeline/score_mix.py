@@ -21,14 +21,23 @@ The contract of `mix_tail`:
 """
 from __future__ import annotations
 
+import os
 from pathlib import Path
+
+MIN_HOLD = 3.0   # owner rule (INV-26): >= 3.0 s after the last word
+HOLD_ENV_FLAG = "ALLOW_SHORT_HOLD_OWNER_OK"
+
+
+class ShortLandingHold(RuntimeError):
+    """The requested outro hold is below the 3.0 s landing-hold standard."""
+
 
 AFMT = "aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=44100"
 SIDECHAIN = "threshold=0.12:ratio=2.5:attack=20:release=250"
 
 
 def mix_tail(total: float, outro: float | str, *, fmt_narration: bool = False,
-             sidechain: str = SIDECHAIN) -> str:
+             sidechain: str = SIDECHAIN, allow_short_hold: bool | None = None) -> str:
     """The shared narration-pad + duck + mix + video-hold filter fragment.
     Append after the caller's music chain (which must end in `[mus]`).
     `total` = narration + outro (the absolute final duration); `outro` = the
@@ -37,7 +46,21 @@ def mix_tail(total: float, outro: float | str, *, fmt_narration: bool = False,
     `sidechain` overrides the default duck tuning -- added 2026-08-23 for
     swirls_assemble.py, whose rhythmic/sparse scores need a much looser duck
     than this module's ambient-pad-tuned default (see SCORE_STYLE_BANK.md);
-    every existing caller keeps the default and is unaffected."""
+    every existing caller keeps the default and is unaffected.
+
+    FAIL-CLOSED (owner rule 2026-11-21): a numeric `outro` below MIN_HOLD (3.0 s) raises
+    ShortLandingHold. Opt-in for re-rendering an already-locked short-hold film only:
+    allow_short_hold=True or env ALLOW_SHORT_HOLD_OWNER_OK=1."""
+    try:
+        short = float(outro) < MIN_HOLD - 1e-6
+    except (TypeError, ValueError):
+        short = False
+    if short and not (allow_short_hold if allow_short_hold is not None
+                      else os.environ.get(HOLD_ENV_FLAG, "").strip() == "1"):
+        raise ShortLandingHold(
+            f"landing hold {outro}s is below the {MIN_HOLD}s standard: the film must keep running >= {MIN_HOLD}s "
+            f"after the last word (score fades out over ~2.5 s). Opt-in for locked-film re-render only: "
+            f"allow_short_hold=True or {HOLD_ENV_FLAG}=1.")
     fmt = (AFMT + ",") if fmt_narration else ""
     return (
         f"[0:a]{fmt}apad=whole_dur={total},asplit=2[main][key];"

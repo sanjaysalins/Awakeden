@@ -1,0 +1,95 @@
+{
+ "dod": {
+  "median_beat_s": 4.98,
+  "max_beat_s": 6.43,
+  "held_gt6s": [
+   6.43
+  ],
+  "slams": 0,
+  "kling_or_punch_or_slam_pct": 100,
+  "tier1_pct": 0,
+  "reuse_violations": [],
+  "tier3_or_flagged_beats": [],
+  "standard_3b": {
+   "stills_over_2_uses": {},
+   "stills_fullbleed_twice": {},
+   "fullbleed_beat_pct": 100,
+   "slop_caption_beats": []
+  },
+  "ramps": 0,
+  "whips": 1,
+  "flash_inserts": 0,
+  "fx_beats": 2,
+  "cut_ticks": false,
+  "beats": 2
+ },
+ "clips_build": true,
+ "beats": [
+  {
+   "beat": 1,
+   "t": [
+    36.37,
+    42.81
+   ],
+   "dur": 6.433333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "jesus_turns_to_thief"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 2,
+   "t": [
+    42.81,
+    46.35
+   ],
+   "dur": 3.533333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "risen_mercy_hand"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  }
+ ],
+ "speed": [
+  {
+   "beat": 1,
+   "panel": 0,
+   "slug": "jesus_turns_to_thief",
+   "slot_s": 6.433,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.276,
+   "boomerang": false
+  },
+  {
+   "beat": 2,
+   "panel": 0,
+   "slug": "risen_mercy_hand",
+   "slot_s": 3.533,
+   "clip_s": 5.042,
+   "t_in": 0.0,
+   "factor": 1.0,
+   "boomerang": false
+  }
+ ]
+}

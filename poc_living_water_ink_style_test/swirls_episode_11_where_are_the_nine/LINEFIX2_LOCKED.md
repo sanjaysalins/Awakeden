@@ -1,0 +1,2 @@
+# LOCKED 2026-11-21: linefix2 (owner: "sounds good")
+Final: uplift/ep11_uplift_linefix2.mp4 (83.57 s, video stream = fix1). New first line "Ten sick men begged Jesus for mercy. He sent them off, still sick." New last line "Nine went on clean. One came back whole: at His feet, not on the road." (speaks the back cover). Title -> "Nine Were Healed and Kept Walking. One Turned Back." Voice ~$0.11 total logged. Old pin: FINAL_VIDEO.txt.prev_pre_linefix2.
